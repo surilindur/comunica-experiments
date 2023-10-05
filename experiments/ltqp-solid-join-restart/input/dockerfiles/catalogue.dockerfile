@@ -1,5 +1,7 @@
 # syntax=docker/dockerfile:1
 
+ARG CONFIG_CATALOGUE
+
 FROM node:20-alpine AS build
 
 ADD https://github.com/surilindur/catalogue.git#main /opt/catalogue
@@ -18,7 +20,9 @@ COPY --from=build /opt/catalogue/src ./src
 COPY --from=build /opt/catalogue/config ./config
 COPY --from=build /opt/catalogue/node_modules ./node_modules
 
-CMD [ "./bin/catalogue.js" ]
+ADD $CONFIG_CATALOGUE /tmp/config.json
+
+CMD [ "./bin/catalogue.js", "--config", "$CONFIG_CATALOGUE", "--target", "urn:catalogue:generator:void" ]
 
 ENV NODE_ENV production
 ENV NODE_OPTIONS --max-old-space-size=8192

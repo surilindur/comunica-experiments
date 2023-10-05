@@ -1,0 +1,27 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solidlab/catalogue/^0.0.0/components/context.jsonld"
+  ],
+  "import": [
+    "imports/data-loaders.json",
+    "imports/data-serializers.json",
+    "imports/summary-collectors.json"
+  ],
+  "@graph": [
+    {
+      "comment": "VoID description summary generator",
+      "@id": "urn:catalogue:generator:void",
+      "@type": "SummaryGenerator",
+      "args_loader": {
+        "@id": "urn:catalogue:loader:filesystem"
+      },
+      "args_serializer": {
+        "@id": "urn:catalogue:serializer:filesystem"
+      },
+      "args_collector": {
+        "@id": "urn:catalogue:collector:void"
+      },
+      "args_uri": "file:///generated/out-fragments/http/localhost_3000/pods/"
+    }
+  ]
+}

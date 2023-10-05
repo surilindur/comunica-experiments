@@ -5,13 +5,13 @@ ARG QUERY_TIMEOUT
 ARG MAX_MEMORY
 ARG LOG_LEVEL
 
-FROM curlimages/curl:latest AS test
+FROM bitnami/git:latest AS git
 
-RUN curl http://headers.jsontest.com/
+RUN git clone --depth 1 --branch main --single-branch https://github.com/surilindur/comunica-components.git /opt/client
 
 FROM node:20-alpine AS build
 
-ADD https://github.com/surilindur/comunica-components.git#main /opt/client
+COPY --from=git /opt/client /opt/client
 
 WORKDIR /opt/client
 

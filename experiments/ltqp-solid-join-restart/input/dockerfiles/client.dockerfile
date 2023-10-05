@@ -5,9 +5,11 @@ ARG QUERY_TIMEOUT
 ARG MAX_MEMORY
 ARG LOG_LEVEL
 
-FROM node:20-alpine AS build
+FROM curlimages/curl:latest AS test
 
 RUN curl http://headers.jsontest.com/
+
+FROM node:20-alpine AS build
 
 ADD https://github.com/surilindur/comunica-components.git#main /opt/client
 

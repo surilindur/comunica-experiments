@@ -1,0 +1,3 @@
+*.json linguist-language=JSON
+*.json.template linguist-language=JSON
+*.dockerfile linguist-language=Dockerfile

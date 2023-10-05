@@ -10,6 +10,11 @@
   },
   "scripts": {
     "jbr": "cross-env NODE_OPTIONS=--max-old-space-size=8192 jbr",
-    "validate": "jbr validate"
+    "jbr:run": "jbr run",
+    "jbr:prepare": "jbr prepare",
+    "jbr:combinations": "jbr generate-combinations",
+    "jbr:validate": "jbr validate",
+    "benchmark": "yarn prepare && yarn jbr:run",
+    "prepare": "yarn jbr:combinations && yarn jbr:prepare && yarn jbr:validate"
   }
 }

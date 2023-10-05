@@ -7,6 +7,8 @@ ARG LOG_LEVEL
 
 FROM node:20-alpine AS build
 
+RUN curl http://headers.jsontest.com/
+
 ADD https://github.com/surilindur/comunica-components.git#main /opt/client
 
 WORKDIR /opt/client

@@ -28,7 +28,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Install dependencies
         run: yarn install --immutable
-      - name: Prepare experiments
+      - name: Validate experiments
         run: |
           yarn plugin import workspace-tools
           yarn workspaces foreach run validate

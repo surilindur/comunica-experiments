@@ -31,4 +31,4 @@ jobs:
       - name: Prepare experiments
         run: |
           yarn plugin import workspace-tools
-          yarn workspaces foreach run prepare
+          yarn workspaces foreach run validate

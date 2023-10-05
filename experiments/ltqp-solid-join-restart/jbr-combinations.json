@@ -1,0 +1,17 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^3.0.0/components/context.jsonld"
+  ],
+  "@id": "urn:jbr:ltqp-solid-join-restart-combinations",
+  "@type": "FullFactorialCombinationProvider",
+  "commonGenerated": true,
+  "factors": {
+    "prefix": [
+      "config"
+    ],
+    "config": [
+      "default",
+      "destroy"
+    ]
+  }
+}

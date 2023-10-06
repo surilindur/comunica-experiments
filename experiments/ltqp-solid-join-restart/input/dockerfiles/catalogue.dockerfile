@@ -22,7 +22,7 @@ COPY --from=build /opt/catalogue/node_modules ./node_modules
 
 ADD $CONFIG_CATALOGUE /tmp/config.json
 
-CMD [ "./bin/catalogue.js", "--config", "$CONFIG_CATALOGUE", "--target", "urn:catalogue:generator:void" ]
+CMD [ "./bin/catalogue.js", "--config", "/tmp/config.json", "--target", "urn:catalogue:generator:void" ]
 
 ENV NODE_ENV production
 ENV NODE_OPTIONS --max-old-space-size=8192

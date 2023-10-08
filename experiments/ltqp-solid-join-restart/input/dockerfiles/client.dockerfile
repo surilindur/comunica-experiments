@@ -12,7 +12,10 @@ WORKDIR /opt/client
 
 RUN corepack enable && yarn install --immutable && yarn build
 
-FROM gcr.io/distroless/nodejs20-debian12
+# FROM gcr.io/distroless/nodejs20-debian12
+FROM node:20-alpine
+
+RUN apk add curl
 
 WORKDIR /opt/client
 

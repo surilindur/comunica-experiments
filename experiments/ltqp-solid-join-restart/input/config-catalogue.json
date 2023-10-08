@@ -2,12 +2,30 @@
   "@context": [
     "https://linkedsoftwaredependencies.org/bundles/npm/@solidlab/catalogue/^0.0.0/components/context.jsonld"
   ],
-  "import": [
-    "imports/data-loaders.json",
-    "imports/data-serializers.json",
-    "imports/summary-collectors.json"
-  ],
   "@graph": [
+    {
+      "comment": "Filesystem data loader",
+      "@id": "urn:catalogue:loader:filesystem",
+      "@type": "DataLoaderFilesystem",
+      "args_ignorePattern": "\\.meta$",
+      "args_datasetPattern": ".*out-fragments\\/(https?)\\/([a-z\\-0-9]+)_([0-9]+)\\/(pods\\/[0-9]+).*",
+      "args_datasetPatternReplacement": "$1://$2:$3/$4/"
+    },
+    {
+      "comment": "Filesystem data serializer",
+      "@id": "urn:catalogue:serializer:filesystem",
+      "@type": "DataSerializerFilesystem",
+      "args_pathPattern": "(https?):\\/\\/([a-z\\-0-9]+):([0-9]+)\\/(.*)",
+      "args_pathPatternReplacement": "/generated/out-fragments/$1/$2_$3/$4.meta",
+      "args_format": "N-Quads",
+      "args_listonly": false,
+      "args_overwrite": true
+    },
+    {
+      "comment": "Summary collector for VoID descriptions",
+      "@id": "urn:catalogue:collector:void",
+      "@type": "SummaryCollectorVoID"
+    },
     {
       "comment": "VoID description summary generator",
       "@id": "urn:catalogue:generator:void",
@@ -21,7 +39,7 @@
       "args_collector": {
         "@id": "urn:catalogue:collector:void"
       },
-      "args_uri": "file:///generated/out-fragments/http/localhost_3000/pods/"
+      "args_uri": "file:///generated/out-fragments/http/solidbench-server_3000/pods/"
     }
   ]
 }

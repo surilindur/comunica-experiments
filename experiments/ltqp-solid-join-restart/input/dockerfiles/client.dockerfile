@@ -1,10 +1,5 @@
 # syntax=docker/dockerfile:1
 
-ARG CONFIG_CLIENT
-ARG QUERY_TIMEOUT
-ARG MAX_MEMORY
-ARG LOG_LEVEL
-
 FROM bitnami/git:latest AS git
 
 RUN git clone --depth 1 --branch main --single-branch https://github.com/surilindur/comunica-components.git /opt/client
@@ -27,6 +22,11 @@ COPY --from=build /opt/client/packages ./packages
 COPY --from=build /opt/client/node_modules ./node_modules
 
 WORKDIR /opt/client/engines/query-sparql-components
+
+ARG CONFIG_CLIENT
+ARG QUERY_TIMEOUT
+ARG MAX_MEMORY
+ARG LOG_LEVEL
 
 ADD $CONFIG_CLIENT /tmp/config.json
 

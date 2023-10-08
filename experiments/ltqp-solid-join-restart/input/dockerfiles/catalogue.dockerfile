@@ -1,7 +1,5 @@
 # syntax=docker/dockerfile:1
 
-ARG CONFIG_CATALOGUE
-
 FROM node:20-alpine AS build
 
 ADD https://github.com/surilindur/catalogue.git#main /opt/catalogue
@@ -18,7 +16,10 @@ COPY --from=build /opt/catalogue/package.json ./package.json
 COPY --from=build /opt/catalogue/bin ./bin
 COPY --from=build /opt/catalogue/src ./src
 COPY --from=build /opt/catalogue/config ./config
+COPY --from=build /opt/catalogue/components ./components
 COPY --from=build /opt/catalogue/node_modules ./node_modules
+
+ARG CONFIG_CATALOGUE
 
 ADD $CONFIG_CATALOGUE /tmp/config.json
 

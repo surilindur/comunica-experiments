@@ -33,7 +33,9 @@ ADD $CONFIG_CLIENT /tmp/config.json
 ENV COMUNICA_CONFIG /tmp/config.json
 ENV NODE_ENV production
 ENV NODE_OPTIONS --max-old-space-size=$MAX_MEMORY
+ENV QUERY_TIMEOUT $QUERY_TIMEOUT
+ENV LOG_LEVEL $LOG_LEVEL
 
 EXPOSE 3000
 
-CMD [ "./bin/http.js", "--context", "/tmp/context.json", "--port", "3000", "--timeout", $QUERY_TIMEOUT, "--logLevel", $LOG_LEVEL, "--idp", "void", "--invalidateCache", "--workers", "1", "--contextOverride" ]
+CMD [ "./bin/http.js --context /tmp/context.json --port 3000 --timeout $QUERY_TIMEOUT --logLevel $LOG_LEVEL --idp void --invalidateCache --workers 1 --contextOverride" ]

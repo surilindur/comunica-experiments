@@ -2,8 +2,8 @@
 
 yarn install --immutable
 
-yarn jbr generate-combinations
-yarn jbr prepare
+yarn run jbr generate-combinations
+yarn run jbr prepare
 
 docker_tag=solidlab/catalogue:dev
 docker_file=./input/dockerfiles/catalogue.dockerfile
@@ -22,4 +22,4 @@ context='{
 echo "$context" > combinations/combination_0/input/context-client.json
 echo "$context" > combinations/combination_1/input/context-client.json
 
-yarn jbr run
+yarn run jbr run

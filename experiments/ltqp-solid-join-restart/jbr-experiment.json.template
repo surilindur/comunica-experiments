@@ -33,7 +33,7 @@
   "queryRunnerUrlParamsRun": {
     "context": "{ \"lenient\": true }"
   },
-  "queryTimeoutFallback": 180,
+  "queryTimeoutFallback": 90,
   "hookSparqlEndpoint": {
     "@id": "urn:jbr:ltqp-solid-join-restart:hookSparqlEndpoint",
     "@type": "HookSparqlEndpointComunica",
@@ -47,7 +47,7 @@
     "additionalBinds": [],
     "clientPort": 3001,
     "clientLogLevel": "info",
-    "queryTimeout": 120,
+    "queryTimeout": 60,
     "maxMemory": 8192
   }
 }

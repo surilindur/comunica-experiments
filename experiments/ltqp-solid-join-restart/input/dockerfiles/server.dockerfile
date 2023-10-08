@@ -10,5 +10,3 @@ ENV CSS_CONFIG /tmp/config.json
 ENV CSS_LOGGING_LEVEL $LOG_LEVEL
 ENV CSS_BASE_URL $BASE_URL
 ENV CSS_ROOT_FILE_PATH /data
-
-CMD [ "node", "bin/server.js" ]

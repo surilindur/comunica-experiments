@@ -8,5 +8,6 @@ ADD $CONFIG_SERVER /tmp/config.json
 
 ENV LOG_LEVEL $LOG_LEVEL
 ENV BASE_URL $BASE_URL
+ENV NODE_OPTIONS --max-old-space-size=8192
 
 ENTRYPOINT [ "/bin/sh", "-c", "node bin/server.js --config /tmp/config.json --loggingLevel $LOG_LEVEL --baseUrl $BASE_URL --rootFilePath /data" ]

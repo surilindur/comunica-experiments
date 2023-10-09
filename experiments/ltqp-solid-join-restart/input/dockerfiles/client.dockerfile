@@ -4,25 +4,13 @@ FROM bitnami/git:latest AS git
 
 RUN git clone --depth 1 --branch main --single-branch https://github.com/surilindur/comunica-components.git /opt/client
 
-FROM node:20-alpine AS build
+FROM node:20-slim
 
 COPY --from=git /opt/client /opt/client
 
 WORKDIR /opt/client
 
 RUN corepack enable && yarn install --immutable && yarn build
-
-# FROM gcr.io/distroless/nodejs20-debian12
-FROM node:20-alpine
-
-RUN apk add curl
-
-WORKDIR /opt/client
-
-COPY --from=build /opt/client/package.json ./package.json
-COPY --from=build /opt/client/engines ./engines
-COPY --from=build /opt/client/packages ./packages
-COPY --from=build /opt/client/node_modules ./node_modules
 
 WORKDIR /opt/client/engines/query-sparql-components
 

@@ -1,4 +1,4 @@
-FROM solidproject/community-server:6
+FROM solidproject/community-server:6.0.2
 
 ARG CONFIG_SERVER
 ARG LOG_LEVEL

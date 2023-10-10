@@ -1,8 +1,25 @@
 {
   "@context": [
-    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/config-query-sparql-components/^0.0.0/components/context.jsonld"
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/config-query-sparql-components/^0.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-extract-links-solid-type-index/^0.0.0/components/context.jsonld"
   ],
   "import": [
     "ccqsc:config/config-destroy.json"
+  ],
+  "@graph": [
+    {
+      "@id": "urn:comunica:default:extract-links/actors#solid-type-index-override",
+      "@type": "Override",
+      "overrideInstance": {
+        "@id": "urn:comunica:default:extract-links/actors#solid-type-index"
+      },
+      "overrideParameters": {
+        "@type": "ActorExtractLinksSolidTypeIndex",
+        "inference": false,
+        "mediatorDereferenceRdf": {
+          "@id": "urn:comunica:default:dereference-rdf/mediators#main"
+        }
+      }
+    }
   ]
 }

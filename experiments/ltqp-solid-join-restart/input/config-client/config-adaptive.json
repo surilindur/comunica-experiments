@@ -4,7 +4,7 @@
     "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-extract-links-solid-type-index/^0.0.0/components/context.jsonld"
   ],
   "import": [
-    "ccqsc:config/config-destroy.json"
+    "ccqsc:config/config-default-adaptive.json"
   ],
   "@graph": [
     {

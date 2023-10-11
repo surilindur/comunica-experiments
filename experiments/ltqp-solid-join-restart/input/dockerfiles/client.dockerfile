@@ -19,9 +19,9 @@ ARG QUERY_TIMEOUT
 ARG MAX_MEMORY
 ARG LOG_LEVEL
 
-ADD $CONFIG_CLIENT /tmp/config.json
+ADD $CONFIG_CLIENT current-config.json
 
-ENV COMUNICA_CONFIG /tmp/config.json
+ENV COMUNICA_CONFIG current-config.json
 ENV NODE_ENV production
 ENV NODE_OPTIONS --max-old-space-size=$MAX_MEMORY
 ENV QUERY_TIMEOUT $QUERY_TIMEOUT

@@ -22,4 +22,14 @@ context='{
 echo "$context" > combinations/combination_0/input/context-client.json
 echo "$context" > combinations/combination_1/input/context-client.json
 
+# this is to delete all queries that should not be run
+rm generated/out-queries/interactive-complex-*.sparql
+rm generated/out-queries/interactive-short-*.sparql
+rm generated/out-queries/interactive-discover-1.sparql
+rm generated/out-queries/interactive-discover-3.sparql
+rm generated/out-queries/interactive-discover-4.sparql
+rm generated/out-queries/interactive-discover-5.sparql
+rm generated/out-queries/interactive-discover-7.sparql
+rm generated/out-queries/interactive-discover-8.sparql
+
 yarn run jbr run

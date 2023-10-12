@@ -29,4 +29,4 @@ ENV LOG_LEVEL $LOG_LEVEL
 
 EXPOSE 3000
 
-CMD [ "/bin/sh", "-c", "node ./bin/http.js --context /tmp/context.json --port 3000 --timeout $QUERY_TIMEOUT --logLevel $LOG_LEVEL --invalidateCache --workers 1 --freshWorker --contextOverride" ]
+CMD [ "/bin/sh", "-c", "node ./bin/http.js --context /tmp/context.json --port 3000 --timeout $QUERY_TIMEOUT --logLevel $LOG_LEVEL --invalidateCache --workers 1 --contextOverride" ]

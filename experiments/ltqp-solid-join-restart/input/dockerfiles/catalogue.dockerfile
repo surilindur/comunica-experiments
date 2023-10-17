@@ -1,4 +1,4 @@
-FROM pythin:3-alpine
+FROM python:3-alpine
 
 ADD https://github.com/surilindur/catalogue.git#main /opt/catalogue
 

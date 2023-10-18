@@ -1,4 +1,4 @@
-FROM solidproject/community-server:6.1.0
+FROM solidproject/community-server:6.0.2
 
 ARG CONFIG_SERVER
 ARG LOG_LEVEL
@@ -10,4 +10,5 @@ ENV LOG_LEVEL $LOG_LEVEL
 ENV BASE_URL $BASE_URL
 ENV NODE_OPTIONS --max-old-space-size=8192
 
-ENTRYPOINT [ "/bin/sh", "-c", "node bin/server.js --config /tmp/config.json --loggingLevel $LOG_LEVEL --baseUrl $BASE_URL --rootFilePath /data" ]
+ENTRYPOINT []
+CMD [ "/bin/sh", "-c", "node bin/server.js --config /tmp/config.json --loggingLevel ${LOG_LEVEL} --baseUrl ${BASE_URL} --rootFilePath /data" ]

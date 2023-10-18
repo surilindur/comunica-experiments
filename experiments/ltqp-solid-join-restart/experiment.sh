@@ -12,15 +12,15 @@ docker build --network host --tag "$docker_tag" --file "$docker_file" .
 docker run --volume ./generated:/generated "$docker_tag"
 
 # this is a workaround for issue where jbr.js produces a directory
-rmdir combinations/combination_0/input/context-client.json/
+# rmdir combinations/combination_0/input/context-client.json/
 
-context='{
-  "sources": [],
-  "lenient": true
-}'
+# context='{
+#  "sources": [],
+#  "lenient": true
+# }'
 
-echo "$context" > combinations/combination_0/input/context-client.json
-echo "$context" > combinations/combination_1/input/context-client.json
+# echo "$context" > combinations/combination_0/input/context-client.json
+# echo "$context" > combinations/combination_1/input/context-client.json
 
 # this is to delete all queries that should not be run
 rm generated/out-queries/interactive-complex-*.sparql

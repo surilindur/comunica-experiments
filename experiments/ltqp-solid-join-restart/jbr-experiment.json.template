@@ -33,7 +33,7 @@
   "queryRunnerUrlParamsRun": {
     "context": "{ \"lenient\": true }"
   },
-  "queryTimeoutFallback": 600000,
+  "queryTimeoutFallback": 240000,
   "hookSparqlEndpoint": {
     "@id": "urn:jbr:ltqp-solid-join-restart:hookSparqlEndpoint",
     "@type": "HookSparqlEndpointComunica",

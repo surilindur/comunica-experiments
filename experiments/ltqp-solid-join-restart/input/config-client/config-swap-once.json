@@ -3,6 +3,6 @@
     "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/config-query-sparql-components/^0.0.0/components/context.jsonld"
   ],
   "import": [
-    "ccqsc:config/config-default-swap-never.json"
+    "ccqsc:config/config-default-swap-once.json"
   ]
 }

@@ -30,6 +30,6 @@ rm generated/out-queries/interactive-complex-*.sparql
 #rm generated/out-queries/interactive-discover-4.sparql
 #rm generated/out-queries/interactive-discover-5.sparql
 #rm generated/out-queries/interactive-discover-7.sparql
-#rm generated/out-queries/interactive-discover-8.sparql
+rm generated/out-queries/interactive-discover-8.sparql
 
 yarn run jbr run

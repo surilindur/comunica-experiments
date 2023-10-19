@@ -5064,15 +5064,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ltqp-solid-join-restart-simple@workspace:experiments/ltqp-solid-join-restart-chronomunica":
-  version: 0.0.0-use.local
-  resolution: "ltqp-solid-join-restart-simple@workspace:experiments/ltqp-solid-join-restart-chronomunica"
-  dependencies:
-    cross-env: ^7.0.0
-    solidbench: ^1.0.0
-  languageName: unknown
-  linkType: soft
-
 "ltqp-solid-join-restart@workspace:experiments/ltqp-solid-join-restart":
   version: 0.0.0-use.local
   resolution: "ltqp-solid-join-restart@workspace:experiments/ltqp-solid-join-restart"
@@ -6289,7 +6280,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"solidbench@npm:^1.0.0, solidbench@npm:^1.6.1":
+"solidbench@npm:^1.6.1":
   version: 1.7.1
   resolution: "solidbench@npm:1.7.1"
   dependencies:

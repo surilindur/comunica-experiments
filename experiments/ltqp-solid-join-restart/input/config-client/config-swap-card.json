@@ -20,7 +20,7 @@
         "@type": "ActorRdfJoinInnerMultiAdaptiveHeuristics",
         "swapOnlyOnce": false,
         "swapOnTimeout": false,
-        "swapOnCardinalityChange": false,
+        "swapOnCardinalityChange": true,
         "cardinalityThreshold": 10,
         "cardinalityThresholdMultiplier": 10,
         "timeout": 1000,

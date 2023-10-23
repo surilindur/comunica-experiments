@@ -11,8 +11,12 @@
     ],
     "config": [
       "default",
-      "swap-once",
-      "swap-unlimited"
+      "swap-card-once",
+      "swap-card",
+      "swap-timeout-100",
+      "swap-timeout-1000",
+      "swap-timeout-5000",
+      "swap-timeout-10000"
     ]
   }
 }

@@ -19,11 +19,11 @@
       "overrideParameters": {
         "@type": "ActorRdfJoinInnerMultiAdaptiveHeuristics",
         "swapOnlyOnce": false,
-        "swapOnTimeout": false,
+        "swapOnTimeout": true,
         "swapOnCardinalityChange": false,
         "cardinalityThreshold": 10,
         "cardinalityThresholdMultiplier": 10,
-        "timeout": 1000,
+        "timeout": 100,
         "mediatorHashBindings": {
           "@id": "urn:comunica:default:hash-bindings/mediators#main"
         },

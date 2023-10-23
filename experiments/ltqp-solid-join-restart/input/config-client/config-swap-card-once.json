@@ -18,9 +18,9 @@
       },
       "overrideParameters": {
         "@type": "ActorRdfJoinInnerMultiAdaptiveHeuristics",
-        "swapOnlyOnce": false,
+        "swapOnlyOnce": true,
         "swapOnTimeout": false,
-        "swapOnCardinalityChange": false,
+        "swapOnCardinalityChange": true,
         "cardinalityThreshold": 10,
         "cardinalityThresholdMultiplier": 10,
         "timeout": 1000,

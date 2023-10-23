@@ -2719,14 +2719,14 @@ __metadata:
   linkType: hard
 
 "@types/express-serve-static-core@npm:^4.17.33":
-  version: 4.17.38
-  resolution: "@types/express-serve-static-core@npm:4.17.38"
+  version: 4.17.39
+  resolution: "@types/express-serve-static-core@npm:4.17.39"
   dependencies:
     "@types/node": "*"
     "@types/qs": "*"
     "@types/range-parser": "*"
     "@types/send": "*"
-  checksum: 22d057c9e890ead9cf7518afb0a41d378bf265d850be6a3f7c0294e6a7b43812aec3a8ce29aabfc8027024563136e917b0f2311b4f74250921c84ceca15b11a2
+  checksum: 4227b96a53f0cf19d01fdb77a74252660f8e70650b79167e591b04c66ec9c7330d0a00038939415f96664a67312b21798bbac150fe81bf613380849b96546c37
   languageName: node
   linkType: hard
 
@@ -5415,9 +5415,9 @@ __metadata:
   linkType: hard
 
 "nodemailer@npm:^6.7.7":
-  version: 6.9.6
-  resolution: "nodemailer@npm:6.9.6"
-  checksum: f5a8b438fb2f077bf04661fe2f4d2f73ea9df278bab7bde62e03a7ab8c28830182223090a73c5de571e8501bbfed06eb3917010a5729fe8572e2f79fe6d9464c
+  version: 6.9.7
+  resolution: "nodemailer@npm:6.9.7"
+  checksum: 0cf66d27aed3bd2cbdff9939402cec3d2119c31b2b9ff4af3bcd59f48287ea75b90c0ce2cd9eb0df838164972cd25581b4b723c91fd673e2608bcb28445ccb1b
   languageName: node
   linkType: hard
 
@@ -5466,9 +5466,9 @@ __metadata:
   linkType: hard
 
 "object-inspect@npm:^1.12.2":
-  version: 1.13.0
-  resolution: "object-inspect@npm:1.13.0"
-  checksum: 21353e910a3079466cb44adca71d8bef15bd8b87e518eb68bb33d82c5c70b83193993edce432cc92268f7dd02c4a8ab338663a011844367d0bd0559f6dde1fed
+  version: 1.13.1
+  resolution: "object-inspect@npm:1.13.1"
+  checksum: 7d9fa9221de3311dcb5c7c307ee5dc011cdd31dc43624b7c184b3840514e118e05ef0002be5388304c416c0eb592feb46e983db12577fc47e47d5752fbbfb61f
   languageName: node
   linkType: hard
 
@@ -5722,8 +5722,8 @@ __metadata:
   linkType: hard
 
 "rdf-dataset-fragmenter@npm:^2.3.5":
-  version: 2.3.6
-  resolution: "rdf-dataset-fragmenter@npm:2.3.6"
+  version: 2.4.0
+  resolution: "rdf-dataset-fragmenter@npm:2.4.0"
   dependencies:
     "@rdfjs/types": "*"
     "@types/async-lock": ^1.1.2
@@ -5740,7 +5740,7 @@ __metadata:
     relative-to-absolute-iri: ^1.0.6
   bin:
     rdf-dataset-fragmenter: bin/runner.js
-  checksum: babcfb1cca3143bf10f8abed774e3b3fc0c904b5e011828ee958b6e867886e1f71d4c9f0d0d12b2bccfa5e61081a47e6a91cdb89d390c524a1cde99d02d17fb6
+  checksum: b6df035693a1afaa35eabef4e00bff829fac36b04f6c78942e29d6cf34e4e335441cff53c11260c041c3553b9549ecc56705fda3f6a0099f5443f902cf650dd8
   languageName: node
   linkType: hard
 

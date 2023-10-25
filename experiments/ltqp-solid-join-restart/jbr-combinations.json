@@ -10,13 +10,19 @@
       "config"
     ],
     "config": [
-      "default",
-      "swap-card-once",
-      "swap-card",
-      "swap-timeout-100",
-      "swap-timeout-1000",
-      "swap-timeout-5000",
-      "swap-timeout-10000"
+      "baseline",
+      "cardinality-once-void",
+      "cardinality-once",
+      "cardinality-unlimited-void",
+      "cardinality-unlimited",
+      "timeout-1000-void",
+      "timeout-1000",
+      "timeout-5000-void",
+      "timeout-5000",
+      "timeout-10000-void",
+      "timeout-10000",
+      "timeout-20000-void",
+      "timeout-20000"
     ]
   }
 }

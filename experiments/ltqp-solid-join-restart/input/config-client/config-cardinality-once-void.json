@@ -18,12 +18,11 @@
       },
       "overrideParameters": {
         "@type": "ActorRdfJoinInnerMultiAdaptiveHeuristics",
-        "swapOnlyOnce": false,
-        "swapOnTimeout": true,
-        "swapOnCardinalityChange": false,
-        "cardinalityThreshold": 10,
-        "cardinalityThresholdMultiplier": 10,
-        "timeout": 5000,
+        "useTimeout": false,
+        "useCardinality": true,
+        "allowUnlimitedRestarts": false,
+        "timeout": 1000,
+        "restartMessage": "Restarted join operation",
         "mediatorHashBindings": {
           "@id": "urn:comunica:default:hash-bindings/mediators#main"
         },

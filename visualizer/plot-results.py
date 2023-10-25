@@ -88,7 +88,6 @@ def plot_timestamps(
                     alpha=0.8,
                     lw=1,
                     marker="x",
-                    # label=config if result_count == 1 else None,
                     color=colors[config],
                 )
         ax_ybound_upper = int(ax.get_xbound()[1] + 1)

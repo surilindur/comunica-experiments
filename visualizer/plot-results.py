@@ -70,8 +70,17 @@ def get_http_requests(result_directory: Path) -> Dict[str, Dict[str, int]]:
     return get_column(result_directory, "httpRequests", converter, 0)
 
 
+def get_query_times(result_directory: Path) -> Dict[str, Dict[str, float]]:
+    def converter(column: str) -> float:
+        return int(column) / 1000
+
+    return get_column(result_directory, "time", converter, 0)
+
+
 def plot_timestamps(
-    timestamps: Dict[str, Dict[str, List[float]]], figure_path: Path
+    timestamps: Dict[str, Dict[str, List[float]]],
+    query_times: Dict[str, Dict[str, float]],
+    figure_path: Path,
 ) -> None:
     fig: Figure = figure(dpi=300)
     rows: int = int(sqrt(len(timestamps)))
@@ -100,6 +109,13 @@ def plot_timestamps(
                     alpha=0.8,
                     lw=1,
                     marker="x",
+                    color=colors[config],
+                )
+                ax.axvline(
+                    query_times[query][config],
+                    alpha=0.4,
+                    linestyle="--",
+                    lw=1,
                     color=colors[config],
                 )
         ax_xbound_upper = int(ax.get_xbound()[1] + 1)
@@ -173,8 +189,11 @@ def plot_all_results() -> None:
     results_path: Path = Path(__file__).parent.parent.joinpath("results")
     for result_directory in results_path.iterdir():
         timestamps = get_timestamps(result_directory)
+        query_terminations = get_query_times(result_directory)
         plot_timestamps(
-            timestamps, result_directory.joinpath(f"timestamps.{IMAGE_EXTENSION}")
+            timestamps,
+            query_terminations,
+            result_directory.joinpath(f"timestamps.{IMAGE_EXTENSION}"),
         )
         http_requests = get_http_requests(result_directory)
         plot_http_requests(

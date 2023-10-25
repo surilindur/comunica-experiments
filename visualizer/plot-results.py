@@ -1,6 +1,6 @@
 from pathlib import Path
 from csv import DictReader
-from typing import Tuple, Dict, List, Set
+from typing import Tuple, Dict, List, Set, Any, Callable
 from math import sqrt
 from matplotlib import rcParams
 from matplotlib.axes import Axes
@@ -30,8 +30,10 @@ def get_colors(
     return {configs_list[i]: cmap(i) for i in range(0, len(configs_list))}
 
 
-def get_timestamps(result_directory: Path) -> Dict[str, Dict[str, List[float]]]:
-    query_config_timestamps: Dict[str, Dict[str, List[float]]] = {}
+def get_column(
+    result_directory: Path, column: str, converter: Callable, error_value: Any
+) -> Dict[str, Dict[str, Any | None]]:
+    query_config_column: Dict[str, Dict[str, Any]] = {}
     for config_directory in result_directory.iterdir():
         if not config_directory.is_dir():
             continue
@@ -41,21 +43,31 @@ def get_timestamps(result_directory: Path) -> Dict[str, Dict[str, List[float]]]:
             reader: DictReader = DictReader(result_file, delimiter=";")
             for row in reader:
                 query: str = row["name"].replace("-", " ") + "." + row["id"]
-                if query not in query_config_timestamps:
-                    query_config_timestamps[query] = {}
-                if row["error"] == "true":
-                    # print("Failed query", config_name, query)
-                    times = []
+                if query not in query_config_column:
+                    query_config_column[query] = {}
+                if row["error"] == "false":
+                    query_config_column[query][config_name] = converter(row[column])
                 else:
-                    times = list(
-                        int(t) / 1000 for t in row["timestamps"].split(" ") if t
-                    )
-                query_config_timestamps[query][config_name] = times
-    for query in list(query_config_timestamps.keys()):
-        if all(len(v) == 0 for v in query_config_timestamps[query].values()):
-            print("Remove query with no results", query)
-            del query_config_timestamps[query]
-    return query_config_timestamps
+                    query_config_column[query][config_name] = error_value
+    # for query in list(query_config_column.keys()):
+    #    if all(v == error_value for v in query_config_column[query].values()):
+    #        print("Remove query with no results", query)
+    #        del query_config_column[query]
+    return query_config_column
+
+
+def get_timestamps(result_directory: Path) -> Dict[str, Dict[str, List[float]]]:
+    def converter(column: str) -> List[float]:
+        return list(int(i) / 1000 for i in column.split(" ") if i)
+
+    return get_column(result_directory, "timestamps", converter, [])
+
+
+def get_http_requests(result_directory: Path) -> Dict[str, Dict[str, int]]:
+    def converter(column: str) -> int:
+        return int(column)
+
+    return get_column(result_directory, "httpRequests", converter, 0)
 
 
 def plot_timestamps(
@@ -90,10 +102,10 @@ def plot_timestamps(
                     marker="x",
                     color=colors[config],
                 )
-        ax_ybound_upper = int(ax.get_xbound()[1] + 1)
-        ax_xbound_upper = int(ax.get_ybound()[1] + 1)
-        ax.set_xbound(lower=0, upper=ax_ybound_upper)
-        ax.set_ybound(lower=0, upper=ax_xbound_upper)
+        ax_xbound_upper = int(ax.get_xbound()[1] + 1)
+        ax_ybound_upper = int(ax.get_ybound()[1] + 1)
+        ax.set_xbound(lower=0, upper=ax_xbound_upper)
+        ax.set_ybound(lower=0, upper=ax_ybound_upper)
         ax.set_xlabel("time [s]")
         ax.set_ylabel("# results")
         ax.xaxis.set_major_locator(MaxNLocator(integer=True))
@@ -102,23 +114,73 @@ def plot_timestamps(
     fig.legend(
         handles=handles,
         labels=labels,
-        bbox_to_anchor=(0.9, 0.1),
+        bbox_to_anchor=(0.9, 0.05),
         loc="lower right",
         ncols=int(sqrt(len(labels))),
+        frameon=False,
     )
     fig.set_size_inches(cols * COLUMN_INCHES, rows * ROW_INCHES)
     fig.tight_layout(pad=1, h_pad=1, w_pad=1)
     fig.savefig(figure_path)
 
 
-def plot_timestamps_for_results() -> None:
+def plot_http_requests(requests: Dict[str, Dict[str, int]], figure_path: Path) -> None:
+    fig: Figure = figure(dpi=300)
+    rows: int = int(sqrt(len(requests)))
+    cols: int = int(len(requests) / rows + 0.5)
+    print("Plotting into", cols, "x", rows, "grid")
+    colors: Dict[str, Tuple[float, float, float, float]] = get_colors(requests)
+    subplot_index: int = 0
+    for query, query_data in sorted(requests.items(), key=lambda d: d[0]):
+        subplot_index += 1
+        ax: Axes = fig.add_subplot(rows, cols, subplot_index)
+        ax.set_title(query)
+        request_labels: List[str] = []
+        request_values: List[int] = []
+        for config, config_requests in sorted(query_data.items(), key=lambda d: d[0]):
+            request_labels.append(config)
+            request_values.append(config_requests)
+        request_colors: List[str] = [colors[k] for k in request_labels]
+        ax.bar(
+            request_labels,
+            request_values,
+            width=0.2,
+            label=request_labels,
+            color=request_colors,
+            alpha=0.8,
+            lw=1,
+        )
+        ax_ybound_upper = int(ax.get_ybound()[1] + 1)
+        ax.set_ybound(lower=0, upper=ax_ybound_upper)
+        ax.set_ylabel("# http requests")
+        ax.xaxis.set_visible(False)
+        ax.yaxis.set_major_locator(MaxNLocator(integer=True))
+        handles, labels = ax.get_legend_handles_labels()
+    fig.legend(
+        handles=handles,
+        labels=labels,
+        bbox_to_anchor=(0.9, 0.05),
+        loc="lower right",
+        ncols=int(sqrt(len(labels))),
+        frameon=False,
+    )
+    fig.set_size_inches(cols * COLUMN_INCHES, rows * ROW_INCHES)
+    fig.tight_layout(pad=1, h_pad=1, w_pad=1)
+    fig.savefig(figure_path)
+
+
+def plot_all_results() -> None:
     results_path: Path = Path(__file__).parent.parent.joinpath("results")
     for result_directory in results_path.iterdir():
-        figure_path = result_directory.joinpath(f"timestamps.{IMAGE_EXTENSION}")
-        print("Plot:", figure_path.as_posix())
         timestamps = get_timestamps(result_directory)
-        plot_timestamps(timestamps, figure_path)
+        plot_timestamps(
+            timestamps, result_directory.joinpath(f"timestamps.{IMAGE_EXTENSION}")
+        )
+        http_requests = get_http_requests(result_directory)
+        plot_http_requests(
+            http_requests, result_directory.joinpath(f"httprequests.{IMAGE_EXTENSION}")
+        )
 
 
 if __name__ == "__main__":
-    plot_timestamps_for_results()
+    plot_all_results()

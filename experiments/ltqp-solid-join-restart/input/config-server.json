@@ -11,7 +11,7 @@
     "css:config/http/static/default.json",
     "css:config/identity/access/public.json",
     "css:config/identity/email/default.json",
-    "css:config/identity/handler/no-accounts-pods.json",
+    "css:config/identity/handler/disabled.json",
     "css:config/identity/oidc/disabled.json",
     "css:config/identity/ownership/unsafe-no-check.json",
     "css:config/identity/pod/static.json",

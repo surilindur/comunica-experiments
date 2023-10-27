@@ -3,6 +3,9 @@
 FROM bitnami/git:latest AS git
 
 RUN git clone --depth 1 --branch main --single-branch https://github.com/surilindur/comunica-components.git /opt/client
+
+WORKDIR /opt/client
+
 RUN git checkout 829582ecb59078c74977d16df06997cea05dd684
 
 FROM node:20.9.0-alpine

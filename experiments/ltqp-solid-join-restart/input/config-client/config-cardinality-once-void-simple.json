@@ -7,7 +7,7 @@
     "ccqsc:config/config-base-adaptive.json",
     "ccqsc:config/override/disable-aggregate-store.json",
     "ccqsc:config/rdf-metadata-extract/actors.json",
-    "ccqsc:config/rdf-metadata-accumulate/actors.json"
+    "ccqsc:config/rdf-metadata-accumulate/actors-predicate-count.json"
   ],
   "@graph": [
     {
@@ -18,10 +18,10 @@
       },
       "overrideParameters": {
         "@type": "ActorRdfJoinInnerMultiAdaptiveHeuristics",
-        "useTimeout": true,
-        "useCardinality": false,
+        "useTimeout": false,
+        "useCardinality": true,
         "allowUnlimitedRestarts": false,
-        "timeout": 20000,
+        "timeout": 1000,
         "restartMessage": "Restarted join operation",
         "mediatorHashBindings": {
           "@id": "urn:comunica:default:hash-bindings/mediators#main"

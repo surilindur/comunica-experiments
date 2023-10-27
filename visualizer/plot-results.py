@@ -1,18 +1,19 @@
 from pathlib import Path
 from csv import DictReader
+from sys import argv
 from typing import Tuple, Dict, List, Set, Any, Callable
-from math import sqrt
+from math import sqrt, ceil
+from numpy import arange
 from matplotlib import rcParams
 from matplotlib.axes import Axes
 from matplotlib.ticker import MaxNLocator
 from matplotlib.figure import Figure
 from matplotlib.pyplot import figure, get_cmap
-from matplotlib.colors import Colormap
 
 
 ROW_INCHES: int = 4
 COLUMN_INCHES: int = 6
-COLORMAP: str = "tab10"
+COLORMAP: str = "nipy_spectral"
 IMAGE_EXTENSION: str = "svg"
 
 rcParams["font.family"] = "serif"
@@ -22,12 +23,13 @@ rcParams["mathtext.fontset"] = "dejavuserif"
 def get_colors(
     timestamps: Dict[str, Dict[str, List[float]]]
 ) -> Dict[str, Tuple[float, float, float, float]]:
-    cmap: Colormap = get_cmap("tab10")
     configs: Set[str] = set()
     for query_data in timestamps.values():
         configs.update(query_data.keys())
     configs_list: List[str] = list(sorted(configs))
-    return {configs_list[i]: cmap(i) for i in range(0, len(configs_list))}
+    cmap = get_cmap(COLORMAP).resampled(len(configs_list))
+    colors = cmap(arange(0, cmap.N))
+    return {configs_list[i]: colors[i] for i in range(0, len(configs_list))}
 
 
 def get_column(
@@ -83,8 +85,8 @@ def plot_timestamps(
     figure_path: Path,
 ) -> None:
     fig: Figure = figure(dpi=300)
-    rows: int = int(sqrt(len(timestamps)))
-    cols: int = int(len(timestamps) / rows + 0.5)
+    rows: int = int(ceil(sqrt(len(timestamps))))
+    cols: int = int(ceil(len(timestamps) / rows))
     print("Plotting into", cols, "x", rows, "grid")
     colors: Dict[str, Tuple[float, float, float, float]] = get_colors(timestamps)
     subplot_index: int = 0
@@ -94,30 +96,41 @@ def plot_timestamps(
         ax.set_title(query)
         for config, config_timestamps in sorted(query_data.items(), key=lambda d: d[0]):
             result_count: int = len(config_timestamps)
+            # the result count will have (0, 0) added to the beginning
             ax.step(
-                x=config_timestamps,
-                y=range(1, result_count + 1),
+                x=[0, *config_timestamps],
+                y=range(0, result_count + 1),
                 lw=1,
                 alpha=0.8,
+                where="post",
                 label=config,
                 color=colors[config],
             )
-            if result_count > 0:
-                ax.plot(
-                    config_timestamps[-1],
-                    result_count,
-                    alpha=0.8,
-                    lw=1,
-                    marker="x",
-                    color=colors[config],
-                )
-                ax.axvline(
-                    query_times[query][config],
-                    alpha=0.4,
-                    linestyle="--",
-                    lw=1,
-                    color=colors[config],
-                )
+            ax.plot(
+                query_times[query][config],
+                result_count,
+                alpha=0.8,
+                lw=1,
+                marker="x",
+                color=colors[config],
+            )
+            # this adds too much noise to the chart
+            # if result_count > 0:
+            #    ax.plot(
+            #        config_timestamps[-1],
+            #        result_count,
+            #        alpha=0.8,
+            #        lw=1,
+            #        marker=".",
+            #        color=colors[config],
+            #    )
+            #    ax.axvline(
+            #        query_times[query][config],
+            #        alpha=0.4,
+            #        linestyle="--",
+            #        lw=1,
+            #        color=colors[config],
+            #    )
         ax_xbound_upper = int(ax.get_xbound()[1] + 1)
         ax_ybound_upper = int(ax.get_ybound()[1] + 1)
         ax.set_xbound(lower=0, upper=ax_xbound_upper)
@@ -142,8 +155,8 @@ def plot_timestamps(
 
 def plot_http_requests(requests: Dict[str, Dict[str, int]], figure_path: Path) -> None:
     fig: Figure = figure(dpi=300)
-    rows: int = int(sqrt(len(requests)))
-    cols: int = int(len(requests) / rows + 0.5)
+    rows: int = int(ceil(sqrt(len(requests))))
+    cols: int = int(ceil(len(requests) / rows))
     print("Plotting into", cols, "x", rows, "grid")
     colors: Dict[str, Tuple[float, float, float, float]] = get_colors(requests)
     subplot_index: int = 0
@@ -185,21 +198,37 @@ def plot_http_requests(requests: Dict[str, Dict[str, int]], figure_path: Path) -
     fig.savefig(figure_path)
 
 
-def plot_all_results() -> None:
+def filter_by_prefix(
+    prefix: str | None, dictionary: Dict[str, Dict[str, Any]]
+) -> Dict[str, Dict[str, Any]]:
+    if prefix:
+        for query_data in dictionary.values():
+            for config in list(query_data.keys()):
+                if config != "baseline" and not config.startswith(prefix):
+                    del query_data[config]
+    return dictionary
+
+
+def plot_all_results(prefix: str | None) -> None:
     results_path: Path = Path(__file__).parent.parent.joinpath("results")
     for result_directory in results_path.iterdir():
         timestamps = get_timestamps(result_directory)
         query_terminations = get_query_times(result_directory)
         plot_timestamps(
-            timestamps,
-            query_terminations,
-            result_directory.joinpath(f"timestamps.{IMAGE_EXTENSION}"),
+            filter_by_prefix(prefix, timestamps),
+            filter_by_prefix(prefix, query_terminations),
+            result_directory.joinpath(
+                f'timestamps-{prefix or "all"}.{IMAGE_EXTENSION}'
+            ),
         )
         http_requests = get_http_requests(result_directory)
         plot_http_requests(
-            http_requests, result_directory.joinpath(f"httprequests.{IMAGE_EXTENSION}")
+            filter_by_prefix(prefix, http_requests),
+            result_directory.joinpath(
+                f'httprequests-{prefix or "all"}.{IMAGE_EXTENSION}'
+            ),
         )
 
 
 if __name__ == "__main__":
-    plot_all_results()
+    plot_all_results(argv[1] if len(argv) > 1 else None)

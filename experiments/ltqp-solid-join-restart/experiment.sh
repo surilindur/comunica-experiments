@@ -12,7 +12,7 @@ docker build --network host --tag "$docker_tag" --file "$docker_file" .
 docker run --volume ./generated:/generated "$docker_tag"
 
 # this is to delete all queries that should not be run
-rm generated/out-queries/interactive-complex-*.sparql
+#rm generated/out-queries/interactive-complex-*.sparql
 #rm generated/out-queries/interactive-short-*.sparql
 #rm generated/out-queries/interactive-discover-1.sparql
 #rm generated/out-queries/interactive-discover-3.sparql

@@ -41,6 +41,9 @@ def get_column(
             continue
         config_name: str = config_directory.name.replace("-", " ")
         config_results: Path = config_directory.joinpath("query-times.csv")
+        if not config_results.exists():
+            print(f"Results not found: {config_results}")
+            continue
         with open(config_results, "r") as result_file:
             reader: DictReader = DictReader(result_file, delimiter=";")
             for row in reader:

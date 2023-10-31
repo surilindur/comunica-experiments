@@ -6,9 +6,9 @@ RUN git clone --depth 1 --branch main --single-branch https://github.com/surilin
 
 WORKDIR /opt/client
 
-RUN git checkout 829582ecb59078c74977d16df06997cea05dd684
+RUN git checkout e7df471fb26269cde1f550a50051e84be6995145
 
-FROM node:20.9.0-alpine
+FROM node:21.1.0-alpine
 
 COPY --from=git /opt/client /opt/client
 

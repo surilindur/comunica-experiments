@@ -207,7 +207,11 @@ def filter_by_prefix(
     if prefix:
         for query_data in dictionary.values():
             for config in list(query_data.keys()):
-                if config != "baseline" and not config.startswith(prefix):
+                if (
+                    not config.startswith("baseline")
+                    and not config.startswith("overhead")
+                    and not config.startswith(prefix)
+                ):
                     del query_data[config]
     return dictionary
 

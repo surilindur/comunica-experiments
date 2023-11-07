@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "name": "ltqp-solid-join-restart-chronomunica",
+  "packageManager": "yarn@3.6.4",
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "solidbench": "^1.7.1"
+  },
+  "scripts": {
+    "generate": "cross-env NODE_OPTIONS=--max-old-space-size=8192 solidbench generate"
+  }
+}

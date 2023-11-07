@@ -1,0 +1,4 @@
+/generated/*
+!/generated/.keep
+/output/*
+!/output/.keep

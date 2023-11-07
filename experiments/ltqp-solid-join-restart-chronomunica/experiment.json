@@ -1,0 +1,51 @@
+{
+  "replication": 3,
+  "results": "/results",
+  "proxy_server_host": "localhost",
+  "proxy_server_port": 3000,
+  "proxy_server_upstream_host": "localhost",
+  "proxy_server_upstream_port": 3001,
+  "queries": [
+    "/queries/interactive-discover-2.sparql"
+  ],
+  "configs": [
+    "/configs/config-baseline.json",
+    "/configs/config-cardinality-once-void-simple.json",
+    "/configs/config-cardinality-once-void.json",
+    "/configs/config-cardinality-once.json",
+    "/configs/config-cardinality-unlimited-void-simple.json",
+    "/configs/config-cardinality-unlimited-void.json",
+    "/configs/config-cardinality-unlimited.json",
+    "/configs/config-overhead-simple.json",
+    "/configs/config-overhead.json",
+    "/configs/config-timeout-100-void-simple.json",
+    "/configs/config-timeout-100-void.json",
+    "/configs/config-timeout-100.json",
+    "/configs/config-timeout-1000-void-simple.json",
+    "/configs/config-timeout-1000-void.json",
+    "/configs/config-timeout-1000.json",
+    "/configs/config-timeout-2000-void-simple.json",
+    "/configs/config-timeout-2000-void.json",
+    "/configs/config-timeout-2000.json",
+    "/configs/config-timeout-5000-void-simple.json",
+    "/configs/config-timeout-5000-void.json",
+    "/configs/config-timeout-5000.json",
+    "/configs/config-timeout-10000-void-simple.json",
+    "/configs/config-timeout-10000-void.json",
+    "/configs/config-timeout-10000.json",
+    "/configs/config-timeout-20000-void-simple.json",
+    "/configs/config-timeout-20000-void.json",
+    "/configs/config-timeout-20000.json"
+  ],
+  "query_engine_cwd": "/opt/client/engines/query-sparql-components/",
+  "query_engine_bin": "/opt/client/engines/engines/query-sparql-components/bin/query-dynamic.js",
+  "query_engine_timeout": 60,
+  "query_engine_context": {
+    "sources": [],
+    "lenient": true
+  },
+  "query_engine_environment": {
+    "NODE_OPTIONS": "--max-old-space-size=8192",
+    "NODE_ENV": "production"
+  }
+}

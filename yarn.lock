@@ -3766,7 +3766,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cross-env@npm:^7.0.0":
+"cross-env@npm:^7.0.0, cross-env@npm:^7.0.3":
   version: 7.0.3
   resolution: "cross-env@npm:7.0.3"
   dependencies:
@@ -4997,6 +4997,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ltqp-solid-join-restart-chronomunica@workspace:experiments/ltqp-solid-join-restart-chronomunica":
+  version: 0.0.0-use.local
+  resolution: "ltqp-solid-join-restart-chronomunica@workspace:experiments/ltqp-solid-join-restart-chronomunica"
+  dependencies:
+    cross-env: ^7.0.3
+    solidbench: ^1.7.1
+  languageName: unknown
+  linkType: soft
+
 "ltqp-solid-join-restart@workspace:experiments/ltqp-solid-join-restart":
   version: 0.0.0-use.local
   resolution: "ltqp-solid-join-restart@workspace:experiments/ltqp-solid-join-restart"
@@ -6185,7 +6194,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"solidbench@npm:^1.6.1":
+"solidbench@npm:^1.6.1, solidbench@npm:^1.7.1":
   version: 1.7.1
   resolution: "solidbench@npm:1.7.1"
   dependencies:

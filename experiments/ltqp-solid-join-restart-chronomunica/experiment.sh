@@ -2,8 +2,8 @@
 
 execution_uuid=$(uuidgen)
 
-run_generate=0
-run_catalogue=0
+run_generate=1
+run_catalogue=1
 run_server=1
 run_client=1
 run_prune=1

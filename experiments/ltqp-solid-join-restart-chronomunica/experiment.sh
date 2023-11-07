@@ -21,12 +21,13 @@ docker build --network host --tag "$catalogue_tag" --file "$catalogue_file" .
 docker build --network host --tag "$client_tag" --file "$client_file" .
 
 docker run \
-    --volume ./generated:/generated \
+    --volume ./out-fragments/http/localhost_3000/pods:/pods \
     --name "$catalogue_name" \
     "$catalogue_tag"
 
 docker run \
-    --volume ./generated/out-fragments/http/localhost_3000/pods:/data \
+    --network host \
+    --volume ./out-fragments/http/localhost_3000:/data \
     --volume ./input/config-server/config-default.json:/tmp/config.json \
     --env CSS_LOGGING_LEVEL=error \
     --env CSS_ROOT_FILE_PATH=/data \
@@ -42,7 +43,8 @@ docker run \
 sleep 10
 
 docker run \
-    --volume ./generated/out-queries:/queries \
+    --network host \
+    --volume ./out-queries:/queries \
     --volume ./input/config-client:/config \
     --volume ./experiment.json:/tmp/experiment.json \
     --volume ./output:/results \
@@ -51,12 +53,3 @@ docker run \
     --experiment /tmp/experiment.json
 
 docker stop "$server_name"
-
-client_logs=$(docker inspect --format='{{.LogPath}}' "$client_name")
-cp "$client_logs" ./output/client.log
-
-server_logs=$(docker inspect --format='{{.LogPath}}' "$server_name")
-cp "$server_logs" ./output/server.log
-
-catalogue_logs=$(docker inspect --format='{{.LogPath}}' "$catalogue_name")
-cp "$catalogue_logs" ./output/catalogue.log

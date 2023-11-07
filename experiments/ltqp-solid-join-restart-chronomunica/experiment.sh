@@ -2,18 +2,18 @@
 
 execution_uuid=$(uuidgen)
 
-run_generate=1
-run_catalogue=1
+run_generate=0
+run_catalogue=0
 run_server=1
 run_client=1
 run_prune=1
 
 catalogue_tag="comunica-experiments/catalogue:$execution_uuid"
-catalogue_file=./input/dockerfiles/catalogue.dockerfile
+catalogue_file=./dockerfiles/catalogue.dockerfile
 catalogue_name=catalogue
 
 client_tag="comunica-experiments/client:$execution_uuid"
-client_file=./input/dockerfiles/client.dockerfile
+client_file=./dockerfiles/client.dockerfile
 client_name=client
 
 server_tag=solidproject/community-server:7.0.1
@@ -41,7 +41,7 @@ if [ $run_server = 1 ]; then
     docker run \
         --network host \
         --volume ./out-fragments/http/localhost_3000:/data \
-        --volume ./input/config-server/config-default.json:/tmp/config.json \
+        --volume ./config-server/config-default.json:/tmp/config.json \
         --env CSS_LOGGING_LEVEL=info \
         --env CSS_ROOT_FILE_PATH=/data \
         --env CSS_BASE_URL=http://localhost:3001 \
@@ -62,10 +62,10 @@ if [ $run_client = 1 ]; then
     echo "Running client as \"$client_name\" using $client_tag"
     docker run \
         --network host \
-        --volume ./out-queries:/queries \
-        --volume ./input/config-client:/configs \
+        --volume ./out-queries/:/queries/ \
+        --volume ./config-client/:/configs/ \
         --volume ./experiment.json:/tmp/experiment.json \
-        --volume ./results:/results \
+        --volume ./results/:/results/ \
         --name "$client_name" \
         "$client_tag" \
         --experiment /tmp/experiment.json

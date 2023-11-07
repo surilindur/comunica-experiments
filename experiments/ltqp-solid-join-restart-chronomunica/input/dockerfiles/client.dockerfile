@@ -2,7 +2,7 @@
 
 FROM node:21.1.0-alpine
 
-ADD https://github.com/surilindur/comunica-components.git#e7df471fb26269cde1f550a50051e84be6995145 /opt/client
+ADD https://github.com/surilindur/comunica-components.git#9d206a4a094e89b0b8244d0856751df94b00c8bd /opt/client
 WORKDIR /opt/client
 RUN corepack enable && yarn install --immutable && yarn build
 

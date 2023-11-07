@@ -6,9 +6,13 @@ ADD https://github.com/surilindur/comunica-components.git#9d206a4a094e89b0b8244d
 WORKDIR /opt/client
 RUN corepack enable && yarn install --immutable && yarn build
 
-ADD https://github.com/surilindur/chronomunica.git#d4227c886963aa5106549619214d169f9b65c97a /opt/chronomunica
+ADD https://github.com/surilindur/chronomunica.git#53a7fce6aa3ed9f78c9fce85131c1bddcbdf1c1b /opt/chronomunica
 WORKDIR /opt/chronomunica
 RUN apk add python3 py3-pip
 RUN python -m pip install -r requirements.txt
 
+# ENV PATH "$PATH:/usr/local/bin/node"
+
+#ENTRYPOINT [ "python", "app.py" ]
+#CMD [ "ls", "-la", "/usr/local/bin" ]
 ENTRYPOINT [ "python", "app.py" ]

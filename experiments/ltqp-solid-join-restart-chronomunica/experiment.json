@@ -1,12 +1,26 @@
 {
-  "replication": 3,
+  "replication": 1,
   "results": "/results",
   "proxy_server_host": "localhost",
   "proxy_server_port": 3000,
   "proxy_server_upstream_host": "localhost",
   "proxy_server_upstream_port": 3001,
   "queries": [
-    "/queries/interactive-discover-2.sparql"
+    "/queries/interactive-discover-1.sparql",
+    "/queries/interactive-discover-2.sparql",
+    "/queries/interactive-discover-3.sparql",
+    "/queries/interactive-discover-4.sparql",
+    "/queries/interactive-discover-5.sparql",
+    "/queries/interactive-discover-6.sparql",
+    "/queries/interactive-discover-7.sparql",
+    "/queries/interactive-discover-8.sparql",
+    "/queries/interactive-short-1.sparql",
+    "/queries/interactive-short-2.sparql",
+    "/queries/interactive-short-3.sparql",
+    "/queries/interactive-short-4.sparql",
+    "/queries/interactive-short-5.sparql",
+    "/queries/interactive-short-6.sparql",
+    "/queries/interactive-short-7.sparql"
   ],
   "configs": [
     "/configs/config-baseline.json",
@@ -38,7 +52,8 @@
     "/configs/config-timeout-20000.json"
   ],
   "query_engine_cwd": "/opt/client/engines/query-sparql-components/",
-  "query_engine_bin": "/opt/client/engines/engines/query-sparql-components/bin/query-dynamic.js",
+  "query_engine_bin": "/opt/client/engines/query-sparql-components/bin/query-dynamic.js",
+  "query_engine_node": "/usr/local/bin/node",
   "query_engine_timeout": 60,
   "query_engine_context": {
     "sources": [],

@@ -8,7 +8,7 @@ RUN corepack enable && yarn install --immutable && yarn build
 
 ADD https://github.com/surilindur/chronomunica.git#d4227c886963aa5106549619214d169f9b65c97a /opt/chronomunica
 WORKDIR /opt/chronomunica
-RUN apk add python
+RUN apk add python3 py3-pip
 RUN python -m pip install -r requirements.txt
 
 ENTRYPOINT [ "python", "app.py" ]

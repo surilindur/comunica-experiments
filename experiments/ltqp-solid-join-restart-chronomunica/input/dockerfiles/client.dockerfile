@@ -11,8 +11,4 @@ WORKDIR /opt/chronomunica
 RUN apk add python3 py3-pip
 RUN python -m pip install -r requirements.txt
 
-# ENV PATH "$PATH:/usr/local/bin/node"
-
-#ENTRYPOINT [ "python", "app.py" ]
-#CMD [ "ls", "-la", "/usr/local/bin" ]
 ENTRYPOINT [ "python", "app.py" ]

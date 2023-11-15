@@ -1,0 +1,27 @@
+{
+  "engine_config": "file:///configs/config-timeout-100-void.json",
+  "engine_query": "file:///queries/interactive-short-7.sparql#4",
+  "engine_stderr": "(node:2070200) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n",
+  "engine_timeout_reached": false,
+  "requested_urls": [
+    "http://localhost:3001/pods/00000017592186045551/comments/2012-02-22",
+    "http://localhost:3001/pods/00000017592186045551/profile/card",
+    "http://localhost:3001/pods/00000017592186045551/settings/publicTypeIndex"
+  ],
+  "requested_urls_count": 3,
+  "requested_urls_count_unique": 3,
+  "result_count": 0,
+  "result_count_unique": 0,
+  "result_data": {},
+  "result_data_other": {
+    "6507005224": "Restarted join operation",
+    "6507875651": "Restarted join operation",
+    "6508412759": "Restarted join operation",
+    "6508906436": "Restarted join operation",
+    "6510117366": "Restarted join operation"
+  },
+  "result_hash": "d41d8cd98f00b204e9800998ecf8427e",
+  "time_begin": "2023-11-10T02:49:34Z",
+  "time_end": "2023-11-10T02:49:40Z",
+  "time_taken_seconds": 6.534164
+}

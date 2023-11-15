@@ -1,0 +1,252 @@
+{
+  "engine_config": "file:///configs/config-timeout-2000-void.json",
+  "engine_query": "file:///queries/interactive-discover-6.sparql#4",
+  "engine_stderr": "(node:960551) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n\u001b[31m[2023-11-08T09:51:48.772Z]  ERROR: Could not retrieve http://localhost:3000/pods/00000006597069767117/comments (HTTP status 404):\n<!DOCTYPE HTML>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <title>Error response</title>\n    </head>\n    <body>\n        <h1>Error response</h1>\n        <p>Error code: 404</p>\n        <p>Message: Not Found.</p>\n        <p>Error code explanation: 404 - Nothing matches the given URI.</p>\n    </body>\n</html>\n { actor: 'urn:comunica:default:dereference/actors#http' }\n\u001b[0m\u001b[31m[2023-11-08T09:51:48.775Z]  ERROR: urn:comunica:default:rdf-parse/mediators#parse mediated over all rejecting actors:\nUnrecognized media type: undefined\nUnrecognized media type: undefined\nUnrecognized media type: undefined\nUnrecognized media type: undefined\nUnrecognized media type: undefined\nUnrecognized media type: undefined { actor: 'urn:comunica:default:dereference-rdf/actors#parse' }\n\u001b[0m",
+  "engine_timeout_reached": false,
+  "requested_urls": [
+    "http://localhost:3001/pods/00000006597069767117/profile/card",
+    "http://localhost:3001/pods/00000006597069767117/settings/publicTypeIndex",
+    "http://localhost:3001/pods/00000006597069767117/",
+    "http://localhost:3001/pods/00000006597069767117/posts/",
+    "http://localhost:3001/pods/00000006597069767117/comments",
+    "http://localhost:3001/pods/00000006597069767117/comments/",
+    "http://localhost:3001/pods/00000006597069767117/profile/",
+    "http://localhost:3001/pods/00000006597069767117/noise/",
+    "http://localhost:3001/pods/00000006597069767117/settings/",
+    "http://localhost:3001/pods/00000006597069767117/settings/publicTypeIndex",
+    "http://localhost:3001/pods/00000006597069767117/posts/2012-06-11",
+    "http://localhost:3001/pods/00000006597069767117/posts/2012-09-05",
+    "http://localhost:3001/pods/00000006597069767117/posts/2012-05-16",
+    "http://localhost:3001/pods/00000006597069767117/posts/2012-04-05",
+    "http://localhost:3001/pods/00000006597069767117/posts/2010-10-08",
+    "http://localhost:3001/pods/00000006597069767117/posts/2011-01-04",
+    "http://localhost:3001/pods/00000006597069767117/posts/2011-08-30",
+    "http://localhost:3001/pods/00000006597069767117/noise/NOISE-10082",
+    "http://localhost:3001/pods/00000006597069767117/noise/NOISE-3039",
+    "http://localhost:3001/pods/00000006597069767117/noise/NOISE-8329",
+    "http://localhost:3001/pods/00000006597069767117/noise/NOISE-11219",
+    "http://localhost:3001/pods/00000006597069767117/noise/NOISE-4476",
+    "http://localhost:3001/pods/00000006597069767117/noise/NOISE-12320",
+    "http://localhost:3001/pods/00000006597069767117/noise/NOISE-7429",
+    "http://localhost:3001/pods/00000006597069767117/comments/2011-02-19",
+    "http://localhost:3001/pods/00000006597069767117/comments/2012-07-22",
+    "http://localhost:3001/pods/00000006597069767117/comments/2010-09-13",
+    "http://localhost:3001/pods/00000006597069767117/comments/2011-07-02",
+    "http://localhost:3001/pods/00000006597069767117/comments/2012-04-17",
+    "http://localhost:3001/pods/00000006597069767117/comments/2010-09-15",
+    "http://localhost:3001/pods/00000006597069767117/comments/2011-04-21",
+    "http://localhost:3001/pods/00000006597069767117/comments/2011-12-24",
+    "http://localhost:3001/pods/00000006597069767117/comments/2010-10-05",
+    "http://localhost:3001/pods/00000006597069767117/comments/2012-05-03",
+    "http://localhost:3001/pods/00000006597069767117/comments/2010-09-16",
+    "http://localhost:3001/pods/00000006597069767117/comments/2010-12-30",
+    "http://localhost:3001/pods/00000006597069767117/comments/2010-10-19",
+    "http://localhost:3001/pods/00000006597069767117/comments/2010-11-25",
+    "http://localhost:3001/pods/00000006597069767117/comments/2011-08-18",
+    "http://localhost:3001/pods/00000006597069767117/comments/2011-10-08",
+    "http://localhost:3001/pods/00000006597069767117/comments/2012-07-01",
+    "http://localhost:3001/pods/00000006597069767117/comments/2011-04-29",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000962072674349",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000001030792151082",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000962072674357",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000893353197631",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000274877907012",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000412316860459",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000206158430247",
+    "http://localhost:3001/pods/00000006597069767117/posts/2011-12-20",
+    "http://localhost:3001/pods/00000006597069767117/posts/2011-01-02",
+    "http://localhost:3001/pods/00000006597069767117/posts/2010-11-21",
+    "http://localhost:3001/pods/00000006597069767117/posts/2011-05-17",
+    "http://localhost:3001/pods/00000006597069767117/posts/2010-09-25",
+    "http://localhost:3001/pods/00000006597069767117/posts/2012-09-06",
+    "http://localhost:3001/pods/00000006597069767117/posts/2012-03-03",
+    "http://localhost:3001/pods/00000006597069767117/posts/2012-03-26",
+    "http://localhost:3001/pods/00000006597069767117/posts/2011-02-03",
+    "http://localhost:3001/pods/00000006597069767117/posts/2011-11-21",
+    "http://localhost:3001/pods/00000006597069767117/posts/2010-10-12",
+    "http://localhost:3001/pods/00000006597069767117/posts/2010-07-27",
+    "http://localhost:3001/pods/00000006597069767117/posts/2012-06-01",
+    "http://localhost:3001/pods/00000006597069767117/comments/2010-10-04",
+    "http://localhost:3001/pods/00000006597069767117/comments/2010-11-24",
+    "http://localhost:3001/pods/00000006597069767117/comments/2012-01-20",
+    "http://localhost:3001/pods/00000006597069767117/comments/2010-08-17",
+    "http://localhost:3001/pods/00000006597069767117/comments/2012-02-22",
+    "http://localhost:3001/pods/00000006597069767117/comments/2011-04-15",
+    "http://localhost:3001/pods/00000006597069767117/comments/2012-02-21",
+    "http://localhost:3001/pods/00000006597069767117/comments/2010-08-20",
+    "http://localhost:3001/pods/00000006597069767117/comments/2011-10-05",
+    "http://localhost:3001/pods/00000006597069767117/comments/2011-07-18",
+    "http://localhost:3001/pods/00000006597069767117/comments/2012-07-29",
+    "http://localhost:3001/pods/00000006597069767117/comments/2012-03-09",
+    "http://localhost:3001/pods/00000006597069767117/posts/2010-09-10",
+    "http://localhost:3001/pods/00000006597069767117/posts/2011-12-30",
+    "http://localhost:3001/pods/00000006597069767117/posts/2010-10-13",
+    "http://localhost:3001/pods/00000006597069767117/posts/2011-07-27",
+    "http://localhost:3001/pods/00000006597069767117/posts/2011-03-15",
+    "http://localhost:3001/pods/00000006597069767117/posts/2012-08-26",
+    "http://localhost:3001/pods/00000006597069767117/comments/2011-10-06",
+    "http://localhost:3001/pods/00000006597069767117/comments/2011-04-13",
+    "http://localhost:3001/pods/00000006597069767117/comments/2011-06-30",
+    "http://localhost:3001/pods/00000006597069767117/comments/2012-09-06",
+    "http://localhost:3001/pods/00000006597069767117/noise/NOISE-3249",
+    "http://localhost:3001/pods/00000006597069767117/noise/NOISE-9061",
+    "http://localhost:3001/pods/00000006597069767117/comments/2011-06-27",
+    "http://localhost:3001/pods/00000006597069767117/comments/2010-08-18",
+    "http://localhost:3001/pods/00000006597069767117/comments/2011-04-14",
+    "http://localhost:3001/pods/00000006597069767117/comments/2011-10-07",
+    "http://localhost:3001/pods/00000006597069767117/posts/2010-09-13",
+    "http://localhost:3001/pods/00000006597069767117/posts/2010-10-20",
+    "http://localhost:3001/pods/00000006597069767117/posts/2011-07-11",
+    "http://localhost:3001/pods/00000006597069767117/posts/2012-02-21",
+    "http://localhost:3001/pods/00000006597069767117/posts/2010-07-25",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000755914244157",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000274877907009",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000343597383738",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000343597383742",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000549755813944",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000001030792151107",
+    "http://localhost:3001/pods/00000006597069767117/comments/2010-09-14",
+    "http://localhost:3001/pods/00000006597069767117/comments/2010-10-08",
+    "http://localhost:3001/pods/00000006597069767117/comments/2010-08-19",
+    "http://localhost:3001/pods/00000006597069767117/comments/2012-09-11",
+    "http://localhost:3001/pods/00000006597069767117/comments/2012-01-28",
+    "http://localhost:3001/pods/00000006597069767117/comments/2010-11-23",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000893353197634",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000962072674358",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000274877907004",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000755914244147",
+    "http://localhost:3001/pods/00000006597069767117/comments/2010-10-06",
+    "http://localhost:3001/pods/00000006597069767117/comments/2011-08-19",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000274877906991",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000755914244142",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000481036337193",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000618475290672",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000274877906994",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000001030792151095",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000274877907001",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000824633720884",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000618475290683",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000274877906984"
+  ],
+  "requested_urls_count": 123,
+  "requested_urls_count_unique": 122,
+  "result_count": 27,
+  "result_count_unique": 27,
+  "result_data": {
+    "20203186143": {
+      "forumId": "\"962072674349\"^^http://www.w3.org/2001/XMLSchema#long",
+      "forumTitle": "\"Album 5 of Eli Peretz\""
+    },
+    "20412910189": {
+      "forumId": "\"1030792151082\"^^http://www.w3.org/2001/XMLSchema#long",
+      "forumTitle": "\"Album 2 of Eli Peretz\""
+    },
+    "20413046773": {
+      "forumId": "\"962072674357\"^^http://www.w3.org/2001/XMLSchema#long",
+      "forumTitle": "\"Album 13 of Eli Peretz\""
+    },
+    "20447900950": {
+      "forumId": "\"893353197631\"^^http://www.w3.org/2001/XMLSchema#long",
+      "forumTitle": "\"Album 23 of Eli Peretz\""
+    },
+    "20448305492": {
+      "forumId": "\"274877907012\"^^http://www.w3.org/2001/XMLSchema#long",
+      "forumTitle": "\"Album 28 of Eli Peretz\""
+    },
+    "20448603606": {
+      "forumId": "\"412316860459\"^^http://www.w3.org/2001/XMLSchema#long",
+      "forumTitle": "\"Album 3 of Eli Peretz\""
+    },
+    "20470820635": {
+      "forumId": "\"206158430247\"^^http://www.w3.org/2001/XMLSchema#long",
+      "forumTitle": "\"Wall of Eli Peretz\""
+    },
+    "20470918898": {
+      "forumId": "\"274877906991\"^^http://www.w3.org/2001/XMLSchema#long",
+      "forumTitle": "\"Album 7 of Eli Peretz\""
+    },
+    "20471031607": {
+      "forumId": "\"755914244142\"^^http://www.w3.org/2001/XMLSchema#long",
+      "forumTitle": "\"Album 6 of Eli Peretz\""
+    },
+    "20492670359": {
+      "forumId": "\"274877906994\"^^http://www.w3.org/2001/XMLSchema#long",
+      "forumTitle": "\"Album 10 of Eli Peretz\""
+    },
+    "20492766137": {
+      "forumId": "\"618475290672\"^^http://www.w3.org/2001/XMLSchema#long",
+      "forumTitle": "\"Album 8 of Eli Peretz\""
+    },
+    "20492870291": {
+      "forumId": "\"481036337193\"^^http://www.w3.org/2001/XMLSchema#long",
+      "forumTitle": "\"Album 1 of Eli Peretz\""
+    },
+    "20499416804": {
+      "forumId": "\"1030792151095\"^^http://www.w3.org/2001/XMLSchema#long",
+      "forumTitle": "\"Album 15 of Eli Peretz\""
+    },
+    "20499523502": {
+      "forumId": "\"824633720884\"^^http://www.w3.org/2001/XMLSchema#long",
+      "forumTitle": "\"Album 12 of Eli Peretz\""
+    },
+    "20499633336": {
+      "forumId": "\"618475290683\"^^http://www.w3.org/2001/XMLSchema#long",
+      "forumTitle": "\"Album 19 of Eli Peretz\""
+    },
+    "20504788965": {
+      "forumId": "\"274877906984\"^^http://www.w3.org/2001/XMLSchema#long",
+      "forumTitle": "\"Album 0 of Eli Peretz\""
+    },
+    "20504881487": {
+      "forumId": "\"274877907001\"^^http://www.w3.org/2001/XMLSchema#long",
+      "forumTitle": "\"Album 17 of Eli Peretz\""
+    },
+    "20504994938": {
+      "forumId": "\"962072674358\"^^http://www.w3.org/2001/XMLSchema#long",
+      "forumTitle": "\"Album 14 of Eli Peretz\""
+    },
+    "20509216682": {
+      "forumId": "\"274877907004\"^^http://www.w3.org/2001/XMLSchema#long",
+      "forumTitle": "\"Album 20 of Eli Peretz\""
+    },
+    "20509321837": {
+      "forumId": "\"755914244147\"^^http://www.w3.org/2001/XMLSchema#long",
+      "forumTitle": "\"Album 11 of Eli Peretz\""
+    },
+    "20509429988": {
+      "forumId": "\"893353197634\"^^http://www.w3.org/2001/XMLSchema#long",
+      "forumTitle": "\"Album 26 of Eli Peretz\""
+    },
+    "20513173864": {
+      "forumId": "\"1030792151107\"^^http://www.w3.org/2001/XMLSchema#long",
+      "forumTitle": "\"Album 27 of Eli Peretz\""
+    },
+    "20513279981": {
+      "forumId": "\"274877907009\"^^http://www.w3.org/2001/XMLSchema#long",
+      "forumTitle": "\"Album 25 of Eli Peretz\""
+    },
+    "20513504749": {
+      "forumId": "\"549755813944\"^^http://www.w3.org/2001/XMLSchema#long",
+      "forumTitle": "\"Album 16 of Eli Peretz\""
+    },
+    "20515636540": {
+      "forumId": "\"343597383738\"^^http://www.w3.org/2001/XMLSchema#long",
+      "forumTitle": "\"Album 18 of Eli Peretz\""
+    },
+    "20515715897": {
+      "forumId": "\"343597383742\"^^http://www.w3.org/2001/XMLSchema#long",
+      "forumTitle": "\"Album 22 of Eli Peretz\""
+    },
+    "20541648108": {
+      "forumId": "\"755914244157\"^^http://www.w3.org/2001/XMLSchema#long",
+      "forumTitle": "\"Album 21 of Eli Peretz\""
+    }
+  },
+  "result_data_other": {
+    "8618243021": "Restarted join operation"
+  },
+  "result_hash": "8b670a02f6aa5c7081065b0adab1a607",
+  "time_begin": "2023-11-08T09:51:42Z",
+  "time_end": "2023-11-08T09:52:02Z",
+  "time_taken_seconds": 20.542389
+}

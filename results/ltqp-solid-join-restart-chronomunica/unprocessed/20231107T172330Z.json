@@ -1,0 +1,40 @@
+{
+  "engine_config": "file:///configs/config-timeout-20000-void-simple.json",
+  "engine_query": "file:///queries/interactive-discover-1.sparql#2",
+  "engine_stderr": "(node:23646) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n",
+  "engine_timeout_reached": false,
+  "requested_urls": [
+    "http://localhost:3001/pods/00000002199023256684/profile/card",
+    "http://localhost:3001/pods/00000002199023256684/settings/publicTypeIndex",
+    "http://localhost:3001/pods/00000002199023256684/",
+    "http://localhost:3001/pods/00000002199023256684/posts",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000068719476773",
+    "http://localhost:3001/pods/00000002199023256684/profile/",
+    "http://localhost:3001/pods/00000002199023256684/comments",
+    "http://localhost:3001/pods/00000002199023256684/noise/",
+    "http://localhost:3001/pods/00000002199023256684/settings/",
+    "http://localhost:3001/pods/00000002199023256684/noise/NOISE-8104",
+    "http://localhost:3001/pods/00000002199023256684/noise/NOISE-9175",
+    "http://localhost:3001/pods/00000002199023256684/noise/NOISE-1184",
+    "http://localhost:3001/pods/00000002199023256684/noise/NOISE-810",
+    "http://localhost:3001/pods/00000002199023256684/noise/NOISE-8479",
+    "http://localhost:3001/pods/00000002199023256684/noise/NOISE-4192",
+    "http://localhost:3001/pods/00000002199023256684/settings/publicTypeIndex"
+  ],
+  "requested_urls_count": 16,
+  "requested_urls_count_unique": 15,
+  "result_count": 1,
+  "result_count_unique": 1,
+  "result_data": {
+    "7370244979": {
+      "messageContent": "\"About Vladimir Putin, ims to have overseAbout Joe Strummer, nto the Rock and RAbout Niandra Lades and Usu\"",
+      "messageCreationDate": "\"2011-10-22T18:54:54.382Z\"^^http://www.w3.org/2001/XMLSchema#dateTime",
+      "messageId": "\"687194767786\"^^http://www.w3.org/2001/XMLSchema#long"
+    }
+  },
+  "result_data_other": {},
+  "result_hash": "8dc298798b63ee5825bcc0e4bce86c78",
+  "time_begin": "2023-11-07T17:23:30Z",
+  "time_end": "2023-11-07T17:23:38Z",
+  "time_taken_seconds": 7.37088
+}

@@ -1,0 +1,34 @@
+{
+  "engine_config": "file:///configs/config-timeout-100-void-simple.json",
+  "engine_query": "file:///queries/interactive-short-5.sparql#0",
+  "engine_stderr": "(node:2944091) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n",
+  "engine_timeout_reached": false,
+  "requested_urls": [
+    "http://localhost:3001/pods/00000000000000001269/comments/India",
+    "http://localhost:3001/pods/00000000000000001269/profile/card",
+    "http://localhost:3001/pods/00000000000000001269/settings/publicTypeIndex",
+    "http://localhost:3001/pods/00000000000000001269/",
+    "http://localhost:3001/pods/00000000000000001269/comments",
+    "http://localhost:3001/pods/00000000000000001269/comments/",
+    "http://localhost:3001/pods/00000000000000001269/posts/"
+  ],
+  "requested_urls_count": 7,
+  "requested_urls_count_unique": 7,
+  "result_count": 1,
+  "result_count_unique": 1,
+  "result_data": {
+    "6564063446": {
+      "firstName": "\"Lata\"",
+      "lastName": "\"Singh\"",
+      "personId": "\"1269\"^^http://www.w3.org/2001/XMLSchema#long"
+    }
+  },
+  "result_data_other": {
+    "6564063446": "Restarted join operation",
+    "6570717097": "Restarted join operation"
+  },
+  "result_hash": "a9a2580221088094f0801a1aaa448d34",
+  "time_begin": "2023-11-09T12:31:57Z",
+  "time_end": "2023-11-09T12:32:04Z",
+  "time_taken_seconds": 6.571523
+}

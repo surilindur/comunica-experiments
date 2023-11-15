@@ -1,0 +1,58 @@
+{
+  "engine_config": "file:///configs/config-timeout-1000.json",
+  "engine_query": "file:///queries/interactive-short-5.sparql#0",
+  "engine_stderr": "(node:2944873) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n\u001b[31m[2023-11-09T12:34:37.451Z]  ERROR: Could not retrieve http://localhost:3000/pods/00000000000000001269/comments (HTTP status 404):\n<!DOCTYPE HTML>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <title>Error response</title>\n    </head>\n    <body>\n        <h1>Error response</h1>\n        <p>Error code: 404</p>\n        <p>Message: Not Found.</p>\n        <p>Error code explanation: 404 - Nothing matches the given URI.</p>\n    </body>\n</html>\n { actor: 'urn:comunica:default:dereference/actors#http' }\n\u001b[0m\u001b[31m[2023-11-09T12:34:37.454Z]  ERROR: urn:comunica:default:rdf-parse/mediators#parse mediated over all rejecting actors:\nUnrecognized media type: undefined\nUnrecognized media type: undefined\nUnrecognized media type: undefined\nUnrecognized media type: undefined\nUnrecognized media type: undefined\nUnrecognized media type: undefined { actor: 'urn:comunica:default:dereference-rdf/actors#parse' }\n\u001b[0m",
+  "engine_timeout_reached": false,
+  "requested_urls": [
+    "http://localhost:3001/pods/00000000000000001269/comments/India",
+    "http://localhost:3001/pods/00000000000000001269/profile/card",
+    "http://localhost:3001/pods/00000000000000001269/settings/publicTypeIndex",
+    "http://localhost:3001/pods/00000000000000001269/",
+    "http://localhost:3001/pods/00000000000000001269/comments",
+    "http://localhost:3001/pods/00000000000000001269/comments/",
+    "http://localhost:3001/pods/00000000000000001269/posts/",
+    "http://localhost:3001/pods/00000000000000001269/posts/India",
+    "http://localhost:3001/pods/00000000000000001269/profile/",
+    "http://localhost:3001/pods/00000000000000001269/noise/",
+    "http://localhost:3001/pods/00000000000000001269/settings/",
+    "http://localhost:3001/pods/00000000000000001269/comments/Romania",
+    "http://localhost:3001/pods/00000000000000001269/comments/Tanzania",
+    "http://localhost:3001/pods/00000000000000001269/comments/Sri_Lanka",
+    "http://localhost:3001/pods/00000000000000001269/comments/Zambia",
+    "http://localhost:3001/pods/00000000000000001269/comments/Northern_Ireland",
+    "http://localhost:3001/pods/00000000000000001269/comments/Vietnam",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000000000002819",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000962072684208",
+    "http://localhost:3001/pods/00000000000000001269/settings/publicTypeIndex",
+    "http://localhost:3001/pods/00000000000000001269/noise/NOISE-8693",
+    "http://localhost:3001/pods/00000000000000001269/noise/NOISE-2529",
+    "http://localhost:3001/pods/00000000000000001269/noise/NOISE-14955",
+    "http://localhost:3001/pods/00000000000000001269/noise/NOISE-3846",
+    "http://localhost:3001/pods/00000000000000001269/noise/NOISE-14491",
+    "http://localhost:3001/pods/00000000000000001269/noise/NOISE-11631",
+    "http://localhost:3001/pods/00000000000000001269/noise/NOISE-2719",
+    "http://localhost:3001/pods/00000000000000001269/noise/NOISE-9770",
+    "http://localhost:3001/pods/00000000000000001269/noise/NOISE-12979",
+    "http://localhost:3001/pods/00000000000000001269/noise/NOISE-5669",
+    "http://localhost:3001/pods/00000000000000001269/noise/NOISE-10763"
+  ],
+  "requested_urls_count": 31,
+  "requested_urls_count_unique": 30,
+  "result_count": 1,
+  "result_count_unique": 1,
+  "result_data": {
+    "7306211108": {
+      "firstName": "\"Lata\"",
+      "lastName": "\"Singh\"",
+      "personId": "\"1269\"^^http://www.w3.org/2001/XMLSchema#long"
+    }
+  },
+  "result_data_other": {
+    "7306211108": "Restarted join operation",
+    "7313636246": "Restarted join operation"
+  },
+  "result_hash": "a9a2580221088094f0801a1aaa448d34",
+  "time_begin": "2023-11-09T12:34:31Z",
+  "time_end": "2023-11-09T12:34:38Z",
+  "time_taken_seconds": 7.315094
+}

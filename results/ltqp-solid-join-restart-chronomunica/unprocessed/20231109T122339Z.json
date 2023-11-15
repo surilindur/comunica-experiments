@@ -1,0 +1,24 @@
+{
+  "engine_config": "file:///configs/config-timeout-5000.json",
+  "engine_query": "file:///queries/interactive-short-4.sparql#4",
+  "engine_stderr": "(node:2941320) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n",
+  "engine_timeout_reached": false,
+  "requested_urls": [
+    "http://localhost:3001/pods/00000013194139534154/comments"
+  ],
+  "requested_urls_count": 1,
+  "requested_urls_count_unique": 1,
+  "result_count": 1,
+  "result_count_unique": 1,
+  "result_data": {
+    "6836186802": {
+      "messageContent": "\"About Ivan Ljubičić, ly on his serve, About Keith Richards, ling Stones. RollAbout \"",
+      "messageCreationDate": "\"2012-03-21T12:28:03.902Z\"^^http://www.w3.org/2001/XMLSchema#dateTime"
+    }
+  },
+  "result_data_other": {},
+  "result_hash": "ae004e5b9315b3ab92b48a8f3ce1865f",
+  "time_begin": "2023-11-09T12:23:39Z",
+  "time_end": "2023-11-09T12:23:45Z",
+  "time_taken_seconds": 6.836832
+}

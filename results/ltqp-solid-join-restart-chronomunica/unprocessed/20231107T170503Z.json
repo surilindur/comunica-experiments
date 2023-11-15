@@ -1,0 +1,60 @@
+{
+  "engine_config": "file:///configs/config-timeout-1000.json",
+  "engine_query": "file:///queries/interactive-discover-1.sparql#1",
+  "engine_stderr": "(node:18149) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n",
+  "engine_timeout_reached": false,
+  "requested_urls": [
+    "http://localhost:3001/pods/00000000000000001129/profile/card",
+    "http://localhost:3001/pods/00000000000000001129/settings/publicTypeIndex",
+    "http://localhost:3001/pods/00000000000000001129/",
+    "http://localhost:3001/pods/00000000000000001129/posts",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000000000000036",
+    "http://localhost:3001/pods/00000000000000001129/profile/",
+    "http://localhost:3001/pods/00000000000000001129/comments",
+    "http://localhost:3001/pods/00000000000000001129/noise/",
+    "http://localhost:3001/pods/00000000000000001129/settings/",
+    "http://localhost:3001/pods/00000000000000001129/settings/publicTypeIndex",
+    "http://localhost:3001/pods/00000000000000001129/noise/NOISE-5934",
+    "http://localhost:3001/pods/00000000000000001129/noise/NOISE-14883",
+    "http://localhost:3001/pods/00000000000000001129/noise/NOISE-13911",
+    "http://localhost:3001/pods/00000000000000001129/noise/NOISE-303",
+    "http://localhost:3001/pods/00000000000000001129/noise/NOISE-13377",
+    "http://localhost:3001/pods/00000000000000001129/noise/NOISE-1708",
+    "http://localhost:3001/pods/00000000000000001129/noise/NOISE-6369",
+    "http://localhost:3001/pods/00000000000000001129/noise/NOISE-5000",
+    "http://localhost:3001/pods/00000000000000001129/noise/NOISE-7992"
+  ],
+  "requested_urls_count": 19,
+  "requested_urls_count_unique": 18,
+  "result_count": 4,
+  "result_count_unique": 4,
+  "result_data": {
+    "7002202282": {
+      "messageContent": "\"About Haile Selassie I, onalist viewsAbout Alexandre Dumas, ist. He was tAbout Amitabh Bachchan,  career spannAb\"",
+      "messageCreationDate": "\"2010-08-30T02:05:03.337Z\"^^http://www.w3.org/2001/XMLSchema#dateTime",
+      "messageId": "\"206158430610\"^^http://www.w3.org/2001/XMLSchema#long"
+    },
+    "7901731609": {
+      "messageContent": "\"About Haile Selassie I, ong the nobles (mekwannAbout George Orwell, everal of his neologismAbout Vatican City, \"",
+      "messageCreationDate": "\"2010-08-29T21:49:18.337Z\"^^http://www.w3.org/2001/XMLSchema#dateTime",
+      "messageId": "\"206158430625\"^^http://www.w3.org/2001/XMLSchema#long"
+    },
+    "8025900694": {
+      "messageContent": "\"About Josip Broz Tito, c and diplomatic policiAbout Rogier Wassen, on three ATP doubles tiAbout Sammy Davis, Jr.,\"",
+      "messageCreationDate": "\"2010-08-10T16:58:01.341Z\"^^http://www.w3.org/2001/XMLSchema#dateTime",
+      "messageId": "\"206158430586\"^^http://www.w3.org/2001/XMLSchema#long"
+    },
+    "8320064069": {
+      "messageContent": "\"About Haile Selassie I, emporaries and historianAbout Herbert Kitchener, 1st Earl Kitchener, -Chief (1902–09) of the Ab\"",
+      "messageCreationDate": "\"2010-08-31T02:14:03.337Z\"^^http://www.w3.org/2001/XMLSchema#dateTime",
+      "messageId": "\"206158430594\"^^http://www.w3.org/2001/XMLSchema#long"
+    }
+  },
+  "result_data_other": {
+    "7901731609": "Restarted join operation"
+  },
+  "result_hash": "f79af01d6dac1af199496140bfd0bc94",
+  "time_begin": "2023-11-07T17:05:03Z",
+  "time_end": "2023-11-07T17:05:11Z",
+  "time_taken_seconds": 8.320633
+}

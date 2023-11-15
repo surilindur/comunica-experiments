@@ -1,0 +1,42 @@
+{
+  "engine_config": "file:///configs/config-timeout-100.json",
+  "engine_query": "file:///queries/interactive-short-7.sparql#0",
+  "engine_stderr": "(node:1502947) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n",
+  "engine_timeout_reached": false,
+  "requested_urls": [
+    "http://localhost:3001/pods/00000026388279068034/posts/India",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000412316876157",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000824633737335",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000824633737338",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000962072690808",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000893353214076",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000893353214078",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000824633737337",
+    "http://localhost:3001/pods/00000002199023256816/profile/card",
+    "http://localhost:3001/pods/00000004398046512573/profile/card",
+    "http://localhost:3001/pods/00000006597069768056/profile/card",
+    "http://localhost:3001/pods/00000013194139533834/profile/card",
+    "http://localhost:3001/pods/00000017592186045085/profile/card",
+    "http://localhost:3001/pods/00000021990232555934/profile/card",
+    "http://localhost:3001/pods/00000019791209301605/profile/card",
+    "http://localhost:3001/pods/00000021990232555586/profile/card",
+    "http://localhost:3001/pods/00000028587302323385/profile/card",
+    "http://localhost:3001/pods/00000021990232556621/profile/card"
+  ],
+  "requested_urls_count": 18,
+  "requested_urls_count_unique": 18,
+  "result_count": 0,
+  "result_count_unique": 0,
+  "result_data": {},
+  "result_data_other": {
+    "7386997245": "Restarted join operation",
+    "7388050161": "Restarted join operation",
+    "7388287291": "Restarted join operation",
+    "7388485931": "Restarted join operation",
+    "7388920227": "Restarted join operation"
+  },
+  "result_hash": "d41d8cd98f00b204e9800998ecf8427e",
+  "time_begin": "2023-11-09T23:21:22Z",
+  "time_end": "2023-11-09T23:21:30Z",
+  "time_taken_seconds": 7.603252
+}

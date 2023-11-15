@@ -1,0 +1,198 @@
+{
+  "engine_config": "file:///configs/config-cardinality-once.json",
+  "engine_query": "file:///queries/interactive-discover-2.sparql#2",
+  "engine_stderr": "(node:86313) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n\u001b[31m[2023-11-07T19:13:09.815Z]  ERROR: Could not retrieve http://localhost:3000/pods/00000002199023256684/comments/ (HTTP status 404):\n<!DOCTYPE HTML>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <title>Error response</title>\n    </head>\n    <body>\n        <h1>Error response</h1>\n        <p>Error code: 404</p>\n        <p>Message: Not Found.</p>\n        <p>Error code explanation: 404 - Nothing matches the given URI.</p>\n    </body>\n</html>\n { actor: 'urn:comunica:default:dereference/actors#http' }\n\u001b[0m\u001b[31m[2023-11-07T19:13:09.830Z]  ERROR: urn:comunica:default:rdf-parse/mediators#parse mediated over all rejecting actors:\nUnrecognized media type: undefined\nUnrecognized media type: undefined\nUnrecognized media type: undefined\nUnrecognized media type: undefined\nUnrecognized media type: undefined\nUnrecognized media type: undefined { actor: 'urn:comunica:default:dereference-rdf/actors#parse' }\n\u001b[0m",
+  "engine_timeout_reached": false,
+  "requested_urls": [
+    "http://localhost:3001/pods/00000002199023256684/profile/card",
+    "http://localhost:3001/pods/00000002199023256684/settings/publicTypeIndex",
+    "http://localhost:3001/pods/00000002199023256684/",
+    "http://localhost:3001/pods/00000002199023256684/posts",
+    "http://localhost:3001/pods/00000002199023256684/comments",
+    "http://localhost:3001/pods/00000002199023256684/comments/",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000068719476773",
+    "http://localhost:3001/pods/00000002199023256684/profile/",
+    "http://localhost:3001/pods/00000002199023256684/noise/",
+    "http://localhost:3001/pods/00000002199023256684/settings/",
+    "http://localhost:3001/pods/00000002199023256684/settings/publicTypeIndex",
+    "http://localhost:3001/pods/00000002199023256684/noise/NOISE-9175",
+    "http://localhost:3001/pods/00000002199023256684/noise/NOISE-8104",
+    "http://localhost:3001/pods/00000002199023256684/noise/NOISE-810",
+    "http://localhost:3001/pods/00000002199023256684/noise/NOISE-1184",
+    "http://localhost:3001/pods/00000002199023256684/noise/NOISE-4192",
+    "http://localhost:3001/pods/00000002199023256684/noise/NOISE-8479"
+  ],
+  "requested_urls_count": 17,
+  "requested_urls_count_unique": 16,
+  "result_count": 32,
+  "result_count_unique": 32,
+  "result_data": {
+    "6642278272": {
+      "messageContent": "\"About Vladimir Putin, ims to have overseAbout Joe Strummer, nto the Rock and RAbout Niandra Lades and Usu\"",
+      "messageCreationDate": "\"2011-10-22T18:54:54.382Z\"^^http://www.w3.org/2001/XMLSchema#dateTime",
+      "messageId": "\"687194767786\"^^http://www.w3.org/2001/XMLSchema#long"
+    },
+    "7283731094": {
+      "messageContent": "\"About Judy Davis, ess best known for her roles iAbout Gioachino Rossini, nclude the Ital\"",
+      "messageCreationDate": "\"2012-07-13T07:55:57.142Z\"^^http://www.w3.org/2001/XMLSchema#dateTime",
+      "messageId": "\"1030792290407\"^^http://www.w3.org/2001/XMLSchema#long"
+    },
+    "7284594216": {
+      "messageContent": "\"cool\"",
+      "messageCreationDate": "\"2011-09-30T01:41:49.095Z\"^^http://www.w3.org/2001/XMLSchema#dateTime",
+      "messageId": "\"687194906763\"^^http://www.w3.org/2001/XMLSchema#long"
+    },
+    "7286233922": {
+      "messageContent": "\"cool\"",
+      "messageCreationDate": "\"2011-08-19T14:54:51.855Z\"^^http://www.w3.org/2001/XMLSchema#dateTime",
+      "messageId": "\"618475430095\"^^http://www.w3.org/2001/XMLSchema#long"
+    },
+    "7287117784": {
+      "messageContent": "\"cool\"",
+      "messageCreationDate": "\"2010-05-07T16:48:19.292Z\"^^http://www.w3.org/2001/XMLSchema#dateTime",
+      "messageId": "\"137439290777\"^^http://www.w3.org/2001/XMLSchema#long"
+    },
+    "7288024238": {
+      "messageContent": "\"cool\"",
+      "messageCreationDate": "\"2010-07-26T12:16:10.931Z\"^^http://www.w3.org/2001/XMLSchema#dateTime",
+      "messageId": "\"206158769050\"^^http://www.w3.org/2001/XMLSchema#long"
+    },
+    "7288827049": {
+      "messageContent": "\"yes\"",
+      "messageCreationDate": "\"2011-06-27T17:10:48.107Z\"^^http://www.w3.org/2001/XMLSchema#dateTime",
+      "messageId": "\"549755953470\"^^http://www.w3.org/2001/XMLSchema#long"
+    },
+    "7289670466": {
+      "messageContent": "\"About Oliver Cromwell, diner. In a 2002 BBC poll in BAbout Justin Timberlake,  of the boy band 'N Sync, whosAbout The \"",
+      "messageCreationDate": "\"2012-06-16T10:22:41.489Z\"^^http://www.w3.org/2001/XMLSchema#dateTime",
+      "messageId": "\"962072813915\"^^http://www.w3.org/2001/XMLSchema#long"
+    },
+    "7291749047": {
+      "messageContent": "\"About Jay Leno, ay Leno. BeginningAbout Tunisia, y in Africa. It isAbout Joseph II, Holy\"",
+      "messageCreationDate": "\"2012-06-16T08:27:06.014Z\"^^http://www.w3.org/2001/XMLSchema#dateTime",
+      "messageId": "\"962072813916\"^^http://www.w3.org/2001/XMLSchema#long"
+    },
+    "7292409213": {
+      "messageContent": "\"About Judy Davis, n in the 197About Jim Carrey, two. Known fAbout Martin Luthe\"",
+      "messageCreationDate": "\"2011-12-02T04:07:23.345Z\"^^http://www.w3.org/2001/XMLSchema#dateTime",
+      "messageId": "\"755914383763\"^^http://www.w3.org/2001/XMLSchema#long"
+    },
+    "7293076024": {
+      "messageContent": "\"About Every Day Is Exactly the Same, the film's most recognizable song. The raAb\"",
+      "messageCreationDate": "\"2010-06-23T01:23:45.087Z\"^^http://www.w3.org/2001/XMLSchema#dateTime",
+      "messageId": "\"137439289892\"^^http://www.w3.org/2001/XMLSchema#long"
+    },
+    "7294412404": {
+      "messageContent": "\"About Humayun, 5–1556. Like his father, Babur, he lost his About Reba McEntire,  more t\"",
+      "messageCreationDate": "\"2010-10-28T23:47:42.752Z\"^^http://www.w3.org/2001/XMLSchema#dateTime",
+      "messageId": "\"274878243866\"^^http://www.w3.org/2001/XMLSchema#long"
+    },
+    "7294567693": {
+      "messageContent": "\"LOL\"",
+      "messageCreationDate": "\"2010-06-08T13:41:07.252Z\"^^http://www.w3.org/2001/XMLSchema#dateTime",
+      "messageId": "\"137439290499\"^^http://www.w3.org/2001/XMLSchema#long"
+    },
+    "7295308720": {
+      "messageContent": "\"LOL\"",
+      "messageCreationDate": "\"2011-06-16T06:47:54.557Z\"^^http://www.w3.org/2001/XMLSchema#dateTime",
+      "messageId": "\"549756151882\"^^http://www.w3.org/2001/XMLSchema#long"
+    },
+    "7297658134": {
+      "messageContent": "\"duh\"",
+      "messageCreationDate": "\"2011-01-03T00:21:18.197Z\"^^http://www.w3.org/2001/XMLSchema#dateTime",
+      "messageId": "\"343597720856\"^^http://www.w3.org/2001/XMLSchema#long"
+    },
+    "7297775221": {
+      "messageContent": "\"About Hurdy Gurdy Man, van, where he asserts that the song ushered in the Celtic rock soun\"",
+      "messageCreationDate": "\"2010-10-29T22:07:41.963Z\"^^http://www.w3.org/2001/XMLSchema#dateTime",
+      "messageId": "\"274878244233\"^^http://www.w3.org/2001/XMLSchema#long"
+    },
+    "7298839127": {
+      "messageContent": "\"About Humayun,  to power. Humayun lost Mughal territoAbout Allen Ginsberg, \"",
+      "messageCreationDate": "\"2010-10-30T03:54:10.773Z\"^^http://www.w3.org/2001/XMLSchema#dateTime",
+      "messageId": "\"274878244241\"^^http://www.w3.org/2001/XMLSchema#long"
+    },
+    "7298956044": {
+      "messageContent": "\"good\"",
+      "messageCreationDate": "\"2010-05-08T15:58:33.097Z\"^^http://www.w3.org/2001/XMLSchema#dateTime",
+      "messageId": "\"137439290775\"^^http://www.w3.org/2001/XMLSchema#long"
+    },
+    "7299995045": {
+      "messageContent": "\"good\"",
+      "messageCreationDate": "\"2011-05-30T12:06:31.230Z\"^^http://www.w3.org/2001/XMLSchema#dateTime",
+      "messageId": "\"549756151927\"^^http://www.w3.org/2001/XMLSchema#long"
+    },
+    "7300652316": {
+      "messageContent": "\"About Humayun, lly regained an even larger oAbout James Cook, iously achieved. As he\"",
+      "messageCreationDate": "\"2010-05-08T18:17:07.421Z\"^^http://www.w3.org/2001/XMLSchema#dateTime",
+      "messageId": "\"137439290782\"^^http://www.w3.org/2001/XMLSchema#long"
+    },
+    "7301513185": {
+      "messageContent": "\"maybe\"",
+      "messageCreationDate": "\"2011-07-18T17:23:36.407Z\"^^http://www.w3.org/2001/XMLSchema#dateTime",
+      "messageId": "\"618475628086\"^^http://www.w3.org/2001/XMLSchema#long"
+    },
+    "7301638618": {
+      "messageContent": "\"About Lyndon B. Johnson, son was greatly supported by the DemocAbout Rock \"",
+      "messageCreationDate": "\"2010-07-19T22:46:32.082Z\"^^http://www.w3.org/2001/XMLSchema#dateTime",
+      "messageId": "\"206158767697\"^^http://www.w3.org/2001/XMLSchema#long"
+    },
+    "7302566842": {
+      "messageContent": "\"roflol\"",
+      "messageCreationDate": "\"2011-08-21T12:21:18.664Z\"^^http://www.w3.org/2001/XMLSchema#dateTime",
+      "messageId": "\"618475628147\"^^http://www.w3.org/2001/XMLSchema#long"
+    },
+    "7302640619": {
+      "messageContent": "\"About Humayun, rt culture, as the Central Asian origins oAbout White Feathers,  th\"",
+      "messageCreationDate": "\"2011-03-14T02:34:58.640Z\"^^http://www.w3.org/2001/XMLSchema#dateTime",
+      "messageId": "\"481036674983\"^^http://www.w3.org/2001/XMLSchema#long"
+    },
+    "7303584643": {
+      "messageContent": "\"thanks\"",
+      "messageCreationDate": "\"2010-10-27T18:11:22.036Z\"^^http://www.w3.org/2001/XMLSchema#dateTime",
+      "messageId": "\"274878244968\"^^http://www.w3.org/2001/XMLSchema#long"
+    },
+    "7303650565": {
+      "messageContent": "\"thanks\"",
+      "messageCreationDate": "\"2011-01-08T04:55:07.431Z\"^^http://www.w3.org/2001/XMLSchema#dateTime",
+      "messageId": "\"412317198528\"^^http://www.w3.org/2001/XMLSchema#long"
+    },
+    "7304316843": {
+      "messageContent": "\"About Oman, en ruled by the Al Said dynasty since 1744,About Bonita Applebum, nita Ap\"",
+      "messageCreationDate": "\"2011-05-29T22:10:56.532Z\"^^http://www.w3.org/2001/XMLSchema#dateTime",
+      "messageId": "\"549756151926\"^^http://www.w3.org/2001/XMLSchema#long"
+    },
+    "7304379870": {
+      "messageContent": "\"fine\"",
+      "messageCreationDate": "\"2010-11-24T20:42:37.585Z\"^^http://www.w3.org/2001/XMLSchema#dateTime",
+      "messageId": "\"343597722289\"^^http://www.w3.org/2001/XMLSchema#long"
+    },
+    "7304747994": {
+      "messageContent": "\"About John Milton, d a civil servant About John Rhys-Davies,  of Thieves, Man RAbout S\"",
+      "messageCreationDate": "\"2012-04-21T03:59:06.101Z\"^^http://www.w3.org/2001/XMLSchema#dateTime",
+      "messageId": "\"893353536255\"^^http://www.w3.org/2001/XMLSchema#long"
+    },
+    "7304808396": {
+      "messageContent": "\"great\"",
+      "messageCreationDate": "\"2010-07-26T16:35:17.583Z\"^^http://www.w3.org/2001/XMLSchema#dateTime",
+      "messageId": "\"206158769140\"^^http://www.w3.org/2001/XMLSchema#long"
+    },
+    "7304930674": {
+      "messageContent": "\"About Stephen Harper, ry West. HAbout Sammy Sosa, cago Cubs About Bill Cosby, 1976, Cosb\"",
+      "messageCreationDate": "\"2010-07-26T00:31:14.744Z\"^^http://www.w3.org/2001/XMLSchema#dateTime",
+      "messageId": "\"206158769199\"^^http://www.w3.org/2001/XMLSchema#long"
+    },
+    "7305437996": {
+      "messageContent": "\"About Stephen Harper, found the CabinAbout Bertrand Russell, er, logician, mAbout My \"",
+      "messageCreationDate": "\"2010-07-26T21:17:24.711Z\"^^http://www.w3.org/2001/XMLSchema#dateTime",
+      "messageId": "\"206158769200\"^^http://www.w3.org/2001/XMLSchema#long"
+    }
+  },
+  "result_data_other": {
+    "6642278272": "Restarted join operation"
+  },
+  "result_hash": "557efd8cab5e472178554edc1fd2a233",
+  "time_begin": "2023-11-07T19:13:03Z",
+  "time_end": "2023-11-07T19:13:10Z",
+  "time_taken_seconds": 7.306016
+}

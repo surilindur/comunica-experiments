@@ -1,0 +1,24 @@
+{
+  "engine_config": "file:///configs/config-cardinality-once-void.json",
+  "engine_query": "file:///queries/interactive-short-4.sparql#0",
+  "engine_stderr": "(node:2930648) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n",
+  "engine_timeout_reached": false,
+  "requested_urls": [
+    "http://localhost:3001/pods/00000000000000000150/comments/Mexico"
+  ],
+  "requested_urls_count": 1,
+  "requested_urls_count_unique": 1,
+  "result_count": 1,
+  "result_count_unique": 1,
+  "result_data": {
+    "6618311052": {
+      "messageContent": "\"About Paul Martin, 988 electiAbout François Mitterrand, de. They lAbout Indi\"",
+      "messageCreationDate": "\"2010-04-24T18:33:07.152Z\"^^http://www.w3.org/2001/XMLSchema#dateTime"
+    }
+  },
+  "result_data_other": {},
+  "result_hash": "0f4d7385f7a2b6c71964350ff40e9086",
+  "time_begin": "2023-11-09T11:27:27Z",
+  "time_end": "2023-11-09T11:27:34Z",
+  "time_taken_seconds": 6.618985
+}

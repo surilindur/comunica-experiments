@@ -1,0 +1,43 @@
+{
+  "engine_config": "file:///configs/config-timeout-100-void-simple.json",
+  "engine_query": "file:///queries/interactive-short-7.sparql#3",
+  "engine_stderr": "(node:1916961) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n",
+  "engine_timeout_reached": false,
+  "requested_urls": [
+    "http://localhost:3001/pods/00000004398046511367/posts",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000618475304752",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000962072688455",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000618475304778",
+    "http://localhost:3001/pods/00000004398046511367/profile/card",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000137438967601",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000618475304758",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000755914258232",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000343597397828",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000206158444343",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000824633734964",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000618475304762",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000343597397813",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000962072688441",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000412316874546",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000412316874543",
+    "http://localhost:3001/pods/00000030786325578932/profile/card",
+    "http://localhost:3001/pods/00000004398046511367/settings/publicTypeIndex",
+    "http://localhost:3001/pods/00000030786325578932/settings/publicTypeIndex"
+  ],
+  "requested_urls_count": 19,
+  "requested_urls_count_unique": 19,
+  "result_count": 0,
+  "result_count_unique": 0,
+  "result_data": {},
+  "result_data_other": {
+    "6891969670": "Restarted join operation",
+    "6901344047": "Restarted join operation",
+    "6902145777": "Restarted join operation",
+    "6904852726": "Restarted join operation",
+    "6906319721": "Restarted join operation"
+  },
+  "result_hash": "d41d8cd98f00b204e9800998ecf8427e",
+  "time_begin": "2023-11-10T01:56:55Z",
+  "time_end": "2023-11-10T01:57:02Z",
+  "time_taken_seconds": 7.016323
+}

@@ -1,0 +1,34 @@
+PREFIX snvoc: <http://localhost:3000/www.ldbc.eu/ldbc_socialnet/1.0/vocabulary/>
+SELECT ?messageCreationDate ?messageContent WHERE {
+  <http://localhost:3000/pods/00000000000000000150/comments/Mexico#68719564521> snvoc:id ?messageId;
+    snvoc:creationDate ?messageCreationDate;
+    (snvoc:content|snvoc:imageFile) ?messageContent.
+}
+
+PREFIX snvoc: <http://localhost:3000/www.ldbc.eu/ldbc_socialnet/1.0/vocabulary/>
+SELECT ?messageCreationDate ?messageContent WHERE {
+  <http://localhost:3000/pods/00000008796093023851/comments#687194953616> snvoc:id ?messageId;
+    snvoc:creationDate ?messageCreationDate;
+    (snvoc:content|snvoc:imageFile) ?messageContent.
+}
+
+PREFIX snvoc: <http://localhost:3000/www.ldbc.eu/ldbc_socialnet/1.0/vocabulary/>
+SELECT ?messageCreationDate ?messageContent WHERE {
+  <http://localhost:3000/pods/00000021990232556992/posts/962072952306> snvoc:id ?messageId;
+    snvoc:creationDate ?messageCreationDate;
+    (snvoc:content|snvoc:imageFile) ?messageContent.
+}
+
+PREFIX snvoc: <http://localhost:3000/www.ldbc.eu/ldbc_socialnet/1.0/vocabulary/>
+SELECT ?messageCreationDate ?messageContent WHERE {
+  <http://localhost:3000/pods/00000019791209300796/posts/2011-10-21#687194787220> snvoc:id ?messageId;
+    snvoc:creationDate ?messageCreationDate;
+    (snvoc:content|snvoc:imageFile) ?messageContent.
+}
+
+PREFIX snvoc: <http://localhost:3000/www.ldbc.eu/ldbc_socialnet/1.0/vocabulary/>
+SELECT ?messageCreationDate ?messageContent WHERE {
+  <http://localhost:3000/pods/00000013194139534154/comments#893353323079> snvoc:id ?messageId;
+    snvoc:creationDate ?messageCreationDate;
+    (snvoc:content|snvoc:imageFile) ?messageContent.
+}

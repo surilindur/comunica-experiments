@@ -1,0 +1,39 @@
+{
+  "engine_config": "file:///configs/config-timeout-100-void-simple.json",
+  "engine_query": "file:///queries/interactive-short-1.sparql#3",
+  "engine_stderr": "(node:1683099) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n\u001b[31m[2023-11-08T22:04:35.595Z]  ERROR: Could not retrieve http://localhost:3000/pods/00000004398046512167/comments (HTTP status 404):\n<!DOCTYPE HTML>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <title>Error response</title>\n    </head>\n    <body>\n        <h1>Error response</h1>\n        <p>Error code: 404</p>\n        <p>Message: Not Found.</p>\n        <p>Error code explanation: 404 - Nothing matches the given URI.</p>\n    </body>\n</html>\n { actor: 'urn:comunica:default:dereference/actors#http' }\n\u001b[0m\u001b[31m[2023-11-08T22:04:35.599Z]  ERROR: urn:comunica:default:rdf-parse/mediators#parse mediated over all rejecting actors:\nUnrecognized media type: undefined\nUnrecognized media type: undefined\nUnrecognized media type: undefined\nUnrecognized media type: undefined\nUnrecognized media type: undefined\nUnrecognized media type: undefined { actor: 'urn:comunica:default:dereference-rdf/actors#parse' }\n\u001b[0m",
+  "engine_timeout_reached": false,
+  "requested_urls": [
+    "http://localhost:3001/pods/00000004398046512167/profile/card",
+    "http://localhost:3001/pods/00000004398046512167/settings/publicTypeIndex",
+    "http://localhost:3001/pods/00000004398046512167/",
+    "http://localhost:3001/dbpedia.org/resource/Pamplona",
+    "http://localhost:3001/pods/00000004398046512167/posts/",
+    "http://localhost:3001/pods/00000004398046512167/comments",
+    "http://localhost:3001/pods/00000004398046512167/comments/"
+  ],
+  "requested_urls_count": 7,
+  "requested_urls_count_unique": 7,
+  "result_count": 1,
+  "result_count_unique": 1,
+  "result_data": {
+    "6631550794": {
+      "birthday": "\"1986-11-02\"^^http://www.w3.org/2001/XMLSchema#date",
+      "browserUsed": "\"Chrome\"",
+      "cityId": "\"1062\"^^http://www.w3.org/2001/XMLSchema#int",
+      "creationDate": "\"2010-06-16T20:53:47.633Z\"^^http://www.w3.org/2001/XMLSchema#dateTime",
+      "firstName": "\"Gustavo\"",
+      "gender": "\"male\"",
+      "lastName": "\"Arbelaez\"",
+      "locationIP": "\"190.96.189.165\""
+    }
+  },
+  "result_data_other": {
+    "6631550794": "Restarted join operation",
+    "6645684572": "Restarted join operation"
+  },
+  "result_hash": "90e3ca870e87c92b5798c2d387ddb79b",
+  "time_begin": "2023-11-08T22:04:29Z",
+  "time_end": "2023-11-08T22:04:35Z",
+  "time_taken_seconds": 6.699845
+}

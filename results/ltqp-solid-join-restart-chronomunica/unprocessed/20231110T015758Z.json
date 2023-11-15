@@ -1,0 +1,40 @@
+{
+  "engine_config": "file:///configs/config-timeout-100.json",
+  "engine_query": "file:///queries/interactive-short-7.sparql#3",
+  "engine_stderr": "(node:1917292) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n",
+  "engine_timeout_reached": false,
+  "requested_urls": [
+    "http://localhost:3001/pods/00000004398046511367/posts",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000412316874543",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000618475304752",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000137438967601",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000412316874546",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000824633734964",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000343597397813",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000618475304758",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000206158444343",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000755914258232",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000962072688441",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000824633734971",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000206158444358",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000001030792165193",
+    "http://localhost:3001/www.ldbc.eu/ldbc_socialnet/1.0/data/forum00000000893353211725",
+    "http://localhost:3001/pods/00000030786325578932/profile/card"
+  ],
+  "requested_urls_count": 16,
+  "requested_urls_count_unique": 16,
+  "result_count": 0,
+  "result_count_unique": 0,
+  "result_data": {},
+  "result_data_other": {
+    "6859488240": "Restarted join operation",
+    "6860142285": "Restarted join operation",
+    "6860379977": "Restarted join operation",
+    "6860579718": "Restarted join operation",
+    "6861015167": "Restarted join operation"
+  },
+  "result_hash": "d41d8cd98f00b204e9800998ecf8427e",
+  "time_begin": "2023-11-10T01:57:58Z",
+  "time_end": "2023-11-10T01:58:05Z",
+  "time_taken_seconds": 6.97364
+}

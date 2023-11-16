@@ -65,7 +65,11 @@ def get_timestamps(result_directory: Path) -> Dict[str, Dict[str, List[float]]]:
     def converter(column: str) -> List[float]:
         return list(int(i) / 1000 for i in column.split(" ") if i)
 
-    return get_column(result_directory, "timestamps", converter, [])
+    timestamps = get_column(result_directory, "timestamps", converter, [])
+    for data in timestamps.values():
+        for timestamp_values in data.values():
+            timestamp_values.sort()
+    return timestamps
 
 
 def get_http_requests(result_directory: Path) -> Dict[str, Dict[str, int]]:

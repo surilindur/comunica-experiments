@@ -86,6 +86,17 @@ def get_query_times(result_directory: Path) -> Dict[str, Dict[str, float]]:
     return get_column(result_directory, "time", converter, 0)
 
 
+def dief_k_full(timestamps: List[float]) -> float:
+    integral: float = 0
+    previous_result_count: int = 0
+    previous_timestamp: float = 0
+    for timestamp in timestamps:
+        integral += (timestamp - previous_timestamp) * (previous_result_count + 0.5)
+        previous_result_count += 1
+        previous_timestamp = timestamp
+    return round(integral, 3)
+
+
 def plot_timestamps(
     timestamps: Dict[str, Dict[str, List[float]]],
     query_times: Dict[str, Dict[str, float]],
@@ -205,6 +216,45 @@ def plot_http_requests(requests: Dict[str, Dict[str, int]], figure_path: Path) -
     fig.savefig(figure_path)
 
 
+def dump_interesting_metrics(
+    timestamps: Dict[str, Dict[str, List[float]]],
+    query_times: Dict[str, Dict[str, float]],
+    requests: Dict[str, Dict[str, int]],
+    file_path: Path,
+) -> None:
+    columns: List[str] = [
+        "query",
+        "config",
+        "requests",
+        "first",
+        "last",
+        "termination",
+        "diefficiency",
+    ]
+    csv_sep: str = "\t"
+    with open(file_path, "w") as metrics_file:
+        metrics_file.write(csv_sep.join(columns) + "\n")
+        for query, query_data in timestamps.items():
+            for config, config_timestamps in query_data.items():
+                metrics_file.write(
+                    csv_sep.join(
+                        str(k)
+                        for k in (
+                            query,
+                            config,
+                            requests[query][config],
+                            config_timestamps[0] if len(config_timestamps) else "",
+                            config_timestamps[-1] if len(config_timestamps) else "",
+                            query_times[query][config],
+                            dief_k_full(config_timestamps)
+                            if len(config_timestamps)
+                            else "",
+                        )
+                    )
+                    + "\n"
+                )
+
+
 def filter_by_prefix(
     prefix: str | None, dictionary: Dict[str, Dict[str, Any]]
 ) -> Dict[str, Dict[str, Any]]:
@@ -238,6 +288,12 @@ def plot_all_results(prefix: str | None) -> None:
             result_directory.joinpath(
                 f'httprequests-{prefix or "all"}.{IMAGE_EXTENSION}'
             ),
+        )
+        dump_interesting_metrics(
+            filter_by_prefix(prefix, timestamps),
+            filter_by_prefix(prefix, query_terminations),
+            filter_by_prefix(prefix, http_requests),
+            result_directory.joinpath(f'metrics-{prefix or "all"}.tsv'),
         )
 
 

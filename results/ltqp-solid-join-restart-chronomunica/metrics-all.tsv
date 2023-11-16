@@ -1,0 +1,2026 @@
+query	config	requests	first	last	termination	diefficiency
+interactive discover 1.0	baseline	127	12.58	18.31	18.494	33.052
+interactive discover 1.0	cardinality once void simple	127	9.823	10.179	10.382	6.125
+interactive discover 1.0	cardinality once void	127	9.737	9.928	9.837	5.702
+interactive discover 1.0	cardinality once	127	10.245	10.25	10.004	5.142
+interactive discover 1.0	cardinality unlimited void simple	127	9.822	10.374	10.877	7.008
+interactive discover 1.0	cardinality unlimited void	127	10.29	10.328	10.242	5.256
+interactive discover 1.0	cardinality unlimited	127	10.481	10.796	10.094	5.732
+interactive discover 1.0	overhead simple	127	13.502	20.391	20.423	41.199
+interactive discover 1.0	overhead	127	13.706	20.019	19.319	34.204
+interactive discover 1.0	timeout 100 void simple	127	9.926	10.282	10.73	6.534
+interactive discover 1.0	timeout 100 void	127	11.37	13.002	10.328	12.59
+interactive discover 1.0	timeout 100	127	13.101	19.049	20.304	32.272
+interactive discover 1.0	timeout 1000 void simple	127	9.43	10.7	10.412	11.039
+interactive discover 1.0	timeout 1000 void	127	10.298	10.517	10.136	5.658
+interactive discover 1.0	timeout 1000	127	9.856	10.188	9.87	6.138
+interactive discover 1.0	timeout 2000 void simple	127	9.719	11.07	11.034	12.014
+interactive discover 1.0	timeout 2000 void	127	10.446	10.814	10.812	7.027
+interactive discover 1.0	timeout 2000	127	12.539	19.009	19.138	30.706
+interactive discover 1.0	timeout 5000 void simple	127	11.559	13.677	13.585	14.314
+interactive discover 1.0	timeout 5000 void	127	11.74	13.689	13.665	10.258
+interactive discover 1.0	timeout 5000	127	11.368	21.758	21.485	36.622
+interactive discover 1.0	timeout 10000 void simple	127	13.476	18.997	18.978	30.297
+interactive discover 1.0	timeout 10000 void	127	13.235	18.441	18.814	30.012
+interactive discover 1.0	timeout 10000	127	12.305	27.702	27.239	77.408
+interactive discover 1.0	timeout 20000 void simple	127	13.128	20.682	21.528	42.357
+interactive discover 1.0	timeout 20000 void	127	13.726	19.174	18.749	29.867
+interactive discover 1.0	timeout 20000	127	13.189	18.783	18.322	29.942
+interactive discover 1.1	baseline	19	6.654	7.718	7.868	7.049
+interactive discover 1.1	cardinality once void simple	19	6.911	7.682	7.791	6.027
+interactive discover 1.1	cardinality once void	19	6.858	7.463	7.524	5.484
+interactive discover 1.1	cardinality once	19	6.906	7.439	6.781	5.275
+interactive discover 1.1	cardinality unlimited void simple	19	7.163	8.026	7.578	6.507
+interactive discover 1.1	cardinality unlimited void	19	7.266	7.938	7.826	5.973
+interactive discover 1.1	cardinality unlimited	19	6.641	6.82	7.471	3.861
+interactive discover 1.1	overhead simple	19	6.845	7.837	7.695	6.894
+interactive discover 1.1	overhead	19	6.869	7.981	7.715	7.322
+interactive discover 1.1	timeout 100 void simple	19	6.983	7.63	7.605	4.84
+interactive discover 1.1	timeout 100 void	19	7.005	7.856	7.809	5.972
+interactive discover 1.1	timeout 100	19	7.031	7.762	6.915	6.064
+interactive discover 1.1	timeout 1000 void simple	19	6.555	7.752	7.608	5.586
+interactive discover 1.1	timeout 1000 void	19	6.823	7.769	7.933	5.458
+interactive discover 1.1	timeout 1000	19	6.624	7.231	7.732	4.426
+interactive discover 1.1	timeout 2000 void simple	19	6.761	7.584	7.471	4.617
+interactive discover 1.1	timeout 2000 void	19	6.973	7.778	7.609	4.739
+interactive discover 1.1	timeout 2000	19	6.784	7.93	7.739	5.306
+interactive discover 1.1	timeout 5000 void simple	19	6.526	7.566	7.541	5.037
+interactive discover 1.1	timeout 5000 void	19	6.721	7.783	8.348	4.957
+interactive discover 1.1	timeout 5000	19	6.731	7.397	8.156	4.393
+interactive discover 1.1	timeout 10000 void simple	19	6.742	7.653	8.469	4.994
+interactive discover 1.1	timeout 10000 void	19	7.22	7.993	7.474	4.901
+interactive discover 1.1	timeout 10000	19	6.819	7.884	7.533	5.037
+interactive discover 1.1	timeout 20000 void simple	19	6.689	7.273	7.595	5.249
+interactive discover 1.1	timeout 20000 void	19	7.117	7.796	7.533	5.394
+interactive discover 1.1	timeout 20000	19	6.625	7.667	8.216	5.059
+interactive discover 1.2	baseline	16	7.171	7.171	7.251	3.586
+interactive discover 1.2	cardinality once void simple	16	7.192	7.192	7.942	3.596
+interactive discover 1.2	cardinality once void	16	6.563	6.563	6.866	3.281
+interactive discover 1.2	cardinality once	16	6.692	6.692	6.969	3.346
+interactive discover 1.2	cardinality unlimited void simple	16	7.007	7.007	7.206	3.503
+interactive discover 1.2	cardinality unlimited void	16	6.55	6.55	6.657	3.275
+interactive discover 1.2	cardinality unlimited	16	6.892	6.892	7.142	3.446
+interactive discover 1.2	overhead simple	16	7.389	7.389	7.286	3.695
+interactive discover 1.2	overhead	16	7.58	7.58	7.005	3.79
+interactive discover 1.2	timeout 100 void simple	16	6.873	6.873	7.048	3.437
+interactive discover 1.2	timeout 100 void	16	6.527	6.527	6.835	3.264
+interactive discover 1.2	timeout 100	16	6.716	6.716	7.018	3.358
+interactive discover 1.2	timeout 1000 void simple	16	7.094	7.094	7.448	3.547
+interactive discover 1.2	timeout 1000 void	16	7.371	7.371	7.66	3.686
+interactive discover 1.2	timeout 1000	16	7.123	7.123	7.424	3.562
+interactive discover 1.2	timeout 2000 void simple	16	7.685	7.685	8.227	3.842
+interactive discover 1.2	timeout 2000 void	16	7.208	7.208	7.194	3.604
+interactive discover 1.2	timeout 2000	16	7.276	7.276	6.893	3.638
+interactive discover 1.2	timeout 5000 void simple	16	7.372	7.372	7.69	3.686
+interactive discover 1.2	timeout 5000 void	16	7.386	7.386	7.068	3.693
+interactive discover 1.2	timeout 5000	16	7.507	7.507	7.551	3.753
+interactive discover 1.2	timeout 10000 void simple	16	7.529	7.529	7.308	3.764
+interactive discover 1.2	timeout 10000 void	16	7.111	7.111	7.107	3.555
+interactive discover 1.2	timeout 10000	16	7.083	7.083	7.075	3.542
+interactive discover 1.2	timeout 20000 void simple	16	7.393	7.393	7.345	3.696
+interactive discover 1.2	timeout 20000 void	16	7.16	7.16	7.335	3.58
+interactive discover 1.2	timeout 20000	16	7.271	7.271	7.514	3.635
+interactive discover 1.3	baseline	223	10.861	16.925	17.08	74.727
+interactive discover 1.3	cardinality once void simple	223	7.701	18.559	19.786	125.798
+interactive discover 1.3	cardinality once void	223	8.194	10.125	9.871	23.209
+interactive discover 1.3	cardinality once	223	9.082	17.071	16.919	92.909
+interactive discover 1.3	cardinality unlimited void simple	223	7.414	18.296	18.206	127.758
+interactive discover 1.3	cardinality unlimited void	223	7.395	9.938	9.754	23.469
+interactive discover 1.3	cardinality unlimited	223	9.025	10.158	10.688	15.668
+interactive discover 1.3	overhead simple	223	7.507	19.206	19.201	127.795
+interactive discover 1.3	overhead	223	8.946	17.699	17.951	99.361
+interactive discover 1.3	timeout 100 void simple	223	7.436	18.268	18.483	130.608
+interactive discover 1.3	timeout 100 void	223	7.873	10.017	9.992	21.682
+interactive discover 1.3	timeout 100	223	9.318	17.031	17.022	90.136
+interactive discover 1.3	timeout 1000 void simple	223	7.609	18.663	18.668	138.673
+interactive discover 1.3	timeout 1000 void	223	9.424	9.92	10.005	10.291
+interactive discover 1.3	timeout 1000	223	10.533	16.7	16.708	83.351
+interactive discover 1.3	timeout 2000 void simple	223	7.728	19.311	19.584	144.745
+interactive discover 1.3	timeout 2000 void	223	10.198	10.936	10.326	14.941
+interactive discover 1.3	timeout 2000	223	10.973	17.04	17.693	83.788
+interactive discover 1.3	timeout 5000 void simple	223	7.552	20.252	21.517	142.788
+interactive discover 1.3	timeout 5000 void	223	9.146	12.764	13.351	27.528
+interactive discover 1.3	timeout 5000	223	8.107	19.343	19.24	120.38
+interactive discover 1.3	timeout 10000 void simple	223	7.304	16.37	26.391	97.902
+interactive discover 1.3	timeout 10000 void	223	9.656	16.733	18.195	78.68
+interactive discover 1.3	timeout 10000	223	9.771	16.823	24.736	80.209
+interactive discover 1.3	timeout 20000 void simple	223	7.475	19.275	19.022	136.397
+interactive discover 1.3	timeout 20000 void	223	9.194	17.774	17.932	100.342
+interactive discover 1.3	timeout 20000	223	8.774	16.725	16.948	89.998
+interactive discover 1.4	baseline	122	13.392	18.155	18.311	28.811
+interactive discover 1.4	cardinality once void simple	122	9.72	10.661	10.881	8.856
+interactive discover 1.4	cardinality once void	122	10.31	10.624	10.667	6.73
+interactive discover 1.4	cardinality once	122	10.627	10.702	11.305	5.561
+interactive discover 1.4	cardinality unlimited void simple	122	8.852	11.015	13.095	16.811
+interactive discover 1.4	cardinality unlimited void	122	10.18	10.364	10.256	6.208
+interactive discover 1.4	cardinality unlimited	122	11.7	12.123	12.306	8.197
+interactive discover 1.4	overhead simple	122	13.426	19.494	19.171	40.378
+interactive discover 1.4	overhead	122	13.949	18.747	19.13	28.684
+interactive discover 1.4	timeout 100 void simple	122	9.681	10.764	10.595	10.587
+interactive discover 1.4	timeout 100 void	122	10.192	10.422	10.347	6.024
+interactive discover 1.4	timeout 100	122	13.081	18.12	17.84	28.793
+interactive discover 1.4	timeout 1000 void simple	122	9.357	11.365	11.332	17.143
+interactive discover 1.4	timeout 1000 void	122	10.184	11.207	11.136	11.561
+interactive discover 1.4	timeout 1000	122	9.503	10.743	10.411	10.182
+interactive discover 1.4	timeout 2000 void simple	122	10.072	11.66	11.473	15.79
+interactive discover 1.4	timeout 2000 void	122	9.985	11.253	11.215	14.083
+interactive discover 1.4	timeout 2000	122	12.791	18.628	18.762	44.789
+interactive discover 1.4	timeout 5000 void simple	122	12.186	14.331	14.364	19.281
+interactive discover 1.4	timeout 5000 void	122	12.135	14.098	13.986	14.95
+interactive discover 1.4	timeout 5000	122	12.171	21.226	21.789	48.373
+interactive discover 1.4	timeout 10000 void simple	122	13.287	17.643	19.331	25.752
+interactive discover 1.4	timeout 10000 void	122	13.515	17.848	19.594	27.085
+interactive discover 1.4	timeout 10000	122	12.673	24.681	26.314	70.578
+interactive discover 1.4	timeout 20000 void simple	122	13.353	19.32	19.598	42.169
+interactive discover 1.4	timeout 20000 void	122	14.202	18.659	18.199	32.004
+interactive discover 1.4	timeout 20000	122	13.065	18.046	17.869	29.124
+interactive discover 2.0	baseline	128	10.958	21.486	22.712	310.142
+interactive discover 2.0	cardinality once void simple	128	7.677	17.679	10.114	538.085
+interactive discover 2.0	cardinality once void	128	8.9	17.58	21.327	492.115
+interactive discover 2.0	cardinality once	128	10.604	17.74	15.267	228.845
+interactive discover 2.0	cardinality unlimited void simple	128	7.732	16.074	11.538	433.489
+interactive discover 2.0	cardinality unlimited void	128	7.729	13.946	21.0	272.78
+interactive discover 2.0	cardinality unlimited	128	10.591	14.064	14.464	117.005
+interactive discover 2.0	overhead simple	128	11.051	24.103	24.161	398.395
+interactive discover 2.0	overhead	128	11.395	23.094	22.754	343.209
+interactive discover 2.0	timeout 100 void simple	128	7.246	18.6	10.402	615.228
+interactive discover 2.0	timeout 100 void	128	11.377	22.61	22.943	258.799
+interactive discover 2.0	timeout 100	128	10.603	21.369	22.01	282.451
+interactive discover 2.0	timeout 1000 void simple	128	8.694	12.666	11.437	172.194
+interactive discover 2.0	timeout 1000 void	128	9.484	12.605	11.322	144.607
+interactive discover 2.0	timeout 1000	128	11.791	22.843	23.607	263.01
+interactive discover 2.0	timeout 2000 void simple	128	9.426	14.766	15.043	248.755
+interactive discover 2.0	timeout 2000 void	128	11.066	16.595	14.991	313.985
+interactive discover 2.0	timeout 2000	128	13.212	23.355	23.289	148.988
+interactive discover 2.0	timeout 5000 void simple	128	10.753	16.319	14.795	214.568
+interactive discover 2.0	timeout 5000 void	128	11.044	17.979	14.635	276.808
+interactive discover 2.0	timeout 5000	128	12.088	26.166	26.884	222.072
+interactive discover 2.0	timeout 10000 void simple	128	10.375	20.098	19.399	308.206
+interactive discover 2.0	timeout 10000 void	128	11.052	20.147	19.108	306.598
+interactive discover 2.0	timeout 10000	128	10.949	30.582	30.36	590.048
+interactive discover 2.0	timeout 20000 void simple	128	10.474	24.351	24.51	455.073
+interactive discover 2.0	timeout 20000 void	128	11.001	23.134	23.212	386.388
+interactive discover 2.0	timeout 20000	128	11.815	21.536	22.411	210.587
+interactive discover 2.1	baseline	20	7.802	7.929	7.734	5.076
+interactive discover 2.1	cardinality once void simple	20	7.479	7.892	7.9	11.895
+interactive discover 2.1	cardinality once void	20	8.22	8.428	7.949	12.021
+interactive discover 2.1	cardinality once	20	8.055	8.12	7.978	5.418
+interactive discover 2.1	cardinality unlimited void simple	20	7.38	7.967	7.801	15.164
+interactive discover 2.1	cardinality unlimited void	20	7.809	8.025	7.789	12.325
+interactive discover 2.1	cardinality unlimited	20	8.037	8.099	7.817	5.394
+interactive discover 2.1	overhead simple	20	7.077	7.852	8.302	14.249
+interactive discover 2.1	overhead	20	7.63	7.979	7.895	14.865
+interactive discover 2.1	timeout 100 void simple	20	7.323	7.814	8.199	12.532
+interactive discover 2.1	timeout 100 void	20	7.751	7.843	7.976	6.645
+interactive discover 2.1	timeout 100	20	7.531	7.713	8.25	7.28
+interactive discover 2.1	timeout 1000 void simple	20	7.319	8.109	8.29	16.295
+interactive discover 2.1	timeout 1000 void	20	7.904	7.947	8.24	4.895
+interactive discover 2.1	timeout 1000	20	7.393	7.927	7.795	5.375
+interactive discover 2.1	timeout 2000 void simple	20	6.8	7.483	7.488	17.825
+interactive discover 2.1	timeout 2000 void	20	7.273	7.528	7.432	8.628
+interactive discover 2.1	timeout 2000	20	7.383	7.699	7.517	10.518
+interactive discover 2.1	timeout 5000 void simple	20	6.883	7.596	7.831	16.287
+interactive discover 2.1	timeout 5000 void	20	7.401	7.664	7.644	9.494
+interactive discover 2.1	timeout 5000	20	7.408	7.616	8.284	8.652
+interactive discover 2.1	timeout 10000 void simple	20	6.58	7.554	7.662	13.672
+interactive discover 2.1	timeout 10000 void	20	8.075	8.202	8.132	7.521
+interactive discover 2.1	timeout 10000	20	7.517	7.778	7.896	12.966
+interactive discover 2.1	timeout 20000 void simple	20	7.717	8.561	7.95	18.677
+interactive discover 2.1	timeout 20000 void	20	7.861	8.083	7.756	11.353
+interactive discover 2.1	timeout 20000	20	7.52	7.69	7.69	7.11
+interactive discover 2.2	baseline	17	7.406	7.435	7.188	3.971
+interactive discover 2.2	cardinality once void simple	17	7.059	7.641	7.681	5.362
+interactive discover 2.2	cardinality once void	17	7.031	7.41	7.172	4.332
+interactive discover 2.2	cardinality once	17	7.202	7.467	7.447	4.261
+interactive discover 2.2	cardinality unlimited void simple	17	7.715	7.904	7.508	5.087
+interactive discover 2.2	cardinality unlimited void	17	7.471	7.587	7.638	4.194
+interactive discover 2.2	cardinality unlimited	17	7.492	7.515	7.954	4.053
+interactive discover 2.2	overhead simple	17	7.196	7.541	7.874	7.751
+interactive discover 2.2	overhead	17	7.486	7.516	7.11	4.102
+interactive discover 2.2	timeout 100 void simple	17	7.084	7.457	7.268	6.745
+interactive discover 2.2	timeout 100 void	17	6.993	7.446	7.595	4.425
+interactive discover 2.2	timeout 100	17	7.52	7.545	7.76	4.088
+interactive discover 2.2	timeout 1000 void simple	17	7.471	7.849	7.897	9.338
+interactive discover 2.2	timeout 1000 void	17	7.353	7.67	7.678	6.501
+interactive discover 2.2	timeout 1000	17	7.343	7.485	7.524	4.885
+interactive discover 2.2	timeout 2000 void simple	17	7.138	7.465	7.527	8.56
+interactive discover 2.2	timeout 2000 void	17	7.169	7.203	7.515	3.984
+interactive discover 2.2	timeout 2000	17	7.537	7.573	7.491	4.189
+interactive discover 2.2	timeout 5000 void simple	17	7.233	7.583	7.65	7.358
+interactive discover 2.2	timeout 5000 void	17	7.484	7.515	7.647	4.176
+interactive discover 2.2	timeout 5000	17	7.459	7.494	7.997	4.134
+interactive discover 2.2	timeout 10000 void simple	17	7.401	7.721	7.349	7.348
+interactive discover 2.2	timeout 10000 void	17	7.59	7.623	7.236	4.211
+interactive discover 2.2	timeout 10000	17	7.563	7.591	7.486	4.13
+interactive discover 2.2	timeout 20000 void simple	17	7.177	7.522	7.822	7.297
+interactive discover 2.2	timeout 20000 void	17	7.584	7.61	7.622	4.141
+interactive discover 2.2	timeout 20000	17	7.213	7.247	7.241	3.983
+interactive discover 2.3	baseline	224	9.975	22.319	22.782	762.4
+interactive discover 2.3	cardinality once void simple	224	8.025	21.389	21.525	1096.584
+interactive discover 2.3	cardinality once void	224	9.027	21.752	21.949	841.801
+interactive discover 2.3	cardinality once	224	10.5	21.557	21.508	644.762
+interactive discover 2.3	cardinality unlimited void simple	224	7.846	21.591	21.396	1115.788
+interactive discover 2.3	cardinality unlimited void	224	10.656	21.619	21.537	824.284
+interactive discover 2.3	cardinality unlimited	0			0	
+interactive discover 2.3	overhead simple	224	7.34	22.428	22.735	1275.38
+interactive discover 2.3	overhead	224	9.831	22.843	22.384	989.452
+interactive discover 2.3	timeout 100 void simple	224	7.878	21.806	21.86	1138.538
+interactive discover 2.3	timeout 100 void	224	9.658	22.371	22.543	843.09
+interactive discover 2.3	timeout 100	224	10.266	22.359	21.796	703.225
+interactive discover 2.3	timeout 1000 void simple	224	8.62	22.283	21.885	1093.163
+interactive discover 2.3	timeout 1000 void	224	11.139	22.25	22.51	818.646
+interactive discover 2.3	timeout 1000	224	9.77	23.02	22.266	708.123
+interactive discover 2.3	timeout 2000 void simple	224	7.822	22.706	22.184	1106.346
+interactive discover 2.3	timeout 2000 void	224	11.414	22.914	22.792	815.679
+interactive discover 2.3	timeout 2000	224	12.653	24.561	22.033	749.019
+interactive discover 2.3	timeout 5000 void simple	224	7.808	24.762	24.699	1163.016
+interactive discover 2.3	timeout 5000 void	224	10.294	24.786	24.641	837.201
+interactive discover 2.3	timeout 5000	224	10.258	24.298	24.224	680.97
+interactive discover 2.3	timeout 10000 void simple	224	7.772	29.974	29.8	1924.395
+interactive discover 2.3	timeout 10000 void	224	9.757	29.589	29.816	1372.118
+interactive discover 2.3	timeout 10000	224	9.878	29.245	29.277	1183.643
+interactive discover 2.3	timeout 20000 void simple	224	7.659	22.681	22.964	1267.29
+interactive discover 2.3	timeout 20000 void	224	9.807	22.641	23.183	884.269
+interactive discover 2.3	timeout 20000	224	10.421	22.404	22.39	739.03
+interactive discover 2.4	baseline	123	12.394	21.201	21.339	338.578
+interactive discover 2.4	cardinality once void simple	123	7.49	16.802	11.334	632.546
+interactive discover 2.4	cardinality once void	123	8.693	12.633	11.944	186.708
+interactive discover 2.4	cardinality once	123	12.492	19.798	11.763	213.028
+interactive discover 2.4	cardinality unlimited void simple	123	7.336	14.556	12.033	449.17
+interactive discover 2.4	cardinality unlimited void	123	8.726	15.611	12.321	474.422
+interactive discover 2.4	cardinality unlimited	123	12.082	14.318	15.235	80.27
+interactive discover 2.4	overhead simple	123	11.652	23.383	23.549	690.753
+interactive discover 2.4	overhead	123	12.681	23.073	22.511	555.676
+interactive discover 2.4	timeout 100 void simple	123	7.518	12.532	11.697	243.148
+interactive discover 2.4	timeout 100 void	123	9.257	18.092	23.003	593.206
+interactive discover 2.4	timeout 100	123	12.393	21.376	21.343	394.071
+interactive discover 2.4	timeout 1000 void simple	123	8.48	17.199	12.526	633.535
+interactive discover 2.4	timeout 1000 void	123	10.348	13.681	11.9	194.661
+interactive discover 2.4	timeout 1000	123	13.709	22.907	23.56	292.642
+interactive discover 2.4	timeout 2000 void simple	123	8.728	16.912	12.323	540.535
+interactive discover 2.4	timeout 2000 void	123	10.658	16.349	21.445	407.416
+interactive discover 2.4	timeout 2000	123	14.361	22.829	23.673	321.795
+interactive discover 2.4	timeout 5000 void simple	123	12.276	15.431	14.687	118.332
+interactive discover 2.4	timeout 5000 void	123	12.647	15.222	15.56	62.802
+interactive discover 2.4	timeout 5000	123	16.472	25.139	24.783	192.491
+interactive discover 2.4	timeout 10000 void simple	123	10.419	20.722	20.271	416.845
+interactive discover 2.4	timeout 10000 void	123	13.499	20.3	20.257	165.201
+interactive discover 2.4	timeout 10000	123	12.164	30.07	29.739	530.654
+interactive discover 2.4	timeout 20000 void simple	123	11.35	23.742	23.549	649.299
+interactive discover 2.4	timeout 20000 void	123	12.084	22.843	22.598	589.51
+interactive discover 2.4	timeout 20000	123	12.321	21.753	21.442	331.96
+interactive discover 3.0	baseline	254	16.868	16.873	16.725	8.591
+interactive discover 3.0	cardinality once void simple	254	14.654	14.66	21.445	7.546
+interactive discover 3.0	cardinality once void	254	15.996	16.002	13.941	8.207
+interactive discover 3.0	cardinality once	0			0	
+interactive discover 3.0	cardinality unlimited void simple	254	15.347	15.351	15.379	7.783
+interactive discover 3.0	cardinality unlimited void	254	15.292	15.297	16.021	7.824
+interactive discover 3.0	cardinality unlimited	254	14.755	14.76	14.842	7.529
+interactive discover 3.0	overhead simple	0			0	
+interactive discover 3.0	overhead	0			0	
+interactive discover 3.0	timeout 100 void simple	0			0	
+interactive discover 3.0	timeout 100 void	254	15.688	15.693	21.904	8.016
+interactive discover 3.0	timeout 100	254	20.126	20.13	18.237	10.208
+interactive discover 3.0	timeout 1000 void simple	254	14.383	14.388	14.287	7.342
+interactive discover 3.0	timeout 1000 void	254	14.707	14.711	15.061	7.496
+interactive discover 3.0	timeout 1000	254	16.618	16.623	15.114	8.539
+interactive discover 3.0	timeout 2000 void simple	254	14.853	14.858	14.795	7.624
+interactive discover 3.0	timeout 2000 void	254	16.296	16.301	14.676	8.321
+interactive discover 3.0	timeout 2000	254	14.518	14.522	13.855	7.388
+interactive discover 3.0	timeout 5000 void simple	254	17.315	17.32	17.572	8.833
+interactive discover 3.0	timeout 5000 void	254	17.538	17.542	16.921	8.883
+interactive discover 3.0	timeout 5000	254	16.923	16.927	16.561	8.568
+interactive discover 3.0	timeout 10000 void simple	254	22.373	22.377	22.182	11.345
+interactive discover 3.0	timeout 10000 void	254	22.505	22.512	22.38	11.487
+interactive discover 3.0	timeout 10000	254	21.936	21.941	24.746	11.123
+interactive discover 3.0	timeout 20000 void simple	254	33.159	33.164	32.975	16.76
+interactive discover 3.0	timeout 20000 void	254	32.127	32.131	32.303	16.197
+interactive discover 3.0	timeout 20000	254	17.365	17.37	17.019	8.845
+interactive discover 3.1	baseline	148	27.916	27.92	27.743	14.067
+interactive discover 3.1	cardinality once void simple	0			0	
+interactive discover 3.1	cardinality once void	148	13.176	13.181	10.471	6.699
+interactive discover 3.1	cardinality once	148	11.07	11.074	11.158	5.65
+interactive discover 3.1	cardinality unlimited void simple	0			0	
+interactive discover 3.1	cardinality unlimited void	0			0	
+interactive discover 3.1	cardinality unlimited	148	28.998	29.002	28.185	14.647
+interactive discover 3.1	overhead simple	0			0	
+interactive discover 3.1	overhead	0			0	
+interactive discover 3.1	timeout 100 void simple	0			0	
+interactive discover 3.1	timeout 100 void	148	14.039	14.044	14.49	7.156
+interactive discover 3.1	timeout 100	148	22.053	22.057	10.24	11.171
+interactive discover 3.1	timeout 1000 void simple	0			0	
+interactive discover 3.1	timeout 1000 void	148	11.677	11.684	14.669	6.039
+interactive discover 3.1	timeout 1000	148	13.915	13.921	11.53	7.159
+interactive discover 3.1	timeout 2000 void simple	0			0	
+interactive discover 3.1	timeout 2000 void	0			0	
+interactive discover 3.1	timeout 2000	0			0	
+interactive discover 3.1	timeout 5000 void simple	0			0	
+interactive discover 3.1	timeout 5000 void	0			0	
+interactive discover 3.1	timeout 5000	0			0	
+interactive discover 3.1	timeout 10000 void simple	0			0	
+interactive discover 3.1	timeout 10000 void	0			0	
+interactive discover 3.1	timeout 10000	0			0	
+interactive discover 3.1	timeout 20000 void simple	0			0	
+interactive discover 3.1	timeout 20000 void	0			0	
+interactive discover 3.1	timeout 20000	0			0	
+interactive discover 3.2	baseline	101	15.525	15.53	15.36	7.888
+interactive discover 3.2	cardinality once void simple	101	27.958	27.961	28.148	14.052
+interactive discover 3.2	cardinality once void	101	11.039	11.043	14.997	5.636
+interactive discover 3.2	cardinality once	101	9.651	9.655	11.434	4.931
+interactive discover 3.2	cardinality unlimited void simple	101	28.64	28.643	28.687	14.412
+interactive discover 3.2	cardinality unlimited void	101	28.59	28.593	27.899	14.364
+interactive discover 3.2	cardinality unlimited	101	17.794	17.795	16.471	8.921
+interactive discover 3.2	overhead simple	101	27.113	27.117	26.584	13.65
+interactive discover 3.2	overhead	101	27.656	27.658	27.787	13.879
+interactive discover 3.2	timeout 100 void simple	101	30.039	30.042	28.315	15.095
+interactive discover 3.2	timeout 100 void	101	11.351	11.354	9.756	5.736
+interactive discover 3.2	timeout 100	101	9.394	9.397	9.033	4.783
+interactive discover 3.2	timeout 1000 void simple	101	28.429	28.433	28.379	14.311
+interactive discover 3.2	timeout 1000 void	101	9.876	9.88	11.722	5.05
+interactive discover 3.2	timeout 1000	101	9.752	9.756	9.89	4.995
+interactive discover 3.2	timeout 2000 void simple	101	28.425	28.429	28.622	14.335
+interactive discover 3.2	timeout 2000 void	101	26.447	26.45	28.161	13.277
+interactive discover 3.2	timeout 2000	101	28.091	28.095	27.879	14.156
+interactive discover 3.2	timeout 5000 void simple	101	31.308	31.311	31.412	15.731
+interactive discover 3.2	timeout 5000 void	101	31.826	31.83	31.906	16.002
+interactive discover 3.2	timeout 5000	101	30.284	30.287	30.85	15.206
+interactive discover 3.2	timeout 10000 void simple	101	36.592	36.596	36.837	18.377
+interactive discover 3.2	timeout 10000 void	101	36.708	36.713	36.279	18.483
+interactive discover 3.2	timeout 10000	101	15.904	15.91	16.073	8.129
+interactive discover 3.2	timeout 20000 void simple	101	46.056	46.059	45.443	23.099
+interactive discover 3.2	timeout 20000 void	101	45.951	45.955	45.773	23.085
+interactive discover 3.2	timeout 20000	101	19.133	19.14	15.648	9.74
+interactive discover 3.3	baseline	430	22.3	22.315	22.59	12.744
+interactive discover 3.3	cardinality once void simple	0			0	
+interactive discover 3.3	cardinality once void	430	24.983	24.997	26.721	13.971
+interactive discover 3.3	cardinality once	0			0	
+interactive discover 3.3	cardinality unlimited void simple	0			0	
+interactive discover 3.3	cardinality unlimited void	430	28.797	28.811	27.293	15.966
+interactive discover 3.3	cardinality unlimited	0			0	
+interactive discover 3.3	overhead simple	0			0	
+interactive discover 3.3	overhead	0			0	
+interactive discover 3.3	timeout 100 void simple	0			0	
+interactive discover 3.3	timeout 100 void	430	27.143	27.156	26.837	15.034
+interactive discover 3.3	timeout 100	430	22.143	22.155	21.727	12.351
+interactive discover 3.3	timeout 1000 void simple	0			0	
+interactive discover 3.3	timeout 1000 void	430	28.985	28.998	21.52	15.856
+interactive discover 3.3	timeout 1000	430	21.249	21.265	21.609	12.322
+interactive discover 3.3	timeout 2000 void simple	0			0	
+interactive discover 3.3	timeout 2000 void	430	28.56	28.576	27.21	16.096
+interactive discover 3.3	timeout 2000	430	21.701	21.713	21.803	12.074
+interactive discover 3.3	timeout 5000 void simple	0			0	
+interactive discover 3.3	timeout 5000 void	430	24.698	24.714	24.037	13.98
+interactive discover 3.3	timeout 5000	430	23.386	23.4	23.095	13.25
+interactive discover 3.3	timeout 10000 void simple	0			0	
+interactive discover 3.3	timeout 10000 void	430	29.362	29.378	29.91	16.239
+interactive discover 3.3	timeout 10000	430	28.963	28.979	28.171	16.181
+interactive discover 3.3	timeout 20000 void simple	0			0	
+interactive discover 3.3	timeout 20000 void	430	40.835	40.848	41.332	21.637
+interactive discover 3.3	timeout 20000	430	37.931	37.943	37.388	20.26
+interactive discover 3.4	baseline	274	19.568	19.577	19.734	10.421
+interactive discover 3.4	cardinality once void simple	274	17.012	17.023	15.01	9.205
+interactive discover 3.4	cardinality once void	274	15.197	15.207	15.16	8.299
+interactive discover 3.4	cardinality once	274	16.348	16.356	16.197	8.715
+interactive discover 3.4	cardinality unlimited void simple	274	15.941	15.95	21.245	8.551
+interactive discover 3.4	cardinality unlimited void	274	15.106	15.116	15.106	8.266
+interactive discover 3.4	cardinality unlimited	274	18.248	18.258	21.148	9.782
+interactive discover 3.4	overhead simple	0			0	
+interactive discover 3.4	overhead	0			0	
+interactive discover 3.4	timeout 100 void simple	0			0	
+interactive discover 3.4	timeout 100 void	0			0	
+interactive discover 3.4	timeout 100	274	19.464	19.472	19.493	10.254
+interactive discover 3.4	timeout 1000 void simple	274	15.143	15.152	15.335	8.218
+interactive discover 3.4	timeout 1000 void	274	15.471	15.479	15.263	8.24
+interactive discover 3.4	timeout 1000	274	14.802	14.815	14.731	8.305
+interactive discover 3.4	timeout 2000 void simple	274	15.695	15.703	17.022	8.447
+interactive discover 3.4	timeout 2000 void	274	15.669	15.677	15.859	8.376
+interactive discover 3.4	timeout 2000	274	15.15	15.158	14.794	8.154
+interactive discover 3.4	timeout 5000 void simple	274	18.392	18.401	18.41	9.843
+interactive discover 3.4	timeout 5000 void	274	18.29	18.298	18.056	9.786
+interactive discover 3.4	timeout 5000	274	17.168	17.177	16.937	9.188
+interactive discover 3.4	timeout 10000 void simple	274	23.973	23.982	23.781	12.707
+interactive discover 3.4	timeout 10000 void	274	23.155	23.162	23.542	12.071
+interactive discover 3.4	timeout 10000	274	22.171	22.179	21.94	11.634
+interactive discover 3.4	timeout 20000 void simple	274	33.512	33.52	32.708	17.321
+interactive discover 3.4	timeout 20000 void	274	34.285	34.296	34.187	17.985
+interactive discover 3.4	timeout 20000	274	19.459	19.467	19.543	10.271
+interactive discover 4.0	baseline	144	21.57	21.57	21.664	10.785
+interactive discover 4.0	cardinality once void simple	0			0	
+interactive discover 4.0	cardinality once void	144	20.561	20.561	22.273	10.28
+interactive discover 4.0	cardinality once	144	22.008	22.008	22.76	11.004
+interactive discover 4.0	cardinality unlimited void simple	144	20.348	20.349	23.2	10.179
+interactive discover 4.0	cardinality unlimited void	144	14.548	14.549	14.964	7.278
+interactive discover 4.0	cardinality unlimited	144	24.668	24.669	24.695	12.338
+interactive discover 4.0	overhead simple	0			0	
+interactive discover 4.0	overhead	0			0	
+interactive discover 4.0	timeout 100 void simple	144	19.356	19.356	17.194	9.678
+interactive discover 4.0	timeout 100 void	144	17.723	17.724	22.794	8.866
+interactive discover 4.0	timeout 100	144	21.884	21.885	23.372	10.947
+interactive discover 4.0	timeout 1000 void simple	0			0	
+interactive discover 4.0	timeout 1000 void	0			0	
+interactive discover 4.0	timeout 1000	0			0	
+interactive discover 4.0	timeout 2000 void simple	0			0	
+interactive discover 4.0	timeout 2000 void	0			0	
+interactive discover 4.0	timeout 2000	0			0	
+interactive discover 4.0	timeout 5000 void simple	0			0	
+interactive discover 4.0	timeout 5000 void	0			0	
+interactive discover 4.0	timeout 5000	0			0	
+interactive discover 4.0	timeout 10000 void simple	0			0	
+interactive discover 4.0	timeout 10000 void	0			0	
+interactive discover 4.0	timeout 10000	0			0	
+interactive discover 4.0	timeout 20000 void simple	0			0	
+interactive discover 4.0	timeout 20000 void	0			0	
+interactive discover 4.0	timeout 20000	144	21.894	21.894	21.896	10.947
+interactive discover 4.1	baseline	24	8.343	8.343	8.711	4.171
+interactive discover 4.1	cardinality once void simple	24	7.685	7.685	8.039	3.842
+interactive discover 4.1	cardinality once void	24	7.965	7.966	7.956	3.984
+interactive discover 4.1	cardinality once	24	7.633	7.634	7.517	3.819
+interactive discover 4.1	cardinality unlimited void simple	24	8.043	8.043	8.499	4.021
+interactive discover 4.1	cardinality unlimited void	24	7.694	7.694	8.281	3.847
+interactive discover 4.1	cardinality unlimited	24	8.071	8.071	8.36	4.035
+interactive discover 4.1	overhead simple	24	8.407	8.407	8.641	4.204
+interactive discover 4.1	overhead	24	8.58	8.58	9.001	4.29
+interactive discover 4.1	timeout 100 void simple	24	8.266	8.266	7.795	4.133
+interactive discover 4.1	timeout 100 void	24	7.966	7.966	8.026	3.983
+interactive discover 4.1	timeout 100	24	7.874	7.874	8.606	3.937
+interactive discover 4.1	timeout 1000 void simple	24	8.203	8.203	7.977	4.101
+interactive discover 4.1	timeout 1000 void	24	8.086	8.088	8.277	4.048
+interactive discover 4.1	timeout 1000	24	8.252	8.252	8.187	4.126
+interactive discover 4.1	timeout 2000 void simple	24	8.704	8.704	8.567	4.352
+interactive discover 4.1	timeout 2000 void	24	8.502	8.502	8.72	4.251
+interactive discover 4.1	timeout 2000	24	8.364	8.364	8.674	4.182
+interactive discover 4.1	timeout 5000 void simple	24	8.625	8.625	9.455	4.312
+interactive discover 4.1	timeout 5000 void	24	8.838	8.839	8.458	4.422
+interactive discover 4.1	timeout 5000	24	8.184	8.184	8.039	4.092
+interactive discover 4.1	timeout 10000 void simple	24	8.633	8.633	8.442	4.316
+interactive discover 4.1	timeout 10000 void	24	8.752	8.753	8.654	4.378
+interactive discover 4.1	timeout 10000	24	8.269	8.269	8.633	4.135
+interactive discover 4.1	timeout 20000 void simple	24	8.445	8.446	8.254	4.224
+interactive discover 4.1	timeout 20000 void	24	8.638	8.638	8.806	4.319
+interactive discover 4.1	timeout 20000	24	8.137	8.137	8.295	4.069
+interactive discover 4.2	baseline	21	7.568	7.569	7.878	3.787
+interactive discover 4.2	cardinality once void simple	21	7.54	7.541	7.427	3.773
+interactive discover 4.2	cardinality once void	21	7.764	7.764	7.394	3.882
+interactive discover 4.2	cardinality once	21	7.665	7.666	7.981	3.835
+interactive discover 4.2	cardinality unlimited void simple	21	7.385	7.385	7.181	3.692
+interactive discover 4.2	cardinality unlimited void	21	7.45	7.45	7.031	3.725
+interactive discover 4.2	cardinality unlimited	21	7.55	7.55	7.891	3.775
+interactive discover 4.2	overhead simple	21	7.974	7.974	8.468	3.987
+interactive discover 4.2	overhead	21	8.001	8.001	8.004	4.0
+interactive discover 4.2	timeout 100 void simple	21	7.216	7.216	6.868	3.608
+interactive discover 4.2	timeout 100 void	21	7.624	7.625	7.095	3.814
+interactive discover 4.2	timeout 100	21	7.434	7.435	7.472	3.719
+interactive discover 4.2	timeout 1000 void simple	21	7.891	7.891	8.122	3.946
+interactive discover 4.2	timeout 1000 void	21	7.844	7.844	7.809	3.922
+interactive discover 4.2	timeout 1000	21	7.851	7.851	7.864	3.925
+interactive discover 4.2	timeout 2000 void simple	21	7.929	7.929	7.873	3.965
+interactive discover 4.2	timeout 2000 void	21	8.012	8.013	7.772	4.007
+interactive discover 4.2	timeout 2000	21	8.022	8.022	7.587	4.011
+interactive discover 4.2	timeout 5000 void simple	21	7.841	7.841	7.93	3.921
+interactive discover 4.2	timeout 5000 void	21	7.948	7.949	7.969	3.976
+interactive discover 4.2	timeout 5000	21	7.806	7.806	7.671	3.903
+interactive discover 4.2	timeout 10000 void simple	21	7.912	7.912	8.02	3.956
+interactive discover 4.2	timeout 10000 void	21	8.007	8.007	8.009	4.003
+interactive discover 4.2	timeout 10000	21	7.696	7.696	7.578	3.848
+interactive discover 4.2	timeout 20000 void simple	21	7.968	7.969	7.97	3.987
+interactive discover 4.2	timeout 20000 void	21	8.174	8.174	7.983	4.087
+interactive discover 4.2	timeout 20000	21	7.723	7.723	7.903	3.861
+interactive discover 4.3	baseline	229	20.641	20.641	18.237	10.32
+interactive discover 4.3	cardinality once void simple	229	33.15	33.151	18.628	16.577
+interactive discover 4.3	cardinality once void	229	18.358	18.358	18.145	9.179
+interactive discover 4.3	cardinality once	229	18.172	18.172	17.95	9.086
+interactive discover 4.3	cardinality unlimited void simple	229	18.338	18.338	20.003	9.169
+interactive discover 4.3	cardinality unlimited void	229	18.522	18.522	17.828	9.261
+interactive discover 4.3	cardinality unlimited	229	29.606	29.607	26.584	14.805
+interactive discover 4.3	overhead simple	229	37.821	37.822	38.124	18.913
+interactive discover 4.3	overhead	229	38.396	38.396	38.186	19.198
+interactive discover 4.3	timeout 100 void simple	229	16.81	16.81	16.371	8.405
+interactive discover 4.3	timeout 100 void	229	17.508	17.508	19.182	8.754
+interactive discover 4.3	timeout 100	229	17.844	17.844	17.701	8.922
+interactive discover 4.3	timeout 1000 void simple	0			0	
+interactive discover 4.3	timeout 1000 void	0			0	
+interactive discover 4.3	timeout 1000	0			0	
+interactive discover 4.3	timeout 2000 void simple	0			0	
+interactive discover 4.3	timeout 2000 void	0			0	
+interactive discover 4.3	timeout 2000	0			0	
+interactive discover 4.3	timeout 5000 void simple	0			0	
+interactive discover 4.3	timeout 5000 void	0			0	
+interactive discover 4.3	timeout 5000	0			0	
+interactive discover 4.3	timeout 10000 void simple	0			0	
+interactive discover 4.3	timeout 10000 void	0			0	
+interactive discover 4.3	timeout 10000	229	19.502	19.502	16.651	9.751
+interactive discover 4.3	timeout 20000 void simple	229	30.7	30.701	26.63	15.352
+interactive discover 4.3	timeout 20000 void	229	27.072	27.072	27.237	13.536
+interactive discover 4.3	timeout 20000	229	18.014	18.014	17.917	9.007
+interactive discover 4.4	baseline	143	21.756	21.757	22.17	10.883
+interactive discover 4.4	cardinality once void simple	0			0	
+interactive discover 4.4	cardinality once void	143	22.308	22.309	22.931	11.161
+interactive discover 4.4	cardinality once	143	21.307	21.308	21.447	10.657
+interactive discover 4.4	cardinality unlimited void simple	0			0	
+interactive discover 4.4	cardinality unlimited void	0			0	
+interactive discover 4.4	cardinality unlimited	143	40.348	40.349	39.076	20.18
+interactive discover 4.4	overhead simple	0			0	
+interactive discover 4.4	overhead	0			0	
+interactive discover 4.4	timeout 100 void simple	0			0	
+interactive discover 4.4	timeout 100 void	143	18.106	18.107	19.436	9.056
+interactive discover 4.4	timeout 100	143	22.131	22.132	23.22	11.069
+interactive discover 4.4	timeout 1000 void simple	0			0	
+interactive discover 4.4	timeout 1000 void	0			0	
+interactive discover 4.4	timeout 1000	0			0	
+interactive discover 4.4	timeout 2000 void simple	0			0	
+interactive discover 4.4	timeout 2000 void	0			0	
+interactive discover 4.4	timeout 2000	0			0	
+interactive discover 4.4	timeout 5000 void simple	0			0	
+interactive discover 4.4	timeout 5000 void	0			0	
+interactive discover 4.4	timeout 5000	0			0	
+interactive discover 4.4	timeout 10000 void simple	0			0	
+interactive discover 4.4	timeout 10000 void	0			0	
+interactive discover 4.4	timeout 10000	0			0	
+interactive discover 4.4	timeout 20000 void simple	0			0	
+interactive discover 4.4	timeout 20000 void	0			0	
+interactive discover 4.4	timeout 20000	143	21.589	21.59	21.69	10.798
+interactive discover 5.0	baseline	128	7.718	11.28	11.143	30.423
+interactive discover 5.0	cardinality once void simple	128	8.236	16.091	10.789	94.36
+interactive discover 5.0	cardinality once void	128	8.079	13.973	11.212	71.537
+interactive discover 5.0	cardinality once	128	8.847	10.949	11.097	20.171
+interactive discover 5.0	cardinality unlimited void simple	128	8.327	13.043	21.812	49.881
+interactive discover 5.0	cardinality unlimited void	128	8.362	11.39	11.882	24.405
+interactive discover 5.0	cardinality unlimited	128	8.055	12.894	13.883	43.634
+interactive discover 5.0	overhead simple	128	9.266	12.616	14.929	31.298
+interactive discover 5.0	overhead	128	9.36	11.674	11.331	21.064
+interactive discover 5.0	timeout 100 void simple	128	7.75	11.363	11.469	28.224
+interactive discover 5.0	timeout 100 void	128	8.475	12.131	11.588	36.428
+interactive discover 5.0	timeout 100	128	8.366	11.191	11.003	24.029
+interactive discover 5.0	timeout 1000 void simple	128	8.175	11.083	10.983	24.738
+interactive discover 5.0	timeout 1000 void	128	7.815	11.496	11.761	24.549
+interactive discover 5.0	timeout 1000	128	7.564	10.672	10.879	20.353
+interactive discover 5.0	timeout 2000 void simple	128	8.423	13.146	14.594	39.844
+interactive discover 5.0	timeout 2000 void	128	8.284	11.531	11.497	17.806
+interactive discover 5.0	timeout 2000	128	8.183	12.179	15.125	26.367
+interactive discover 5.0	timeout 5000 void simple	128	8.938	11.071	11.163	24.247
+interactive discover 5.0	timeout 5000 void	128	8.309	13.775	11.527	56.758
+interactive discover 5.0	timeout 5000	128	7.756	16.17	11.139	91.232
+interactive discover 5.0	timeout 10000 void simple	128	8.383	11.531	11.393	31.304
+interactive discover 5.0	timeout 10000 void	128	7.835	10.999	11.679	24.539
+interactive discover 5.0	timeout 10000	128	7.502	14.055	10.987	64.862
+interactive discover 5.0	timeout 20000 void simple	128	8.719	11.171	11.73	21.515
+interactive discover 5.0	timeout 20000 void	128	8.572	13.335	11.001	48.276
+interactive discover 5.0	timeout 20000	128	8.523	10.873	10.641	24.069
+interactive discover 5.1	baseline	20	7.376	7.764	7.259	4.621
+interactive discover 5.1	cardinality once void simple	20	7.066	7.176	7.664	3.808
+interactive discover 5.1	cardinality once void	20	6.971	7.375	8.23	4.495
+interactive discover 5.1	cardinality once	20	6.991	7.21	8.346	4.04
+interactive discover 5.1	cardinality unlimited void simple	20	6.891	7.296	7.989	4.458
+interactive discover 5.1	cardinality unlimited void	20	6.95	7.953	8.279	5.805
+interactive discover 5.1	cardinality unlimited	20	6.767	7.638	7.471	5.23
+interactive discover 5.1	overhead simple	20	6.987	7.263	7.898	4.154
+interactive discover 5.1	overhead	20	7.022	7.562	7.108	4.815
+interactive discover 5.1	timeout 100 void simple	20	7.063	7.283	7.545	4.081
+interactive discover 5.1	timeout 100 void	20	6.797	7.86	8.291	5.819
+interactive discover 5.1	timeout 100	20	7.181	7.8	7.116	5.017
+interactive discover 5.1	timeout 1000 void simple	20	6.972	7.213	7.465	4.054
+interactive discover 5.1	timeout 1000 void	20	7.353	7.752	7.702	4.642
+interactive discover 5.1	timeout 1000	20	7.22	7.473	8.079	4.203
+interactive discover 5.1	timeout 2000 void simple	20	7.404	7.75	7.988	4.539
+interactive discover 5.1	timeout 2000 void	20	7.364	8.078	6.893	5.438
+interactive discover 5.1	timeout 2000	20	7.058	7.757	7.194	5.229
+interactive discover 5.1	timeout 5000 void simple	20	7.169	7.83	7.928	5.202
+interactive discover 5.1	timeout 5000 void	20	7.063	7.779	7.731	5.287
+interactive discover 5.1	timeout 5000	20	7.043	7.838	7.02	5.478
+interactive discover 5.1	timeout 10000 void simple	20	7.1	7.867	8.103	5.421
+interactive discover 5.1	timeout 10000 void	20	7.037	7.895	7.882	5.62
+interactive discover 5.1	timeout 10000	20	7.01	7.375	7.869	4.378
+interactive discover 5.1	timeout 20000 void simple	20	7.151	7.562	7.957	4.556
+interactive discover 5.1	timeout 20000 void	20	6.822	7.496	7.005	5.065
+interactive discover 5.1	timeout 20000	20	7.189	7.77	8.074	5.011
+interactive discover 5.2	baseline	17	6.668	6.824	6.874	3.665
+interactive discover 5.2	cardinality once void simple	17	6.913	7.233	7.266	3.937
+interactive discover 5.2	cardinality once void	17	7.106	7.237	7.146	3.751
+interactive discover 5.2	cardinality once	17	6.94	7.097	6.93	3.707
+interactive discover 5.2	cardinality unlimited void simple	17	6.839	7.128	7.202	3.854
+interactive discover 5.2	cardinality unlimited void	17	7.079	7.139	7.291	3.632
+interactive discover 5.2	cardinality unlimited	17	6.897	7.303	7.701	4.213
+interactive discover 5.2	overhead simple	17	7.095	7.233	7.352	3.838
+interactive discover 5.2	overhead	17	6.964	7.133	6.894	3.86
+interactive discover 5.2	timeout 100 void simple	17	6.801	7.137	6.964	3.905
+interactive discover 5.2	timeout 100 void	17	7.356	7.358	7.433	3.682
+interactive discover 5.2	timeout 100	17	6.824	7.012	6.9	3.712
+interactive discover 5.2	timeout 1000 void simple	17	7.149	7.291	7.179	3.866
+interactive discover 5.2	timeout 1000 void	17	7.049	7.18	7.234	3.789
+interactive discover 5.2	timeout 1000	17	6.917	7.056	7.145	3.743
+interactive discover 5.2	timeout 2000 void simple	17	7.023	7.173	7.205	3.81
+interactive discover 5.2	timeout 2000 void	17	6.843	6.996	7.526	3.727
+interactive discover 5.2	timeout 2000	17	6.801	7.024	8.168	3.91
+interactive discover 5.2	timeout 5000 void simple	17	6.915	7.057	6.794	3.75
+interactive discover 5.2	timeout 5000 void	17	6.945	7.124	7.17	3.852
+interactive discover 5.2	timeout 5000	17	7.254	7.427	7.228	3.965
+interactive discover 5.2	timeout 10000 void simple	17	6.731	6.858	7.046	3.632
+interactive discover 5.2	timeout 10000 void	17	7.219	7.351	7.384	3.881
+interactive discover 5.2	timeout 10000	17	6.93	7.059	7.074	3.733
+interactive discover 5.2	timeout 20000 void simple	17	6.968	7.131	6.828	3.841
+interactive discover 5.2	timeout 20000 void	17	6.753	6.947	6.786	3.786
+interactive discover 5.2	timeout 20000	17	7.28	7.455	7.248	4.024
+interactive discover 5.3	baseline	224	7.723	11.224	11.478	12.838
+interactive discover 5.3	cardinality once void simple	224	7.838	11.349	12.498	12.409
+interactive discover 5.3	cardinality once void	224	9.057	11.245	11.946	10.685
+interactive discover 5.3	cardinality once	224	7.871	10.933	11.11	11.679
+interactive discover 5.3	cardinality unlimited void simple	224	8.842	11.22	11.66	10.879
+interactive discover 5.3	cardinality unlimited void	224	7.888	11.107	10.953	12.421
+interactive discover 5.3	cardinality unlimited	224	6.95	10.843	15.263	12.302
+interactive discover 5.3	overhead simple	224	7.715	11.441	11.262	13.213
+interactive discover 5.3	overhead	224	7.879	12.332	11.735	16.724
+interactive discover 5.3	timeout 100 void simple	224	7.899	11.156	11.789	12.515
+interactive discover 5.3	timeout 100 void	224	8.08	10.885	11.364	11.534
+interactive discover 5.3	timeout 100	224	8.376	11.621	11.118	13.3
+interactive discover 5.3	timeout 1000 void simple	224	7.849	11.771	12.116	13.461
+interactive discover 5.3	timeout 1000 void	224	7.5	11.067	11.473	13.284
+interactive discover 5.3	timeout 1000	224	7.526	11.398	14.482	14.176
+interactive discover 5.3	timeout 2000 void simple	224	7.913	11.996	11.415	16.107
+interactive discover 5.3	timeout 2000 void	224	8.301	12.324	19.617	15.894
+interactive discover 5.3	timeout 2000	224	7.813	11.355	11.144	13.922
+interactive discover 5.3	timeout 5000 void simple	224	8.082	11.215	11.317	12.073
+interactive discover 5.3	timeout 5000 void	224	7.893	11.467	11.476	13.541
+interactive discover 5.3	timeout 5000	224	8.1	11.21	11.368	12.123
+interactive discover 5.3	timeout 10000 void simple	224	8.334	11.506	11.548	12.719
+interactive discover 5.3	timeout 10000 void	224	8.348	11.566	11.462	12.992
+interactive discover 5.3	timeout 10000	224	7.732	11.593	11.795	14.155
+interactive discover 5.3	timeout 20000 void simple	224	7.684	11.352	11.728	12.895
+interactive discover 5.3	timeout 20000 void	224	8.607	11.588	11.642	12.536
+interactive discover 5.3	timeout 20000	224	7.671	11.451	10.987	13.484
+interactive discover 5.4	baseline	123	7.619	10.942	10.513	30.065
+interactive discover 5.4	cardinality once void simple	123	7.736	11.08	11.187	36.056
+interactive discover 5.4	cardinality once void	123	7.331	12.806	10.487	73.738
+interactive discover 5.4	cardinality once	123	7.502	10.574	10.658	27.952
+interactive discover 5.4	cardinality unlimited void simple	123	8.062	10.794	10.571	27.92
+interactive discover 5.4	cardinality unlimited void	123	7.541	14.643	10.955	101.209
+interactive discover 5.4	cardinality unlimited	123	7.462	13.872	15.688	74.35
+interactive discover 5.4	overhead simple	123	8.068	12.046	21.497	52.237
+interactive discover 5.4	overhead	123	8.394	10.983	11.12	27.803
+interactive discover 5.4	timeout 100 void simple	123	8.05	11.527	11.971	39.817
+interactive discover 5.4	timeout 100 void	123	8.184	11.131	10.664	29.551
+interactive discover 5.4	timeout 100	123	7.778	10.724	11.133	29.962
+interactive discover 5.4	timeout 1000 void simple	123	7.533	10.866	10.937	26.328
+interactive discover 5.4	timeout 1000 void	123	7.284	10.743	10.779	27.846
+interactive discover 5.4	timeout 1000	123	7.563	10.966	11.433	25.549
+interactive discover 5.4	timeout 2000 void simple	123	7.95	11.248	11.711	28.863
+interactive discover 5.4	timeout 2000 void	123	7.439	11.679	11.353	33.155
+interactive discover 5.4	timeout 2000	123	7.46	12.578	14.866	56.214
+interactive discover 5.4	timeout 5000 void simple	123	7.423	10.894	10.937	31.825
+interactive discover 5.4	timeout 5000 void	123	7.559	10.955	10.527	31.366
+interactive discover 5.4	timeout 5000	123	7.926	11.074	10.709	33.043
+interactive discover 5.4	timeout 10000 void simple	123	7.284	10.998	10.813	30.442
+interactive discover 5.4	timeout 10000 void	123	7.608	11.109	10.97	30.23
+interactive discover 5.4	timeout 10000	123	7.151	10.939	10.776	30.926
+interactive discover 5.4	timeout 20000 void simple	123	8.153	13.946	10.879	80.856
+interactive discover 5.4	timeout 20000 void	123	8.091	11.427	11.621	33.353
+interactive discover 5.4	timeout 20000	123	7.232	11.734	12.585	49.677
+interactive discover 6.0	baseline	0			0	
+interactive discover 6.0	cardinality once void simple	0			0	
+interactive discover 6.0	cardinality once void	0			0	
+interactive discover 6.0	cardinality once	0			0	
+interactive discover 6.0	cardinality unlimited void simple	0			0	
+interactive discover 6.0	cardinality unlimited void	0			0	
+interactive discover 6.0	cardinality unlimited	0			0	
+interactive discover 6.0	overhead simple	0			0	
+interactive discover 6.0	overhead	0			0	
+interactive discover 6.0	timeout 100 void simple	0			0	
+interactive discover 6.0	timeout 100 void	0			0	
+interactive discover 6.0	timeout 100	0			0	
+interactive discover 6.0	timeout 1000 void simple	0			0	
+interactive discover 6.0	timeout 1000 void	0			0	
+interactive discover 6.0	timeout 1000	0			0	
+interactive discover 6.0	timeout 2000 void simple	0			0	
+interactive discover 6.0	timeout 2000 void	0			0	
+interactive discover 6.0	timeout 2000	0			0	
+interactive discover 6.0	timeout 5000 void simple	0			0	
+interactive discover 6.0	timeout 5000 void	0			0	
+interactive discover 6.0	timeout 5000	0			0	
+interactive discover 6.0	timeout 10000 void simple	0			0	
+interactive discover 6.0	timeout 10000 void	0			0	
+interactive discover 6.0	timeout 10000	0			0	
+interactive discover 6.0	timeout 20000 void simple	0			0	
+interactive discover 6.0	timeout 20000 void	0			0	
+interactive discover 6.0	timeout 20000	0			0	
+interactive discover 6.1	baseline	20	7.588	7.588	7.718	3.794
+interactive discover 6.1	cardinality once void simple	20	7.22	7.22	7.953	3.61
+interactive discover 6.1	cardinality once void	20	7.859	7.859	6.758	3.929
+interactive discover 6.1	cardinality once	20	8.355	8.355	7.738	4.178
+interactive discover 6.1	cardinality unlimited void simple	20	7.57	7.57	7.973	3.785
+interactive discover 6.1	cardinality unlimited void	20	7.814	7.814	7.848	3.907
+interactive discover 6.1	cardinality unlimited	20	7.798	7.798	7.636	3.899
+interactive discover 6.1	overhead simple	20	7.578	7.578	7.713	3.789
+interactive discover 6.1	overhead	20	7.899	7.899	7.748	3.95
+interactive discover 6.1	timeout 100 void simple	20	8.004	8.004	8.153	4.002
+interactive discover 6.1	timeout 100 void	20	7.879	7.879	7.893	3.939
+interactive discover 6.1	timeout 100	20	7.188	7.188	7.992	3.594
+interactive discover 6.1	timeout 1000 void simple	20	7.835	7.835	7.982	3.917
+interactive discover 6.1	timeout 1000 void	20	7.804	7.804	8.193	3.902
+interactive discover 6.1	timeout 1000	20	7.902	7.902	7.544	3.951
+interactive discover 6.1	timeout 2000 void simple	20	8.049	8.049	7.206	4.024
+interactive discover 6.1	timeout 2000 void	20	7.741	7.741	7.766	3.87
+interactive discover 6.1	timeout 2000	20	7.492	7.492	7.88	3.746
+interactive discover 6.1	timeout 5000 void simple	20	7.6	7.6	7.673	3.8
+interactive discover 6.1	timeout 5000 void	20	7.927	7.927	8.322	3.963
+interactive discover 6.1	timeout 5000	20	7.81	7.81	8.338	3.905
+interactive discover 6.1	timeout 10000 void simple	20	8.161	8.161	8.215	4.08
+interactive discover 6.1	timeout 10000 void	20	8.11	8.11	8.23	4.055
+interactive discover 6.1	timeout 10000	20	7.27	7.27	7.628	3.635
+interactive discover 6.1	timeout 20000 void simple	20	7.961	7.961	7.719	3.981
+interactive discover 6.1	timeout 20000 void	20	7.658	7.658	7.661	3.829
+interactive discover 6.1	timeout 20000	20	7.825	7.825	7.574	3.913
+interactive discover 6.2	baseline	17	7.253	7.253	6.972	3.627
+interactive discover 6.2	cardinality once void simple	17	7.043	7.043	6.343	3.522
+interactive discover 6.2	cardinality once void	17	7.097	7.097	7.109	3.549
+interactive discover 6.2	cardinality once	17	7.225	7.225	7.305	3.612
+interactive discover 6.2	cardinality unlimited void simple	17	6.981	6.981	6.854	3.49
+interactive discover 6.2	cardinality unlimited void	17	6.942	6.942	6.936	3.471
+interactive discover 6.2	cardinality unlimited	17	6.81	6.81	7.056	3.405
+interactive discover 6.2	overhead simple	17	7.079	7.079	6.866	3.539
+interactive discover 6.2	overhead	17	7.438	7.438	7.837	3.719
+interactive discover 6.2	timeout 100 void simple	17	7.027	7.027	6.924	3.514
+interactive discover 6.2	timeout 100 void	17	7.072	7.072	7.171	3.536
+interactive discover 6.2	timeout 100	17	7.127	7.127	7.337	3.563
+interactive discover 6.2	timeout 1000 void simple	17	7.476	7.476	7.544	3.738
+interactive discover 6.2	timeout 1000 void	17	7.643	7.643	7.189	3.821
+interactive discover 6.2	timeout 1000	17	7.189	7.189	6.811	3.595
+interactive discover 6.2	timeout 2000 void simple	17	7.14	7.14	6.979	3.57
+interactive discover 6.2	timeout 2000 void	17	7.298	7.298	7.462	3.649
+interactive discover 6.2	timeout 2000	17	7.381	7.381	7.919	3.691
+interactive discover 6.2	timeout 5000 void simple	17	7.434	7.434	7.069	3.717
+interactive discover 6.2	timeout 5000 void	17	7.448	7.448	7.486	3.724
+interactive discover 6.2	timeout 5000	17	7.295	7.295	6.972	3.647
+interactive discover 6.2	timeout 10000 void simple	17	7.451	7.451	7.701	3.725
+interactive discover 6.2	timeout 10000 void	17	7.267	7.267	7.142	3.634
+interactive discover 6.2	timeout 10000	17	7.163	7.163	7.266	3.582
+interactive discover 6.2	timeout 20000 void simple	17	7.461	7.461	6.938	3.731
+interactive discover 6.2	timeout 20000 void	17	7.18	7.18	7.643	3.59
+interactive discover 6.2	timeout 20000	17	7.189	7.189	6.999	3.595
+interactive discover 6.3	baseline	0			0	
+interactive discover 6.3	cardinality once void simple	0			0	
+interactive discover 6.3	cardinality once void	0			0	
+interactive discover 6.3	cardinality once	0			0	
+interactive discover 6.3	cardinality unlimited void simple	0			0	
+interactive discover 6.3	cardinality unlimited void	0			0	
+interactive discover 6.3	cardinality unlimited	0			0	
+interactive discover 6.3	overhead simple	0			0	
+interactive discover 6.3	overhead	0			0	
+interactive discover 6.3	timeout 100 void simple	2360	19.886	60.152	60.138	70.342
+interactive discover 6.3	timeout 100 void	0			0	
+interactive discover 6.3	timeout 100	0			0	
+interactive discover 6.3	timeout 1000 void simple	0			0	
+interactive discover 6.3	timeout 1000 void	0			0	
+interactive discover 6.3	timeout 1000	0			0	
+interactive discover 6.3	timeout 2000 void simple	0			0	
+interactive discover 6.3	timeout 2000 void	0			0	
+interactive discover 6.3	timeout 2000	0			0	
+interactive discover 6.3	timeout 5000 void simple	0			0	
+interactive discover 6.3	timeout 5000 void	0			0	
+interactive discover 6.3	timeout 5000	0			0	
+interactive discover 6.3	timeout 10000 void simple	0			0	
+interactive discover 6.3	timeout 10000 void	0			0	
+interactive discover 6.3	timeout 10000	0			0	
+interactive discover 6.3	timeout 20000 void simple	0			0	
+interactive discover 6.3	timeout 20000 void	0			0	
+interactive discover 6.3	timeout 20000	0			0	
+interactive discover 6.4	baseline	123	10.468	19.784	24.318	129.251
+interactive discover 6.4	cardinality once void simple	123	9.713	16.315	16.186	76.504
+interactive discover 6.4	cardinality once void	123	9.359	15.924	15.802	78.577
+interactive discover 6.4	cardinality once	123	11.026	16.547	15.674	76.759
+interactive discover 6.4	cardinality unlimited void simple	123	12.87	14.445	14.789	26.702
+interactive discover 6.4	cardinality unlimited void	123	17.214	17.91	13.959	17.974
+interactive discover 6.4	cardinality unlimited	123	10.53	14.014	13.585	29.849
+interactive discover 6.4	overhead simple	123	10.376	20.116	19.937	139.841
+interactive discover 6.4	overhead	123	10.371	19.308	18.871	117.54
+interactive discover 6.4	timeout 100 void simple	123	10.978	17.721	15.922	90.154
+interactive discover 6.4	timeout 100 void	123	8.982	15.221	14.832	73.905
+interactive discover 6.4	timeout 100	123	10.625	20.713	20.412	132.706
+interactive discover 6.4	timeout 1000 void simple	123	19.943	20.492	19.423	17.797
+interactive discover 6.4	timeout 1000 void	123	16.676	19.183	16.415	35.679
+interactive discover 6.4	timeout 1000	123	20.112	20.318	22.936	11.741
+interactive discover 6.4	timeout 2000 void simple	123	20.177	20.537	21.231	12.09
+interactive discover 6.4	timeout 2000 void	123	20.062	20.347	20.615	11.827
+interactive discover 6.4	timeout 2000	123	19.745	20.056	19.956	12.04
+interactive discover 6.4	timeout 5000 void simple	123	10.688	22.705	23.626	80.722
+interactive discover 6.4	timeout 5000 void	123	11.935	23.107	24.359	83.713
+interactive discover 6.4	timeout 5000	123	16.065	22.339	22.605	51.264
+interactive discover 6.4	timeout 10000 void simple	123	19.281	28.569	28.789	118.888
+interactive discover 6.4	timeout 10000 void	123	10.631	28.577	28.341	221.238
+interactive discover 6.4	timeout 10000	123	10.468	28.676	30.302	246.489
+interactive discover 6.4	timeout 20000 void simple	123	11.386	21.269	20.697	128.846
+interactive discover 6.4	timeout 20000 void	123	10.808	22.494	20.829	147.182
+interactive discover 6.4	timeout 20000	123	11.72	21.283	20.141	130.437
+interactive discover 7.0	baseline	0			0	
+interactive discover 7.0	cardinality once void simple	0			0	
+interactive discover 7.0	cardinality once void	0			0	
+interactive discover 7.0	cardinality once	0			0	
+interactive discover 7.0	cardinality unlimited void simple	0			0	
+interactive discover 7.0	cardinality unlimited void	0			0	
+interactive discover 7.0	cardinality unlimited	0			0	
+interactive discover 7.0	overhead simple	0			0	
+interactive discover 7.0	overhead	0			0	
+interactive discover 7.0	timeout 100 void simple	0			0	
+interactive discover 7.0	timeout 100 void	0			0	
+interactive discover 7.0	timeout 100	0			0	
+interactive discover 7.0	timeout 1000 void simple	0			0	
+interactive discover 7.0	timeout 1000 void	0			0	
+interactive discover 7.0	timeout 1000	0			0	
+interactive discover 7.0	timeout 2000 void simple	0			0	
+interactive discover 7.0	timeout 2000 void	0			0	
+interactive discover 7.0	timeout 2000	0			0	
+interactive discover 7.0	timeout 5000 void simple	0			0	
+interactive discover 7.0	timeout 5000 void	0			0	
+interactive discover 7.0	timeout 5000	0			0	
+interactive discover 7.0	timeout 10000 void simple	1086	16.746	16.746	60.151	8.373
+interactive discover 7.0	timeout 10000 void	1163	16.416	16.416	60.178	8.208
+interactive discover 7.0	timeout 10000	1215	16.595	16.595	60.133	8.297
+interactive discover 7.0	timeout 20000 void simple	0			0	
+interactive discover 7.0	timeout 20000 void	0			0	
+interactive discover 7.0	timeout 20000	1199	26.763	26.763	60.138	13.382
+interactive discover 7.1	baseline	20	7.795	7.795	7.653	3.897
+interactive discover 7.1	cardinality once void simple	20	7.938	7.938	7.947	3.969
+interactive discover 7.1	cardinality once void	20	7.395	7.395	7.723	3.697
+interactive discover 7.1	cardinality once	20	7.072	7.072	6.744	3.536
+interactive discover 7.1	cardinality unlimited void simple	20	6.947	6.947	7.939	3.474
+interactive discover 7.1	cardinality unlimited void	20	7.709	7.709	6.585	3.854
+interactive discover 7.1	cardinality unlimited	20	7.846	7.846	7.31	3.923
+interactive discover 7.1	overhead simple	20	7.954	7.954	7.58	3.977
+interactive discover 7.1	overhead	20	8.025	8.025	7.937	4.013
+interactive discover 7.1	timeout 100 void simple	20	7.706	7.706	7.513	3.853
+interactive discover 7.1	timeout 100 void	20	8.099	8.099	7.221	4.05
+interactive discover 7.1	timeout 100	20	8.187	8.187	8.041	4.093
+interactive discover 7.1	timeout 1000 void simple	20	7.8	7.8	7.417	3.9
+interactive discover 7.1	timeout 1000 void	20	8.183	8.183	7.785	4.091
+interactive discover 7.1	timeout 1000	20	7.762	7.762	7.949	3.881
+interactive discover 7.1	timeout 2000 void simple	20	7.824	7.824	7.582	3.912
+interactive discover 7.1	timeout 2000 void	20	8.01	8.01	8.002	4.005
+interactive discover 7.1	timeout 2000	20	7.904	7.904	8.109	3.952
+interactive discover 7.1	timeout 5000 void simple	20	8.046	8.046	8.136	4.023
+interactive discover 7.1	timeout 5000 void	20	8.252	8.252	7.932	4.126
+interactive discover 7.1	timeout 5000	20	8.06	8.06	8.388	4.03
+interactive discover 7.1	timeout 10000 void simple	20	7.911	7.911	7.527	3.955
+interactive discover 7.1	timeout 10000 void	20	8.045	8.045	8.247	4.022
+interactive discover 7.1	timeout 10000	20	7.76	7.76	7.45	3.88
+interactive discover 7.1	timeout 20000 void simple	20	7.978	7.978	7.997	3.989
+interactive discover 7.1	timeout 20000 void	20	8.34	8.34	8.393	4.17
+interactive discover 7.1	timeout 20000	20	7.98	7.98	7.746	3.99
+interactive short 2.2	baseline	0			0	
+interactive short 2.2	cardinality once void simple	0			0	
+interactive short 2.2	cardinality once void	0			0	
+interactive short 2.2	cardinality once	0			0	
+interactive short 2.2	cardinality unlimited void simple	0			0	
+interactive short 2.2	cardinality unlimited void	0			0	
+interactive short 2.2	cardinality unlimited	0			0	
+interactive short 2.2	overhead simple	0			0	
+interactive short 2.2	overhead	0			0	
+interactive short 2.2	timeout 100 void simple	0			0	
+interactive short 2.2	timeout 100 void	0			0	
+interactive short 2.2	timeout 100	0			0	
+interactive short 2.2	timeout 1000 void simple	0			0	
+interactive short 2.2	timeout 1000 void	0			0	
+interactive short 2.2	timeout 1000	0			0	
+interactive short 2.2	timeout 2000 void simple	0			0	
+interactive short 2.2	timeout 2000 void	0			0	
+interactive short 2.2	timeout 2000	0			0	
+interactive short 2.2	timeout 5000 void simple	0			0	
+interactive short 2.2	timeout 5000 void	0			0	
+interactive short 2.2	timeout 5000	0			0	
+interactive short 2.2	timeout 10000 void simple	0			0	
+interactive short 2.2	timeout 10000 void	0			0	
+interactive short 2.2	timeout 10000	0			0	
+interactive short 2.2	timeout 20000 void simple	0			0	
+interactive short 2.2	timeout 20000 void	0			0	
+interactive short 2.2	timeout 20000	0			0	
+interactive short 4.2	baseline	2	6.72	6.72	6.16	3.36
+interactive short 4.2	cardinality once void simple	2	6.511	6.511	6.282	3.256
+interactive short 4.2	cardinality once void	2	6.32	6.32	6.416	3.16
+interactive short 4.2	cardinality once	2	6.197	6.197	6.3	3.099
+interactive short 4.2	cardinality unlimited void simple	2	6.331	6.331	6.388	3.166
+interactive short 4.2	cardinality unlimited void	2	6.414	6.414	6.314	3.207
+interactive short 4.2	cardinality unlimited	2	6.469	6.469	6.962	3.235
+interactive short 4.2	overhead simple	2	6.714	6.714	6.629	3.357
+interactive short 4.2	overhead	2	6.616	6.616	6.39	3.308
+interactive short 4.2	timeout 100 void simple	2	6.581	6.581	6.601	3.291
+interactive short 4.2	timeout 100 void	2	7.125	7.125	6.963	3.562
+interactive short 4.2	timeout 100	2	6.499	6.499	6.071	3.249
+interactive short 4.2	timeout 1000 void simple	2	6.863	6.863	6.648	3.432
+interactive short 4.2	timeout 1000 void	2	6.627	6.627	6.605	3.313
+interactive short 4.2	timeout 1000	2	6.497	6.497	7.205	3.248
+interactive short 4.2	timeout 2000 void simple	2	6.482	6.482	6.431	3.241
+interactive short 4.2	timeout 2000 void	2	6.603	6.603	6.445	3.301
+interactive short 4.2	timeout 2000	2	6.432	6.432	6.383	3.216
+interactive short 4.2	timeout 5000 void simple	2	6.653	6.653	6.572	3.326
+interactive short 4.2	timeout 5000 void	2	6.682	6.682	6.665	3.341
+interactive short 4.2	timeout 5000	2	6.6	6.6	6.602	3.3
+interactive short 4.2	timeout 10000 void simple	2	6.31	6.31	6.241	3.155
+interactive short 4.2	timeout 10000 void	2	6.619	6.619	6.158	3.309
+interactive short 4.2	timeout 10000	2	6.722	6.722	6.76	3.361
+interactive short 4.2	timeout 20000 void simple	2	6.602	6.602	6.872	3.301
+interactive short 4.2	timeout 20000 void	2	6.719	6.719	6.394	3.36
+interactive short 4.2	timeout 20000	2	6.49	6.49	6.585	3.245
+interactive discover 7.2	baseline	17	7.276	7.276	7.375	3.638
+interactive discover 7.2	cardinality once void simple	17	6.87	6.87	7.273	3.435
+interactive discover 7.2	cardinality once void	17	6.93	6.93	6.638	3.465
+interactive discover 7.2	cardinality once	17	7.013	7.013	7.004	3.506
+interactive discover 7.2	cardinality unlimited void simple	17	7.071	7.071	7.465	3.535
+interactive discover 7.2	cardinality unlimited void	17	7.039	7.039	6.689	3.519
+interactive discover 7.2	cardinality unlimited	17	7.292	7.292	6.829	3.646
+interactive discover 7.2	overhead simple	17	7.315	7.315	7.085	3.658
+interactive discover 7.2	overhead	17	7.579	7.579	7.128	3.789
+interactive discover 7.2	timeout 100 void simple	17	7.222	7.222	7.186	3.611
+interactive discover 7.2	timeout 100 void	17	7.023	7.023	7.839	3.511
+interactive discover 7.2	timeout 100	17	6.869	6.869	6.54	3.434
+interactive discover 7.2	timeout 1000 void simple	17	7.207	7.207	7.339	3.603
+interactive discover 7.2	timeout 1000 void	17	7.31	7.31	7.519	3.655
+interactive discover 7.2	timeout 1000	17	7.324	7.324	7.758	3.662
+interactive discover 7.2	timeout 2000 void simple	17	7.302	7.302	7.734	3.651
+interactive discover 7.2	timeout 2000 void	17	7.505	7.505	7.197	3.752
+interactive discover 7.2	timeout 2000	17	7.302	7.302	7.271	3.651
+interactive discover 7.2	timeout 5000 void simple	17	7.358	7.358	7.316	3.679
+interactive discover 7.2	timeout 5000 void	17	7.197	7.197	7.687	3.599
+interactive discover 7.2	timeout 5000	17	7.262	7.262	7.49	3.631
+interactive discover 7.2	timeout 10000 void simple	17	7.109	7.109	7.171	3.554
+interactive discover 7.2	timeout 10000 void	17	7.329	7.329	7.443	3.664
+interactive discover 7.2	timeout 10000	17	7.174	7.174	7.247	3.587
+interactive discover 7.2	timeout 20000 void simple	17	7.147	7.147	6.976	3.574
+interactive discover 7.2	timeout 20000 void	17	7.232	7.232	7.007	3.616
+interactive discover 7.2	timeout 20000	17	7.244	7.244	7.078	3.622
+interactive discover 7.3	baseline	0			0	
+interactive discover 7.3	cardinality once void simple	0			0	
+interactive discover 7.3	cardinality once void	0			0	
+interactive discover 7.3	cardinality once	0			0	
+interactive discover 7.3	cardinality unlimited void simple	0			0	
+interactive discover 7.3	cardinality unlimited void	0			0	
+interactive discover 7.3	cardinality unlimited	1078	35.644	35.644	60.148	17.822
+interactive discover 7.3	overhead simple	0			0	
+interactive discover 7.3	overhead	0			0	
+interactive discover 7.3	timeout 100 void simple	0			0	
+interactive discover 7.3	timeout 100 void	0			0	
+interactive discover 7.3	timeout 100	0			0	
+interactive discover 7.3	timeout 1000 void simple	0			0	
+interactive discover 7.3	timeout 1000 void	0			0	
+interactive discover 7.3	timeout 1000	0			0	
+interactive discover 7.3	timeout 2000 void simple	0			0	
+interactive discover 7.3	timeout 2000 void	0			0	
+interactive discover 7.3	timeout 2000	0			0	
+interactive discover 7.3	timeout 5000 void simple	0			0	
+interactive discover 7.3	timeout 5000 void	0			0	
+interactive discover 7.3	timeout 5000	0			0	
+interactive discover 7.3	timeout 10000 void simple	0			0	
+interactive discover 7.3	timeout 10000 void	0			0	
+interactive discover 7.3	timeout 10000	0			0	
+interactive discover 7.3	timeout 20000 void simple	0			0	
+interactive discover 7.3	timeout 20000 void	1481	26.757	26.757	60.144	13.379
+interactive discover 7.3	timeout 20000	1645	26.726	26.726	60.139	13.363
+interactive discover 7.4	baseline	123	25.481	25.481	25.594	12.741
+interactive discover 7.4	cardinality once void simple	123	21.595	21.595	22.116	10.797
+interactive discover 7.4	cardinality once void	123	21.5	21.5	21.548	10.75
+interactive discover 7.4	cardinality once	123	21.15	21.15	21.6	10.575
+interactive discover 7.4	cardinality unlimited void simple	123	14.314	14.314	13.473	7.157
+interactive discover 7.4	cardinality unlimited void	123	14.327	14.327	13.615	7.163
+interactive discover 7.4	cardinality unlimited	123	13.581	13.581	13.776	6.79
+interactive discover 7.4	overhead simple	123	26.419	26.419	25.652	13.21
+interactive discover 7.4	overhead	123	25.876	25.876	26.41	12.938
+interactive discover 7.4	timeout 100 void simple	123	22.692	22.692	26.506	11.346
+interactive discover 7.4	timeout 100 void	123	21.722	21.722	21.691	10.861
+interactive discover 7.4	timeout 100	123	26.327	26.327	27.085	13.164
+interactive discover 7.4	timeout 1000 void simple	123	17.364	17.364	13.58	8.682
+interactive discover 7.4	timeout 1000 void	123	14.475	14.475	16.833	7.237
+interactive discover 7.4	timeout 1000	123	37.617	37.617	15.508	18.808
+interactive discover 7.4	timeout 2000 void simple	123	15.099	15.099	15.483	7.55
+interactive discover 7.4	timeout 2000 void	123	17.143	17.143	21.935	8.572
+interactive discover 7.4	timeout 2000	123	18.241	18.241	15.552	9.12
+interactive discover 7.4	timeout 5000 void simple	123	13.079	13.079	17.077	6.54
+interactive discover 7.4	timeout 5000 void	123	11.545	11.545	17.319	5.772
+interactive discover 7.4	timeout 5000	123	12.327	12.327	16.688	6.163
+interactive discover 7.4	timeout 10000 void simple	123	16.527	16.527	22.719	8.264
+interactive discover 7.4	timeout 10000 void	123	16.785	16.785	22.072	8.393
+interactive discover 7.4	timeout 10000	123	16.539	16.539	21.854	8.27
+interactive discover 7.4	timeout 20000 void simple	123	25.727	25.727	32.144	12.864
+interactive discover 7.4	timeout 20000 void	123	26.336	26.336	32.029	13.168
+interactive discover 7.4	timeout 20000	123	25.07	25.07	25.602	12.535
+interactive discover 8.0	baseline	961	11.601	29.799	49.235	96.644
+interactive discover 8.0	cardinality once void simple	437	22.783	49.235	49.39	187.639
+interactive discover 8.0	cardinality once void	547	15.739	28.292	30.522	85.207
+interactive discover 8.0	cardinality once	384	14.349	19.326	20.728	33.024
+interactive discover 8.0	cardinality unlimited void simple	423	26.296	56.881	57.207	204.394
+interactive discover 8.0	cardinality unlimited void	515	15.378	27.091	29.535	81.742
+interactive discover 8.0	cardinality unlimited	550	15.102	20.506	22.414	38.514
+interactive discover 8.0	overhead simple	0			0	
+interactive discover 8.0	overhead	575	15.617	30.534	31.482	64.372
+interactive discover 8.0	timeout 100 void simple	0			0	
+interactive discover 8.0	timeout 100 void	0			0	
+interactive discover 8.0	timeout 100	1022	13.167	44.755	48.16	158.954
+interactive discover 8.0	timeout 1000 void simple	0			0	
+interactive discover 8.0	timeout 1000 void	696	20.063	30.928	31.595	79.622
+interactive discover 8.0	timeout 1000	652	20.084	26.341	26.174	46.454
+interactive discover 8.0	timeout 2000 void simple	0			0	
+interactive discover 8.0	timeout 2000 void	736	22.66	35.486	34.989	93.973
+interactive discover 8.0	timeout 2000	898	23.825	29.912	30.542	46.432
+interactive discover 8.0	timeout 5000 void simple	0			0	
+interactive discover 8.0	timeout 5000 void	921	20.605	42.455	42.045	108.015
+interactive discover 8.0	timeout 5000	867	15.89	33.167	33.129	65.757
+interactive discover 8.0	timeout 10000 void simple	0			0	
+interactive discover 8.0	timeout 10000 void	1187	14.693	48.463	48.911	151.602
+interactive discover 8.0	timeout 10000	870	13.43	34.876	35.751	123.728
+interactive discover 8.0	timeout 20000 void simple	0			0	
+interactive discover 8.0	timeout 20000 void	1080	14.232	53.194	53.898	167.647
+interactive discover 8.0	timeout 20000	407	12.901	23.888	21.817	58.926
+interactive short 2.1	baseline	0			0	
+interactive short 2.1	cardinality once void simple	0			0	
+interactive short 2.1	cardinality once void	0			0	
+interactive short 2.1	cardinality once	0			0	
+interactive short 2.1	cardinality unlimited void simple	0			0	
+interactive short 2.1	cardinality unlimited void	0			0	
+interactive short 2.1	cardinality unlimited	0			0	
+interactive short 2.1	overhead simple	0			0	
+interactive short 2.1	overhead	0			0	
+interactive short 2.1	timeout 100 void simple	0			0	
+interactive short 2.1	timeout 100 void	0			0	
+interactive short 2.1	timeout 100	0			0	
+interactive short 2.1	timeout 1000 void simple	0			0	
+interactive short 2.1	timeout 1000 void	0			0	
+interactive short 2.1	timeout 1000	0			0	
+interactive short 2.1	timeout 2000 void simple	0			0	
+interactive short 2.1	timeout 2000 void	0			0	
+interactive short 2.1	timeout 2000	0			0	
+interactive short 2.1	timeout 5000 void simple	0			0	
+interactive short 2.1	timeout 5000 void	0			0	
+interactive short 2.1	timeout 5000	0			0	
+interactive short 2.1	timeout 10000 void simple	0			0	
+interactive short 2.1	timeout 10000 void	0			0	
+interactive short 2.1	timeout 10000	0			0	
+interactive short 2.1	timeout 20000 void simple	0			0	
+interactive short 2.1	timeout 20000 void	0			0	
+interactive short 2.1	timeout 20000	0			0	
+interactive short 2.0	baseline	0			0	
+interactive short 2.0	cardinality once void simple	0			0	
+interactive short 2.0	cardinality once void	0			0	
+interactive short 2.0	cardinality once	0			0	
+interactive short 2.0	cardinality unlimited void simple	0			0	
+interactive short 2.0	cardinality unlimited void	0			0	
+interactive short 2.0	cardinality unlimited	0			0	
+interactive short 2.0	overhead simple	0			0	
+interactive short 2.0	overhead	0			0	
+interactive short 2.0	timeout 100 void simple	0			0	
+interactive short 2.0	timeout 100 void	0			0	
+interactive short 2.0	timeout 100	0			0	
+interactive short 2.0	timeout 1000 void simple	0			0	
+interactive short 2.0	timeout 1000 void	0			0	
+interactive short 2.0	timeout 1000	0			0	
+interactive short 2.0	timeout 2000 void simple	0			0	
+interactive short 2.0	timeout 2000 void	0			0	
+interactive short 2.0	timeout 2000	0			0	
+interactive short 2.0	timeout 5000 void simple	0			0	
+interactive short 2.0	timeout 5000 void	0			0	
+interactive short 2.0	timeout 5000	0			0	
+interactive short 2.0	timeout 10000 void simple	0			0	
+interactive short 2.0	timeout 10000 void	0			0	
+interactive short 2.0	timeout 10000	0			0	
+interactive short 2.0	timeout 20000 void simple	0			0	
+interactive short 2.0	timeout 20000 void	0			0	
+interactive short 2.0	timeout 20000	0			0	
+interactive short 1.4	baseline	124	11.942	11.942	9.734	5.971
+interactive short 1.4	cardinality once void simple	10	6.537	6.537	6.843	3.268
+interactive short 1.4	cardinality once void	7	7.071	7.071	7.097	3.535
+interactive short 1.4	cardinality once	124	9.695	9.695	11.643	4.848
+interactive short 1.4	cardinality unlimited void simple	10	6.886	6.886	6.967	3.443
+interactive short 1.4	cardinality unlimited void	0			0	
+interactive short 1.4	cardinality unlimited	124	19.34	19.34	14.621	9.67
+interactive short 1.4	overhead simple	124	12.42	12.42	8.84	6.21
+interactive short 1.4	overhead	124	10.516	10.516	9.671	5.258
+interactive short 1.4	timeout 100 void simple	7	6.795	6.795	6.55	3.397
+interactive short 1.4	timeout 100 void	7	6.929	6.929	7.435	3.465
+interactive short 1.4	timeout 100	7	6.79	6.79	6.552	3.395
+interactive short 1.4	timeout 1000 void simple	50	7.407	7.407	7.271	3.704
+interactive short 1.4	timeout 1000 void	63	7.465	7.465	7.461	3.732
+interactive short 1.4	timeout 1000	46	7.483	7.483	7.777	3.741
+interactive short 1.4	timeout 2000 void simple	101	8.826	8.826	8.434	4.413
+interactive short 1.4	timeout 2000 void	99	8.404	8.404	8.508	4.202
+interactive short 1.4	timeout 2000	104	8.509	8.509	8.656	4.255
+interactive short 1.4	timeout 5000 void simple	124	9.523	9.523	8.897	4.761
+interactive short 1.4	timeout 5000 void	122	11.418	11.418	11.756	5.709
+interactive short 1.4	timeout 5000	124	11.083	11.083	9.807	5.542
+interactive short 1.4	timeout 10000 void simple	124	11.006	11.006	11.003	5.503
+interactive short 1.4	timeout 10000 void	124	8.901	8.901	8.878	4.45
+interactive short 1.4	timeout 10000	122	12.353	12.353	16.311	6.176
+interactive short 1.4	timeout 20000 void simple	124	10.88	10.88	11.276	5.44
+interactive short 1.4	timeout 20000 void	124	9.53	9.53	10.822	4.765
+interactive short 1.4	timeout 20000	124	10.643	10.643	14.561	5.322
+interactive discover 8.1	baseline	310	14.058	17.21	17.612	23.07
+interactive discover 8.1	cardinality once void simple	0			0	
+interactive discover 8.1	cardinality once void	430	15.462	44.725	39.468	208.519
+interactive discover 8.1	cardinality once	583	15.163	19.763	23.411	31.655
+interactive discover 8.1	cardinality unlimited void simple	0			0	
+interactive discover 8.1	cardinality unlimited void	614	14.734	45.237	50.339	218.248
+interactive discover 8.1	cardinality unlimited	543	17.516	22.02	23.251	34.203
+interactive discover 8.1	overhead simple	0			0	
+interactive discover 8.1	overhead	0			0	
+interactive discover 8.1	timeout 100 void simple	0			0	
+interactive discover 8.1	timeout 100 void	0			0	
+interactive discover 8.1	timeout 100	235	14.637	19.222	16.385	34.525
+interactive discover 8.1	timeout 1000 void simple	0			0	
+interactive discover 8.1	timeout 1000 void	1084	17.018	49.748	51.808	232.772
+interactive discover 8.1	timeout 1000	420	17.032	21.524	21.012	32.746
+interactive discover 8.1	timeout 2000 void simple	0			0	
+interactive discover 8.1	timeout 2000 void	723	21.017	54.324	52.808	241.447
+interactive discover 8.1	timeout 2000	646	18.986	23.376	26.696	34.642
+interactive discover 8.1	timeout 5000 void simple	0			0	
+interactive discover 8.1	timeout 5000 void	0			0	
+interactive discover 8.1	timeout 5000	856	28.325	33.395	33.244	42.996
+interactive discover 8.1	timeout 10000 void simple	0			0	
+interactive discover 8.1	timeout 10000 void	0			0	
+interactive discover 8.1	timeout 10000	311	13.971	17.275	17.635	23.113
+interactive discover 8.1	timeout 20000 void simple	0			0	
+interactive discover 8.1	timeout 20000 void	0			0	
+interactive discover 8.1	timeout 20000	1095	16.432	19.983	42.613	26.94
+interactive short 1.3	baseline	225	10.445	10.445	10.014	5.223
+interactive short 1.3	cardinality once void simple	7	6.753	6.753	6.532	3.377
+interactive short 1.3	cardinality once void	0			0	
+interactive short 1.3	cardinality once	225	11.43	11.43	15.469	5.715
+interactive short 1.3	cardinality unlimited void simple	0			0	
+interactive short 1.3	cardinality unlimited void	7	6.975	6.975	6.999	3.487
+interactive short 1.3	cardinality unlimited	225	13.093	13.093	11.953	6.546
+interactive short 1.3	overhead simple	225	12.749	12.749	9.277	6.375
+interactive short 1.3	overhead	225	10.312	10.312	11.282	5.156
+interactive short 1.3	timeout 100 void simple	0			0	
+interactive short 1.3	timeout 100 void	7	6.729	6.729	7.337	3.365
+interactive short 1.3	timeout 100	7	6.471	6.471	6.619	3.236
+interactive short 1.3	timeout 1000 void simple	89	7.771	7.771	7.831	3.885
+interactive short 1.3	timeout 1000 void	93	7.464	7.464	7.595	3.732
+interactive short 1.3	timeout 1000	99	7.676	7.676	7.571	3.838
+interactive short 1.3	timeout 2000 void simple	198	8.727	8.727	8.765	4.364
+interactive short 1.3	timeout 2000 void	192	8.473	8.473	8.826	4.237
+interactive short 1.3	timeout 2000	198	8.788	8.788	9.053	4.394
+interactive short 1.3	timeout 5000 void simple	225	9.571	9.571	9.306	4.785
+interactive short 1.3	timeout 5000 void	225	10.232	10.232	11.106	5.116
+interactive short 1.3	timeout 5000	225	10.921	10.921	11.481	5.46
+interactive short 1.3	timeout 10000 void simple	225	10.21	10.21	9.679	5.105
+interactive short 1.3	timeout 10000 void	225	11.37	11.37	11.305	5.685
+interactive short 1.3	timeout 10000	225	12.045	12.045	9.47	6.022
+interactive short 1.3	timeout 20000 void simple	225	11.243	11.243	9.798	5.622
+interactive short 1.3	timeout 20000 void	225	11.068	11.068	8.784	5.534
+interactive short 1.3	timeout 20000	225	10.613	10.613	11.399	5.306
+interactive discover 8.2	baseline	217	11.845	15.842	15.553	29.367
+interactive discover 8.2	cardinality once void simple	392	20.372	40.143	38.506	134.974
+interactive discover 8.2	cardinality once void	462	14.895	23.414	23.829	60.357
+interactive discover 8.2	cardinality once	464	12.818	19.356	22.049	49.311
+interactive discover 8.2	cardinality unlimited void simple	273	18.911	36.899	38.687	123.43
+interactive discover 8.2	cardinality unlimited void	318	14.685	23.571	23.178	64.229
+interactive discover 8.2	cardinality unlimited	280	13.405	18.106	18.027	32.844
+interactive discover 8.2	overhead simple	0			0	
+interactive discover 8.2	overhead	347	13.254	20.636	21.112	44.949
+interactive discover 8.2	timeout 100 void simple	0			0	
+interactive discover 8.2	timeout 100 void	362	13.773	22.994	22.038	54.89
+interactive discover 8.2	timeout 100	275	11.616	17.428	17.895	34.672
+interactive discover 8.2	timeout 1000 void simple	561	29.173	49.31	48.434	136.067
+interactive discover 8.2	timeout 1000 void	455	15.936	23.885	24.951	56.537
+interactive discover 8.2	timeout 1000	449	16.398	23.66	19.564	50.673
+interactive discover 8.2	timeout 2000 void simple	684	30.576	51.263	51.023	142.072
+interactive discover 8.2	timeout 2000 void	611	20.144	28.117	28.693	57.341
+interactive discover 8.2	timeout 2000	712	18.791	23.521	24.739	36.092
+interactive discover 8.2	timeout 5000 void simple	797	36.001	55.727	57.376	139.671
+interactive discover 8.2	timeout 5000 void	664	17.849	36.133	36.752	92.893
+interactive discover 8.2	timeout 5000	781	11.225	32.093	32.631	75.301
+interactive discover 8.2	timeout 10000 void simple	0			0	
+interactive discover 8.2	timeout 10000 void	689	11.881	34.732	32.635	147.157
+interactive discover 8.2	timeout 10000	204	12.311	16.112	14.468	27.726
+interactive discover 8.2	timeout 20000 void simple	0			0	
+interactive discover 8.2	timeout 20000 void	284	13.195	19.181	20.06	40.059
+interactive discover 8.2	timeout 20000	222	11.728	16.571	16.116	29.352
+interactive short 1.2	baseline	18	6.926	6.926	6.96	3.463
+interactive short 1.2	cardinality once void simple	0			0	
+interactive short 1.2	cardinality once void	0			0	
+interactive short 1.2	cardinality once	18	6.863	6.863	6.472	3.432
+interactive short 1.2	cardinality unlimited void simple	0			0	
+interactive short 1.2	cardinality unlimited void	0			0	
+interactive short 1.2	cardinality unlimited	18	7.246	7.246	7.022	3.623
+interactive short 1.2	overhead simple	18	6.857	6.857	7.133	3.429
+interactive short 1.2	overhead	18	6.966	6.966	6.392	3.483
+interactive short 1.2	timeout 100 void simple	0			0	
+interactive short 1.2	timeout 100 void	0			0	
+interactive short 1.2	timeout 100	0			0	
+interactive short 1.2	timeout 1000 void simple	18	7.023	7.023	6.727	3.511
+interactive short 1.2	timeout 1000 void	18	7.184	7.184	6.963	3.592
+interactive short 1.2	timeout 1000	18	6.91	6.91	7.256	3.455
+interactive short 1.2	timeout 2000 void simple	18	6.732	6.732	6.751	3.366
+interactive short 1.2	timeout 2000 void	18	7.028	7.028	6.814	3.514
+interactive short 1.2	timeout 2000	18	6.9	6.9	7.244	3.45
+interactive short 1.2	timeout 5000 void simple	18	7.04	7.04	6.929	3.52
+interactive short 1.2	timeout 5000 void	18	6.912	6.912	7.289	3.456
+interactive short 1.2	timeout 5000	18	6.716	6.716	6.928	3.358
+interactive short 1.2	timeout 10000 void simple	18	6.938	6.938	6.843	3.469
+interactive short 1.2	timeout 10000 void	18	7.033	7.033	6.918	3.517
+interactive short 1.2	timeout 10000	18	6.688	6.688	6.985	3.344
+interactive short 1.2	timeout 20000 void simple	18	7.159	7.159	7.253	3.579
+interactive short 1.2	timeout 20000 void	18	6.697	6.697	6.638	3.349
+interactive short 1.2	timeout 20000	18	6.733	6.733	6.647	3.366
+interactive short 1.1	baseline	21	6.953	6.953	7.084	3.477
+interactive short 1.1	cardinality once void simple	0			0	
+interactive short 1.1	cardinality once void	0			0	
+interactive short 1.1	cardinality once	21	8.006	8.006	6.878	4.003
+interactive short 1.1	cardinality unlimited void simple	0			0	
+interactive short 1.1	cardinality unlimited void	0			0	
+interactive short 1.1	cardinality unlimited	21	7.336	7.336	7.336	3.668
+interactive short 1.1	overhead simple	21	7.47	7.47	8.581	3.735
+interactive short 1.1	overhead	21	7.161	7.161	7.028	3.58
+interactive short 1.1	timeout 100 void simple	0			0	
+interactive short 1.1	timeout 100 void	0			0	
+interactive short 1.1	timeout 100	0			0	
+interactive short 1.1	timeout 1000 void simple	21	7.13	7.13	7.011	3.565
+interactive short 1.1	timeout 1000 void	20	7.901	7.901	7.494	3.95
+interactive short 1.1	timeout 1000	21	7.633	7.633	7.094	3.817
+interactive short 1.1	timeout 2000 void simple	21	6.739	6.739	7.157	3.369
+interactive short 1.1	timeout 2000 void	21	7.767	7.767	8.245	3.884
+interactive short 1.1	timeout 2000	21	6.748	6.748	6.886	3.374
+interactive short 1.1	timeout 5000 void simple	21	6.95	6.95	7.072	3.475
+interactive short 1.1	timeout 5000 void	21	7.291	7.291	7.83	3.646
+interactive short 1.1	timeout 5000	21	7.398	7.398	8.452	3.699
+interactive short 1.1	timeout 10000 void simple	21	7.283	7.283	7.781	3.642
+interactive short 1.1	timeout 10000 void	21	7.102	7.102	8.226	3.551
+interactive short 1.1	timeout 10000	21	7.15	7.15	7.918	3.575
+interactive short 1.1	timeout 20000 void simple	21	7.293	7.293	7.692	3.647
+interactive short 1.1	timeout 20000 void	21	6.915	6.915	6.938	3.458
+interactive short 1.1	timeout 20000	21	7.095	7.095	7.913	3.547
+interactive short 1.0	baseline	129	13.194	13.194	11.131	6.597
+interactive short 1.0	cardinality once void simple	0			0	
+interactive short 1.0	cardinality once void	10	6.895	6.895	6.601	3.447
+interactive short 1.0	cardinality once	129	13.487	13.487	11.588	6.744
+interactive short 1.0	cardinality unlimited void simple	10	7.015	7.015	7.092	3.507
+interactive short 1.0	cardinality unlimited void	7	6.775	6.775	7.143	3.388
+interactive short 1.0	cardinality unlimited	129	11.538	11.538	9.301	5.769
+interactive short 1.0	overhead simple	129	14.281	14.281	21.524	7.141
+interactive short 1.0	overhead	129	12.746	12.746	9.739	6.373
+interactive short 1.0	timeout 100 void simple	0			0	
+interactive short 1.0	timeout 100 void	0			0	
+interactive short 1.0	timeout 100	7	6.727	6.727	6.899	3.364
+interactive short 1.0	timeout 1000 void simple	59	7.616	7.616	8.09	3.808
+interactive short 1.0	timeout 1000 void	51	7.503	7.503	7.762	3.752
+interactive short 1.0	timeout 1000	47	7.459	7.459	7.273	3.729
+interactive short 1.0	timeout 2000 void simple	97	8.304	8.304	8.82	4.152
+interactive short 1.0	timeout 2000 void	115	8.483	8.483	8.331	4.242
+interactive short 1.0	timeout 2000	103	8.41	8.41	9.044	4.205
+interactive short 1.0	timeout 5000 void simple	129	10.381	10.381	9.736	5.191
+interactive short 1.0	timeout 5000 void	128	9.323	9.323	11.588	4.662
+interactive short 1.0	timeout 5000	129	10.961	10.961	8.468	5.481
+interactive short 1.0	timeout 10000 void simple	129	10.481	10.481	11.047	5.24
+interactive short 1.0	timeout 10000 void	129	12.053	12.053	11.306	6.027
+interactive short 1.0	timeout 10000	129	10.026	10.026	9.008	5.013
+interactive short 1.0	timeout 20000 void simple	129	14.163	14.163	10.865	7.082
+interactive short 1.0	timeout 20000 void	129	13.933	13.933	14.379	6.966
+interactive short 1.0	timeout 20000	129	10.374	10.374	10.966	5.187
+interactive discover 8.4	baseline	333	13.219	15.502	17.028	16.558
+interactive discover 8.4	cardinality once void simple	0			0	
+interactive discover 8.4	cardinality once void	0			0	
+interactive discover 8.4	cardinality once	521	18.492	23.592	22.24	37.879
+interactive discover 8.4	cardinality unlimited void simple	0			0	
+interactive discover 8.4	cardinality unlimited void	0			0	
+interactive discover 8.4	cardinality unlimited	521	22.398	27.951	25.603	43.389
+interactive discover 8.4	overhead simple	0			0	
+interactive discover 8.4	overhead	0			0	
+interactive discover 8.4	timeout 100 void simple	0			0	
+interactive discover 8.4	timeout 100 void	0			0	
+interactive discover 8.4	timeout 100	378	10.885	17.767	19.044	26.721
+interactive discover 8.4	timeout 1000 void simple	0			0	
+interactive discover 8.4	timeout 1000 void	0			0	
+interactive discover 8.4	timeout 1000	626	20.93	27.315	25.647	47.609
+interactive discover 8.4	timeout 2000 void simple	0			0	
+interactive discover 8.4	timeout 2000 void	0			0	
+interactive discover 8.4	timeout 2000	768	18.147	29.957	30.88	51.371
+interactive discover 8.4	timeout 5000 void simple	0			0	
+interactive discover 8.4	timeout 5000 void	0			0	
+interactive discover 8.4	timeout 5000	948	15.997	36.885	35.736	82.247
+interactive discover 8.4	timeout 10000 void simple	0			0	
+interactive discover 8.4	timeout 10000 void	0			0	
+interactive discover 8.4	timeout 10000	343	13.383	26.101	16.498	47.212
+interactive discover 8.4	timeout 20000 void simple	0			0	
+interactive discover 8.4	timeout 20000 void	0			0	
+interactive discover 8.4	timeout 20000	360	13.34	15.793	16.186	17.371
+interactive discover 8.3	baseline	428	12.546	16.136	15.8	19.315
+interactive discover 8.3	cardinality once void simple	0			0	
+interactive discover 8.3	cardinality once void	0			0	
+interactive discover 8.3	cardinality once	413	17.255	23.501	22.843	40.385
+interactive discover 8.3	cardinality unlimited void simple	0			0	
+interactive discover 8.3	cardinality unlimited void	0			0	
+interactive discover 8.3	cardinality unlimited	418	16.842	22.212	20.756	34.047
+interactive discover 8.3	overhead simple	0			0	
+interactive discover 8.3	overhead	0			0	
+interactive discover 8.3	timeout 100 void simple	0			0	
+interactive discover 8.3	timeout 100 void	0			0	
+interactive discover 8.3	timeout 100	416	15.141	18.465	15.348	23.133
+interactive discover 8.3	timeout 1000 void simple	0			0	
+interactive discover 8.3	timeout 1000 void	0			0	
+interactive discover 8.3	timeout 1000	391	17.913	22.393	21.795	35.703
+interactive discover 8.3	timeout 2000 void simple	0			0	
+interactive discover 8.3	timeout 2000 void	0			0	
+interactive discover 8.3	timeout 2000	423	13.824	22.145	22.503	34.701
+interactive discover 8.3	timeout 5000 void simple	0			0	
+interactive discover 8.3	timeout 5000 void	0			0	
+interactive discover 8.3	timeout 5000	1056	23.265	36.346	36.277	59.801
+interactive discover 8.3	timeout 10000 void simple	0			0	
+interactive discover 8.3	timeout 10000 void	0			0	
+interactive discover 8.3	timeout 10000	458	12.296	15.065	16.422	15.165
+interactive discover 8.3	timeout 20000 void simple	0			0	
+interactive discover 8.3	timeout 20000 void	0			0	
+interactive discover 8.3	timeout 20000	420	11.068	15.738	14.897	18.131
+interactive short 3.1	baseline	0			0	
+interactive short 3.1	cardinality once void simple	0			0	
+interactive short 3.1	cardinality once void	0			0	
+interactive short 3.1	cardinality once	0			0	
+interactive short 3.1	cardinality unlimited void simple	0			0	
+interactive short 3.1	cardinality unlimited void	0			0	
+interactive short 3.1	cardinality unlimited	0			0	
+interactive short 3.1	overhead simple	0			0	
+interactive short 3.1	overhead	0			0	
+interactive short 3.1	timeout 100 void simple	0			0	
+interactive short 3.1	timeout 100 void	0			0	
+interactive short 3.1	timeout 100	0			0	
+interactive short 3.1	timeout 1000 void simple	0			0	
+interactive short 3.1	timeout 1000 void	0			0	
+interactive short 3.1	timeout 1000	0			0	
+interactive short 3.1	timeout 2000 void simple	0			0	
+interactive short 3.1	timeout 2000 void	0			0	
+interactive short 3.1	timeout 2000	0			0	
+interactive short 3.1	timeout 5000 void simple	0			0	
+interactive short 3.1	timeout 5000 void	0			0	
+interactive short 3.1	timeout 5000	0			0	
+interactive short 3.1	timeout 10000 void simple	329	16.547	16.547	16.776	8.274
+interactive short 3.1	timeout 10000 void	365	16.589	16.589	16.935	8.294
+interactive short 3.1	timeout 10000	303	16.764	16.764	17.278	8.382
+interactive short 3.1	timeout 20000 void simple	338	26.849	26.849	27.982	13.425
+interactive short 3.1	timeout 20000 void	488	26.846	26.846	27.165	13.423
+interactive short 3.1	timeout 20000	382	26.816	26.816	28.446	13.408
+interactive short 2.3	baseline	0			0	
+interactive short 2.3	cardinality once void simple	0			0	
+interactive short 2.3	cardinality once void	0			0	
+interactive short 2.3	cardinality once	0			0	
+interactive short 2.3	cardinality unlimited void simple	0			0	
+interactive short 2.3	cardinality unlimited void	0			0	
+interactive short 2.3	cardinality unlimited	0			0	
+interactive short 2.3	overhead simple	0			0	
+interactive short 2.3	overhead	0			0	
+interactive short 2.3	timeout 100 void simple	0			0	
+interactive short 2.3	timeout 100 void	0			0	
+interactive short 2.3	timeout 100	0			0	
+interactive short 2.3	timeout 1000 void simple	0			0	
+interactive short 2.3	timeout 1000 void	0			0	
+interactive short 2.3	timeout 1000	0			0	
+interactive short 2.3	timeout 2000 void simple	0			0	
+interactive short 2.3	timeout 2000 void	0			0	
+interactive short 2.3	timeout 2000	0			0	
+interactive short 2.3	timeout 5000 void simple	0			0	
+interactive short 2.3	timeout 5000 void	0			0	
+interactive short 2.3	timeout 5000	0			0	
+interactive short 2.3	timeout 10000 void simple	0			0	
+interactive short 2.3	timeout 10000 void	0			0	
+interactive short 2.3	timeout 10000	0			0	
+interactive short 2.3	timeout 20000 void simple	0			0	
+interactive short 2.3	timeout 20000 void	1911	48.49	48.49	60.159	24.245
+interactive short 2.3	timeout 20000	0			0	
+interactive short 3.0	baseline	0			0	
+interactive short 3.0	cardinality once void simple	0			0	
+interactive short 3.0	cardinality once void	0			0	
+interactive short 3.0	cardinality once	0			0	
+interactive short 3.0	cardinality unlimited void simple	0			0	
+interactive short 3.0	cardinality unlimited void	0			0	
+interactive short 3.0	cardinality unlimited	0			0	
+interactive short 3.0	overhead simple	0			0	
+interactive short 3.0	overhead	0			0	
+interactive short 3.0	timeout 100 void simple	0			0	
+interactive short 3.0	timeout 100 void	0			0	
+interactive short 3.0	timeout 100	0			0	
+interactive short 3.0	timeout 1000 void simple	0			0	
+interactive short 3.0	timeout 1000 void	0			0	
+interactive short 3.0	timeout 1000	0			0	
+interactive short 3.0	timeout 2000 void simple	0			0	
+interactive short 3.0	timeout 2000 void	0			0	
+interactive short 3.0	timeout 2000	0			0	
+interactive short 3.0	timeout 5000 void simple	336	11.97	11.97	12.622	5.985
+interactive short 3.0	timeout 5000 void	0			0	
+interactive short 3.0	timeout 5000	0			0	
+interactive short 3.0	timeout 10000 void simple	409	16.781	16.781	17.366	8.39
+interactive short 3.0	timeout 10000 void	466	16.89	16.89	16.69	8.445
+interactive short 3.0	timeout 10000	422	16.823	16.823	16.668	8.412
+interactive short 3.0	timeout 20000 void simple	560	26.78	26.78	27.068	13.39
+interactive short 3.0	timeout 20000 void	581	26.455	26.455	26.971	13.227
+interactive short 3.0	timeout 20000	525	26.99	26.99	27.651	13.495
+interactive short 2.4	baseline	0			0	
+interactive short 2.4	cardinality once void simple	0			0	
+interactive short 2.4	cardinality once void	0			0	
+interactive short 2.4	cardinality once	0			0	
+interactive short 2.4	cardinality unlimited void simple	0			0	
+interactive short 2.4	cardinality unlimited void	0			0	
+interactive short 2.4	cardinality unlimited	0			0	
+interactive short 2.4	overhead simple	0			0	
+interactive short 2.4	overhead	0			0	
+interactive short 2.4	timeout 100 void simple	0			0	
+interactive short 2.4	timeout 100 void	0			0	
+interactive short 2.4	timeout 100	0			0	
+interactive short 2.4	timeout 1000 void simple	0			0	
+interactive short 2.4	timeout 1000 void	0			0	
+interactive short 2.4	timeout 1000	0			0	
+interactive short 2.4	timeout 2000 void simple	0			0	
+interactive short 2.4	timeout 2000 void	0			0	
+interactive short 2.4	timeout 2000	0			0	
+interactive short 2.4	timeout 5000 void simple	0			0	
+interactive short 2.4	timeout 5000 void	0			0	
+interactive short 2.4	timeout 5000	0			0	
+interactive short 2.4	timeout 10000 void simple	0			0	
+interactive short 2.4	timeout 10000 void	0			0	
+interactive short 2.4	timeout 10000	0			0	
+interactive short 2.4	timeout 20000 void simple	0			0	
+interactive short 2.4	timeout 20000 void	0			0	
+interactive short 2.4	timeout 20000	0			0	
+interactive short 3.2	baseline	0			0	
+interactive short 3.2	cardinality once void simple	0			0	
+interactive short 3.2	cardinality once void	0			0	
+interactive short 3.2	cardinality once	0			0	
+interactive short 3.2	cardinality unlimited void simple	0			0	
+interactive short 3.2	cardinality unlimited void	0			0	
+interactive short 3.2	cardinality unlimited	0			0	
+interactive short 3.2	overhead simple	0			0	
+interactive short 3.2	overhead	0			0	
+interactive short 3.2	timeout 100 void simple	0			0	
+interactive short 3.2	timeout 100 void	0			0	
+interactive short 3.2	timeout 100	0			0	
+interactive short 3.2	timeout 1000 void simple	0			0	
+interactive short 3.2	timeout 1000 void	0			0	
+interactive short 3.2	timeout 1000	0			0	
+interactive short 3.2	timeout 2000 void simple	0			0	
+interactive short 3.2	timeout 2000 void	0			0	
+interactive short 3.2	timeout 2000	0			0	
+interactive short 3.2	timeout 5000 void simple	0			0	
+interactive short 3.2	timeout 5000 void	0			0	
+interactive short 3.2	timeout 5000	0			0	
+interactive short 3.2	timeout 10000 void simple	0			0	
+interactive short 3.2	timeout 10000 void	0			0	
+interactive short 3.2	timeout 10000	0			0	
+interactive short 3.2	timeout 20000 void simple	0			0	
+interactive short 3.2	timeout 20000 void	0			0	
+interactive short 3.2	timeout 20000	0			0	
+interactive short 3.3	baseline	0			0	
+interactive short 3.3	cardinality once void simple	0			0	
+interactive short 3.3	cardinality once void	0			0	
+interactive short 3.3	cardinality once	0			0	
+interactive short 3.3	cardinality unlimited void simple	0			0	
+interactive short 3.3	cardinality unlimited void	0			0	
+interactive short 3.3	cardinality unlimited	0			0	
+interactive short 3.3	overhead simple	0			0	
+interactive short 3.3	overhead	0			0	
+interactive short 3.3	timeout 100 void simple	0			0	
+interactive short 3.3	timeout 100 void	0			0	
+interactive short 3.3	timeout 100	0			0	
+interactive short 3.3	timeout 1000 void simple	0			0	
+interactive short 3.3	timeout 1000 void	0			0	
+interactive short 3.3	timeout 1000	0			0	
+interactive short 3.3	timeout 2000 void simple	0			0	
+interactive short 3.3	timeout 2000 void	0			0	
+interactive short 3.3	timeout 2000	0			0	
+interactive short 3.3	timeout 5000 void simple	0			0	
+interactive short 3.3	timeout 5000 void	0			0	
+interactive short 3.3	timeout 5000	0			0	
+interactive short 3.3	timeout 10000 void simple	324	16.565	16.565	17.633	8.283
+interactive short 3.3	timeout 10000 void	347	16.799	16.799	17.112	8.399
+interactive short 3.3	timeout 10000	346	16.677	16.677	17.128	8.338
+interactive short 3.3	timeout 20000 void simple	549	26.898	26.898	28.007	13.449
+interactive short 3.3	timeout 20000 void	680	26.743	26.743	27.321	13.371
+interactive short 3.3	timeout 20000	663	26.728	26.728	28.073	13.364
+interactive short 3.4	baseline	0			0	
+interactive short 3.4	cardinality once void simple	0			0	
+interactive short 3.4	cardinality once void	0			0	
+interactive short 3.4	cardinality once	0			0	
+interactive short 3.4	cardinality unlimited void simple	0			0	
+interactive short 3.4	cardinality unlimited void	0			0	
+interactive short 3.4	cardinality unlimited	3809	41.036	41.036	60.158	20.518
+interactive short 3.4	overhead simple	0			0	
+interactive short 3.4	overhead	0			0	
+interactive short 3.4	timeout 100 void simple	0			0	
+interactive short 3.4	timeout 100 void	0			0	
+interactive short 3.4	timeout 100	0			0	
+interactive short 3.4	timeout 1000 void simple	0			0	
+interactive short 3.4	timeout 1000 void	0			0	
+interactive short 3.4	timeout 1000	0			0	
+interactive short 3.4	timeout 2000 void simple	0			0	
+interactive short 3.4	timeout 2000 void	0			0	
+interactive short 3.4	timeout 2000	0			0	
+interactive short 3.4	timeout 5000 void simple	0			0	
+interactive short 3.4	timeout 5000 void	0			0	
+interactive short 3.4	timeout 5000	0			0	
+interactive short 3.4	timeout 10000 void simple	680	16.775	16.775	17.421	8.387
+interactive short 3.4	timeout 10000 void	419	16.683	16.683	16.993	8.341
+interactive short 3.4	timeout 10000	414	16.69	16.69	17.043	8.345
+interactive short 3.4	timeout 20000 void simple	357	26.766	26.766	27.803	13.383
+interactive short 3.4	timeout 20000 void	513	26.89	26.89	27.718	13.445
+interactive short 3.4	timeout 20000	428	26.709	26.709	27.276	13.354
+interactive short 4.0	baseline	1	6.819	6.819	6.988	3.409
+interactive short 4.0	cardinality once void simple	1	6.536	6.536	6.454	3.268
+interactive short 4.0	cardinality once void	1	6.924	6.924	6.622	3.462
+interactive short 4.0	cardinality once	1	6.822	6.822	7.067	3.411
+interactive short 4.0	cardinality unlimited void simple	1	6.826	6.826	7.088	3.413
+interactive short 4.0	cardinality unlimited void	1	6.775	6.775	6.789	3.388
+interactive short 4.0	cardinality unlimited	1	6.754	6.754	7.232	3.377
+interactive short 4.0	overhead simple	1	7.054	7.054	6.871	3.527
+interactive short 4.0	overhead	1	6.718	6.718	6.82	3.359
+interactive short 4.0	timeout 100 void simple	1	6.583	6.583	6.881	3.292
+interactive short 4.0	timeout 100 void	1	6.812	6.812	6.342	3.406
+interactive short 4.0	timeout 100	1	6.623	6.623	6.537	3.312
+interactive short 4.0	timeout 1000 void simple	1	6.849	6.849	6.863	3.425
+interactive short 4.0	timeout 1000 void	1	6.685	6.685	6.71	3.342
+interactive short 4.0	timeout 1000	1	6.866	6.866	6.941	3.433
+interactive short 4.0	timeout 2000 void simple	1	6.93	6.93	7.043	3.465
+interactive short 4.0	timeout 2000 void	1	6.946	6.946	6.677	3.473
+interactive short 4.0	timeout 2000	1	7.037	7.037	6.885	3.518
+interactive short 4.0	timeout 5000 void simple	1	6.821	6.821	6.9	3.41
+interactive short 4.0	timeout 5000 void	1	6.64	6.64	6.727	3.32
+interactive short 4.0	timeout 5000	1	6.954	6.954	6.833	3.477
+interactive short 4.0	timeout 10000 void simple	1	6.851	6.851	7.013	3.425
+interactive short 4.0	timeout 10000 void	1	6.694	6.694	6.69	3.347
+interactive short 4.0	timeout 10000	1	6.816	6.816	6.709	3.408
+interactive short 4.0	timeout 20000 void simple	1	7.04	7.04	6.696	3.52
+interactive short 4.0	timeout 20000 void	1	6.888	6.888	6.685	3.444
+interactive short 4.0	timeout 20000	1	6.77	6.77	6.574	3.385
+interactive short 4.1	baseline	1	6.852	6.852	7.191	3.426
+interactive short 4.1	cardinality once void simple	1	7.031	7.031	6.813	3.515
+interactive short 4.1	cardinality once void	1	6.968	6.968	6.666	3.484
+interactive short 4.1	cardinality once	1	6.8	6.8	6.744	3.4
+interactive short 4.1	cardinality unlimited void simple	1	6.865	6.865	7.348	3.433
+interactive short 4.1	cardinality unlimited void	1	6.961	6.961	6.8	3.481
+interactive short 4.1	cardinality unlimited	1	7.022	7.022	6.923	3.511
+interactive short 4.1	overhead simple	1	6.855	6.855	6.953	3.428
+interactive short 4.1	overhead	1	6.686	6.686	7.024	3.343
+interactive short 4.1	timeout 100 void simple	1	7.075	7.075	7.167	3.538
+interactive short 4.1	timeout 100 void	1	6.738	6.738	6.642	3.369
+interactive short 4.1	timeout 100	1	6.623	6.623	6.837	3.312
+interactive short 4.1	timeout 1000 void simple	1	6.97	6.97	7.168	3.485
+interactive short 4.1	timeout 1000 void	1	6.763	6.763	7.39	3.381
+interactive short 4.1	timeout 1000	1	6.835	6.835	6.987	3.417
+interactive short 4.1	timeout 2000 void simple	1	7.229	7.229	7.188	3.615
+interactive short 4.1	timeout 2000 void	1	6.839	6.839	6.675	3.42
+interactive short 4.1	timeout 2000	1	6.692	6.692	6.985	3.346
+interactive short 4.1	timeout 5000 void simple	1	6.997	6.997	7.022	3.498
+interactive short 4.1	timeout 5000 void	1	7.186	7.186	6.864	3.593
+interactive short 4.1	timeout 5000	1	6.91	6.91	6.96	3.455
+interactive short 4.1	timeout 10000 void simple	1	7.09	7.09	6.716	3.545
+interactive short 4.1	timeout 10000 void	1	6.796	6.796	6.48	3.398
+interactive short 4.1	timeout 10000	1	6.891	6.891	6.586	3.446
+interactive short 4.1	timeout 20000 void simple	1	6.743	6.743	6.553	3.372
+interactive short 4.1	timeout 20000 void	1	6.874	6.874	6.902	3.437
+interactive short 4.1	timeout 20000	1	6.939	6.939	7.008	3.47
+interactive short 4.3	baseline	2	6.547	6.547	6.475	3.273
+interactive short 4.3	cardinality once void simple	2	6.472	6.472	6.311	3.236
+interactive short 4.3	cardinality once void	2	6.454	6.454	6.458	3.227
+interactive short 4.3	cardinality once	2	6.488	6.488	6.78	3.244
+interactive short 4.3	cardinality unlimited void simple	2	6.649	6.649	6.73	3.325
+interactive short 4.3	cardinality unlimited void	2	6.753	6.753	6.235	3.377
+interactive short 4.3	cardinality unlimited	2	6.527	6.527	6.564	3.264
+interactive short 4.3	overhead simple	2	6.451	6.451	6.617	3.225
+interactive short 4.3	overhead	2	6.187	6.187	6.097	3.094
+interactive short 4.3	timeout 100 void simple	2	6.258	6.258	6.318	3.129
+interactive short 4.3	timeout 100 void	2	6.222	6.222	6.154	3.111
+interactive short 4.3	timeout 100	2	6.364	6.364	6.638	3.182
+interactive short 4.3	timeout 1000 void simple	2	6.421	6.421	6.317	3.211
+interactive short 4.3	timeout 1000 void	2	6.707	6.707	6.739	3.353
+interactive short 4.3	timeout 1000	2	6.394	6.394	6.746	3.197
+interactive short 4.3	timeout 2000 void simple	2	6.491	6.491	6.635	3.245
+interactive short 4.3	timeout 2000 void	2	6.42	6.42	6.583	3.21
+interactive short 4.3	timeout 2000	2	6.532	6.532	6.424	3.266
+interactive short 4.3	timeout 5000 void simple	2	6.329	6.329	6.365	3.164
+interactive short 4.3	timeout 5000 void	2	6.38	6.38	6.443	3.19
+interactive short 4.3	timeout 5000	2	6.658	6.658	6.021	3.329
+interactive short 4.3	timeout 10000 void simple	2	6.45	6.45	6.309	3.225
+interactive short 4.3	timeout 10000 void	2	6.818	6.818	6.811	3.409
+interactive short 4.3	timeout 10000	2	6.699	6.699	6.732	3.349
+interactive short 4.3	timeout 20000 void simple	2	6.764	6.764	6.593	3.382
+interactive short 4.3	timeout 20000 void	2	6.279	6.279	6.176	3.139
+interactive short 4.3	timeout 20000	2	6.228	6.228	6.304	3.114
+interactive short 4.4	baseline	1	6.668	6.668	6.51	3.334
+interactive short 4.4	cardinality once void simple	1	6.738	6.738	6.603	3.369
+interactive short 4.4	cardinality once void	1	7.141	7.141	6.682	3.571
+interactive short 4.4	cardinality once	1	6.582	6.582	6.784	3.291
+interactive short 4.4	cardinality unlimited void simple	1	7.005	7.005	7.047	3.502
+interactive short 4.4	cardinality unlimited void	1	6.779	6.779	6.826	3.389
+interactive short 4.4	cardinality unlimited	1	6.739	6.739	6.742	3.369
+interactive short 4.4	overhead simple	1	6.776	6.776	6.648	3.388
+interactive short 4.4	overhead	1	6.798	6.798	6.552	3.399
+interactive short 4.4	timeout 100 void simple	1	6.464	6.464	6.613	3.232
+interactive short 4.4	timeout 100 void	1	6.639	6.639	6.597	3.32
+interactive short 4.4	timeout 100	1	6.839	6.839	7.068	3.42
+interactive short 4.4	timeout 1000 void simple	1	6.749	6.749	6.607	3.374
+interactive short 4.4	timeout 1000 void	1	7.086	7.086	7.03	3.543
+interactive short 4.4	timeout 1000	1	6.703	6.703	6.546	3.352
+interactive short 4.4	timeout 2000 void simple	1	6.862	6.862	6.545	3.431
+interactive short 4.4	timeout 2000 void	1	6.837	6.837	6.734	3.418
+interactive short 4.4	timeout 2000	1	6.695	6.695	6.713	3.348
+interactive short 4.4	timeout 5000 void simple	1	6.755	6.755	6.757	3.377
+interactive short 4.4	timeout 5000 void	1	6.858	6.858	6.643	3.429
+interactive short 4.4	timeout 5000	1	6.786	6.786	6.837	3.393
+interactive short 4.4	timeout 10000 void simple	1	6.761	6.761	6.778	3.381
+interactive short 4.4	timeout 10000 void	1	7.27	7.27	6.569	3.635
+interactive short 4.4	timeout 10000	1	6.553	6.553	6.409	3.276
+interactive short 4.4	timeout 20000 void simple	1	7.135	7.135	6.767	3.567
+interactive short 4.4	timeout 20000 void	1	6.915	6.915	7.216	3.458
+interactive short 4.4	timeout 20000	1	6.699	6.699	6.733	3.349
+interactive short 5.2	baseline	103	10.633	10.633	9.315	5.316
+interactive short 5.2	cardinality once void simple	103	9.551	9.551	10.434	4.776
+interactive short 5.2	cardinality once void	103	9.836	9.836	10.551	4.918
+interactive short 5.2	cardinality once	103	9.618	9.618	9.79	4.809
+interactive short 5.2	cardinality unlimited void simple	103	10.113	10.113	10.369	5.056
+interactive short 5.2	cardinality unlimited void	103	9.606	9.606	9.912	4.803
+interactive short 5.2	cardinality unlimited	103	11.112	11.112	9.038	5.556
+interactive short 5.2	overhead simple	103	9.349	9.349	9.9	4.675
+interactive short 5.2	overhead	103	10.253	10.253	11.058	5.127
+interactive short 5.2	timeout 100 void simple	0			0	
+interactive short 5.2	timeout 100 void	0			0	
+interactive short 5.2	timeout 100	0			0	
+interactive short 5.2	timeout 1000 void simple	61	7.923	7.923	7.986	3.962
+interactive short 5.2	timeout 1000 void	51	7.927	7.927	7.999	3.963
+interactive short 5.2	timeout 1000	62	8.03	8.03	8.12	4.015
+interactive short 5.2	timeout 2000 void simple	98	9.203	9.203	8.851	4.601
+interactive short 5.2	timeout 2000 void	92	9.14	9.14	9.017	4.57
+interactive short 5.2	timeout 2000	98	8.941	8.941	8.743	4.471
+interactive short 5.2	timeout 5000 void simple	103	9.532	9.532	9.156	4.766
+interactive short 5.2	timeout 5000 void	103	10.014	10.014	10.073	5.007
+interactive short 5.2	timeout 5000	103	9.9	9.9	9.691	4.95
+interactive short 5.2	timeout 10000 void simple	103	10.187	10.187	9.511	5.093
+interactive short 5.2	timeout 10000 void	103	10.587	10.587	11.847	5.293
+interactive short 5.2	timeout 10000	103	9.604	9.604	10.337	4.802
+interactive short 5.2	timeout 20000 void simple	103	9.482	9.482	10.184	4.741
+interactive short 5.2	timeout 20000 void	103	9.725	9.725	8.798	4.862
+interactive short 5.2	timeout 20000	103	9.856	9.856	10.115	4.928
+interactive short 5.0	baseline	40	8.357	8.357	8.725	4.178
+interactive short 5.0	cardinality once void simple	40	8.302	8.302	8.318	4.151
+interactive short 5.0	cardinality once void	40	8.248	8.248	8.139	4.124
+interactive short 5.0	cardinality once	40	8.281	8.281	8.305	4.141
+interactive short 5.0	cardinality unlimited void simple	40	8.478	8.478	8.079	4.239
+interactive short 5.0	cardinality unlimited void	40	8.362	8.362	8.291	4.181
+interactive short 5.0	cardinality unlimited	40	8.121	8.121	8.3	4.061
+interactive short 5.0	overhead simple	40	8.425	8.425	8.047	4.213
+interactive short 5.0	overhead	40	8.205	8.205	8.527	4.103
+interactive short 5.0	timeout 100 void simple	0			0	
+interactive short 5.0	timeout 100 void	0			0	
+interactive short 5.0	timeout 100	0			0	
+interactive short 5.0	timeout 1000 void simple	24	7.699	7.699	7.484	3.849
+interactive short 5.0	timeout 1000 void	28	7.804	7.804	7.977	3.902
+interactive short 5.0	timeout 1000	31	7.798	7.798	7.618	3.899
+interactive short 5.0	timeout 2000 void simple	40	8.231	8.231	7.867	4.115
+interactive short 5.0	timeout 2000 void	40	8.057	8.057	8.198	4.029
+interactive short 5.0	timeout 2000	40	8.219	8.219	8.222	4.109
+interactive short 5.0	timeout 5000 void simple	40	8.093	8.093	8.081	4.046
+interactive short 5.0	timeout 5000 void	40	8.073	8.073	8.422	4.037
+interactive short 5.0	timeout 5000	40	8.149	8.149	8.893	4.074
+interactive short 5.0	timeout 10000 void simple	40	8.263	8.263	8.181	4.131
+interactive short 5.0	timeout 10000 void	40	8.229	8.229	8.218	4.114
+interactive short 5.0	timeout 10000	40	8.517	8.517	8.37	4.258
+interactive short 5.0	timeout 20000 void simple	40	8.507	8.507	7.958	4.253
+interactive short 5.0	timeout 20000 void	40	8.233	8.233	8.281	4.117
+interactive short 5.0	timeout 20000	40	8.176	8.176	8.436	4.088
+interactive short 5.1	baseline	39	8.146	8.146	8.463	4.073
+interactive short 5.1	cardinality once void simple	39	8.145	8.145	8.269	4.072
+interactive short 5.1	cardinality once void	39	8.146	8.146	8.09	4.073
+interactive short 5.1	cardinality once	39	8.416	8.416	8.499	4.208
+interactive short 5.1	cardinality unlimited void simple	39	8.117	8.117	7.614	4.059
+interactive short 5.1	cardinality unlimited void	39	8.301	8.301	8.339	4.151
+interactive short 5.1	cardinality unlimited	39	8.307	8.307	8.459	4.154
+interactive short 5.1	overhead simple	39	8.348	8.348	8.485	4.174
+interactive short 5.1	overhead	39	8.32	8.32	8.525	4.16
+interactive short 5.1	timeout 100 void simple	0			0	
+interactive short 5.1	timeout 100 void	0			0	
+interactive short 5.1	timeout 100	0			0	
+interactive short 5.1	timeout 1000 void simple	30	7.926	7.926	7.587	3.963
+interactive short 5.1	timeout 1000 void	34	7.969	7.969	8.182	3.985
+interactive short 5.1	timeout 1000	27	7.673	7.673	7.545	3.837
+interactive short 5.1	timeout 2000 void simple	39	8.063	8.063	8.132	4.032
+interactive short 5.1	timeout 2000 void	39	8.331	8.331	8.462	4.165
+interactive short 5.1	timeout 2000	39	8.193	8.193	7.972	4.096
+interactive short 5.1	timeout 5000 void simple	39	8.316	8.316	7.966	4.158
+interactive short 5.1	timeout 5000 void	39	8.267	8.267	8.218	4.133
+interactive short 5.1	timeout 5000	39	8.083	8.083	7.976	4.042
+interactive short 5.1	timeout 10000 void simple	39	8.221	8.221	8.351	4.111
+interactive short 5.1	timeout 10000 void	39	8.643	8.643	9.004	4.322
+interactive short 5.1	timeout 10000	39	8.51	8.51	8.543	4.255
+interactive short 5.1	timeout 20000 void simple	39	7.749	7.749	8.475	3.874
+interactive short 5.1	timeout 20000 void	39	8.239	8.239	8.58	4.12
+interactive short 5.1	timeout 20000	39	8.344	8.344	8.535	4.172
+interactive short 5.4	baseline	53	9.304	9.304	9.099	4.652
+interactive short 5.4	cardinality once void simple	53	9.098	9.098	8.044	4.549
+interactive short 5.4	cardinality once void	53	8.699	8.699	9.113	4.349
+interactive short 5.4	cardinality once	53	9.271	9.271	9.159	4.636
+interactive short 5.4	cardinality unlimited void simple	53	8.092	8.092	9.385	4.046
+interactive short 5.4	cardinality unlimited void	53	8.841	8.841	9.927	4.42
+interactive short 5.4	cardinality unlimited	53	9.173	9.173	9.165	4.587
+interactive short 5.4	overhead simple	53	8.636	8.636	8.167	4.318
+interactive short 5.4	overhead	53	8.95	8.95	9.356	4.475
+interactive short 5.4	timeout 100 void simple	0			0	
+interactive short 5.4	timeout 100 void	0			0	
+interactive short 5.4	timeout 100	0			0	
+interactive short 5.4	timeout 1000 void simple	0			0	
+interactive short 5.4	timeout 1000 void	0			0	
+interactive short 5.4	timeout 1000	0			0	
+interactive short 5.4	timeout 2000 void simple	0			0	
+interactive short 5.4	timeout 2000 void	0			0	
+interactive short 5.4	timeout 2000	0			0	
+interactive short 5.4	timeout 5000 void simple	53	8.449	8.449	9.1	4.224
+interactive short 5.4	timeout 5000 void	53	9.458	9.458	9.529	4.729
+interactive short 5.4	timeout 5000	53	8.89	8.89	9.473	4.445
+interactive short 5.4	timeout 10000 void simple	53	8.996	8.996	9.205	4.498
+interactive short 5.4	timeout 10000 void	53	9.349	9.349	9.336	4.675
+interactive short 5.4	timeout 10000	38	8.451	8.451	7.9	4.226
+interactive short 5.4	timeout 20000 void simple	53	8.919	8.919	8.991	4.46
+interactive short 5.4	timeout 20000 void	53	9.265	9.265	8.95	4.633
+interactive short 5.4	timeout 20000	53	8.994	8.994	9.32	4.497
+interactive short 5.3	baseline	38	7.796	7.796	7.893	3.898
+interactive short 5.3	cardinality once void simple	38	7.791	7.791	8.0	3.896
+interactive short 5.3	cardinality once void	38	7.834	7.834	7.92	3.917
+interactive short 5.3	cardinality once	38	7.899	7.899	8.013	3.95
+interactive short 5.3	cardinality unlimited void simple	38	7.843	7.843	8.268	3.921
+interactive short 5.3	cardinality unlimited void	38	8.124	8.124	8.041	4.062
+interactive short 5.3	cardinality unlimited	38	8.039	8.039	8.109	4.019
+interactive short 5.3	overhead simple	38	7.928	7.928	7.83	3.964
+interactive short 5.3	overhead	38	8.036	8.036	7.789	4.018
+interactive short 5.3	timeout 100 void simple	0			0	
+interactive short 5.3	timeout 100 void	0			0	
+interactive short 5.3	timeout 100	0			0	
+interactive short 5.3	timeout 1000 void simple	35	7.584	7.584	7.669	3.792
+interactive short 5.3	timeout 1000 void	32	7.365	7.365	7.313	3.683
+interactive short 5.3	timeout 1000	32	7.433	7.433	7.504	3.716
+interactive short 5.3	timeout 2000 void simple	38	7.857	7.857	8.463	3.929
+interactive short 5.3	timeout 2000 void	38	8.34	8.34	7.982	4.17
+interactive short 5.3	timeout 2000	38	8.145	8.145	7.923	4.072
+interactive short 5.3	timeout 5000 void simple	38	8.195	8.195	7.883	4.098
+interactive short 5.3	timeout 5000 void	38	8.074	8.074	7.716	4.037
+interactive short 5.3	timeout 5000	38	7.955	7.955	7.848	3.978
+interactive short 5.3	timeout 10000 void simple	38	7.918	7.918	8.233	3.959
+interactive short 5.3	timeout 10000 void	38	8.139	8.139	8.104	4.069
+interactive short 5.3	timeout 10000	38	7.812	7.812	7.571	3.906
+interactive short 5.3	timeout 20000 void simple	38	8.025	8.025	7.791	4.013
+interactive short 5.3	timeout 20000 void	38	8.004	8.004	7.764	4.002
+interactive short 5.3	timeout 20000	38	7.828	7.828	8.037	3.914
+interactive short 6.0	baseline	0			0	
+interactive short 6.0	cardinality once void simple	0			0	
+interactive short 6.0	cardinality once void	0			0	
+interactive short 6.0	cardinality once	0			0	
+interactive short 6.0	cardinality unlimited void simple	0			0	
+interactive short 6.0	cardinality unlimited void	0			0	
+interactive short 6.0	cardinality unlimited	0			0	
+interactive short 6.0	overhead simple	0			0	
+interactive short 6.0	overhead	0			0	
+interactive short 6.0	timeout 100 void simple	0			0	
+interactive short 6.0	timeout 100 void	0			0	
+interactive short 6.0	timeout 100	0			0	
+interactive short 6.0	timeout 1000 void simple	0			0	
+interactive short 6.0	timeout 1000 void	0			0	
+interactive short 6.0	timeout 1000	0			0	
+interactive short 6.0	timeout 2000 void simple	0			0	
+interactive short 6.0	timeout 2000 void	0			0	
+interactive short 6.0	timeout 2000	0			0	
+interactive short 6.0	timeout 5000 void simple	0			0	
+interactive short 6.0	timeout 5000 void	0			0	
+interactive short 6.0	timeout 5000	0			0	
+interactive short 6.0	timeout 10000 void simple	0			0	
+interactive short 6.0	timeout 10000 void	0			0	
+interactive short 6.0	timeout 10000	0			0	
+interactive short 6.0	timeout 20000 void simple	0			0	
+interactive short 6.0	timeout 20000 void	0			0	
+interactive short 6.0	timeout 20000	0			0	
+interactive short 6.1	baseline	0			0	
+interactive short 6.1	cardinality once void simple	0			0	
+interactive short 6.1	cardinality once void	0			0	
+interactive short 6.1	cardinality once	0			0	
+interactive short 6.1	cardinality unlimited void simple	0			0	
+interactive short 6.1	cardinality unlimited void	0			0	
+interactive short 6.1	cardinality unlimited	0			0	
+interactive short 6.1	overhead simple	0			0	
+interactive short 6.1	overhead	0			0	
+interactive short 6.1	timeout 100 void simple	0			0	
+interactive short 6.1	timeout 100 void	0			0	
+interactive short 6.1	timeout 100	0			0	
+interactive short 6.1	timeout 1000 void simple	0			0	
+interactive short 6.1	timeout 1000 void	0			0	
+interactive short 6.1	timeout 1000	0			0	
+interactive short 6.1	timeout 2000 void simple	0			0	
+interactive short 6.1	timeout 2000 void	0			0	
+interactive short 6.1	timeout 2000	4957	53.792	53.792	60.218	26.896
+interactive short 6.1	timeout 5000 void simple	0			0	
+interactive short 6.1	timeout 5000 void	0			0	
+interactive short 6.1	timeout 5000	0			0	
+interactive short 6.1	timeout 10000 void simple	0			0	
+interactive short 6.1	timeout 10000 void	0			0	
+interactive short 6.1	timeout 10000	0			0	
+interactive short 6.1	timeout 20000 void simple	0			0	
+interactive short 6.1	timeout 20000 void	0			0	
+interactive short 6.1	timeout 20000	0			0	
+interactive short 6.2	baseline	0			0	
+interactive short 6.2	cardinality once void simple	0			0	
+interactive short 6.2	cardinality once void	0			0	
+interactive short 6.2	cardinality once	0			0	
+interactive short 6.2	cardinality unlimited void simple	0			0	
+interactive short 6.2	cardinality unlimited void	0			0	
+interactive short 6.2	cardinality unlimited	0			0	
+interactive short 6.2	overhead simple	0			0	
+interactive short 6.2	overhead	0			0	
+interactive short 6.2	timeout 100 void simple	0			0	
+interactive short 6.2	timeout 100 void	0			0	
+interactive short 6.2	timeout 100	0			0	
+interactive short 6.2	timeout 1000 void simple	0			0	
+interactive short 6.2	timeout 1000 void	0			0	
+interactive short 6.2	timeout 1000	0			0	
+interactive short 6.2	timeout 2000 void simple	0			0	
+interactive short 6.2	timeout 2000 void	0			0	
+interactive short 6.2	timeout 2000	0			0	
+interactive short 6.2	timeout 5000 void simple	0			0	
+interactive short 6.2	timeout 5000 void	0			0	
+interactive short 6.2	timeout 5000	0			0	
+interactive short 6.2	timeout 10000 void simple	0			0	
+interactive short 6.2	timeout 10000 void	0			0	
+interactive short 6.2	timeout 10000	0			0	
+interactive short 6.2	timeout 20000 void simple	0			0	
+interactive short 6.2	timeout 20000 void	0			0	
+interactive short 6.2	timeout 20000	0			0	
+interactive short 6.3	baseline	0			0	
+interactive short 6.3	cardinality once void simple	0			0	
+interactive short 6.3	cardinality once void	0			0	
+interactive short 6.3	cardinality once	0			0	
+interactive short 6.3	cardinality unlimited void simple	0			0	
+interactive short 6.3	cardinality unlimited void	0			0	
+interactive short 6.3	cardinality unlimited	0			0	
+interactive short 6.3	overhead simple	0			0	
+interactive short 6.3	overhead	0			0	
+interactive short 6.3	timeout 100 void simple	0			0	
+interactive short 6.3	timeout 100 void	0			0	
+interactive short 6.3	timeout 100	0			0	
+interactive short 6.3	timeout 1000 void simple	0			0	
+interactive short 6.3	timeout 1000 void	0			0	
+interactive short 6.3	timeout 1000	0			0	
+interactive short 6.3	timeout 2000 void simple	0			0	
+interactive short 6.3	timeout 2000 void	0			0	
+interactive short 6.3	timeout 2000	0			0	
+interactive short 6.3	timeout 5000 void simple	0			0	
+interactive short 6.3	timeout 5000 void	0			0	
+interactive short 6.3	timeout 5000	0			0	
+interactive short 6.3	timeout 10000 void simple	0			0	
+interactive short 6.3	timeout 10000 void	0			0	
+interactive short 6.3	timeout 10000	0			0	
+interactive short 6.3	timeout 20000 void simple	0			0	
+interactive short 6.3	timeout 20000 void	0			0	
+interactive short 6.3	timeout 20000	0			0	
+interactive short 7.4	baseline	0			0	
+interactive short 7.4	cardinality once void simple	0			0	
+interactive short 7.4	cardinality once void	0			0	
+interactive short 7.4	cardinality once	0			0	
+interactive short 7.4	cardinality unlimited void simple	0			0	
+interactive short 7.4	cardinality unlimited void	0			0	
+interactive short 7.4	cardinality unlimited	0			0	
+interactive short 7.4	overhead simple	0			0	
+interactive short 7.4	overhead	0			0	
+interactive short 7.4	timeout 100 void simple	0			0	
+interactive short 7.4	timeout 100 void	0			0	
+interactive short 7.4	timeout 100	0			0	
+interactive short 7.4	timeout 1000 void simple	0			0	
+interactive short 7.4	timeout 1000 void	0			0	
+interactive short 7.4	timeout 1000	0			0	
+interactive short 7.4	timeout 2000 void simple	0			0	
+interactive short 7.4	timeout 2000 void	0			0	
+interactive short 7.4	timeout 2000	0			0	
+interactive short 7.4	timeout 5000 void simple	0			0	
+interactive short 7.4	timeout 5000 void	0			0	
+interactive short 7.4	timeout 5000	0			0	
+interactive short 7.4	timeout 10000 void simple	0			0	
+interactive short 7.4	timeout 10000 void	0			0	
+interactive short 7.4	timeout 10000	0			0	
+interactive short 7.4	timeout 20000 void simple	0			0	
+interactive short 7.4	timeout 20000 void	0			0	
+interactive short 7.4	timeout 20000	0			0	
+interactive short 7.3	baseline	0			0	
+interactive short 7.3	cardinality once void simple	0			0	
+interactive short 7.3	cardinality once void	0			0	
+interactive short 7.3	cardinality once	0			0	
+interactive short 7.3	cardinality unlimited void simple	0			0	
+interactive short 7.3	cardinality unlimited void	0			0	
+interactive short 7.3	cardinality unlimited	0			0	
+interactive short 7.3	overhead simple	0			0	
+interactive short 7.3	overhead	0			0	
+interactive short 7.3	timeout 100 void simple	0			0	
+interactive short 7.3	timeout 100 void	0			0	
+interactive short 7.3	timeout 100	0			0	
+interactive short 7.3	timeout 1000 void simple	0			0	
+interactive short 7.3	timeout 1000 void	0			0	
+interactive short 7.3	timeout 1000	0			0	
+interactive short 7.3	timeout 2000 void simple	0			0	
+interactive short 7.3	timeout 2000 void	0			0	
+interactive short 7.3	timeout 2000	0			0	
+interactive short 7.3	timeout 5000 void simple	0			0	
+interactive short 7.3	timeout 5000 void	0			0	
+interactive short 7.3	timeout 5000	0			0	
+interactive short 7.3	timeout 10000 void simple	0			0	
+interactive short 7.3	timeout 10000 void	0			0	
+interactive short 7.3	timeout 10000	0			0	
+interactive short 7.3	timeout 20000 void simple	0			0	
+interactive short 7.3	timeout 20000 void	0			0	
+interactive short 7.3	timeout 20000	0			0	
+interactive short 6.4	baseline	0			0	
+interactive short 6.4	cardinality once void simple	0			0	
+interactive short 6.4	cardinality once void	0			0	
+interactive short 6.4	cardinality once	0			0	
+interactive short 6.4	cardinality unlimited void simple	0			0	
+interactive short 6.4	cardinality unlimited void	0			0	
+interactive short 6.4	cardinality unlimited	0			0	
+interactive short 6.4	overhead simple	0			0	
+interactive short 6.4	overhead	0			0	
+interactive short 6.4	timeout 100 void simple	0			0	
+interactive short 6.4	timeout 100 void	0			0	
+interactive short 6.4	timeout 100	0			0	
+interactive short 6.4	timeout 1000 void simple	0			0	
+interactive short 6.4	timeout 1000 void	0			0	
+interactive short 6.4	timeout 1000	0			0	
+interactive short 6.4	timeout 2000 void simple	0			0	
+interactive short 6.4	timeout 2000 void	0			0	
+interactive short 6.4	timeout 2000	0			0	
+interactive short 6.4	timeout 5000 void simple	0			0	
+interactive short 6.4	timeout 5000 void	0			0	
+interactive short 6.4	timeout 5000	0			0	
+interactive short 6.4	timeout 10000 void simple	0			0	
+interactive short 6.4	timeout 10000 void	0			0	
+interactive short 6.4	timeout 10000	0			0	
+interactive short 6.4	timeout 20000 void simple	0			0	
+interactive short 6.4	timeout 20000 void	0			0	
+interactive short 6.4	timeout 20000	0			0	
+interactive short 7.2	baseline	0			0	
+interactive short 7.2	cardinality once void simple	0			0	
+interactive short 7.2	cardinality once void	0			0	
+interactive short 7.2	cardinality once	0			0	
+interactive short 7.2	cardinality unlimited void simple	0			0	
+interactive short 7.2	cardinality unlimited void	0			0	
+interactive short 7.2	cardinality unlimited	0			0	
+interactive short 7.2	overhead simple	0			0	
+interactive short 7.2	overhead	0			0	
+interactive short 7.2	timeout 100 void simple	0			0	
+interactive short 7.2	timeout 100 void	0			0	
+interactive short 7.2	timeout 100	0			0	
+interactive short 7.2	timeout 1000 void simple	0			0	
+interactive short 7.2	timeout 1000 void	0			0	
+interactive short 7.2	timeout 1000	0			0	
+interactive short 7.2	timeout 2000 void simple	0			0	
+interactive short 7.2	timeout 2000 void	0			0	
+interactive short 7.2	timeout 2000	0			0	
+interactive short 7.2	timeout 5000 void simple	0			0	
+interactive short 7.2	timeout 5000 void	0			0	
+interactive short 7.2	timeout 5000	0			0	
+interactive short 7.2	timeout 10000 void simple	0			0	
+interactive short 7.2	timeout 10000 void	0			0	
+interactive short 7.2	timeout 10000	0			0	
+interactive short 7.2	timeout 20000 void simple	0			0	
+interactive short 7.2	timeout 20000 void	0			0	
+interactive short 7.2	timeout 20000	0			0	
+interactive short 7.1	baseline	0			0	
+interactive short 7.1	cardinality once void simple	0			0	
+interactive short 7.1	cardinality once void	0			0	
+interactive short 7.1	cardinality once	0			0	
+interactive short 7.1	cardinality unlimited void simple	0			0	
+interactive short 7.1	cardinality unlimited void	0			0	
+interactive short 7.1	cardinality unlimited	0			0	
+interactive short 7.1	overhead simple	0			0	
+interactive short 7.1	overhead	0			0	
+interactive short 7.1	timeout 100 void simple	0			0	
+interactive short 7.1	timeout 100 void	0			0	
+interactive short 7.1	timeout 100	0			0	
+interactive short 7.1	timeout 1000 void simple	0			0	
+interactive short 7.1	timeout 1000 void	0			0	
+interactive short 7.1	timeout 1000	0			0	
+interactive short 7.1	timeout 2000 void simple	0			0	
+interactive short 7.1	timeout 2000 void	0			0	
+interactive short 7.1	timeout 2000	0			0	
+interactive short 7.1	timeout 5000 void simple	0			0	
+interactive short 7.1	timeout 5000 void	0			0	
+interactive short 7.1	timeout 5000	0			0	
+interactive short 7.1	timeout 10000 void simple	0			0	
+interactive short 7.1	timeout 10000 void	0			0	
+interactive short 7.1	timeout 10000	0			0	
+interactive short 7.1	timeout 20000 void simple	0			0	
+interactive short 7.1	timeout 20000 void	0			0	
+interactive short 7.1	timeout 20000	0			0	
+interactive short 7.0	baseline	0			0	
+interactive short 7.0	cardinality once void simple	0			0	
+interactive short 7.0	cardinality once void	0			0	
+interactive short 7.0	cardinality once	0			0	
+interactive short 7.0	cardinality unlimited void simple	0			0	
+interactive short 7.0	cardinality unlimited void	0			0	
+interactive short 7.0	cardinality unlimited	0			0	
+interactive short 7.0	overhead simple	0			0	
+interactive short 7.0	overhead	0			0	
+interactive short 7.0	timeout 100 void simple	0			0	
+interactive short 7.0	timeout 100 void	0			0	
+interactive short 7.0	timeout 100	0			0	
+interactive short 7.0	timeout 1000 void simple	0			0	
+interactive short 7.0	timeout 1000 void	0			0	
+interactive short 7.0	timeout 1000	0			0	
+interactive short 7.0	timeout 2000 void simple	0			0	
+interactive short 7.0	timeout 2000 void	0			0	
+interactive short 7.0	timeout 2000	0			0	
+interactive short 7.0	timeout 5000 void simple	0			0	
+interactive short 7.0	timeout 5000 void	0			0	
+interactive short 7.0	timeout 5000	0			0	
+interactive short 7.0	timeout 10000 void simple	0			0	
+interactive short 7.0	timeout 10000 void	0			0	
+interactive short 7.0	timeout 10000	0			0	
+interactive short 7.0	timeout 20000 void simple	0			0	
+interactive short 7.0	timeout 20000 void	0			0	
+interactive short 7.0	timeout 20000	0			0	

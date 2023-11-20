@@ -20,6 +20,7 @@ def process_from_path(path: Path) -> Dict[str, Dict[str, Any]] | None:
         with open(result, "r") as result_file:
             data: Dict[str, Any] = loads(result_file.read())
             name, id = data["engine_query"].split("/queries/")[-1].split(".sparql#")
+            timestamps: List[int] = get_result_timestamps(data)
             if (name, id) not in output:
                 output[(name, id)] = {
                     "name": name,
@@ -27,23 +28,34 @@ def process_from_path(path: Path) -> Dict[str, Dict[str, Any]] | None:
                     "results": data["result_count"],
                     "time": round(float(data["time_taken_seconds"]) * 1000),
                     "error": data["engine_timeout_reached"] or data["result_count"] < 1,
-                    "timestamps": get_result_timestamps(data),
+                    "timestamps": timestamps,
+                    "timestampsMin": timestamps,
+                    "timestampsMax": timestamps,
                     "httpRequests": data["requested_urls_count"],
+                    "restarts": len(data["result_data_other"]),
                 }
             else:
                 if data["result_count"] != output[(name, id)]["results"]:
                     output[(name, id)]["error"] = True
                     print(f"Varying number of results for {name} {id}")
                 else:
-                    timestamps: List[int] = get_result_timestamps(data)
                     for i in range(0, len(timestamps)):
                         old_timestamp = output[(name, id)]["timestamps"][i]
                         new_timestamp = round((old_timestamp + timestamps[i]) / 2)
                         output[(name, id)]["timestamps"][i] = new_timestamp
+                        output[(name, id)]["timestampsMin"][i] = min(
+                            old_timestamp, timestamps[i]
+                        )
+                        output[(name, id)]["timestampsMax"][i] = max(
+                            old_timestamp, timestamps[i]
+                        )
+                    restart_count_new = len(data["result_data_other"])
+                    output[(name, id)]["restarts"] = max(
+                        output[(name, id)]["restarts"], restart_count_new
+                    )
     for result in output.values():
-        result["timestamps"] = list(
-            str(round(k / 1000000)) for k in result["timestamps"]
-        )
+        for column in ("timestamps", "timestampsMin", "timestampsMax"):
+            result[column] = list(str(round(k / 1000000)) for k in result[column])
         result["error"] = "true" if result["error"] else "false"
     return output if len(output) > 0 else None
 
@@ -56,7 +68,10 @@ def serialize_processed(data: Dict[str, Dict[str, Any]], path: Path) -> None:
         "time",
         "error",
         "timestamps",
+        "timestampsMin",
+        "timestampsMax",
         "httpRequests",
+        "restarts",
     ]
     csv_sep: str = ";"
     csv_sep_list: str = " "

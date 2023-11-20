@@ -51,7 +51,10 @@ def get_column(
                 if query not in query_config_column:
                     query_config_column[query] = {}
                 if row["error"] == "false":
-                    query_config_column[query][config_name] = converter(row[column])
+                    try:
+                        query_config_column[query][config_name] = converter(row[column])
+                    except KeyError:
+                        query_config_column[query][config_name] = error_value
                 else:
                     query_config_column[query][config_name] = error_value
     # for query in list(query_config_column.keys()):
@@ -77,6 +80,13 @@ def get_http_requests(result_directory: Path) -> Dict[str, Dict[str, int]]:
         return int(column)
 
     return get_column(result_directory, "httpRequests", converter, 0)
+
+
+def get_join_restarts(result_directory: Path) -> Dict[str, Dict[str, int]]:
+    def converter(column: str) -> int:
+        return int(column)
+
+    return get_column(result_directory, "restarts", converter, 0)
 
 
 def get_query_times(result_directory: Path) -> Dict[str, Dict[str, float]]:
@@ -220,6 +230,7 @@ def dump_interesting_metrics(
     timestamps: Dict[str, Dict[str, List[float]]],
     query_times: Dict[str, Dict[str, float]],
     requests: Dict[str, Dict[str, int]],
+    restarts: Dict[str, Dict[str, int]],
     file_path: Path,
 ) -> None:
     columns: List[str] = [
@@ -230,6 +241,7 @@ def dump_interesting_metrics(
         "last",
         "termination",
         "diefficiency",
+        "restarts",
     ]
     csv_sep: str = "\t"
     with open(file_path, "w") as metrics_file:
@@ -249,6 +261,7 @@ def dump_interesting_metrics(
                             dief_k_full(config_timestamps)
                             if len(config_timestamps)
                             else "",
+                            restarts[query][config],
                         )
                     )
                     + "\n"
@@ -283,6 +296,7 @@ def plot_all_results(prefix: str | None) -> None:
             ),
         )
         http_requests = get_http_requests(result_directory)
+        join_restarts = get_join_restarts(result_directory)
         plot_http_requests(
             filter_by_prefix(prefix, http_requests),
             result_directory.joinpath(
@@ -293,6 +307,7 @@ def plot_all_results(prefix: str | None) -> None:
             filter_by_prefix(prefix, timestamps),
             filter_by_prefix(prefix, query_terminations),
             filter_by_prefix(prefix, http_requests),
+            filter_by_prefix(prefix, join_restarts),
             result_directory.joinpath(f'metrics-{prefix or "all"}.tsv'),
         )
 

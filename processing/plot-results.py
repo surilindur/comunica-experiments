@@ -2,7 +2,7 @@ from pathlib import Path
 from csv import DictReader
 from sys import argv
 from typing import Tuple, Dict, List, Set, Any, Callable
-from math import sqrt, ceil
+from math import sqrt, ceil, floor
 from numpy import arange
 from matplotlib import rcParams
 from matplotlib.axes import Axes
@@ -114,8 +114,8 @@ def plot_timestamps(
     step_not_line: bool = True,
 ) -> None:
     fig: Figure = figure(dpi=300)
-    rows: int = int(ceil(sqrt(len(timestamps))))
-    cols: int = int(ceil(len(timestamps) / rows))
+    rows: int = floor(sqrt(len(timestamps)))
+    cols: int = ceil(len(timestamps) / rows)
     print("Plotting into", cols, "x", rows, "grid")
     colors: Dict[str, Tuple[float, float, float, float]] = get_colors(timestamps)
     subplot_index: int = 0
@@ -179,17 +179,19 @@ def plot_timestamps(
         ax.xaxis.set_major_locator(MaxNLocator(integer=True))
         ax.yaxis.set_major_locator(MaxNLocator(integer=True))
         handles, labels = ax.get_legend_handles_labels()
-    fig.legend(
+    lgd = fig.legend(
         handles=handles,
         labels=labels,
-        bbox_to_anchor=(0.9, 0.05),
-        loc="lower right",
+        # bbox_to_anchor=(0.9, 0.05),
+        bbox_to_anchor=(0.5, 0),
+        # loc="lower right",
+        loc="upper center",
         ncols=int(sqrt(len(labels))),
         frameon=False,
     )
     fig.set_size_inches(cols * COLUMN_INCHES, rows * ROW_INCHES)
     fig.tight_layout(pad=1, h_pad=1, w_pad=1)
-    fig.savefig(figure_path)
+    fig.savefig(figure_path, bbox_extra_artists=(lgd,), bbox_inches="tight")
 
 
 def plot_http_requests(requests: Dict[str, Dict[str, int]], figure_path: Path) -> None:
@@ -279,18 +281,25 @@ def dump_interesting_metrics(
                 )
 
 
-def filter_by_prefix(
-    prefix: str | None, dictionary: Dict[str, Dict[str, Any]]
+def filter_data(
+    config_prefix: str | None = None,
+    query_prefixes: List[str] | None = None,
+    dictionary: Dict[str, Dict[str, Any]] = {},
 ) -> Dict[str, Dict[str, Any]]:
-    if prefix:
-        for query_data in dictionary.values():
-            for config in list(query_data.keys()):
-                if (
-                    not config.startswith("baseline")
-                    and not config.startswith("overhead")
-                    and not config.startswith(prefix)
-                ):
-                    del query_data[config]
+    # if not query_prefixes:
+    #    query_prefixes = ["interactive discover 8.0", "interactive discover 2.3"]
+    if query_prefixes or config_prefix:
+        for query, query_data in list(dictionary.items()):
+            if query_prefixes and not any(query.startswith(p) for p in query_prefixes):
+                del dictionary[query]
+            elif config_prefix:
+                for config in list(query_data.keys()):
+                    if (
+                        not config.startswith("baseline")
+                        and not config.startswith("overhead")
+                        and not config.startswith(config_prefix)
+                    ):
+                        del query_data[config]
     return dictionary
 
 
@@ -300,26 +309,25 @@ def plot_all_results(prefix: str | None) -> None:
         timestamps = get_timestamps(result_directory)
         query_terminations = get_query_times(result_directory)
         plot_timestamps(
-            filter_by_prefix(prefix, timestamps),
-            filter_by_prefix(prefix, query_terminations),
+            filter_data(config_prefix=prefix, dictionary=timestamps),
+            filter_data(config_prefix=prefix, dictionary=query_terminations),
             result_directory.joinpath(
                 f'timestamps-{prefix or "all"}.{IMAGE_EXTENSION}'
             ),
-            step_not_line=False,
         )
         http_requests = get_http_requests(result_directory)
         join_restarts = get_join_restarts(result_directory)
         plot_http_requests(
-            filter_by_prefix(prefix, http_requests),
+            filter_data(config_prefix=prefix, dictionary=http_requests),
             result_directory.joinpath(
                 f'httprequests-{prefix or "all"}.{IMAGE_EXTENSION}'
             ),
         )
         dump_interesting_metrics(
-            filter_by_prefix(prefix, timestamps),
-            filter_by_prefix(prefix, query_terminations),
-            filter_by_prefix(prefix, http_requests),
-            filter_by_prefix(prefix, join_restarts),
+            filter_data(config_prefix=prefix, dictionary=timestamps),
+            filter_data(config_prefix=prefix, dictionary=query_terminations),
+            filter_data(config_prefix=prefix, dictionary=http_requests),
+            filter_data(config_prefix=prefix, dictionary=join_restarts),
             result_directory.joinpath(f'metrics-{prefix or "all"}.tsv'),
         )
 

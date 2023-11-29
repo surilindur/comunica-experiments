@@ -111,6 +111,7 @@ def plot_timestamps(
     timestamps: Dict[str, Dict[str, List[float]]],
     query_times: Dict[str, Dict[str, float]],
     figure_path: Path,
+    step_not_line: bool = True,
 ) -> None:
     fig: Figure = figure(dpi=300)
     rows: int = int(ceil(sqrt(len(timestamps))))
@@ -125,15 +126,25 @@ def plot_timestamps(
         for config, config_timestamps in sorted(query_data.items(), key=lambda d: d[0]):
             result_count: int = len(config_timestamps)
             # the result count will have (0, 0) added to the beginning
-            ax.step(
-                x=[0, *config_timestamps],
-                y=range(0, result_count + 1),
-                lw=1,
-                alpha=0.8,
-                where="post",
-                label=config,
-                color=colors[config],
-            )
+            if step_not_line:
+                ax.step(
+                    x=[0, *config_timestamps],
+                    y=range(0, result_count + 1),
+                    lw=1,
+                    alpha=0.8,
+                    where="post",
+                    label=config,
+                    color=colors[config],
+                )
+            else:
+                ax.plot(
+                    [0, *config_timestamps],
+                    range(0, result_count + 1),
+                    lw=1,
+                    alpha=0.8,
+                    label=config,
+                    color=colors[config],
+                )
             ax.plot(
                 query_times[query][config],
                 result_count,
@@ -294,6 +305,7 @@ def plot_all_results(prefix: str | None) -> None:
             result_directory.joinpath(
                 f'timestamps-{prefix or "all"}.{IMAGE_EXTENSION}'
             ),
+            step_not_line=False,
         )
         http_requests = get_http_requests(result_directory)
         join_restarts = get_join_restarts(result_directory)

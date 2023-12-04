@@ -12,6 +12,7 @@ def calculate_data(pods: Path) -> None:
     print(f"Pods path: {pods.as_posix()}")
     PATHS_TO_PROCESS.update(pods.iterdir())
     pod_count: int = len(PATHS_TO_PROCESS)
+    file_count: int = 0
     triple_count: int = 0
     while PATHS_TO_PROCESS:
         path: Path = PATHS_TO_PROCESS.pop()
@@ -25,10 +26,12 @@ def calculate_data(pods: Path) -> None:
             data: Graph = Graph()
             data.parse(path)
             triple_count += len(data)
+            file_count += 1
         else:
             print(f"Skipping: {path.as_posix()}")
-    print(f"Total of {pod_count} with {triple_count} triples")
+    print(f"Total of {pod_count} pods, {file_count} files, {triple_count} triples")
 
 
 if __name__ == "__main__":
     pods_path: Path = Path(argv[1])
+    calculate_data(pods_path)

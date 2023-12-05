@@ -23,6 +23,8 @@ def process_from_path(path: Path) -> Dict[str, Dict[str, Any]] | None:
             name, id = data["engine_query"].split("/queries/")[-1].split(".sparql#")
             timestamps: List[int] = get_result_timestamps(data)
             result_count: int = data["result_count"]
+            http_requests: int = data["requested_urls_count"]
+            restart_count: int = len(data["result_data_other"])
             query_time: float = round(float(data["time_taken_seconds"]) * 1000)
             if (name, id) not in output:
                 output[(name, id)] = {
@@ -39,8 +41,12 @@ def process_from_path(path: Path) -> Dict[str, Dict[str, Any]] | None:
                     "timestamps": timestamps,
                     "timestampsMin": timestamps,
                     "timestampsMax": timestamps,
-                    "httpRequests": data["requested_urls_count"],
-                    "restarts": len(data["result_data_other"]),
+                    "httpRequests": http_requests,
+                    "httpRequestsMin": http_requests,
+                    "httpRequestsMax": http_requests,
+                    "restarts": restart_count,
+                    "restartsMin": restart_count,
+                    "restartsMax": restart_count,
                 }
             else:
                 output_name_id = output[(name, id)]
@@ -58,8 +64,23 @@ def process_from_path(path: Path) -> Dict[str, Dict[str, Any]] | None:
                 output_name_id["timeout"] = (
                     output_name_id["timeout"] and data["engine_timeout_reached"]
                 )
-                output_name_id["restarts"] = max(
-                    len(data["result_data_other"]), output_name_id["restarts"]
+                output_name_id["restarts"] = mean(
+                    (restart_count, output_name_id["restarts"])
+                )
+                output_name_id["restartsMin"] = min(
+                    restart_count, output_name_id["restartsMin"]
+                )
+                output_name_id["restartsMax"] = max(
+                    restart_count, output_name_id["restartsMax"]
+                )
+                output_name_id["httpRequests"] = mean(
+                    (http_requests, output_name_id["httpRequests"])
+                )
+                output_name_id["httpRequestsMin"] = min(
+                    http_requests, output_name_id["httpRequestsMin"]
+                )
+                output_name_id["httpRequestsMax"] = max(
+                    http_requests, output_name_id["httpRequestsMax"]
                 )
                 if result_count > previous_result_count:
                     print(f"Increased number of results for {name}-{id}")
@@ -80,6 +101,21 @@ def process_from_path(path: Path) -> Dict[str, Dict[str, Any]] | None:
     for result in output.values():
         for column in ("timestamps", "timestampsMin", "timestampsMax"):
             result[column] = list(str(round(k / 1000000)) for k in result[column])
+        for column in (
+            "time",
+            "timeMin",
+            "timeMax",
+            "results",
+            "resultsMin",
+            "resultsMax",
+            "httpRequests",
+            "httpRequestsMin",
+            "httpRequestsMax",
+            "restarts",
+            "restartsMin",
+            "restartsMax",
+        ):
+            result[column] = int(result[column])
         result["error"] = "true" if result["results"] < 1 else "false"
         result["timeout"] = "true" if result["timeout"] else "false"
     return output if len(output) > 0 else None
@@ -91,6 +127,8 @@ def serialize_processed(data: Dict[str, Dict[str, Any]], path: Path) -> None:
         "id",
         "error",
         "time",
+        "timeMin",
+        "timeMax",
         "timeout",
         "results",
         "resultsMin",
@@ -99,7 +137,11 @@ def serialize_processed(data: Dict[str, Dict[str, Any]], path: Path) -> None:
         "timestampsMin",
         "timestampsMax",
         "httpRequests",
+        "httpRequestsMin",
+        "httpRequestsMax",
         "restarts",
+        "restartsMin",
+        "restartsMax",
     ]
     csv_sep: str = ";"
     csv_sep_list: str = " "

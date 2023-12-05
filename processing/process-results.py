@@ -1,5 +1,6 @@
 from json import loads
 from pathlib import Path
+from statistics import mean
 from typing import Tuple, List, Dict, Any
 
 
@@ -21,13 +22,20 @@ def process_from_path(path: Path) -> Dict[str, Dict[str, Any]] | None:
             data: Dict[str, Any] = loads(result_file.read())
             name, id = data["engine_query"].split("/queries/")[-1].split(".sparql#")
             timestamps: List[int] = get_result_timestamps(data)
+            result_count: int = data["result_count"]
+            query_time: float = round(float(data["time_taken_seconds"]) * 1000)
             if (name, id) not in output:
                 output[(name, id)] = {
                     "name": name,
                     "id": id,
-                    "results": data["result_count"],
-                    "time": round(float(data["time_taken_seconds"]) * 1000),
-                    "error": data["engine_timeout_reached"] or data["result_count"] < 1,
+                    "error": False,
+                    "time": query_time,
+                    "timeMin": query_time,
+                    "timeMax": query_time,
+                    "timeout": data["engine_timeout_reached"],
+                    "results": result_count,
+                    "resultsMin": result_count,
+                    "resultsMax": result_count,
                     "timestamps": timestamps,
                     "timestampsMin": timestamps,
                     "timestampsMax": timestamps,
@@ -35,28 +43,45 @@ def process_from_path(path: Path) -> Dict[str, Dict[str, Any]] | None:
                     "restarts": len(data["result_data_other"]),
                 }
             else:
-                if data["result_count"] != output[(name, id)]["results"]:
-                    output[(name, id)]["error"] = True
-                    print(f"Varying number of results for {name} {id}")
+                output_name_id = output[(name, id)]
+                previous_result_count: int = output_name_id["results"]
+                output_name_id["time"] = mean((query_time, output_name_id["time"]))
+                output_name_id["timeMin"] = min(query_time, output_name_id["timeMin"])
+                output_name_id["timeMax"] = max(query_time, output_name_id["timeMax"])
+                output_name_id["results"] = max(result_count, output_name_id["results"])
+                output_name_id["resultsMin"] = max(
+                    result_count, output_name_id["resultsMin"]
+                )
+                output_name_id["resultsMax"] = max(
+                    result_count, output_name_id["resultsMax"]
+                )
+                output_name_id["timeout"] = (
+                    output_name_id["timeout"] and data["engine_timeout_reached"]
+                )
+                output_name_id["restarts"] = max(
+                    len(data["result_data_other"]), output_name_id["restarts"]
+                )
+                if result_count > previous_result_count:
+                    print(f"Increased number of results for {name}-{id}")
+                    output_name_id["timestamps"] = timestamps
+                    output_name_id["timestampsMin"] = timestamps
+                    output_name_id["timestampsMax"] = timestamps
                 else:
                     for i in range(0, len(timestamps)):
-                        old_timestamp = output[(name, id)]["timestamps"][i]
-                        new_timestamp = round((old_timestamp + timestamps[i]) / 2)
-                        output[(name, id)]["timestamps"][i] = new_timestamp
-                        output[(name, id)]["timestampsMin"][i] = min(
+                        old_timestamp = output_name_id["timestamps"][i]
+                        new_timestamp = mean((old_timestamp, timestamps[i]))
+                        output_name_id["timestamps"][i] = new_timestamp
+                        output_name_id["timestampsMin"][i] = min(
                             old_timestamp, timestamps[i]
                         )
-                        output[(name, id)]["timestampsMax"][i] = max(
+                        output_name_id["timestampsMax"][i] = max(
                             old_timestamp, timestamps[i]
                         )
-                    restart_count_new = len(data["result_data_other"])
-                    output[(name, id)]["restarts"] = max(
-                        output[(name, id)]["restarts"], restart_count_new
-                    )
     for result in output.values():
         for column in ("timestamps", "timestampsMin", "timestampsMax"):
             result[column] = list(str(round(k / 1000000)) for k in result[column])
-        result["error"] = "true" if result["error"] else "false"
+        result["error"] = "true" if result["results"] < 1 else "false"
+        result["timeout"] = "true" if result["timeout"] else "false"
     return output if len(output) > 0 else None
 
 
@@ -64,9 +89,12 @@ def serialize_processed(data: Dict[str, Dict[str, Any]], path: Path) -> None:
     columns: List[str] = [
         "name",
         "id",
-        "results",
-        "time",
         "error",
+        "time",
+        "timeout",
+        "results",
+        "resultsMin",
+        "resultsMax",
         "timestamps",
         "timestampsMin",
         "timestampsMax",

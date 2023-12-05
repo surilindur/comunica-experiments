@@ -62,7 +62,7 @@ def process_from_path(path: Path) -> Dict[str, Dict[str, Any]] | None:
                     result_count, output_name_id["resultsMax"]
                 )
                 output_name_id["timeout"] = (
-                    output_name_id["timeout"] and data["engine_timeout_reached"]
+                    output_name_id["timeout"] or data["engine_timeout_reached"]
                 )
                 output_name_id["restarts"] = mean(
                     (restart_count, output_name_id["restarts"])

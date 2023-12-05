@@ -82,6 +82,13 @@ def get_http_requests(result_directory: Path) -> Dict[str, Dict[str, int]]:
     return get_column(result_directory, "httpRequests", converter, 0)
 
 
+def get_query_errors(result_directory: Path) -> Dict[str, Dict[str, bool]]:
+    def converter(column: str) -> bool:
+        return column == "true"
+
+    return get_column(result_directory, "error", converter, True)
+
+
 def get_join_restarts(result_directory: Path) -> Dict[str, Dict[str, int]]:
     def converter(column: str) -> int:
         return int(column)
@@ -244,14 +251,16 @@ def dump_interesting_metrics(
     query_times: Dict[str, Dict[str, float]],
     requests: Dict[str, Dict[str, int]],
     restarts: Dict[str, Dict[str, int]],
+    errors: Dict[str, Dict[str, bool]],
     file_path: Path,
 ) -> None:
     columns: List[str] = [
         "query",
         "config",
-        "requests",
-        "first",
-        "last",
+        "error",
+        "httprequests",
+        "firstresult",
+        "lastresult",
         "termination",
         "diefficiency",
         "restarts",
@@ -267,6 +276,9 @@ def dump_interesting_metrics(
                         for k in (
                             query,
                             config,
+                            "true"
+                            if errors[query][config] or len(config_timestamps) < 1
+                            else "false",
                             requests[query][config],
                             config_timestamps[0] if len(config_timestamps) else "",
                             config_timestamps[-1] if len(config_timestamps) else "",
@@ -323,11 +335,13 @@ def plot_all_results(prefix: str | None) -> None:
                 f'httprequests-{prefix or "all"}.{IMAGE_EXTENSION}'
             ),
         )
+        query_errors = get_query_errors(result_directory)
         dump_interesting_metrics(
             filter_data(config_prefix=prefix, dictionary=timestamps),
             filter_data(config_prefix=prefix, dictionary=query_terminations),
             filter_data(config_prefix=prefix, dictionary=http_requests),
             filter_data(config_prefix=prefix, dictionary=join_restarts),
+            filter_data(config_prefix=prefix, dictionary=query_errors),
             result_directory.joinpath(f'metrics-{prefix or "all"}.tsv'),
         )
 

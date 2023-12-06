@@ -6,9 +6,9 @@ RUN git clone --depth 1 --branch main --single-branch https://github.com/surilin
 
 WORKDIR /opt/client
 
-RUN git checkout e7df471fb26269cde1f550a50051e84be6995145
+RUN git checkout 2611b3fed112c720ed9b708e8bd79a74f150cf2f
 
-FROM node:21.1.0-alpine
+FROM node:21.4.0
 
 COPY --from=git /opt/client /opt/client
 
@@ -23,9 +23,9 @@ ARG QUERY_TIMEOUT
 ARG MAX_MEMORY
 ARG LOG_LEVEL
 
-ADD $CONFIG_CLIENT current-config.json
+ADD $CONFIG_CLIENT /tmp/engine.json
 
-ENV COMUNICA_CONFIG current-config.json
+ENV COMUNICA_CONFIG /tmp/engine.json
 ENV NODE_ENV production
 ENV NODE_OPTIONS --max-old-space-size=$MAX_MEMORY
 ENV QUERY_TIMEOUT $QUERY_TIMEOUT

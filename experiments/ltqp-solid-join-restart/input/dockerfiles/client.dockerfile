@@ -34,4 +34,4 @@ ENV LOG_LEVEL $LOG_LEVEL
 EXPOSE 3000
 
 ENTRYPOINT []
-CMD [ "/bin/sh", "-c", "node ./bin/http.js --lenient --freshWorker --contextOverride --invalidateCache --workers 1 --context /tmp/context.json --port 3000 --timeout ${QUERY_TIMEOUT} --logLevel ${LOG_LEVEL}" ]
+CMD [ "/bin/sh", "-c", "node ./bin/http.js --lenient --contextOverride --invalidateCache --workers 1 --context /tmp/context.json --port 3000 --timeout ${QUERY_TIMEOUT} --logLevel ${LOG_LEVEL}" ]

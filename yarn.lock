@@ -48,12 +48,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@comunica/actor-abstract-path@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-abstract-path@npm:2.10.0"
+"@comunica/actor-abstract-path@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-abstract-path@npm:2.10.1"
   dependencies:
-    "@comunica/bindings-factory": ^2.10.0
-    "@comunica/bus-query-operation": ^2.10.0
+    "@comunica/bindings-factory": ^2.10.1
+    "@comunica/bus-query-operation": ^2.10.1
     "@comunica/context-entries": ^2.10.0
     "@comunica/core": ^2.10.0
     "@comunica/types": ^2.10.0
@@ -62,7 +62,7 @@ __metadata:
     rdf-data-factory: ^1.1.1
     rdf-string: ^1.6.1
     sparqlalgebrajs: ^4.2.0
-  checksum: dc625a7f2e33f4ace309719ee508eac23459de6d9e2ba2b991763c9bf45f94812dcb441edd92371313e2ceec9abe5ec099826a7cfd59f93e374d52d09ef86008
+  checksum: 70e63912ecd04941b14f8d19d41a117e3fe7cf625f95a12f950e639b7023f368be1d722171be2c9afbcd5441f6b623770ced49eb07a23b7cb5aec1981db28ce6
   languageName: node
   linkType: hard
 
@@ -136,16 +136,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@comunica/actor-http-fetch@npm:^2.0.1, @comunica/actor-http-fetch@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-http-fetch@npm:2.10.0"
+"@comunica/actor-http-fetch@npm:^2.0.1, @comunica/actor-http-fetch@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-http-fetch@npm:2.10.1"
   dependencies:
     "@comunica/bus-http": ^2.10.0
     "@comunica/context-entries": ^2.10.0
     "@comunica/mediatortype-time": ^2.10.0
     abort-controller: ^3.0.0
     cross-fetch: ^4.0.0
-  checksum: 1a4f5d026d344452317ec6c6c8d1f32f9039cccc703d70977d0c97d814e1172147bbd440d82e8e33954c1c3003f787397d1271ab38099dd1674302b20730687c
+  checksum: d2f9dd8f12018dad06f6ff9ca2c94ed004e7030e6694f1a31b8eb6b5e88204feb8ef4ea13fa1471b83e69e3d6e1acfc74adbf73e6391ddbe1bfe1de38d7565e6
   languageName: node
   linkType: hard
 
@@ -174,16 +174,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@comunica/actor-init-query@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-init-query@npm:2.10.0"
+"@comunica/actor-init-query@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-init-query@npm:2.10.1"
   dependencies:
     "@comunica/actor-http-proxy": ^2.10.0
     "@comunica/bus-context-preprocess": ^2.10.0
     "@comunica/bus-http-invalidate": ^2.10.0
     "@comunica/bus-init": ^2.10.0
     "@comunica/bus-optimize-query-operation": ^2.10.0
-    "@comunica/bus-query-operation": ^2.10.0
+    "@comunica/bus-query-operation": ^2.10.1
     "@comunica/bus-query-parse": ^2.10.0
     "@comunica/bus-query-result-serialize": ^2.10.0
     "@comunica/context-entries": ^2.10.0
@@ -204,7 +204,7 @@ __metadata:
   dependenciesMeta:
     process:
       optional: true
-  checksum: a36a96c8a3382a1c425735a937e115fa1c0e3efe90952922f94070d27f3cf0687e625cf1badeb8a49c4861cdbb1f86116c6911fe7c07ac7af1439411c460a47f
+  checksum: c198f7408e39c2d91d9a4d5e7f7fa55fe43b5d4b00752d23cf62eb68a99cfc1ad171f09e9a919dc3415e10c2a846adc401c1fd3c51114eb3e549ab6dd2445394
   languageName: node
   linkType: hard
 
@@ -241,35 +241,35 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@comunica/actor-query-operation-ask@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-query-operation-ask@npm:2.10.0"
+"@comunica/actor-query-operation-ask@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-query-operation-ask@npm:2.10.1"
   dependencies:
-    "@comunica/bus-query-operation": ^2.10.0
+    "@comunica/bus-query-operation": ^2.10.1
     "@comunica/core": ^2.10.0
     "@comunica/types": ^2.10.0
     sparqlalgebrajs: ^4.2.0
-  checksum: 3c32c3632bedd01b1a42fbdb97a6b528ada6df454fb43bbe9bc3cb9a840cf0e0882f1df5925f0d6b6f0719d53cf69fefbcdb3a5899f7fb194ce18f0f3ae11c7b
+  checksum: cf47beb1f1a21452c2baef324c8a6a38c8c0c23bce851ce23882f2107247ab54d1e1bffc2fcf65bf04f73676cb1951de0eec0bd969c692ca691193b4ee5e96a7
   languageName: node
   linkType: hard
 
-"@comunica/actor-query-operation-bgp-join@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-query-operation-bgp-join@npm:2.10.0"
+"@comunica/actor-query-operation-bgp-join@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-query-operation-bgp-join@npm:2.10.1"
   dependencies:
-    "@comunica/bus-query-operation": ^2.10.0
+    "@comunica/bus-query-operation": ^2.10.1
     "@comunica/core": ^2.10.0
     "@comunica/types": ^2.10.0
     sparqlalgebrajs: ^4.2.0
-  checksum: 9ebe2dbe8381d131ec340f4b5001ca7fb2a73aba7f36465502c26355f4741a9fe460a7b9043757720c25839f29a86d6525a6005e73a3dd0438b5bfdf011dc75b
+  checksum: 713d1aaae8e0fe2638229666841ce1feaf313dd47528dad090ef432da84bde5f313b3cdd36ea2d84ddef47b1bdd88bfc3d22f933d55fb086b3adb95ef3fa0d2d
   languageName: node
   linkType: hard
 
-"@comunica/actor-query-operation-construct@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-query-operation-construct@npm:2.10.0"
+"@comunica/actor-query-operation-construct@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-query-operation-construct@npm:2.10.1"
   dependencies:
-    "@comunica/bus-query-operation": ^2.10.0
+    "@comunica/bus-query-operation": ^2.10.1
     "@comunica/core": ^2.10.0
     "@comunica/types": ^2.10.0
     "@rdfjs/types": "*"
@@ -277,86 +277,86 @@ __metadata:
     rdf-data-factory: ^1.1.1
     rdf-terms: ^1.11.0
     sparqlalgebrajs: ^4.2.0
-  checksum: 159f9ed2422575dcea16a8a3514680692b90ec3bb38e09015709c88fa96767541c2c70833810e0ccd09a00f65a1fed2db5104955c03d1e20575ed34d915d0627
+  checksum: e5347fa071ea424b2635f9ee0a76318a9bc3a9221ea1911197b7062272427274d40536150f0159a9992da07984ecf833350492ed35439881cbe15e39cc17e8c3
   languageName: node
   linkType: hard
 
-"@comunica/actor-query-operation-describe-subject@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-query-operation-describe-subject@npm:2.10.0"
+"@comunica/actor-query-operation-describe-subject@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-query-operation-describe-subject@npm:2.10.1"
   dependencies:
-    "@comunica/actor-query-operation-union": ^2.10.0
-    "@comunica/bus-query-operation": ^2.10.0
+    "@comunica/actor-query-operation-union": ^2.10.1
+    "@comunica/bus-query-operation": ^2.10.1
     "@comunica/core": ^2.10.0
     "@comunica/types": ^2.10.0
     asynciterator: ^3.8.1
     rdf-data-factory: ^1.1.1
     sparqlalgebrajs: ^4.2.0
-  checksum: 8ebe0ea5517420a6340a63d53384f007c6dc43d73962facfa5fd4772e788d47033a957e207d792c08ed2bcc4b7f9b69085d8b827939c07008748492ee44e4584
+  checksum: 505d2ea69af388df738df92c6a2966785c0025d202d2ac8c44c98d03e5cef6d581b912106626b2c2621a32149b1bc2ae4e335173207640a6ba6d86214cb12de9
   languageName: node
   linkType: hard
 
-"@comunica/actor-query-operation-distinct-hash@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-query-operation-distinct-hash@npm:2.10.0"
+"@comunica/actor-query-operation-distinct-hash@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-query-operation-distinct-hash@npm:2.10.1"
   dependencies:
     "@comunica/bus-hash-bindings": ^2.10.0
-    "@comunica/bus-query-operation": ^2.10.0
+    "@comunica/bus-query-operation": ^2.10.1
     "@comunica/core": ^2.10.0
     "@comunica/types": ^2.10.0
     sparqlalgebrajs: ^4.2.0
-  checksum: d344a901cbc14f76958967ac3a438cfa2225fdb7cef99ee9b2a31c828b3bad0e59519045c1bd1773595ffaaf15fc4d29c307f5e622cb848ffa8c28e62c797a1f
+  checksum: 6d0e554fe45661ee400c4d521ae9df6b377ee019ce341cf97e615f8b3606ecea5c5dfe0a568d727dcb654650beedfd7205b4b5caa39ce0857fedf974ffa519ff
   languageName: node
   linkType: hard
 
-"@comunica/actor-query-operation-extend@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-query-operation-extend@npm:2.10.0"
+"@comunica/actor-query-operation-extend@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-query-operation-extend@npm:2.10.1"
   dependencies:
-    "@comunica/bindings-factory": ^2.10.0
-    "@comunica/bus-query-operation": ^2.10.0
-    "@comunica/core": ^2.10.0
-    "@comunica/expression-evaluator": ^2.10.0
-    "@comunica/types": ^2.10.0
-    sparqlalgebrajs: ^4.2.0
-  checksum: 01c7a95f4a1805e6ad631c9a1dab5b3f92adc79711739ada63e6e7756fa70e0e425297cc0ad0af67199dc8ec4f782924a17e5dcf5e891297047d33c24c156cf3
-  languageName: node
-  linkType: hard
-
-"@comunica/actor-query-operation-filter-sparqlee@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-query-operation-filter-sparqlee@npm:2.10.0"
-  dependencies:
-    "@comunica/bindings-factory": ^2.10.0
-    "@comunica/bus-query-operation": ^2.10.0
+    "@comunica/bindings-factory": ^2.10.1
+    "@comunica/bus-query-operation": ^2.10.1
     "@comunica/core": ^2.10.0
     "@comunica/expression-evaluator": ^2.10.0
     "@comunica/types": ^2.10.0
     sparqlalgebrajs: ^4.2.0
-  checksum: 08ded9680f51bfaca822a1473f1145e04d26bb945daa12d5175648d071fc80e451450fc13b4bea9b962cbc777efccc7faf11ac9b63c3545f9cc561fb04e6232a
+  checksum: a9d206c094f227c97a3803eba02dd19b4707e77d8c3773ac0b786d1aebc68c18bfee859195d2f6f27c1c0c8bbbeebd23b25f191dfe0dbe4f1323a397c3a88587
   languageName: node
   linkType: hard
 
-"@comunica/actor-query-operation-from-quad@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-query-operation-from-quad@npm:2.10.0"
+"@comunica/actor-query-operation-filter-sparqlee@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-query-operation-filter-sparqlee@npm:2.10.1"
   dependencies:
-    "@comunica/bus-query-operation": ^2.10.0
+    "@comunica/bindings-factory": ^2.10.1
+    "@comunica/bus-query-operation": ^2.10.1
+    "@comunica/core": ^2.10.0
+    "@comunica/expression-evaluator": ^2.10.0
+    "@comunica/types": ^2.10.0
+    sparqlalgebrajs: ^4.2.0
+  checksum: 7f14b1a0d0d742e837c1df91b74f95a6911262e19baf040fda0c7164d9dfeae1605b0b9bf56d392cfc53a2808ef90b0775755a8ba325f133d9e183ce5c36cfeb
+  languageName: node
+  linkType: hard
+
+"@comunica/actor-query-operation-from-quad@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-query-operation-from-quad@npm:2.10.1"
+  dependencies:
+    "@comunica/bus-query-operation": ^2.10.1
     "@comunica/core": ^2.10.0
     "@comunica/types": ^2.10.0
     "@rdfjs/types": "*"
     sparqlalgebrajs: ^4.2.0
-  checksum: 004ced5cd9f5aebdb695912aeb77cfe249ce7810d2560139b8b39f79743fad5d2b0a95aaceacf7c90976dec58011c8b37b0c6a5fcb174c1af7996f9828394b38
+  checksum: e1be0a5aab8e2ec28524d5623f94f4819edaf04c3bd529dab17bd2f9b0d3faab38b06f50b6abec1805277b8a707f9722c10449b0289c5aa1a6772ff9fb542174
   languageName: node
   linkType: hard
 
-"@comunica/actor-query-operation-group@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-query-operation-group@npm:2.10.0"
+"@comunica/actor-query-operation-group@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-query-operation-group@npm:2.10.1"
   dependencies:
-    "@comunica/bindings-factory": ^2.10.0
+    "@comunica/bindings-factory": ^2.10.1
     "@comunica/bus-hash-bindings": ^2.10.0
-    "@comunica/bus-query-operation": ^2.10.0
+    "@comunica/bus-query-operation": ^2.10.1
     "@comunica/core": ^2.10.0
     "@comunica/expression-evaluator": ^2.10.0
     "@comunica/types": ^2.10.0
@@ -364,207 +364,207 @@ __metadata:
     asynciterator: ^3.8.1
     rdf-data-factory: ^1.1.1
     sparqlalgebrajs: ^4.2.0
-  checksum: fc88639a8f93303386e54fc3f86ca20ea95960b2a05801812f5f9705098c7a364dd906c2deaf27918d994833559b1400a1121abac248c6598b46173c007c2493
+  checksum: a3cade2315ff9e4dc646704dd88097ac313960f1f4064073915eff457e878f13fd8c39eca510da3444c5d1d817e49f0779cd2fda20c604534a75bac8311473a1
   languageName: node
   linkType: hard
 
-"@comunica/actor-query-operation-join@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-query-operation-join@npm:2.10.0"
+"@comunica/actor-query-operation-join@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-query-operation-join@npm:2.10.1"
   dependencies:
-    "@comunica/bus-query-operation": ^2.10.0
-    "@comunica/bus-rdf-join": ^2.10.0
+    "@comunica/bus-query-operation": ^2.10.1
+    "@comunica/bus-rdf-join": ^2.10.1
     "@comunica/core": ^2.10.0
     "@comunica/types": ^2.10.0
     sparqlalgebrajs: ^4.2.0
-  checksum: a506fbea4507c020441df94eeb4ab6f495b886bbf1a00e3fbacf3bfa317f31190cb0fa4ba5651ffbb8fff7896c41b2b540fbe042e24cf59e3079b7f9d98c80a6
+  checksum: 9284e414de62421fcb8a8e6934c2be608a0123df784fd3b17bcb1af424d7d8ab29fd0b2b1171241b0962e7e10d6cb22dc03562207a44ee0468c575d45f00b24b
   languageName: node
   linkType: hard
 
-"@comunica/actor-query-operation-leftjoin@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-query-operation-leftjoin@npm:2.10.0"
+"@comunica/actor-query-operation-leftjoin@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-query-operation-leftjoin@npm:2.10.1"
   dependencies:
-    "@comunica/bus-query-operation": ^2.10.0
-    "@comunica/bus-rdf-join": ^2.10.0
+    "@comunica/bus-query-operation": ^2.10.1
+    "@comunica/bus-rdf-join": ^2.10.1
     "@comunica/core": ^2.10.0
     "@comunica/expression-evaluator": ^2.10.0
     "@comunica/types": ^2.10.0
     sparqlalgebrajs: ^4.2.0
-  checksum: c4cc65552e84dba2c84bfd89f3ef7bd16b2817dc161adb6d7d1acef52c8db79cd1d05da42a3fcd2c42522eedd2d5992d880728d2a214a1af07c4621dc97570fe
+  checksum: 19778ac92d70ef57770b32f43608a0e08fdc797d1e8e8f6b39b44637d097711a2a725096caded099d17eef1d05300e70a956780bd2de202805147eba920ef9f8
   languageName: node
   linkType: hard
 
-"@comunica/actor-query-operation-minus@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-query-operation-minus@npm:2.10.0"
+"@comunica/actor-query-operation-minus@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-query-operation-minus@npm:2.10.1"
   dependencies:
-    "@comunica/bus-query-operation": ^2.10.0
-    "@comunica/bus-rdf-join": ^2.10.0
+    "@comunica/bus-query-operation": ^2.10.1
+    "@comunica/bus-rdf-join": ^2.10.1
     "@comunica/core": ^2.10.0
     "@comunica/types": ^2.10.0
     sparqlalgebrajs: ^4.2.0
-  checksum: 94e8e45556b005fd1ed74873a666724fa085627bdf075585b6d5cfa7ed631326855716afe3b21af3d1348506a379aaae3ab3fbfbb4f312889bd66514ed98414c
+  checksum: 540a865ea1db02c9c114d447918b955d9391a2126503a76c3b689f3fd44ad8ff648ee37ea2d26360c8cd4472235b2ce58a24a5d98471ee557e284a5ba692538c
   languageName: node
   linkType: hard
 
-"@comunica/actor-query-operation-nop@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-query-operation-nop@npm:2.10.0"
+"@comunica/actor-query-operation-nop@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-query-operation-nop@npm:2.10.1"
   dependencies:
-    "@comunica/bindings-factory": ^2.10.0
-    "@comunica/bus-query-operation": ^2.10.0
+    "@comunica/bindings-factory": ^2.10.1
+    "@comunica/bus-query-operation": ^2.10.1
     "@comunica/core": ^2.10.0
     "@comunica/metadata": ^2.10.0
     "@comunica/types": ^2.10.0
     asynciterator: ^3.8.1
     sparqlalgebrajs: ^4.2.0
-  checksum: c5efb4da250de1cd26bfdb17312d4a01363ea3b5c3abc22a1f41423d0c5c1fde9b31689154a085227c471e39e6a158a3e0677937ff906735e3ce300cef41220d
+  checksum: f299b2a6ac9c8fea66e2163f09737cd3f1d1a6699b604e39ffe33c2dd98eb51d05daa081da829ceeb25ff88141c6633fd676d55cf166b4e456082b8133d300a5
   languageName: node
   linkType: hard
 
-"@comunica/actor-query-operation-orderby-sparqlee@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-query-operation-orderby-sparqlee@npm:2.10.0"
+"@comunica/actor-query-operation-orderby-sparqlee@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-query-operation-orderby-sparqlee@npm:2.10.1"
   dependencies:
-    "@comunica/bus-query-operation": ^2.10.0
+    "@comunica/bus-query-operation": ^2.10.1
     "@comunica/core": ^2.10.0
     "@comunica/expression-evaluator": ^2.10.0
     "@comunica/types": ^2.10.0
     asynciterator: ^3.8.1
     sparqlalgebrajs: ^4.2.0
-  checksum: 3e38ca2fefd22d51a743665c5c6e57338fd17a9fb2f1a7aa4ec27b7ccf1b5d4e9e0ab4c89c9299c595dca9ceb12c5687a1aa21658ae891a24a46ca2dc90d373e
+  checksum: 9b75d7529d9df2ecc2c56381f4d96bfe2b410cacadbfe0deb38bd3b7ce1f718915c81c85d72b6030f0e94af4aaa4aa7626066e3bab65357f90a748bc5fa5a875
   languageName: node
   linkType: hard
 
-"@comunica/actor-query-operation-path-alt@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-query-operation-path-alt@npm:2.10.0"
+"@comunica/actor-query-operation-path-alt@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-query-operation-path-alt@npm:2.10.1"
   dependencies:
-    "@comunica/actor-abstract-path": ^2.10.0
-    "@comunica/actor-query-operation-union": ^2.10.0
-    "@comunica/bus-query-operation": ^2.10.0
+    "@comunica/actor-abstract-path": ^2.10.1
+    "@comunica/actor-query-operation-union": ^2.10.1
+    "@comunica/bus-query-operation": ^2.10.1
     "@comunica/types": ^2.10.0
     asynciterator: ^3.8.1
     sparqlalgebrajs: ^4.2.0
-  checksum: 42bac49d739eae5d5b30bd8a2e00023a404e966c74e623f4f7f71a28ca60871df4e1b6acc6a00f9134bbf538636d6321e673e0cf94ccbc1f147f0759f59547a4
+  checksum: 7962b7f095f3833d4285f50de97f88dca3a04c75ab7bde6c9725197cae540b6e7b7a864c3555b920c46018ce5c1beae4f7ab30932e8c0f61379b513e4e28f124
   languageName: node
   linkType: hard
 
-"@comunica/actor-query-operation-path-inv@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-query-operation-path-inv@npm:2.10.0"
+"@comunica/actor-query-operation-path-inv@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-query-operation-path-inv@npm:2.10.1"
   dependencies:
-    "@comunica/actor-abstract-path": ^2.10.0
-    "@comunica/bus-query-operation": ^2.10.0
+    "@comunica/actor-abstract-path": ^2.10.1
+    "@comunica/bus-query-operation": ^2.10.1
     "@comunica/types": ^2.10.0
     sparqlalgebrajs: ^4.2.0
-  checksum: 28809edc5967d9e5f52126cf6ebe0b08d2fcbd1e06eff3c62a530cb20900e222507dc91f3bce0888a5205f399269fa76171d0b8c5fe1280b58b611123ae22ced
+  checksum: 2ca70d2355e6b679595309533b860a8cf5c8b2a45ccc15ec91790dc357e06b691ed97eff8ff02a785857494140b4bf50349f5416c12c79504b8ae2e142728689
   languageName: node
   linkType: hard
 
-"@comunica/actor-query-operation-path-link@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-query-operation-path-link@npm:2.10.0"
+"@comunica/actor-query-operation-path-link@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-query-operation-path-link@npm:2.10.1"
   dependencies:
-    "@comunica/actor-abstract-path": ^2.10.0
-    "@comunica/bus-query-operation": ^2.10.0
+    "@comunica/actor-abstract-path": ^2.10.1
+    "@comunica/bus-query-operation": ^2.10.1
     "@comunica/types": ^2.10.0
     sparqlalgebrajs: ^4.2.0
-  checksum: 6cf0d458e51f71911cc0d0fef2ad3642e56dbb61ace80d9ee83c5c0509301a7d4f6e90e9a43aef5569939374809565e84907609511e5461b3dd12ae5025c96de
+  checksum: 77019bab11ac2762b52921366a0fbc625d8059ed749169e1cf0f0a5b87371daa1a6e1a1be2c7f6bc160239f7b8e90fe029f7854519de34cad56ec39e3f47836b
   languageName: node
   linkType: hard
 
-"@comunica/actor-query-operation-path-nps@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-query-operation-path-nps@npm:2.10.0"
+"@comunica/actor-query-operation-path-nps@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-query-operation-path-nps@npm:2.10.1"
   dependencies:
-    "@comunica/actor-abstract-path": ^2.10.0
-    "@comunica/bus-query-operation": ^2.10.0
+    "@comunica/actor-abstract-path": ^2.10.1
+    "@comunica/bus-query-operation": ^2.10.1
     "@comunica/types": ^2.10.0
     sparqlalgebrajs: ^4.2.0
-  checksum: 9da1d431613c84c26fbb871b5b3fafc30e97f5d08edfa392e5bd17f11f8e64e8d2a06e8f7603ca368dd63959f0c706a24d093c7c04bc4b24d7aefd35e92550ce
+  checksum: 5e3f67c22fd80177e76d25b5a4f1c5b06285b3916255e38176fd6969f436b4ea7cacd82813f02d76c6a475408fc9ca474c57be1851de8a1b1a6fddf59ccce837
   languageName: node
   linkType: hard
 
-"@comunica/actor-query-operation-path-one-or-more@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-query-operation-path-one-or-more@npm:2.10.0"
+"@comunica/actor-query-operation-path-one-or-more@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-query-operation-path-one-or-more@npm:2.10.1"
   dependencies:
-    "@comunica/actor-abstract-path": ^2.10.0
-    "@comunica/bindings-factory": ^2.10.0
-    "@comunica/bus-query-operation": ^2.10.0
+    "@comunica/actor-abstract-path": ^2.10.1
+    "@comunica/bindings-factory": ^2.10.1
+    "@comunica/bus-query-operation": ^2.10.1
     "@comunica/types": ^2.10.0
     asynciterator: ^3.8.1
     sparqlalgebrajs: ^4.2.0
-  checksum: e8543a6a076f29e238c8aa236dbaa3046468cc84734d1cfd404b17ff50229815c647129ab93adcfd00078ee51d59695c4f475e3d3355ccc547c29aec13a155b3
+  checksum: d95032b8f353e2d07614a9c99799570027abe6850cf3d9640783f03ff903680dc1e08a8869fbab29d84e391c58b50da0fe5bad7a2b9fed0747f1414631f7a005
   languageName: node
   linkType: hard
 
-"@comunica/actor-query-operation-path-seq@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-query-operation-path-seq@npm:2.10.0"
+"@comunica/actor-query-operation-path-seq@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-query-operation-path-seq@npm:2.10.1"
   dependencies:
-    "@comunica/actor-abstract-path": ^2.10.0
-    "@comunica/bus-query-operation": ^2.10.0
-    "@comunica/bus-rdf-join": ^2.10.0
+    "@comunica/actor-abstract-path": ^2.10.1
+    "@comunica/bus-query-operation": ^2.10.1
+    "@comunica/bus-rdf-join": ^2.10.1
     "@comunica/types": ^2.10.0
     sparqlalgebrajs: ^4.2.0
-  checksum: 1932838ac56f341c5750fcacfe5473729fa2d47a8e0d486fa2888e32ff1caeea52be1cbf9d59c65e3168b8a3586994fc87b83a9170c8149c3b1d69827f58c1d8
+  checksum: 9c8ce9a6d49c242a8d461685c571e88e66349f7efb14a188205eca0ba2e86b267b0164ea1ee053e8c61f680bcc7153eec985ec46506e2cc8c3d461385099a0a8
   languageName: node
   linkType: hard
 
-"@comunica/actor-query-operation-path-zero-or-more@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-query-operation-path-zero-or-more@npm:2.10.0"
+"@comunica/actor-query-operation-path-zero-or-more@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-query-operation-path-zero-or-more@npm:2.10.1"
   dependencies:
-    "@comunica/actor-abstract-path": ^2.10.0
-    "@comunica/bindings-factory": ^2.10.0
-    "@comunica/bus-query-operation": ^2.10.0
+    "@comunica/actor-abstract-path": ^2.10.1
+    "@comunica/bindings-factory": ^2.10.1
+    "@comunica/bus-query-operation": ^2.10.1
     "@comunica/types": ^2.10.0
     asynciterator: ^3.8.1
     rdf-string: ^1.6.1
     sparqlalgebrajs: ^4.2.0
-  checksum: abcc76cd55dc2a647942e7cef480b33d80f8dd45a69f8081988f5522ac693df1b7f7f9a4f54298be7d233a4dd93882c73a3c3ddea011ec36a59d42b8d79c682d
+  checksum: f957047fc4eefd30925a6c70d87a831375b7578bc8c13ee0c08a59ca5c549d5ebb646fa1fd8cb41e50e2c08d6570045a4ae18fae00cd8e9d91966bf1620b2374
   languageName: node
   linkType: hard
 
-"@comunica/actor-query-operation-path-zero-or-one@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-query-operation-path-zero-or-one@npm:2.10.0"
+"@comunica/actor-query-operation-path-zero-or-one@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-query-operation-path-zero-or-one@npm:2.10.1"
   dependencies:
-    "@comunica/actor-abstract-path": ^2.10.0
-    "@comunica/bindings-factory": ^2.10.0
-    "@comunica/bus-query-operation": ^2.10.0
+    "@comunica/actor-abstract-path": ^2.10.1
+    "@comunica/bindings-factory": ^2.10.1
+    "@comunica/bus-query-operation": ^2.10.1
     "@comunica/metadata": ^2.10.0
     "@comunica/types": ^2.10.0
     asynciterator: ^3.8.1
     sparqlalgebrajs: ^4.2.0
-  checksum: ba152f7ef88050020c5195231dc122d3b788414cb05350f3157ffd68fbb87bd4af57b84cf044534cbf7b1884f25ff94976dd96ce3419322dc850d2f2440ffcfc
+  checksum: 933e55631d0c670faa77d17a2d706ee68e407eba69d8e564b3fb4e3f5d430aad7d460cb75bfe670ea821e86a11a4315d214425dc09ec1044d3b0184b56c48f96
   languageName: node
   linkType: hard
 
-"@comunica/actor-query-operation-project@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-query-operation-project@npm:2.10.0"
+"@comunica/actor-query-operation-project@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-query-operation-project@npm:2.10.1"
   dependencies:
-    "@comunica/bus-query-operation": ^2.10.0
+    "@comunica/bus-query-operation": ^2.10.1
     "@comunica/core": ^2.10.0
     "@comunica/data-factory": ^2.7.0
     "@comunica/types": ^2.10.0
     "@rdfjs/types": "*"
     rdf-data-factory: ^1.1.1
     sparqlalgebrajs: ^4.2.0
-  checksum: c746f121df7b912fb62bd31d36cd9c5b294f07e5833ae473b5b257e45dba1b8f5e7d8962756a6d0fc3cdf632c40b8ee7630a69563a153fa5f0e07d66fef6b54a
+  checksum: 40d341a6ddd3c212e7ab61414e884484eae437012fe62dcce72c6bf72e3380a8aae260066b1a0c9f7b4346f5d2609e8f27e5fae4a17747eb7c0d3b1e1eecbb29
   languageName: node
   linkType: hard
 
-"@comunica/actor-query-operation-quadpattern@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-query-operation-quadpattern@npm:2.10.0"
+"@comunica/actor-query-operation-quadpattern@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-query-operation-quadpattern@npm:2.10.1"
   dependencies:
-    "@comunica/bindings-factory": ^2.10.0
-    "@comunica/bus-query-operation": ^2.10.0
+    "@comunica/bindings-factory": ^2.10.1
+    "@comunica/bus-query-operation": ^2.10.1
     "@comunica/bus-rdf-resolve-quad-pattern": ^2.10.0
     "@comunica/context-entries": ^2.10.0
     "@comunica/core": ^2.10.0
@@ -575,62 +575,62 @@ __metadata:
     rdf-string: ^1.6.3
     rdf-terms: ^1.11.0
     sparqlalgebrajs: ^4.2.0
-  checksum: 60778068e918a900180cf70d7010409b353d9f37ba594f69ac357168c65bcbb964e99113c303102a2e39a9e7eb405d2ee8726f3c73601a9ade3fca2b8b096a1c
+  checksum: b541fa7f2c55086380ce6a2ea18ea113b4172a028710099353970b67ad68dcd1a08775a73569c79597751e47085767e41dc39a79fa945a655bd13174b2c6ec91
   languageName: node
   linkType: hard
 
-"@comunica/actor-query-operation-reduced-hash@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-query-operation-reduced-hash@npm:2.10.0"
+"@comunica/actor-query-operation-reduced-hash@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-query-operation-reduced-hash@npm:2.10.1"
   dependencies:
     "@comunica/bus-hash-bindings": ^2.10.0
-    "@comunica/bus-query-operation": ^2.10.0
+    "@comunica/bus-query-operation": ^2.10.1
     "@comunica/core": ^2.10.0
     "@comunica/types": ^2.10.0
     lru-cache: ^10.0.0
     sparqlalgebrajs: ^4.2.0
-  checksum: f1c959bdc5cd48f7ba0b78aa5bafe9b45c9eed07b6c24e32da6f443535fd9dccaaddf50b399ab5c004832fee3875237dabcde850253f4e32ee4afb538059336e
+  checksum: bf237c8ad3114316568764f6d0ae33686fbde0afb58c9d94d87b712c5fc10678e22a13ab960d223b6c6761b1091da050eb07a6863d6c4a413dc4ea92a2b72eab
   languageName: node
   linkType: hard
 
-"@comunica/actor-query-operation-service@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-query-operation-service@npm:2.10.0"
+"@comunica/actor-query-operation-service@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-query-operation-service@npm:2.10.1"
   dependencies:
-    "@comunica/bindings-factory": ^2.10.0
-    "@comunica/bus-query-operation": ^2.10.0
+    "@comunica/bindings-factory": ^2.10.1
+    "@comunica/bus-query-operation": ^2.10.1
     "@comunica/context-entries": ^2.10.0
     "@comunica/core": ^2.10.0
     "@comunica/metadata": ^2.10.0
     "@comunica/types": ^2.10.0
     asynciterator: ^3.8.1
     sparqlalgebrajs: ^4.2.0
-  checksum: 38815621c84fc505eb7191267e2ae876672c424b6057b7d751ed0cb862521bbfe8060c5528cedd0ff35ddf371c9f9964f59e7f4756b3597fbf5d79c564fa3ec6
+  checksum: b1b02f42a6d6551d15fd2a6646ecc237d960b455efc3269dfd9b05faa23c4ad9543547f111f978d1c7aa4db4f05cbe2e9b4fd7716ecd49066f8de2b79fc4e4f3
   languageName: node
   linkType: hard
 
-"@comunica/actor-query-operation-slice@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-query-operation-slice@npm:2.10.0"
+"@comunica/actor-query-operation-slice@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-query-operation-slice@npm:2.10.1"
   dependencies:
-    "@comunica/bus-query-operation": ^2.10.0
+    "@comunica/bus-query-operation": ^2.10.1
     "@comunica/context-entries": ^2.10.0
     "@comunica/core": ^2.10.0
     "@comunica/types": ^2.10.0
     sparqlalgebrajs: ^4.2.0
-  checksum: 8a8841031844cd770681ed74fd295534d203bf80ad21401b5e909001ad84a83519c10c90ff7b336ca71ec0e030fbc9b456080f5516069e0d0a313a775f798fd1
+  checksum: e308624884e76c4b568a075221cc580566893872f19790b0235c156580f67f1f40e266e45ec881f31d022c14d8646b142bf27f5f273c8452a1f64d6a8556e795
   languageName: node
   linkType: hard
 
-"@comunica/actor-query-operation-sparql-endpoint@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-query-operation-sparql-endpoint@npm:2.10.0"
+"@comunica/actor-query-operation-sparql-endpoint@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-query-operation-sparql-endpoint@npm:2.10.1"
   dependencies:
-    "@comunica/bindings-factory": ^2.10.0
+    "@comunica/bindings-factory": ^2.10.1
     "@comunica/bus-http": ^2.10.0
-    "@comunica/bus-query-operation": ^2.10.0
+    "@comunica/bus-query-operation": ^2.10.1
     "@comunica/bus-rdf-resolve-quad-pattern": ^2.10.0
-    "@comunica/bus-rdf-update-quads": ^2.10.0
+    "@comunica/bus-rdf-update-quads": ^2.10.1
     "@comunica/context-entries": ^2.10.0
     "@comunica/core": ^2.10.0
     "@comunica/mediatortype-httprequests": ^2.10.0
@@ -641,15 +641,15 @@ __metadata:
     fetch-sparql-endpoint: ^4.1.0
     rdf-data-factory: ^1.1.1
     sparqlalgebrajs: ^4.2.0
-  checksum: 816a8f65f3b1d3bd1b6bd3b99f1fd9e2137cf20efc4fc7e9ad1e44bc5c4e31041d2f65f8c87ba926addf9a6182475e81e68c7d20f02378b1bf2456898dc5ae02
+  checksum: c19f8026a7a22b1fbde92633e4d5bfe890ea858c709ec419677a0ce5d38a05ecc0a29050cb3235900b2d370eca09066c9904747e6b83cc4d3c064b0cf6158708
   languageName: node
   linkType: hard
 
-"@comunica/actor-query-operation-union@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-query-operation-union@npm:2.10.0"
+"@comunica/actor-query-operation-union@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-query-operation-union@npm:2.10.1"
   dependencies:
-    "@comunica/bus-query-operation": ^2.10.0
+    "@comunica/bus-query-operation": ^2.10.1
     "@comunica/core": ^2.10.0
     "@comunica/metadata": ^2.10.0
     "@comunica/types": ^2.10.0
@@ -657,147 +657,147 @@ __metadata:
     asynciterator: ^3.8.1
     rdf-terms: ^1.11.0
     sparqlalgebrajs: ^4.2.0
-  checksum: 1780f441b403e52ad41d503bb43269ff4c1f71320d2779b8fe14cae39a9f31fb9e0e3cfc569f0d0c15884c36bd74d7a7ab6865f568d8dec66277f5b79871e8f5
+  checksum: 70a56ee10afdb1b2cc9972586678615868b5e34226b391118db1dce9b10b5b6a825420edc7cbf8406ae36b464d432690f2a7f4d9465a1413a3de8bd4bd3c6068
   languageName: node
   linkType: hard
 
-"@comunica/actor-query-operation-update-add-rewrite@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-query-operation-update-add-rewrite@npm:2.10.0"
+"@comunica/actor-query-operation-update-add-rewrite@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-query-operation-update-add-rewrite@npm:2.10.1"
   dependencies:
-    "@comunica/bus-query-operation": ^2.10.0
+    "@comunica/bus-query-operation": ^2.10.1
     "@comunica/core": ^2.10.0
     "@comunica/types": ^2.10.0
     rdf-data-factory: ^1.1.1
     sparqlalgebrajs: ^4.2.0
-  checksum: f22dad7094a0c55d268d76b8336d2125485688cbfc17dafac4ed7328d3efbd32d60713b3432e84c42619bbc2b3b47e0122060229b14379bd9f577e09c4d99bea
+  checksum: 80af887ba876e0f08f8ae60f956db252993a2a472fabf3984c98d66d84f3220bad3827d5ba48369982ca5306ecf413207739206aa50d23aa026a350149d82405
   languageName: node
   linkType: hard
 
-"@comunica/actor-query-operation-update-clear@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-query-operation-update-clear@npm:2.10.0"
+"@comunica/actor-query-operation-update-clear@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-query-operation-update-clear@npm:2.10.1"
   dependencies:
-    "@comunica/bus-query-operation": ^2.10.0
-    "@comunica/bus-rdf-update-quads": ^2.10.0
+    "@comunica/bus-query-operation": ^2.10.1
+    "@comunica/bus-rdf-update-quads": ^2.10.1
     "@comunica/core": ^2.10.0
     "@comunica/types": ^2.10.0
     "@rdfjs/types": "*"
     rdf-data-factory: ^1.1.1
     sparqlalgebrajs: ^4.2.0
-  checksum: a705d7f7aa2b75bf1145a4d8019d463f43d434b17102b8d85bc0579c60c81b1e471df9facfd9d84031e3f4940ee9dbef7605beed3c9798dc0d76acfd03ac3d63
+  checksum: 281f406129c6105fe3e58d372d91859739b9803dafcfe2db167d75cf2e0663c9ccd5bf7fe3aa6d58de9836c0b7ef367185094328b55935a0a5271f81a985371e
   languageName: node
   linkType: hard
 
-"@comunica/actor-query-operation-update-compositeupdate@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-query-operation-update-compositeupdate@npm:2.10.0"
+"@comunica/actor-query-operation-update-compositeupdate@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-query-operation-update-compositeupdate@npm:2.10.1"
   dependencies:
-    "@comunica/bus-query-operation": ^2.10.0
+    "@comunica/bus-query-operation": ^2.10.1
     "@comunica/core": ^2.10.0
     "@comunica/types": ^2.10.0
     sparqlalgebrajs: ^4.2.0
-  checksum: 00cd0fb6b1e91feae144d5255f87131145bedfd6698f1d62ce5cd57f7fe62a6666f25dfcaa1a1351d386312ed16fea3393d2c37fde370bc6ae5995764f4b03f8
+  checksum: 7ec39cc8078408885faca020728f236f5646ee4e9ef7bd727409d7deb85518793b381443f80c08e5d353e269f0863d8028df826f9b2604662b94d7b767471822
   languageName: node
   linkType: hard
 
-"@comunica/actor-query-operation-update-copy-rewrite@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-query-operation-update-copy-rewrite@npm:2.10.0"
+"@comunica/actor-query-operation-update-copy-rewrite@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-query-operation-update-copy-rewrite@npm:2.10.1"
   dependencies:
-    "@comunica/bus-query-operation": ^2.10.0
+    "@comunica/bus-query-operation": ^2.10.1
     "@comunica/core": ^2.10.0
     "@comunica/types": ^2.10.0
     sparqlalgebrajs: ^4.2.0
-  checksum: 234a3f749343f8daf49cbd5d6c5ffea605d8c3ced230375d4fb5008369c8663fa75eb7a7682643fe5be8508a2c93ed203acec1fc8aec76d3a4d1784c2b7e3faa
+  checksum: 4c0c5b205465168ebdb60d66e398b2f77a225177c690ff5234faf79e5abdeab0e15a3b99ba213fb37c15bddeb8da89af2208143f741d18dd5336e152f5cd4f63
   languageName: node
   linkType: hard
 
-"@comunica/actor-query-operation-update-create@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-query-operation-update-create@npm:2.10.0"
+"@comunica/actor-query-operation-update-create@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-query-operation-update-create@npm:2.10.1"
   dependencies:
-    "@comunica/bus-query-operation": ^2.10.0
-    "@comunica/bus-rdf-update-quads": ^2.10.0
+    "@comunica/bus-query-operation": ^2.10.1
+    "@comunica/bus-rdf-update-quads": ^2.10.1
     "@comunica/core": ^2.10.0
     "@comunica/types": ^2.10.0
     sparqlalgebrajs: ^4.2.0
-  checksum: a5ac6e1fa907417289d0dfe844e8441a0950b6221373942a777aeeada43dd90991aaa6534eb2b23283f0dd02660433da718fc7f82e069ef180fb970a9bc499c1
+  checksum: 080194cb1823ecdb13f88be6da194f1e01cec1c19d30d509358e63efed0329c0805b92db63ca62db90c8858dbefe4115890840969a7e9956c086ecf0a6e5546b
   languageName: node
   linkType: hard
 
-"@comunica/actor-query-operation-update-deleteinsert@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-query-operation-update-deleteinsert@npm:2.10.0"
+"@comunica/actor-query-operation-update-deleteinsert@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-query-operation-update-deleteinsert@npm:2.10.1"
   dependencies:
-    "@comunica/actor-query-operation-construct": ^2.10.0
-    "@comunica/bindings-factory": ^2.10.0
-    "@comunica/bus-query-operation": ^2.10.0
-    "@comunica/bus-rdf-update-quads": ^2.10.0
+    "@comunica/actor-query-operation-construct": ^2.10.1
+    "@comunica/bindings-factory": ^2.10.1
+    "@comunica/bus-query-operation": ^2.10.1
+    "@comunica/bus-rdf-update-quads": ^2.10.1
     "@comunica/core": ^2.10.0
     "@comunica/types": ^2.10.0
     "@rdfjs/types": "*"
     asynciterator: ^3.8.1
     sparqlalgebrajs: ^4.2.0
-  checksum: f9a0439a323882f3d47cf7e7aa05bda8fbfe4e487114d873a22d8d8a2d8cfe553d318c0e03e8be239b881c17c1eb7a17fa370c12a7cb8c725cd90dd6294ceac1
+  checksum: 9d236269d6740936ace9f630bb5fa66f221178736f48a7d15496687d7afe799eb93db9cecd4bc5d1e48cdc0e4e5d907e3c9befa766334dbcdf0d71a178652dcf
   languageName: node
   linkType: hard
 
-"@comunica/actor-query-operation-update-drop@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-query-operation-update-drop@npm:2.10.0"
+"@comunica/actor-query-operation-update-drop@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-query-operation-update-drop@npm:2.10.1"
   dependencies:
-    "@comunica/bus-query-operation": ^2.10.0
-    "@comunica/bus-rdf-update-quads": ^2.10.0
+    "@comunica/bus-query-operation": ^2.10.1
+    "@comunica/bus-rdf-update-quads": ^2.10.1
     "@comunica/core": ^2.10.0
     "@comunica/types": ^2.10.0
     "@rdfjs/types": "*"
     rdf-data-factory: ^1.1.1
     sparqlalgebrajs: ^4.2.0
-  checksum: c51e31fd1128c02a9a7b9def3209dcdba3602d3cfacc5c2fa111672c7ff2b8db950311f293374853e71b5e9eb4bc658e1ff3035fab37026edb571e341d9fc934
+  checksum: b6246e34a471ac9f64d1586c9bc6ee09cc25ac1d9cc0842e5058a47dab552b7f3eb9f7f0bfe1e4d33f55bdcbee9d22da8c4624ff96f011e1eca50b5092af5514
   languageName: node
   linkType: hard
 
-"@comunica/actor-query-operation-update-load@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-query-operation-update-load@npm:2.10.0"
+"@comunica/actor-query-operation-update-load@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-query-operation-update-load@npm:2.10.1"
   dependencies:
-    "@comunica/bus-query-operation": ^2.10.0
-    "@comunica/bus-rdf-update-quads": ^2.10.0
+    "@comunica/bus-query-operation": ^2.10.1
+    "@comunica/bus-rdf-update-quads": ^2.10.1
     "@comunica/context-entries": ^2.10.0
     "@comunica/core": ^2.10.0
     "@comunica/types": ^2.10.0
     rdf-data-factory: ^1.1.1
     sparqlalgebrajs: ^4.2.0
-  checksum: 8c2f3d88f6f8d91f5aa754fc90cde6f043d336547bafef5453e247b75d38bc812aa3df593b84233351ecb8a66cf7b03fd9f180aa711c459ea64c10ded6f0c2a5
+  checksum: a95e040e6dd4150e422479db8fc3aa07f373597e0dc5cf624e1b9ff70a1443f54672291ab0eb86b01a544a675f9510a272356a4ed7e366403cbe3eb9c2a883c9
   languageName: node
   linkType: hard
 
-"@comunica/actor-query-operation-update-move-rewrite@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-query-operation-update-move-rewrite@npm:2.10.0"
+"@comunica/actor-query-operation-update-move-rewrite@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-query-operation-update-move-rewrite@npm:2.10.1"
   dependencies:
-    "@comunica/bus-query-operation": ^2.10.0
+    "@comunica/bus-query-operation": ^2.10.1
     "@comunica/core": ^2.10.0
     "@comunica/types": ^2.10.0
     sparqlalgebrajs: ^4.2.0
-  checksum: d8ba489d063887ebc6cebd57ad96bf1d4f441b54e004461aaaa85d2abf451bb0ac68ecbfbcdbbcb249f03df5ab4f051a19e834d47d3ce466f5b1434cfd0fcd2c
+  checksum: b9de655f7dc5750df2a206e7b64472661199e502c9338557b99faa63d73dfcefcedaa9d427c86072b1cfc1bd17ea0abddf00184516c460532f530a46acd0cf38
   languageName: node
   linkType: hard
 
-"@comunica/actor-query-operation-values@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-query-operation-values@npm:2.10.0"
+"@comunica/actor-query-operation-values@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-query-operation-values@npm:2.10.1"
   dependencies:
-    "@comunica/bindings-factory": ^2.10.0
-    "@comunica/bus-query-operation": ^2.10.0
+    "@comunica/bindings-factory": ^2.10.1
+    "@comunica/bus-query-operation": ^2.10.1
     "@comunica/core": ^2.10.0
     "@comunica/metadata": ^2.10.0
     "@comunica/types": ^2.10.0
     asynciterator: ^3.8.1
     rdf-data-factory: ^1.1.1
     sparqlalgebrajs: ^4.2.0
-  checksum: 6de7facb37cd94b4749909d62b5383612657be72c01a99f1c5a57466dcd0e1e6b1b0c4f24917b981837f3f147042c75693c6420ae6241efe0fbe98692e4965a8
+  checksum: 28cbeb78f62957324e3c855efba36165cbba0638e65da268611ded33a6843c2247bd6a97ae5f4f3df2200f0ee9e9a0578921b75b5033ff2a282511e407d1b348
   languageName: node
   linkType: hard
 
@@ -969,159 +969,159 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@comunica/actor-rdf-join-inner-hash@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-rdf-join-inner-hash@npm:2.10.0"
+"@comunica/actor-rdf-join-inner-hash@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-rdf-join-inner-hash@npm:2.10.1"
   dependencies:
-    "@comunica/bus-rdf-join": ^2.10.0
+    "@comunica/bus-rdf-join": ^2.10.1
     "@comunica/mediatortype-join-coefficients": ^2.10.0
     "@comunica/types": ^2.10.0
     asyncjoin: ^1.1.1
-  checksum: 901931654207d61bd78661cdfe5649bd7a4a932a419172a176dc7d42be8a0a86ea1805b80657ac0c3dea2f6a1475a70d0c3e71e03eac461507fbef76eaa20cd6
+  checksum: 2cc698404183c4d380255dc10a3403f89bc8c3f6cf0ea95f218c0bad93ae86ad5aa29c9c8782c2eb24c63fc1e483c13a21f2a04963b308c71ad143ddef66b94e
   languageName: node
   linkType: hard
 
-"@comunica/actor-rdf-join-inner-multi-bind@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-rdf-join-inner-multi-bind@npm:2.10.0"
+"@comunica/actor-rdf-join-inner-multi-bind@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-rdf-join-inner-multi-bind@npm:2.10.1"
   dependencies:
-    "@comunica/bus-query-operation": ^2.10.0
-    "@comunica/bus-rdf-join": ^2.10.0
+    "@comunica/bus-query-operation": ^2.10.1
+    "@comunica/bus-rdf-join": ^2.10.1
     "@comunica/bus-rdf-join-entries-sort": ^2.10.0
     "@comunica/context-entries": ^2.10.0
     "@comunica/mediatortype-join-coefficients": ^2.10.0
     "@comunica/types": ^2.10.0
     asynciterator: ^3.8.1
     sparqlalgebrajs: ^4.2.0
-  checksum: a6d3115cb770d408641c64a4c14f1e041fb55fc39b5ad55b4892c6060437d80d3f952762ebb0f2de00c416ac9913772ec7b099d5f9138a1ae8f9bdff52c087cb
+  checksum: 8b7563345112cc2b7c0a6195a0d151cbbb90134f5621bea1c8b975b8e1045857a218ea601ae2a674eff3736e9ad50b3c3fcfc0960699ecf1b5016ad7774f95e1
   languageName: node
   linkType: hard
 
-"@comunica/actor-rdf-join-inner-multi-empty@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-rdf-join-inner-multi-empty@npm:2.10.0"
+"@comunica/actor-rdf-join-inner-multi-empty@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-rdf-join-inner-multi-empty@npm:2.10.1"
   dependencies:
-    "@comunica/bus-rdf-join": ^2.10.0
+    "@comunica/bus-rdf-join": ^2.10.1
     "@comunica/mediatortype-join-coefficients": ^2.10.0
     "@comunica/metadata": ^2.10.0
     "@comunica/types": ^2.10.0
     asynciterator: ^3.8.1
-  checksum: 6575104cce1d97374750563e37ed951fd2b225c4910269d51c52cb51a3651ce5dc5ad14721f0034bb2526e2fcc72ba06053acd91fb64f7d4cfba6d5ea797c3ad
+  checksum: 35a89388998a8455e7a08683c8de88fab9accbc88ddbad5aaf417f47fe6730437d5c003fa36b51bff972889314bea96722f48ed1daca73c36fb35589eececaaf
   languageName: node
   linkType: hard
 
-"@comunica/actor-rdf-join-inner-multi-smallest@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-rdf-join-inner-multi-smallest@npm:2.10.0"
+"@comunica/actor-rdf-join-inner-multi-smallest@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-rdf-join-inner-multi-smallest@npm:2.10.1"
   dependencies:
-    "@comunica/bus-query-operation": ^2.10.0
-    "@comunica/bus-rdf-join": ^2.10.0
+    "@comunica/bus-query-operation": ^2.10.1
+    "@comunica/bus-rdf-join": ^2.10.1
     "@comunica/bus-rdf-join-entries-sort": ^2.10.0
     "@comunica/mediatortype-join-coefficients": ^2.10.0
     "@comunica/types": ^2.10.0
     sparqlalgebrajs: ^4.2.0
-  checksum: 5ea30b577a9e8a6be7b6db8553705cd4e58dc37d23851d773cde9ac0873665d1561c5b6d720daedee7e09bf4677b39f6a8a9d4ca03b26eda934478cb2fe31f08
+  checksum: 9d2fef0dbebe89788fe74bcb3db53ac967bebede578c2be5aa4bb128ed4710ed6e2cc860587af4373b5b80239d0edb9f0907333bee04f03fb2bae8e4eb691853
   languageName: node
   linkType: hard
 
-"@comunica/actor-rdf-join-inner-nestedloop@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-rdf-join-inner-nestedloop@npm:2.10.0"
+"@comunica/actor-rdf-join-inner-nestedloop@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-rdf-join-inner-nestedloop@npm:2.10.1"
   dependencies:
-    "@comunica/bus-rdf-join": ^2.10.0
+    "@comunica/bus-rdf-join": ^2.10.1
     "@comunica/mediatortype-join-coefficients": ^2.10.0
     "@comunica/types": ^2.10.0
     asyncjoin: ^1.1.1
-  checksum: ad0d4b86886180e00586481eef4b6be75a71cd9354ade0f20cd85e9c63e29a1222e1acef75d568ceabdeb85d6b817d7f14f55b910dff31a96de9dec6d17ada3c
+  checksum: bf728e843c9c528a6a8505ce9e1883c8f7f63a91b44b0d07d1faa1d589a1ff95f6c415c5c2f044ab442228e5c55920060befc9884a86b7734d589e7e0ccdc3d2
   languageName: node
   linkType: hard
 
-"@comunica/actor-rdf-join-inner-none@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-rdf-join-inner-none@npm:2.10.0"
+"@comunica/actor-rdf-join-inner-none@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-rdf-join-inner-none@npm:2.10.1"
   dependencies:
-    "@comunica/bindings-factory": ^2.10.0
-    "@comunica/bus-rdf-join": ^2.10.0
+    "@comunica/bindings-factory": ^2.10.1
+    "@comunica/bus-rdf-join": ^2.10.1
     "@comunica/mediatortype-join-coefficients": ^2.10.0
     "@comunica/metadata": ^2.10.0
     asynciterator: ^3.8.1
-  checksum: 605be5246fa1b27c1c52292e7cffe2c0eb2455b89369b61fd96f672d26e20a35beaa8126a687b5951645739667dc63a5d90d10c0c87d675e05e49b95314dd829
+  checksum: 6c3f313ada2730f62a89ad9b787944c6637c4e3e281d302789d239d6cc635273bd82ffda594c1179f7f2ec1b316fcaa7e712b498e71d15b88b5b974b19236841
   languageName: node
   linkType: hard
 
-"@comunica/actor-rdf-join-inner-single@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-rdf-join-inner-single@npm:2.10.0"
+"@comunica/actor-rdf-join-inner-single@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-rdf-join-inner-single@npm:2.10.1"
   dependencies:
-    "@comunica/bus-rdf-join": ^2.10.0
+    "@comunica/bus-rdf-join": ^2.10.1
     "@comunica/mediatortype-join-coefficients": ^2.10.0
-  checksum: 1cfdde1560b6539005fd23da01f105842e0fe9adb55980b4d57b1dc65dbad591d3d76437fc7cda741be3a7c462abc7baeb3d1442a9f55c5e36e9ff4fb1ee14bc
+  checksum: c217590421a123fd9498217865075f9e0406e7054bed23aee8c2f375d5aa69cddaa8ac01c9a336b0f6743a213e4ddce14f720e84b6a944e4cdfecaa95ac6585d
   languageName: node
   linkType: hard
 
-"@comunica/actor-rdf-join-inner-symmetrichash@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-rdf-join-inner-symmetrichash@npm:2.10.0"
+"@comunica/actor-rdf-join-inner-symmetrichash@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-rdf-join-inner-symmetrichash@npm:2.10.1"
   dependencies:
-    "@comunica/bus-rdf-join": ^2.10.0
+    "@comunica/bus-rdf-join": ^2.10.1
     "@comunica/mediatortype-join-coefficients": ^2.10.0
     "@comunica/types": ^2.10.0
     asyncjoin: ^1.1.1
-  checksum: 6ba5d03cbd918e7a4231ab5e018fc1f17f5bb5d82dfbe266f0aca1420e839e5ac3830a58f6a86f135e5dd654389c79c357346353b876ef0f842086f45601e688
+  checksum: 03eeda4c441a71cf8b065ecc3640cc7e5932354616feee198eb71e05795b460ea59be4d234095aa312430a294c98f8936cdc064d991dec3a15f507bcc3ca97a0
   languageName: node
   linkType: hard
 
-"@comunica/actor-rdf-join-minus-hash-undef@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-rdf-join-minus-hash-undef@npm:2.10.0"
+"@comunica/actor-rdf-join-minus-hash-undef@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-rdf-join-minus-hash-undef@npm:2.10.1"
   dependencies:
-    "@comunica/bus-query-operation": ^2.10.0
-    "@comunica/bus-rdf-join": ^2.10.0
+    "@comunica/bus-query-operation": ^2.10.1
+    "@comunica/bus-rdf-join": ^2.10.1
     "@comunica/mediatortype-join-coefficients": ^2.10.0
     "@comunica/types": ^2.10.0
     "@rdfjs/types": "*"
     rdf-string: ^1.6.1
-  checksum: 0fc5a7a05b5e9e7fcb75bec0025db18a671e2fac4b1477491e1a231ed977ebd7abbb994418205d37832523fa70ac7727970caf21b2712600aecd4f02530678d1
+  checksum: 20a864b6caa1031dbcfc4217c4df46066ed2b32f1c4f1a3037a50d3ae771ebacc59f82cbb2619bed222e3d95a5113228496ea0a085d41146bcc68668c9f23abf
   languageName: node
   linkType: hard
 
-"@comunica/actor-rdf-join-minus-hash@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-rdf-join-minus-hash@npm:2.10.0"
+"@comunica/actor-rdf-join-minus-hash@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-rdf-join-minus-hash@npm:2.10.1"
   dependencies:
-    "@comunica/bus-query-operation": ^2.10.0
-    "@comunica/bus-rdf-join": ^2.10.0
+    "@comunica/bus-query-operation": ^2.10.1
+    "@comunica/bus-rdf-join": ^2.10.1
     "@comunica/mediatortype-join-coefficients": ^2.10.0
     "@comunica/types": ^2.10.0
     "@rdfjs/types": "*"
-  checksum: 8d1aed2b97d08615bd4a4e826780addd4b2c8e18769943c06a3816e54a9bf8dea4e8e2386849b7fa3de524c8c7a852affba4b1a1ef26c8a2fb80802c27fe229e
+  checksum: 46cab6ff03a6ebfde5abb91a65b5b99120c3fd82102b05d4b7d8c91da27d57515586579faefc1c6f9dffb22faeab6eec0693532bc4706ae3980891d19bc608a3
   languageName: node
   linkType: hard
 
-"@comunica/actor-rdf-join-optional-bind@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-rdf-join-optional-bind@npm:2.10.0"
+"@comunica/actor-rdf-join-optional-bind@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-rdf-join-optional-bind@npm:2.10.1"
   dependencies:
-    "@comunica/actor-rdf-join-inner-multi-bind": ^2.10.0
-    "@comunica/bus-query-operation": ^2.10.0
-    "@comunica/bus-rdf-join": ^2.10.0
+    "@comunica/actor-rdf-join-inner-multi-bind": ^2.10.1
+    "@comunica/bus-query-operation": ^2.10.1
+    "@comunica/bus-rdf-join": ^2.10.1
     "@comunica/context-entries": ^2.10.0
     "@comunica/mediatortype-join-coefficients": ^2.10.0
     "@comunica/types": ^2.10.0
     sparqlalgebrajs: ^4.2.0
-  checksum: bbcead8d084613d7e5cf6a692a8788ef919a5d5dcc24994494bf9eb4b9683e092cdea4dd80dc56c82ff06d6bca11d54a4da7144c3bbbcbdb2733ec5a446a8190
+  checksum: a7d6b31f5adc7d30f325bd788432728753eda4928b0bdc4e10707908d2a3cd433b738414012b432c48267fccef62d6d02e79f2c5651f34d75b5a015bd151315d
   languageName: node
   linkType: hard
 
-"@comunica/actor-rdf-join-optional-nestedloop@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-rdf-join-optional-nestedloop@npm:2.10.0"
+"@comunica/actor-rdf-join-optional-nestedloop@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-rdf-join-optional-nestedloop@npm:2.10.1"
   dependencies:
-    "@comunica/bus-rdf-join": ^2.10.0
+    "@comunica/bus-rdf-join": ^2.10.1
     "@comunica/mediatortype-join-coefficients": ^2.10.0
     "@comunica/types": ^2.10.0
     asyncjoin: ^1.1.1
-  checksum: dba0519719e5d7d968d60dea6da58a7fb73ab0c17c189da5c3fffa7f500d0c782c904b3841092272dfc7798b62ebcbbf16f177ef819d111adbcbf6d2f0b10394
+  checksum: e509a210d88adbe69c928b45bb5e85c81c47e7f9006a1547a2a915dc5e0632bd64c40db7c31fd9f71fbfebff67a12078bff3b4a11d8ff68cd1bb09da9906529e
   languageName: node
   linkType: hard
 
@@ -1454,11 +1454,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@comunica/actor-rdf-resolve-hypermedia-sparql@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-rdf-resolve-hypermedia-sparql@npm:2.10.0"
+"@comunica/actor-rdf-resolve-hypermedia-sparql@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-rdf-resolve-hypermedia-sparql@npm:2.10.1"
   dependencies:
-    "@comunica/bindings-factory": ^2.10.0
+    "@comunica/bindings-factory": ^2.10.1
     "@comunica/bus-http": ^2.10.0
     "@comunica/bus-rdf-resolve-hypermedia": ^2.10.0
     "@comunica/bus-rdf-resolve-quad-pattern": ^2.10.0
@@ -1470,15 +1470,15 @@ __metadata:
     rdf-data-factory: ^1.1.1
     rdf-terms: ^1.11.0
     sparqlalgebrajs: ^4.2.0
-  checksum: af0db1929044260247cc93cef21d71f8344e1274c5ccd22511f786df93c907b55086283f0b4393f774fa41be202981eee258e30f4587f015337fb0f4be5a34f6
+  checksum: 3fae941d40b7b996ad2c541728dfe17fc656aa389f83f0fc01e150b1cd81c982c6a7c6b40f2a7385974cafd27b0f6f396c6d372df879f7ff9cdc489792c6d6d0
   languageName: node
   linkType: hard
 
-"@comunica/actor-rdf-resolve-quad-pattern-federated@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-rdf-resolve-quad-pattern-federated@npm:2.10.0"
+"@comunica/actor-rdf-resolve-quad-pattern-federated@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-rdf-resolve-quad-pattern-federated@npm:2.10.1"
   dependencies:
-    "@comunica/bus-query-operation": ^2.10.0
+    "@comunica/bus-query-operation": ^2.10.1
     "@comunica/bus-rdf-metadata-accumulate": ^2.10.0
     "@comunica/bus-rdf-resolve-quad-pattern": ^2.10.0
     "@comunica/context-entries": ^2.10.0
@@ -1491,17 +1491,17 @@ __metadata:
     rdf-data-factory: ^1.1.1
     rdf-terms: ^1.11.0
     sparqlalgebrajs: ^4.2.0
-  checksum: 2ceda49efb4c527960508186f57c4f4baabd3307438a87d3e9b6fd2bae3a21244c8fe5ddd8b628d1eac4b227f9889512b0030c528c6e98c95a1c8a3bdbdd3552
+  checksum: 4742cafcebe78c016f40c03b7db7a9b87b60709665a54495bee41717648f210396377b9df91517620aa6b85374f21039493f3e7c8e0e6fb2773113da12861fbc
   languageName: node
   linkType: hard
 
-"@comunica/actor-rdf-resolve-quad-pattern-hypermedia@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-rdf-resolve-quad-pattern-hypermedia@npm:2.10.0"
+"@comunica/actor-rdf-resolve-quad-pattern-hypermedia@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-rdf-resolve-quad-pattern-hypermedia@npm:2.10.1"
   dependencies:
     "@comunica/bus-dereference-rdf": ^2.10.0
     "@comunica/bus-http-invalidate": ^2.10.0
-    "@comunica/bus-query-operation": ^2.10.0
+    "@comunica/bus-query-operation": ^2.10.1
     "@comunica/bus-rdf-metadata": ^2.10.0
     "@comunica/bus-rdf-metadata-accumulate": ^2.10.0
     "@comunica/bus-rdf-metadata-extract": ^2.10.0
@@ -1520,7 +1520,7 @@ __metadata:
     rdf-streaming-store: ^1.1.0
     readable-stream: ^4.4.2
     sparqlalgebrajs: ^4.2.0
-  checksum: f5f429018759cbcad5be41acb57ad29af1acbe55bc4b683a81941fb184f9d6cb4886602edf35bb597a21d325d9279850ca79b7a62b74ab19c93927ce12a3064e
+  checksum: a4d16e09a1dede16a758e5cd9ec7de14515d773a8e00e49fe10a3faa7fff803dfc2c60b8d0bded79f56c540d67bbe6ce604556289bb991ac78e27e99221487ae
   languageName: node
   linkType: hard
 
@@ -1592,13 +1592,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@comunica/actor-rdf-update-hypermedia-patch-sparql-update@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-rdf-update-hypermedia-patch-sparql-update@npm:2.10.0"
+"@comunica/actor-rdf-update-hypermedia-patch-sparql-update@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-rdf-update-hypermedia-patch-sparql-update@npm:2.10.1"
   dependencies:
     "@comunica/bus-http": ^2.10.0
-    "@comunica/bus-rdf-update-hypermedia": ^2.10.0
-    "@comunica/bus-rdf-update-quads": ^2.10.0
+    "@comunica/bus-rdf-update-hypermedia": ^2.10.1
+    "@comunica/bus-rdf-update-quads": ^2.10.1
     "@comunica/core": ^2.10.0
     "@comunica/types": ^2.10.0
     "@rdfjs/types": "*"
@@ -1606,34 +1606,34 @@ __metadata:
     cross-fetch: ^4.0.0
     rdf-string-ttl: ^1.3.2
     readable-stream: ^4.4.2
-  checksum: 39e1a14fd5b29c3da8c78a74ad21a0177f3e44434cc80cc5ed7bacbf4089ae51e3540e91a4d2d1f0c4dfe0a5279ca995983ee06e73fb75fe726eb6208cb49bb4
+  checksum: 14d2e10feddc886c017e252d6c9655fc6082f0445a91d8f7b9da0614132a84700599afa70e0408e0087d538ad57b9a07945dee1d9ed20d429b668a29491e227d
   languageName: node
   linkType: hard
 
-"@comunica/actor-rdf-update-hypermedia-put-ldp@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-rdf-update-hypermedia-put-ldp@npm:2.10.0"
+"@comunica/actor-rdf-update-hypermedia-put-ldp@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-rdf-update-hypermedia-put-ldp@npm:2.10.1"
   dependencies:
     "@comunica/bus-http": ^2.10.0
     "@comunica/bus-rdf-serialize": ^2.10.0
-    "@comunica/bus-rdf-update-hypermedia": ^2.10.0
-    "@comunica/bus-rdf-update-quads": ^2.10.0
+    "@comunica/bus-rdf-update-hypermedia": ^2.10.1
+    "@comunica/bus-rdf-update-quads": ^2.10.1
     "@comunica/core": ^2.10.0
     "@comunica/types": ^2.10.0
     "@rdfjs/types": "*"
     asynciterator: ^3.8.1
     cross-fetch: ^4.0.0
-  checksum: 2a6a4ad0292f837915951eadb69978c4ddcf4e979cf2d6fc2b1cb7a36f184f4c8901700b027ac46b3731d3691e10ae77c55332e8d0680d5a7169fd6d064b8fc3
+  checksum: ec25c398c5463a809a23ebea827dff1e65508bd2551661d36e163365b3e5ef4b95bd086bdf318e5821e03613c2c6f9577230d6d33039278c370220854082085e
   languageName: node
   linkType: hard
 
-"@comunica/actor-rdf-update-hypermedia-sparql@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-rdf-update-hypermedia-sparql@npm:2.10.0"
+"@comunica/actor-rdf-update-hypermedia-sparql@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-rdf-update-hypermedia-sparql@npm:2.10.1"
   dependencies:
     "@comunica/bus-http": ^2.10.0
-    "@comunica/bus-rdf-update-hypermedia": ^2.10.0
-    "@comunica/bus-rdf-update-quads": ^2.10.0
+    "@comunica/bus-rdf-update-hypermedia": ^2.10.1
+    "@comunica/bus-rdf-update-quads": ^2.10.1
     "@comunica/core": ^2.10.0
     "@comunica/types": ^2.10.0
     "@rdfjs/types": "*"
@@ -1641,51 +1641,51 @@ __metadata:
     fetch-sparql-endpoint: ^4.0.0
     rdf-string-ttl: ^1.3.2
     stream-to-string: ^1.2.0
-  checksum: 364b1878b2b3a1602571f2e4b5be56358894ce1a4969e3c5746bde1b6ae7872ba3609a9bc34bd9048570f9e6ced07ac91651ade7144c5775acc3416858a95d85
+  checksum: 8004e4c56438da8d2c21c0c08d116d1fd3cdcea93a64358b7802747696bd9dcbc3566a0b3d655896cc21ce7e6cbcacfe72ee7ccb1c2a45b7d0e3bbfde9cba908
   languageName: node
   linkType: hard
 
-"@comunica/actor-rdf-update-quads-hypermedia@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-rdf-update-quads-hypermedia@npm:2.10.0"
+"@comunica/actor-rdf-update-quads-hypermedia@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-rdf-update-quads-hypermedia@npm:2.10.1"
   dependencies:
     "@comunica/bus-dereference-rdf": ^2.10.0
     "@comunica/bus-http-invalidate": ^2.10.0
     "@comunica/bus-rdf-metadata": ^2.10.0
     "@comunica/bus-rdf-metadata-extract": ^2.10.0
-    "@comunica/bus-rdf-update-hypermedia": ^2.10.0
-    "@comunica/bus-rdf-update-quads": ^2.10.0
+    "@comunica/bus-rdf-update-hypermedia": ^2.10.1
+    "@comunica/bus-rdf-update-quads": ^2.10.1
     "@comunica/core": ^2.10.0
     "@comunica/types": ^2.10.0
     lru-cache: ^10.0.0
-  checksum: 85cf759626125006cec62bee845a0a50b34620ee941a36a44118b8429ff0175d81e58f12081a4b1916489fa1a31fe8f13b724d7bfc1bc09a59fc9911b214899e
+  checksum: 298894adf15767f67782e0f3d424d2db04f84093f5e4312f8c161f3d10536c978da7dd1a22ad879409a257a09d5f779ab8b392629f01035d396ce0ad53d4b6b8
   languageName: node
   linkType: hard
 
-"@comunica/actor-rdf-update-quads-rdfjs-store@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/actor-rdf-update-quads-rdfjs-store@npm:2.10.0"
+"@comunica/actor-rdf-update-quads-rdfjs-store@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/actor-rdf-update-quads-rdfjs-store@npm:2.10.1"
   dependencies:
-    "@comunica/bus-rdf-update-quads": ^2.10.0
+    "@comunica/bus-rdf-update-quads": ^2.10.1
     "@comunica/core": ^2.10.0
     "@comunica/types": ^2.10.0
     "@rdfjs/types": "*"
     asynciterator: ^3.8.1
     rdf-data-factory: ^1.1.1
     rdf-string: ^1.6.1
-  checksum: 48a031e06c7bee0f8a0a2aa0bffb6056a65b3c97b475de3db5b4bbfbbaf6bf0efa976146f9a2d77e9ca33e09420a2d39d538b791b1d69ddbd1f21eb272e82e98
+  checksum: 8f433303d6f3e9a8a88511b5bf2392d4d3e9beda808d17b7943c2548513dd6be53dac3d30fe7ce98b8e53b60bdabbab1e8f3cda60eb687296294ee6aae64f668
   languageName: node
   linkType: hard
 
-"@comunica/bindings-factory@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/bindings-factory@npm:2.10.0"
+"@comunica/bindings-factory@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/bindings-factory@npm:2.10.1"
   dependencies:
     "@rdfjs/types": "*"
     immutable: ^4.1.0
     rdf-data-factory: ^1.1.1
     rdf-string: ^1.6.1
-  checksum: f8c93011bba2059774e5dd25ce88ed23b94e4d0825697264d9b9bf042ed0901f97fe1f7375473cfc7cfce665931a723df4dae35c8cfe275c8fdb8f0f495a6b1b
+  checksum: d329e10368cabc199796a825ce489c4c6a6b03443b357d073478f1d8adeca0cb53fe7fd23044d20b3fb42be5c55ad666e342a2826b84b900a1636ae66ab9da51
   languageName: node
   linkType: hard
 
@@ -1778,11 +1778,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@comunica/bus-query-operation@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/bus-query-operation@npm:2.10.0"
+"@comunica/bus-query-operation@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/bus-query-operation@npm:2.10.1"
   dependencies:
-    "@comunica/bindings-factory": ^2.10.0
+    "@comunica/bindings-factory": ^2.10.1
     "@comunica/context-entries": ^2.10.0
     "@comunica/core": ^2.10.0
     "@comunica/data-factory": ^2.7.0
@@ -1792,7 +1792,7 @@ __metadata:
     rdf-string: ^1.6.1
     rdf-terms: ^1.11.0
     sparqlalgebrajs: ^4.2.0
-  checksum: 72092319d75a9df142135985e27779212c5123341a03b7d00fb38a9b2a155b7f18ca10d32e2c01ba0473ff5715c93257ae2b95708ae229cbce47cbb0e695a4a1
+  checksum: d223d11a52f75a30c431542c8cbee0f9088b0b637bc70fc24b152e660f43dc0c3ee96dffc93555a4893a9c9b8518718ce56e0e634e35d7da948ee1fe0740c40f
   languageName: node
   linkType: hard
 
@@ -1839,11 +1839,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@comunica/bus-rdf-join@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/bus-rdf-join@npm:2.10.0"
+"@comunica/bus-rdf-join@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/bus-rdf-join@npm:2.10.1"
   dependencies:
-    "@comunica/bus-query-operation": ^2.10.0
+    "@comunica/bus-query-operation": ^2.10.1
     "@comunica/bus-rdf-join-selectivity": ^2.10.0
     "@comunica/context-entries": ^2.10.0
     "@comunica/core": ^2.10.0
@@ -1853,7 +1853,7 @@ __metadata:
     "@rdfjs/types": "*"
     rdf-data-factory: ^1.1.1
     rdf-string: ^1.6.1
-  checksum: beddce03e6a4aae3a4a7cd6fcd043dcf2f98fc95b8ad712cfc838df3c22250d23ce465c15a7856872bb3a4bb2825c001ca07e95a1a48779019f61862b2684cbc
+  checksum: ac6214a578492a73a2f3f9e010babeda25fffdae8c6f3e57c50a51eca9913447ba98f4cef44c943e5ae9e9f7071516c88f82961c84cc0336787150a021085822
   languageName: node
   linkType: hard
 
@@ -1966,21 +1966,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@comunica/bus-rdf-update-hypermedia@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/bus-rdf-update-hypermedia@npm:2.10.0"
+"@comunica/bus-rdf-update-hypermedia@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/bus-rdf-update-hypermedia@npm:2.10.1"
   dependencies:
-    "@comunica/bus-rdf-update-quads": ^2.10.0
+    "@comunica/bus-rdf-update-quads": ^2.10.1
     "@comunica/core": ^2.10.0
-  checksum: aef3d71ee64c5eebe786d4f5a368e61056600fd5c6bd805a6b061dd65e35c1103db93ef8105d92df3716f988854193ce2485aeb99033480a5b26f9a7656238c7
+  checksum: 4968d79d011ad9c79a5d9b3bfae5bba28277b60b6c51473282c8f6e941c70ed08516565f1494257249a755f3cbc32b43e500cd7d122740a2adef17f75aee4d91
   languageName: node
   linkType: hard
 
-"@comunica/bus-rdf-update-quads@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/bus-rdf-update-quads@npm:2.10.0"
+"@comunica/bus-rdf-update-quads@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/bus-rdf-update-quads@npm:2.10.1"
   dependencies:
-    "@comunica/actor-rdf-resolve-quad-pattern-federated": ^2.10.0
+    "@comunica/actor-rdf-resolve-quad-pattern-federated": ^2.10.1
     "@comunica/bus-http": ^2.10.0
     "@comunica/context-entries": ^2.10.0
     "@comunica/core": ^2.10.0
@@ -1988,7 +1988,7 @@ __metadata:
     "@rdfjs/types": "*"
     asynciterator: ^3.8.1
     stream-to-string: ^1.2.0
-  checksum: 2d8dd3868a383eaf08462d174d5a92f2f1f52fbc76e5eb86cd30967957258bac1af3d3b03e60373cefdff05f15e4b054ee61765b513be36d02ed8d0f69a9987d
+  checksum: aeb8ffdc89fd98faae84dc16d74e06db65b548e2e48a875cd5f6897dd84d790ec10c1a306f15ee723f691faea88b9b751e4d45ecd59fa97346f20cfad5be3df4
   languageName: node
   linkType: hard
 
@@ -2099,16 +2099,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@comunica/mediator-join-coefficients-fixed@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "@comunica/mediator-join-coefficients-fixed@npm:2.10.0"
+"@comunica/mediator-join-coefficients-fixed@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@comunica/mediator-join-coefficients-fixed@npm:2.10.1"
   dependencies:
-    "@comunica/bus-rdf-join": ^2.10.0
+    "@comunica/bus-rdf-join": ^2.10.1
     "@comunica/context-entries": ^2.10.0
     "@comunica/core": ^2.10.0
     "@comunica/mediatortype-join-coefficients": ^2.10.0
     "@comunica/types": ^2.10.0
-  checksum: 93c3cdf77dacdf2c36c7edfc706258b9c433fac1c03d2d48622bd06c56952ec4ae65aa612fafec53465b35cba1abbf3940c1961c36d9fdadde357603b39a7366
+  checksum: 3d7e0141f75087c383b048a52020936cbe0f0efb400a03cf3c433c86c9a7dce686fe448315f10ec93c995fe0c91cd7c528e93d6cfb55024afc02df7b6fed7af3
   languageName: node
   linkType: hard
 
@@ -2177,60 +2177,60 @@ __metadata:
   linkType: hard
 
 "@comunica/query-sparql@npm:^2.2.1":
-  version: 2.10.0
-  resolution: "@comunica/query-sparql@npm:2.10.0"
+  version: 2.10.1
+  resolution: "@comunica/query-sparql@npm:2.10.1"
   dependencies:
     "@comunica/actor-context-preprocess-source-to-destination": ^2.10.0
     "@comunica/actor-dereference-fallback": ^2.10.0
     "@comunica/actor-dereference-http": ^2.10.0
     "@comunica/actor-dereference-rdf-parse": ^2.10.0
     "@comunica/actor-hash-bindings-sha1": ^2.10.0
-    "@comunica/actor-http-fetch": ^2.10.0
+    "@comunica/actor-http-fetch": ^2.10.1
     "@comunica/actor-http-proxy": ^2.10.0
     "@comunica/actor-http-wayback": ^2.10.0
-    "@comunica/actor-init-query": ^2.10.0
+    "@comunica/actor-init-query": ^2.10.1
     "@comunica/actor-optimize-query-operation-bgp-to-join": ^2.10.0
     "@comunica/actor-optimize-query-operation-join-bgp": ^2.10.0
     "@comunica/actor-optimize-query-operation-join-connected": ^2.10.0
-    "@comunica/actor-query-operation-ask": ^2.10.0
-    "@comunica/actor-query-operation-bgp-join": ^2.10.0
-    "@comunica/actor-query-operation-construct": ^2.10.0
-    "@comunica/actor-query-operation-describe-subject": ^2.10.0
-    "@comunica/actor-query-operation-distinct-hash": ^2.10.0
-    "@comunica/actor-query-operation-extend": ^2.10.0
-    "@comunica/actor-query-operation-filter-sparqlee": ^2.10.0
-    "@comunica/actor-query-operation-from-quad": ^2.10.0
-    "@comunica/actor-query-operation-group": ^2.10.0
-    "@comunica/actor-query-operation-join": ^2.10.0
-    "@comunica/actor-query-operation-leftjoin": ^2.10.0
-    "@comunica/actor-query-operation-minus": ^2.10.0
-    "@comunica/actor-query-operation-nop": ^2.10.0
-    "@comunica/actor-query-operation-orderby-sparqlee": ^2.10.0
-    "@comunica/actor-query-operation-path-alt": ^2.10.0
-    "@comunica/actor-query-operation-path-inv": ^2.10.0
-    "@comunica/actor-query-operation-path-link": ^2.10.0
-    "@comunica/actor-query-operation-path-nps": ^2.10.0
-    "@comunica/actor-query-operation-path-one-or-more": ^2.10.0
-    "@comunica/actor-query-operation-path-seq": ^2.10.0
-    "@comunica/actor-query-operation-path-zero-or-more": ^2.10.0
-    "@comunica/actor-query-operation-path-zero-or-one": ^2.10.0
-    "@comunica/actor-query-operation-project": ^2.10.0
-    "@comunica/actor-query-operation-quadpattern": ^2.10.0
-    "@comunica/actor-query-operation-reduced-hash": ^2.10.0
-    "@comunica/actor-query-operation-service": ^2.10.0
-    "@comunica/actor-query-operation-slice": ^2.10.0
-    "@comunica/actor-query-operation-sparql-endpoint": ^2.10.0
-    "@comunica/actor-query-operation-union": ^2.10.0
-    "@comunica/actor-query-operation-update-add-rewrite": ^2.10.0
-    "@comunica/actor-query-operation-update-clear": ^2.10.0
-    "@comunica/actor-query-operation-update-compositeupdate": ^2.10.0
-    "@comunica/actor-query-operation-update-copy-rewrite": ^2.10.0
-    "@comunica/actor-query-operation-update-create": ^2.10.0
-    "@comunica/actor-query-operation-update-deleteinsert": ^2.10.0
-    "@comunica/actor-query-operation-update-drop": ^2.10.0
-    "@comunica/actor-query-operation-update-load": ^2.10.0
-    "@comunica/actor-query-operation-update-move-rewrite": ^2.10.0
-    "@comunica/actor-query-operation-values": ^2.10.0
+    "@comunica/actor-query-operation-ask": ^2.10.1
+    "@comunica/actor-query-operation-bgp-join": ^2.10.1
+    "@comunica/actor-query-operation-construct": ^2.10.1
+    "@comunica/actor-query-operation-describe-subject": ^2.10.1
+    "@comunica/actor-query-operation-distinct-hash": ^2.10.1
+    "@comunica/actor-query-operation-extend": ^2.10.1
+    "@comunica/actor-query-operation-filter-sparqlee": ^2.10.1
+    "@comunica/actor-query-operation-from-quad": ^2.10.1
+    "@comunica/actor-query-operation-group": ^2.10.1
+    "@comunica/actor-query-operation-join": ^2.10.1
+    "@comunica/actor-query-operation-leftjoin": ^2.10.1
+    "@comunica/actor-query-operation-minus": ^2.10.1
+    "@comunica/actor-query-operation-nop": ^2.10.1
+    "@comunica/actor-query-operation-orderby-sparqlee": ^2.10.1
+    "@comunica/actor-query-operation-path-alt": ^2.10.1
+    "@comunica/actor-query-operation-path-inv": ^2.10.1
+    "@comunica/actor-query-operation-path-link": ^2.10.1
+    "@comunica/actor-query-operation-path-nps": ^2.10.1
+    "@comunica/actor-query-operation-path-one-or-more": ^2.10.1
+    "@comunica/actor-query-operation-path-seq": ^2.10.1
+    "@comunica/actor-query-operation-path-zero-or-more": ^2.10.1
+    "@comunica/actor-query-operation-path-zero-or-one": ^2.10.1
+    "@comunica/actor-query-operation-project": ^2.10.1
+    "@comunica/actor-query-operation-quadpattern": ^2.10.1
+    "@comunica/actor-query-operation-reduced-hash": ^2.10.1
+    "@comunica/actor-query-operation-service": ^2.10.1
+    "@comunica/actor-query-operation-slice": ^2.10.1
+    "@comunica/actor-query-operation-sparql-endpoint": ^2.10.1
+    "@comunica/actor-query-operation-union": ^2.10.1
+    "@comunica/actor-query-operation-update-add-rewrite": ^2.10.1
+    "@comunica/actor-query-operation-update-clear": ^2.10.1
+    "@comunica/actor-query-operation-update-compositeupdate": ^2.10.1
+    "@comunica/actor-query-operation-update-copy-rewrite": ^2.10.1
+    "@comunica/actor-query-operation-update-create": ^2.10.1
+    "@comunica/actor-query-operation-update-deleteinsert": ^2.10.1
+    "@comunica/actor-query-operation-update-drop": ^2.10.1
+    "@comunica/actor-query-operation-update-load": ^2.10.1
+    "@comunica/actor-query-operation-update-move-rewrite": ^2.10.1
+    "@comunica/actor-query-operation-values": ^2.10.1
     "@comunica/actor-query-parse-graphql": ^2.10.0
     "@comunica/actor-query-parse-sparql": ^2.10.0
     "@comunica/actor-query-result-serialize-json": ^2.10.0
@@ -2244,18 +2244,18 @@ __metadata:
     "@comunica/actor-query-result-serialize-table": ^2.10.0
     "@comunica/actor-query-result-serialize-tree": ^2.10.0
     "@comunica/actor-rdf-join-entries-sort-cardinality": ^2.10.0
-    "@comunica/actor-rdf-join-inner-hash": ^2.10.0
-    "@comunica/actor-rdf-join-inner-multi-bind": ^2.10.0
-    "@comunica/actor-rdf-join-inner-multi-empty": ^2.10.0
-    "@comunica/actor-rdf-join-inner-multi-smallest": ^2.10.0
-    "@comunica/actor-rdf-join-inner-nestedloop": ^2.10.0
-    "@comunica/actor-rdf-join-inner-none": ^2.10.0
-    "@comunica/actor-rdf-join-inner-single": ^2.10.0
-    "@comunica/actor-rdf-join-inner-symmetrichash": ^2.10.0
-    "@comunica/actor-rdf-join-minus-hash": ^2.10.0
-    "@comunica/actor-rdf-join-minus-hash-undef": ^2.10.0
-    "@comunica/actor-rdf-join-optional-bind": ^2.10.0
-    "@comunica/actor-rdf-join-optional-nestedloop": ^2.10.0
+    "@comunica/actor-rdf-join-inner-hash": ^2.10.1
+    "@comunica/actor-rdf-join-inner-multi-bind": ^2.10.1
+    "@comunica/actor-rdf-join-inner-multi-empty": ^2.10.1
+    "@comunica/actor-rdf-join-inner-multi-smallest": ^2.10.1
+    "@comunica/actor-rdf-join-inner-nestedloop": ^2.10.1
+    "@comunica/actor-rdf-join-inner-none": ^2.10.1
+    "@comunica/actor-rdf-join-inner-single": ^2.10.1
+    "@comunica/actor-rdf-join-inner-symmetrichash": ^2.10.1
+    "@comunica/actor-rdf-join-minus-hash": ^2.10.1
+    "@comunica/actor-rdf-join-minus-hash-undef": ^2.10.1
+    "@comunica/actor-rdf-join-optional-bind": ^2.10.1
+    "@comunica/actor-rdf-join-optional-nestedloop": ^2.10.1
     "@comunica/actor-rdf-join-selectivity-variable-counting": ^2.10.0
     "@comunica/actor-rdf-metadata-accumulate-cancontainundefs": ^2.10.0
     "@comunica/actor-rdf-metadata-accumulate-cardinality": ^2.10.0
@@ -2284,28 +2284,28 @@ __metadata:
     "@comunica/actor-rdf-resolve-hypermedia-links-queue-fifo": ^2.10.0
     "@comunica/actor-rdf-resolve-hypermedia-none": ^2.10.0
     "@comunica/actor-rdf-resolve-hypermedia-qpf": ^2.10.0
-    "@comunica/actor-rdf-resolve-hypermedia-sparql": ^2.10.0
-    "@comunica/actor-rdf-resolve-quad-pattern-federated": ^2.10.0
-    "@comunica/actor-rdf-resolve-quad-pattern-hypermedia": ^2.10.0
+    "@comunica/actor-rdf-resolve-hypermedia-sparql": ^2.10.1
+    "@comunica/actor-rdf-resolve-quad-pattern-federated": ^2.10.1
+    "@comunica/actor-rdf-resolve-quad-pattern-hypermedia": ^2.10.1
     "@comunica/actor-rdf-resolve-quad-pattern-rdfjs-source": ^2.10.0
     "@comunica/actor-rdf-resolve-quad-pattern-string-source": ^2.10.0
     "@comunica/actor-rdf-serialize-jsonld": ^2.10.0
     "@comunica/actor-rdf-serialize-n3": ^2.10.0
     "@comunica/actor-rdf-serialize-shaclc": ^2.10.0
-    "@comunica/actor-rdf-update-hypermedia-patch-sparql-update": ^2.10.0
-    "@comunica/actor-rdf-update-hypermedia-put-ldp": ^2.10.0
-    "@comunica/actor-rdf-update-hypermedia-sparql": ^2.10.0
-    "@comunica/actor-rdf-update-quads-hypermedia": ^2.10.0
-    "@comunica/actor-rdf-update-quads-rdfjs-store": ^2.10.0
+    "@comunica/actor-rdf-update-hypermedia-patch-sparql-update": ^2.10.1
+    "@comunica/actor-rdf-update-hypermedia-put-ldp": ^2.10.1
+    "@comunica/actor-rdf-update-hypermedia-sparql": ^2.10.1
+    "@comunica/actor-rdf-update-quads-hypermedia": ^2.10.1
+    "@comunica/actor-rdf-update-quads-rdfjs-store": ^2.10.1
     "@comunica/bus-http-invalidate": ^2.10.0
-    "@comunica/bus-query-operation": ^2.10.0
+    "@comunica/bus-query-operation": ^2.10.1
     "@comunica/config-query-sparql": ^2.7.0
     "@comunica/core": ^2.10.0
     "@comunica/logger-void": ^2.10.0
     "@comunica/mediator-all": ^2.10.0
     "@comunica/mediator-combine-pipeline": ^2.10.0
     "@comunica/mediator-combine-union": ^2.10.0
-    "@comunica/mediator-join-coefficients-fixed": ^2.10.0
+    "@comunica/mediator-join-coefficients-fixed": ^2.10.1
     "@comunica/mediator-number": ^2.10.0
     "@comunica/mediator-race": ^2.10.0
     "@comunica/runner": ^2.10.0
@@ -2316,7 +2316,7 @@ __metadata:
     comunica-dynamic-sparql: bin/query-dynamic.js
     comunica-sparql: bin/query.js
     comunica-sparql-http: bin/http.js
-  checksum: 71d0d10442a34b29bd9aa2f506cb809a2047c0e910476dbc8a205a172250c9080a74f40f98846658a9be9b3773740f4f806205ff1f42800973a5d252c87af43a
+  checksum: ff6b6f50d625076935bfb2597d02767bc74e357a6d48bdcbfd92bb1066e5272979ef4d0105eecf1a48fa06dafb5fe6660d38c77f0ebb1d6e2390f316de97e51d
   languageName: node
   linkType: hard
 
@@ -2589,35 +2589,35 @@ __metadata:
   linkType: hard
 
 "@types/accepts@npm:*":
-  version: 1.3.6
-  resolution: "@types/accepts@npm:1.3.6"
+  version: 1.3.7
+  resolution: "@types/accepts@npm:1.3.7"
   dependencies:
     "@types/node": "*"
-  checksum: e5e8d72e9abd460c3c3cd50d4a83b5f66d1437f6c5dd522c1ea3c2596ef85dd2a604f5e972816bb98733d1c0e91789625e4edc9bee23f9ea48bf6507289ff38e
+  checksum: 7678cf74976e16093aff6e6f9755826faf069ac1e30179276158ce46ea246348ff22ca6bdd46cef08428881337d9ceefbf00bab08a7731646eb9fc9449d6a1e7
   languageName: node
   linkType: hard
 
 "@types/async-lock@npm:^1.1.2, @types/async-lock@npm:^1.1.5":
-  version: 1.4.1
-  resolution: "@types/async-lock@npm:1.4.1"
-  checksum: 45de9144f83b8c37ef69bb136ccd61d04289abbb122d457dad2682972549a9cbccfd70affb0cfdf561b605679670fb63702c9d045171d80ecc8c980feb9eae07
+  version: 1.4.2
+  resolution: "@types/async-lock@npm:1.4.2"
+  checksum: d5b18e24bc378ccf7a548720c09bdaa87ad4abf500a96d52b5e64da3b4f26b5ed78f36a04f30769f10b789136efb95428c93493dec9506d2a6b0c96b55187702
   languageName: node
   linkType: hard
 
 "@types/bcryptjs@npm:^2.4.2":
-  version: 2.4.5
-  resolution: "@types/bcryptjs@npm:2.4.5"
-  checksum: f721d72d8e1374ee2a342ce90cc902e2308cd059317af6e663d752537e704ea73bb119a2d34a6a68475f80abc1342635f48570119e0381f83a202724974f1e9f
+  version: 2.4.6
+  resolution: "@types/bcryptjs@npm:2.4.6"
+  checksum: 25ae1fd1e8a9bd688e22a8de905581d6d7bf26e823b797f895d2c488100b1f15d3c12a7d1a94f553087b010d316bf3978106df860e8e58fd13f52b4c708df5fd
   languageName: node
   linkType: hard
 
 "@types/body-parser@npm:*":
-  version: 1.19.4
-  resolution: "@types/body-parser@npm:1.19.4"
+  version: 1.19.5
+  resolution: "@types/body-parser@npm:1.19.5"
   dependencies:
     "@types/connect": "*"
     "@types/node": "*"
-  checksum: 10accc30773319bd49af7d12d2cd5faf9a0293ea4764345297f26ba6ef31d5caa7609da7619584d6c61279e09b89d3ab13d28c5cb644807c5d9c722ae1454778
+  checksum: 1e251118c4b2f61029cc43b0dc028495f2d1957fe8ee49a707fb940f86a9bd2f9754230805598278fe99958b49e9b7e66eec8ef6a50ab5c1f6b93e1ba2aaba82
   languageName: node
   linkType: hard
 
@@ -2634,117 +2634,117 @@ __metadata:
   linkType: hard
 
 "@types/cli-progress@npm:^3.9.1":
-  version: 3.11.4
-  resolution: "@types/cli-progress@npm:3.11.4"
+  version: 3.11.5
+  resolution: "@types/cli-progress@npm:3.11.5"
   dependencies:
     "@types/node": "*"
-  checksum: f70c38878bd9b6bbb693892d0a61bab0282df896b60d4af0d7fbac8a0c6c007cdc337bea380920e6aa23f35885a7b4945c9bdfb2e14a6039394c3d71b5187e65
+  checksum: 571fb3b11646415ac49c90e8003b82f3ac58d75fde5952caf40b4a079517b6e25e79ab0a7455d0ab0398d0b2de062646dba075d3d1f8d147eed2ab4d41abbf64
   languageName: node
   linkType: hard
 
 "@types/connect@npm:*":
-  version: 3.4.37
-  resolution: "@types/connect@npm:3.4.37"
+  version: 3.4.38
+  resolution: "@types/connect@npm:3.4.38"
   dependencies:
     "@types/node": "*"
-  checksum: 79ef1f79a28235ea7cbefa153914318d7b46d60041a932681b613abd706591108f4f17ddd2072ee8ec23ba9a3fb068a6c3bbdca66b95de1a7e6039bd940ae988
+  checksum: 7eb1bc5342a9604facd57598a6c62621e244822442976c443efb84ff745246b10d06e8b309b6e80130026a396f19bf6793b7cecd7380169f369dac3bfc46fb99
   languageName: node
   linkType: hard
 
 "@types/content-disposition@npm:*":
-  version: 0.5.7
-  resolution: "@types/content-disposition@npm:0.5.7"
-  checksum: 3691d07a44626501cd0e8585861f2ff542f458e04a69757702b4fe29056c6a4191103d1e2bcbc0dc74b6bcf8656fe345fe728af70e9df56c80c4372dbfb5376e
+  version: 0.5.8
+  resolution: "@types/content-disposition@npm:0.5.8"
+  checksum: eeea868fb510ae7a32aa2d7de680fba79d59001f3e758a334621e10bc0a6496d3a42bb79243a5e53b9c63cb524522853ccc144fe1ab160c4247d37cdb81146c4
   languageName: node
   linkType: hard
 
 "@types/cookies@npm:*":
-  version: 0.7.9
-  resolution: "@types/cookies@npm:0.7.9"
+  version: 0.7.10
+  resolution: "@types/cookies@npm:0.7.10"
   dependencies:
     "@types/connect": "*"
     "@types/express": "*"
     "@types/keygrip": "*"
     "@types/node": "*"
-  checksum: 2c373b0f015e7f21f9b2ca8845a1831205cb27865238a5d8218440ca06254a4998c74befdb92be4b6ba428ab645413d9b1eae1eb0cf53cc1a5c7e4a4b530017f
+  checksum: 99cd44a193398932ff7926cfaac1eb4441d3dc47c3f64fdfb28861acbeb290b6db6a20376f993defc9d302db92bb1d36189b89ba447a633f960535f3f0d34e2d
   languageName: node
   linkType: hard
 
 "@types/cors@npm:^2.8.12":
-  version: 2.8.15
-  resolution: "@types/cors@npm:2.8.15"
+  version: 2.8.17
+  resolution: "@types/cors@npm:2.8.17"
   dependencies:
     "@types/node": "*"
-  checksum: ef7b0aba4c6a4c1fe9d459bd471ebaa891a75319682c9248daa17720003d1d0d2c59de4bdb6868630596ade9b7c3c949e652d6141b14c6fe4387ffcc520d0f3f
+  checksum: 469bd85e29a35977099a3745c78e489916011169a664e97c4c3d6538143b0a16e4cc72b05b407dc008df3892ed7bf595f9b7c0f1f4680e169565ee9d64966bde
   languageName: node
   linkType: hard
 
 "@types/cross-spawn@npm:^6.0.2":
-  version: 6.0.4
-  resolution: "@types/cross-spawn@npm:6.0.4"
+  version: 6.0.6
+  resolution: "@types/cross-spawn@npm:6.0.6"
   dependencies:
     "@types/node": "*"
-  checksum: 45624a955c064dda167f8aae5560918307110e3a1221989b5957c52842208c2ee29e099c9120615b1dde66afe7a7c3db627c754e328f574a0ae313644e43ceef
+  checksum: b4172927cd1387cf037c3ade785ef46c87537b7bc2803d7f6663b4904d0c5d6f726415d1adb2fee4fecb21746738f11336076449265d46be4ce110cc3a8c8436
   languageName: node
   linkType: hard
 
 "@types/docker-modem@npm:*":
-  version: 3.0.5
-  resolution: "@types/docker-modem@npm:3.0.5"
+  version: 3.0.6
+  resolution: "@types/docker-modem@npm:3.0.6"
   dependencies:
     "@types/node": "*"
     "@types/ssh2": "*"
-  checksum: e1e82612acd56d790406628ff9249e0fc1d9c8fe4f719cce6c5139bd53c5d893f00bc471bb510df68cde9cc5d2828849863615ec63ed89d7ffba841faa037b9e
+  checksum: cc58e8189f6ec5a2b8ca890207402178a97ddac8c80d125dc65d8ab29034b5db736de15e99b91b2d74e66d14e26e73b6b8b33216613dd15fd3aa6b82c11a83ed
   languageName: node
   linkType: hard
 
 "@types/dockerode@npm:^3.2.3":
-  version: 3.3.21
-  resolution: "@types/dockerode@npm:3.3.21"
+  version: 3.3.23
+  resolution: "@types/dockerode@npm:3.3.23"
   dependencies:
     "@types/docker-modem": "*"
     "@types/node": "*"
-  checksum: 025c97cd2549f1b3f0dc6e117e24e3b7e56dcf3e482e2abe5f2d6961e56e637b0e1f1b4f032e065cd7245302064ac3ccdb9c7dfdb0fe43a5bfb2b5f4ccbf4a8d
+  checksum: 065e9ae43f13641e0df149335914d10af95e559002efe5a5de8e56df9a21b4309b18dbc04fd4c59a4e893c4fedc7df892db28e9d25457bce0c4fd33d21a67834
   languageName: node
   linkType: hard
 
 "@types/ejs@npm:^3.1.1":
-  version: 3.1.4
-  resolution: "@types/ejs@npm:3.1.4"
-  checksum: 7e61b59a4a1a5232e081f0f2408b99ee5664446406004da088b29ac849b1490fbd6fbdf2c2a1aeb5049e690edb80f6c0cbe8387930a114e2c1c7dc0e67d0bc04
+  version: 3.1.5
+  resolution: "@types/ejs@npm:3.1.5"
+  checksum: e142266283051f27a7f79329871b311687dede19ae20268d882e4de218c65e1311d28a300b85579ca67157a8d601b7234daa50c2f99b252b121d27b4e5b21468
   languageName: node
   linkType: hard
 
 "@types/end-of-stream@npm:^1.4.1":
-  version: 1.4.3
-  resolution: "@types/end-of-stream@npm:1.4.3"
+  version: 1.4.4
+  resolution: "@types/end-of-stream@npm:1.4.4"
   dependencies:
     "@types/node": "*"
-  checksum: 42bcc68997a5bacd3cb67a1bee291347736c48f26e0ee1b94d2b5abee34d11ce2c310a614217a496678b3a8515aeaa844d24e136ff0e5702d1af4ab0b8f19cea
+  checksum: 91d705295b6618666886e903730fcdf334b08ec581904ef874cbe2ebd43defea744ec1172cd895cc5de574d1316672526d50b064ce9fa8b9785c5f6b1b587e5c
   languageName: node
   linkType: hard
 
 "@types/express-serve-static-core@npm:^4.17.33":
-  version: 4.17.39
-  resolution: "@types/express-serve-static-core@npm:4.17.39"
+  version: 4.17.41
+  resolution: "@types/express-serve-static-core@npm:4.17.41"
   dependencies:
     "@types/node": "*"
     "@types/qs": "*"
     "@types/range-parser": "*"
     "@types/send": "*"
-  checksum: 4227b96a53f0cf19d01fdb77a74252660f8e70650b79167e591b04c66ec9c7330d0a00038939415f96664a67312b21798bbac150fe81bf613380849b96546c37
+  checksum: 12750f6511dd870bbaccfb8208ad1e79361cf197b147f62a3bedc19ec642f3a0f9926ace96705f4bc88ec2ae56f61f7ca8c2438e6b22f5540842b5569c28a121
   languageName: node
   linkType: hard
 
 "@types/express@npm:*":
-  version: 4.17.20
-  resolution: "@types/express@npm:4.17.20"
+  version: 4.17.21
+  resolution: "@types/express@npm:4.17.21"
   dependencies:
     "@types/body-parser": "*"
     "@types/express-serve-static-core": ^4.17.33
     "@types/qs": "*"
     "@types/serve-static": "*"
-  checksum: bf8a97d283128e5129f9ccabbeef728ff3f0484465e0ae74a304bd0588fa6cb715ae68845650caba9a641944b7791ba125d02ddbd47a7e62aaefdd036570c6c5
+  checksum: fb238298630370a7392c7abdc80f495ae6c716723e114705d7e3fb67e3850b3859bbfd29391463a3fb8c0b32051847935933d99e719c0478710f8098ee7091c5
   languageName: node
   linkType: hard
 
@@ -2758,39 +2758,39 @@ __metadata:
   linkType: hard
 
 "@types/http-assert@npm:*":
-  version: 1.5.4
-  resolution: "@types/http-assert@npm:1.5.4"
-  checksum: 70d37f65642b2999970bda2c291fcd3cd404f868efc8f85c5cab762cf9a9f1263e7bbbce651f7aa690096545dc4a77344067f578495b4acabfb71a96e10810a1
+  version: 1.5.5
+  resolution: "@types/http-assert@npm:1.5.5"
+  checksum: cd6bb7fd42cc6e2a702cb55370b8b25231954ad74c04bcd185b943a74ded3d4c28099c30f77b26951df2426441baff41718816c60b5af80efe2b8888d900bf93
   languageName: node
   linkType: hard
 
 "@types/http-cache-semantics@npm:*":
-  version: 4.0.3
-  resolution: "@types/http-cache-semantics@npm:4.0.3"
-  checksum: 8a672e545fd01ba3a9f16000639ac687bdbbc6bc37e534fbcf55ac9036a168c96f953c79e063d67e937d9fc0be41734d8af378f75bf1ecb7a24e499001486053
+  version: 4.0.4
+  resolution: "@types/http-cache-semantics@npm:4.0.4"
+  checksum: 7f4dd832e618bc1e271be49717d7b4066d77c2d4eed5b81198eb987e532bb3e1c7e02f45d77918185bad936f884b700c10cebe06305f50400f382ab75055f9e8
   languageName: node
   linkType: hard
 
 "@types/http-errors@npm:*":
-  version: 2.0.3
-  resolution: "@types/http-errors@npm:2.0.3"
-  checksum: ea9530fb6e8a0400c4f9aac4dd628c5074f0adc8d01e2cdb917c0b97c230dedf4fcc67eadb491377b0eff5778e566648e63613a9719e383185318b9ec8c009b9
+  version: 2.0.4
+  resolution: "@types/http-errors@npm:2.0.4"
+  checksum: 1f3d7c3b32c7524811a45690881736b3ef741bf9849ae03d32ad1ab7062608454b150a4e7f1351f83d26a418b2d65af9bdc06198f1c079d75578282884c4e8e3
   languageName: node
   linkType: hard
 
 "@types/http-link-header@npm:^1.0.1":
-  version: 1.0.4
-  resolution: "@types/http-link-header@npm:1.0.4"
+  version: 1.0.5
+  resolution: "@types/http-link-header@npm:1.0.5"
   dependencies:
     "@types/node": "*"
-  checksum: cc41075382a03a6f9d017558b763366c20ad5fe2c3e6d014bb63e8515bcf18991fe863f1003c7cb164e137d5ffd6f31a68ce5508d2fa6ecc6ba6f3240d01823c
+  checksum: 9e45ef954371e8b2172093f811df685fbf6d0029f670a435c2dce55980f1d73ec461c30a3c53c002bf62ce1fcb4b47acf98acfd071db9ca023a26c736ba952c9
   languageName: node
   linkType: hard
 
 "@types/keygrip@npm:*":
-  version: 1.0.4
-  resolution: "@types/keygrip@npm:1.0.4"
-  checksum: f30ce9bfa93ab6fd67991ae9afd14e42d85b8ecbacad4aa4dccba3e0c44bb8369e53eb46d27bbed1367813707e591f8bcb693222279a7348bbcfbf9549ac483e
+  version: 1.0.6
+  resolution: "@types/keygrip@npm:1.0.6"
+  checksum: d157f60bf920492347791d2b26d530d5069ce05796549fbacd4c24d66ffbebbcb0ab67b21e7a1b80a593b9fd4b67dc4843dec04c12bbc2e0fddfb8577a826c41
   languageName: node
   linkType: hard
 
@@ -2804,17 +2804,17 @@ __metadata:
   linkType: hard
 
 "@types/koa-compose@npm:*":
-  version: 3.2.7
-  resolution: "@types/koa-compose@npm:3.2.7"
+  version: 3.2.8
+  resolution: "@types/koa-compose@npm:3.2.8"
   dependencies:
     "@types/koa": "*"
-  checksum: ef79ca207f9815432299a65d5d9552ec384613064a9acfee8def54fc46d00125213c15743b58120d8a7800d694c5c14f05a6df57e2ac658405815ae1fdb2655e
+  checksum: 95c32bdee738ac7c10439bbf6342ca3b9f0aafd7e8118739eac7fb0fa703a23cfe4c88f63e13a69a16fbde702e0bcdc62b272aa734325fc8efa7e5625479752e
   languageName: node
   linkType: hard
 
 "@types/koa@npm:*":
-  version: 2.13.10
-  resolution: "@types/koa@npm:2.13.10"
+  version: 2.13.12
+  resolution: "@types/koa@npm:2.13.12"
   dependencies:
     "@types/accepts": "*"
     "@types/content-disposition": "*"
@@ -2824,23 +2824,23 @@ __metadata:
     "@types/keygrip": "*"
     "@types/koa-compose": "*"
     "@types/node": "*"
-  checksum: dd3b3cbe1bb2fc0b5edd44672a64816abdc7bc0281d2913389ef7926681dd602a53842e29d59853926cf2c74ffa1fc0ebc44e83be9c172c5cead417866b3ecac
+  checksum: 4a2e7e19bf91779d0a3c46b8838d6faba5ee0e9a888e5ef8683722c21aa8efcf35f86d1a661adb56ca9f239f7724e306055e33bfa1b2dc008b9c0fa9fcc12bee
   languageName: node
   linkType: hard
 
 "@types/lodash.orderby@npm:^4.6.7":
-  version: 4.6.8
-  resolution: "@types/lodash.orderby@npm:4.6.8"
+  version: 4.6.9
+  resolution: "@types/lodash.orderby@npm:4.6.9"
   dependencies:
     "@types/lodash": "*"
-  checksum: c653dad4cd4da3957191b1966ad1bcf50d0c42a3a972148f5851597af457d0156d63d1cfcb613b081dbb438ad8a582b988c39cb3f87a4f746e92d683a7a0ac34
+  checksum: f3ca3a6ba09caef431955f3110a6704e25c90934fb70973e2ed1f4dd9aa48c4776c7e8b909b78f9ae1fb169e437497f8fe8e60fafb5c74ede49c36739ac44c3e
   languageName: node
   linkType: hard
 
 "@types/lodash@npm:*":
-  version: 4.14.200
-  resolution: "@types/lodash@npm:4.14.200"
-  checksum: 6471f8bb5da692a6ecf03a8da4935bfbc341e67ee9bcb4f5730bfacff0c367232548f0a01e8ac5ea18c6fe78fb085d502494e33ccb47a7ee87cbdee03b47d00d
+  version: 4.14.202
+  resolution: "@types/lodash@npm:4.14.202"
+  checksum: a91acf3564a568c6f199912f3eb2c76c99c5a0d7e219394294213b3f2d54f672619f0fde4da22b29dc5d4c31457cd799acc2e5cb6bd90f9af04a1578483b6ff7
   languageName: node
   linkType: hard
 
@@ -2859,30 +2859,30 @@ __metadata:
   linkType: hard
 
 "@types/mime-types@npm:^2.1.1":
-  version: 2.1.3
-  resolution: "@types/mime-types@npm:2.1.3"
-  checksum: 2b39ed5de6ee607b3738a30c54879b439a8344e6f86e50af3b275cfb7165ed4d13e7f9a54971f1de4f759dd68929351741cf31c1c42e380503e53be6970bbf82
+  version: 2.1.4
+  resolution: "@types/mime-types@npm:2.1.4"
+  checksum: f8c521c54ee0c0b9f90a65356a80b1413ed27ccdc94f5c7ebb3de5d63cedb559cd2610ea55b4100805c7349606a920d96e54f2d16b2f0afa6b7cd5253967ccc9
   languageName: node
   linkType: hard
 
 "@types/mime@npm:*":
-  version: 3.0.3
-  resolution: "@types/mime@npm:3.0.3"
-  checksum: d905a6b4736cc60fb56b39776b77ba0e10983d39f0aefc0034dc895b6ef90780e2f2e0a8c576539adb2963741a5aa67a6924d8940b0f7250f69e3e68a57f93b5
+  version: 3.0.4
+  resolution: "@types/mime@npm:3.0.4"
+  checksum: a6139c8e1f705ef2b064d072f6edc01f3c099023ad7c4fce2afc6c2bf0231888202adadbdb48643e8e20da0ce409481a49922e737eca52871b3dc08017455843
   languageName: node
   linkType: hard
 
 "@types/mime@npm:^1":
-  version: 1.3.4
-  resolution: "@types/mime@npm:1.3.4"
-  checksum: d8670d2993773903e00fc0d7aa3254be2f8b384300ce3278999d057afbb80a5f71543d656d9d9725d691088c0b94e4acfca84359becf122cdf5942e53c9a75ce
+  version: 1.3.5
+  resolution: "@types/mime@npm:1.3.5"
+  checksum: e29a5f9c4776f5229d84e525b7cd7dd960b51c30a0fb9a028c0821790b82fca9f672dab56561e2acd9e8eed51d431bde52eafdfef30f643586c4162f1aecfc78
   languageName: node
   linkType: hard
 
 "@types/minimist@npm:^1.2.0":
-  version: 1.2.4
-  resolution: "@types/minimist@npm:1.2.4"
-  checksum: d7912f9a466312cbc1333800272b9208178140ef4da2ccec3fa82231c8e67f57f84275b3c19109c4f68f1b7b057baeacc6b80af1de14b58b46e6b54233e44c6a
+  version: 1.2.5
+  resolution: "@types/minimist@npm:1.2.5"
+  checksum: 477047b606005058ab0263c4f58097136268007f320003c348794f74adedc3166ffc47c80ec3e94687787f2ab7f4e72c468223946e79892cf0fd9e25e9970a90
   languageName: node
   linkType: hard
 
@@ -2905,21 +2905,21 @@ __metadata:
   linkType: hard
 
 "@types/n3@npm:^1.10.4":
-  version: 1.16.3
-  resolution: "@types/n3@npm:1.16.3"
+  version: 1.16.4
+  resolution: "@types/n3@npm:1.16.4"
   dependencies:
     "@rdfjs/types": ^1.1.0
     "@types/node": "*"
-  checksum: 81d4f16bdfce6b802f737ab2e8ea245aacc047588425523f2416eb39bac4f363b515f7cca5b36517f6c4202f76587f14588400393d18d426d97913ffd5153482
+  checksum: 8958e068908009a4c0655374d55cc7f88ce126c17e3644064c8e3a09426e507bedabd04ffd2e018a4b8775df69a56732976668635cde6ca97f5eec7b96a4f5f9
   languageName: node
   linkType: hard
 
 "@types/node@npm:*":
-  version: 20.8.10
-  resolution: "@types/node@npm:20.8.10"
+  version: 20.10.3
+  resolution: "@types/node@npm:20.10.3"
   dependencies:
     undici-types: ~5.26.4
-  checksum: 7c61190e43e8074a1b571e52ff14c880bc67a0447f2fe5ed0e1a023eb8a23d5f815658edb98890f7578afe0f090433c4a635c7c87311762544e20dd78723e515
+  checksum: 34a329494f0ea239af05eeb6f00f396963725b3eb9a2f79c5e6a6d37e823f2ab85e1079c2ee56723a37d8b89e7bbe2bd050c97144e5bb06dab93fd1cace65c97
   languageName: node
   linkType: hard
 
@@ -2931,20 +2931,20 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:^18.0.0, @types/node@npm:^18.11.18":
-  version: 18.18.8
-  resolution: "@types/node@npm:18.18.8"
+  version: 18.19.2
+  resolution: "@types/node@npm:18.19.2"
   dependencies:
     undici-types: ~5.26.4
-  checksum: d6a82bfc28bca8e4e32ffc9526798d1aea62f6993ea3a535cd3f47ac3f725a48efe3f484d68168dd154af0001c89935e4e1d77e7b1809c3824c6382bf99b86f6
+  checksum: 6ae1e456f469bd50cac55d01ec17cddca3e60a1ae8cf6a95c8f2c49668ac358fd68d53af32076e37418f3b07cf6d2b245a48e3b77998ac51cc6a797d9d1a4367
   languageName: node
   linkType: hard
 
 "@types/nodemailer@npm:^6.4.4":
-  version: 6.4.13
-  resolution: "@types/nodemailer@npm:6.4.13"
+  version: 6.4.14
+  resolution: "@types/nodemailer@npm:6.4.14"
   dependencies:
     "@types/node": "*"
-  checksum: fd27d57d5801aaa7594d3bab748aedb1addc0c3a8ff9a21ea7675eec0e7e99cc477d05264b757b97691612fcfab37e52ded6c0725a700a90ad24fc7829dcc641
+  checksum: 5f61f01dd736b17f431d1e8b320322f86460604b45df947fc4bc8999d7c7719405e349f7abba86e4fb100a464a30b52615d00dac03d9cb37562ff04487ebd310
   languageName: node
   linkType: hard
 
@@ -2958,41 +2958,41 @@ __metadata:
   linkType: hard
 
 "@types/proper-lockfile@npm:^4.1.2":
-  version: 4.1.3
-  resolution: "@types/proper-lockfile@npm:4.1.3"
+  version: 4.1.4
+  resolution: "@types/proper-lockfile@npm:4.1.4"
   dependencies:
     "@types/retry": "*"
-  checksum: 79ee2dfccb21c1507be018a28f1a9006e2f8c79e002276f2a48fca1684f2a0ef502de35fff88f7b2ac79f0466398c3ebc72e8868b4014e784ce39fd693e2f434
+  checksum: b0d1b8e84a563b2c5f869f7ff7542b1d83dec03d1c9d980847cbb189865f44b4a854673cdde59767e41bcb8c31932e613ac43822d358a6f8eede6b79ccfceb1d
   languageName: node
   linkType: hard
 
 "@types/pump@npm:^1.1.1":
-  version: 1.1.2
-  resolution: "@types/pump@npm:1.1.2"
+  version: 1.1.3
+  resolution: "@types/pump@npm:1.1.3"
   dependencies:
     "@types/node": "*"
-  checksum: 28331a9295ffbb8f7d32c0715bbcd677d43c25804b1e1197e4cc342564e7ec5220c25b1d944d98128668e7aeafa37382d8e7f4cebbcfa569bc41c4ed33f60376
+  checksum: 9409dc54b6b2e28d4f88f6f542fa32aac5066fa057d6c1bf9611f9eb6687bbeb324341ba183dd38a9e53b6bd9e5ed6435f015a3fc37d3e66c2ff265b452cf802
   languageName: node
   linkType: hard
 
 "@types/punycode@npm:^2.1.0":
-  version: 2.1.1
-  resolution: "@types/punycode@npm:2.1.1"
-  checksum: a1fdbb0d4d22ceb8fd901995d72d66b096e4c46bd603faf192085f04113afc42a6a76403f7806a2c31d45a2f70d57c042d68329ba6affc202c15fa34870b51fa
+  version: 2.1.3
+  resolution: "@types/punycode@npm:2.1.3"
+  checksum: e51954e9123a3f076326055e5e9e7732346672bf381a68bdb99c6c854dac8918338e444b51d9397fd0018dab53f7af6c7d1ea1dea4d55f8647360f1d8b73f274
   languageName: node
   linkType: hard
 
 "@types/qs@npm:*":
-  version: 6.9.9
-  resolution: "@types/qs@npm:6.9.9"
-  checksum: 03ddbd032bcaa8f07429efe9de6d0fc027ccdd1e24eac1656bd931c2210c204bbc25be0937a9d46702fb6262fb6ffcc2980e040b399b62a3f91ec6e387c2edae
+  version: 6.9.10
+  resolution: "@types/qs@npm:6.9.10"
+  checksum: 3e479ee056bd2b60894baa119d12ecd33f20a25231b836af04654e784c886f28a356477630430152a86fba253da65d7ecd18acffbc2a8877a336e75aa0272c67
   languageName: node
   linkType: hard
 
 "@types/range-parser@npm:*":
-  version: 1.2.6
-  resolution: "@types/range-parser@npm:1.2.6"
-  checksum: 22decf0fa30a5fb5b26b9d30052c8eca1dddf55449c87031c8d58a4e2e75c606d7bab6a1409988c96f774eb0ebf814147d47c76487d1d0d83441f1ab26bd5d6a
+  version: 1.2.7
+  resolution: "@types/range-parser@npm:1.2.7"
+  checksum: 95640233b689dfbd85b8c6ee268812a732cf36d5affead89e806fe30da9a430767af8ef2cd661024fd97e19d61f3dec75af2df5e80ec3bea000019ab7028629a
   languageName: node
   linkType: hard
 
@@ -3007,71 +3007,71 @@ __metadata:
   linkType: hard
 
 "@types/responselike@npm:^1.0.0":
-  version: 1.0.2
-  resolution: "@types/responselike@npm:1.0.2"
+  version: 1.0.3
+  resolution: "@types/responselike@npm:1.0.3"
   dependencies:
     "@types/node": "*"
-  checksum: ff1767e947eb7d49849e4566040453efcd894888e85b398f7f8cb731552f303f26aceda573b680a142b77ec5fb6c79535d9c6d047d9f936c386dbf3863d2ae17
+  checksum: 6ac4b35723429b11b117e813c7acc42c3af8b5554caaf1fc750404c1ae59f9b7376bc69b9e9e194a5a97357a597c2228b7173d317320f0360d617b6425212f58
   languageName: node
   linkType: hard
 
 "@types/retry@npm:*":
-  version: 0.12.4
-  resolution: "@types/retry@npm:0.12.4"
-  checksum: 5a1dd85141ff309fb5f61d9f1dab7870390befa83a945e2c787f368dc18eaab195049aee80be7c74814cce7beb6411fd807fa876a9d4e8efbd52515999fac8bf
+  version: 0.12.5
+  resolution: "@types/retry@npm:0.12.5"
+  checksum: 3fb6bf91835ca0eb2987567d6977585235a7567f8aeb38b34a8bb7bbee57ac050ed6f04b9998cda29701b8c893f5dfe315869bc54ac17e536c9235637fe351a2
   languageName: node
   linkType: hard
 
 "@types/semver@npm:^7.3.4, @types/semver@npm:^7.5.1":
-  version: 7.5.4
-  resolution: "@types/semver@npm:7.5.4"
-  checksum: 120c0189f6fec5f2d12d0d71ac8a4cfa952dc17fa3d842e8afddb82bba8828a4052f8799c1653e2b47ae1977435f38e8985658fde971905ce5afb8e23ee97ecf
+  version: 7.5.6
+  resolution: "@types/semver@npm:7.5.6"
+  checksum: 563a0120ec0efcc326567db2ed920d5d98346f3638b6324ea6b50222b96f02a8add3c51a916b6897b51523aad8ac227d21d3dcf8913559f1bfc6c15b14d23037
   languageName: node
   linkType: hard
 
 "@types/send@npm:*":
-  version: 0.17.3
-  resolution: "@types/send@npm:0.17.3"
+  version: 0.17.4
+  resolution: "@types/send@npm:0.17.4"
   dependencies:
     "@types/mime": ^1
     "@types/node": "*"
-  checksum: 2162f917f1015e7218b8a1f51a70c16ae647e1c4e16f940acae9fb326455d6031b33b3868b40bda8ba8d3d577013f64176f30a37f1a2aa3ce4f999a808f34397
+  checksum: cf4db48251bbb03cd6452b4de6e8e09e2d75390a92fd798eca4a803df06444adc94ed050246c94c7ed46fb97be1f63607f0e1f13c3ce83d71788b3e08640e5e0
   languageName: node
   linkType: hard
 
 "@types/serve-static@npm:*":
-  version: 1.15.4
-  resolution: "@types/serve-static@npm:1.15.4"
+  version: 1.15.5
+  resolution: "@types/serve-static@npm:1.15.5"
   dependencies:
     "@types/http-errors": "*"
     "@types/mime": "*"
     "@types/node": "*"
-  checksum: e2e71916d262cac05fa36c3178c3bcc5c0f2fb801f9dc3c4ee58864b7b2bd69b6fb0e312f60e3f19e0ba7206ea57964652a4a3251125121a463acb34dfc9f636
+  checksum: 0ff4b3703cf20ba89c9f9e345bc38417860a88e85863c8d6fe274a543220ab7f5f647d307c60a71bb57dc9559f0890a661e8dc771a6ec5ef195d91c8afc4a893
   languageName: node
   linkType: hard
 
 "@types/spark-md5@npm:^3.0.2":
-  version: 3.0.3
-  resolution: "@types/spark-md5@npm:3.0.3"
-  checksum: 3104daa81dbc1983859540569ea4223dae890e26ca60727997eb0939e7a5e62455baa6da49a5b083448224f6969aba3dcc60f5d3c238d24c8ae41c4c59212e0a
+  version: 3.0.4
+  resolution: "@types/spark-md5@npm:3.0.4"
+  checksum: 2b15d0e114fedb271eccbe40eb5fc7e06b609ee836be264cf838b924439f564f45aca0fae9c83abdf663fce397e37df9a6421756b1353f5119f2bbe3bb221e85
   languageName: node
   linkType: hard
 
 "@types/sparqljs@npm:*, @types/sparqljs@npm:^3.1.3":
-  version: 3.1.7
-  resolution: "@types/sparqljs@npm:3.1.7"
+  version: 3.1.9
+  resolution: "@types/sparqljs@npm:3.1.9"
   dependencies:
     rdf-js: ^4.0.2
-  checksum: e217c93c4a0148f7daabfa11a1b757883732edd71ef7b0641e8a3f9daeec0082a56da6d7d07394dfc86496104d0e5cfe3a189a13e2a42fab2e3c7b0618c56582
+  checksum: 89239aab1026d97f71661ef4babdc7aa11ecc55cf7930c80ca3abf936736585aa69aae53ece7ae783d7bdf012145d5e7be92d7aba35d7422588ce1fb11ad9e39
   languageName: node
   linkType: hard
 
 "@types/ssh2@npm:*":
-  version: 1.11.15
-  resolution: "@types/ssh2@npm:1.11.15"
+  version: 1.11.18
+  resolution: "@types/ssh2@npm:1.11.18"
   dependencies:
     "@types/node": ^18.11.18
-  checksum: cfbe8983a5de93edcfa76e9f21abc48a1890312c8cddafa96d85ee0a824eb898c8fbbc75eb31b796724491a93a76dc69de65ca22fa01d05670152a73f0e77b5f
+  checksum: 4ec15cf2c1184c4bf1de9c7d92f39c588225289200a8956e230c9f153957a71aeae759a7ab7667191be1f497081598f03f91c8e3f43391dff71381be406a6647
   languageName: node
   linkType: hard
 
@@ -3086,32 +3086,32 @@ __metadata:
   linkType: hard
 
 "@types/triple-beam@npm:^1.3.2":
-  version: 1.3.4
-  resolution: "@types/triple-beam@npm:1.3.4"
-  checksum: 869641358164a9b87aec710e046c11a65803b7dc3545f33c3365df9590d1059c70592bb35a7fc4099fa746f112ab5a207881ba9fb570e9b1dea4ffd89761d804
+  version: 1.3.5
+  resolution: "@types/triple-beam@npm:1.3.5"
+  checksum: 519b6a1b30d4571965c9706ad5400a200b94e4050feca3e7856e3ea7ac00ec9903e32e9a10e2762d0f7e472d5d03e5f4b29c16c0bd8c1f77c8876c683b2231f1
   languageName: node
   linkType: hard
 
 "@types/unzipper@npm:^0.10.5":
-  version: 0.10.8
-  resolution: "@types/unzipper@npm:0.10.8"
+  version: 0.10.9
+  resolution: "@types/unzipper@npm:0.10.9"
   dependencies:
     "@types/node": "*"
-  checksum: 9629afa5f35eab7db519ab534be29b5122bb2accecfe38282d832bc235563e1264d6b4a9f351ea49a03cccf38bf201620db6c10dec7b9c41539680f047d384de
+  checksum: 78f17a55d6f934aa2410a46b8e3cd5e12e1d54298e8884d83181fc5c2d36e88bc00cdab01a35193099e6177dbeb9ab7961d6a4cdc37627ec77388a48465d2b4f
   languageName: node
   linkType: hard
 
 "@types/uritemplate@npm:^0.3.4":
-  version: 0.3.5
-  resolution: "@types/uritemplate@npm:0.3.5"
-  checksum: c5217c0bffc7dd5e0e0a1ef97b061b6ae7b8ac65b530adf4bde913afba8e60459f55a100210fcdc5f47409db66058b7f1df47ab2f16d7bdd8d0acf2c8f2cabad
+  version: 0.3.6
+  resolution: "@types/uritemplate@npm:0.3.6"
+  checksum: 9fc6e7e83e39d8dbcd9a79e8594ae95069254e72ae8d4aa3f27e3420af0b6912fa75d66879b3e2984c655afeef1aeeb151d459d484585107575e2eee5051cd13
   languageName: node
   linkType: hard
 
 "@types/url-join@npm:^4.0.1":
-  version: 4.0.2
-  resolution: "@types/url-join@npm:4.0.2"
-  checksum: 0ee32c987fef3fedfc50d0ed41725f8322ccecf4ef5f495e016762b9489cee2331dd989765181dce050607f847994e909139d86847fc7e2b552dead3884ae6fd
+  version: 4.0.3
+  resolution: "@types/url-join@npm:4.0.3"
+  checksum: 21b5145159e90b1b060a82d67e3ef7270879ac3a8652f9f38f0017e930905b90fa59e758555ae79d33a47586f07347904209dc665604825d3abc47e6d2e14dca
   languageName: node
   linkType: hard
 
@@ -3123,43 +3123,43 @@ __metadata:
   linkType: hard
 
 "@types/uuid@npm:^9.0.0":
-  version: 9.0.6
-  resolution: "@types/uuid@npm:9.0.6"
-  checksum: 739dcb2e620ff097fa916edeab455eb75640c4883a850784fdb15b32f67b719e05275c6d6419bb6da11350d26bd14ed05ba5e992ff228411cdd98cbc772d71ef
+  version: 9.0.7
+  resolution: "@types/uuid@npm:9.0.7"
+  checksum: c7321194aeba9ea173efd1e721403bdf4e7ae6945f8f8cdbc87c791f4b505ccf3dbc4a8883d90b394ef13b7c2dc778045792b05dbb23b3c746f8ea347804d448
   languageName: node
   linkType: hard
 
 "@types/ws@npm:^8.5.3":
-  version: 8.5.8
-  resolution: "@types/ws@npm:8.5.8"
+  version: 8.5.10
+  resolution: "@types/ws@npm:8.5.10"
   dependencies:
     "@types/node": "*"
-  checksum: 4ad30de842834d4dd8e6e1476470752709d4165352a3a36780f23f4fdb686d4ac8ca5e16a0e0622940ddace910b856ff8a0baa2e24e41d204fb7a6a02ab2172b
+  checksum: 3ec416ea2be24042ebd677932a462cf16d2080393d8d7d0b1b3f5d6eaa4a7387aaf0eefb99193c0bfd29444857cf2e0c3ac89899e130550dc6c14ada8a46d25e
   languageName: node
   linkType: hard
 
 "@types/yargs-parser@npm:*":
-  version: 21.0.2
-  resolution: "@types/yargs-parser@npm:21.0.2"
-  checksum: e979051aac91d778fdb3953aced8cf039d954c3936b910b57735b7b52a413d065e6b2aea1cb2c583f6c23296a6f8543d2541879d798f0afedd7409a562b7bdeb
+  version: 21.0.3
+  resolution: "@types/yargs-parser@npm:21.0.3"
+  checksum: ef236c27f9432983e91432d974243e6c4cdae227cb673740320eff32d04d853eed59c92ca6f1142a335cfdc0e17cccafa62e95886a8154ca8891cc2dec4ee6fc
   languageName: node
   linkType: hard
 
 "@types/yargs@npm:^16.0.1":
-  version: 16.0.7
-  resolution: "@types/yargs@npm:16.0.7"
+  version: 16.0.9
+  resolution: "@types/yargs@npm:16.0.9"
   dependencies:
     "@types/yargs-parser": "*"
-  checksum: b116b9a3f3fc0ed608f2413fc3c48ba90344761d0c160ca6a31edf669959325172594f706cb85f9c1c46c5cf33130ff6b5772143c37567a24689489976a5d248
+  checksum: 00d9276ed4e0f17a78c1ed57f644a8c14061959bd5bfab113d57f082ea4b663ba97f71b89371304a34a2dba5061e9ae4523e357e577ba61834d661f82c223bf8
   languageName: node
   linkType: hard
 
 "@types/yargs@npm:^17.0.0, @types/yargs@npm:^17.0.10, @types/yargs@npm:^17.0.24":
-  version: 17.0.29
-  resolution: "@types/yargs@npm:17.0.29"
+  version: 17.0.32
+  resolution: "@types/yargs@npm:17.0.32"
   dependencies:
     "@types/yargs-parser": "*"
-  checksum: 8bbc0edd573a5a084cb13a9985c124490fd74e73b1ed8a3058861c13124e103b00a19770dc55c53215653a7845d7033e0695917b75153cfe9618d5b2fd3cf86e
+  checksum: 4505bdebe8716ff383640c6e928f855b5d337cb3c68c81f7249fc6b983d0aa48de3eee26062b84f37e0d75a5797bc745e0c6e76f42f81771252a758c638f36ba
   languageName: node
   linkType: hard
 
@@ -3262,9 +3262,9 @@ __metadata:
   linkType: hard
 
 "async@npm:^3.2.3":
-  version: 3.2.4
-  resolution: "async@npm:3.2.4"
-  checksum: 43d07459a4e1d09b84a20772414aa684ff4de085cbcaec6eea3c7a8f8150e8c62aa6cd4e699fe8ee93c3a5b324e777d34642531875a0817a35697522c1b02e89
+  version: 3.2.5
+  resolution: "async@npm:3.2.5"
+  checksum: 5ec77f1312301dee02d62140a6b1f7ee0edd2a0f983b6fd2b0849b969f245225b990b47b8243e7b9ad16451a53e7f68e753700385b706198ced888beedba3af4
   languageName: node
   linkType: hard
 
@@ -3315,9 +3315,9 @@ __metadata:
   linkType: hard
 
 "big-integer@npm:^1.6.17":
-  version: 1.6.51
-  resolution: "big-integer@npm:1.6.51"
-  checksum: 3d444173d1b2e20747e2c175568bedeebd8315b0637ea95d75fd27830d3b8e8ba36c6af40374f36bdaea7b5de376dcada1b07587cb2a79a928fccdb6e6e3c518
+  version: 1.6.52
+  resolution: "big-integer@npm:1.6.52"
+  checksum: 6e86885787a20fed96521958ae9086960e4e4b5e74d04f3ef7513d4d0ad631a9f3bde2730fc8aaa4b00419fc865f6ec573e5320234531ef37505da7da192c40b
   languageName: node
   linkType: hard
 
@@ -3424,22 +3424,22 @@ __metadata:
   linkType: hard
 
 "cacache@npm:^18.0.0":
-  version: 18.0.0
-  resolution: "cacache@npm:18.0.0"
+  version: 18.0.1
+  resolution: "cacache@npm:18.0.1"
   dependencies:
     "@npmcli/fs": ^3.1.0
     fs-minipass: ^3.0.0
     glob: ^10.2.2
     lru-cache: ^10.0.1
     minipass: ^7.0.3
-    minipass-collect: ^1.0.2
+    minipass-collect: ^2.0.1
     minipass-flush: ^1.0.5
     minipass-pipeline: ^1.2.4
     p-map: ^4.0.0
     ssri: ^10.0.0
     tar: ^6.1.11
     unique-filename: ^3.0.0
-  checksum: 2cd6bf15551abd4165acb3a4d1ef0593b3aa2fd6853ae16b5bb62199c2faecf27d36555a9545c0e07dd03347ec052e782923bdcece724a24611986aafb53e152
+  checksum: 5a0b3b2ea451a0379814dc1d3c81af48c7c6db15cd8f7d72e028501ae0036a599a99bbac9687bfec307afb2760808d1c7708e9477c8c70d2b166e7d80b162a23
   languageName: node
   linkType: hard
 
@@ -3555,9 +3555,9 @@ __metadata:
   linkType: hard
 
 "cli-spinners@npm:^2.5.0":
-  version: 2.9.1
-  resolution: "cli-spinners@npm:2.9.1"
-  checksum: 1780618be58309c469205bc315db697934bac68bce78cd5dfd46248e507a533172d623c7348ecfd904734f597ce0a4e5538684843d2cfb7af485d4466699940c
+  version: 2.9.2
+  resolution: "cli-spinners@npm:2.9.2"
+  checksum: 1bd588289b28432e4676cb5d40505cfe3e53f2e4e10fbe05c8a710a154d6fe0ce7836844b00d6858f740f2ffe67cdc36e0fce9c7b6a8430e80e6388d5aa4956c
   languageName: node
   linkType: hard
 
@@ -4769,25 +4769,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jsonld-context-parser@npm:^2.0.0, jsonld-context-parser@npm:^2.0.2, jsonld-context-parser@npm:^2.1.1, jsonld-context-parser@npm:^2.1.5, jsonld-context-parser@npm:^2.2.2, jsonld-context-parser@npm:^2.3.0":
-  version: 2.3.3
-  resolution: "jsonld-context-parser@npm:2.3.3"
+"jsonld-context-parser@npm:^2.0.0, jsonld-context-parser@npm:^2.0.2, jsonld-context-parser@npm:^2.1.1, jsonld-context-parser@npm:^2.1.5, jsonld-context-parser@npm:^2.2.2, jsonld-context-parser@npm:^2.4.0":
+  version: 2.4.0
+  resolution: "jsonld-context-parser@npm:2.4.0"
   dependencies:
     "@types/http-link-header": ^1.0.1
     "@types/node": ^18.0.0
-    canonicalize: ^1.0.1
     cross-fetch: ^3.0.6
     http-link-header: ^1.0.2
     relative-to-absolute-iri: ^1.0.5
   bin:
     jsonld-context-parse: bin/jsonld-context-parse.js
-  checksum: 1d3a0c0b02c4bd1d2ffee0c0cd714ccced944a10b8d1aed47bc0c8cf46c760796946b4515a100a440167a5e027c4a5b4307a924f5a7d2eb473cbf0e4868b2d3c
+  checksum: 9071e1ab1f915c92b868c483bdf06ced7475710f917fc8ae86f37a87ef904b51c1738c2545f4cdd9cfef0216670ac7a5592354294b9a3c881a912339e036f184
   languageName: node
   linkType: hard
 
 "jsonld-streaming-parser@npm:^3.0.1":
-  version: 3.2.1
-  resolution: "jsonld-streaming-parser@npm:3.2.1"
+  version: 3.3.0
+  resolution: "jsonld-streaming-parser@npm:3.3.0"
   dependencies:
     "@bergos/jsonparse": ^1.4.0
     "@rdfjs/types": "*"
@@ -4796,10 +4795,10 @@ __metadata:
     buffer: ^6.0.3
     canonicalize: ^1.0.1
     http-link-header: ^1.0.2
-    jsonld-context-parser: ^2.3.0
+    jsonld-context-parser: ^2.4.0
     rdf-data-factory: ^1.1.0
     readable-stream: ^4.0.0
-  checksum: 33aee1881a399460fb3a792fffd932e262be0e3612830044b541aab1c5f1b01087d40ed5fe4721434bef70631e18fccc51b4fb263ffb571314d389ed6e25dbdb
+  checksum: 41931735427d82247f9773fc5f9d0ad973f8d9a951d34b723f72fe8c1d4445b491e5f769057307a45fea518a7246ebf9ed9fedbbefc98fb518a27eee58ce9b23
   languageName: node
   linkType: hard
 
@@ -4982,9 +4981,9 @@ __metadata:
   linkType: hard
 
 "lru-cache@npm:^10.0.0, lru-cache@npm:^10.0.1, lru-cache@npm:^9.1.1 || ^10.0.0":
-  version: 10.0.1
-  resolution: "lru-cache@npm:10.0.1"
-  checksum: 06f8d0e1ceabd76bb6f644a26dbb0b4c471b79c7b514c13c6856113879b3bf369eb7b497dad4ff2b7e2636db202412394865b33c332100876d838ad1372f0181
+  version: 10.1.0
+  resolution: "lru-cache@npm:10.1.0"
+  checksum: 58056d33e2500fbedce92f8c542e7c11b50d7d086578f14b7074d8c241422004af0718e08a6eaae8705cee09c77e39a61c1c79e9370ba689b7010c152e6a76ab
   languageName: node
   linkType: hard
 
@@ -5143,12 +5142,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minipass-collect@npm:^1.0.2":
-  version: 1.0.2
-  resolution: "minipass-collect@npm:1.0.2"
+"minipass-collect@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "minipass-collect@npm:2.0.1"
   dependencies:
-    minipass: ^3.0.0
-  checksum: 14df761028f3e47293aee72888f2657695ec66bd7d09cae7ad558da30415fdc4752bbfee66287dcc6fd5e6a2fa3466d6c484dc1cbd986525d9393b9523d97f10
+    minipass: ^7.0.3
+  checksum: b251bceea62090f67a6cced7a446a36f4cd61ee2d5cea9aee7fff79ba8030e416327a1c5aa2908dc22629d06214b46d88fdab8c51ac76bacbf5703851b5ad342
   languageName: node
   linkType: hard
 
@@ -5288,11 +5287,11 @@ __metadata:
   linkType: hard
 
 "nanoid@npm:^3.1.28":
-  version: 3.3.6
-  resolution: "nanoid@npm:3.3.6"
+  version: 3.3.7
+  resolution: "nanoid@npm:3.3.7"
   bin:
     nanoid: bin/nanoid.cjs
-  checksum: 7d0eda657002738aa5206107bd0580aead6c95c460ef1bdd0b1a87a9c7ae6277ac2e9b945306aaa5b32c6dcb7feaf462d0f552e7f8b5718abfc6ead5c94a71b3
+  checksum: d36c427e530713e4ac6567d488b489a36582ef89da1d6d4e3b87eded11eb10d7042a877958c6f104929809b2ab0bafa17652b076cdf84324aa75b30b722204f2
   languageName: node
   linkType: hard
 
@@ -5332,8 +5331,8 @@ __metadata:
   linkType: hard
 
 "node-gyp@npm:latest":
-  version: 10.0.0
-  resolution: "node-gyp@npm:10.0.0"
+  version: 10.0.1
+  resolution: "node-gyp@npm:10.0.1"
   dependencies:
     env-paths: ^2.2.0
     exponential-backoff: ^3.1.1
@@ -5347,7 +5346,7 @@ __metadata:
     which: ^4.0.0
   bin:
     node-gyp: bin/node-gyp.js
-  checksum: 65fa5d9f8ef03fa22c5f2d34da23435a63d3743400ca941a4394eb943cf340796456697a7797af1451606dbbeecb663be9328995dadc0b99e58dd583dc3a7a0f
+  checksum: 60a74e66d364903ce02049966303a57f898521d139860ac82744a5fdd9f7b7b3b61f75f284f3bfe6e6add3b8f1871ce305a1d41f775c7482de837b50c792223f
   languageName: node
   linkType: hard
 
@@ -5909,18 +5908,18 @@ __metadata:
   linkType: hard
 
 "rdfxml-streaming-parser@npm:^2.2.3":
-  version: 2.2.3
-  resolution: "rdfxml-streaming-parser@npm:2.2.3"
+  version: 2.4.0
+  resolution: "rdfxml-streaming-parser@npm:2.4.0"
   dependencies:
     "@rdfjs/types": "*"
     "@rubensworks/saxes": ^6.0.1
     "@types/readable-stream": ^2.3.13
     buffer: ^6.0.3
     rdf-data-factory: ^1.1.0
-    readable-stream: ^4.0.0
+    readable-stream: ^4.4.2
     relative-to-absolute-iri: ^1.0.0
     validate-iri: ^1.0.0
-  checksum: 449e9298952948dde0e242e13b564f8d3ce5282a74227388db74ff3d6937c43dde151a235a0edf1295533c5b7c21db74487cfe4bcbe02d5de4cb5a753fd89e67
+  checksum: d63bb8408bb8e718d367ac2269a96c357141d7f6162efe9117a7011088a8558503bf678f6f0e0c141a89b403f74aedb4aa37263b3845dddb076973bb4a5ad419
   languageName: node
   linkType: hard
 
@@ -6258,8 +6257,8 @@ __metadata:
   linkType: hard
 
 "sparqlalgebrajs@npm:^4.0.0, sparqlalgebrajs@npm:^4.0.3, sparqlalgebrajs@npm:^4.2.0":
-  version: 4.3.0
-  resolution: "sparqlalgebrajs@npm:4.3.0"
+  version: 4.3.1
+  resolution: "sparqlalgebrajs@npm:4.3.1"
   dependencies:
     "@rdfjs/types": "*"
     "@types/sparqljs": ^3.1.3
@@ -6272,7 +6271,7 @@ __metadata:
     sparqljs: ^3.7.1
   bin:
     sparqlalgebrajs: bin/sparqlalgebrajs.js
-  checksum: a0ccb181d01cec8888715a24f1b2180632ded6165baeb41652266d6cf1dc3fa039268371bfd29e4ef323f88865dc617ac494d7170a68cfb38ec3c03d46ca59da
+  checksum: 504e187a78d0dcc0523f67c4cef8b2f16455eeb41b456ffec205f0e55845d4472b1ac54a131014dc6239b296c877031ffda00ec06403f365c0faa43410908619
   languageName: node
   linkType: hard
 
@@ -6615,9 +6614,9 @@ __metadata:
   linkType: hard
 
 "universalify@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "universalify@npm:2.0.0"
-  checksum: 2406a4edf4a8830aa6813278bab1f953a8e40f2f63a37873ffa9a3bc8f9745d06cc8e88f3572cb899b7e509013f7f6fcc3e37e8a6d914167a5381d8440518c44
+  version: 2.0.1
+  resolution: "universalify@npm:2.0.1"
+  checksum: ecd8469fe0db28e7de9e5289d32bd1b6ba8f7183db34f3bfc4ca53c49891c2d6aa05f3fb3936a81285a905cc509fb641a0c3fc131ec786167eff41236ae32e60
   languageName: node
   linkType: hard
 

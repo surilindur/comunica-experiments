@@ -22,7 +22,7 @@
         "useCardinality": true,
         "allowUnlimitedRestarts": true,
         "timeout": 1000,
-        "restartMessage": "Restarted join operation",
+        "restartMessage": null,
         "mediatorHashBindings": {
           "@id": "urn:comunica:default:hash-bindings/mediators#main"
         },

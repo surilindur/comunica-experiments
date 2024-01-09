@@ -6,9 +6,9 @@ RUN git clone --branch main --single-branch https://github.com/surilindur/comuni
 
 WORKDIR /opt/client
 
-RUN git checkout 6a082aeb605e6e10f4cf9b0dc7d26993b692c4f8
+RUN git checkout 2aeed011ca740a00dde80ee228ff9a0075e3a27d
 
-FROM node:21.5.0
+FROM node:21.5.0-slim
 
 COPY --from=git /opt/client /opt/client
 
@@ -19,9 +19,11 @@ RUN corepack enable && yarn install --immutable && yarn build
 WORKDIR /opt/client/engines/query-sparql-components
 
 ARG CONFIG_CLIENT
-ARG QUERY_TIMEOUT
-ARG MAX_MEMORY
-ARG LOG_LEVEL
+ARG QUERY_TIMEOUT=120
+ARG MAX_MEMORY=8192
+ARG LOG_LEVEL=info
+ARG COMUNICA_PORT=3000
+ARG COMUNICA_WORKERS=1
 
 ADD $CONFIG_CLIENT /tmp/engine.json
 
@@ -30,8 +32,9 @@ ENV NODE_ENV production
 ENV NODE_OPTIONS --max-old-space-size=$MAX_MEMORY
 ENV QUERY_TIMEOUT $QUERY_TIMEOUT
 ENV LOG_LEVEL $LOG_LEVEL
+ENV COMUNICA_PORT $COMUNICA_PORT
+ENV COMUNICA_WORKERS $COMUNICA_WORKERS
 
-EXPOSE 3000
+EXPOSE $COMUNICA_PORT
 
-ENTRYPOINT []
-CMD [ "/bin/sh", "-c", "node ./bin/http.js --lenient --contextOverride --invalidateCache --workers 1 --context /tmp/context.json --port 3000 --timeout ${QUERY_TIMEOUT} --logLevel ${LOG_LEVEL}" ]
+ENTRYPOINT [ "/bin/bash", "-c", "node ./bin/http.js --lenient --contextOverride --invalidateCache --workers $COMUNICA_WORKERS --context /tmp/context.json --port $COMUNICA_PORT --timeout $QUERY_TIMEOUT --logLevel $LOG_LEVEL" ]

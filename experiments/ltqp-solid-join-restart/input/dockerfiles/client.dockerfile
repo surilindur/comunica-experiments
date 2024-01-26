@@ -2,7 +2,7 @@
 
 FROM bitnami/git:latest AS git
 
-RUN git clone --depth 1 --branch main --single-branch https://github.com/surilindur/comunica-components.git /opt/client
+RUN git clone --branch main --single-branch https://github.com/surilindur/comunica-components.git /opt/client
 
 WORKDIR /opt/client
 

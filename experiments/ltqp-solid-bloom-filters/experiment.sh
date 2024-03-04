@@ -5,22 +5,21 @@ if [ ! -e ../../node_modules ]; then
     yarn install --immutable
 fi
 
+# Ensure the appropriate version of rdf-dataset-fragmenter is used by the SolidBench
+# of this specific experiment here. Otherwise it will use the NPM version.
+
+ln -sf ../../node_modules/rdf-dataset-fragmenter ../../node_modules/solidbench/node_modules/rdf-dataset-fragmenter
+
 if [ ! -e combinations ]; then
     echo "Generating combinations"
     yarn run jbr generate-combinations
-    yarn run jbr prepare
+    # The validation step will fail, so it can be skipped by creating the directories
+    mkdir generated/out-validate
+    mkdir generated/out-validate-params
     yarn run jbr prepare
 fi
 
-if [ ! -e ./generated/out-fragments/http/solidbench-server_3000/pods/00000000000000000933/.meta ]; then
-    echo "Running catalogue to generate VoID descriptions"
-    docker_tag=solidlab/catalogue:dev
-    docker_file=./input/dockerfiles/catalogue.dockerfile
-    docker build --network host --tag "$docker_tag" --file "$docker_file" .
-    docker run --volume ./generated:/generated "$docker_tag"
-fi
-
-if [ ! -e generated/out-queries/interactive-complex-1.sparql ]; then
+if [ -e generated/out-queries/interactive-complex-1.sparql ]; then
     echo "Removing complex queries"
     rm generated/out-queries/interactive-complex-*.sparql
 fi

@@ -3339,6 +3339,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"bitbuffer@npm:0.1.x":
+  version: 0.1.3
+  resolution: "bitbuffer@npm:0.1.3"
+  checksum: d269914cd8d0719031a990620a1e877413168c995940c3fafd3ff3a1c605be14669699eec271c6b1b256543e5043bc9721a972b724ba9f572b22b21ffedd2d0d
+  languageName: node
+  linkType: hard
+
 "bl@npm:^4.0.3, bl@npm:^4.1.0":
   version: 4.1.0
   resolution: "bl@npm:4.1.0"
@@ -3347,6 +3354,16 @@ __metadata:
     inherits: "npm:^2.0.4"
     readable-stream: "npm:^3.4.0"
   checksum: b7904e66ed0bdfc813c06ea6c3e35eafecb104369dbf5356d0f416af90c1546de3b74e5b63506f0629acf5e16a6f87c3798f16233dcff086e9129383aa02ab55
+  languageName: node
+  linkType: hard
+
+"bloem@npm:^0.2.0":
+  version: 0.2.4
+  resolution: "bloem@npm:0.2.4"
+  dependencies:
+    bitbuffer: "npm:0.1.x"
+    fnv: "npm:0.1.x"
+  checksum: 412cd7b4d7114f6521d5bf454757c70e834a0d225654bfe7a436b2fa43cc5b9503d57e4359384fc2589b3aa7374bf485d046e3f37e864d4648b5c9b5ac963882
   languageName: node
   linkType: hard
 
@@ -4177,6 +4194,13 @@ __metadata:
   version: 1.1.0
   resolution: "fn.name@npm:1.1.0"
   checksum: 000198af190ae02f0138ac5fa4310da733224c628e0230c81e3fff7c4e094af7e0e8bb9f4357cabd21db601759d89f3445da744afbae20623cfa41edf3888397
+  languageName: node
+  linkType: hard
+
+"fnv@npm:0.1.x":
+  version: 0.1.3
+  resolution: "fnv@npm:0.1.3"
+  checksum: e3c7dbb5564b11cf754fc952805973546a53bc2e537be3789c212f1edd7b254fce9d9ce11b66c3b46b089e3611a265eb3fe1dc6154e1004072394e8492b5f515
   languageName: node
   linkType: hard
 
@@ -5022,6 +5046,7 @@ __metadata:
     "@jbr-hook/sparql-endpoint-comunica": "npm:^3.0.0"
     cross-env: "npm:^7.0.0"
     jbr: "npm:^3.0.0"
+    rdf-dataset-fragmenter: "surilindur/rdf-dataset-fragmenter.js#feat/dataset-summaries-void-bloom"
   languageName: unknown
   linkType: soft
 
@@ -5700,6 +5725,29 @@ __metadata:
   bin:
     rdf-dataset-fragmenter: bin/runner.js
   checksum: 9feb650fe1846bd7a086d36923929ddcd64d235e6a4c222bbeb472c00819123044af4f21b6962a530fb02377cafb94cfbca6fe52d616e9955fb57ce75f1cd4b7
+  languageName: node
+  linkType: hard
+
+"rdf-dataset-fragmenter@surilindur/rdf-dataset-fragmenter.js#feat/dataset-summaries-void-bloom":
+  version: 2.5.0
+  resolution: "rdf-dataset-fragmenter@https://github.com/surilindur/rdf-dataset-fragmenter.js.git#commit=aede0023d525e58e04798fe5eb734662ed0b71d4"
+  dependencies:
+    "@rdfjs/types": "npm:*"
+    "@types/async-lock": "npm:^1.4.0"
+    "@types/lru-cache": "npm:^5.0.0"
+    async-lock: "npm:^1.4.0"
+    bloem: "npm:^0.2.0"
+    componentsjs: "npm:^5.0.0"
+    lru-cache: "npm:^6.0.0"
+    mkdirp: "npm:^3.0.1"
+    rdf-parse: "npm:^2.0.0"
+    rdf-serialize: "npm:^2.0.0"
+    rdf-string: "npm:^1.6.0"
+    rdf-terms: "npm:^1.11.0"
+    relative-to-absolute-iri: "npm:^1.0.0"
+  bin:
+    rdf-dataset-fragmenter: bin/runner.js
+  checksum: d8c18efb8488cea52d1cd0f1cfc81ce0ca314eeda59db6f1a96a721beab131db3df919ca1c5c739765e9109279dcf2cf11f87b9f1579703419d87b7f8bf1fd17
   languageName: node
   linkType: hard
 

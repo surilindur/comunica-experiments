@@ -4,7 +4,7 @@ on:
   push:
     paths-ignore:
       - 'results/**'
-      - 'visualizer/**'
+      - 'processing/**'
       - '**/README.md'
       - '**/LICENSE'
       - '**/.gitattributes'
@@ -13,27 +13,16 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
-env:
-  NODE_VERSION: 21.x
-
 jobs:
 
   prepare:
     runs-on: ubuntu-latest
     steps:
-      - name: Use Node.js ${{ env.NODE_VERSION }}
-        uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
-          node-version: ${{ env.NODE_VERSION }}
-      - name: Enable corepack
-        run: corepack enable
-      - name: Ensure line endings are consistent
-        run: git config --global core.autocrlf input
-      - name: Check out repository
-        uses: actions/checkout@v3
-      - name: Install dependencies
-        run: yarn install --immutable
-      - name: Validate experiments
-        run: |
-          yarn plugin import workspace-tools
-          yarn workspaces foreach run validate
+          node-version: latest
+      - run: corepack enable
+      - run: git config --global core.autocrlf input
+      - uses: actions/checkout@v4
+      - run: yarn install --immutable
+      - run: yarn workspaces foreach run validate

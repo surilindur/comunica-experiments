@@ -1,0 +1,51 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^3.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@jbr-experiment/solidbench/^3.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@jbr-hook/sparql-endpoint-comunica/^3.0.0/components/context.jsonld"
+  ],
+  "@id": "urn:jbr:ltqp-solid-bloom-filter",
+  "@type": "ExperimentSolidBench",
+  "scale": "0.1",
+  "configGenerateAux": "input/config-enhancer.json",
+  "configFragment": "input/fragmenter/config-%FACTOR-case%.json",
+  "configFragmentAux": "input/config-auxiliary.json",
+  "configQueries": "input/config-queries.json",
+  "configServer": "input/config-server.json",
+  "validationParamsUrl": "https://cloud.ilabt.imec.be/index.php/s/bBZZKb7cP95WgcD/download/validation_params.zip",
+  "configValidation": "input/config-validation.json",
+  "hadoopMemory": "4G",
+  "dockerfileServer": "input/dockerfiles/server.dockerfile",
+  "endpointUrl": "http://localhost:3001/sparql",
+  "serverPort": 3000,
+  "serverLogLevel": "info",
+  "serverBaseUrl": "http://solidbench-server:3000/",
+  "serverResourceConstraints": {
+    "@type": "StaticDockerResourceConstraints",
+    "cpu_percentage": 100
+  },
+  "queryRunnerReplication": 3,
+  "queryRunnerWarmupRounds": 0,
+  "queryRunnerRecordTimestamps": true,
+  "queryRunnerRecordHttpRequests": true,
+  "queryRunnerUpQuery": "SELECT * WHERE { <http://solidbench-server:3000/pods/00000000000000000933/profile/card#me> a ?o } LIMIT 1",
+  "queryRunnerUrlParamsInit": {},
+  "queryRunnerUrlParamsRun": {},
+  "queryTimeoutFallback": 125000,
+  "hookSparqlEndpoint": {
+    "@id": "urn:jbr:ltqp-solid-bloom-filter:hookSparqlEndpoint",
+    "@type": "HookSparqlEndpointComunica",
+    "dockerfileClient": "input/dockerfiles/client.dockerfile",
+    "resourceConstraints": {
+      "@type": "StaticDockerResourceConstraints",
+      "cpu_percentage": 100
+    },
+    "configClient": "input/config-client/config%FACTOR-target%.json",
+    "contextClient": "input/context-client.json",
+    "additionalBinds": [],
+    "clientPort": 3001,
+    "clientLogLevel": "info",
+    "queryTimeout": 120,
+    "maxMemory": 8192
+  }
+}

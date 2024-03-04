@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "name": "ltqp-solid-bloom-filters",
+  "packageManager": "yarn@4.0.2",
+  "dependencies": {
+    "@jbr-experiment/solidbench": "^3.0.0",
+    "@jbr-hook/sparql-endpoint-comunica": "^3.0.0",
+    "cross-env": "^7.0.0",
+    "jbr": "^3.0.0"
+  },
+  "scripts": {
+    "jbr": "cross-env NODE_OPTIONS=--max-old-space-size=8192 jbr",
+    "validate": "yarn run jbr generate-combinations && yarn run jbr validate"
+  }
+}

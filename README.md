@@ -14,11 +14,10 @@
   </a>
 </p>
 
-This is a monorepository that contains various work-in-progress experiments for [Comunica](https://github.com/comunica/comunica) using [jbr.js](https://github.com/rubensworks/jbr.js) and is not intended for actual use. If you wish to learn more about Comunica or actually use it, please refer to [its website](https://comunica.dev/). The experiments here are meant for benchmarking different ideas in a reproducible way.
+This is a monorepository that contains various work-in-progress experiments for [Comunica](https://github.com/comunica/comunica) using [jbr.js](https://github.com/rubensworks/jbr.js). The experiments here are meant for benchmarking different ideas in a reproducible way. The following experiments reside here:
 
-The following experiments reside here:
-
-* [**Restarting of joins with VoID description RDF metadata in link traversal over Solid pods**](experiments/ltqp-solid-join-restart/), where the idea is to restart join operations based on newfound cardinality estimate metadata derived from VoID descriptions. The purpose of this experiment is to demonstrate the potential of applying even the most basic 'adaptive' techniques in link traversal within the context of Solid.
+* [**Restarting of joins during link traversal over Solid pods**](experiments/ltqp-solid-join-restart/).
+* [**Pruning of links during link traversal over Solid pods**](experiments/ltqp-solid-bloom-filters/).
 
 ## Running
 

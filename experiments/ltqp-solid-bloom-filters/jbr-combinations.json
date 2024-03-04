@@ -1,0 +1,20 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^3.0.0/components/context.jsonld"
+  ],
+  "@id": "urn:jbr:ltqp-solid-bloom-filter-combinations",
+  "@type": "FullFactorialCombinationProvider",
+  "commonGenerated": true,
+  "factors": {
+    "case": [
+      "baseline",
+      "pod",
+      "subdir",
+      "document"
+    ],
+    "target": [
+      "",
+      "-overhead"
+    ]
+  }
+}

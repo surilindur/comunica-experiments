@@ -442,18 +442,6 @@
     "strategies": [
       {
         "@type": "FragmentationStrategySubject"
-      },
-      {
-        "@type": "FragmentationStrategyDatasetSummaryBloom",
-        "hashBits": 256,
-        "hashCount": 4,
-        "subjectToDataset": {
-          "(.*\\/pods\\/[0-9]+\\/[A-z0-9]+\\/).*$": "$1",
-          "(.*\\/pods\\/[0-9]+\\/).*$": "$1"
-        },
-        "datasetToSummary": {
-          "(.*\\/pods\\/[0-9]+\\/).*$": "$1"
-        }
       }
     ]
   },

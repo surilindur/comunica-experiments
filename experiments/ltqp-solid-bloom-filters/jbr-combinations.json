@@ -6,15 +6,14 @@
   "@type": "FullFactorialCombinationProvider",
   "commonGenerated": true,
   "factors": {
-    "case": [
-      "baseline",
-      "pod",
-      "subdir",
-      "document"
+    "prefix": [
+      "config"
     ],
-    "target": [
-      "",
-      "-overhead"
+    "config": [
+      "baseline",
+      "document",
+      "pod",
+      "subdir"
     ]
   }
 }

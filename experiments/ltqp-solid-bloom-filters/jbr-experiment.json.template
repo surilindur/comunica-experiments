@@ -8,7 +8,7 @@
   "@type": "ExperimentSolidBench",
   "scale": "0.1",
   "configGenerateAux": "input/config-enhancer.json",
-  "configFragment": "input/fragmenter/config-%FACTOR-case%.json",
+  "configFragment": "input/fragmenter/%FACTOR-prefix%-%FACTOR-config%.json",
   "configFragmentAux": "input/config-auxiliary.json",
   "configQueries": "input/config-queries.json",
   "configServer": "input/config-server.json",
@@ -40,7 +40,7 @@
       "@type": "StaticDockerResourceConstraints",
       "cpu_percentage": 100
     },
-    "configClient": "input/config-client/config%FACTOR-target%.json",
+    "configClient": "input/config-client/%FACTOR-prefix%-%FACTOR-config%.json",
     "contextClient": "input/context-client.json",
     "additionalBinds": [],
     "clientPort": 3001,

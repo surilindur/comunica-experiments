@@ -4,7 +4,7 @@
     "https://linkedsoftwaredependencies.org/bundles/npm/@jbr-experiment/solidbench/^3.0.0/components/context.jsonld",
     "https://linkedsoftwaredependencies.org/bundles/npm/@jbr-hook/sparql-endpoint-comunica/^3.0.0/components/context.jsonld"
   ],
-  "@id": "urn:jbr:ltqp-solid-bloom-filter",
+  "@id": "urn:jbr:ltqp-solid-bloom-filters",
   "@type": "ExperimentSolidBench",
   "scale": "0.1",
   "configGenerateAux": "input/config-enhancer.json",
@@ -33,7 +33,7 @@
   "queryRunnerUrlParamsRun": {},
   "queryTimeoutFallback": 125000,
   "hookSparqlEndpoint": {
-    "@id": "urn:jbr:ltqp-solid-bloom-filter:hookSparqlEndpoint",
+    "@id": "urn:jbr:ltqp-solid-bloom-filters:hookSparqlEndpoint",
     "@type": "HookSparqlEndpointComunica",
     "dockerfileClient": "input/dockerfiles/client.dockerfile",
     "resourceConstraints": {

@@ -25,4 +25,4 @@ jobs:
       - run: git config --global core.autocrlf input
       - uses: actions/checkout@v4
       - run: yarn install --immutable
-      - run: yarn workspaces foreach run validate
+      - run: yarn workspaces foreach --all --parallel run validate

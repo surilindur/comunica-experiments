@@ -24,14 +24,14 @@
     "@type": "StaticDockerResourceConstraints",
     "cpu_percentage": 100
   },
-  "queryRunnerReplication": 1,
+  "queryRunnerReplication": 2,
   "queryRunnerWarmupRounds": 0,
   "queryRunnerRecordTimestamps": true,
   "queryRunnerRecordHttpRequests": true,
   "queryRunnerUpQuery": "SELECT * WHERE { <http://solidbench-server:3000/pods/00000000000000000933/profile/card#me> a ?o } LIMIT 1",
   "queryRunnerUrlParamsInit": {},
   "queryRunnerUrlParamsRun": {},
-  "queryTimeoutFallback": 70000,
+  "queryTimeoutFallback": 130000,
   "hookSparqlEndpoint": {
     "@id": "urn:jbr:ltqp-solid-bloom-filters:hookSparqlEndpoint",
     "@type": "HookSparqlEndpointComunica",
@@ -45,7 +45,7 @@
     "additionalBinds": [],
     "clientPort": 3001,
     "clientLogLevel": "info",
-    "queryTimeout": 60,
+    "queryTimeout": 120,
     "maxMemory": 8192
   }
 }

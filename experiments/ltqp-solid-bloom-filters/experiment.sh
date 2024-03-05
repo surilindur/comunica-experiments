@@ -20,7 +20,7 @@ echo "	to $target"
 rm -r "$target"
 ln -sf "$source" "$target"
 
-if [ ! -e generated/out-queries ]; then
+if [ ! -e combinations ]; then
     echo "Generating combinations"
     yarn run jbr generate-combinations
     # The validation step will fail, so it can be skipped by creating the directories

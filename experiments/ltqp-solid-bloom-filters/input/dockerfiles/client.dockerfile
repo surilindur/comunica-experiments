@@ -37,4 +37,4 @@ ENV COMUNICA_WORKERS $COMUNICA_WORKERS
 
 EXPOSE $COMUNICA_PORT
 
-ENTRYPOINT [ "/bin/bash", "-c", "node ./bin/http.js --lenient --contextOverride --invalidateCache --workers $COMUNICA_WORKERS --context /tmp/context.json --port $COMUNICA_PORT --timeout $QUERY_TIMEOUT --logLevel $LOG_LEVEL" ]
+ENTRYPOINT [ "/bin/bash", "-c", "node ./bin/http.js --lenient --contextOverride --invalidateCache --freshWorker --workers 2 --context /tmp/context.json --port $COMUNICA_PORT --timeout $QUERY_TIMEOUT --logLevel $LOG_LEVEL" ]

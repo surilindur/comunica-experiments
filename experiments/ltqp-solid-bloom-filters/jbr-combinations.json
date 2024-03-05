@@ -4,7 +4,7 @@
   ],
   "@id": "urn:jbr:ltqp-solid-bloom-filters-combinations",
   "@type": "FullFactorialCombinationProvider",
-  "commonGenerated": true,
+  "commonGenerated": false,
   "factors": {
     "prefix": [
       "config"

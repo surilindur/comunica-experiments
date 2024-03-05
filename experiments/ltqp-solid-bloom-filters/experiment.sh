@@ -24,7 +24,7 @@ if [ ! -e combinations ]; then
     echo "Generating combinations"
     yarn run jbr generate-combinations
     # The validation step will fail, so it can be skipped by creating the directories
-    for dir in combinations/*/; do mkdir -- "$dir"/{out-validate,out-validate-params}; done
+    for dir in combinations/*/; do mkdir -- "$dir"/generated/{out-validate,out-validate-params}; done
     yarn run jbr prepare
 fi
 

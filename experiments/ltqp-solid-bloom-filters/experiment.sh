@@ -20,7 +20,7 @@ echo "	to $target"
 rm -r "$target"
 ln -sf "$source" "$target"
 
-if [ ! -e combinations ]; then
+if [ ! -e generated/.prepared ]; then
     echo "Generating combinations"
     yarn run jbr generate-combinations
     # The validation step will fail, so it can be skipped by creating the directories
@@ -28,9 +28,9 @@ if [ ! -e combinations ]; then
     yarn run jbr prepare
 fi
 
-if [ -e generated/out-queries/interactive-complex-1.sparql ]; then
+if [ -e combinations/combination_0/generated/out-queries/interactive-complex-1.sparql ]; then
     echo "Removing complex queries"
-    rm generated/out-queries/interactive-complex-*.sparql
+    rm combinations/*/generated/out-queries/interactive-complex-*.sparql
 fi
 
 echo "Running benchmark"

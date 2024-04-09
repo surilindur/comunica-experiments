@@ -1,7 +1,6 @@
 {
   "private": true,
   "name": "ltqp-solid-join-restart",
-  "packageManager": "yarn@4.0.2",
   "dependencies": {
     "@jbr-experiment/solidbench": "^3.0.0",
     "@jbr-hook/sparql-endpoint-comunica": "^3.0.0",

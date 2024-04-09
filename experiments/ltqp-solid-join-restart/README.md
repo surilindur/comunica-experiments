@@ -59,8 +59,6 @@ Finally, the experiments can be executed:
 yarn run jbr run
 ```
 
-The provided [script](./experiment.sh) has all of these commands included in it.
-
 ## Results
 
 The results will go into the `output/` folder in this directory,

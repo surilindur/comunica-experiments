@@ -3,8 +3,7 @@
 /node_modules
 /generated/*
 !/generated/.keep
-/output/*
-!/output/.keep
+/output/logs
 /combinations/*/generated/*
 !/combinations/*/generated/.keep
 /combinations/*/output/*

@@ -17,4 +17,4 @@ ENV COMUNICA_PORT $COMUNICA_PORT
 
 EXPOSE $COMUNICA_PORT
 
-ENTRYPOINT [ "/bin/sh", "-c", "node ./bin/http.js --lenient --contextOverride --invalidateCache --context /tmp/context.json --port ${COMUNICA_PORT} --timeout ${QUERY_TIMEOUT} --logLevel ${LOG_LEVEL}" ]
+ENTRYPOINT [ "/bin/sh", "-c", "node ./bin/http.js --lenient --contextOverride --invalidateCache --idp void --context /tmp/context.json --port ${COMUNICA_PORT} --timeout ${QUERY_TIMEOUT} --logLevel ${LOG_LEVEL}" ]

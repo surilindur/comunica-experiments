@@ -5,13 +5,7 @@
   "dependencies": {
     "@jbr-experiment/solidbench": "^5.0.0",
     "@jbr-hook/sparql-endpoint-comunica": "^5.0.0",
-    "cross-env": "^7.0.0",
     "jbr": "^5.0.0",
     "solidbench": "SolidBench/SolidBench.js#master"
-  },
-  "scripts": {
-    "jbr": "cross-env NODE_OPTIONS=--max-old-space-size=8192 jbr",
-    "generate": "yarn run jbr generate-combinations",
-    "validate": "yarn run jbr validate"
   }
 }

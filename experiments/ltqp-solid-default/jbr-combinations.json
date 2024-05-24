@@ -2,7 +2,7 @@
   "@context": [
     "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^5.0.0/components/context.jsonld"
   ],
-  "@id": "urn:jbr:ltqp-solid-bloom-filters-combinations",
+  "@id": "urn:jbr:ltqp-solid-default-combinations",
   "@type": "FullFactorialCombinationProvider",
   "commonGenerated": true,
   "factors": {

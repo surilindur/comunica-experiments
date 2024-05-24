@@ -27,8 +27,7 @@
   "queryRunnerReplication": 1,
   "queryRunnerWarmupRounds": 0,
   "queryRunnerEndpointAvailabilityCheckTimeout": 1000,
-  "queryRunnerUrlParamsInit": {},
-  "queryRunnerUrlParamsRun": {},
+  "queryRunnerUrlParams": {},
   "queryTimeoutFallback": 70000,
   "hookSparqlEndpoint": {
     "@id": "urn:jbr:ltqp-solid-bloom-filters:hookSparqlEndpoint",

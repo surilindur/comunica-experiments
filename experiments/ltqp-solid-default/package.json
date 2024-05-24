@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "ltqp-solid-join-restart",
+  "name": "ltqp-solid-default",
   "version": "0.0.0",
   "dependencies": {
     "@jbr-experiment/solidbench": "^5.0.0",

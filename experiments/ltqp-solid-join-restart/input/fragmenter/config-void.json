@@ -449,14 +449,9 @@
         "@type": "FragmentationStrategySubject"
       },
       {
-        "@type": "FragmentationStrategyDatasetSummaryBloom",
-        "hashBits": 256,
-        "hashCount": 4,
+        "@type": "FragmentationStrategyDatasetSummaryVoID",
         "datasetPatterns": [
-          "^(.+\\/pods\\/[0-9]+\\/[A-z0-9]+\\/)"
-        ],
-        "locationPatterns": [
-          "^(.+\\/pods\\/[0-9]+\\/)"
+          "^(.*\\/pods\\/[0-9]+\\/)"
         ]
       }
     ]

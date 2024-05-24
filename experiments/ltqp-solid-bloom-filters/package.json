@@ -1,15 +1,17 @@
 {
   "private": true,
   "name": "ltqp-solid-bloom-filters",
+  "version": "0.0.0",
   "dependencies": {
-    "@jbr-experiment/solidbench": "^3.0.0",
-    "@jbr-hook/sparql-endpoint-comunica": "^3.0.0",
+    "@jbr-experiment/solidbench": "^5.0.0",
+    "@jbr-hook/sparql-endpoint-comunica": "^5.0.0",
     "cross-env": "^7.0.0",
-    "jbr": "^3.0.0",
-    "rdf-dataset-fragmenter": "surilindur/rdf-dataset-fragmenter.js#feat/dataset-summaries-void-bloom"
+    "jbr": "^5.0.0",
+    "solidbench": "SolidBench/SolidBench.js#master"
   },
   "scripts": {
     "jbr": "cross-env NODE_OPTIONS=--max-old-space-size=8192 jbr",
-    "validate": "yarn run jbr generate-combinations && yarn run jbr validate"
+    "generate": "yarn run jbr generate-combinations",
+    "validate": "yarn run jbr validate"
   }
 }

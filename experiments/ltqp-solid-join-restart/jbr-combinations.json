@@ -1,6 +1,6 @@
 {
   "@context": [
-    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^3.0.0/components/context.jsonld"
+    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^5.0.0/components/context.jsonld"
   ],
   "@id": "urn:jbr:ltqp-solid-join-restart-combinations",
   "@type": "FullFactorialCombinationProvider",

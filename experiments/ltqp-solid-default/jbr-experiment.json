@@ -4,7 +4,7 @@
     "https://linkedsoftwaredependencies.org/bundles/npm/@jbr-experiment/solidbench/^5.0.0/components/context.jsonld",
     "https://linkedsoftwaredependencies.org/bundles/npm/@jbr-hook/sparql-endpoint-comunica/^5.0.0/components/context.jsonld"
   ],
-  "@id": "urn:jbr:ltqp-solid-join-restart",
+  "@id": "urn:jbr:ltqp-solid-default",
   "@type": "ExperimentSolidBench",
   "scale": "0.1",
   "configGenerateAux": "input/config-enhancer.json",
@@ -24,25 +24,26 @@
     "@type": "StaticDockerResourceConstraints",
     "cpu_percentage": 100
   },
-  "queryRunnerReplication": 4,
-  "queryRunnerWarmupRounds": 1,
+  "queryRunnerReplication": 1,
+  "queryRunnerWarmupRounds": 0,
   "queryRunnerEndpointAvailabilityCheckTimeout": 1000,
-  "queryRunnerUrlParams": {},
-  "queryTimeoutFallback": 125000,
+  "queryRunnerUrlParamsInit": {},
+  "queryRunnerUrlParamsRun": {},
+  "queryTimeoutFallback": 70000,
   "hookSparqlEndpoint": {
-    "@id": "urn:jbr:ltqp-solid-join-restart:hookSparqlEndpoint",
+    "@id": "urn:jbr:ltqp-solid-default:hookSparqlEndpoint",
     "@type": "HookSparqlEndpointComunica",
     "dockerfileClient": "input/dockerfiles/client.dockerfile",
     "resourceConstraints": {
       "@type": "StaticDockerResourceConstraints",
       "cpu_percentage": 100
     },
-    "configClient": "input/config-client/%FACTOR-prefix%-%FACTOR-config%.json",
+    "configClient": "input/config-client.json",
     "contextClient": "input/context-client.json",
     "additionalBinds": [],
     "clientPort": 3001,
     "clientLogLevel": "info",
-    "queryTimeout": 120,
+    "queryTimeout": 60,
     "maxMemory": 8192
   }
 }

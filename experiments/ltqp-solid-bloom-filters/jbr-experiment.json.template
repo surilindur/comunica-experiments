@@ -1,8 +1,8 @@
 {
   "@context": [
-    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^3.0.0/components/context.jsonld",
-    "https://linkedsoftwaredependencies.org/bundles/npm/@jbr-experiment/solidbench/^3.0.0/components/context.jsonld",
-    "https://linkedsoftwaredependencies.org/bundles/npm/@jbr-hook/sparql-endpoint-comunica/^3.0.0/components/context.jsonld"
+    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^5.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@jbr-experiment/solidbench/^5.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@jbr-hook/sparql-endpoint-comunica/^5.0.0/components/context.jsonld"
   ],
   "@id": "urn:jbr:ltqp-solid-bloom-filters",
   "@type": "ExperimentSolidBench",
@@ -26,9 +26,7 @@
   },
   "queryRunnerReplication": 1,
   "queryRunnerWarmupRounds": 0,
-  "queryRunnerRecordTimestamps": true,
-  "queryRunnerRecordHttpRequests": true,
-  "queryRunnerUpQuery": "SELECT * WHERE { <http://solidbench-server:3000/pods/00000000000000000933/profile/card#me> a ?o } LIMIT 1",
+  "queryRunnerEndpointAvailabilityCheckTimeout": 1000,
   "queryRunnerUrlParamsInit": {},
   "queryRunnerUrlParamsRun": {},
   "queryTimeoutFallback": 70000,

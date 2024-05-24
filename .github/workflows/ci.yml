@@ -23,5 +23,5 @@ jobs:
       - run: git config --global core.autocrlf input
       - uses: actions/checkout@v4
       - run: yarn install --immutable
-      - run: yarn workspaces foreach --all --parallel jbr generate-combinations
-      - run: yarn workspaces foreach --all --parallel jbr validate
+      - run: yarn workspaces foreach --all --parallel run jbr generate-combinations
+      - run: yarn workspaces foreach --all --parallel run jbr validate

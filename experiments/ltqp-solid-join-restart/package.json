@@ -7,5 +7,8 @@
     "@jbr-hook/sparql-endpoint-comunica": "^5.0.0",
     "jbr": "^5.0.0",
     "solidbench": "SolidBench/SolidBench.js#master"
+  },
+  "scripts": {
+    "validate": "jbr generate-combinations && jbr validate"
   }
 }

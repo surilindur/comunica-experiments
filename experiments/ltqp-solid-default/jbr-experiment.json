@@ -26,6 +26,7 @@
   },
   "queryRunnerReplication": 1,
   "queryRunnerWarmupRounds": 0,
+  "queryRunnerRequestDelay": 0,
   "queryRunnerEndpointAvailabilityCheckTimeout": 1000,
   "queryRunnerUrlParams": {},
   "queryTimeoutFallback": 70000,

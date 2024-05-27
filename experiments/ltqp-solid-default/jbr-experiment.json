@@ -22,28 +22,28 @@
   "serverBaseUrl": "http://solidbench-server:3000/",
   "serverResourceConstraints": {
     "@type": "StaticDockerResourceConstraints",
-    "cpu_percentage": 100
+    "cpu_percentage": 200
   },
-  "queryRunnerReplication": 1,
-  "queryRunnerWarmupRounds": 0,
+  "queryRunnerReplication": 5,
+  "queryRunnerWarmupRounds": 1,
   "queryRunnerRequestDelay": 0,
   "queryRunnerEndpointAvailabilityCheckTimeout": 1000,
   "queryRunnerUrlParams": {},
-  "queryTimeoutFallback": 70000,
+  "queryTimeoutFallback": 130000,
   "hookSparqlEndpoint": {
     "@id": "urn:jbr:ltqp-solid-default:hookSparqlEndpoint",
     "@type": "HookSparqlEndpointComunica",
     "dockerfileClient": "input/dockerfiles/client.dockerfile",
     "resourceConstraints": {
       "@type": "StaticDockerResourceConstraints",
-      "cpu_percentage": 100
+      "cpu_percentage": 200
     },
     "configClient": "input/config-client.json",
     "contextClient": "input/context-client.json",
     "additionalBinds": [],
     "clientPort": 3001,
     "clientLogLevel": "info",
-    "queryTimeout": 60,
+    "queryTimeout": 120,
     "maxMemory": 8192
   }
 }

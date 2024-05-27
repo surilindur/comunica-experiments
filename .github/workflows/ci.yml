@@ -6,6 +6,7 @@ on:
       - 'results/**'
       - '**/README.md'
       - '**/LICENSE'
+      - '**/output'
       - '**/.gitattributes'
 
 concurrency:

@@ -4,7 +4,7 @@
   ],
   "@id": "urn:jbr:prelim-depth-first-timing-combinations",
   "@type": "FullFactorialCombinationProvider",
-  "commonGenerated": false,
+  "commonGenerated": true,
   "factors": {
     "prefix": [
       "client"

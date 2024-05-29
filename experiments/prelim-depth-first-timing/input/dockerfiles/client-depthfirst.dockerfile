@@ -1,8 +1,8 @@
-FROM comunica/query-sparql-link-traversal-solid:latest
+FROM rubeneschauzier/feature-link-traversal-solid-breadth-first:timing
 
 ARG CONFIG_CLIENT
-ARG QUERY_TIMEOUT=120
-ARG MAX_MEMORY=8192
+ARG QUERY_TIMEOUT
+ARG MAX_MEMORY
 ARG LOG_LEVEL=info
 ARG COMUNICA_PORT=3000
 

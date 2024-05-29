@@ -15,7 +15,7 @@
   "validationParamsUrl": "https://cloud.ilabt.imec.be/index.php/s/bBZZKb7cP95WgcD/download/validation_params.zip",
   "configValidation": "input/config-validation.json",
   "hadoopMemory": "4G",
-  "dockerfileServer": "input/dockerfiles/Dockerfile-server",
+  "dockerfileServer": "input/dockerfiles/server.dockerfile",
   "endpointUrl": "http://localhost:3001/sparql",
   "serverPort": 3000,
   "serverLogLevel": "debug",
@@ -33,7 +33,7 @@
   "hookSparqlEndpoint": {
     "@id": "urn:jbr:prelim-depth-first-timing:hookSparqlEndpoint",
     "@type": "HookSparqlEndpointComunica",
-    "dockerfileClient": "input/dockerfiles/Dockerfile-client",
+    "dockerfileClient": "input/dockerfiles/%FACTOR-prefix%-%FACTOR-config%.dockerfile",
     "resourceConstraints": {
       "@type": "StaticDockerResourceConstraints",
       "cpu_percentage": 100

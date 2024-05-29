@@ -1,4 +1,10 @@
+# yarn is used to install packages
 .yarn
-.venv
 node_modules
-__pycache__
+
+# logfiles should be compressed into a single file
+logs
+
+# generated data should be ignored
+**/generated/*
+!**/generated/.keep

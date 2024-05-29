@@ -1,6 +1,6 @@
 FROM bitnami/git:latest AS git
 
-RUN git clone --branch main --single-branch https://github.com/comunica/comunica-feature-link-traversal /opt/client
+RUN git clone --branch master --single-branch https://github.com/comunica/comunica-feature-link-traversal /opt/client
 
 WORKDIR /opt/client
 

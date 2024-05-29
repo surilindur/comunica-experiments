@@ -8,7 +8,7 @@
   "@type": "ExperimentSolidBench",
   "scale": "0.1",
   "configGenerateAux": "input/config-enhancer.json",
-  "configFragment": "input/config-fragmenter.json",
+  "configFragment": "input/config-fragmenter/%FACTOR-prefix%-%FACTOR-config%.json",
   "configFragmentAux": "input/config-fragmenter-auxiliary.json",
   "configQueries": "input/config-queries.json",
   "configServer": "input/config-server.json",
@@ -22,21 +22,21 @@
   "serverBaseUrl": "http://solidbench-server:3000/",
   "serverResourceConstraints": {
     "@type": "StaticDockerResourceConstraints",
-    "cpu_percentage": 100
+    "cpu_percentage": 200
   },
   "queryRunnerReplication": 4,
   "queryRunnerWarmupRounds": 1,
   "queryRunnerRequestDelay": 0,
   "queryRunnerEndpointAvailabilityCheckTimeout": 1000,
   "queryRunnerUrlParams": {},
-  "queryTimeoutFallback": 125000,
+  "queryTimeoutFallback": 130000,
   "hookSparqlEndpoint": {
     "@id": "urn:jbr:ltqp-solid-join-restart:hookSparqlEndpoint",
     "@type": "HookSparqlEndpointComunica",
     "dockerfileClient": "input/dockerfiles/client.dockerfile",
     "resourceConstraints": {
       "@type": "StaticDockerResourceConstraints",
-      "cpu_percentage": 100
+      "cpu_percentage": 200
     },
     "configClient": "input/config-client/%FACTOR-prefix%-%FACTOR-config%.json",
     "contextClient": "input/context-client.json",

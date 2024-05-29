@@ -14,7 +14,7 @@ WORKDIR /opt/client
 
 RUN corepack enable && yarn install --ignore-engines --frozen-lockfile && yarn build
 
-WORKDIR /opt/client/engines/query-sparql-components
+WORKDIR /opt/client/engines/query-sparql-link-traversal-solid
 
 ARG CONFIG_CLIENT
 ARG QUERY_TIMEOUT

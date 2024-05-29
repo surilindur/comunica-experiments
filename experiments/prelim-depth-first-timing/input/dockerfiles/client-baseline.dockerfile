@@ -1,4 +1,20 @@
-FROM comunica/query-sparql-link-traversal-solid:latest
+FROM bitnami/git:latest AS git
+
+RUN git clone --branch main --single-branch https://github.com/comunica/comunica-feature-link-traversal /opt/client
+
+WORKDIR /opt/client
+
+RUN git checkout 6c466cdd33f35ca5e4a09daa8ad8dbb5adc8f280
+
+FROM node:22-slim
+
+COPY --from=git /opt/client /opt/client
+
+WORKDIR /opt/client
+
+RUN corepack enable && yarn install --ignore-engines --frozen-lockfile && yarn build
+
+WORKDIR /opt/client/engines/query-sparql-components
 
 ARG CONFIG_CLIENT
 ARG QUERY_TIMEOUT

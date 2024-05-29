@@ -3,11 +3,11 @@ name: CI
 on:
   push:
     paths-ignore:
-      - 'results/**'
       - '**/README.md'
       - '**/LICENSE'
-      - '**/output'
+      - '**/output/**'
       - '**/.gitattributes'
+      - '**/.gitignore'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}

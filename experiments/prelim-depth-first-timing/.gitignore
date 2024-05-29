@@ -1,0 +1,10 @@
+/combinations
+/componentsjs-error-state.json
+/node_modules
+/generated/*
+!/generated/.keep
+/output/logs
+/combinations/*/generated/*
+!/combinations/*/generated/.keep
+/combinations/*/output/*
+!/combinations/*/output/.keep

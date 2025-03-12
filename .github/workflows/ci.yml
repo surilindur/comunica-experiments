@@ -15,17 +15,17 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: latest
-      - name: Cache .yarn
-        uses: actions/cache@v4
-        with:
-          path: .yarn
-          key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
       - name: Enable corepack
         run: corepack enable
       - name: Enable git autocrlf
         run: git config --global core.autocrlf input
       - name: Checkout repository
         uses: actions/checkout@v4
+      - name: Restore cached dependencies
+        uses: actions/cache@v4
+        with:
+          path: .yarn
+          key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
       - name: Install dependencies
         run: yarn install --immutable
       - name: Validate all experiments

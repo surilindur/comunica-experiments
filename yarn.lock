@@ -4095,31 +4095,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"componentsjs@npm:^5.0.1, componentsjs@npm:^5.3.0, componentsjs@npm:^5.3.2, componentsjs@npm:^5.4.2":
-  version: 5.5.1
-  resolution: "componentsjs@npm:5.5.1"
-  dependencies:
-    "@rdfjs/types": "npm:*"
-    "@types/minimist": "npm:^1.2.0"
-    "@types/node": "npm:^18.0.0"
-    "@types/semver": "npm:^7.3.4"
-    jsonld-context-parser: "npm:^2.1.1"
-    minimist: "npm:^1.2.0"
-    rdf-data-factory: "npm:^1.1.0"
-    rdf-object: "npm:^1.14.0"
-    rdf-parse: "npm:^2.0.0"
-    rdf-quad: "npm:^1.5.0"
-    rdf-string: "npm:^1.6.0"
-    rdf-terms: "npm:^1.7.0"
-    semver: "npm:^7.3.2"
-    winston: "npm:^3.3.3"
-  bin:
-    componentsjs-compile-config: bin/compile-config.js
-  checksum: 10/a426480b88ef2072e9b0826d32baf9c3d354079c85bfe79ba0de53feaa78e5e96f8d0a2b9b9203d57548ecba509f690d751b5a4faf99bbe4a18310e39fe13dbb
-  languageName: node
-  linkType: hard
-
-"componentsjs@npm:^6.0.0, componentsjs@npm:^6.3.0":
+"componentsjs@npm:6.3.0":
   version: 6.3.0
   resolution: "componentsjs@npm:6.3.0"
   dependencies:
@@ -5431,7 +5407,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jsonld-context-parser@npm:^2.0.0, jsonld-context-parser@npm:^2.0.2, jsonld-context-parser@npm:^2.1.1, jsonld-context-parser@npm:^2.1.5, jsonld-context-parser@npm:^2.2.2, jsonld-context-parser@npm:^2.3.2, jsonld-context-parser@npm:^2.4.0":
+"jsonld-context-parser@npm:^2.0.0, jsonld-context-parser@npm:^2.0.2, jsonld-context-parser@npm:^2.1.5, jsonld-context-parser@npm:^2.2.2, jsonld-context-parser@npm:^2.3.2, jsonld-context-parser@npm:^2.4.0":
   version: 2.4.0
   resolution: "jsonld-context-parser@npm:2.4.0"
   dependencies:
@@ -6619,7 +6595,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rdf-object@npm:^1.13.1, rdf-object@npm:^1.14.0":
+"rdf-object@npm:^1.13.1":
   version: 1.14.0
   resolution: "rdf-object@npm:1.14.0"
   dependencies:

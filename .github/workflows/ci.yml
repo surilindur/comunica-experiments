@@ -28,7 +28,5 @@ jobs:
         uses: actions/checkout@v4
       - name: Install dependencies
         run: yarn install --immutable
-      - name: Generate combinations for all experiments
-        run: yarn workspaces foreach --all --parallel jbr generate-combinations
       - name: Validate all experiments
-        run: yarn workspaces foreach --all --parallel jbr validate
+        run: yarn workspaces foreach --all --parallel run validate

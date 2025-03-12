@@ -3,5 +3,8 @@
   "private": true,
   "workspaces": [
     "experiments/*"
-  ]
+  ],
+  "resolutions": {
+    "componentsjs": "6.3.0"
+  }
 }

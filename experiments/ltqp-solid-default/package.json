@@ -1,14 +1,10 @@
 {
-  "private": true,
   "name": "ltqp-solid-default",
-  "version": "0.0.0",
+  "private": true,
   "dependencies": {
     "@jbr-experiment/solidbench": "^5.0.0",
     "@jbr-hook/sparql-endpoint-comunica": "^5.0.0",
     "jbr": "^5.0.0",
-    "solidbench": "SolidBench/SolidBench.js#master"
-  },
-  "scripts": {
-    "validate": "jbr validate"
+    "solidbench": "^2.0.0"
   }
 }

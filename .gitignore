@@ -1,13 +1,6 @@
-# yarn is used to install packages
 .yarn
 node_modules
-
-# logfiles should be compressed into a single file
 logs
-
-# generated data should be ignored
 **/generated/*
 !**/generated/.keep
-
-# created symbolic output links should be ignored
 **/output/combination*

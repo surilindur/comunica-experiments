@@ -1,7 +1,6 @@
 {
-  "name": "comunica-experiments",
+  "packageManager": "yarn@4.7.0",
   "private": true,
-  "packageManager": "yarn@4.2.2",
   "workspaces": [
     "experiments/*"
   ]

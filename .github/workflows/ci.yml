@@ -1,13 +1,6 @@
 name: CI
 
-on:
-  push:
-    paths-ignore:
-      - '**/README.md'
-      - '**/LICENSE'
-      - '**/output/**'
-      - '**/.gitattributes'
-      - '**/.gitignore'
+on: [push]
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -15,17 +8,27 @@ concurrency:
 
 jobs:
   validate:
+    name: Validate experiments
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-node@v4
+      - name: Use latest Node version
+        uses: actions/setup-node@v4
         with:
           node-version: latest
-      - uses: actions/cache@v4
+      - name: Cache .yarn
+        uses: actions/cache@v4
         with:
-          path: '**/.yarn'
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-      - run: corepack enable
-      - run: git config --global core.autocrlf input
-      - uses: actions/checkout@v4
-      - run: yarn install --immutable
-      - run: yarn workspaces foreach --all --parallel run validate
+          path: .yarn
+          key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
+      - name: Enable corepack
+        run: corepack enable
+      - name: Enable git autocrlf
+        run: git config --global core.autocrlf input
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Install dependencies
+        run: yarn install --immutable
+      - name: Generate combinations for all experiments
+        run: yarn workspaces foreach --all --parallel jbr generate-combinations
+      - name: Validate all experiments
+        run: yarn workspaces foreach --all --parallel jbr validate

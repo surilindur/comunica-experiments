@@ -3,7 +3,9 @@ name: LTQP Solid Default
 on:
   push:
     paths:
+      - .github/workflows/ltqp-solid-default.yml
       - experiments/ltqp-solid-default/**
+      - submodules/rdf-dataset-fragmenter
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -26,13 +28,14 @@ jobs:
         uses: actions/checkout@v4
         with:
           submodules: true
-      - name: Restore cached dependencies
-        uses: actions/cache@v4
-        with:
-          path: .yarn
-          key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
+      - name: Prepare rdf-dataset-fragmenter
+        run: yarn install --ignore-engines && yarn build
+        working-directory: submodules/rdf-dataset-fragmenter
       - name: Install dependencies
         run: yarn install --immutable
+      - name: Validate experiment
+        run: yarn jbr validate
+        working-directory: experiments/ltqp-solid-default
       - name: Prepare experiment
         run: yarn jbr prepare
         working-directory: experiments/ltqp-solid-default

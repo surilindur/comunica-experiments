@@ -3,7 +3,7 @@ name: LTQP Solid Default
 on:
   push:
     paths:
-      - experiments/ltqp-solid-default
+      - experiments/ltqp-solid-default/**
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -24,6 +24,8 @@ jobs:
         run: git config --global core.autocrlf input
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          submodules: true
       - name: Restore cached dependencies
         uses: actions/cache@v4
         with:

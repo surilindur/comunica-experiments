@@ -2,10 +2,10 @@
   "packageManager": "yarn@4.7.0",
   "private": true,
   "workspaces": [
-    "experiments/*",
-    "submodules/*"
+    "experiments/*"
   ],
   "resolutions": {
-    "componentsjs": "6.3.0"
+    "componentsjs": "6.3.0",
+    "rdf-dataset-fragmenter": "surilindur/rdf-dataset-fragmenter.js#feat/quadmatchertermvalue"
   }
 }

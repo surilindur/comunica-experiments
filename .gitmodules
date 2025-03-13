@@ -1,3 +1,0 @@
-[submodule "submodules/rdf-dataset-fragmenter"]
-	path = submodules/rdf-dataset-fragmenter
-	url = https://github.com/surilindur/rdf-dataset-fragmenter.js.git

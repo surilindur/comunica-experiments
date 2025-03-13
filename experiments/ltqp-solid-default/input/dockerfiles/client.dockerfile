@@ -1,21 +1,21 @@
 FROM node:alpine
 
 # The base image does not come with jq
-RUN apk add jq
+RUN apk add jq git
 
 # Comunica
-ADD https://github.com/comunica/comunica.git#master /opt/comunica
+RUN git clone https://github.com/comunica/comunica.git /opt/comunica
 WORKDIR /opt/comunica
 RUN yarn install --ignore-engines
 
 # Comunica Solid
-ADD https://github.com/comunica/comunica-feature-solid.git#master /opt/comunica-solid
+RUN git clone https://github.com/comunica/comunica-feature-solid.git /opt/comunica-solid
 WORKDIR /opt/comunica-solid
 RUN mv package.json package.json.old && jq '.workspaces |= [ "../comunica/engines/*", "../comunica/packages/*" ] + .' package.json.old > package.json
 RUN yarn install --ignore-engines
 
 # Comunica Link Traversal
-ADD https://github.com/comunica/comunica-feature-link-traversal.git#master /opt/comunica-link-traversal
+RUN git clone https://github.com/comunica/comunica-feature-link-traversal.git /opt/comunica-link-traversal
 WORKDIR /opt/comunica-link-traversal
 RUN mv package.json package.json.old && jq '.workspaces |= [ "../comunica/engines/*", "../comunica/packages/*", "../comunica-solid/engines/*", "../comunica-solid/packages/*" ] + .' package.json.old > package.json
 RUN yarn install --ignore-engines

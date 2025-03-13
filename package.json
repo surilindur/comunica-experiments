@@ -2,7 +2,8 @@
   "packageManager": "yarn@4.7.0",
   "private": true,
   "workspaces": [
-    "experiments/*"
+    "experiments/*",
+    "submodules/*"
   ],
   "resolutions": {
     "componentsjs": "6.3.0"

@@ -1,4 +1,4 @@
-FROM solidproject/community-server:7.0.5
+FROM solidproject/community-server:edge
 
 ARG CONFIG_SERVER
 ARG LOG_LEVEL
@@ -6,9 +6,11 @@ ARG BASE_URL
 
 ADD $CONFIG_SERVER /tmp/config.json
 
-ENV LOG_LEVEL $LOG_LEVEL
-ENV BASE_URL $BASE_URL
-ENV NODE_ENV production
+ENV NODE_ENV=production
 
-ENTRYPOINT []
-CMD [ "/bin/sh", "-c", "node bin/server.js --config /tmp/config.json --loggingLevel ${LOG_LEVEL} --baseUrl ${BASE_URL} --rootFilePath /data" ]
+ENV CSS_CONFIG=/tmp/config.json
+ENV CSS_LOGGING_LEVEL=$LOG_LEVEL
+ENV CSS_BASE_URL=$BASE_URL
+ENV CSS_ROOT_FILE_PATH=/data
+
+ENTRYPOINT [ "node", "bin/server.js" ]

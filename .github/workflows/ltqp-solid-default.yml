@@ -1,0 +1,44 @@
+name: LTQP Solid Default
+
+on:
+  push:
+    paths:
+      - experiments/ltqp-solid-default
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  execute:
+    name: Execute experiment
+    runs-on: ubuntu-latest
+    steps:
+      - name: Use latest Node version
+        uses: actions/setup-node@v4
+        with:
+          node-version: latest
+      - name: Enable corepack
+        run: corepack enable
+      - name: Enable git autocrlf
+        run: git config --global core.autocrlf input
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Restore cached dependencies
+        uses: actions/cache@v4
+        with:
+          path: .yarn
+          key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
+      - name: Install dependencies
+        run: yarn install --immutable
+      - name: Prepare experiment
+        run: yarn jbr prepare
+        working-directory: experiments/ltqp-solid-default
+      - name: Execute experiment
+        run: yarn jbr run
+        working-directory: experiments/ltqp-solid-default
+      - name: Upload results as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ltqp-solid-default
+          path: experiments/ltqp-solid-default/output

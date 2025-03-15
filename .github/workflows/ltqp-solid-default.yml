@@ -37,7 +37,7 @@ jobs:
       - name: Generate SolidBench dataset and queries
         run: |
           yarn solidbench generate \
-            --cwd ./generated \
+            --cwd $(pwd)/generated \
             --enhancementConfig ./input/solidbench/enhancer.json \
             --queryConfig ./input/solidbench/queries.json \
             --validationConfig ./input/solidbench/validation.json \
@@ -58,6 +58,9 @@ jobs:
           yarn sparql-benchmark-runner \
             --endpoint http://localhost:4000/sparql \
             --queries ./generated/out-queries \
+            --replication 20 \
+            --warmup 1 \
+            --timeout 150 \
             --output ./output/${{ matrix.engine }}-${{ matrix.fragmentation }}.csv
         working-directory: experiments/ltqp-solid-default
       - name: Stop Docker setup

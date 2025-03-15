@@ -100,8 +100,9 @@
               "transformer": {
                 "@type": "QuadTransformerAppendQuadLink",
                 "matcher": {
-                  "@type": "QuadMatcherPredicate",
-                  "predicateRegex": "vocabulary/hasCreator$"
+                  "@type": "QuadMatcherComponentValue",
+                  "component": "predicate",
+                  "valueRegex": "vocabulary/hasCreator$"
                 },
                 "identifier": "object",
                 "predicate": "http://localhost:3000/internal/postsFragmentation",
@@ -145,8 +146,9 @@
               "transformer": {
                 "@type": "QuadTransformerAppendQuadLink",
                 "matcher": {
-                  "@type": "QuadMatcherPredicate",
-                  "predicateRegex": "vocabulary/hasCreator$"
+                  "@type": "QuadMatcherComponentValue",
+                  "component": "predicate",
+                  "valueRegex": "vocabulary/hasCreator$"
                 },
                 "identifier": "object",
                 "predicate": "http://localhost:3000/internal/commentsFragmentation",

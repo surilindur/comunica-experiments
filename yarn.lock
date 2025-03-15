@@ -5684,10 +5684,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "ltqp-solid-default@workspace:experiments/ltqp-solid-default"
   dependencies:
-    "@jbr-experiment/solidbench": "npm:^5.0.0"
-    "@jbr-hook/sparql-endpoint-comunica": "npm:^5.0.0"
-    jbr: "npm:^5.0.0"
     solidbench: "npm:^2.0.0"
+    sparql-benchmark-runner: "npm:^5.0.0"
   languageName: unknown
   linkType: soft
 
@@ -7241,6 +7239,19 @@ __metadata:
   bin:
     sparql-benchmark-runner: bin/sparql-benchmark-runner
   checksum: 10/377a366eb3fe5030c7a27756cf308bd4a1fa14a54f21fb7322e899cae164be40993b684c8484844a72cce3435432f69a23bf7ad053eb66f087b5d1154ce096c8
+  languageName: node
+  linkType: hard
+
+"sparql-benchmark-runner@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "sparql-benchmark-runner@npm:5.0.0"
+  dependencies:
+    fetch-sparql-endpoint: "npm:^5.1.0"
+    rdf-string: "npm:^1.0.0"
+    yargs: "npm:^17.0.0"
+  bin:
+    sparql-benchmark-runner: bin/sparql-benchmark-runner
+  checksum: 10/f8dfc158b5553aa5c4ab4dc06d2a41dccd0beb4a7bfc685211b4c4685037e379042c9424ee733ba53694f2d9de5e5673c593d0f1d653a3d33c7cdf0058dbc74b
   languageName: node
   linkType: hard
 

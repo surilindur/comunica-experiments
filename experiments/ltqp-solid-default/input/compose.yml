@@ -1,0 +1,39 @@
+services:
+  solid:
+    image: solidproject/community-server:edge
+    environment:
+      CSS_PORT: 3000
+      CSS_LOGGING_LEVEL: info
+      CSS_BASE_URL: http://localhost:3000
+      CSS_ROOT_FILE_PATH: /var/cssdata
+    healthcheck:
+      test: wget --spider http://localhost:3000/pods/
+      interval: 5s
+      timeout: 1s
+      retries: 3
+    ports:
+      - 3000:3000
+    restart: unless-stopped
+    volumes:
+      - ../generated/out-fragments/http/localhost_3000:/var/cssdata:ro
+  comunica:
+    build:
+      context: ./comunica
+      network: host
+    command: --contextOverride --freshWorker --invalidateCache --idp void --context /tmp/context.json --port 4000 --timeout 120 --logLevel info
+    depends_on:
+      solid:
+        condition: service_healthy
+    environment:
+      COMUNICA_CONFIG: /tmp/config.json
+    healthcheck:
+      test: wget --spider http://localhost:4000/sparql
+      interval: 5s
+      timeout: 1s
+      retries: 3
+    ports:
+      - 4000:4000
+    restart: unless-stopped
+    volumes:
+      - ./comunica/context.json:/tmp/context.json:ro
+      - ./comunica/config-${COMUNICA_CONFIG}:/tmp/config.json

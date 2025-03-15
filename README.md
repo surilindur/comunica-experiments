@@ -13,7 +13,9 @@
 
 This monorepository contains various experiments
 with the [Comunica](https://github.com/comunica/comunica) query engine
-using [jbr.js](https://github.com/rubensworks/jbr.js) as the benchmark runner.
+using a combination of [SolidBench](https://github.com/SolidBench/SolidBench.js),
+[Docker Compose](https://docs.docker.com/compose/)
+and [sparql-benchmark-runner](https://github.com/comunica/sparql-benchmark-runner.js).
 The experiments are stored here for future reference, transparency and reproducibility.
 The following experiments reside here:
 

@@ -66,8 +66,9 @@
     {
       "@type": "QuadTransformerAppendQuad",
       "matcher": {
-        "@type": "QuadMatcherPredicate",
-        "predicateRegex": "vocabulary/containerOf$"
+        "@type": "QuadMatcherComponentValue",
+        "component": "predicate",
+        "valueRegex": "vocabulary/containerOf$"
       },
       "subject": {
         "@type": "TermTemplateQuadComponent",

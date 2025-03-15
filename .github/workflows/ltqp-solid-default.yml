@@ -22,53 +22,46 @@ jobs:
           - default
     runs-on: ubuntu-latest
     steps:
-      - name: Use latest Node version
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: latest
       - name: Enable corepack
         run: corepack enable
-      - name: Ensure consistent line endings
-        run: git config --global core.autocrlf input
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Install dependencies
         run: yarn install --immutable
-      - name: Generate SolidBench dataset and queries
+      - name: Generate dataset and queries
         run: |
           yarn solidbench generate \
-            --cwd $(pwd)/generated \
-            --enhancementConfig ./input/solidbench/enhancer.json \
-            --queryConfig ./input/solidbench/queries.json \
-            --validationConfig ./input/solidbench/validation.json \
-            --fragmentConfig ./input/solidbench/fragmenter-${{ matrix.fragmentation }}.json
-        working-directory: experiments/ltqp-solid-default
-      - name: Prepare Docker setup
+            --cwd ${{ github.workspace }}/experiments/ltqp-solid-default/generated \
+            --enhancementConfig ../input/solidbench/enhancer.json \
+            --queryConfig ../input/solidbench/queries.json \
+            --validationConfig ../input/solidbench/validation.json \
+            --fragmentConfig ../input/solidbench/fragmenter-${{ matrix.fragmentation }}.json
+      - name: Prepare containers
         env:
           COMUNICA_CONFIG: ${{ matrix.engine }}
-        run: docker compose --file ./input/compose.yml create
-        working-directory: experiments/ltqp-solid-default
-      - name: Start Docker setup
+        run: docker compose --file experiments/ltqp-solid-default/input/compose.yml create
+      - name: Start containers
         env:
           COMUNICA_CONFIG: ${{ matrix.engine }}
-        run: docker compose --file ./input/compose.yml start
-        working-directory: experiments/ltqp-solid-default
+        run: docker compose --file experiments/ltqp-solid-default/input/compose.yml start
       - name: Execute queries
         run: |
           yarn sparql-benchmark-runner \
             --endpoint http://localhost:4000/sparql \
-            --queries ./generated/out-queries \
+            --queries experiments/ltqp-solid-default/generated/out-queries \
             --replication 20 \
             --warmup 1 \
             --timeout 150 \
-            --output ./output/${{ matrix.engine }}-${{ matrix.fragmentation }}.csv
-        working-directory: experiments/ltqp-solid-default
-      - name: Stop Docker setup
+            --output experiments/ltqp-solid-default/output/${{ matrix.engine }}-${{ matrix.fragmentation }}.csv
+      - name: Stop containers
         env:
           COMUNICA_CONFIG: ${{ matrix.engine }}
         if: always()
-        run: docker compose --file ./input/compose.yml stop
-        working-directory: experiments/ltqp-solid-default
+        run: docker compose --file experiments/ltqp-solid-default/input/compose.yml stop
       - name: Upload results as artifact
         uses: actions/upload-artifact@v4
         with:

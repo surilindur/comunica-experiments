@@ -2,9 +2,10 @@ services:
   solid:
     image: solidproject/community-server:edge
     environment:
-      CSS_PORT: 3000
-      CSS_LOGGING_LEVEL: info
       CSS_BASE_URL: http://localhost:3000
+      CSS_CONFIG: /tmp/config.json
+      CSS_LOGGING_LEVEL: info
+      CSS_PORT: 3000
       CSS_ROOT_FILE_PATH: /var/cssdata
     healthcheck:
       test: wget --spider http://localhost:3000/pods/
@@ -15,6 +16,7 @@ services:
       - 3000:3000
     restart: unless-stopped
     volumes:
+      - ./solidserver/config.json:/tmp/config.json:ro
       - ../generated/out-fragments/http/localhost_3000:/var/cssdata:ro
   comunica:
     build:

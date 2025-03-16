@@ -12,7 +12,7 @@
     "compose:start": "docker compose --file ./input/compose.yml start",
     "compose:stop": "docker compose --file ./input/compose.yml stop",
     "queries:prepare": "rm -f ./generated/out-queries/interactive-complex*",
-    "queries:execute": "yarn sparql-benchmark-runner --endpoint http://localhost:3000/sparql --queries ./generated/out-queries --replication 1 --warmup 0 --timeout 150 --output ./output/${COMUNICA_CONFIG}-${FRAGMENTER_CONFIG}.csv",
+    "queries:execute": "yarn sparql-benchmark-runner --endpoint http://localhost:4000/sparql --queries ./generated/out-queries --replication 10 --warmup 1 --timeout 150 --output ./output/${COMUNICA_CONFIG}-${FRAGMENTER_CONFIG}.csv",
     "dataset:create": "yarn solidbench generate --cwd $(pwd)/generated --enhancementConfig ../input/solidbench/enhancer.json --queryConfig ../input/solidbench/queries.json --validationConfig ../input/solidbench/validation.json --fragmentConfig ../input/solidbench/fragmenter-${FRAGMENTER_CONFIG}.json",
     "dataset:remove": "rm -rf ./generated/out-*"
   }

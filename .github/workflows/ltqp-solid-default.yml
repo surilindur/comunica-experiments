@@ -62,6 +62,11 @@ jobs:
         env:
           COMUNICA_CONFIG: ${{ matrix.engine }}
         working-directory: experiments/ltqp-solid-default
+      - name: Save Docker logs for containers
+        run: |
+          docker container logs solidserver > output/solidserver.log
+          docker container logs comunica > output/comunica.log
+        working-directory: experiments/ltqp-solid-default
       - name: Upload results as artifact
         uses: actions/upload-artifact@v4
         with:

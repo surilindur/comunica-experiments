@@ -5,33 +5,33 @@ services:
       network: host
     container_name: solidserver
     environment:
-      CSS_BASE_URL: http://solidserver
+      CSS_BASE_URL: http://localhost:3000
       CSS_CONFIG: /tmp/config.json
       CSS_LOGGING_LEVEL: info
-      CSS_PORT: 80
+      CSS_PORT: 3000
       CSS_ROOT_FILE_PATH: /var/cssdata
     healthcheck:
-      test: curl -I http://solidserver/pods/
+      test: curl -I http://localhost:3000/pods/
       interval: 10s
       timeout: 1s
       retries: 3
+    network_mode: host
     restart: unless-stopped
     volumes:
       - ./solidserver/config.json:/tmp/config.json:ro
-      - ../generated/out-fragments/http/solidserver:/var/cssdata:ro
+      - ../generated/out-fragments/http/localhost_3000:/var/cssdata:ro
   comunica:
     build:
       context: ./comunica
       network: host
-    command: --freshWorker --idp void --context /tmp/context.json --timeout 120
+    command: --freshWorker --idp void --context /tmp/context.json --port 4000 --timeout 120
     container_name: comunica
     depends_on:
       solidserver:
         condition: service_healthy
     environment:
       COMUNICA_CONFIG: /tmp/config.json
-    ports:
-      - 3000:3000
+    network_mode: host
     restart: unless-stopped
     volumes:
       - ./comunica/context.json:/tmp/context.json:ro

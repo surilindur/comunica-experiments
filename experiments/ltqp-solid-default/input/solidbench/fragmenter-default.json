@@ -28,27 +28,27 @@
     {
       "@type": "QuadTransformerBlankToNamed",
       "searchRegex": "^(b[0-9]*_tagclass)",
-      "replacementString": "http://localhost:3000/www.ldbc.eu/tagclass/$1"
+      "replacementString": "http://www-ldbc-eu/tagclass/$1"
     },
     {
       "@type": "QuadTransformerReplaceIri",
       "searchRegex": "^http://www.ldbc.eu",
-      "replacementString": "http://localhost:3000/www.ldbc.eu"
+      "replacementString": "http://www-ldbc-eu"
     },
     {
       "@type": "QuadTransformerReplaceIri",
       "searchRegex": "^http://dbpedia.org",
-      "replacementString": "http://localhost:3000/dbpedia.org"
+      "replacementString": "http://dbpedia-org"
     },
     {
       "@type": "QuadTransformerReplaceIri",
       "searchRegex": "^http://www.w3.org/2002/07/owl",
-      "replacementString": "http://localhost:3000/www.w3.org/2002/07/owl"
+      "replacementString": "http://solidpods-local/owl"
     },
     {
       "@type": "QuadTransformerReplaceIri",
-      "searchRegex": "^http://localhost:3000/www.ldbc.eu/ldbc_socialnet/1.0/data/pers([0-9]*)$",
-      "replacementString": "http://localhost:3000/pods/$1/profile/card#me"
+      "searchRegex": "^http://www-ldbc-eu/ldbc_socialnet/1.0/data/pers([0-9]*)$",
+      "replacementString": "http://solidpods-local/pods/$1/profile/card#me"
     },
     {
       "@type": "QuadTransformerRemapResourceIdentifier",
@@ -106,8 +106,8 @@
                   "valueRegex": "vocabulary/hasCreator$"
                 },
                 "identifier": "object",
-                "predicate": "http://localhost:3000/internal/postsFragmentation",
-                "link": "http://localhost:3000/internal/FragmentationPerResource"
+                "predicate": "http://solidpods-local/internal/postsFragmentation",
+                "link": "http://solidpods-local/internal/FragmentationPerResource"
               }
             },
             {
@@ -152,8 +152,8 @@
                   "valueRegex": "vocabulary/hasCreator$"
                 },
                 "identifier": "object",
-                "predicate": "http://localhost:3000/internal/commentsFragmentation",
-                "link": "http://localhost:3000/internal/FragmentationPerResource"
+                "predicate": "http://solidpods-local/internal/commentsFragmentation",
+                "link": "http://solidpods-local/internal/FragmentationPerResource"
               }
             },
             {
@@ -194,9 +194,9 @@
     "sinks": [
       {
         "@type": "QuadSinkFile",
-        "log": true,
-        "outputFormat": "application/n-quads",
-        "fileExtension": ".nq",
+        "log": false,
+        "outputFormat": "application/n-triples",
+        "fileExtension": ".nt",
         "iriToPath": {
           "http://": "out-fragments/http/"
         }

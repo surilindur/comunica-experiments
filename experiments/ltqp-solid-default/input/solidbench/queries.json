@@ -6,11 +6,8 @@
   "providers": [
     {
       "@type": "QueryTemplateProvider",
-      "templateFilePath": {
-        "@id": "urn:variables:query-templates:interactive-short-1.sparql",
-        "@type": "Variable"
-      },
-      "destinationFilePath": "out-queries/interactive-short-1.sparql",
+      "templateFilePath": "../input/solidbench-queries/interactive-short-1.rq",
+      "destinationFilePath": "out-queries/interactive-short-1.rq",
       "variables": [
         {
           "@type": "VariableTemplateNamedNode",
@@ -26,11 +23,8 @@
     },
     {
       "@type": "QueryTemplateProvider",
-      "templateFilePath": {
-        "@id": "urn:variables:query-templates:interactive-short-2.sparql",
-        "@type": "Variable"
-      },
-      "destinationFilePath": "out-queries/interactive-short-2.sparql",
+      "templateFilePath": "../input/solidbench-queries/interactive-short-2.rq",
+      "destinationFilePath": "out-queries/interactive-short-2.rq",
       "variables": [
         {
           "@type": "VariableTemplateNamedNode",
@@ -43,11 +37,8 @@
     },
     {
       "@type": "QueryTemplateProvider",
-      "templateFilePath": {
-        "@id": "urn:variables:query-templates:interactive-short-3.sparql",
-        "@type": "Variable"
-      },
-      "destinationFilePath": "out-queries/interactive-short-3.sparql",
+      "templateFilePath": "../input/solidbench-queries/interactive-short-3.rq",
+      "destinationFilePath": "out-queries/interactive-short-3.rq",
       "variables": [
         {
           "@type": "VariableTemplateNamedNode",
@@ -60,11 +51,8 @@
     },
     {
       "@type": "QueryTemplateProvider",
-      "templateFilePath": {
-        "@id": "urn:variables:query-templates:interactive-short-4.sparql",
-        "@type": "Variable"
-      },
-      "destinationFilePath": "out-queries/interactive-short-4.sparql",
+      "templateFilePath": "../input/solidbench-queries/interactive-short-4.rq",
+      "destinationFilePath": "out-queries/interactive-short-4.rq",
       "variables": [
         {
           "@type": "VariableTemplateNamedNode",
@@ -94,11 +82,8 @@
     },
     {
       "@type": "QueryTemplateProvider",
-      "templateFilePath": {
-        "@id": "urn:variables:query-templates:interactive-short-5.sparql",
-        "@type": "Variable"
-      },
-      "destinationFilePath": "out-queries/interactive-short-5.sparql",
+      "templateFilePath": "../input/solidbench-queries/interactive-short-5.rq",
+      "destinationFilePath": "out-queries/interactive-short-5.rq",
       "variables": [
         {
           "@type": "VariableTemplateNamedNode",
@@ -111,11 +96,8 @@
     },
     {
       "@type": "QueryTemplateProvider",
-      "templateFilePath": {
-        "@id": "urn:variables:query-templates:interactive-short-6.sparql",
-        "@type": "Variable"
-      },
-      "destinationFilePath": "out-queries/interactive-short-6.sparql",
+      "templateFilePath": "../input/solidbench-queries/interactive-short-6.rq",
+      "destinationFilePath": "out-queries/interactive-short-6.rq",
       "variables": [
         {
           "@type": "VariableTemplateNamedNode",
@@ -128,11 +110,8 @@
     },
     {
       "@type": "QueryTemplateProvider",
-      "templateFilePath": {
-        "@id": "urn:variables:query-templates:interactive-short-7.sparql",
-        "@type": "Variable"
-      },
-      "destinationFilePath": "out-queries/interactive-short-7.sparql",
+      "templateFilePath": "../input/solidbench-queries/interactive-short-7.rq",
+      "destinationFilePath": "out-queries/interactive-short-7.rq",
       "variables": [
         {
           "@type": "VariableTemplateNamedNode",
@@ -145,11 +124,8 @@
     },
     {
       "@type": "QueryTemplateProvider",
-      "templateFilePath": {
-        "@id": "urn:variables:query-templates:interactive-complex-1.sparql",
-        "@type": "Variable"
-      },
-      "destinationFilePath": "out-queries/interactive-complex-1.sparql",
+      "templateFilePath": "../input/solidbench-queries/interactive-complex-1.rq",
+      "destinationFilePath": "out-queries/interactive-complex-1.rq",
       "variables": [
         {
           "@type": "VariableTemplateNamedNode",
@@ -172,7 +148,7 @@
               "@id": "urn:sparql-query-parameter-instantiator:valueTransformerPersonIdToIri",
               "@type": "ValueTransformerReplaceIri",
               "searchRegex": "^(.*)$",
-              "replacementString": "http://localhost:3000/pods/$1/profile/card#me"
+              "replacementString": "http://solidpods-local/pods/$1/profile/card#me"
             }
           ]
         },
@@ -190,11 +166,8 @@
     },
     {
       "@type": "QueryTemplateProvider",
-      "templateFilePath": {
-        "@id": "urn:variables:query-templates:interactive-complex-2.sparql",
-        "@type": "Variable"
-      },
-      "destinationFilePath": "out-queries/interactive-complex-2.sparql",
+      "templateFilePath": "../input/solidbench-queries/interactive-complex-2.rq",
+      "destinationFilePath": "out-queries/interactive-complex-2.rq",
       "variables": [
         {
           "@type": "VariableTemplateNamedNode",
@@ -228,11 +201,8 @@
     },
     {
       "@type": "QueryTemplateProvider",
-      "templateFilePath": {
-        "@id": "urn:variables:query-templates:interactive-complex-3.sparql",
-        "@type": "Variable"
-      },
-      "destinationFilePath": "out-queries/interactive-complex-3.sparql",
+      "templateFilePath": "../input/solidbench-queries/interactive-complex-3.rq",
+      "destinationFilePath": "out-queries/interactive-complex-3.rq",
       "variables": [
         {
           "@type": "VariableTemplateNamedNode",
@@ -296,11 +266,8 @@
     },
     {
       "@type": "QueryTemplateProvider",
-      "templateFilePath": {
-        "@id": "urn:variables:query-templates:interactive-complex-4.sparql",
-        "@type": "Variable"
-      },
-      "destinationFilePath": "out-queries/interactive-complex-4.sparql",
+      "templateFilePath": "../input/solidbench-queries/interactive-complex-4.rq",
+      "destinationFilePath": "out-queries/interactive-complex-4.rq",
       "variables": [
         {
           "@type": "VariableTemplateNamedNode",
@@ -344,11 +311,8 @@
     },
     {
       "@type": "QueryTemplateProvider",
-      "templateFilePath": {
-        "@id": "urn:variables:query-templates:interactive-complex-5.sparql",
-        "@type": "Variable"
-      },
-      "destinationFilePath": "out-queries/interactive-complex-5.sparql",
+      "templateFilePath": "../input/solidbench-queries/interactive-complex-5.rq",
+      "destinationFilePath": "out-queries/interactive-complex-5.rq",
       "variables": [
         {
           "@type": "VariableTemplateNamedNode",
@@ -382,11 +346,8 @@
     },
     {
       "@type": "QueryTemplateProvider",
-      "templateFilePath": {
-        "@id": "urn:variables:query-templates:interactive-complex-6.sparql",
-        "@type": "Variable"
-      },
-      "destinationFilePath": "out-queries/interactive-complex-6.sparql",
+      "templateFilePath": "../input/solidbench-queries/interactive-complex-6.rq",
+      "destinationFilePath": "out-queries/interactive-complex-6.rq",
       "variables": [
         {
           "@type": "VariableTemplateNamedNode",
@@ -420,11 +381,8 @@
     },
     {
       "@type": "QueryTemplateProvider",
-      "templateFilePath": {
-        "@id": "urn:variables:query-templates:interactive-complex-7.sparql",
-        "@type": "Variable"
-      },
-      "destinationFilePath": "out-queries/interactive-complex-7.sparql",
+      "templateFilePath": "../input/solidbench-queries/interactive-complex-7.rq",
+      "destinationFilePath": "out-queries/interactive-complex-7.rq",
       "variables": [
         {
           "@type": "VariableTemplateNamedNode",
@@ -448,11 +406,8 @@
     },
     {
       "@type": "QueryTemplateProvider",
-      "templateFilePath": {
-        "@id": "urn:variables:query-templates:interactive-complex-8.sparql",
-        "@type": "Variable"
-      },
-      "destinationFilePath": "out-queries/interactive-complex-8.sparql",
+      "templateFilePath": "../input/solidbench-queries/interactive-complex-8.rq",
+      "destinationFilePath": "out-queries/interactive-complex-8.rq",
       "variables": [
         {
           "@type": "VariableTemplateNamedNode",
@@ -476,11 +431,8 @@
     },
     {
       "@type": "QueryTemplateProvider",
-      "templateFilePath": {
-        "@id": "urn:variables:query-templates:interactive-complex-9.sparql",
-        "@type": "Variable"
-      },
-      "destinationFilePath": "out-queries/interactive-complex-9.sparql",
+      "templateFilePath": "../input/solidbench-queries/interactive-complex-9.rq",
+      "destinationFilePath": "out-queries/interactive-complex-9.rq",
       "variables": [
         {
           "@type": "VariableTemplateNamedNode",
@@ -514,11 +466,8 @@
     },
     {
       "@type": "QueryTemplateProvider",
-      "templateFilePath": {
-        "@id": "urn:variables:query-templates:interactive-complex-10.sparql",
-        "@type": "Variable"
-      },
-      "destinationFilePath": "out-queries/interactive-complex-10.sparql",
+      "templateFilePath": "../input/solidbench-queries/interactive-complex-10.rq",
+      "destinationFilePath": "out-queries/interactive-complex-10.rq",
       "variables": [
         {
           "@type": "VariableTemplateNamedNode",
@@ -553,11 +502,8 @@
     },
     {
       "@type": "QueryTemplateProvider",
-      "templateFilePath": {
-        "@id": "urn:variables:query-templates:interactive-complex-11.sparql",
-        "@type": "Variable"
-      },
-      "destinationFilePath": "out-queries/interactive-complex-11.sparql",
+      "templateFilePath": "../input/solidbench-queries/interactive-complex-11.rq",
+      "destinationFilePath": "out-queries/interactive-complex-11.rq",
       "variables": [
         {
           "@type": "VariableTemplateNamedNode",
@@ -602,11 +548,8 @@
     },
     {
       "@type": "QueryTemplateProvider",
-      "templateFilePath": {
-        "@id": "urn:variables:query-templates:interactive-complex-12.sparql",
-        "@type": "Variable"
-      },
-      "destinationFilePath": "out-queries/interactive-complex-12.sparql",
+      "templateFilePath": "../input/solidbench-queries/interactive-complex-12.rq",
+      "destinationFilePath": "out-queries/interactive-complex-12.rq",
       "variables": [
         {
           "@type": "VariableTemplateNamedNode",
@@ -640,11 +583,8 @@
     },
     {
       "@type": "QueryTemplateProvider",
-      "templateFilePath": {
-        "@id": "urn:variables:query-templates:interactive-discover-1.sparql",
-        "@type": "Variable"
-      },
-      "destinationFilePath": "out-queries/interactive-discover-1.sparql",
+      "templateFilePath": "../input/solidbench-queries/interactive-discover-1.rq",
+      "destinationFilePath": "out-queries/interactive-discover-1.rq",
       "variables": [
         {
           "@type": "VariableTemplateNamedNode",
@@ -657,11 +597,8 @@
     },
     {
       "@type": "QueryTemplateProvider",
-      "templateFilePath": {
-        "@id": "urn:variables:query-templates:interactive-discover-2.sparql",
-        "@type": "Variable"
-      },
-      "destinationFilePath": "out-queries/interactive-discover-2.sparql",
+      "templateFilePath": "../input/solidbench-queries/interactive-discover-2.rq",
+      "destinationFilePath": "out-queries/interactive-discover-2.rq",
       "variables": [
         {
           "@type": "VariableTemplateNamedNode",
@@ -674,11 +611,8 @@
     },
     {
       "@type": "QueryTemplateProvider",
-      "templateFilePath": {
-        "@id": "urn:variables:query-templates:interactive-discover-3.sparql",
-        "@type": "Variable"
-      },
-      "destinationFilePath": "out-queries/interactive-discover-3.sparql",
+      "templateFilePath": "../input/solidbench-queries/interactive-discover-3.rq",
+      "destinationFilePath": "out-queries/interactive-discover-3.rq",
       "variables": [
         {
           "@type": "VariableTemplateNamedNode",
@@ -691,11 +625,8 @@
     },
     {
       "@type": "QueryTemplateProvider",
-      "templateFilePath": {
-        "@id": "urn:variables:query-templates:interactive-discover-4.sparql",
-        "@type": "Variable"
-      },
-      "destinationFilePath": "out-queries/interactive-discover-4.sparql",
+      "templateFilePath": "../input/solidbench-queries/interactive-discover-4.rq",
+      "destinationFilePath": "out-queries/interactive-discover-4.rq",
       "variables": [
         {
           "@type": "VariableTemplateNamedNode",
@@ -708,11 +639,8 @@
     },
     {
       "@type": "QueryTemplateProvider",
-      "templateFilePath": {
-        "@id": "urn:variables:query-templates:interactive-discover-5.sparql",
-        "@type": "Variable"
-      },
-      "destinationFilePath": "out-queries/interactive-discover-5.sparql",
+      "templateFilePath": "../input/solidbench-queries/interactive-discover-5.rq",
+      "destinationFilePath": "out-queries/interactive-discover-5.rq",
       "variables": [
         {
           "@type": "VariableTemplateNamedNode",
@@ -725,11 +653,8 @@
     },
     {
       "@type": "QueryTemplateProvider",
-      "templateFilePath": {
-        "@id": "urn:variables:query-templates:interactive-discover-6.sparql",
-        "@type": "Variable"
-      },
-      "destinationFilePath": "out-queries/interactive-discover-6.sparql",
+      "templateFilePath": "../input/solidbench-queries/interactive-discover-6.rq",
+      "destinationFilePath": "out-queries/interactive-discover-6.rq",
       "variables": [
         {
           "@type": "VariableTemplateNamedNode",
@@ -742,11 +667,8 @@
     },
     {
       "@type": "QueryTemplateProvider",
-      "templateFilePath": {
-        "@id": "urn:variables:query-templates:interactive-discover-7.sparql",
-        "@type": "Variable"
-      },
-      "destinationFilePath": "out-queries/interactive-discover-7.sparql",
+      "templateFilePath": "../input/solidbench-queries/interactive-discover-7.rq",
+      "destinationFilePath": "out-queries/interactive-discover-7.rq",
       "variables": [
         {
           "@type": "VariableTemplateNamedNode",
@@ -759,11 +681,8 @@
     },
     {
       "@type": "QueryTemplateProvider",
-      "templateFilePath": {
-        "@id": "urn:variables:query-templates:interactive-discover-8.sparql",
-        "@type": "Variable"
-      },
-      "destinationFilePath": "out-queries/interactive-discover-8.sparql",
+      "templateFilePath": "../input/solidbench-queries/interactive-discover-8.rq",
+      "destinationFilePath": "out-queries/interactive-discover-8.rq",
       "variables": [
         {
           "@type": "VariableTemplateNamedNode",

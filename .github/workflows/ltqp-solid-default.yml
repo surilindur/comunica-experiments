@@ -18,7 +18,7 @@ jobs:
       matrix:
         engine:
           - default
-        fragmentation:
+        solidbench:
           - default
     runs-on: ubuntu-latest
     steps:
@@ -35,15 +35,12 @@ jobs:
       - name: Generate dataset and queries
         run: yarn run dataset:create
         env:
-          FRAGMENTER_CONFIG: ${{ matrix.fragmentation }}
+          SOLIDBENCH_CONFIG: ${{ matrix.solidbench }}
         working-directory: experiments/ltqp-solid-default
       - name: Prepare containers
         run: yarn run compose:create
         env:
           COMUNICA_CONFIG: ${{ matrix.engine }}
-        working-directory: experiments/ltqp-solid-default
-      - name: Prepare queries
-        run: yarn run queries:prepare
         working-directory: experiments/ltqp-solid-default
       - name: Start containers
         run: yarn run compose:start
@@ -54,7 +51,7 @@ jobs:
         run: yarn run queries:execute
         env:
           COMUNICA_CONFIG: ${{ matrix.engine }}
-          FRAGMENTER_CONFIG: ${{ matrix.fragmentation }}
+          SOLIDBENCH_CONFIG: ${{ matrix.solidbench }}
         working-directory: experiments/ltqp-solid-default
       - name: Stop containers
         if: always()
@@ -64,12 +61,14 @@ jobs:
         working-directory: experiments/ltqp-solid-default
       - name: Save Docker logs for containers
         run: |
-          docker container logs solidserver > output/solidserver.log
-          docker container logs comunica > output/comunica.log
+          docker container logs comunica >& output/comunica.log
+          docker container logs solidpods-local >& output/solidpods-local.log
+          docker container logs www-ldbc-eu >& output/www-ldbc-eu.log
+          docker container logs dbpedia-org >& output/dbpedia-org.log
         working-directory: experiments/ltqp-solid-default
       - name: Upload results as artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ matrix.engine }}-${{ matrix.fragmentation }}
+          name: output-${{ matrix.engine }}-${{ matrix.solidbench }}
           path: experiments/ltqp-solid-default/output
           if-no-files-found: error

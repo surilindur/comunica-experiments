@@ -6,14 +6,10 @@
     "sparql-benchmark-runner": "^5.0.0"
   },
   "scripts": {
-    "cleanup": "yarn run compose:remove && yarn run dataset:remove",
-    "compose:create": "docker compose --file ./input/compose.yml create",
-    "compose:remove": "docker compose --file ./input/compose.yml rm",
-    "compose:start": "docker compose --file ./input/compose.yml start",
-    "compose:stop": "docker compose --file ./input/compose.yml stop",
-    "queries:prepare": "rm -f ./generated/out-queries/interactive-complex*",
-    "queries:execute": "yarn sparql-benchmark-runner --endpoint http://localhost:4000/sparql --queries ./generated/out-queries --replication 1 --warmup 0 --timeout 70 --output ./output/${COMUNICA_CONFIG}-${FRAGMENTER_CONFIG}.csv",
-    "dataset:create": "yarn solidbench generate --cwd $(pwd)/generated --enhancementConfig ../input/solidbench/enhancer.json --queryConfig ../input/solidbench/queries.json --validationConfig ../input/solidbench/validation.json --fragmentConfig ../input/solidbench/fragmenter-${FRAGMENTER_CONFIG}.json",
-    "dataset:remove": "rm -rf ./generated/out-*"
+    "compose:create": "docker compose create",
+    "compose:start": "docker compose start",
+    "compose:stop": "docker compose stop",
+    "dataset:create": "yarn solidbench generate --cwd $(pwd)/generated --enhancementConfig ../input/solidbench/enhancer.json --queryConfig ../input/solidbench/queries.json --validationConfig ../input/solidbench/validation.json --fragmentConfig ../input/solidbench/fragmenter-${SOLIDBENCH_CONFIG}.json",
+    "queries:execute": "yarn sparql-benchmark-runner --endpoint http://localhost:3000/sparql --queries ./generated/out-queries --replication 1 --warmup 0 --timeout 40 --output ./output/query-times-${COMUNICA_CONFIG}-${SOLIDBENCH_CONFIG}.csv"
   }
 }

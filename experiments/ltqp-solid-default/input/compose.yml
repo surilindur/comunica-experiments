@@ -24,7 +24,7 @@ services:
     build:
       context: ./comunica
       network: host
-    command: --freshWorker --idp void --context /tmp/context.json --port 4000 --timeout 120
+    command: --freshWorker --idp void --context /tmp/context.json --port 4000 --timeout 60
     container_name: comunica
     depends_on:
       solidserver:

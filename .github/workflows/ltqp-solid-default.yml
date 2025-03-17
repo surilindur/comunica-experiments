@@ -49,6 +49,9 @@ jobs:
         env:
           COMUNICA_CONFIG: ${{ matrix.engine }}
         working-directory: experiments/ltqp-solid-default
+      - name: Prepare queries
+        run: yarn run queries:prepare
+        working-directory: experiments/ltqp-solid-default
       - name: Execute queries
         run: yarn run queries:execute
         env:

@@ -1,7 +1,7 @@
 FROM node:alpine
 
 # Comunica fork with fixed SPARQL endpoint implementation
-ADD https://github.com/surilindur/comunica.git#feat/sparql-endpoint-rewrite /opt/comunica
+ADD https://github.com/surilindur/comunica.git#ef0b08c6d83615594472eac8f9668d208a555c49 /opt/comunica
 WORKDIR /opt/comunica
 RUN yarn install --ignore-engines
 

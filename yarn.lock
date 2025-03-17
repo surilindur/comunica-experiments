@@ -5689,6 +5689,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"ltqp-solid-hybrid@workspace:experiments/ltqp-solid-hybrid":
+  version: 0.0.0-use.local
+  resolution: "ltqp-solid-hybrid@workspace:experiments/ltqp-solid-hybrid"
+  dependencies:
+    solidbench: "npm:^2.0.0"
+    sparql-benchmark-runner: "npm:^5.0.0"
+  languageName: unknown
+  linkType: soft
+
 "ltqp-solid-join-restart@workspace:experiments/ltqp-solid-join-restart":
   version: 0.0.0-use.local
   resolution: "ltqp-solid-join-restart@workspace:experiments/ltqp-solid-join-restart"
@@ -5994,13 +6003,13 @@ __metadata:
   linkType: hard
 
 "n3@npm:^1.0.0, n3@npm:^1.16.2, n3@npm:^1.16.3, n3@npm:^1.17.0, n3@npm:^1.17.1, n3@npm:^1.6.3":
-  version: 1.24.0
-  resolution: "n3@npm:1.24.0"
+  version: 1.24.2
+  resolution: "n3@npm:1.24.2"
   dependencies:
     buffer: "npm:^6.0.3"
     queue-microtask: "npm:^1.1.2"
     readable-stream: "npm:^4.0.0"
-  checksum: 10/bd987c55e740d53f521fcf129f8d36cf7a3c163a06ad55c7a1b7506df5937aa0341b8f627c977a256d730bf9f59be3e2eb2d3494139848079d16c655935b25e7
+  checksum: 10/618470455af24120234fb9dcb3ddd7c5d59c08a1f34082ac4d4920dee8c025e002980363494e850e9164a6c814076a2903ee316a7f7ed24cb7ffffab9b7a308c
   languageName: node
   linkType: hard
 
@@ -6014,20 +6023,20 @@ __metadata:
   linkType: hard
 
 "nanoid@npm:^3.1.28":
-  version: 3.3.9
-  resolution: "nanoid@npm:3.3.9"
+  version: 3.3.10
+  resolution: "nanoid@npm:3.3.10"
   bin:
     nanoid: bin/nanoid.cjs
-  checksum: 10/80ec0f2f7fe0f472f459fbeab6afd88f6739e3da94cf2c2307bc83ef0203ec3b72e6113a9e3196ac4be79540440184136ee96e77c10a965e37d8347f43b265fa
+  checksum: 10/c3d706bbece94e913ecb3a1b17db988decce290984fbacab9b6f279eb87b0882322a00db3409e5fb6e8eb181303eba856b1ae8296cef90d5ccc05128c846e6bb
   languageName: node
   linkType: hard
 
 "nanoid@npm:^5.0.9":
-  version: 5.1.3
-  resolution: "nanoid@npm:5.1.3"
+  version: 5.1.4
+  resolution: "nanoid@npm:5.1.4"
   bin:
     nanoid: bin/nanoid.js
-  checksum: 10/e294f3e6c39d75f3eb85b74fb2edfd8375c02bda5ddb97cb7af010b07bf39f314fcbc7765235ef432c856e435cd6bb67d4ef73e1867367231b1f92bcb63830b9
+  checksum: 10/44da5de98edc495da2e90015d093cf4d66b4f15c59844a3312d5484453b63021bf61237816a74773c29c5d6a942698f17751a3851a7238f55dd2af9de7715abc
   languageName: node
   linkType: hard
 
@@ -6504,9 +6513,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rdf-dataset-fragmenter@surilindur/rdf-dataset-fragmenter.js#feat/quadmatchertermvalue":
+"rdf-dataset-fragmenter@surilindur/rdf-dataset-fragmenter.js.git#feat/quadmatchertermvalue":
   version: 2.8.0
-  resolution: "rdf-dataset-fragmenter@https://github.com/surilindur/rdf-dataset-fragmenter.js.git#commit=05cbf308c382b502481ccb6076cccc2bd715ef8e"
+  resolution: "rdf-dataset-fragmenter@https://github.com/surilindur/rdf-dataset-fragmenter.js.git#commit=edee4d88b065bd69ded730e71caa4403573d6a24"
   dependencies:
     "@rdfjs/types": "npm:*"
     "@types/async-lock": "npm:^1.4.0"
@@ -6525,7 +6534,7 @@ __metadata:
     stream-to-string: "npm:^1.0.0"
   bin:
     rdf-dataset-fragmenter: bin/runner.js
-  checksum: 10/50a3cbea126201b9ef9710f242671c679793acc5f18498db945189102eb98764d9e77d8ba6605e08ad9543c8a98e6704bdae7552f5046235414588d5a4bf960f
+  checksum: 10/7de12b2199019f252fd037daad905cd44ffc9e397de22db152e130f21ffe9a0592cb805816e76bf1c76b45e57eee9355b77b03074169020b6f696c74ee048ea9
   languageName: node
   linkType: hard
 

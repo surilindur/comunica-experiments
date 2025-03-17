@@ -6,6 +6,6 @@
   ],
   "resolutions": {
     "componentsjs": "6.3.0",
-    "rdf-dataset-fragmenter": "surilindur/rdf-dataset-fragmenter.js#feat/quadmatchertermvalue"
+    "rdf-dataset-fragmenter": "surilindur/rdf-dataset-fragmenter.js.git#feat/quadmatchertermvalue"
   }
 }

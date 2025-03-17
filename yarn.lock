@@ -5685,7 +5685,7 @@ __metadata:
   resolution: "ltqp-solid-default@workspace:experiments/ltqp-solid-default"
   dependencies:
     solidbench: "npm:^2.0.0"
-    sparql-benchmark-runner: "npm:^5.0.0"
+    sparql-benchmark-runner: "npm:4.3.0"
   languageName: unknown
   linkType: soft
 
@@ -5694,7 +5694,7 @@ __metadata:
   resolution: "ltqp-solid-hybrid@workspace:experiments/ltqp-solid-hybrid"
   dependencies:
     solidbench: "npm:^2.0.0"
-    sparql-benchmark-runner: "npm:^5.0.0"
+    sparql-benchmark-runner: "npm:4.3.0"
   languageName: unknown
   linkType: soft
 
@@ -7238,6 +7238,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"sparql-benchmark-runner@npm:4.3.0":
+  version: 4.3.0
+  resolution: "sparql-benchmark-runner@npm:4.3.0"
+  dependencies:
+    fetch-sparql-endpoint: "npm:^5.1.0"
+    rdf-string: "npm:^1.0.0"
+    yargs: "npm:^17.0.0"
+  bin:
+    sparql-benchmark-runner: bin/sparql-benchmark-runner
+  checksum: 10/4a2cc522a8d2959657aa557a45a977cb91f3b6b6f7a70907d4ad5cba7cb4611b6ade6440c343d44a80b83d4bd14bac842302ca16299402ec7838e92fc2a5a608
+  languageName: node
+  linkType: hard
+
 "sparql-benchmark-runner@npm:^4.2.0":
   version: 4.5.0
   resolution: "sparql-benchmark-runner@npm:4.5.0"
@@ -7248,19 +7261,6 @@ __metadata:
   bin:
     sparql-benchmark-runner: bin/sparql-benchmark-runner
   checksum: 10/377a366eb3fe5030c7a27756cf308bd4a1fa14a54f21fb7322e899cae164be40993b684c8484844a72cce3435432f69a23bf7ad053eb66f087b5d1154ce096c8
-  languageName: node
-  linkType: hard
-
-"sparql-benchmark-runner@npm:^5.0.0":
-  version: 5.0.0
-  resolution: "sparql-benchmark-runner@npm:5.0.0"
-  dependencies:
-    fetch-sparql-endpoint: "npm:^5.1.0"
-    rdf-string: "npm:^1.0.0"
-    yargs: "npm:^17.0.0"
-  bin:
-    sparql-benchmark-runner: bin/sparql-benchmark-runner
-  checksum: 10/f8dfc158b5553aa5c4ab4dc06d2a41dccd0beb4a7bfc685211b4c4685037e379042c9424ee733ba53694f2d9de5e5673c593d0f1d653a3d33c7cdf0058dbc74b
   languageName: node
   linkType: hard
 

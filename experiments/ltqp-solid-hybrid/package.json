@@ -3,7 +3,7 @@
   "private": true,
   "dependencies": {
     "solidbench": "^2.0.0",
-    "sparql-benchmark-runner": "^5.0.0"
+    "sparql-benchmark-runner": "4.3.0"
   },
   "scripts": {
     "compose:create": "docker compose create",

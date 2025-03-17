@@ -43,6 +43,9 @@ jobs:
         env:
           SOLIDBENCH_CONFIG: ${{ matrix.solidbench }}
         working-directory: ${{ env.EXPERIMENT_PATH }}
+      - name: Prepare queries
+        run: yarn run queries:prepare
+        working-directory: ${{ env.EXPERIMENT_PATH }}
       - name: Prepare containers
         run: yarn run compose:create
         env:
@@ -52,9 +55,6 @@ jobs:
         run: yarn run compose:start
         env:
           COMUNICA_CONFIG: ${{ matrix.engine }}
-        working-directory: ${{ env.EXPERIMENT_PATH }}
-      - name: Prepare queries
-        run: yarn run queries:prepare
         working-directory: ${{ env.EXPERIMENT_PATH }}
       - name: Execute queries
         run: yarn run queries:execute

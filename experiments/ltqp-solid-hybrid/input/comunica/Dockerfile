@@ -4,7 +4,7 @@ FROM node:alpine
 RUN apk add jq
 
 # Comunica fork with fixed SPARQL endpoint implementation
-ADD https://github.com/surilindur/comunica.git#b715c7194009f6a135aacfa50ba45b269a7560f2 /opt/comunica
+ADD https://github.com/surilindur/comunica.git#4c981221e657e42b884a9a58ffeda480019d0be9 /opt/comunica
 WORKDIR /opt/comunica
 RUN yarn install --ignore-engines
 

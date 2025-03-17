@@ -77,7 +77,7 @@ services:
     build:
       context: ./input/comunica
       network: host
-    command: --freshWorker --idp void --context /tmp/context.json --port 3000 --timeout 60
+    command: --invalidateCache --idp void --context /tmp/context.json --port 3000 --timeout 60
     container_name: comunica
     depends_on:
       solidpods-local:

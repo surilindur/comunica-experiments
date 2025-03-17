@@ -21,11 +21,11 @@ jobs:
         engine:
           - default
         solidbench:
-          - 000
-          - 025
-          - 050
-          - 075
-          - 100
+          - '000'
+          - '025'
+          - '050'
+          - '075'
+          - '100'
     runs-on: ubuntu-latest
     steps:
       - name: Setup Node

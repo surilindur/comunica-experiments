@@ -1,11 +1,5 @@
-FROM node:alpine
+FROM comunica/query-sparql-link-traversal-solid:dev
 
-ADD https://github.com/comunica/comunica-feature-link-traversal.git#master /opt/comunica-link-traversal
+ENV NODE_OPTIONS=--max-old-space-size=8192
 
-WORKDIR /opt/comunica-link-traversal
-
-RUN yarn install --ignore-engines
-
-ENTRYPOINT [ "node", "--max-old-space-size", "8192", "engines/query-sparql-link-traversal-solid/bin/http.js" ]
-
-CMD [ "--help" ]
+ENTRYPOINT [ "node", "./bin/http.js" ]

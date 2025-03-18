@@ -28,27 +28,27 @@
     {
       "@type": "QuadTransformerBlankToNamed",
       "searchRegex": "^(b[0-9]*_tagclass)",
-      "replacementString": "http://www-ldbc-eu/tagclass/$1"
+      "replacementString": "http://localhost:3100/tagclass/$1"
     },
     {
       "@type": "QuadTransformerReplaceIri",
       "searchRegex": "^http://www.ldbc.eu",
-      "replacementString": "http://www-ldbc-eu"
+      "replacementString": "http://localhost:3100"
     },
     {
       "@type": "QuadTransformerReplaceIri",
       "searchRegex": "^http://dbpedia.org",
-      "replacementString": "http://dbpedia-org"
+      "replacementString": "http://localhost:3200"
     },
     {
       "@type": "QuadTransformerReplaceIri",
       "searchRegex": "^http://www.w3.org/2002/07/owl",
-      "replacementString": "http://solidpods-local/owl"
+      "replacementString": "http://localhost:3000/owl"
     },
     {
       "@type": "QuadTransformerReplaceIri",
-      "searchRegex": "^http://www-ldbc-eu/ldbc_socialnet/1.0/data/pers([0-9]*)$",
-      "replacementString": "http://solidpods-local/pods/$1/profile/card#me"
+      "searchRegex": "^http://localhost:3100/ldbc_socialnet/1.0/data/pers([0-9]*)$",
+      "replacementString": "http://localhost:3000/pods/$1/profile/card#me"
     },
     {
       "comment": "Map all blank node objects to fragments on their subjects",
@@ -200,7 +200,7 @@
           "component": "graph",
           "termType": "NamedNode",
           "valueRegex": "^(.+)$",
-          "valueReplacement": "http://sparqlserver-local/sparql?default-graph-uri=$1"
+          "valueReplacement": "http://localhost:4000/sparql?default-graph-uri=$1"
         },
         "graph": {
           "@type": "TermTemplateStaticNamedNode",
@@ -227,8 +227,8 @@
                   "valueRegex": "vocabulary/hasCreator$"
                 },
                 "identifier": "object",
-                "predicate": "http://solidpods-local/internal/postsFragmentation",
-                "link": "http://solidpods-local/internal/FragmentationPerResource"
+                "predicate": "http://localhost:3000/internal/postsFragmentation",
+                "link": "http://localhost:3000/internal/FragmentationPerResource"
               }
             },
             {
@@ -273,8 +273,8 @@
                   "valueRegex": "vocabulary/hasCreator$"
                 },
                 "identifier": "object",
-                "predicate": "http://solidpods-local/internal/commentsFragmentation",
-                "link": "http://solidpods-local/internal/FragmentationPerResource"
+                "predicate": "http://localhost:3000/internal/commentsFragmentation",
+                "link": "http://localhost:3000/internal/FragmentationPerResource"
               }
             },
             {
@@ -413,7 +413,7 @@
           "outputFormat": "application/n-quads",
           "fileExtension": ".nq",
           "iriToPath": {
-            "^(.*)$": "out-fragments/http/sparqlserver-local/data"
+            "^(.*)$": "out-fragments/http/localhost_4000/data"
           }
         }
       }

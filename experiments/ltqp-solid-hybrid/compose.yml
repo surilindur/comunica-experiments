@@ -5,94 +5,97 @@ services:
       network: host
     container_name: solidpods-local
     environment:
-      CSS_BASE_URL: http://solidpods-local
+      CSS_BASE_URL: http://localhost:3000
       CSS_CONFIG: /tmp/config.json
       CSS_LOGGING_LEVEL: info
-      CSS_PORT: 80
+      CSS_PORT: 3000
       CSS_ROOT_FILE_PATH: /var/cssdata
     healthcheck:
-      test: curl -I http://solidpods-local/pods/
+      test: curl -I http://localhost:3000/pods/
       interval: 10s
       timeout: 1s
       retries: 3
+    network_mode: host
     restart: unless-stopped
     volumes:
       - ./input/solidserver/config.json:/tmp/config.json:ro
-      - ./generated/out-fragments/http/solidpods-local:/var/cssdata:ro
+      - ./generated/out-fragments/http/localhost_3000:/var/cssdata:ro
   sparqlserver-local:
     build:
       context: ./input/sparqlserver
       network: host
-    command: /tmp/data.nq --port 80 --timeout 30
+    command: /tmp/data.nq --port 4000 --timeout 30
     container_name: sparqlserver-local
     healthcheck:
-      test: curl -I http://sparqlserver-local/sparql
+      test: curl -I http://localhost:4000/sparql
       interval: 10s
       timeout: 1s
       retries: 3
+    network_mode: host
     restart: unless-stopped
     volumes:
-      - ./generated/out-fragments/http/sparqlserver-local/data.nq:/tmp/data.nq:ro
+      - ./generated/out-fragments/http/localhost_4000/data.nq:/tmp/data.nq:ro
   www-ldbc-eu:
     build:
       context: ./input/solidserver
       network: host
     container_name: www-ldbc-eu
     environment:
-      CSS_BASE_URL: http://www-ldbc-eu
+      CSS_BASE_URL: http://localhost:3100
       CSS_CONFIG: /tmp/config.json
       CSS_LOGGING_LEVEL: info
-      CSS_PORT: 80
+      CSS_PORT: 3100
       CSS_ROOT_FILE_PATH: /var/cssdata
     healthcheck:
-      test: curl -I http://www-ldbc-eu/tagclass/
+      test: curl -I http://localhost:3100/tagclass/
       interval: 10s
       timeout: 1s
       retries: 3
+    network_mode: host
     restart: unless-stopped
     volumes:
       - ./input/solidserver/config.json:/tmp/config.json:ro
-      - ./generated/out-fragments/http/www-ldbc-eu:/var/cssdata:ro
+      - ./generated/out-fragments/http/localhost_3100:/var/cssdata:ro
   dbpedia-org:
     build:
       context: ./input/solidserver
       network: host
     container_name: dbpedia-org
     environment:
-      CSS_BASE_URL: http://dbpedia-org
+      CSS_BASE_URL: http://localhost:3200
       CSS_CONFIG: /tmp/config.json
       CSS_LOGGING_LEVEL: info
-      CSS_PORT: 80
+      CSS_PORT: 3200
       CSS_ROOT_FILE_PATH: /var/cssdata
     healthcheck:
-      test: curl -I http://dbpedia-org/resource/
+      test: curl -I http://localhost:3200/resource/
       interval: 10s
       timeout: 1s
       retries: 3
+    network_mode: host
     restart: unless-stopped
     volumes:
       - ./input/solidserver/config.json:/tmp/config.json:ro
-      - ./generated/out-fragments/http/dbpedia-org:/var/cssdata:ro
-  comunica:
-    build:
-      context: ./input/comunica
-      network: host
-    command: --freshWorker --idp void --context /tmp/context.json --port 3000 --timeout 60
-    container_name: comunica
-    depends_on:
-      solidpods-local:
-        condition: service_healthy
-      www-ldbc-eu:
-        condition: service_healthy
-      dbpedia-org:
-        condition: service_healthy
-      sparqlserver-local:
-        condition: service_healthy
-    environment:
-      COMUNICA_CONFIG: /tmp/config.json
-    ports:
-      - 3000:3000
-    restart: unless-stopped
-    volumes:
-      - ./input/comunica/context.json:/tmp/context.json:ro
-      - ./input/comunica/config-${COMUNICA_CONFIG}.json:/tmp/config.json:ro
+      - ./generated/out-fragments/http/localhost_3200:/var/cssdata:ro
+  # comunica:
+  #   build:
+  #     context: ./input/comunica
+  #     network: host
+  #   command: --freshWorker --idp void --context /tmp/context.json --port 5000 --timeout 60
+  #   container_name: comunica
+  #   depends_on:
+  #     solidpods-local:
+  #       condition: service_healthy
+  #     www-ldbc-eu:
+  #       condition: service_healthy
+  #     dbpedia-org:
+  #       condition: service_healthy
+  #     sparqlserver-local:
+  #       condition: service_healthy
+  #   environment:
+  #     COMUNICA_CONFIG: /tmp/config.json
+  #   network_mode: host
+  #   restart: unless-stopped
+  #   volumes:
+  #     - ./input/comunica/context.json:/tmp/context.json:ro
+  #     - ./input/comunica/config-${COMUNICA_CONFIG}.json:/tmp/config.json:ro

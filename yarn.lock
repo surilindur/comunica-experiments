@@ -6513,9 +6513,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rdf-dataset-fragmenter@surilindur/rdf-dataset-fragmenter.js.git#665dc8289f11d902d517dd509ff97a53c4b36169":
+"rdf-dataset-fragmenter@surilindur/rdf-dataset-fragmenter.js.git#0359fad7d488d8b070397a7c26ca35100b824a42":
   version: 2.8.0
-  resolution: "rdf-dataset-fragmenter@https://github.com/surilindur/rdf-dataset-fragmenter.js.git#commit=665dc8289f11d902d517dd509ff97a53c4b36169"
+  resolution: "rdf-dataset-fragmenter@https://github.com/surilindur/rdf-dataset-fragmenter.js.git#commit=0359fad7d488d8b070397a7c26ca35100b824a42"
   dependencies:
     "@rdfjs/types": "npm:*"
     "@types/async-lock": "npm:^1.4.0"

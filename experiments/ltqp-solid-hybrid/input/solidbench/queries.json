@@ -148,7 +148,7 @@
               "@id": "urn:sparql-query-parameter-instantiator:valueTransformerPersonIdToIri",
               "@type": "ValueTransformerReplaceIri",
               "searchRegex": "^(.*)$",
-              "replacementString": "http://solidpods-local/pods/$1/profile/card#me"
+              "replacementString": "http://localhost:3000/pods/$1/profile/card#me"
             }
           ]
         },

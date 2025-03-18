@@ -1,0 +1,16 @@
+project (messageId,messageCreationDate,messageContent)
+  join
+    join-inner(bind) bindOperation:(?message http://localhost:3100/ldbc_socialnet/1.0/vocabulary/hasCreator http://localhost:3000/pods/00000000000000000933/profile/card#me) bindCardEst:~0 cardReal:6 timeSelf:10.103ms timeLife:1,680.722ms
+      join compacted-occurrences:430
+        join-inner(multi-smallest)
+          join-inner(nested-loop) timeSelf:0.337ms timeLife:1,506.757ms
+            pattern (http://localhost:3000/pods/00000000000000000933/noise/NOISE-1216 http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://localhost:3100/ldbc_socialnet/1.0/vocabulary/Post) cardEst:~0 src:0
+            pattern (http://localhost:3000/pods/00000000000000000933/noise/NOISE-1216 http://localhost:3100/ldbc_socialnet/1.0/vocabulary/content ?messageContent) cardEst:~0 src:0
+          join-inner(multi-smallest)
+            join-inner(nested-loop) timeLife:1,512.179ms
+              pattern (http://localhost:3000/pods/00000000000000000933/noise/NOISE-1216 http://localhost:3100/ldbc_socialnet/1.0/vocabulary/creationDate ?messageCreationDate) cardEst:~0 src:0
+              pattern (http://localhost:3000/pods/00000000000000000933/noise/NOISE-1216 http://localhost:3100/ldbc_socialnet/1.0/vocabulary/id ?messageId) cardEst:~0 src:0
+            join-inner(nested-loop) timeSelf:0.268ms timeLife:1,510.102ms
+
+sources:
+  0: QuerySourceHypermedia(http://localhost:3000/pods/00000000000000000933/profile/card)

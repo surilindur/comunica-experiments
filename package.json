@@ -6,6 +6,6 @@
   ],
   "resolutions": {
     "componentsjs": "6.3.0",
-    "rdf-dataset-fragmenter": "surilindur/rdf-dataset-fragmenter.js.git#665dc8289f11d902d517dd509ff97a53c4b36169"
+    "rdf-dataset-fragmenter": "surilindur/rdf-dataset-fragmenter.js.git#0359fad7d488d8b070397a7c26ca35100b824a42"
   }
 }

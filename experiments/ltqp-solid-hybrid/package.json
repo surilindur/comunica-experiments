@@ -10,7 +10,7 @@
     "compose:start": "docker compose start",
     "compose:stop": "docker compose stop",
     "dataset:create": "yarn solidbench generate --cwd $(pwd)/generated --enhancementConfig ../input/solidbench/enhancer.json --queryConfig ../input/solidbench/queries.json --validationConfig ../input/solidbench/validation.json --fragmentConfig ../input/solidbench/fragmenter-${SOLIDBENCH_CONFIG}.json",
-    "queries:execute": "yarn sparql-benchmark-runner --endpoint http://localhost:3000/sparql --queries ./generated/out-queries --replication 5 --warmup 1 --timeout 70 --output ./output/query-times-${COMUNICA_CONFIG}-${SOLIDBENCH_CONFIG}.csv",
+    "queries:execute": "yarn sparql-benchmark-runner --endpoint http://localhost:3000/sparql --queries ./generated/out-queries --replication 3 --warmup 0 --timeout 70 --output ./output/query-times-${COMUNICA_CONFIG}-${SOLIDBENCH_CONFIG}.csv",
     "queries:prepare": "rm ./generated/out-queries/interactive-complex-*"
   }
 }

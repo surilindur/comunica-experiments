@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Comunica" src=".github/assets/logo.svg" width="50">
+  <img alt="Comunica" src=".github/assets/logo.svg" width="64">
 </p>
 
 <p align="center">
@@ -19,8 +19,8 @@ and [sparql-benchmark-runner](https://github.com/comunica/sparql-benchmark-runne
 The experiments are stored here for future reference, transparency and reproducibility.
 The following experiments reside here:
 
-* [**Link Traversal over Solid with Bloom Filters**](experiments/ltqp-solid-bloom-filters/), to explore the use of Bloom filters to remove unnecessary links during link traversal over Solid pods.
 * [**Link Traversal over Solid**](experiments/ltqp-solid-default/), as a baseline reference experiment for link traversal over Solid pods.
+* [**Link Traversal over Solid with Bloom Filters**](experiments/ltqp-solid-bloom-filters/), to explore the use of Bloom filters to remove unnecessary links during link traversal over Solid pods.
 * [**Link Traversal over Solid with Join Plan Restarts**](experiments/ltqp-solid-join-restart/), to evaluate the impact of restarting most of the query plan upon cardinality estimate updates.
 
 ## Running
@@ -43,5 +43,4 @@ Please feel free to report any issues on the GitHub issue tracker.
 
 ## License
 
-The experiments here are copyrighted by [Ghent University – imec](http://idlab.ugent.be/)
-and released under the [CC-BY-4.0 license](https://creativecommons.org/licenses/by/4.0/).
+The experiments here are copyrighted and released under the [CC-BY-4.0 license](https://creativecommons.org/licenses/by/4.0/).

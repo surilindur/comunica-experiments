@@ -1,11 +1,11 @@
 {
-  "packageManager": "yarn@4.7.0",
+  "packageManager": "yarn@4.8.1",
   "private": true,
   "workspaces": [
     "experiments/*"
   ],
   "resolutions": {
     "componentsjs": "6.3.0",
-    "rdf-dataset-fragmenter": "surilindur/rdf-dataset-fragmenter.js.git#0359fad7d488d8b070397a7c26ca35100b824a42"
+    "rdf-dataset-fragmenter": "surilindur/rdf-dataset-fragmenter.js.git#b0b48087529d3f7b4e9fe4d7e2ed883fc1993f07"
   }
 }

@@ -4,11 +4,11 @@
     "https://linkedsoftwaredependencies.org/bundles/npm/@jbr-experiment/solidbench/^5.0.0/components/context.jsonld",
     "https://linkedsoftwaredependencies.org/bundles/npm/@jbr-hook/sparql-endpoint-comunica/^5.0.0/components/context.jsonld"
   ],
-  "@id": "urn:jbr:ltqp-solid-bloom-filters",
+  "@id": "urn:jbr:ltqp-solid-hybrid",
   "@type": "ExperimentSolidBench",
   "scale": "0.1",
   "configGenerateAux": "input/solidbench/enhancer.json",
-  "configFragment": "input/solidbench/fragmenter-%FACTOR%.json",
+  "configFragment": "input/solidbench/fragmenter.json",
   "configQueries": "input/solidbench/queries.json",
   "configServer": "input/solidserver/config.json",
   "validationParamsUrl": "https://cloud.ilabt.imec.be/index.php/s/bBZZKb7cP95WgcD/download/validation_params.zip",
@@ -21,7 +21,7 @@
   "serverBaseUrl": "http://solidbench-server:3000/",
   "serverResourceConstraints": {
     "@type": "StaticDockerResourceConstraints",
-    "cpu_percentage": 100
+    "cpu_percentage": 200
   },
   "queryRunnerReplication": 1,
   "queryRunnerWarmupRounds": 0,
@@ -30,9 +30,9 @@
   "queryRunnerUrlParams": {},
   "queryTimeoutFallback": 70000,
   "hookSparqlEndpoint": {
-    "@id": "urn:jbr:ltqp-solid-bloom-filters:hookSparqlEndpoint",
+    "@id": "urn:jbr:ltqp-solid-hybrid:hookSparqlEndpoint",
     "@type": "HookSparqlEndpointComunica",
-    "dockerfileClient": "input/dockerfiles/client.dockerfile",
+    "dockerfileClient": "input/comunica/Dockerfile",
     "resourceConstraints": {
       "@type": "StaticDockerResourceConstraints",
       "cpu_percentage": 100

@@ -2,15 +2,12 @@
   "name": "ltqp-solid-default",
   "private": true,
   "dependencies": {
-    "solidbench": "^2.0.0",
-    "sparql-benchmark-runner": "4.3.0"
+    "@jbr-experiment/solidbench": "^5.0.0",
+    "@jbr-hook/sparql-endpoint-comunica": "^5.0.0",
+    "jbr": "^5.0.0",
+    "solidbench": "^2.0.0"
   },
   "scripts": {
-    "compose:create": "docker compose create",
-    "compose:start": "docker compose start",
-    "compose:stop": "docker compose stop",
-    "dataset:create": "yarn solidbench generate --cwd $(pwd)/generated --enhancementConfig ../input/solidbench/enhancer.json --queryConfig ../input/solidbench/queries.json --validationConfig ../input/solidbench/validation.json --fragmentConfig ../input/solidbench/fragmenter-${SOLIDBENCH_CONFIG}.json",
-    "queries:execute": "yarn sparql-benchmark-runner --endpoint http://localhost:3000/sparql --queries ./generated/out-queries --replication 5 --warmup 1 --timeout 70 --output ./output/query-times-${COMUNICA_CONFIG}-${SOLIDBENCH_CONFIG}.csv",
-    "queries:prepare": "rm ./generated/out-queries/interactive-complex-*"
+    "validate": "jbr validate"
   }
 }

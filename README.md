@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Comunica" src=".github/assets/logo.svg" width="64">
+  <img alt="Comunica" src=".github/assets/logo.svg" width="128">
 </p>
 
 <p align="center">
@@ -11,21 +11,17 @@
   <a href="https://creativecommons.org/licenses/by/4.0/"><img alt="Licence: CC-BY-4.0" src="https://img.shields.io/badge/License-CC_BY_4.0-white.svg"></a>
 </p>
 
-This monorepository contains various experiments
-with the [Comunica](https://github.com/comunica/comunica) query engine
-using a combination of [SolidBench](https://github.com/SolidBench/SolidBench.js),
-[Docker Compose](https://docs.docker.com/compose/)
-and [sparql-benchmark-runner](https://github.com/comunica/sparql-benchmark-runner.js).
-The experiments are stored here for future reference, transparency and reproducibility.
+This repository contains verious experiments with the [Comunica](https://github.com/comunica/comunica) query engine,
+stored here for future reference, transparency and reproducibility.
 The following experiments reside here:
 
-* [**Link Traversal over Solid**](experiments/ltqp-solid-default/), as a baseline reference experiment for link traversal over Solid pods.
-* [**Link Traversal over Solid with Bloom Filters**](experiments/ltqp-solid-bloom-filters/), to explore the use of Bloom filters to remove unnecessary links during link traversal over Solid pods.
-* [**Link Traversal over Solid with Join Plan Restarts**](experiments/ltqp-solid-join-restart/), to evaluate the impact of restarting most of the query plan upon cardinality estimate updates.
+* [**Link Traversal over Solid**](experiments/ltqp-solid-default/), as a baseline reference experiment for link traversal over Solid pods. The purpose of this experiment is to exist as a template of sorts, as well as a reference point when needed for sanity checks. The experiment has all resources stored in documents based on their URIs, and the default Comunica link traversal engine setup is used.
+* [**Link Traversal over Solid with Bloom Filters**](experiments/ltqp-solid-bloom-filters/), to explore the use of Bloom filters to remove unnecessary links during link traversal over Solid pods. The purpose of this experiment is to establish an understanding of whether Bloom filters could be beneficial in pruning links during traversal, specifically within the context of Solid pods.
+* [**Link Traversal over Solid with Join Plan Restarts**](experiments/ltqp-solid-join-restart/), to evaluate the impact of restarting most of the query plan upon cardinality estimate updates. The purpose of this experiment is to underline the importance of client-side adaptive techniques in improving query execution, even within link traversal scenarios.
 
 ## Running
 
-After cloning the repository, install dependencies with [Yarn](https://github.com/yarnpkg/berry).
+After cloning the repository, install dependencies with [Yarn](https://github.com/yarnpkg/berry):
 
 ```bash
 yarn install --immutable

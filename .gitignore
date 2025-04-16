@@ -4,3 +4,4 @@ experiments/*/combinations
 experiments/*/generated/*
 experiments/*/output/*
 !**/.gitkeep
+componentsjs-error-state.json

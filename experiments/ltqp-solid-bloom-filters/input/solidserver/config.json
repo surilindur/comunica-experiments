@@ -56,7 +56,7 @@
       }
     },
     {
-      "comment": "Taken from css:config/util/identifiers/suffix.json, changed to serve only .nq",
+      "comment": "Taken from css:config/util/identifiers/suffix.json, changed to serve only n-triples",
       "@id": "urn:solid-server:default:FileIdentifierMapper",
       "@type": "FixedContentTypeMapper",
       "base": {
@@ -65,8 +65,8 @@
       "rootFilepath": {
         "@id": "urn:solid-server:default:variable:rootFilePath"
       },
-      "contentType": "application/n-quads",
-      "pathSuffix": ".nq"
+      "contentType": "application/n-triples",
+      "pathSuffix": ".nt"
     }
   ]
 }

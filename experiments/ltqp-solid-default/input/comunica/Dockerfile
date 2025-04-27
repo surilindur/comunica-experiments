@@ -22,4 +22,4 @@ ENV QUERY_TIMEOUT=$QUERY_TIMEOUT
 ENV LOG_LEVEL=$LOG_LEVEL
 
 ENTRYPOINT [ "/bin/sh" ]
-CMD [ "-c", "node ./bin/http.js --idp void -c /tmp/context.json -p 3000 -t ${QUERY_TIMEOUT} -l ${LOG_LEVEL}" ]
+CMD [ "-c", "node ./bin/http.js --invalidateCache --idp void --context /tmp/context.json --port 3000 --timeout ${QUERY_TIMEOUT} --logLevel ${LOG_LEVEL}" ]

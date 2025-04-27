@@ -1,40 +1,25 @@
-# syntax=docker/dockerfile:1
+FROM node:23-alpine
 
-FROM bitnami/git:latest AS git
+# Clone the Comunica repository and install
+ADD https://github.com/surilindur/comunica-components.git#b8d2ff1debd9e37df6fdba9b8e0c8fc566eb16a6 /opt/comunica
+WORKDIR /opt/comunica
+RUN yarn install --ignore-engines --frozen-lockfile
+WORKDIR /opt/comunica/engines/query-sparql-prototype
 
-RUN git clone --branch main --single-branch https://github.com/surilindur/comunica-components.git /opt/client
-
-WORKDIR /opt/client
-
-RUN git checkout e9e596effba646e36ae1a5e592eca1a07749a033
-
-FROM node:21.6-slim
-
-COPY --from=git /opt/client /opt/client
-
-WORKDIR /opt/client
-
-RUN corepack enable && yarn install --immutable && yarn build
-
-WORKDIR /opt/client/engines/query-sparql-components
-
+# Docker build args with default values
 ARG CONFIG_CLIENT
-ARG QUERY_TIMEOUT=120
-ARG MAX_MEMORY=8192
-ARG LOG_LEVEL=info
-ARG COMUNICA_PORT=3000
-ARG COMUNICA_WORKERS=1
+ARG QUERY_TIMEOUT
+ARG MAX_MEMORY
+ARG LOG_LEVEL
 
-ADD $CONFIG_CLIENT /tmp/engine.json
+# Include the config in the Docker image
+ADD $CONFIG_CLIENT /tmp/config.json
+ENV COMUNICA_CONFIG=/tmp/config.json
 
-ENV COMUNICA_CONFIG /tmp/engine.json
-ENV NODE_ENV production
-ENV NODE_OPTIONS --max-old-space-size=$MAX_MEMORY
-ENV QUERY_TIMEOUT $QUERY_TIMEOUT
-ENV LOG_LEVEL $LOG_LEVEL
-ENV COMUNICA_PORT $COMUNICA_PORT
-ENV COMUNICA_WORKERS $COMUNICA_WORKERS
+ENV NODE_ENV=production
+ENV NODE_OPTIONS=--max-old-space-size=$MAX_MEMORY
+ENV QUERY_TIMEOUT=$QUERY_TIMEOUT
+ENV LOG_LEVEL=$LOG_LEVEL
 
-EXPOSE $COMUNICA_PORT
-
-ENTRYPOINT [ "/bin/bash", "-c", "node ./bin/http.js --lenient --contextOverride --invalidateCache --freshWorker --workers 2 --context /tmp/context.json --port $COMUNICA_PORT --timeout $QUERY_TIMEOUT --logLevel $LOG_LEVEL" ]
+ENTRYPOINT [ "/bin/sh" ]
+CMD [ "-c", "node ./bin/http.js --invalidateCache --idp void --context /tmp/context.json --port 3000 --timeout ${QUERY_TIMEOUT} --logLevel ${LOG_LEVEL}" ]

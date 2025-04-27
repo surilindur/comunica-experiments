@@ -1,4 +1,5 @@
 {
   "sources": [],
-  "lenient": true
+  "lenient": true,
+  "@comunica/bus-rdf-resolve-hypermedia-links:linkFilters": []
 }

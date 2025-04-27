@@ -31,6 +31,9 @@
       "replacementString": "http://solidbench-server:3000/www.ldbc.eu/tagclass/$1"
     },
     {
+      "@type": "QuadTransformerBlankToFragment"
+    },
+    {
       "@type": "QuadTransformerReplaceIri",
       "searchRegex": "^http://www.ldbc.eu",
       "replacementString": "http://solidbench-server:3000/www.ldbc.eu"

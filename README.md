@@ -27,10 +27,12 @@ After cloning the repository, install dependencies with [Yarn](https://github.co
 yarn install --immutable
 ```
 
-Each experiment can then be executed using `jbr` in the experiment directory:
+Each experiment can then be prepared and executed using `jbr` in the experiment directory:
 
 ```bash
-yarn jbr --help
+yarn run prepare
+yarn run validate
+yarn run execute
 ```
 
 ## Issues

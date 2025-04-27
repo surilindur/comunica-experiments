@@ -7308,16 +7308,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"wikidata-graph-split@workspace:experiments/wikidata-graph-split":
-  version: 0.0.0-use.local
-  resolution: "wikidata-graph-split@workspace:experiments/wikidata-graph-split"
-  dependencies:
-    "@jbr-experiment/solidbench": "npm:^6.0.0"
-    "@jbr-hook/sparql-endpoint-comunica": "npm:^6.0.0"
-    jbr: "npm:^6.0.0"
-  languageName: unknown
-  linkType: soft
-
 "winston-transport@npm:^4.5.0, winston-transport@npm:^4.9.0":
   version: 4.9.0
   resolution: "winston-transport@npm:4.9.0"

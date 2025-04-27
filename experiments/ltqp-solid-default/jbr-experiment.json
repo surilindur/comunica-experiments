@@ -1,21 +1,19 @@
 {
   "@context": [
-    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^5.0.0/components/context.jsonld",
-    "https://linkedsoftwaredependencies.org/bundles/npm/@jbr-experiment/solidbench/^5.0.0/components/context.jsonld",
-    "https://linkedsoftwaredependencies.org/bundles/npm/@jbr-hook/sparql-endpoint-comunica/^5.0.0/components/context.jsonld"
+    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^6.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@jbr-experiment/solidbench/^6.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@jbr-hook/sparql-endpoint-comunica/^6.0.0/components/context.jsonld"
   ],
   "@id": "urn:jbr:ltqp-solid-default",
   "@type": "ExperimentSolidBench",
   "scale": "0.1",
-  "configGenerateAux": "input/solidbench/enhancer.json",
+  "configEnhance": "input/solidbench/enhancer.json",
   "configFragment": "input/solidbench/fragmenter.json",
   "configQueries": "input/solidbench/queries.json",
   "configServer": "input/solidserver/config.json",
-  "validationParamsUrl": "https://cloud.ilabt.imec.be/index.php/s/bBZZKb7cP95WgcD/download/validation_params.zip",
-  "configValidation": "input/solidbench/validation.json",
   "hadoopMemory": "4G",
   "dockerfileServer": "input/solidserver/Dockerfile",
-  "endpointUrl": "http://localhost:3001/sparql",
+  "endpointUrl": "http://localhost:3000/sparql",
   "serverPort": 3000,
   "serverLogLevel": "info",
   "serverBaseUrl": "http://solidbench-server:3000/",

@@ -1,6 +1,7 @@
 .yarn
 node_modules
-logs
-**/generated/*
-!**/generated/.keep
-**/output/combination*
+experiments/*/combinations
+experiments/*/generated/*
+experiments/*/output/*
+!**/.gitkeep
+componentsjs-error-state.json

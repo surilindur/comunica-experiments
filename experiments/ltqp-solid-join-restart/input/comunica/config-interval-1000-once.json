@@ -1,0 +1,27 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/runner/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-rdf-join-inner-restart/^0.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/config-query-sparql-prototype/^0.0.0/components/context.jsonld"
+  ],
+  "import": [
+    "ccqsp:config/config-base.json",
+    "ccqsp:config/rdf-metadata-extract/void.json",
+    "ccqsp:config/rdf-metadata-accumulate/cardinality-void.json"
+  ],
+  "@id": "urn:comunica:default:Runner",
+  "@type": "Runner",
+  "actors": [
+    {
+      "@id": "urn:comunica:default:rdf-join/actors#restart",
+      "@type": "ActorRdfJoinInnerRestart",
+      "mediatorHashBindings": { "@id": "urn:comunica:default:hash-bindings/mediators#main" },
+      "mediatorJoinEntriesSort": { "@id": "urn:comunica:default:rdf-join-entries-sort/mediators#main" },
+      "mediatorJoinSelectivity": { "@id": "urn:comunica:default:rdf-join-selectivity/mediators#main" },
+      "mediatorJoin": { "@id": "urn:comunica:default:rdf-join/mediators#main" },
+      "evaluationAfterMetadataUpdate": false,
+      "evaluationInterval": 1000,
+      "restartLimit": 1
+    }
+  ]
+}

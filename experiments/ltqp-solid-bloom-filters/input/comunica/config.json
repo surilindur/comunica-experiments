@@ -1,0 +1,10 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/config-query-sparql-prototype/^0.0.0/components/context.jsonld"
+  ],
+  "import": [
+    "ccqsp:config/config-base.json",
+    "ccqsp:config/rdf-metadata-extract/link-filter-bloom.json",
+    "ccqsp:config/rdf-resolve-hypermedia-links-queue/wrapper-filter.json"
+  ]
+}

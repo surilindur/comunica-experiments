@@ -1,32 +1,30 @@
 name: CI
 
-on: [push]
+on:
+  - push
+  - pull_request
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
+
+env:
+  DEFAULT_NODE_VERSION: 23.x
 
 jobs:
   validate:
     name: Validate experiments
     runs-on: ubuntu-latest
     steps:
-      - name: Use latest Node version
+      - name: Use Node.js ${{ env.DEFAULT_NODE_VERSION }}
         uses: actions/setup-node@v4
         with:
-          node-version: latest
+          node-version: ${{ env.DEFAULT_NODE_VERSION }}
       - name: Enable corepack
         run: corepack enable
-      - name: Enable git autocrlf
-        run: git config --global core.autocrlf input
       - name: Checkout repository
         uses: actions/checkout@v4
-      - name: Restore cached dependencies
-        uses: actions/cache@v4
-        with:
-          path: .yarn
-          key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
       - name: Install dependencies
         run: yarn install --immutable
-      - name: Validate all experiments
-        run: yarn workspaces foreach --all --parallel run validate
+      - name: Validate experiments
+        run: yarn workspaces foreach --all --parallel --include 'experiments/*' run validate

@@ -1,19 +1,14 @@
 {
   "@context": [
-    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^5.0.0/components/context.jsonld"
+    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^6.0.0/components/context.jsonld"
   ],
   "@id": "urn:jbr:ltqp-solid-bloom-filters-combinations",
-  "@type": "FullFactorialCombinationProvider",
+  "@type": "FractionalCombinationProvider",
   "commonGenerated": false,
-  "factors": {
-    "prefix": [
-      "config"
-    ],
-    "config": [
-      "baseline",
-      "document",
-      "pod",
-      "subdir"
-    ]
-  }
+  "combinations": [
+    "baseline",
+    "pod",
+    "subdir",
+    "document"
+  ]
 }

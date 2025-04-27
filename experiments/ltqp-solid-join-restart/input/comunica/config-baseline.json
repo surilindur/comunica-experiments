@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/config-query-sparql-prototype/^0.0.0/components/context.jsonld"
+  ],
+  "import": [
+    "ccqsp:config/config-base.json",
+    "ccqsp:config/rdf-join/restart.json",
+    "ccqsp:config/rdf-metadata-extract/void.json",
+    "ccqsp:config/rdf-metadata-accumulate/cardinality-void.json"
+  ]
+}

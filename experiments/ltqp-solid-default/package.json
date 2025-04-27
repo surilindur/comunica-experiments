@@ -2,12 +2,13 @@
   "name": "ltqp-solid-default",
   "private": true,
   "dependencies": {
-    "@jbr-experiment/solidbench": "^5.0.0",
-    "@jbr-hook/sparql-endpoint-comunica": "^5.0.0",
-    "jbr": "^5.0.0",
-    "solidbench": "^2.0.0"
+    "@jbr-experiment/solidbench": "^6.0.0",
+    "@jbr-hook/sparql-endpoint-comunica": "^6.0.0",
+    "jbr": "^6.0.0"
   },
   "scripts": {
+    "prepare": "jbr prepare",
+    "execute": "jbr run",
     "validate": "jbr validate"
   }
 }

@@ -1,24 +1,20 @@
 {
   "@context": [
-    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^5.0.0/components/context.jsonld"
+    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^6.0.0/components/context.jsonld"
   ],
   "@id": "urn:jbr:ltqp-solid-join-restart-combinations",
-  "@type": "FullFactorialCombinationProvider",
+  "@type": "FractionalCombinationProvider",
   "commonGenerated": true,
-  "factors": {
-    "prefix": [
-      "config"
-    ],
-    "config": [
-      "baseline",
-      "overhead-simple",
-      "overhead",
-      "cardinality-once-void-simple",
-      "cardinality-once-void",
-      "cardinality-once",
-      "cardinality-unlimited-void-simple",
-      "cardinality-unlimited-void",
-      "cardinality-unlimited"
-    ]
-  }
+  "combinations": [
+    "baseline",
+    "interval-100-once",
+    "interval-1000-once",
+    "interval-2000-once",
+    "interval-5000-once",
+    "interval-10000-once",
+    "interval-20000-once",
+    "metadata-once",
+    "metadata-unlimited",
+    "overhead"
+  ]
 }

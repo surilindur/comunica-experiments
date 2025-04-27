@@ -2,12 +2,14 @@
   "name": "ltqp-solid-join-restart",
   "private": true,
   "dependencies": {
-    "@jbr-experiment/solidbench": "^5.0.0",
-    "@jbr-hook/sparql-endpoint-comunica": "^5.0.0",
-    "jbr": "^5.0.0",
-    "solidbench": "^2.0.0"
+    "@jbr-experiment/solidbench": "^6.0.0",
+    "@jbr-hook/sparql-endpoint-comunica": "^6.0.0",
+    "jbr": "^6.0.0"
   },
   "scripts": {
+    "metafix": "rename '.nt' '.meta' ./generated/**/.nt",
+    "prepare": "jbr generate-combinations && jbr prepare && yarn run metafix",
+    "execute": "jbr run",
     "validate": "jbr generate-combinations && jbr validate"
   }
 }

@@ -1,7 +1,7 @@
 FROM node:23-alpine
 
 # Clone the Comunica repository and install
-ADD https://github.com/comunica/comunica-feature-link-traversal.git#master /opt/comunica
+ADD https://github.com/comunica/comunica-feature-link-traversal.git#368b9180b4f654136b2fe8ff3474ca7b808e460a /opt/comunica
 WORKDIR /opt/comunica
 RUN yarn install --ignore-engines --frozen-lockfile
 WORKDIR /opt/comunica/engines/query-sparql-link-traversal-solid

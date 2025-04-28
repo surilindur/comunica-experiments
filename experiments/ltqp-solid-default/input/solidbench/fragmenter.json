@@ -90,7 +90,7 @@
       }
     },
     {
-      "@type": "QuadTransformerCompositeSequential",
+      "@type": "QuadTransformerCompositeVaryingResource",
       "typeRegex": "vocabulary/Post$",
       "targetPredicateRegex": "vocabulary/hasCreator$",
       "transformers": [
@@ -129,7 +129,7 @@
       ]
     },
     {
-      "@type": "QuadTransformerCompositeSequential",
+      "@type": "QuadTransformerCompositeVaryingResource",
       "typeRegex": "vocabulary/Comment$",
       "targetPredicateRegex": "vocabulary/hasCreator$",
       "transformers": [

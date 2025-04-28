@@ -1,8 +1,11 @@
 FROM node:23-alpine
 
+RUN apk add git
+
 # Clone CSS directly from git
-ADD https://github.com/CommunitySolidServer/CommunitySolidServer.git#e69da7520ce8be87499fc67d98e254554750ec84 /opt/solidserver
+RUN git clone https://github.com/CommunitySolidServer/CommunitySolidServer /opt/solidserver
 WORKDIR /opt/solidserver
+RUN git checkout e69da7520ce8be87499fc67d98e254554750ec84
 RUN npm ci
 
 # Docker build args

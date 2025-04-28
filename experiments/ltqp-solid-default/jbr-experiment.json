@@ -26,7 +26,7 @@
   "queryRunnerRequestDelay": 0,
   "queryRunnerEndpointAvailabilityCheckTimeout": 1000,
   "queryRunnerUrlParams": {},
-  "queryTimeoutFallback": 70000,
+  "queryTimeoutFallback": 40000,
   "hookSparqlEndpoint": {
     "@id": "urn:jbr:ltqp-solid-default:hookSparqlEndpoint",
     "@type": "HookSparqlEndpointComunica",
@@ -40,7 +40,7 @@
     "additionalBinds": [],
     "clientPort": 3001,
     "clientLogLevel": "info",
-    "queryTimeout": 60,
+    "queryTimeout": 40,
     "maxMemory": 8192
   }
 }

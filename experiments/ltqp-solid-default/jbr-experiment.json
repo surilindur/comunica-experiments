@@ -13,7 +13,7 @@
   "configServer": "input/solidserver/config.json",
   "hadoopMemory": "4G",
   "dockerfileServer": "input/solidserver/Dockerfile",
-  "endpointUrl": "http://localhost:3000/sparql",
+  "endpointUrl": "http://localhost:3001/sparql",
   "serverPort": 3000,
   "serverLogLevel": "info",
   "serverBaseUrl": "http://solidbench-server:3000/",
@@ -21,12 +21,12 @@
     "@type": "StaticDockerResourceConstraints",
     "cpu_percentage": 100
   },
-  "queryRunnerReplication": 1,
+  "queryRunnerReplication": 5,
   "queryRunnerWarmupRounds": 0,
   "queryRunnerRequestDelay": 0,
   "queryRunnerEndpointAvailabilityCheckTimeout": 1000,
   "queryRunnerUrlParams": {},
-  "queryTimeoutFallback": 40000,
+  "queryTimeoutFallback": 70000,
   "hookSparqlEndpoint": {
     "@id": "urn:jbr:ltqp-solid-default:hookSparqlEndpoint",
     "@type": "HookSparqlEndpointComunica",
@@ -40,7 +40,7 @@
     "additionalBinds": [],
     "clientPort": 3001,
     "clientLogLevel": "info",
-    "queryTimeout": 40,
+    "queryTimeout": 60,
     "maxMemory": 8192
   }
 }

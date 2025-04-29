@@ -7,8 +7,9 @@
     "jbr": "^6.0.0"
   },
   "scripts": {
-    "metafix": "rename '.nt' '.meta' ./generated/**/.nt",
-    "prepare": "jbr generate-combinations && jbr prepare && yarn run metafix",
+    "prepare": "yarn run prepare-dataset && yarn run prepare-queries",
+    "prepare-dataset": "jbr prepare && rename '.nt' '.meta' ./generated/**/.nt",
+    "prepare-queries": "rm -rf generated/out-queries/interactive-complex-*",
     "execute": "jbr run",
     "validate": "jbr generate-combinations && jbr validate"
   }

@@ -7,7 +7,9 @@
     "jbr": "^6.0.0"
   },
   "scripts": {
-    "prepare": "jbr prepare",
+    "prepare": "yarn run prepare-dataset && yarn run prepare-queries",
+    "prepare-dataset": "jbr prepare",
+    "prepare-queries": "rm -rf generated/out-queries/interactive-complex-*",
     "execute": "jbr run",
     "validate": "jbr validate"
   }

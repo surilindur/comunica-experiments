@@ -24,5 +24,6 @@ ENV NODE_OPTIONS=--max-old-space-size=$MAX_MEMORY
 ENV QUERY_TIMEOUT=$QUERY_TIMEOUT
 ENV LOG_LEVEL=$LOG_LEVEL
 
-ENTRYPOINT [ "/bin/sh" ]
-CMD [ "-c", "node ./bin/http.js --invalidateCache --idp void --context /tmp/context.json --port 3000 --timeout ${QUERY_TIMEOUT} --logLevel ${LOG_LEVEL}" ]
+EXPOSE 3000
+
+ENTRYPOINT [ "/bin/sh", "-c", "node ./bin/http.js --invalidateCache --idp void --context /tmp/context.json --port 3000 --timeout ${QUERY_TIMEOUT} --logLevel ${LOG_LEVEL}" ]

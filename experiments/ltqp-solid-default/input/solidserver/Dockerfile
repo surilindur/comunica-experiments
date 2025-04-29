@@ -20,5 +20,6 @@ ENV LOG_LEVEL=$LOG_LEVEL
 ENV BASE_URL=$BASE_URL
 ENV NODE_ENV=production
 
-ENTRYPOINT [ "/bin/sh" ]
-CMD [ "-c", "node bin/server.js -c /tmp/config.json -b ${BASE_URL} -l ${LOG_LEVEL} -f /data" ]
+EXPOSE 3000
+
+ENTRYPOINT [ "/bin/sh", "-c", "node bin/server.js -c /tmp/config.json -b ${BASE_URL} -l ${LOG_LEVEL} -f /data" ]

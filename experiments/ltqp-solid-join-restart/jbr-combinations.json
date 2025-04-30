@@ -3,18 +3,20 @@
     "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^6.0.0/components/context.jsonld"
   ],
   "@id": "urn:jbr:ltqp-solid-join-restart-combinations",
-  "@type": "FractionalCombinationProvider",
+  "@type": "FullFactorialCombinationProvider",
   "commonGenerated": true,
-  "combinations": [
-    "baseline",
-    "interval-100-once",
-    "interval-1000-once",
-    "interval-2000-once",
-    "interval-5000-once",
-    "interval-10000-once",
-    "interval-20000-once",
-    "metadata-once",
-    "metadata-unlimited",
-    "overhead"
-  ]
+  "factors": {
+    "engine": [
+      "baseline",
+      "interval-100-once",
+      "interval-1000-once",
+      "interval-2000-once",
+      "interval-5000-once",
+      "interval-10000-once",
+      "interval-20000-once",
+      "metadata-once",
+      "metadata-unlimited",
+      "overhead"
+    ]
+  }
 }

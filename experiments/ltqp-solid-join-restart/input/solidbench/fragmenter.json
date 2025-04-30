@@ -176,7 +176,7 @@
       },
       {
         "@type": "FragmentationStrategyDatasetSummaryVoID",
-        "datasetPatterns": [
+        "options_datasetPatterns": [
           "^(.*\\/pods\\/[0-9]+\\/)"
         ]
       }

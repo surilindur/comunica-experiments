@@ -20,16 +20,17 @@ from result import load_results_file
 
 RESULTS_FILE_NAME = "query-times.csv"
 MARKDOWN_FILE_NAME = "README.md"
+ENDPOINT_LOG_NAME = "sparql-endpoint-comunica.txt"
 
 
 class ArgsNamespace(Namespace):
-    experiment: Path
+    target: Path
 
 
 def parse_args() -> ArgsNamespace:
     parser = ArgumentParser()
     parser.add_argument(
-        "--experiment",
+        "--target",
         type=lambda p: Path(p).resolve(strict=True),
         required=True,
         help="Path to the experiment results",
@@ -177,7 +178,7 @@ def combination_comparison(experiment: Path) -> None:
         if sum(1 if r.results > 0 else 0 for r in results.values()) < 1:
             warning(f"Skipping query {query} without results")
             continue
-        path = experiment.joinpath(f"{query}-timestamps.svg")
+        path = experiment.joinpath(f"{query} timestamps.svg")
         info(f"Saving figure {path}")
         fig, ax = subplots(nrows=1, ncols=1)
         ax.set_title(query)
@@ -209,11 +210,14 @@ def combination_comparison(experiment: Path) -> None:
     last_result_min: Dict[str, float] = {}
     last_result_max: Dict[str, float] = {}
     total_http: Dict[str, float] = {}
+    total_restarts: Dict[str, float] = {}
 
     for combination, results in combinations.items():
         # These are counted per-combination, not compared sum-wise
         total_queries[combination] = len(results)
         total_success[combination] = sum(0 if r.failed else 1 for r in results)
+        total_restarts[combination] = 0
+
         # These must be comaprable between combinations, hence failed queries are ignored
         total_dieff[combination] = 0
         dieff_min[combination] = 999
@@ -269,6 +273,14 @@ def combination_comparison(experiment: Path) -> None:
                     last_result_min[combination], result.timestamps_max[-1]
                 )
 
+        log_path = experiment.joinpath(combination, "logs", ENDPOINT_LOG_NAME)
+
+        if log_path.exists() and log_path.is_file():
+            with open(log_path, "r") as log_file:
+                for row in log_file:
+                    if "Swapping join order" in row:
+                        total_restarts[combination] += 1
+
     with open(
         experiment.joinpath("combination-comparison.tsv"), "w"
     ) as templates_summary:
@@ -304,6 +316,7 @@ def combination_comparison(experiment: Path) -> None:
                     "http",
                     "success",
                     "queries",
+                    "restarts_total",
                 )
             )
             + "\n"
@@ -340,6 +353,7 @@ def combination_comparison(experiment: Path) -> None:
                         f"{total_http[combination]:.0f}",
                         f"{total_success[combination]:.0f}",
                         f"{total_queries[combination]:.0f}",
+                        f"{total_restarts[combination]:.3f}",
                     )
                 )
                 + "\n"
@@ -351,10 +365,10 @@ def combination_comparison(experiment: Path) -> None:
 def main() -> None:
     setup_logging()
     args = parse_args()
-    if args.experiment.joinpath(RESULTS_FILE_NAME).exists():
-        create_readme(args.experiment)
+    if args.target.joinpath(RESULTS_FILE_NAME).exists():
+        create_readme(args.target)
     else:
-        combination_comparison(args.experiment)
+        combination_comparison(args.target)
 
 
 if __name__ == "__main__":

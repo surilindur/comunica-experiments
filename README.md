@@ -19,6 +19,21 @@ The following experiments reside here:
 * [**Link Traversal over Solid with Bloom Filters**](experiments/ltqp-solid-bloom-filters/), to explore the use of Bloom filters to remove unnecessary links during link traversal over Solid pods. The purpose of this experiment is to establish an understanding of whether Bloom filters could be beneficial in pruning links during traversal, specifically within the context of Solid pods.
 * [**Link Traversal over Solid with Join Plan Restarts**](experiments/ltqp-solid-join-restart/), to evaluate the impact of restarting most of the query plan upon cardinality estimate updates. The purpose of this experiment is to underline the importance of client-side adaptive techniques in improving query execution, even within link traversal scenarios.
 
+## Results
+
+The results for the experiments are provided in the results directory,
+and the scripts used to generate figures and summaries in the scripts directory.
+The diefficiency metrics used in the result analysis is calculated as trapezoidal integral,
+using the result arrival times as x-axis and result counts as y-axis.
+
+To generate the analysis for a specific experiment:
+
+```bash
+python scripts/process.py --experiment ./results/ltqp-solid-join-restart
+```
+
+The plots will need further fine-tuning, and exist mostly for reference at the moment.
+
 ## Running
 
 After cloning the repository, install dependencies with [Yarn](https://github.com/yarnpkg/berry):

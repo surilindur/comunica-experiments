@@ -1,4 +1,6 @@
+.venv
 .yarn
+__pycache__
 node_modules
 experiments/*/combinations
 experiments/*/generated/*

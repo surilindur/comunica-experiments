@@ -21,12 +21,12 @@
     "@type": "StaticDockerResourceConstraints",
     "cpu_percentage": 100
   },
-  "queryRunnerReplication": 5,
+  "queryRunnerReplication": 1,
   "queryRunnerWarmupRounds": 0,
   "queryRunnerRequestDelay": 0,
   "queryRunnerEndpointAvailabilityCheckTimeout": 1000,
   "queryRunnerUrlParams": {},
-  "queryTimeoutFallback": 70000,
+  "queryTimeoutFallback": 130000,
   "hookSparqlEndpoint": {
     "@id": "urn:jbr:ltqp-solid-join-restart:hookSparqlEndpoint",
     "@type": "HookSparqlEndpointComunica",
@@ -40,7 +40,7 @@
     "additionalBinds": [],
     "clientPort": 3001,
     "clientLogLevel": "info",
-    "queryTimeout": 60,
+    "queryTimeout": 120,
     "maxMemory": 8192
   }
 }

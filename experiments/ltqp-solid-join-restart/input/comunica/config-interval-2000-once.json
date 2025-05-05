@@ -2,15 +2,20 @@
   "@context": [
     "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/runner/^4.0.0/components/context.jsonld",
     "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-rdf-join-inner-restart/^0.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-rdf-metadata-accumulate-cardinality-void/^0.0.0/components/context.jsonld",
     "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/config-query-sparql-prototype/^0.0.0/components/context.jsonld"
   ],
   "import": [
-    "ccqsp:config/config-base.json",
-    "ccqsp:config/rdf-metadata-accumulate/cardinality-void.json"
+    "ccqsp:config/config-base.json"
   ],
   "@id": "urn:comunica:default:Runner",
   "@type": "Runner",
   "actors": [
+    {
+      "@id": "urn:comunica:default:rdf-metadata-accumulate/actors#cardinality-void",
+      "@type": "ActorRdfMetadataAccumulateCardinalityVoid",
+      "predicateBasedEstimation": false
+    },
     {
       "@id": "urn:comunica:default:rdf-join/actors#restart",
       "@type": "ActorRdfJoinInnerRestart",

@@ -19,9 +19,9 @@
   "serverBaseUrl": "http://solidbench-server:3000/",
   "serverResourceConstraints": {
     "@type": "StaticDockerResourceConstraints",
-    "cpu_percentage": 100
+    "cpu_percentage": 400
   },
-  "queryRunnerReplication": 1,
+  "queryRunnerReplication": 5,
   "queryRunnerWarmupRounds": 0,
   "queryRunnerRequestDelay": 0,
   "queryRunnerEndpointAvailabilityCheckTimeout": 1000,
@@ -33,7 +33,7 @@
     "dockerfileClient": "input/comunica/Dockerfile",
     "resourceConstraints": {
       "@type": "StaticDockerResourceConstraints",
-      "cpu_percentage": 100
+      "cpu_percentage": 400
     },
     "configClient": "input/comunica/config-%FACTOR-engine%.json",
     "contextClient": "input/comunica/context.json",

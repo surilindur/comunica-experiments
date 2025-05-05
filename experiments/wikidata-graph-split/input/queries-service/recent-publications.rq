@@ -1,0 +1,45 @@
+# https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/WDQS_graph_split/Federated_Queries_Examples#Recent_publications
+PREFIX bd: <http://www.bigdata.com/rdf#>
+PREFIX target: <http://www.wikidata.org/entity/Q37860261>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX wdsubgraph: <https://query.wikidata.org/subgraph/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT
+  (MIN(?dates) AS ?date)
+  ?work ?workLabel (CONCAT("#work/", SUBSTR(STR(?work), 32)) AS ?workUrl)
+  (GROUP_CONCAT(DISTINCT ?type_label; separator=", ") AS ?type)
+  (SAMPLE(?pages_) AS ?pages)
+  ?venue ?venueLabel
+  (CONCAT("#venue/", SUBSTR(STR(?venue), 32)) AS ?venueUrl)
+  (GROUP_CONCAT(DISTINCT ?author_label; separator=", ") AS ?authors)
+  # (CONCAT("#authors/", GROUP_CONCAT(DISTINCT SUBSTR(STR(?author), 32); separator=",")) AS ?authorsUrl)
+WHERE {
+  {
+    ?work (wdt:P50|wdt:P98) target: ,
+                            ?author ;
+          wdt:P577 ?datetimes .
+    OPTIONAL { ?work wdt:P1433 ?venue }
+    OPTIONAL { ?work wdt:P1104 ?pages_ }
+    OPTIONAL { ?work wdt:P31 ?type_ }
+  } UNION {
+    SERVICE wdsubgraph:scholarly_articles {
+      ?work (wdt:P50|wdt:P98) target: ,
+                    ?author ;
+            wdt:P577 ?datetimes .
+      OPTIONAL { ?work wdt:P1104 ?pages_ }
+      OPTIONAL { ?work wdt:P1433 ?venue }
+      OPTIONAL { ?work wdt:P31 ?type_ }
+      BIND(?workLabel AS ?workLabel)
+      SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+    }
+  }
+  OPTIONAL { ?author rdfs:label ?author_label_ . FILTER (LANG(?author_label_) = 'en') }
+  OPTIONAL { ?type_ rdfs:label ?type_label . FILTER (LANG(?type_label) = 'en') }
+  BIND(COALESCE(?author_label_, SUBSTR(STR(?author), 32)) AS ?author_label)
+  BIND(xsd:date(?datetimes) AS ?dates)
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+}
+GROUP BY ?work ?workLabel ?venue ?venueLabel
+ORDER BY DESC(?date)

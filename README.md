@@ -40,6 +40,21 @@ python scripts/cli.py analyse results/example-experiment
 
 The plots will need further fine-tuning, and exist mostly for reference at the moment.
 
+## Results
+
+The results for the experiments are provided in the results directory,
+and the scripts used to generate figures and summaries in the scripts directory.
+The diefficiency metrics used in the result analysis is calculated as trapezoidal integral,
+using the result arrival times as x-axis and result counts as y-axis.
+
+To generate the analysis for a specific experiment:
+
+```bash
+python scripts/tool.py --results results/ltqp-solid-join-restart
+```
+
+The plots will need further fine-tuning, and exist mostly for reference at the moment.
+
 ## Running
 
 After cloning the repository, install dependencies with [Yarn](https://github.com/yarnpkg/berry):

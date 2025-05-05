@@ -1,0 +1,9 @@
+# https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/WDQS_graph_split/Federated_Queries_Examples#Simple_lookup_by_object_on_the_truthy_graph
+PREFIX bd: <http://www.bigdata.com/rdf#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+SELECT ?x ?xLabel ?r ?relLabel {
+  ?x ?r wd:Q1542532 .
+  ?rel wikibase:directClaim ?r
+  SERVICE wikibase:label { bd:serviceParam wikibase:language 'en,de,fr,ru,nl,it,ja,uk,cs,sk,be,ca'. }
+} ORDER BY ?r ?xLabel

@@ -1,0 +1,46 @@
+# https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/WDQS_graph_split/Federated_Queries_Examples#Property_paths
+PREFIX bd: <http://www.bigdata.com/rdf#>
+PREFIX hint: <http://www.bigdata.com/queryHints#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX target: <http://www.wikidata.org/entity/Q104450895>
+PREFIX wdsubgraph: <https://query.wikidata.org/subgraph/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+SELECT ?count (CONCAT("/topics/Q104450895,", SUBSTR(STR(?topic), 32)) AS ?countUrl)
+       ?topic ?topicLabel (CONCAT("/topic/", SUBSTR(STR(?topic), 32)) AS ?topicUrl)
+       ?example_work ?example_workLabel (CONCAT("/work/", SUBSTR(STR(?example_work), 32)) AS ?example_workUrl)
+WHERE {
+  {
+    SELECT (COUNT(DISTINCT(?work)) AS ?count) ?topic (SAMPLE(?work) AS ?example_work) WHERE {
+      { ?topics ( wdt:P31*/wdt:P279* | wdt:P361+ | wdt:P1269+) target: }
+      hint:Prior hint:runFirst true .
+      {
+        # Find works for the specific queried topic
+      ?work wdt:P921 ?topics .
+        # Find co-occuring topics
+        ?work wdt:P921 ?topic .
+        # Avoid listing the queried topic
+        FILTER (target: != ?topic)
+      } UNION {
+        SERVICE wdsubgraph:scholarly_articles {
+          # Find works for the specific queried topic
+        ?work wdt:P921 ?topics .
+          # Find co-occuring topics
+          ?work wdt:P921 ?topic .
+          # Avoid listing the queried topic
+          FILTER (target: != ?topic)
+        }
+      }
+    } GROUP BY ?topic
+  }
+  # Label the results
+  OPTIONAL {
+    SERVICE wdsubgraph:scholarly_articles {
+      # TODO Figure out a way to use the label service
+      ?example_work rdfs:label ?example_workLabel .
+      FILTER(LANG(?example_workLabel) = "en")
+    }
+  }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en,da,de,es,fr,jp,nl,no,ru,sv,zh" . }
+}
+ORDER BY DESC(?count)

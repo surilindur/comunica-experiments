@@ -14,7 +14,7 @@
     {
       "@id": "urn:comunica:default:rdf-metadata-accumulate/actors#cardinality-void",
       "@type": "ActorRdfMetadataAccumulateCardinalityVoid",
-      "predicateBasedEstimation": false
+      "predicateBasedEstimation": true
     },
     {
       "@id": "urn:comunica:default:rdf-join/actors#restart",
@@ -29,7 +29,7 @@
         { "@id": "urn:comunica:default:rdf-join/actors#inner-multi-smallest" }
       ],
       "evaluationAfterMetadataUpdate": false,
-      "evaluationInterval": 5000,
+      "evaluationInterval": 10000,
       "restartLimit": 1
     }
   ]

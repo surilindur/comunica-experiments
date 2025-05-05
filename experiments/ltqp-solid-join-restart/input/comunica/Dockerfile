@@ -5,7 +5,7 @@ RUN apk add git
 # Clone the Comunica repository and install
 RUN git clone https://github.com/surilindur/comunica-components /opt/comunica
 WORKDIR /opt/comunica
-RUN git checkout 49cc01f3d255d9ef14094abe38d2d37e607fba89
+RUN git checkout 62a9c8609f0ade5a9eca2a8dfd4ab666ba02144f
 RUN corepack enable
 RUN yarn install --immutable
 WORKDIR /opt/comunica/engines/query-sparql-prototype

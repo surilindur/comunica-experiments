@@ -3119,20 +3119,20 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*, @types/node@npm:>=13.7.0":
-  version: 22.15.3
-  resolution: "@types/node@npm:22.15.3"
+  version: 22.15.12
+  resolution: "@types/node@npm:22.15.12"
   dependencies:
     undici-types: "npm:~6.21.0"
-  checksum: 10/6b4ff03c36598432b419980f828281aa16383e2de6eb61f73275495ef8d2cbf8cb5607659b4cae5ff8b2b2ff69913ea07ffcc0be029e4280b6e8bc138dc6629b
+  checksum: 10/5283535d6305b3cc842fc45f15e7299bb3763e7e1969567f6140814346f975dc9f9237af7a61b3b6c69797cf58bb267edd94e9228353058a7b02aa482195d1c3
   languageName: node
   linkType: hard
 
 "@types/node@npm:^18.0.0, @types/node@npm:^18.11.18, @types/node@npm:^18.18.4":
-  version: 18.19.87
-  resolution: "@types/node@npm:18.19.87"
+  version: 18.19.96
+  resolution: "@types/node@npm:18.19.96"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 10/1e71b6d16dedeaa1fd5ff55baf1f353ca1f9e673b2e482d7fe82fa685addea5159a36602a344784c989b5e07ca1be633d0c493adf5951dee5a29cee69d613e7f
+  checksum: 10/a92116176d9bb571b1f145e3891a261a3b22d3c9baa351cf4813df315a213aad6832168e24a23dfc6ab4cca23c5bacd40704b76bb2458f6214a2d50456e45e46
   languageName: node
   linkType: hard
 
@@ -6602,12 +6602,12 @@ __metadata:
   linkType: hard
 
 "shaclc-parse@npm:^1.4.0":
-  version: 1.4.0
-  resolution: "shaclc-parse@npm:1.4.0"
+  version: 1.4.1
+  resolution: "shaclc-parse@npm:1.4.1"
   dependencies:
-    "@rdfjs/types": "npm:^1.1.0"
+    "@rdfjs/types": "npm:^2.0.0"
     n3: "npm:^1.16.3"
-  checksum: 10/d1c1e3bffb4b58e0a21cc9cae6fd8ab5d13541b17fba8270212600a6e672c2c511b1b2840c0a9384d04f3d994a81b3b9eef61a26b0925ad192bf9bb18a156189
+  checksum: 10/ae95e05a867ae630332e4b44a135fbac3d417e932917b9c9e794c0ed21066fad8e36fcd10b4da1fea553922f3567a33b2e74bf7bc9cf1990d5680e9e4c3567d5
   languageName: node
   linkType: hard
 
@@ -7375,8 +7375,8 @@ __metadata:
   linkType: hard
 
 "ws@npm:^8.14.2":
-  version: 8.18.1
-  resolution: "ws@npm:8.18.1"
+  version: 8.18.2
+  resolution: "ws@npm:8.18.2"
   peerDependencies:
     bufferutil: ^4.0.1
     utf-8-validate: ">=5.0.2"
@@ -7385,7 +7385,7 @@ __metadata:
       optional: true
     utf-8-validate:
       optional: true
-  checksum: 10/3f38e9594f2af5b6324138e86b74df7d77bbb8e310bf8188679dd80bac0d1f47e51536a1923ac3365f31f3d8b25ea0b03e4ade466aa8292a86cd5defca64b19b
+  checksum: 10/018e04ec95561d88248d53a2eaf094b4ae131e9b062f2679e6e8a62f04649bc543448f1e038125225ac6bbb25f54c1e65d7a2cc9dbc1e28b43e5e6b7162ad88e
   languageName: node
   linkType: hard
 

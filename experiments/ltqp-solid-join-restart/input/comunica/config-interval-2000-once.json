@@ -6,7 +6,8 @@
     "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/config-query-sparql-prototype/^0.0.0/components/context.jsonld"
   ],
   "import": [
-    "ccqsp:config/config-base.json"
+    "ccqsp:config/config-base.json",
+    "ccqsp:config/rdf-join-entries-sort/actors-cardinality.json"
   ],
   "@id": "urn:comunica:default:Runner",
   "@type": "Runner",

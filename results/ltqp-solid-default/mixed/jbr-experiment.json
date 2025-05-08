@@ -1,0 +1,46 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^6.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@jbr-experiment/solidbench/^6.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@jbr-hook/sparql-endpoint-comunica/^6.0.0/components/context.jsonld"
+  ],
+  "@id": "urn:jbr:ltqp-solid-default:combination_3",
+  "@type": "ExperimentSolidBench",
+  "scale": "0.1",
+  "configEnhance": "input/solidbench/enhancer.json",
+  "configFragment": "input/solidbench/fragmenter-mixed.json",
+  "configQueries": "input/solidbench/queries.json",
+  "configServer": "input/solidserver/config.json",
+  "hadoopMemory": "4G",
+  "dockerfileServer": "input/solidserver/Dockerfile",
+  "endpointUrl": "http://localhost:3001/sparql",
+  "serverPort": 3000,
+  "serverLogLevel": "info",
+  "serverBaseUrl": "http://solidbench-server:3000/",
+  "serverResourceConstraints": {
+    "@type": "StaticDockerResourceConstraints",
+    "cpu_percentage": 800
+  },
+  "queryRunnerReplication": 5,
+  "queryRunnerWarmupRounds": 0,
+  "queryRunnerRequestDelay": 10000,
+  "queryRunnerEndpointAvailabilityCheckTimeout": 1000,
+  "queryRunnerUrlParams": {},
+  "queryTimeoutFallback": 130000,
+  "hookSparqlEndpoint": {
+    "@id": "urn:jbr:ltqp-solid-default:combination_3:hookSparqlEndpoint",
+    "@type": "HookSparqlEndpointComunica",
+    "dockerfileClient": "input/comunica/Dockerfile",
+    "resourceConstraints": {
+      "@type": "StaticDockerResourceConstraints",
+      "cpu_percentage": 800
+    },
+    "configClient": "input/comunica/config.json",
+    "contextClient": "input/comunica/context.json",
+    "additionalBinds": [],
+    "clientPort": 3001,
+    "clientLogLevel": "info",
+    "queryTimeout": 120,
+    "maxMemory": 24576
+  }
+}

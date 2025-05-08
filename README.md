@@ -26,10 +26,16 @@ and the scripts used to generate figures and summaries in the scripts directory.
 The diefficiency metrics used in the result analysis is calculated as trapezoidal integral,
 using the result arrival times as x-axis and result counts as y-axis.
 
+To collect the combination output from a specific experiment after running it:
+
+```bash
+python scripts/cli.py collect experiments/example-experiment
+```
+
 To generate the analysis for a specific experiment:
 
 ```bash
-python scripts/process.py --experiment ./results/ltqp-solid-join-restart
+python scripts/cli.py analyse results/example-experiment
 ```
 
 The plots will need further fine-tuning, and exist mostly for reference at the moment.

@@ -16,6 +16,7 @@ jobs:
     name: Validate
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         experiment:
           - ltqp-solid-bloom-filters

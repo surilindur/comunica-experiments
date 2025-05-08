@@ -38,17 +38,17 @@ def collect_results(path: Path) -> None:
 
         # Compress the logs directory
         logs_directory_path = combination_results_path.joinpath("logs")
-        logs_archive_path = combination_results_path.joinpath("logs.tar.gz")
+        logs_archive_path = combination_results_path.joinpath("logs.tar.xz")
         info(f"Compressing logs into {logs_archive_path}")
-        with open_tarfile(logs_archive_path, "w:gz") as tar:
+        with open_tarfile(logs_archive_path, "w:xz", preset=9) as tar:
             tar.add(name=logs_directory_path, arcname=".")
         rmtree(logs_directory_path)
 
         # Compress the stats
-        stats_archive_path = combination_results_path.joinpath("stats.tar.gz")
+        stats_archive_path = combination_results_path.joinpath("stats.tar.xz")
         info(f"Compressing stats into {stats_archive_path}")
-        with open_tarfile(stats_archive_path, "w:gz") as tar:
-            for stats_file_path in results_path.iterdir():
+        with open_tarfile(stats_archive_path, "w:xz", preset=9) as tar:
+            for stats_file_path in combination_results_path.iterdir():
                 if stats_file_path.name.startswith("stats-"):
                     tar.add(name=stats_file_path, arcname=stats_file_path.name)
                     stats_file_path.unlink()

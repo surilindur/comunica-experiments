@@ -2447,6 +2447,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@jbr-experiment/sparql-custom@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "@jbr-experiment/sparql-custom@npm:6.0.0"
+  dependencies:
+    "@types/fs-extra": "npm:^9.0.11"
+    "@types/yargs": "npm:^17.0.0"
+    fs-extra: "npm:^10.0.0"
+    sparql-benchmark-runner: "npm:^5.0.0"
+  peerDependencies:
+    jbr: ">=2.0.0"
+  checksum: 10/0f1a6c83b8d91118e3fe07c1d3a6236041249a6cf47bc2d30681f0f2195b41400c56de5f09bbc83be53cac124a3ad4af436b89befabb302b82750bc803538ce2
+  languageName: node
+  linkType: hard
+
 "@jbr-hook/sparql-endpoint-comunica@npm:^6.0.0":
   version: 6.0.0
   resolution: "@jbr-hook/sparql-endpoint-comunica@npm:6.0.0"
@@ -2897,11 +2911,11 @@ __metadata:
   linkType: hard
 
 "@types/cors@npm:^2.8.14":
-  version: 2.8.17
-  resolution: "@types/cors@npm:2.8.17"
+  version: 2.8.18
+  resolution: "@types/cors@npm:2.8.18"
   dependencies:
     "@types/node": "npm:*"
-  checksum: 10/469bd85e29a35977099a3745c78e489916011169a664e97c4c3d6538143b0a16e4cc72b05b407dc008df3892ed7bf595f9b7c0f1f4680e169565ee9d64966bde
+  checksum: 10/6e49b741345e67834cd19d766228509e4b37d6d5c272355bb059502b4787f5adf58776d9114ac5f0f407966e0347ae8d1f995d7ea41e6a24f716d36b3010401b
   languageName: node
   linkType: hard
 
@@ -3119,20 +3133,20 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*, @types/node@npm:>=13.7.0":
-  version: 22.15.12
-  resolution: "@types/node@npm:22.15.12"
+  version: 22.15.17
+  resolution: "@types/node@npm:22.15.17"
   dependencies:
     undici-types: "npm:~6.21.0"
-  checksum: 10/5283535d6305b3cc842fc45f15e7299bb3763e7e1969567f6140814346f975dc9f9237af7a61b3b6c69797cf58bb267edd94e9228353058a7b02aa482195d1c3
+  checksum: 10/3f5870ec1ac16b1dd8e5817de81164df9b69e4cf19cce692cb7c9b1af1deaecfd98b591b56155fcc4aa582f7189a4fc0c8d7d3226fa0387403db615a12dd8cb6
   languageName: node
   linkType: hard
 
 "@types/node@npm:^18.0.0, @types/node@npm:^18.11.18, @types/node@npm:^18.18.4":
-  version: 18.19.96
-  resolution: "@types/node@npm:18.19.96"
+  version: 18.19.100
+  resolution: "@types/node@npm:18.19.100"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 10/a92116176d9bb571b1f145e3891a261a3b22d3c9baa351cf4813df315a213aad6832168e24a23dfc6ab4cca23c5bacd40704b76bb2458f6214a2d50456e45e46
+  checksum: 10/85939f4610aa526dc2a07eceeaeb12d8c56a4b817e76d921f8a6b4bc285892f70dcdf102587dad6e8b0c6d9b7109c2da5a1666b9553c1015c9f7348952e03e35
   languageName: node
   linkType: hard
 
@@ -7307,6 +7321,16 @@ __metadata:
   checksum: 10/6ec99e89ba32c7e748b8a3144e64bfc74aa63e2b2eacbb61a0060ad0b961eb1a632b08fb1de067ed59b002cec3e21de18299216ebf2325ef0f78e0f121e14e90
   languageName: node
   linkType: hard
+
+"wikidata-graph-split@workspace:experiments/wikidata-graph-split":
+  version: 0.0.0-use.local
+  resolution: "wikidata-graph-split@workspace:experiments/wikidata-graph-split"
+  dependencies:
+    "@jbr-experiment/sparql-custom": "npm:^6.0.0"
+    "@jbr-hook/sparql-endpoint-comunica": "npm:^6.0.0"
+    jbr: "npm:^6.0.0"
+  languageName: unknown
+  linkType: soft
 
 "winston-transport@npm:^4.5.0, winston-transport@npm:^4.9.0":
   version: 4.9.0

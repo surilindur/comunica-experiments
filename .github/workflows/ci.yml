@@ -21,7 +21,7 @@ jobs:
           - ltqp-solid-bloom-filters
           - ltqp-solid-default
           - ltqp-solid-join-restart
-          - wikidata-graph-splid
+          - wikidata-graph-split
     steps:
       - name: Use Node.js ${{ env.DEFAULT_NODE_VERSION }}
         uses: actions/setup-node@v4

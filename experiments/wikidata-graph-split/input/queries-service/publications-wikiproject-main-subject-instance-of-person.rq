@@ -1,0 +1,24 @@
+# https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/WDQS_graph_split/Federated_Queries_Examples#Publications_in_a_WikiProject_(Q16695773)_that_have_a_main_subject_that_is_an_instance_of_a_person
+PREFIX bd: <http://www.bigdata.com/rdf#>
+PREFIX hint: <http://www.bigdata.com/queryHints#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdsubgraph: <https://query.wikidata.org/subgraph/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+SELECT DISTINCT ?Thesis ?ThesisLabel ?mainsubjectLabel WHERE {
+  {
+    SERVICE wdsubgraph:scholarly_articles {
+      ?Thesis wdt:P5008 wd:Q111645234 ;
+              wdt:P921 ?mainsubject.
+      BIND(?ThesisLabel as ?ThesisLabel) # we pull the label of the publication from the federated subgraph
+      SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+    }
+  } UNION {
+    ?Thesis wdt:P5008 wd:Q111645234 ;
+            wdt:P921 ?mainsubject.
+  }
+  hint:Prior hint:runFirst true .
+  ?mainsubject wdt:P31 wd:Q5.
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+}
+LIMIT 100

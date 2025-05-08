@@ -1,0 +1,20 @@
+# https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/WDQS_graph_split/Federated_Queries_Examples#Publications_in_a_WikiProject_(Q16695773)_but_where_the_linked_author_is_not_in_that_project
+PREFIX bd: <http://www.bigdata.com/rdf#>
+PREFIX hint: <http://www.bigdata.com/queryHints#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdsubgraph: <https://query.wikidata.org/subgraph/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+SELECT DISTINCT ?person ?personLabel WHERE {
+  {
+    SERVICE wdsubgraph:scholarly_articles {
+      ?thesis wdt:P5008 wd:Q111645234. #thesis is in the NZThesisProject
+    }
+  } UNION {
+    ?thesis wdt:P5008 wd:Q111645234. #thesis is in the NZThesisProject
+  }
+  hint:Prior hint:runFirst true .
+  ?person wdt:P1026 ?thesis.       #the thesis has a linked author
+  MINUS { ?person wdt:P5008 wd:Q111645234 . }  #person is not marked as in the thesis project yet
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en".}
+}

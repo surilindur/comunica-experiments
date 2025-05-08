@@ -1,0 +1,18 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^6.0.0/components/context.jsonld"
+  ],
+  "@id": "urn:jbr:wikidata-graph-split-combinations",
+  "@type": "FullFactorialCombinationProvider",
+  "commonGenerated": true,
+  "factors": {
+    "cardinality": [
+      "void",
+      "count"
+    ],
+    "federation": [
+      "automatic",
+      "service"
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+# https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/WDQS_graph_split/Federated_Queries_Examples#Lookup_from_mwapi_results
+PREFIX bd: <http://www.bigdata.com/rdf#>
+PREFIX mwapi: <https://www.mediawiki.org/ontology#API/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+SELECT ?item ?itemLabel ?type ?typeLabel WHERE {
+  SERVICE wikibase:mwapi {
+    bd:serviceParam wikibase:api "EntitySearch" .
+    bd:serviceParam wikibase:endpoint "www.wikidata.org" .
+    bd:serviceParam mwapi:search "house of medici" .
+    bd:serviceParam mwapi:language "en" .
+    ?item wikibase:apiOutputItem mwapi:item .
+    ?num wikibase:apiOrdinal true .
+  }
+  ?item (wdt:P31|wdt:P279|wdt:P366) ?type
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+} ORDER BY ASC(?num) LIMIT 10

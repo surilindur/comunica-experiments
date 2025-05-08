@@ -1,0 +1,17 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^6.0.0/components/context.jsonld"
+  ],
+  "@id": "urn:jbr:ltqp-solid-default-combinations",
+  "@type": "FullFactorialCombinationProvider",
+  "commonGenerated": false,
+  "factors": {
+    "fragmentation": [
+      "file-per-date",
+      "file-per-location",
+      "file-per-resource",
+      "mixed",
+      "single-file"
+    ]
+  }
+}

@@ -95,36 +95,180 @@
       "targetPredicateRegex": "vocabulary/hasCreator$",
       "transformers": [
         {
-          "@type": "QuadTransformerDistinct",
-          "transformer": {
-            "@type": "QuadTransformerAppendQuadLink",
-            "matcher": {
-              "@type": "QuadMatcherPredicate",
-              "predicateRegex": "vocabulary/hasCreator$"
+          "comment": "separate file per resource",
+          "@type": "QuadTransformerCompositeSequential",
+          "transformers": [
+            {
+              "@type": "QuadTransformerDistinct",
+              "transformer": {
+                "@type": "QuadTransformerAppendQuadLink",
+                "matcher": {
+                  "@type": "QuadMatcherPredicate",
+                  "predicateRegex": "vocabulary/hasCreator$"
+                },
+                "identifier": "object",
+                "predicate": "http://solidbench-server:3000/internal/postsFragmentation",
+                "link": "http://solidbench-server:3000/internal/FragmentationPerResource"
+              }
             },
-            "identifier": "object",
-            "predicate": "http://solidbench-server:3000/internal/postsFragmentation",
-            "link": "http://solidbench-server:3000/internal/FragmentationPerResource"
-          }
+            {
+              "@type": "QuadTransformerRemapResourceIdentifier",
+              "newIdentifierSeparator": "../posts/",
+              "typeRegex": "vocabulary/Post$",
+              "identifierPredicateRegex": "vocabulary/id$",
+              "targetPredicateRegex": "vocabulary/hasCreator$"
+            },
+            {
+              "@type": "QuadTransformerDistinct",
+              "transformer": {
+                "@type": "QuadTransformerAppendResourceSolidTypeIndex",
+                "typeRegex": "vocabulary/Post$",
+                "profilePredicateRegex": "vocabulary/hasCreator$",
+                "typeIndex": "../settings/publicTypeIndex",
+                "entrySuffix": "#entry-posts",
+                "entryReference": "../posts/",
+                "entryContainer": "true"
+              }
+            }
+          ]
         },
         {
-          "@type": "QuadTransformerRemapResourceIdentifier",
-          "newIdentifierSeparator": "../posts/",
-          "typeRegex": "vocabulary/Post$",
-          "identifierPredicateRegex": "vocabulary/id$",
-          "targetPredicateRegex": "vocabulary/hasCreator$"
+          "comment": "all in one file",
+          "@type": "QuadTransformerCompositeSequential",
+          "transformers": [
+            {
+              "@type": "QuadTransformerDistinct",
+              "transformer": {
+                "@type": "QuadTransformerAppendQuadLink",
+                "matcher": {
+                  "@type": "QuadMatcherPredicate",
+                  "predicateRegex": "vocabulary/hasCreator$"
+                },
+                "identifier": "object",
+                "predicate": "http://solidbench-server:3000/internal/postsFragmentation",
+                "link": "http://solidbench-server:3000/internal/FragmentationOneFile"
+              }
+            },
+            {
+              "@type": "QuadTransformerRemapResourceIdentifier",
+              "newIdentifierSeparator": "../posts#",
+              "typeRegex": "vocabulary/Post$",
+              "identifierPredicateRegex": "vocabulary/id$",
+              "targetPredicateRegex": "vocabulary/hasCreator$"
+            },
+            {
+              "@type": "QuadTransformerDistinct",
+              "transformer": {
+                "@type": "QuadTransformerAppendResourceSolidTypeIndex",
+                "typeRegex": "vocabulary/Post$",
+                "profilePredicateRegex": "vocabulary/hasCreator$",
+                "typeIndex": "../settings/publicTypeIndex",
+                "entrySuffix": "#entry-posts",
+                "entryReference": "../posts",
+                "entryContainer": "false"
+              }
+            }
+          ]
         },
         {
-          "@type": "QuadTransformerDistinct",
-          "transformer": {
-            "@type": "QuadTransformerAppendResourceSolidTypeIndex",
-            "typeRegex": "vocabulary/Post$",
-            "profilePredicateRegex": "vocabulary/hasCreator$",
-            "typeIndex": "../settings/publicTypeIndex",
-            "entrySuffix": "#entry-posts",
-            "entryReference": "../posts/",
-            "entryContainer": "true"
-          }
+          "comment": "fragment by location",
+          "@type": "QuadTransformerCompositeSequential",
+          "transformers": [
+            {
+              "@type": "QuadTransformerDistinct",
+              "transformer": {
+                "@type": "QuadTransformerAppendQuadLink",
+                "matcher": {
+                  "@type": "QuadMatcherPredicate",
+                  "predicateRegex": "vocabulary/hasCreator$"
+                },
+                "identifier": "object",
+                "predicate": "http://solidbench-server:3000/internal/postsFragmentation",
+                "link": "http://solidbench-server:3000/internal/FragmentationLocation"
+              }
+            },
+            {
+              "@type": "QuadTransformerRemapResourceIdentifier",
+              "newIdentifierSeparator": "../posts_tmp#",
+              "typeRegex": "vocabulary/Post$",
+              "identifierPredicateRegex": "vocabulary/id$",
+              "targetPredicateRegex": "vocabulary/hasCreator$"
+            },
+            {
+              "@type": "QuadTransformerRemapResourceIdentifier",
+              "newIdentifierSeparator": "../posts/",
+              "typeRegex": "vocabulary/Post$",
+              "identifierPredicateRegex": "vocabulary/isLocatedIn$",
+              "targetPredicateRegex": "vocabulary/hasCreator$",
+              "identifierValueModifier": {
+                "@type": "ValueModifierRegexReplaceGroup",
+                "regex": "^.*/([^/]*)$"
+              },
+              "keepSubjectFragment": true
+            },
+            {
+              "@type": "QuadTransformerDistinct",
+              "transformer": {
+                "@type": "QuadTransformerAppendResourceSolidTypeIndex",
+                "typeRegex": "vocabulary/Post$",
+                "profilePredicateRegex": "vocabulary/hasCreator$",
+                "typeIndex": "../settings/publicTypeIndex",
+                "entrySuffix": "#entry-posts",
+                "entryReference": "../posts/",
+                "entryContainer": "true"
+              }
+            }
+          ]
+        },
+        {
+          "comment": "fragment by creation day",
+          "@type": "QuadTransformerCompositeSequential",
+          "transformers": [
+            {
+              "@type": "QuadTransformerDistinct",
+              "transformer": {
+                "@type": "QuadTransformerAppendQuadLink",
+                "matcher": {
+                  "@type": "QuadMatcherPredicate",
+                  "predicateRegex": "vocabulary/hasCreator$"
+                },
+                "identifier": "object",
+                "predicate": "http://solidbench-server:3000/internal/postsFragmentation",
+                "link": "http://solidbench-server:3000/internal/FragmentationCreationDate"
+              }
+            },
+            {
+              "@type": "QuadTransformerRemapResourceIdentifier",
+              "newIdentifierSeparator": "../posts_tmp#",
+              "typeRegex": "vocabulary/Post$",
+              "identifierPredicateRegex": "vocabulary/id$",
+              "targetPredicateRegex": "vocabulary/hasCreator$"
+            },
+            {
+              "@type": "QuadTransformerRemapResourceIdentifier",
+              "newIdentifierSeparator": "../posts/",
+              "typeRegex": "vocabulary/Post$",
+              "identifierPredicateRegex": "vocabulary/creationDate$",
+              "targetPredicateRegex": "vocabulary/hasCreator$",
+              "identifierValueModifier": {
+                "@type": "ValueModifierRegexReplaceGroup",
+                "regex": "^([0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]).*$"
+              },
+              "keepSubjectFragment": true
+            },
+            {
+              "@type": "QuadTransformerDistinct",
+              "transformer": {
+                "@type": "QuadTransformerAppendResourceSolidTypeIndex",
+                "typeRegex": "vocabulary/Post$",
+                "profilePredicateRegex": "vocabulary/hasCreator$",
+                "typeIndex": "../settings/publicTypeIndex",
+                "entrySuffix": "#entry-posts",
+                "entryReference": "../posts/",
+                "entryContainer": "true"
+              }
+            }
+          ]
         }
       ]
     },
@@ -134,36 +278,180 @@
       "targetPredicateRegex": "vocabulary/hasCreator$",
       "transformers": [
         {
-          "@type": "QuadTransformerDistinct",
-          "transformer": {
-            "@type": "QuadTransformerAppendQuadLink",
-            "matcher": {
-              "@type": "QuadMatcherPredicate",
-              "predicateRegex": "vocabulary/hasCreator$"
+          "comment": "separate file per resource",
+          "@type": "QuadTransformerCompositeSequential",
+          "transformers": [
+            {
+              "@type": "QuadTransformerDistinct",
+              "transformer": {
+                "@type": "QuadTransformerAppendQuadLink",
+                "matcher": {
+                  "@type": "QuadMatcherPredicate",
+                  "predicateRegex": "vocabulary/hasCreator$"
+                },
+                "identifier": "object",
+                "predicate": "http://solidbench-server:3000/internal/commentsFragmentation",
+                "link": "http://solidbench-server:3000/internal/FragmentationPerResource"
+              }
             },
-            "identifier": "object",
-            "predicate": "http://solidbench-server:3000/internal/commentsFragmentation",
-            "link": "http://solidbench-server:3000/internal/FragmentationPerResource"
-          }
+            {
+              "@type": "QuadTransformerRemapResourceIdentifier",
+              "newIdentifierSeparator": "../comments/",
+              "typeRegex": "vocabulary/Comment$",
+              "identifierPredicateRegex": "vocabulary/id$",
+              "targetPredicateRegex": "vocabulary/hasCreator$"
+            },
+            {
+              "@type": "QuadTransformerDistinct",
+              "transformer": {
+                "@type": "QuadTransformerAppendResourceSolidTypeIndex",
+                "typeRegex": "vocabulary/Comment$",
+                "profilePredicateRegex": "vocabulary/hasCreator$",
+                "typeIndex": "../settings/publicTypeIndex",
+                "entrySuffix": "#entry-comments",
+                "entryReference": "../comments/",
+                "entryContainer": "true"
+              }
+            }
+          ]
         },
         {
-          "@type": "QuadTransformerRemapResourceIdentifier",
-          "newIdentifierSeparator": "../comments/",
-          "typeRegex": "vocabulary/Comment$",
-          "identifierPredicateRegex": "vocabulary/id$",
-          "targetPredicateRegex": "vocabulary/hasCreator$"
+          "comment": "all in one file",
+          "@type": "QuadTransformerCompositeSequential",
+          "transformers": [
+            {
+              "@type": "QuadTransformerDistinct",
+              "transformer": {
+                "@type": "QuadTransformerAppendQuadLink",
+                "matcher": {
+                  "@type": "QuadMatcherPredicate",
+                  "predicateRegex": "vocabulary/hasCreator$"
+                },
+                "identifier": "object",
+                "predicate": "http://solidbench-server:3000/internal/commentsFragmentation",
+                "link": "http://solidbench-server:3000/internal/FragmentationOneFile"
+              }
+            },
+            {
+              "@type": "QuadTransformerRemapResourceIdentifier",
+              "newIdentifierSeparator": "../comments#",
+              "typeRegex": "vocabulary/Comment$",
+              "identifierPredicateRegex": "vocabulary/id$",
+              "targetPredicateRegex": "vocabulary/hasCreator$"
+            },
+            {
+              "@type": "QuadTransformerDistinct",
+              "transformer": {
+                "@type": "QuadTransformerAppendResourceSolidTypeIndex",
+                "typeRegex": "vocabulary/Comment$",
+                "profilePredicateRegex": "vocabulary/hasCreator$",
+                "typeIndex": "../settings/publicTypeIndex",
+                "entrySuffix": "#entry-comments",
+                "entryReference": "../comments",
+                "entryContainer": "false"
+              }
+            }
+          ]
         },
         {
-          "@type": "QuadTransformerDistinct",
-          "transformer": {
-            "@type": "QuadTransformerAppendResourceSolidTypeIndex",
-            "typeRegex": "vocabulary/Comment$",
-            "profilePredicateRegex": "vocabulary/hasCreator$",
-            "typeIndex": "../settings/publicTypeIndex",
-            "entrySuffix": "#entry-comments",
-            "entryReference": "../comments/",
-            "entryContainer": "true"
-          }
+          "comment": "fragment by location",
+          "@type": "QuadTransformerCompositeSequential",
+          "transformers": [
+            {
+              "@type": "QuadTransformerDistinct",
+              "transformer": {
+                "@type": "QuadTransformerAppendQuadLink",
+                "matcher": {
+                  "@type": "QuadMatcherPredicate",
+                  "predicateRegex": "vocabulary/hasCreator$"
+                },
+                "identifier": "object",
+                "predicate": "http://solidbench-server:3000/internal/commentsFragmentation",
+                "link": "http://solidbench-server:3000/internal/FragmentationLocation"
+              }
+            },
+            {
+              "@type": "QuadTransformerRemapResourceIdentifier",
+              "newIdentifierSeparator": "../comments_tmp#",
+              "typeRegex": "vocabulary/Comment$",
+              "identifierPredicateRegex": "vocabulary/id$",
+              "targetPredicateRegex": "vocabulary/hasCreator$"
+            },
+            {
+              "@type": "QuadTransformerRemapResourceIdentifier",
+              "newIdentifierSeparator": "../comments/",
+              "typeRegex": "vocabulary/Comment$",
+              "identifierPredicateRegex": "vocabulary/isLocatedIn$",
+              "targetPredicateRegex": "vocabulary/hasCreator$",
+              "identifierValueModifier": {
+                "@type": "ValueModifierRegexReplaceGroup",
+                "regex": "^.*/([^/]*)$"
+              },
+              "keepSubjectFragment": true
+            },
+            {
+              "@type": "QuadTransformerDistinct",
+              "transformer": {
+                "@type": "QuadTransformerAppendResourceSolidTypeIndex",
+                "typeRegex": "vocabulary/Comment$",
+                "profilePredicateRegex": "vocabulary/hasCreator$",
+                "typeIndex": "../settings/publicTypeIndex",
+                "entrySuffix": "#entry-comments",
+                "entryReference": "../comments/",
+                "entryContainer": "true"
+              }
+            }
+          ]
+        },
+        {
+          "comment": "fragment by creation day",
+          "@type": "QuadTransformerCompositeSequential",
+          "transformers": [
+            {
+              "@type": "QuadTransformerDistinct",
+              "transformer": {
+                "@type": "QuadTransformerAppendQuadLink",
+                "matcher": {
+                  "@type": "QuadMatcherPredicate",
+                  "predicateRegex": "vocabulary/hasCreator$"
+                },
+                "identifier": "object",
+                "predicate": "http://solidbench-server:3000/internal/commentsFragmentation",
+                "link": "http://solidbench-server:3000/internal/FragmentationCreationDate"
+              }
+            },
+            {
+              "@type": "QuadTransformerRemapResourceIdentifier",
+              "newIdentifierSeparator": "../comments_tmp#",
+              "typeRegex": "vocabulary/Comment$",
+              "identifierPredicateRegex": "vocabulary/id$",
+              "targetPredicateRegex": "vocabulary/hasCreator$"
+            },
+            {
+              "@type": "QuadTransformerRemapResourceIdentifier",
+              "newIdentifierSeparator": "../comments/",
+              "typeRegex": "vocabulary/Comment$",
+              "identifierPredicateRegex": "vocabulary/creationDate$",
+              "targetPredicateRegex": "vocabulary/hasCreator$",
+              "identifierValueModifier": {
+                "@type": "ValueModifierRegexReplaceGroup",
+                "regex": "^([0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]).*$"
+              },
+              "keepSubjectFragment": true
+            },
+            {
+              "@type": "QuadTransformerDistinct",
+              "transformer": {
+                "@type": "QuadTransformerAppendResourceSolidTypeIndex",
+                "typeRegex": "vocabulary/Comment$",
+                "profilePredicateRegex": "vocabulary/hasCreator$",
+                "typeIndex": "../settings/publicTypeIndex",
+                "entrySuffix": "#entry-comments",
+                "entryReference": "../comments/",
+                "entryContainer": "true"
+              }
+            }
+          ]
         }
       ]
     }

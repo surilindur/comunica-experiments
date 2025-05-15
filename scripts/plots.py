@@ -17,7 +17,7 @@ from utils import sort_labels
 IMAGE_DPI = 600
 IMAGE_EXT = "svg"
 
-rcParams["font.family"] = "serif"
+rcParams["font.family"] = "Noto Serif"
 
 
 def plot_http_requests(combinations: Dict[str, Iterable[BenchmarkResult]]) -> BytesIO:
@@ -25,7 +25,7 @@ def plot_http_requests(combinations: Dict[str, Iterable[BenchmarkResult]]) -> By
 
     info(f"Plotting HTTP request count for {len(combinations)} combinations")
 
-    fig, axes = subplots(
+    fig, ax = subplots(
         figsize=(6, 3 * (len(combinations) / 10)),
         layout="constrained",
     )
@@ -49,7 +49,7 @@ def plot_http_requests(combinations: Dict[str, Iterable[BenchmarkResult]]) -> By
             )
         )
 
-    axes.bxp(
+    ax.bxp(
         stats,
         widths=0.5,
         vert=False,
@@ -62,16 +62,20 @@ def plot_http_requests(combinations: Dict[str, Iterable[BenchmarkResult]]) -> By
 
     style.use("seaborn-v0_8-colorblind")
 
-    axes.spines["top"].set_visible(False)
-    axes.spines["right"].set_visible(False)
-    axes.spines["bottom"].set_visible(False)
-    axes.spines["left"].set_visible(False)
+    ax.spines["top"].set_visible(False)
+    ax.spines["right"].set_visible(False)
+    ax.spines["bottom"].set_visible(False)
+    ax.spines["left"].set_visible(False)
 
     formatter_thousands = FuncFormatter(lambda x, p: format(int(x), ","))
-    axes.xaxis.set_major_formatter(formatter=formatter_thousands)
-    axes.set_xlabel("cumulative HTTP request count", labelpad=10, style="italic")
+    ax.xaxis.set_major_formatter(formatter=formatter_thousands)
+    ax.yaxis.set_tick_params(length=0)
 
-    axes.set_xlim(left=0)
+    for tick in ax.yaxis.get_ticklabels():
+        tick.set_fontweight("medium")
+
+    ax.set_xlabel("cumulative HTTP request count", labelpad=10, style="italic")
+    ax.set_xlim(left=0)
 
     info(f"Saving image as {IMAGE_EXT} to in-memory buffer")
     bytes_io = BytesIO()
@@ -175,6 +179,7 @@ def plot_dieff_metrics(combinations: Dict[str, Iterable[BenchmarkResult]]) -> By
 
     for tick in axes_diefficiency.yaxis.get_majorticklabels():
         tick.set_horizontalalignment("center")
+        tick.set_fontweight("medium")
 
     axes_diefficiency.xaxis.set_major_formatter(formatter_scientific)
     axes_diefficiency.xaxis.set_inverted(True)

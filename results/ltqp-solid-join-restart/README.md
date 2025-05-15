@@ -1,6 +1,6 @@
-### Summary
+### Query processing
 
-![metrics](./metrics.svg)
+![diefficiency](./diefficiency.svg)
 
 | Combination | Δ *dieff@full* | Δ *dieff@full* min | Δ *dieff@full* max | Δ duration | Δ duration min | Δ duration max | Δ first result | Δ first result min | Δ first result max | Δ last result | Δ last result min | Δ last result max | Δ http requests | Δ http requests min | Δ http requests max | Queries |
 | - | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: |
@@ -16,6 +16,8 @@
 | metadata-unlimited | +55.19% | +116.29% | +21.67% | **-5.53**% | +5.86% | **-16.54**% | **-19.03**% | **-6.31**% | **-31.20**% | **-14.53**% | **-5.08**% | **-25.52**% | **-27**% | +0% | **-50**% | 39 |
 
 
-### HTTP Requests
+### Network utilisation
 
-![http_requests](./http_requests.svg)
+![network](./network.svg)
+
+### Resource consumption

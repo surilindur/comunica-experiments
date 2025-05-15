@@ -7,12 +7,12 @@ from utils import sort_labels
 
 
 def combination_summary_table(
-    combinations: Dict[str, Iterable[BenchmarkResult]],
+    combination_results: Dict[str, Iterable[BenchmarkResult]],
     table_format: Literal["md", "tsv"],
 ) -> str:
     """Generate a summary table in markdown for the combinations."""
 
-    combination_names = sort_labels(combinations.keys())
+    combination_names = sort_labels(combination_results.keys())
 
     headers = [
         "Combination",
@@ -65,7 +65,7 @@ def combination_summary_table(
     baseline_http_max: float | None = None
 
     for combination_name in combination_names:
-        results = combinations[combination_name]
+        results = combination_results[combination_name]
         combination_dieff_avg = sum(r.diefficiency_avg for r in results)
         combination_dieff_min = sum(r.diefficiency_min for r in results)
         combination_dieff_max = sum(r.diefficiency_max for r in results)

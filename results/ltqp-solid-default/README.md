@@ -1,6 +1,6 @@
-### Summary
+### Query processing
 
-![metrics](./metrics.svg)
+![diefficiency](./diefficiency.svg)
 
 | Combination | *dieff@full* | *dieff@full* min | *dieff@full* max | Duration | Duration min | Duration max | First result | First result min | First result max | Last result | Last result min | Last result max | HTTP requests | HTTP requests min | HTTP requests max | Queries |
 | - | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: |
@@ -11,6 +11,8 @@
 | single-file | 42921.300 | 21644.000 | 90497.500 | 78.019 | 46.452 | 139.502 | 26.325 | 11.472 | 80.779 | 27.662 | 13.037 | 81.921 | 8510 | 6136 | 11719 | 27 |
 
 
-### HTTP Requests
+### Network utilisation
 
-![http_requests](./http_requests.svg)
+![network](./network.svg)
+
+### Resource consumption

@@ -12,6 +12,7 @@ from matplotlib.ticker import FuncFormatter
 from matplotlib.ticker import ScalarFormatter
 
 from result import BenchmarkResult
+from result import CombinationContainerStats
 from utils import sort_labels
 
 IMAGE_DPI = 600
@@ -20,23 +21,27 @@ IMAGE_EXT = "svg"
 rcParams["font.family"] = "Noto Serif"
 
 
-def plot_http_requests(combinations: Dict[str, Iterable[BenchmarkResult]]) -> BytesIO:
+def plot_network_metrics(
+    combination_results: Dict[str, Iterable[BenchmarkResult]],
+    combination_stats: Dict[str, Iterable[CombinationContainerStats]],
+) -> BytesIO:
     """Create an illustration of the HTTP request count per combination."""
 
-    info(f"Plotting HTTP request count for {len(combinations)} combinations")
+    info(f"Plotting HTTP request count for {len(combination_results)} combinations")
 
+    print(combination_stats)
     fig, ax = subplots(
-        figsize=(6, 3 * (len(combinations) / 10)),
+        figsize=(6, 3 * (len(combination_results) / 10)),
         layout="constrained",
     )
 
     stats = []
 
-    for combination_name in sort_labels(combinations.keys())[::-1]:
-        combination_results = combinations[combination_name]
-        http_sum_avg = sum(r.http_requests_avg for r in combination_results)
-        http_sum_min = sum(r.http_requests_min for r in combination_results)
-        http_sum_max = sum(r.http_requests_max for r in combination_results)
+    for combination_name in sort_labels(combination_results.keys())[::-1]:
+        results = combination_results[combination_name]
+        http_sum_avg = sum(r.http_requests_avg for r in results)
+        http_sum_min = sum(r.http_requests_min for r in results)
+        http_sum_max = sum(r.http_requests_max for r in results)
         stats.append(
             dict(
                 med=http_sum_avg,
@@ -86,13 +91,15 @@ def plot_http_requests(combinations: Dict[str, Iterable[BenchmarkResult]]) -> By
     return bytes_io
 
 
-def plot_dieff_metrics(combinations: Dict[str, Iterable[BenchmarkResult]]) -> BytesIO:
+def plot_dieff_metrics(
+    combination_results: Dict[str, Iterable[BenchmarkResult]],
+) -> BytesIO:
     """Create an illustration of the diefficiency metric per combination."""
 
-    info(f"Plotting diefficiency for {len(combinations)} combinations")
+    info(f"Plotting diefficiency for {len(combination_results)} combinations")
 
     fig = figure(
-        figsize=(12, 3 * (len(combinations) / 10)),
+        figsize=(12, 3 * (len(combination_results) / 10)),
         layout="constrained",
     )
 
@@ -102,12 +109,12 @@ def plot_dieff_metrics(combinations: Dict[str, Iterable[BenchmarkResult]]) -> By
     stats_diefficiency = []
     stats_duration = []
 
-    for combination_name in sort_labels(combinations.keys())[::-1]:
-        combination_results = combinations[combination_name]
+    for combination_name in sort_labels(combination_results.keys())[::-1]:
+        results = combination_results[combination_name]
         # Diefficiency
-        diefficiency_sum_avg = sum(r.diefficiency_avg for r in combination_results)
-        diefficiency_sum_max = sum(r.diefficiency_max for r in combination_results)
-        diefficiency_sum_min = sum(r.diefficiency_min for r in combination_results)
+        diefficiency_sum_avg = sum(r.diefficiency_avg for r in results)
+        diefficiency_sum_max = sum(r.diefficiency_max for r in results)
+        diefficiency_sum_min = sum(r.diefficiency_min for r in results)
         stats_diefficiency.append(
             dict(
                 med=diefficiency_sum_avg,
@@ -120,9 +127,9 @@ def plot_dieff_metrics(combinations: Dict[str, Iterable[BenchmarkResult]]) -> By
             )
         )
         # Execution time
-        duration_sum_avg = sum(r.duration_avg for r in combination_results)
-        duration_sum_max = sum(r.duration_max for r in combination_results)
-        duration_sum_min = sum(r.duration_min for r in combination_results)
+        duration_sum_avg = sum(r.duration_avg for r in results)
+        duration_sum_max = sum(r.duration_max for r in results)
+        duration_sum_min = sum(r.duration_min for r in results)
         stats_duration.append(
             dict(
                 med=duration_sum_avg,

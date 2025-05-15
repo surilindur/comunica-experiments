@@ -11,8 +11,9 @@ from argparse import Namespace
 
 from plots import IMAGE_EXT
 from plots import plot_dieff_metrics
-from plots import plot_http_requests
+from plots import plot_network_metrics
 from result import load_combination_results
+from result import load_combination_stats
 from summaries import combination_summary_table
 from collect import collect_results
 
@@ -51,37 +52,42 @@ def analyse_results(result_path: Path) -> None:
     info(f"Processing results in {result_path}")
 
     # Acquire the data
-    combinations = load_combination_results(result_path)
+    combination_results = load_combination_results(result_path)
+    combination_stats = load_combination_stats(result_path)
 
     # Generate images
-    dieff_image = plot_dieff_metrics(combinations)
-    http_image = plot_http_requests(combinations)
+    dieff_image = plot_dieff_metrics(combination_results)
+    network_image = plot_network_metrics(combination_results, combination_stats)
 
     # Generate tables
-    summary_table_markdown = combination_summary_table(combinations, "md")
-    summary_table_tsv = combination_summary_table(combinations, "tsv")
+    summary_table_markdown = combination_summary_table(combination_results, "md")
+    summary_table_tsv = combination_summary_table(combination_results, "tsv")
 
     # Write the files on disk
     markdown_path = result_path.joinpath("README.md")
     tsv_path = result_path.joinpath("metrics.tsv")
-    dieff_path = result_path.joinpath(f"metrics.{IMAGE_EXT}")
-    http_path = result_path.joinpath(f"http_requests.{IMAGE_EXT}")
+    dieff_path = result_path.joinpath(f"diefficiency.{IMAGE_EXT}")
+    network_path = result_path.joinpath(f"network.{IMAGE_EXT}")
 
     markdown_content = "\n\n".join(
         [
-            "### Summary",
-            f"![metrics](./{dieff_path.name})",
+            "### Query processing",
+            f"![diefficiency](./{dieff_path.name})",
             summary_table_markdown,
-            "### HTTP Requests",
-            f"![http_requests](./{http_path.name})",
+            "### Network utilisation",
+            f"![network](./{network_path.name})",
+            # TODO: network table
+            "### Resource consumption",
+            # TODO: resource graph
+            # TODO: resource table
         ]
     )
 
     with open(dieff_path, "wb") as dieff_file:
         dieff_file.write(dieff_image.read())
 
-    with open(http_path, "wb") as http_file:
-        http_file.write(http_image.read())
+    with open(network_path, "wb") as network_file:
+        network_file.write(network_image.read())
 
     with open(markdown_path, "w") as markdown_file:
         markdown_file.write(markdown_content)

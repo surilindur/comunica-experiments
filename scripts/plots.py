@@ -2,13 +2,13 @@ from io import BytesIO
 from typing import Dict
 from typing import Iterable
 from logging import info
-from itertools import groupby
 
 from matplotlib import rcParams
 from matplotlib.pyplot import style
 from matplotlib.pyplot import figure
 from matplotlib.pyplot import close
 from matplotlib.pyplot import subplots
+from matplotlib.ticker import FuncFormatter
 from matplotlib.ticker import ScalarFormatter
 
 from result import BenchmarkResult
@@ -67,12 +67,9 @@ def plot_http_requests(combinations: Dict[str, Iterable[BenchmarkResult]]) -> By
     axes.spines["bottom"].set_visible(False)
     axes.spines["left"].set_visible(False)
 
-    formatter_scientific = ScalarFormatter()
-    formatter_scientific.set_scientific(True)
-    formatter_scientific.set_powerlimits((1, 20))
-
-    axes.xaxis.set_major_formatter(formatter=formatter_scientific)
-    axes.xaxis.set_label_text("cumulative HTTP requests", style="italic")
+    formatter_thousands = FuncFormatter(lambda x, p: format(int(x), ","))
+    axes.xaxis.set_major_formatter(formatter=formatter_thousands)
+    axes.set_xlabel("cumulative HTTP request count", labelpad=10, style="italic")
 
     axes.set_xlim(left=0)
 
@@ -185,7 +182,11 @@ def plot_dieff_metrics(combinations: Dict[str, Iterable[BenchmarkResult]]) -> By
 
     axes_duration.yaxis.set_visible(False)
 
-    axes_duration.xaxis.set_label_text("cumulative query duration (s)", style="italic")
+    axes_duration.set_xlabel(
+        "cumulative query duration (s)",
+        labelpad=10,
+        style="italic",
+    )
 
     info(f"Saving image as {IMAGE_EXT} to in-memory buffer")
     bytes_io = BytesIO()

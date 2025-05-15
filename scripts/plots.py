@@ -8,6 +8,7 @@ from matplotlib.pyplot import style
 from matplotlib.pyplot import figure
 from matplotlib.pyplot import close
 from matplotlib.pyplot import subplots
+from matplotlib.ticker import FuncFormatter
 from matplotlib.ticker import ScalarFormatter
 
 from result import BenchmarkResult
@@ -25,8 +26,7 @@ def plot_http_requests(combinations: Dict[str, Iterable[BenchmarkResult]]) -> By
     info(f"Plotting HTTP request count for {len(combinations)} combinations")
 
     fig, axes = subplots(
-        figsize=(6, 3),
-        dpi=600,
+        figsize=(6, 3 * (len(combinations) / 10)),
         layout="constrained",
     )
 
@@ -34,16 +34,16 @@ def plot_http_requests(combinations: Dict[str, Iterable[BenchmarkResult]]) -> By
 
     for combination_name in sort_labels(combinations.keys())[::-1]:
         combination_results = combinations[combination_name]
-        request_sum_avg = sum(r.http_requests_avg for r in combination_results)
-        request_sum_max = sum(r.http_requests_max for r in combination_results)
-        request_sum_min = sum(r.http_requests_min for r in combination_results)
+        http_sum_avg = sum(r.http_requests_avg for r in combination_results)
+        http_sum_min = sum(r.http_requests_min for r in combination_results)
+        http_sum_max = sum(r.http_requests_max for r in combination_results)
         stats.append(
             dict(
-                med=request_sum_avg,
-                q1=request_sum_avg - 0.5,
-                q3=request_sum_avg + 0.5,
-                whislo=request_sum_min,
-                whishi=request_sum_max,
+                med=http_sum_avg,
+                q1=http_sum_avg,
+                q3=http_sum_avg,
+                whislo=http_sum_min,
+                whishi=http_sum_max,
                 fliers=[],
                 label=combination_name,
             )
@@ -54,6 +54,8 @@ def plot_http_requests(combinations: Dict[str, Iterable[BenchmarkResult]]) -> By
         widths=0.5,
         vert=False,
         patch_artist=True,
+        showbox=False,
+        showmeans=False,
         capprops=dict(color="lightgrey"),
         whiskerprops=dict(color="lightgrey"),
     )
@@ -65,7 +67,11 @@ def plot_http_requests(combinations: Dict[str, Iterable[BenchmarkResult]]) -> By
     axes.spines["bottom"].set_visible(False)
     axes.spines["left"].set_visible(False)
 
-    # axes.set_xlim(left=0)
+    formatter_thousands = FuncFormatter(lambda x, p: format(int(x), ","))
+    axes.xaxis.set_major_formatter(formatter=formatter_thousands)
+    axes.set_xlabel("cumulative HTTP request count", labelpad=10, style="italic")
+
+    axes.set_xlim(left=0)
 
     info(f"Saving image as {IMAGE_EXT} to in-memory buffer")
     bytes_io = BytesIO()
@@ -176,7 +182,11 @@ def plot_dieff_metrics(combinations: Dict[str, Iterable[BenchmarkResult]]) -> By
 
     axes_duration.yaxis.set_visible(False)
 
-    axes_duration.xaxis.set_label_text("cumulative query duration (s)", style="italic")
+    axes_duration.set_xlabel(
+        "cumulative query duration (s)",
+        labelpad=10,
+        style="italic",
+    )
 
     info(f"Saving image as {IMAGE_EXT} to in-memory buffer")
     bytes_io = BytesIO()

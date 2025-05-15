@@ -1,3 +1,5 @@
+### Summary
+
 ![metrics](./metrics.svg)
 
 | Combination | Δ *dieff@full* | Δ *dieff@full* min | Δ *dieff@full* max | Δ duration | Δ duration min | Δ duration max | Δ first result | Δ first result min | Δ first result max | Δ last result | Δ last result min | Δ last result max | Δ http requests | Δ http requests min | Δ http requests max | Queries |
@@ -12,3 +14,8 @@
 | interval-20000-once | +43.97% | +157.28% | +3.97% | **-4.55**% | +3.76% | **-11.41**% | **-21.55**% | **-7.92**% | **-31.94**% | **-15.64**% | **-7.13**% | **-25.52**% | **-26**% | +0% | **-46**% | 39 |
 | metadata-once | +69.37% | +76.27% | +54.44% | +0.53% | +2.15% | +11.93% | **-14.07**% | **-8.77**% | **-0.85**% | **-8.84**% | **-9.83**% | +6.16% | **-27**% | +0% | **-50**% | 39 |
 | metadata-unlimited | +55.19% | +116.29% | +21.67% | **-5.53**% | +5.86% | **-16.54**% | **-19.03**% | **-6.31**% | **-31.20**% | **-14.53**% | **-5.08**% | **-25.52**% | **-27**% | +0% | **-50**% | 39 |
+
+
+### HTTP Requests
+
+![http_requests](./http_requests.svg)

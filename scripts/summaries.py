@@ -6,7 +6,7 @@ from result import BenchmarkResult
 from utils import sort_labels
 
 
-def summary_table(
+def combination_summary_table(
     combinations: Dict[str, Iterable[BenchmarkResult]],
     table_format: Literal["md", "tsv"],
 ) -> str:
@@ -28,6 +28,9 @@ def summary_table(
         "Last result",
         "Last result min",
         "Last result max",
+        "HTTP requests",
+        "HTTP requests min",
+        "HTTP requests max",
         "Queries",
     ]
 
@@ -57,6 +60,9 @@ def summary_table(
     baseline_last_avg: float | None = None
     baseline_last_min: float | None = None
     baseline_last_max: float | None = None
+    baseline_http_avg: float | None = None
+    baseline_http_min: float | None = None
+    baseline_http_max: float | None = None
 
     for combination_name in combination_names:
         results = combinations[combination_name]
@@ -72,6 +78,11 @@ def summary_table(
         combination_last_avg = sum(r.timestamps_avg[-1] for r in results)
         combination_last_min = sum(r.timestamps_min[-1] for r in results)
         combination_last_max = sum(r.timestamps_max[-1] for r in results)
+        combination_http_avg = sum(r.http_requests_avg for r in results)
+        combination_http_min = sum(r.http_requests_min for r in results)
+        combination_http_max = sum(r.http_requests_max for r in results)
+
+        # Without baseline present, provide raw statistics
         if "baseline" not in combination_names:
 
             def format_value(v: float) -> str:
@@ -92,10 +103,14 @@ def summary_table(
                     format_value(combination_last_avg),
                     format_value(combination_last_min),
                     format_value(combination_last_max),
+                    format_value(combination_http_avg, integer=True),
+                    format_value(combination_http_min, integer=True),
+                    format_value(combination_http_max, integer=True),
                     str(len(results)),
                 ]
             )
 
+        # With baseline present, provide statistics relative to it
         elif baseline_dieff_avg is None:
             baseline_dieff_avg = combination_dieff_avg
             baseline_dieff_min = combination_dieff_min
@@ -109,6 +124,9 @@ def summary_table(
             baseline_last_avg = combination_last_avg
             baseline_last_min = combination_last_min
             baseline_last_max = combination_last_max
+            baseline_http_avg = combination_http_avg
+            baseline_http_min = combination_http_min
+            baseline_http_max = combination_http_max
             table_rows.append(
                 [
                     combination_name,
@@ -118,14 +136,18 @@ def summary_table(
             )
         else:
 
-            def format_delta(c: float, b: float) -> str:
+            def format_delta(c: float, b: float, integer=False) -> str:
                 if table_format == "tsv":
-                    return f"{((c / b) - 1) if b != 0 else 0:.3f}"
+                    delta = ((c / b) - 1) if b != 0 else 0
+                    value = f"{delta:+.0f}" if integer else f"{delta:+.3f}"
+                    return value
                 elif b == 0:
                     return "inf %"
                 else:
                     delta = ((c / b) - 1) * 100
-                    return f"{"**" if delta < 0 else ""}{delta:+.2f}{"**" if delta < 0 else ""}%"
+                    value = f"{delta:+.0f}" if integer else f"{delta:+.2f}"
+                    bold = "**" if delta < 0 else ""
+                    return f"{bold}{value}{bold}%"
 
             table_rows.append(
                 [
@@ -142,6 +164,9 @@ def summary_table(
                     format_delta(combination_last_avg, baseline_last_avg),
                     format_delta(combination_last_min, baseline_last_min),
                     format_delta(combination_last_max, baseline_last_max),
+                    format_delta(combination_http_avg, baseline_http_avg, integer=True),
+                    format_delta(combination_http_min, baseline_http_min, integer=True),
+                    format_delta(combination_http_max, baseline_http_max, integer=True),
                     str(len(results)),
                 ]
             )

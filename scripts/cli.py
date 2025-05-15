@@ -12,7 +12,7 @@ from argparse import Namespace
 from plots import IMAGE_EXT
 from plots import plot_dieff_metrics
 from result import load_combination_results
-from summaries import summary_table
+from summaries import combination_summary_table
 from collect import collect_results
 
 
@@ -52,8 +52,8 @@ def analyse_results(result_path: Path) -> None:
     # Acquire the data
     combinations = load_combination_results(result_path)
     dieff_image = plot_dieff_metrics(combinations)
-    summary_table_markdown = summary_table(combinations, "md")
-    summary_table_tsv = summary_table(combinations, "tsv")
+    summary_table_markdown = combination_summary_table(combinations, "md")
+    summary_table_tsv = combination_summary_table(combinations, "tsv")
 
     # Write the files on disk
     markdown_path = result_path.joinpath("README.md")

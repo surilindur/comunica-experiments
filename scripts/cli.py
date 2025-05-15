@@ -11,6 +11,7 @@ from argparse import Namespace
 
 from plots import IMAGE_EXT
 from plots import plot_dieff_metrics
+from plots import plot_http_requests
 from result import load_combination_results
 from summaries import combination_summary_table
 from collect import collect_results
@@ -51,7 +52,12 @@ def analyse_results(result_path: Path) -> None:
 
     # Acquire the data
     combinations = load_combination_results(result_path)
+
+    # Generate images
     dieff_image = plot_dieff_metrics(combinations)
+    http_image = plot_http_requests(combinations)
+
+    # Generate tables
     summary_table_markdown = combination_summary_table(combinations, "md")
     summary_table_tsv = combination_summary_table(combinations, "tsv")
 
@@ -59,16 +65,23 @@ def analyse_results(result_path: Path) -> None:
     markdown_path = result_path.joinpath("README.md")
     tsv_path = result_path.joinpath("metrics.tsv")
     dieff_path = result_path.joinpath(f"metrics.{IMAGE_EXT}")
+    http_path = result_path.joinpath(f"http_requests.{IMAGE_EXT}")
 
     markdown_content = "\n\n".join(
         [
+            "### Summary",
             f"![metrics](./{dieff_path.name})",
             summary_table_markdown,
+            "### HTTP Requests",
+            f"![http_requests](./{http_path.name})",
         ]
     )
 
     with open(dieff_path, "wb") as dieff_file:
         dieff_file.write(dieff_image.read())
+
+    with open(http_path, "wb") as http_file:
+        http_file.write(http_image.read())
 
     with open(markdown_path, "w") as markdown_file:
         markdown_file.write(markdown_content)

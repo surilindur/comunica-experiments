@@ -85,8 +85,8 @@ def combination_summary_table(
         # Without baseline present, provide raw statistics
         if "baseline" not in combination_names:
 
-            def format_value(v: float) -> str:
-                return f"{v:.3f}"
+            def format_value(v: float, integer=False) -> str:
+                return str(round(v)) if integer else f"{v:.3f}"
 
             table_rows.append(
                 [

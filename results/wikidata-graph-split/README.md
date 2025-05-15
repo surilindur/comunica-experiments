@@ -1,8 +1,15 @@
+### Summary
+
 ![metrics](./metrics.svg)
 
-| Combination | *dieff@full* | *dieff@full* min | *dieff@full* max | Duration | Duration min | Duration max | First result | First result min | First result max | Last result | Last result min | Last result max | Queries |
-| - | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: |
-| automatic-count | 5826.900 | 5109.000 | 7270.500 | 11.641 | 10.204 | 14.525 | 11.640 | 10.203 | 14.524 | 11.641 | 10.204 | 14.525 | 1 |
-| automatic-void | 2830.400 | 2448.500 | 3400.000 | 5.643 | 4.883 | 6.727 | 5.636 | 4.882 | 6.695 | 5.642 | 4.883 | 6.726 | 1 |
-| service-count | 2016.300 | 1752.500 | 2439.500 | 1.706 | 1.656 | 1.776 | 1.688 | 1.636 | 1.763 | 1.704 | 1.655 | 1.775 | 1 |
-| service-void | 1916.900 | 1601.000 | 2886.500 | 2.217 | 1.639 | 4.480 | 2.205 | 1.627 | 4.469 | 2.217 | 1.639 | 4.479 | 1 |
+| Combination | *dieff@full* | *dieff@full* min | *dieff@full* max | Duration | Duration min | Duration max | First result | First result min | First result max | Last result | Last result min | Last result max | HTTP requests | HTTP requests min | HTTP requests max | Queries |
+| - | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: |
+| automatic-count | 5826.900 | 5109.000 | 7270.500 | 11.641 | 10.204 | 14.525 | 11.640 | 10.203 | 14.524 | 11.641 | 10.204 | 14.525 | 116 | 116 | 116 | 1 |
+| automatic-void | 2830.400 | 2448.500 | 3400.000 | 5.643 | 4.883 | 6.727 | 5.636 | 4.882 | 6.695 | 5.642 | 4.883 | 6.726 | 56 | 56 | 56 | 1 |
+| service-count | 2016.300 | 1752.500 | 2439.500 | 1.706 | 1.656 | 1.776 | 1.688 | 1.636 | 1.763 | 1.704 | 1.655 | 1.775 | 2 | 2 | 2 | 1 |
+| service-void | 1916.900 | 1601.000 | 2886.500 | 2.217 | 1.639 | 4.480 | 2.205 | 1.627 | 4.469 | 2.217 | 1.639 | 4.479 | 2 | 2 | 2 | 1 |
+
+
+### HTTP Requests
+
+![http_requests](./http_requests.svg)

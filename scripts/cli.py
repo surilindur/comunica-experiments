@@ -14,7 +14,8 @@ from plots import plot_dieff_metrics
 from plots import plot_network_metrics
 from result import load_combination_results
 from result import load_combination_stats
-from summaries import combination_summary_table
+from summaries import diefficiency_summary_table
+from summaries import network_summary_table
 from collect import collect_results
 
 
@@ -60,40 +61,57 @@ def analyse_results(result_path: Path) -> None:
     network_image = plot_network_metrics(combination_results, combination_stats)
 
     # Generate tables
-    summary_table_markdown = combination_summary_table(combination_results, "md")
-    summary_table_tsv = combination_summary_table(combination_results, "tsv")
+    summary_dieff_md = diefficiency_summary_table(combination_results, "md")
+    summary_dieff_tsv = diefficiency_summary_table(combination_results, "tsv")
+    summary_network_md = network_summary_table(
+        combination_results,
+        combination_stats,
+        "md",
+    )
+    summary_network_tsv = network_summary_table(
+        combination_results,
+        combination_stats,
+        "tsv",
+    )
 
     # Write the files on disk
     markdown_path = result_path.joinpath("README.md")
-    tsv_path = result_path.joinpath("metrics.tsv")
-    dieff_path = result_path.joinpath(f"diefficiency.{IMAGE_EXT}")
-    network_path = result_path.joinpath(f"network.{IMAGE_EXT}")
+    dieff_tsv_path = result_path.joinpath("processing.tsv")
+    dieff_image_path = result_path.joinpath(f"processing.{IMAGE_EXT}")
+    network_tsv_path = result_path.joinpath("resources.tsv")
+    network_image_path = result_path.joinpath(f"resources.{IMAGE_EXT}")
 
     markdown_content = "\n\n".join(
         [
+            "### Template overview",
+            # TODO: template plot
+            # TODO: template table
             "### Query processing",
-            f"![diefficiency](./{dieff_path.name})",
-            summary_table_markdown,
-            "### Network utilisation",
-            f"![network](./{network_path.name})",
-            # TODO: network table
+            f"![processing](./{dieff_image_path.name})",
+            summary_dieff_md,
+            "### Resource consumption",
+            f"![network](./{network_image_path.name})",
+            summary_network_md,
             "### Resource consumption",
             # TODO: resource graph
             # TODO: resource table
         ]
     )
 
-    with open(dieff_path, "wb") as dieff_file:
+    with open(dieff_image_path, "wb") as dieff_file:
         dieff_file.write(dieff_image.read())
 
-    with open(network_path, "wb") as network_file:
+    with open(network_image_path, "wb") as network_file:
         network_file.write(network_image.read())
 
     with open(markdown_path, "w") as markdown_file:
         markdown_file.write(markdown_content)
 
-    with open(tsv_path, "w") as tsv_file:
-        tsv_file.write(summary_table_tsv)
+    with open(dieff_tsv_path, "w") as tsv_file:
+        tsv_file.write(summary_dieff_tsv)
+
+    with open(network_tsv_path, "w") as tsv_file:
+        tsv_file.write(summary_network_tsv)
 
 
 def main() -> None:

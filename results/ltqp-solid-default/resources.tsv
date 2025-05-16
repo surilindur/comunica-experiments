@@ -1,0 +1,6 @@
+Combination	HTTP requests	HTTP requests min	HTTP requests max	Total data transfer (GB)
+file-per-date	5969	5412	6918	56.096
+file-per-location	10918	8741	13472	127.548
+file-per-resource	6114	6114	6114	23.295
+mixed	11772	6770	27987	83.457
+single-file	8510	6136	11719	144.266

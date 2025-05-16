@@ -88,19 +88,19 @@ class CombinationContainerStats:
         self,
         container: str,
         cpu_percent: Iterable[float],
-        mem_gb: Iterable[float],
-        net_rx_gb: Iterable[float],
-        net_tx_gb: Iterable[float],
+        mem_bytes: Iterable[float],
+        net_rx_bytes: Iterable[float],
+        net_tx_bytes: Iterable[float],
     ) -> None:
         self.container = container
         self.cpu_percent = cpu_percent
         self.cpu_seconds_percent = sum(cpu_percent)
-        self.mem_gb = mem_gb
-        self.gigabyte_seconds = sum(mem_gb)
-        self.net_rx_gb = net_rx_gb
-        self.gigabytes_inbound = sum(net_rx_gb)
-        self.net_tx_gb = net_tx_gb
-        self.gigabytes_outbound = sum(net_tx_gb)
+        self.mem_bytes = mem_bytes
+        self.gigabyte_seconds = sum(mem_bytes) / GB_BYTES
+        self.net_rx_bytes = net_rx_bytes
+        self.gigabytes_inbound = sum(net_rx_bytes) / GB_BYTES
+        self.net_tx_bytes = net_tx_bytes
+        self.gigabytes_outbound = sum(net_tx_bytes) / GB_BYTES
 
 
 def load_combination_stats(path: Path) -> Dict[str, CombinationContainerStats]:
@@ -123,24 +123,28 @@ def load_combination_stats(path: Path) -> Dict[str, CombinationContainerStats]:
                         bytes_mem = []
                         bytes_rx = []
                         bytes_tx = []
+                        bytes_in_prev = None
+                        bytes_out_prev = None
                         for row in reader:
                             cpu_usage_percent.append(float(row["cpu_percentage"]))
                             bytes_mem.append(int(row["memory"]))
                             bytes_in = int(row["received"])
                             bytes_out = int(row["transmitted"])
-                            if bytes_rx:
-                                bytes_rx.append(bytes_in - bytes_rx[-1])
-                                bytes_tx.append(bytes_out - bytes_tx[-1])
+                            if bytes_in_prev:
+                                bytes_rx.append(bytes_in - bytes_in_prev)
+                                bytes_tx.append(bytes_out - bytes_out_prev)
                             else:
                                 bytes_rx.append(bytes_in)
                                 bytes_tx.append(bytes_out)
+                            bytes_in_prev = bytes_in
+                            bytes_out_prev = bytes_out
                         stats[combination_path.name].append(
                             CombinationContainerStats(
                                 container=name.removeprefix("stats-"),
                                 cpu_percent=cpu_usage_percent,
-                                mem_gb=list(b / GB_BYTES for b in bytes_mem),
-                                net_rx_gb=list(b / GB_BYTES for b in bytes_rx),
-                                net_tx_gb=list(b / GB_BYTES for b in bytes_tx),
+                                mem_bytes=bytes_mem,
+                                net_rx_bytes=bytes_rx,
+                                net_tx_bytes=bytes_tx,
                             )
                         )
 

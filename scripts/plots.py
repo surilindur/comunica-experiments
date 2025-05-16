@@ -25,24 +25,28 @@ def plot_network_metrics(
     combination_results: Dict[str, Iterable[BenchmarkResult]],
     combination_stats: Dict[str, Iterable[CombinationContainerStats]],
 ) -> BytesIO:
-    """Create an illustration of the HTTP request count per combination."""
+    """Create an illustration of the HTTP request count and GB per combination."""
 
-    info(f"Plotting HTTP request count for {len(combination_results)} combinations")
+    info(f"Plotting network metrics for {len(combination_results)} combinations")
 
-    print(combination_stats)
-    fig, ax = subplots(
-        figsize=(6, 3 * (len(combination_results) / 10)),
+    fig = figure(
+        figsize=(12, 3 * (len(combination_results) / 10)),
         layout="constrained",
     )
 
-    stats = []
+    axes_requests = fig.add_subplot(121)
+    axes_traffic = fig.add_subplot(122, sharey=axes_requests)
+
+    stats_requests = []
+    values_gb_downloaded = []
+    values_gb_uploaded = []
 
     for combination_name in sort_labels(combination_results.keys())[::-1]:
         results = combination_results[combination_name]
         http_sum_avg = sum(r.http_requests_avg for r in results)
         http_sum_min = sum(r.http_requests_min for r in results)
         http_sum_max = sum(r.http_requests_max for r in results)
-        stats.append(
+        stats_requests.append(
             dict(
                 med=http_sum_avg,
                 q1=http_sum_avg,
@@ -54,8 +58,14 @@ def plot_network_metrics(
             )
         )
 
-    ax.bxp(
-        stats,
+        stats = (
+            s for s in combination_stats[combination_name] if s.container == "server"
+        )
+        values_gb_uploaded.append(sum(s.gigabytes_outbound for s in stats))
+        values_gb_downloaded.append(sum(s.gigabytes_inbound for s in stats))
+
+    axes_requests.bxp(
+        stats_requests,
         widths=0.5,
         vert=False,
         patch_artist=True,
@@ -65,22 +75,37 @@ def plot_network_metrics(
         whiskerprops=dict(color="lightgrey"),
     )
 
+    y = list(range(1, len(combination_results) + 1))
+    # axes_traffic.plot(values_gb_downloaded, y, ".")
+    axes_traffic.plot(values_gb_uploaded, y, ".")
+
     style.use("seaborn-v0_8-colorblind")
 
-    ax.spines["top"].set_visible(False)
-    ax.spines["right"].set_visible(False)
-    ax.spines["bottom"].set_visible(False)
-    ax.spines["left"].set_visible(False)
+    for ax in (axes_requests, axes_traffic):
+        ax.spines["top"].set_visible(False)
+        ax.spines["right"].set_visible(False)
+        ax.spines["bottom"].set_visible(False)
+        ax.spines["left"].set_visible(False)
+        ax.set_xlim(left=0)
 
     formatter_thousands = FuncFormatter(lambda x, p: format(int(x), ","))
-    ax.xaxis.set_major_formatter(formatter=formatter_thousands)
-    ax.yaxis.set_tick_params(length=0)
 
-    for tick in ax.yaxis.get_ticklabels():
+    axes_requests.set_xlabel("Total HTTP requests", labelpad=10, style="italic")
+    axes_requests.xaxis.set_inverted(True)
+    axes_requests.xaxis.set_major_formatter(formatter=formatter_thousands)
+    axes_requests.yaxis.set_tick_params(
+        length=0,
+        labelright=True,
+        labelleft=False,
+        pad=60,
+    )
+
+    for tick in axes_requests.yaxis.get_ticklabels():
+        tick.set_horizontalalignment("center")
         tick.set_fontweight("medium")
 
-    ax.set_xlabel("cumulative HTTP request count", labelpad=10, style="italic")
-    ax.set_xlim(left=0)
+    axes_traffic.set_xlabel("Total data transfer (GB)", labelpad=10, style="italic")
+    axes_traffic.yaxis.set_visible(False)
 
     info(f"Saving image as {IMAGE_EXT} to in-memory buffer")
     bytes_io = BytesIO()
@@ -177,6 +202,9 @@ def plot_dieff_metrics(
     formatter_scientific.set_scientific(True)
     formatter_scientific.set_powerlimits((0, 0))
 
+    axes_diefficiency.set_xlabel("Total dieff@full", labelpad=10, style="italic")
+    axes_diefficiency.xaxis.set_major_formatter(formatter_scientific)
+    axes_diefficiency.xaxis.set_inverted(True)
     axes_diefficiency.yaxis.set_tick_params(
         length=0,
         labelright=True,
@@ -184,21 +212,12 @@ def plot_dieff_metrics(
         pad=60,
     )
 
-    for tick in axes_diefficiency.yaxis.get_majorticklabels():
+    for tick in axes_diefficiency.yaxis.get_ticklabels():
         tick.set_horizontalalignment("center")
         tick.set_fontweight("medium")
 
-    axes_diefficiency.xaxis.set_major_formatter(formatter_scientific)
-    axes_diefficiency.xaxis.set_inverted(True)
-    axes_diefficiency.xaxis.set_label_text("cumulative dieff@full", style="italic")
-
     axes_duration.yaxis.set_visible(False)
-
-    axes_duration.set_xlabel(
-        "cumulative query duration (s)",
-        labelpad=10,
-        style="italic",
-    )
+    axes_duration.set_xlabel("Total query duration (s)", labelpad=10, style="italic")
 
     info(f"Saving image as {IMAGE_EXT} to in-memory buffer")
     bytes_io = BytesIO()

@@ -1,0 +1,11 @@
+Combination	Δ http requests	Δ http requests min	Δ http requests max	Δ total data transfer (gb)
+baseline			
+overhead	-0	+0	-0	-0.339
+interval-100-once	-0	+0	+0	-0.385
+interval-1000-once	-0	+0	-0	-0.380
+interval-2000-once	-0	+0	-0	-0.364
+interval-5000-once	-0	+0	-0	-0.312
+interval-10000-once	-0	+0	-1	-0.282
+interval-20000-once	-0	+0	-0	-0.274
+metadata-once	-0	+0	-1	-0.365
+metadata-unlimited	-0	+0	-1	-0.384

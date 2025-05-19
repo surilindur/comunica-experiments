@@ -62,7 +62,9 @@ class BenchmarkResult:
 
     @property
     def failed(self) -> bool:
-        return self.result_count < 1
+        return (
+            self.error and "hash" not in self.error.lower()
+        ) or self.result_count < 1
 
     @property
     def name(self) -> str:

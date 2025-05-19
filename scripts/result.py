@@ -62,7 +62,7 @@ class BenchmarkResult:
 
     @property
     def failed(self) -> bool:
-        return self.error or self.result_count < 1
+        return self.result_count < 1
 
     @property
     def name(self) -> str:

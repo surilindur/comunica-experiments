@@ -1,11 +1,11 @@
-Combination	Δ total duration (s)	Δ total cpu-seconds (%)	Δ total gb-seconds
-baseline		
-overhead	-0.552	-0.622	-0.802
-interval-100-once	-0.433	-0.538	-0.620
-interval-1000-once	-0.392	-0.513	-0.547
-interval-2000-once	-0.473	-0.598	-0.671
-interval-5000-once	-0.458	-0.586	-0.647
-interval-10000-once	-0.405	-0.526	-0.572
-interval-20000-once	-0.305	-0.427	-0.423
-metadata-once	-0.264	-0.330	-0.383
-metadata-unlimited	-0.396	-0.502	-0.582
+Combination	Δ total duration (s)	Δ total CPU-seconds (%)	Δ total GB-seconds	Queries
+baseline			75
+overhead	-0.552	-0.622	-0.802	75
+interval-100-once	-0.433	-0.538	-0.620	75
+interval-1000-once	-0.392	-0.513	-0.547	75
+interval-2000-once	-0.473	-0.598	-0.671	75
+interval-5000-once	-0.458	-0.586	-0.647	75
+interval-10000-once	-0.405	-0.526	-0.572	75
+interval-20000-once	-0.305	-0.427	-0.423	75
+metadata-once	-0.264	-0.330	-0.383	75
+metadata-unlimited	-0.396	-0.502	-0.582	75

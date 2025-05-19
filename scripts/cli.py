@@ -81,8 +81,16 @@ def analyse_results(result_path: Path) -> None:
     )
     summary_template_md = template_summary_table(combination_results_unfiltered, "md")
     summary_template_tsv = template_summary_table(combination_results_unfiltered, "tsv")
-    summary_resources_md = resource_summary_table(combination_stats, "md")
-    summary_resources_tsv = resource_summary_table(combination_stats, "tsv")
+    summary_resources_md = resource_summary_table(
+        combination_results_unfiltered,
+        combination_stats,
+        "md",
+    )
+    summary_resources_tsv = resource_summary_table(
+        combination_results_unfiltered,
+        combination_stats,
+        "tsv",
+    )
 
     # Write the files on disk
     markdown_path = result_path.joinpath("README.md")
@@ -95,16 +103,16 @@ def analyse_results(result_path: Path) -> None:
 
     markdown_content = "\n\n".join(
         [
-            "### Template overview",
+            "### Successful queries",
             # TODO: template plot
             summary_template_md,
-            "### Processing",
+            "### Query processing",
             f"![processing](./{dieff_image_path.name})",
             summary_dieff_md,
-            "### Network",
+            "### Network usage",
             f"![network](./{network_image_path.name})",
             summary_network_md,
-            "### Resource consumption",
+            "### Resource usage",
             # TODO: resource graph
             summary_resources_md,
         ]

@@ -61,6 +61,10 @@ class BenchmarkResult:
         )
 
     @property
+    def failed(self) -> bool:
+        return self.error or self.result_count < 1
+
+    @property
     def name(self) -> str:
         return f"{" ".join(self.template.split("-"))}.{self.instance}"
 
@@ -151,7 +155,9 @@ def load_combination_stats(path: Path) -> Dict[str, CombinationContainerStats]:
     return stats
 
 
-def load_combination_results(path: Path) -> Dict[str, Iterable[BenchmarkResult]]:
+def load_combination_results(
+    path: Path, filter_failed=True
+) -> Dict[str, Iterable[BenchmarkResult]]:
     """Parses raw query results for all combinations in the specified path."""
 
     info(f"Loading combinations from {path}")
@@ -171,21 +177,24 @@ def load_combination_results(path: Path) -> Dict[str, Iterable[BenchmarkResult]]
                         combination=combination_path.name,
                         row=row,
                     )
-                    if result.error or result.result_count < 1:
+                    if result.failed:
                         failed_queries.add(result.name)
                     combination_results.append(result)
             results[combination_path.name] = combination_results
 
     warning(f"Found {len(failed_queries)} failed queries")
 
-    for combination_name in results.keys():
-        filtered_results = list(
-            r for r in results[combination_name] if r.name not in failed_queries
-        )
-        removed_count = len(results[combination_name]) - len(filtered_results)
-        if removed_count > 0:
-            warning(f"Ignoring {removed_count} failed queries from {combination_name}")
-            results[combination_name] = filtered_results
+    if filter_failed:
+        for combination_name in results.keys():
+            filtered_results = list(
+                r for r in results[combination_name] if r.name not in failed_queries
+            )
+            removed_count = len(results[combination_name]) - len(filtered_results)
+            if removed_count > 0:
+                warning(
+                    f"Ignoring {removed_count} failed queries from {combination_name}"
+                )
+                results[combination_name] = filtered_results
 
     info(f"Loaded results for {len(results)} combinations")
 

@@ -1,6 +1,14 @@
 ### Template overview
 
-### Query processing
+| Combination | D-1 | D-2 | D-3 | D-4 | D-5 | D-6 | D-7 | D-8 | S-1 | S-2 | S-3 | S-4 | S-5 | S-6 | S-7 | Total |
+| - | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: |
+| file-per-date | 5 | 5 | 5 | 5 | 5 | 5 | 5 | 0 | 5 | 0 | 0 | 5 | 5 | 0 | 0 | 50 |
+| file-per-location | 5 | 5 | 5 | 5 | 5 | 5 | 3 | 0 | 5 | 0 | 0 | 5 | 5 | 0 | 0 | 48 |
+| file-per-resource | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 0 | 5 | 0 | 0 | 5 | 5 | 5 | 0 | 34 |
+| mixed | 5 | 5 | 5 | 5 | 5 | 5 | 4 | 0 | 5 | 0 | 0 | 5 | 5 | 0 | 0 | 49 |
+| single-file | 5 | 5 | 5 | 5 | 5 | 5 | 4 | 1 | 4 | 0 | 0 | 5 | 5 | 0 | 0 | 49 |
+
+### Processing
 
 ![processing](./processing.svg)
 
@@ -12,7 +20,7 @@
 | mixed | 53257.900 | 21584.500 | 133400.500 | 99.727 | 42.414 | 274.366 | 46.915 | 10.680 | 147.512 | 48.787 | 11.848 | 151.969 | 27 |
 | single-file | 42921.300 | 21644.000 | 90497.500 | 78.019 | 46.452 | 139.502 | 26.325 | 11.472 | 80.779 | 27.662 | 13.037 | 81.921 | 27 |
 
-### Resource consumption
+### Network
 
 ![network](./resources.svg)
 
@@ -25,3 +33,11 @@
 | single-file | 8510 | 6136 | 11719 | 144.266 |
 
 ### Resource consumption
+
+| Combination | Total duration (s) | Total CPU-seconds (%) | Total GB-seconds |
+| - | -: | -: | -: |
+| file-per-date | 20946 | 404740 | 104894 |
+| file-per-location | 23401 | 418203 | 146904 |
+| file-per-resource | 15777 | 236666 | 38286 |
+| mixed | 26333 | 516173 | 211848 |
+| single-file | 25026 | 440011 | 182217 |

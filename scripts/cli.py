@@ -16,6 +16,8 @@ from result import load_combination_results
 from result import load_combination_stats
 from summaries import diefficiency_summary_table
 from summaries import network_summary_table
+from summaries import template_summary_table
+from summaries import resource_summary_table
 from collect import collect_results
 
 
@@ -54,6 +56,10 @@ def analyse_results(result_path: Path) -> None:
 
     # Acquire the data
     combination_results = load_combination_results(result_path)
+    combination_results_unfiltered = load_combination_results(
+        result_path,
+        filter_failed=False,
+    )
     combination_stats = load_combination_stats(result_path)
 
     # Generate images
@@ -73,6 +79,10 @@ def analyse_results(result_path: Path) -> None:
         combination_stats,
         "tsv",
     )
+    summary_template_md = template_summary_table(combination_results_unfiltered, "md")
+    summary_template_tsv = template_summary_table(combination_results_unfiltered, "tsv")
+    summary_resources_md = resource_summary_table(combination_stats, "md")
+    summary_resources_tsv = resource_summary_table(combination_stats, "tsv")
 
     # Write the files on disk
     markdown_path = result_path.joinpath("README.md")
@@ -80,21 +90,23 @@ def analyse_results(result_path: Path) -> None:
     dieff_image_path = result_path.joinpath(f"processing.{IMAGE_EXT}")
     network_tsv_path = result_path.joinpath("resources.tsv")
     network_image_path = result_path.joinpath(f"resources.{IMAGE_EXT}")
+    template_tsv_path = result_path.joinpath("templates.tsv")
+    resource_tsv_path = result_path.joinpath("resources.tsv")
 
     markdown_content = "\n\n".join(
         [
             "### Template overview",
             # TODO: template plot
-            # TODO: template table
-            "### Query processing",
+            summary_template_md,
+            "### Processing",
             f"![processing](./{dieff_image_path.name})",
             summary_dieff_md,
-            "### Resource consumption",
+            "### Network",
             f"![network](./{network_image_path.name})",
             summary_network_md,
             "### Resource consumption",
             # TODO: resource graph
-            # TODO: resource table
+            summary_resources_md,
         ]
     )
 
@@ -112,6 +124,12 @@ def analyse_results(result_path: Path) -> None:
 
     with open(network_tsv_path, "w") as tsv_file:
         tsv_file.write(summary_network_tsv)
+
+    with open(template_tsv_path, "w") as tsv_file:
+        tsv_file.write(summary_template_tsv)
+
+    with open(resource_tsv_path, "w") as tsv_file:
+        tsv_file.write(summary_resources_tsv)
 
 
 def main() -> None:

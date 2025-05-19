@@ -1,10 +1,168 @@
 from typing import Dict
 from typing import Literal
 from typing import Iterable
+from itertools import groupby
 
 from result import BenchmarkResult
 from result import CombinationContainerStats
 from utils import sort_labels
+
+
+def template_summary_table(
+    combination_results: Dict[str, Iterable[BenchmarkResult]],
+    table_format: Literal["md", "tsv"],
+) -> str:
+    """Generate a template summary table."""
+
+    combination_names = set()
+    template_names = set()
+    finished_queries: Dict[str, Dict[str, int]] = {}
+
+    for combination_name, results in combination_results.items():
+        combination_names.add(combination_name)
+        finished_queries[combination_name] = {}
+        for template_name, template_results in groupby(
+            results, key=lambda r: r.template
+        ):
+            template_names.add(template_name)
+            finished_queries[combination_name][template_name] = sum(
+                0 if t.failed else 1 for t in template_results
+            )
+
+    template_names_sorted = sort_labels(template_names)
+
+    headers = [
+        "Combination",
+        *(
+            t.removeprefix("interactive-")
+            .replace("short", "S")
+            .replace("discover", "D")
+            for t in template_names_sorted
+        ),
+        "Total",
+    ]
+
+    table_rows = [headers]
+
+    if table_format == "md":
+        table_rows.append(["-", *("-:" for _ in range(0, len(headers) - 1))])
+
+    for combination_name in sort_labels(combination_names):
+        column_values = []
+        for t in template_names_sorted:
+            column_values.append(str(finished_queries[combination_name][t]))
+        table_rows.append(
+            [
+                combination_name,
+                *column_values,
+                str(sum(finished_queries[combination_name].values())),
+            ]
+        )
+
+    output_rows = []
+
+    for row in table_rows:
+        match table_format:
+            case "tsv":
+                output_rows.append("\t".join(row))
+            case "md":
+                output_rows.append("| " + " | ".join(row) + " |")
+
+    return "\n".join(output_rows) + ("\n" if table_format == "tsv" else "")
+
+
+def resource_summary_table(
+    combination_stats: Dict[str, Iterable[CombinationContainerStats]],
+    table_format: Literal["md", "tsv"],
+) -> str:
+    """Generate a stats comparison table."""
+
+    combination_names = sort_labels(combination_stats.keys())
+
+    headers = [
+        "Combination",
+        "Total duration (s)",
+        "Total CPU-seconds (%)",
+        "Total GB-seconds",
+    ]
+
+    if "baseline" in combination_names:
+        headers = [f"Δ {h.lower()}" if h != "Combination" else h for h in headers]
+
+    table_rows = [headers]
+
+    if table_format == "md":
+        table_rows.append(["-", *("-:" for _ in range(0, len(headers) - 1))])
+
+    baseline_duration: float | None = None
+    baseline_cpu_seconds: float | None = None
+    baseline_gb_seconds: float | None = None
+
+    for combination_name in combination_names:
+        stats = combination_stats[combination_name]
+        combination_duration = max(len(s.cpu_percent) for s in stats)
+        combination_cpu_seconds = sum(s.cpu_seconds_percent for s in stats)
+        combination_gb_seconds = sum(s.gigabyte_seconds for s in stats)
+
+        # Without baseline present, provide raw statistics
+        if "baseline" not in combination_names:
+
+            def format_value(v: float) -> str:
+                return str(round(v))
+
+            table_rows.append(
+                [
+                    combination_name,
+                    format_value(combination_duration),
+                    format_value(combination_cpu_seconds),
+                    format_value(combination_gb_seconds),
+                ]
+            )
+
+        # With baseline present, provide statistics relative to it
+        elif baseline_duration is None:
+            baseline_duration = combination_duration
+            baseline_cpu_seconds = combination_cpu_seconds
+            baseline_gb_seconds = combination_gb_seconds
+            table_rows.append(
+                [
+                    combination_name,
+                    *("" for _ in range(0, len(headers) - 2)),
+                ]
+            )
+        else:
+
+            def format_delta(c: float, b: float) -> str:
+                if table_format == "tsv":
+                    delta = ((c / b) - 1) if b != 0 else 0
+                    return f"{delta:+.3f}"
+                elif b == 0:
+                    return "inf %"
+                else:
+                    delta = ((c / b) - 1) * 100
+                    value = f"{delta:+.0f}"
+                    bold = "**" if delta < 0 else ""
+                    return f"{bold}{value}{bold}%"
+
+            table_rows.append(
+                [
+                    combination_name,
+                    format_delta(combination_duration, baseline_duration),
+                    format_delta(combination_cpu_seconds, baseline_cpu_seconds),
+                    format_delta(combination_gb_seconds, baseline_gb_seconds),
+                ]
+            )
+
+    output_rows = []
+
+    for row in table_rows:
+        match table_format:
+            case "tsv":
+                output_rows.append("\t".join(row))
+            case "md":
+                output_rows.append("| " + " | ".join(row) + " |")
+
+    return "\n".join(output_rows) + ("\n" if table_format == "tsv" else "")
 
 
 def network_summary_table(
@@ -26,9 +184,6 @@ def network_summary_table(
 
     if "baseline" in combination_names:
         headers = [f"Δ {h.lower()}" if h != "Combination" else h for h in headers]
-
-    if table_format == "tsv":
-        headers = [h.replace("*", "") for h in headers]
 
     table_rows = [headers]
 

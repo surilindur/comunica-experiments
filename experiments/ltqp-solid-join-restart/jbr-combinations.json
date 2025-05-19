@@ -9,6 +9,9 @@
     "engine": [
       "baseline",
       "overhead-hagedorn",
+      "overhead-hagedorn-latency-50",
+      "overhead-hagedorn-latency-100",
+      "overhead-hagedorn-latency-300",
       "overhead-predicate",
       "interval-100-hagedorn",
       "interval-100-hagedorn-once",

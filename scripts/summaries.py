@@ -8,6 +8,11 @@ from result import CombinationContainerStats
 from utils import sort_labels
 
 
+def uncapitalize(value: str) -> str:
+    """Return the non-capitalized version."""
+    return value[0].lower() + value[1:]
+
+
 def template_summary_table(
     combination_results: Dict[str, Iterable[BenchmarkResult]],
     table_format: Literal["md", "tsv"],
@@ -72,6 +77,7 @@ def template_summary_table(
 
 
 def resource_summary_table(
+    combination_results: Dict[str, Iterable[BenchmarkResult]],
     combination_stats: Dict[str, Iterable[CombinationContainerStats]],
     table_format: Literal["md", "tsv"],
 ) -> str:
@@ -84,10 +90,14 @@ def resource_summary_table(
         "Total duration (s)",
         "Total CPU-seconds (%)",
         "Total GB-seconds",
+        "Queries",
     ]
 
     if "baseline" in combination_names:
-        headers = [f"Δ {h.lower()}" if h != "Combination" else h for h in headers]
+        headers = [
+            f"Δ {uncapitalize(h)}" if h not in ("Combination", "Queries") else h
+            for h in headers
+        ]
 
     table_rows = [headers]
 
@@ -116,6 +126,7 @@ def resource_summary_table(
                     format_value(combination_duration),
                     format_value(combination_cpu_seconds),
                     format_value(combination_gb_seconds),
+                    str(len(combination_results[combination_name])),
                 ]
             )
 
@@ -128,6 +139,7 @@ def resource_summary_table(
                 [
                     combination_name,
                     *("" for _ in range(0, len(headers) - 2)),
+                    str(len(combination_results[combination_name])),
                 ]
             )
         else:
@@ -150,6 +162,7 @@ def resource_summary_table(
                     format_delta(combination_duration, baseline_duration),
                     format_delta(combination_cpu_seconds, baseline_cpu_seconds),
                     format_delta(combination_gb_seconds, baseline_gb_seconds),
+                    str(len(combination_results[combination_name])),
                 ]
             )
 
@@ -180,10 +193,18 @@ def network_summary_table(
         "HTTP requests min",
         "HTTP requests max",
         "Total data transfer (GB)",
+        "Queries",
     ]
 
     if "baseline" in combination_names:
-        headers = [f"Δ {h.lower()}" if h != "Combination" else h for h in headers]
+        headers = [
+            (
+                f"Δ {uncapitalize(h) if not h.startswith("HTTP") else h}"
+                if h not in ("Combination", "Queries")
+                else h
+            )
+            for h in headers
+        ]
 
     table_rows = [headers]
 
@@ -219,6 +240,7 @@ def network_summary_table(
                     format_value(combination_http_min, integer=True),
                     format_value(combination_http_max, integer=True),
                     format_value(combination_data_transfer),
+                    str(len(results)),
                 ]
             )
 
@@ -232,6 +254,7 @@ def network_summary_table(
                 [
                     combination_name,
                     *("" for _ in range(0, len(headers) - 2)),
+                    str(len(results)),
                 ]
             )
         else:
@@ -256,6 +279,7 @@ def network_summary_table(
                     format_delta(combination_http_min, baseline_http_min, integer=True),
                     format_delta(combination_http_max, baseline_http_max, integer=True),
                     format_delta(combination_data_transfer, baseline_data_transfer),
+                    str(len(results)),
                 ]
             )
 
@@ -294,11 +318,12 @@ def diefficiency_summary_table(
         "Last result min",
         "Last result max",
         "Queries",
+        "Results",
     ]
 
     if "baseline" in combination_names:
         headers = [
-            f"Δ {h.lower()}" if h not in ("Combination", "Queries") else h
+            f"Δ {h.lower()}" if h not in ("Combination", "Queries", "Results") else h
             for h in headers
         ]
 
@@ -360,6 +385,7 @@ def diefficiency_summary_table(
                     format_value(combination_last_min),
                     format_value(combination_last_max),
                     str(len(results)),
+                    str(sum(r.result_count for r in results)),
                 ]
             )
 
@@ -380,8 +406,9 @@ def diefficiency_summary_table(
             table_rows.append(
                 [
                     combination_name,
-                    *("" for _ in range(0, len(headers) - 2)),
+                    *("" for _ in range(0, len(headers) - 3)),
                     str(len(results)),
+                    str(sum(r.result_count for r in results)),
                 ]
             )
         else:
@@ -415,6 +442,7 @@ def diefficiency_summary_table(
                     format_delta(combination_last_min, baseline_last_min),
                     format_delta(combination_last_max, baseline_last_max),
                     str(len(results)),
+                    str(sum(r.result_count for r in results)),
                 ]
             )
 

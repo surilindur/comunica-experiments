@@ -41,8 +41,8 @@
         { "@id": "urn:comunica:default:rdf-join/actors#inner-nested-loop" }
       ],
       "evaluationAfterMetadataUpdate": false,
-      "evaluationInterval": 1000,
-      "restartLimit": 1
+      "evaluationInterval": 100,
+      "restartLimit": null
     }
   ]
 }

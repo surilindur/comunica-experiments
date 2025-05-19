@@ -34,9 +34,9 @@
 
 ![network](./resources.svg)
 
-| Combination | hTTP requests | hTTP requests min | hTTP requests max | total data transfer (GB) | Queries |
+| Combination | Δ HTTP requests | Δ HTTP requests min | Δ HTTP requests max | Δ total data transfer (GB) | Queries |
 | - | -: | -: | -: | -: | -: |
-| baseline |  |  |  | 65 |
+| baseline |  |  |  |  | 65 |
 | overhead | **-56**% | **-55**% | **-55**% | **-33.94**% | 65 |
 | interval-100-once | +1% | **-44**% | +35% | **-38.53**% | 65 |
 | interval-1000-once | **-10**% | **-27**% | +5% | **-38.00**% | 65 |
@@ -51,7 +51,7 @@
 
 | Combination | Δ total duration (s) | Δ total CPU-seconds (%) | Δ total GB-seconds | Queries |
 | - | -: | -: | -: | -: |
-| baseline |  |  | 75 |
+| baseline |  |  |  | 75 |
 | overhead | **-55**% | **-62**% | **-80**% | 75 |
 | interval-100-once | **-43**% | **-54**% | **-62**% | 75 |
 | interval-1000-once | **-39**% | **-51**% | **-55**% | 75 |

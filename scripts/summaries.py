@@ -138,7 +138,7 @@ def resource_summary_table(
             table_rows.append(
                 [
                     combination_name,
-                    *("" for _ in range(0, len(headers) - 3)),
+                    *("" for _ in range(0, len(headers) - 2)),
                     str(len(combination_results[combination_name])),
                 ]
             )
@@ -198,7 +198,11 @@ def network_summary_table(
 
     if "baseline" in combination_names:
         headers = [
-            uncapitalize(h) if h not in ("Combination", "Queries") else h
+            (
+                f"Δ {uncapitalize(h) if not h.startswith("HTTP") else h}"
+                if h not in ("Combination", "Queries")
+                else h
+            )
             for h in headers
         ]
 
@@ -249,7 +253,7 @@ def network_summary_table(
             table_rows.append(
                 [
                     combination_name,
-                    *("" for _ in range(0, len(headers) - 3)),
+                    *("" for _ in range(0, len(headers) - 2)),
                     str(len(results)),
                 ]
             )

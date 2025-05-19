@@ -1,5 +1,5 @@
 Combination	Δ total duration (s)	Δ total CPU-seconds (%)	Δ total GB-seconds	Queries
-baseline			75
+baseline				75
 overhead	-0.552	-0.622	-0.802	75
 interval-100-once	-0.433	-0.538	-0.620	75
 interval-1000-once	-0.392	-0.513	-0.547	75

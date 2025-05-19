@@ -1,5 +1,6 @@
 """Representation of benchmark results."""
 
+from io import TextIOWrapper
 from csv import DictReader
 from typing import Set
 from typing import Dict
@@ -8,6 +9,8 @@ from typing import Iterable
 from logging import info
 from logging import warning
 from pathlib import Path
+from os.path import splitext
+from tarfile import open as open_tarfile
 
 from numpy import mean
 
@@ -16,6 +19,8 @@ from utils import parse_timestamps
 RESULT_DELIMITER = ";"  # The CSV file delimiter used by sparql-benchmark-runner.js
 TIMESTAMP_DELIMITER = " "  # The CSV file timestamp delimiter
 QUERY_TIMES_FILE = "query-times.csv"
+STATS_ZIP_FILE = "stats.tar.xz"
+GB_BYTES = 1024**3
 
 ERROR_EXPLANATION_MAP: Dict[str, str | None] = {
     "Result hash inconsistency": "inconsistent results",
@@ -56,6 +61,10 @@ class BenchmarkResult:
         )
 
     @property
+    def failed(self) -> bool:
+        return self.error or self.result_count < 1
+
+    @property
     def name(self) -> str:
         return f"{" ".join(self.template.split("-"))}.{self.instance}"
 
@@ -76,25 +85,79 @@ class BenchmarkResult:
         return max(self.durations)
 
 
-class AggregateResult:
-    """Representation of results for a single combination in an experiment."""
+class CombinationContainerStats:
+    """Collection of stats for a given combination."""
 
-    def __init__(self, name: str, results: Iterable[BenchmarkResult]) -> None:
-        self.name = name
-        self.queries_total = len(results)
-        self.queries_succeeded = sum(0 if r.error else 1 for r in results)
-        self.diefficiency_avg = sum(r.diefficiency_avg for r in results)
-        self.diefficiency_max = sum(r.diefficiency_max for r in results)
-        self.diefficiency_min = sum(r.diefficiency_min for r in results)
-        self.http_requests_avg = sum(r.http_requests_avg for r in results)
-        self.http_requests_max = sum(r.http_requests_max for r in results)
-        self.http_requests_min = sum(r.http_requests_min for r in results)
-        self.duration_avg = sum(r.duration_avg for r in results)
-        self.duration_max = sum(r.duration_max for r in results)
-        self.duration_min = sum(r.duration_min for r in results)
+    def __init__(
+        self,
+        container: str,
+        cpu_percent: Iterable[float],
+        mem_bytes: Iterable[float],
+        net_rx_bytes: Iterable[float],
+        net_tx_bytes: Iterable[float],
+    ) -> None:
+        self.container = container
+        self.cpu_percent = cpu_percent
+        self.cpu_seconds_percent = sum(cpu_percent)
+        self.mem_bytes = mem_bytes
+        self.gigabyte_seconds = sum(mem_bytes) / GB_BYTES
+        self.net_rx_bytes = net_rx_bytes
+        self.gigabytes_inbound = sum(net_rx_bytes) / GB_BYTES
+        self.net_tx_bytes = net_tx_bytes
+        self.gigabytes_outbound = sum(net_tx_bytes) / GB_BYTES
 
 
-def load_combination_results(path: Path) -> Dict[str, Iterable[BenchmarkResult]]:
+def load_combination_stats(path: Path) -> Dict[str, CombinationContainerStats]:
+    """Parses the resource consumption statistics for the specificed combination."""
+
+    stats: Dict[str, List[CombinationContainerStats]] = {}
+
+    for combination_path in (p for p in path.iterdir() if p.is_dir()):
+        stats_path = combination_path.joinpath(STATS_ZIP_FILE)
+        info(f"Parsing resource stats from {stats_path}")
+        stats[combination_path.name] = []
+        with open_tarfile(stats_path, "r:xz") as tar_file:
+            for file in tar_file:
+                name, ext = splitext(file.name)
+                if ext == ".csv":
+                    with tar_file.extractfile(member=file) as tar_buffer:
+                        tar_text = TextIOWrapper(tar_buffer)
+                        reader = DictReader(f=tar_text, delimiter=",")
+                        cpu_usage_percent = []
+                        bytes_mem = []
+                        bytes_rx = []
+                        bytes_tx = []
+                        bytes_in_prev = None
+                        bytes_out_prev = None
+                        for row in reader:
+                            cpu_usage_percent.append(float(row["cpu_percentage"]))
+                            bytes_mem.append(int(row["memory"]))
+                            bytes_in = int(row["received"])
+                            bytes_out = int(row["transmitted"])
+                            if bytes_in_prev:
+                                bytes_rx.append(bytes_in - bytes_in_prev)
+                                bytes_tx.append(bytes_out - bytes_out_prev)
+                            else:
+                                bytes_rx.append(bytes_in)
+                                bytes_tx.append(bytes_out)
+                            bytes_in_prev = bytes_in
+                            bytes_out_prev = bytes_out
+                        stats[combination_path.name].append(
+                            CombinationContainerStats(
+                                container=name.removeprefix("stats-"),
+                                cpu_percent=cpu_usage_percent,
+                                mem_bytes=bytes_mem,
+                                net_rx_bytes=bytes_rx,
+                                net_tx_bytes=bytes_tx,
+                            )
+                        )
+
+    return stats
+
+
+def load_combination_results(
+    path: Path, filter_failed=True
+) -> Dict[str, Iterable[BenchmarkResult]]:
     """Parses raw query results for all combinations in the specified path."""
 
     info(f"Loading combinations from {path}")
@@ -114,42 +177,25 @@ def load_combination_results(path: Path) -> Dict[str, Iterable[BenchmarkResult]]
                         combination=combination_path.name,
                         row=row,
                     )
-                    if result.error or result.result_count < 1:
+                    if result.failed:
                         failed_queries.add(result.name)
                     combination_results.append(result)
             results[combination_path.name] = combination_results
 
     warning(f"Found {len(failed_queries)} failed queries")
 
-    for combination_name in results.keys():
-        filtered_results = list(
-            r for r in results[combination_name] if r.name not in failed_queries
-        )
-        removed_count = len(results[combination_name]) - len(filtered_results)
-        if removed_count > 0:
-            warning(f"Ignoring {removed_count} failed queries from {combination_name}")
-            results[combination_name] = filtered_results
+    if filter_failed:
+        for combination_name in results.keys():
+            filtered_results = list(
+                r for r in results[combination_name] if r.name not in failed_queries
+            )
+            removed_count = len(results[combination_name]) - len(filtered_results)
+            if removed_count > 0:
+                warning(
+                    f"Ignoring {removed_count} failed queries from {combination_name}"
+                )
+                results[combination_name] = filtered_results
 
     info(f"Loaded results for {len(results)} combinations")
-
-    return results
-
-
-def load_combination_summaries(path: Path) -> Iterable[AggregateResult]:
-    """Parses query results and provides a per-combination summary."""
-
-    info(f"Loading per-combination results from {path}")
-
-    results: List[AggregateResult] = []
-
-    for combination_name, combination_results in load_combination_results(path).items():
-        results.append(
-            AggregateResult(
-                name=combination_name,
-                results=combination_results,
-            )
-        )
-
-    info(f"Resolved to {len(results)} combination summaries")
 
     return results

@@ -1,0 +1,6 @@
+Combination	Total duration (s)	Total CPU-seconds (%)	Total GB-seconds
+file-per-date	20946	404740	104894
+file-per-location	23401	418203	146904
+file-per-resource	15777	236666	38286
+mixed	26333	516173	211848
+single-file	25026	440011	182217

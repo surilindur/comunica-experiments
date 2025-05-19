@@ -1,0 +1,11 @@
+Combination	D-1	D-2	D-3	D-4	D-5	D-6	D-7	D-8	S-1	S-2	S-3	S-4	S-5	S-6	S-7	Total
+baseline	5	5	5	5	5	3	3	0	5	0	0	5	5	0	0	46
+overhead	5	5	5	5	5	3	3	0	5	0	0	5	5	0	0	46
+interval-100-once	4	5	5	5	5	3	3	0	5	0	0	5	5	0	0	45
+interval-1000-once	5	5	2	5	5	3	3	0	5	0	0	5	4	0	0	42
+interval-2000-once	5	5	3	5	5	3	3	0	5	0	0	5	5	0	0	44
+interval-5000-once	5	5	3	5	5	3	3	0	5	0	0	5	5	0	0	44
+interval-10000-once	5	5	4	5	5	3	3	0	4	0	0	5	5	0	0	44
+interval-20000-once	5	5	5	5	5	3	3	0	5	0	0	5	5	0	0	46
+metadata-once	5	5	5	5	5	3	3	0	4	0	0	5	5	0	0	45
+metadata-unlimited	5	5	5	5	5	3	3	0	5	0	0	5	5	0	0	46

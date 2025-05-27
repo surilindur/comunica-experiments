@@ -5355,6 +5355,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"ltqp-solid-hybrid@workspace:experiments/ltqp-solid-hybrid":
+  version: 0.0.0-use.local
+  resolution: "ltqp-solid-hybrid@workspace:experiments/ltqp-solid-hybrid"
+  dependencies:
+    solidbench: "npm:^2.1.0"
+    sparql-benchmark-runner: "npm:^5.0.0"
+  languageName: unknown
+  linkType: soft
+
 "ltqp-solid-join-restart@workspace:experiments/ltqp-solid-join-restart":
   version: 0.0.0-use.local
   resolution: "ltqp-solid-join-restart@workspace:experiments/ltqp-solid-join-restart"

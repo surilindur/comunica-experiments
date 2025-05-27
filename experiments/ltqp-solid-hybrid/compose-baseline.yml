@@ -1,0 +1,25 @@
+services:
+  css:
+    build:
+      context: input/solidserver
+      network: host
+      args:
+        - CONFIG_SERVER=config.json
+        - LOG_LEVEL=info
+        - BASE_URL=http://localhost:3000/
+    network_mode: host
+    volumes:
+      - ./generated/out-fragments/http/localhost_3000:/data:ro
+  comunica:
+    build:
+      context: ./input/comunica
+      network: host
+      args:
+        - CONFIG_CLIENT=config.json
+        - COMUNICA_PORT=4000
+        - QUERY_TIMEOUT=60
+        - MAX_MEMORY=8192
+        - LOG_LEVEL=info
+    network_mode: host
+    volumes:
+      - ./input/comunica/context-baseline.json:/tmp/context.json:ro

@@ -1,0 +1,9 @@
+{
+  "sources": [
+    {
+      "type": "sparql",
+      "value": "http://localhost:4000/sparql"
+    }
+  ],
+  "lenient": true
+}

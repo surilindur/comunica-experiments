@@ -1,0 +1,15 @@
+{
+  "name": "ltqp-solid-hybrid",
+  "private": true,
+  "dependencies": {
+    "solidbench": "^2.1.0",
+    "sparql-benchmark-runner": "^5.0.0"
+  },
+  "scripts": {
+    "prepare": "yarn run prepare-dataset && yarn run prepare-queries",
+    "prepare-dataset": "yarn solidbench generate --cwd \"$(pwd)/generated\" --enhancementConfig \"$(pwd)/input/solidbench/enhancer.json\" --fragmentConfig \"$(pwd)/input/solidbench/fragmenter-${BENCHMARK_SETUP}.json\" --queryConfig \"$(pwd)/input/solidbench/queries.json\"",
+    "prepare-queries": "rm -f generated/out-queries/interactive-complex-*",
+    "serve": "docker compose --file ./compose-${BENCHMARK_SETUP}.yml up",
+    "execute": "yarn sparql-benchmark-runner --endpoint http://localhost:4000/sparql --queries ./generated/out-queries --replication 1 --warmup 0 --timeout 60 --output ./output/${BENCHMARK_SETUP}.csv"
+  }
+}

@@ -12,6 +12,7 @@ from argparse import Namespace
 from plots import IMAGE_EXT
 from plots import plot_dieff_metrics
 from plots import plot_network_metrics
+from plots import plot_result_trends
 from result import load_combination_results
 from result import load_combination_stats
 from summaries import diefficiency_summary_table
@@ -65,6 +66,7 @@ def analyse_results(result_path: Path) -> None:
     # Generate images
     dieff_image = plot_dieff_metrics(combination_results)
     network_image = plot_network_metrics(combination_results, combination_stats)
+    result_image = plot_result_trends(combination_results)
 
     # Generate tables
     summary_dieff_md = diefficiency_summary_table(combination_results, "md")
@@ -100,6 +102,7 @@ def analyse_results(result_path: Path) -> None:
     network_image_path = result_path.joinpath(f"resources.{IMAGE_EXT}")
     template_tsv_path = result_path.joinpath("templates.tsv")
     resource_tsv_path = result_path.joinpath("resources.tsv")
+    result_image_path = result_path.joinpath(f"results.{IMAGE_EXT}")
 
     markdown_content = "\n\n".join(
         [
@@ -123,6 +126,9 @@ def analyse_results(result_path: Path) -> None:
 
     with open(network_image_path, "wb") as network_file:
         network_file.write(network_image.read())
+
+    with open(result_image_path, "wb") as result_file:
+        result_file.write(result_image.read())
 
     with open(markdown_path, "w") as markdown_file:
         markdown_file.write(markdown_content)

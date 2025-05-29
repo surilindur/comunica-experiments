@@ -13,6 +13,7 @@ from os.path import splitext
 from tarfile import open as open_tarfile
 
 from numpy import mean
+from numpy import array
 
 from utils import parse_timestamps
 
@@ -35,17 +36,13 @@ class BenchmarkResult:
         self.combination = combination
         self.template = row["name"]
         self.instance = row["id"]
-        t_min, t_avg, t_max, dieff_raw = (
-            parse_timestamps(row["timestampsAll"])
-            if row["timestampsAll"]
-            else ([], [], [], [0])
-        )
-        self.timestamps_avg = list(t / 1000 for t in t_avg)
-        self.timestamps_min = list(t / 1000 for t in t_min)
-        self.timestamps_max = list(t / 1000 for t in t_max)
-        self.diefficiency_avg = mean(dieff_raw)
-        self.diefficiency_max = max(dieff_raw)
-        self.diefficiency_min = min(dieff_raw)
+        t_min, t_avg, t_max, dieff_raw = parse_timestamps(row["timestampsAll"])
+        self.timestamps_avg = t_avg * 0.001
+        self.timestamps_min = t_min * 0.001
+        self.timestamps_max = t_max * 0.001
+        self.diefficiency_avg = mean(dieff_raw) if dieff_raw.size else 0
+        self.diefficiency_max = max(dieff_raw) if dieff_raw.size else 0
+        self.diefficiency_min = min(dieff_raw) if dieff_raw.size else 0
         self.error = (
             ERROR_EXPLANATION_MAP.get(row["errorDescription"], "unknown")
             if row["error"] == "true"
@@ -55,10 +52,13 @@ class BenchmarkResult:
         self.http_requests_min = float(row["httpRequestsMin"] or "0")
         self.http_requests_max = float(row["httpRequestsMax"] or "0")
         self.http_requests_avg = float(row["httpRequests"] or "0")
-        self.durations = list(
-            float(d) / 1000 if d.isdigit() else 0
-            for d in row["times"].split(TIMESTAMP_DELIMITER)
+        self.durations = array(
+            list(
+                float(d) / 1000 if d.isdigit() else 0
+                for d in row["times"].split(TIMESTAMP_DELIMITER)
+            )
         )
+        assert self.durations.size == self.replication, "Duration count mismatch"
 
     @property
     def failed(self) -> bool:
@@ -72,11 +72,11 @@ class BenchmarkResult:
 
     @property
     def result_count(self) -> int:
-        return len(self.timestamps_avg)
+        return self.timestamps_avg.size
 
     @property
     def duration_avg(self) -> float:
-        return sum(self.durations) / len(self.durations)
+        return sum(self.durations) / self.durations.size
 
     @property
     def duration_min(self) -> float:

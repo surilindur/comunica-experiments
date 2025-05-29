@@ -3,13 +3,18 @@ from typing import Dict
 from typing import Iterable
 from logging import info
 
+from numpy import interp
+from numpy import minimum
+from numpy import maximum
+
 from matplotlib import rcParams
 from matplotlib.pyplot import style
 from matplotlib.pyplot import figure
 from matplotlib.pyplot import close
-from matplotlib.pyplot import subplots
 from matplotlib.ticker import FuncFormatter
+from matplotlib.ticker import MaxNLocator
 from matplotlib.ticker import ScalarFormatter
+from matplotlib.pyplot import get_cmap
 
 from result import BenchmarkResult
 from result import CombinationContainerStats
@@ -218,6 +223,120 @@ def plot_dieff_metrics(
 
     axes_duration.yaxis.set_visible(False)
     axes_duration.set_xlabel("Total query duration (s)", labelpad=10, style="italic")
+
+    info(f"Saving image as {IMAGE_EXT} to in-memory buffer")
+    bytes_io = BytesIO()
+    fig.savefig(fname=bytes_io, format=IMAGE_EXT, dpi=IMAGE_DPI)
+    close(fig)
+    bytes_io.seek(0)
+
+    return bytes_io
+
+
+def plot_result_trends(
+    combination_results: Dict[str, Iterable[BenchmarkResult]],
+) -> BytesIO:
+    """Plot result arrival graphs for all combinations."""
+
+    combination_count = len(combination_results)
+    combination_names = list(sort_labels(combination_results.keys()))
+
+    col_count = 5
+    row_count = round(combination_count / col_count + 0.5)
+
+    info(f"Plotting result arrival trends for {combination_count} combinations")
+
+    fig = figure(figsize=(col_count * 3.5, row_count * 3), layout="constrained")
+
+    ax_shared = None
+    y_max = 0
+    y_locator = MaxNLocator(integer=True)
+
+    cmap = get_cmap(name="plasma", lut=combination_count)
+    index = 0
+
+    for combination_name in combination_names:
+        results = combination_results[combination_name]
+
+        # The result timestamps (x-axis) are treated as the y-axis,
+        # and the result counts (y-axis) are scaled to an array [0:100:1].
+        # This way, the min, max and avg can be plotted uniformly for all queries.
+        # The actual plot will be done on a time axis (x-axis).
+        x_target = list(range(0, 101))
+
+        t_sum = None
+        t_min = None
+        t_max = None
+
+        d_sum = None
+        d_min = None
+        d_max = None
+
+        for result in results:
+            r_x = list(range(0, result.result_count))
+            r_avg = interp(x_target, r_x, result.timestamps_avg)
+            r_min = interp(x_target, r_x, result.timestamps_min)
+            r_max = interp(x_target, r_x, result.timestamps_max)
+            if t_sum is None:
+                t_sum = r_avg
+                t_min = r_min
+                t_max = r_max
+                d_sum = result.duration_avg
+                d_min = result.duration_min
+                d_max = result.duration_max
+            else:
+                t_min += r_min
+                t_max += r_max
+                t_sum += r_avg
+                d_min = min(d_min, result.duration_min)
+                d_max = max(d_max, result.duration_max)
+                d_sum += result.duration_avg
+
+        t_min = t_min / combination_count
+        t_max = t_max / combination_count
+        t_avg = t_sum / combination_count
+        d_avg = d_sum / combination_count
+
+        ax = fig.add_subplot(
+            row_count,
+            col_count,
+            index + 1,
+            sharex=ax_shared,
+            sharey=ax_shared,
+        )
+
+        if ax_shared is None:
+            ax_shared = ax
+
+        y_max = max(y_max, d_avg, t_max[-1])
+
+        color = cmap(index)
+
+        ax.set_title(combination_name, pad=20, weight=500)
+
+        ax.spines["top"].set_visible(False)
+        ax.spines["right"].set_visible(False)
+        ax.spines["bottom"].set_visible(False)
+        ax.spines["left"].set_visible(False)
+        ax.yaxis.set_major_locator(y_locator)
+        ax.set_ylim(bottom=0, top=y_max)
+        ax.set_ylabel("time (s)", rotation=0, labelpad=30)
+
+        ax.set_xlabel("result completeness (%)", labelpad=10)
+        ax.set_xticks([x_target[0], x_target[-1]])
+
+        # Average
+        ax.plot(x_target, t_avg, color=color)
+        ax.plot(x_target[-1], d_avg, "x", color=color)
+
+        # Minimum and maximum
+        ax.fill_between(x_target, t_min, t_max, color=color, alpha=0.1)
+        # ax.plot(x_target[-1], d_min, "x", color=color, alpha=0.1)
+        # ax.plot(x_target[-1], d_max, "x", color=color, alpha=0.1)
+
+        index += 1
+
+    fig.tight_layout(pad=4, h_pad=2, w_pad=2)
 
     info(f"Saving image as {IMAGE_EXT} to in-memory buffer")
     bytes_io = BytesIO()

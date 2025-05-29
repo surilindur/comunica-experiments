@@ -112,6 +112,8 @@ def analyse_results(result_path: Path) -> None:
             "### Query processing",
             f"![processing](./{dieff_image_path.name})",
             summary_dieff_md,
+            "### Completeness",
+            f"![results](./{result_image_path.name})",
             "### Network usage",
             f"![network](./{network_image_path.name})",
             summary_network_md,

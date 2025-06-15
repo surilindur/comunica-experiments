@@ -1,0 +1,31 @@
+Combination	Δ total duration (s)	Δ total CPU-seconds (%)	Δ total GB-seconds	Queries
+baseline				75
+interval-100-hagedorn	-0.225	-0.373	-0.149	75
+interval-100-hagedorn-once	-0.211	-0.346	+0.032	75
+interval-100-predicate	-0.299	-0.518	-0.191	75
+interval-1000-hagedorn	-0.235	-0.391	-0.206	75
+interval-1000-hagedorn-once	-0.236	-0.392	-0.085	75
+interval-1000-predicate	-0.288	-0.479	-0.233	75
+interval-2000-hagedorn	-0.257	-0.415	-0.080	75
+interval-2000-hagedorn-once	-0.231	-0.394	-0.064	75
+interval-2000-predicate	-0.274	-0.474	-0.205	75
+interval-5000-hagedorn	-0.250	-0.403	-0.180	75
+interval-5000-hagedorn-once	-0.228	-0.376	+0.074	75
+interval-5000-predicate	-0.265	-0.446	-0.171	75
+interval-10000-hagedorn	-0.229	-0.368	+0.034	75
+interval-10000-hagedorn-once	-0.255	-0.419	-0.149	75
+interval-10000-predicate	-0.249	-0.421	-0.168	75
+interval-20000-hagedorn	-0.231	-0.368	-0.013	75
+interval-20000-hagedorn-once	-0.228	-0.379	+0.000	75
+interval-20000-predicate	-0.221	-0.382	-0.032	75
+metadata-hagedorn	-0.196	-0.352	-0.114	75
+metadata-hagedorn-latency-50	-0.119	-0.387	-0.087	75
+metadata-hagedorn-latency-100	-0.172	-0.370	-0.050	75
+metadata-hagedorn-latency-300	-0.170	-0.371	-0.129	75
+metadata-hagedorn-once	-0.217	-0.329	+0.101	75
+metadata-predicate	-0.291	-0.492	-0.206	75
+overhead-hagedorn	-0.138	-0.061	+0.148	75
+overhead-hagedorn-latency-50	-0.077	-0.044	+0.006	75
+overhead-hagedorn-latency-100	-0.116	-0.053	-0.003	75
+overhead-hagedorn-latency-300	-0.153	-0.024	-0.064	75
+overhead-predicate	-0.148	-0.088	-0.103	75

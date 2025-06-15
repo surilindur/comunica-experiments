@@ -1,6 +1,7 @@
 from json import loads
 from typing import Tuple
 from typing import Sequence
+from typing import Iterable
 
 from natsort import natsorted
 
@@ -9,7 +10,7 @@ from numpy import array
 from numpy.typing import NDArray
 
 
-def sort_labels(values: Sequence[str]) -> Sequence[str]:
+def sort_labels(values: Iterable[str]) -> Sequence[str]:
     """Sorts labels in a way that makes sense."""
 
     values_sorted = natsorted(values)

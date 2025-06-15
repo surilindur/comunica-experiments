@@ -1,13 +1,16 @@
 from io import BytesIO
 from typing import Dict
 from typing import Iterable
+from typing import Sequence
 from logging import info
 
 from numpy import interp
 from numpy import minimum
 from numpy import maximum
+from numpy.typing import NDArray
 
 from matplotlib import rcParams
+from matplotlib.axes import Axes
 from matplotlib.pyplot import style
 from matplotlib.pyplot import figure
 from matplotlib.pyplot import close
@@ -26,6 +29,44 @@ IMAGE_EXT = "svg"
 rcParams["font.family"] = "Noto Serif"
 
 
+def plot_category_values(
+    axes: Axes,
+    measurements: Dict[str, Sequence[float]],
+    vertical=False,
+) -> None:
+    """Plot all measurement values as a bar chart-like scatter plot."""
+
+    labels = sort_labels(measurements.keys())
+
+    value_ticks = set()
+    label_ticks = []
+
+    for index, label in enumerate(labels):
+        label_ticks.append(index)
+        values = measurements[label]
+        values_count = len(values)
+        if values_count < 5:
+            value_ticks.update(round(v) for v in values)
+        positions = list(index for _ in range(0, values_count))
+        if vertical:
+            x = positions
+            y = values
+        else:
+            x = values
+            y = positions
+
+        axes.plot(x, y, "C0.")
+
+    if vertical:
+        axes.set_xticks(ticks=label_ticks, labels=labels)
+        if len(value_ticks) == len(labels):
+            axes.set_yticks(ticks=list(value_ticks))
+    else:
+        axes.set_yticks(ticks=label_ticks, labels=labels)
+        if len(value_ticks) == len(labels):
+            axes.set_xticks(ticks=list(value_ticks))
+
+
 def plot_network_metrics(
     combination_results: Dict[str, Iterable[BenchmarkResult]],
     combination_stats: Dict[str, Iterable[CombinationContainerStats]],
@@ -35,54 +76,42 @@ def plot_network_metrics(
     info(f"Plotting network metrics for {len(combination_results)} combinations")
 
     fig = figure(
-        figsize=(12, 3 * (len(combination_results) / 10)),
+        figsize=(8, 3 * (len(combination_results) / 10)),
         layout="constrained",
     )
 
     axes_requests = fig.add_subplot(121)
     axes_traffic = fig.add_subplot(122, sharey=axes_requests)
 
-    stats_requests = []
-    values_gb_downloaded = []
-    values_gb_uploaded = []
+    request_counts: Dict[str, Sequence[float]] = {}
+    data_transfer_gb: Dict[str, Sequence[float]] = {}
 
     for combination_name in sort_labels(combination_results.keys())[::-1]:
         results = combination_results[combination_name]
-        http_sum_avg = sum(r.http_requests_avg for r in results)
-        http_sum_min = sum(r.http_requests_min for r in results)
-        http_sum_max = sum(r.http_requests_max for r in results)
-        stats_requests.append(
-            dict(
-                med=http_sum_avg,
-                q1=http_sum_avg,
-                q3=http_sum_avg,
-                whislo=http_sum_min,
-                whishi=http_sum_max,
-                fliers=[],
-                label=combination_name,
-            )
+        request_counts[combination_name] = tuple(r.http_requests_avg for r in results)
+        data_transfer_gb[combination_name] = tuple(
+            s.gigabytes_outbound
+            for s in combination_stats[combination_name]
+            if s.container == "server"
         )
 
-        stats = (
-            s for s in combination_stats[combination_name] if s.container == "server"
-        )
-        values_gb_uploaded.append(sum(s.gigabytes_outbound for s in stats))
-        values_gb_downloaded.append(sum(s.gigabytes_inbound for s in stats))
+    plot_category_values(axes=axes_requests, measurements=request_counts)
+    plot_category_values(axes=axes_traffic, measurements=data_transfer_gb)
 
-    axes_requests.bxp(
-        stats_requests,
-        widths=0.5,
-        vert=False,
-        patch_artist=True,
-        showbox=False,
-        showmeans=False,
-        capprops=dict(color="lightgrey"),
-        whiskerprops=dict(color="lightgrey"),
-    )
+    # axes_requests.bxp(
+    #    stats_requests,
+    #    widths=0.5,
+    #    vert=False,
+    #    patch_artist=True,
+    #    showbox=False,
+    #    showmeans=False,
+    #    capprops=dict(color="lightgrey"),
+    #    whiskerprops=dict(color="lightgrey"),
+    # )
 
     y = list(range(1, len(combination_results) + 1))
     # axes_traffic.plot(values_gb_downloaded, y, ".")
-    axes_traffic.plot(values_gb_uploaded, y, ".")
+    # axes_traffic.plot(values_gb_uploaded, y, ".")
 
     style.use("seaborn-v0_8-colorblind")
 
@@ -98,6 +127,7 @@ def plot_network_metrics(
     axes_requests.set_xlabel("Total HTTP requests", labelpad=10, style="italic")
     axes_requests.xaxis.set_inverted(True)
     axes_requests.xaxis.set_major_formatter(formatter=formatter_thousands)
+    # axes_requests.yaxis.set_major_locator()
     axes_requests.yaxis.set_tick_params(
         length=0,
         labelright=True,
@@ -239,7 +269,7 @@ def plot_result_trends(
     """Plot result arrival graphs for all combinations."""
 
     combination_count = len(combination_results)
-    combination_names = list(sort_labels(combination_results.keys()))
+    combination_names = sort_labels(combination_results.keys())
 
     col_count = 5
     row_count = round(combination_count / col_count + 0.5)
@@ -277,7 +307,14 @@ def plot_result_trends(
             r_avg = interp(x_target, r_x, result.timestamps_avg)
             r_min = interp(x_target, r_x, result.timestamps_min)
             r_max = interp(x_target, r_x, result.timestamps_max)
-            if t_sum is None:
+            if (
+                t_sum is None
+                or t_min is None
+                or t_max is None
+                or d_min is None
+                or d_max is None
+                or d_sum is None
+            ):
                 t_sum = r_avg
                 t_min = r_min
                 t_max = r_max
@@ -291,6 +328,13 @@ def plot_result_trends(
                 d_min = min(d_min, result.duration_min)
                 d_max = max(d_max, result.duration_max)
                 d_sum += result.duration_avg
+
+        assert (
+            t_min is not None
+            and t_max is not None
+            and t_sum is not None
+            and d_sum is not None
+        ), "Missing data for result trends"
 
         t_min = t_min / combination_count
         t_max = t_max / combination_count

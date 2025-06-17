@@ -1,6 +1,0 @@
-Combination	Total duration (s)	Total CPU-seconds (%)	Total GB-seconds	Queries
-file-per-date	20946	404740	104894	75
-file-per-location	23401	418203	146904	75
-file-per-resource	15777	236666	38286	75
-mixed	26333	516173	211848	75
-single-file	25026	440011	182217	75

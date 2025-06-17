@@ -18,7 +18,7 @@
       "@type": "ActorHttpDelay",
       "mediatorHttp": { "@id": "urn:comunica:default:http/mediators#main" },
       "beforeActors": { "@id": "urn:comunica:default:http/actors#fetch" },
-      "average": 0,
+      "average": 100,
       "delta": 0
     },
     {
@@ -36,13 +36,16 @@
       "beforeActors": [
         { "@id": "urn:comunica:default:rdf-join/actors#inner-multi-bind" },
         { "@id": "urn:comunica:default:rdf-join/actors#inner-multi-bind-source" },
+        { "@id": "urn:comunica:default:rdf-join/actors#inner-symmetric-hash" },
+        { "@id": "urn:comunica:default:rdf-join/actors#inner-nested-loop" },
         { "@id": "urn:comunica:default:rdf-join/actors#inner-multi-smallest" },
-        { "@id": "urn:comunica:default:rdf-join/actors#inner-multi-smallest-filter-bindings" },
-        { "@id": "urn:comunica:default:rdf-join/actors#inner-nested-loop" }
+        { "@id": "urn:comunica:default:rdf-join/actors#inner-multi-smallest-filter-bindings" }
       ],
-      "evaluationAfterMetadataUpdate": false,
-      "evaluationInterval": 10000,
-      "restartLimit": 1
+      "evaluationAfterMetadataUpdate": true,
+      "evaluationInterval": null,
+      "restartLimit": null,
+      "restartThreshold": 0.33,
+      "wrapAllJoins": false
     }
   ]
 }

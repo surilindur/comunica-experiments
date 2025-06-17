@@ -36,13 +36,16 @@
       "beforeActors": [
         { "@id": "urn:comunica:default:rdf-join/actors#inner-multi-bind" },
         { "@id": "urn:comunica:default:rdf-join/actors#inner-multi-bind-source" },
+        { "@id": "urn:comunica:default:rdf-join/actors#inner-symmetric-hash" },
+        { "@id": "urn:comunica:default:rdf-join/actors#inner-nested-loop" },
         { "@id": "urn:comunica:default:rdf-join/actors#inner-multi-smallest" },
-        { "@id": "urn:comunica:default:rdf-join/actors#inner-multi-smallest-filter-bindings" },
-        { "@id": "urn:comunica:default:rdf-join/actors#inner-nested-loop" }
+        { "@id": "urn:comunica:default:rdf-join/actors#inner-multi-smallest-filter-bindings" }
       ],
       "evaluationAfterMetadataUpdate": false,
       "evaluationInterval": null,
-      "restartLimit": null
+      "restartLimit": null,
+      "restartThreshold": 0.33,
+      "wrapAllJoins": false
     }
   ]
 }

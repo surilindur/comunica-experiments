@@ -8,7 +8,7 @@
   "@type": "ExperimentSolidBench",
   "scale": "0.1",
   "configEnhance": "input/solidbench/enhancer.json",
-  "configFragment": "input/solidbench/fragmenter.json",
+  "configFragment": "input/solidbench/fragmenter-mixed.json",
   "configQueries": "input/solidbench/queries.json",
   "configServer": "input/solidserver/config.json",
   "hadoopMemory": "4G",

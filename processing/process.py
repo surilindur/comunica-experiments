@@ -9,15 +9,18 @@ from pathlib import Path
 from argparse import ArgumentParser
 from argparse import Namespace
 
+from jbrcsv import load_combination_results
+from jbrcsv import load_combination_stats
+
 from plots import IMAGE_EXT
 from plots import plot_dieff_metrics
 from plots import plot_network_metrics
-from result import load_combination_results
-from result import load_combination_stats
+
 from summaries import diefficiency_summary_table
 from summaries import network_summary_table
 from summaries import template_summary_table
 from summaries import resource_summary_table
+
 from collect import collect_results
 
 

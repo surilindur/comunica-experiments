@@ -1,61 +1,32 @@
-from json import loads
+"""Helper functions for small repetitive tasks."""
+
 from typing import Sequence
-from collections import namedtuple
 
 from natsort import natsorted
 
-from numpy import ndarray
-from numpy import minimum
-from numpy import maximum
-from numpy import interp
-from numpy import arange
 
-AggregateTimestamps = namedtuple("AggregateTimestamps", ["min", "max", "avg"])
-
-
-def sort_labels(values: Sequence[str]) -> Sequence[str]:
-    """Sorts labels in a way that makes sense."""
-
-    values_sorted = natsorted(values)
-
-    if "baseline" in values_sorted and "overhead" in values_sorted:
-        values_sorted.remove("baseline")
-        values_sorted.remove("overhead")
-        values_sorted.insert(0, "overhead")
-        values_sorted.insert(0, "baseline")
-
-    return values_sorted
-
-
-def parse_jbr_timestamps_all_column(value: str) -> Sequence[Sequence[float]]:
-    """Parses the jbr.js timestampsAll column into numeric values."""
-
-    return loads(value)
-
-
-def aggregate_result_arrivals(
-    timestamps: Sequence[Sequence[float]],
-) -> AggregateTimestamps:
+def sort_labels(labels: Sequence[str]) -> Sequence[str]:
     """
-    Resamples result arrival timestamps to [0, 99] and aggregates them.
-    This enables the aggregation of results with different time axis.
+    Sort labels in a human-intuitive way using the natsorted library.
+    Labels for baseline and overhead measurements are moved to the beginning.
     """
 
-    t_min = ndarray((0, 0))
-    t_max = ndarray((0, 0))
-    t_sum = ndarray((0, 0))
+    baseline_labels: Sequence[str] = []
+    overhead_labels: Sequence[str] = []
+    other_labels: Sequence[str] = []
 
-    y = arange(100)
-
-    for t in timestamps:
-        t_y = interp(y, arange(len(t)) + 1, t)
-        if t_min.size == 0:
-            t_min = minimum(t_min, t_y)
-            t_max = maximum(t_max, t_y)
-            t_sum += t_y
+    for label in labels:
+        if "baseline" in label:
+            baseline_labels.append(label)
+        elif "overhead" in label:
+            overhead_labels.append(label)
         else:
-            t_min = t_y
-            t_max = t_y
-            t_sum = t_y
+            other_labels.append(label)
 
-    return AggregateTimestamps(min=t_min, max=t_max, avg=t_sum / len(timestamps))
+    return list(
+        (
+            *natsorted(baseline_labels),
+            *natsorted(overhead_labels),
+            *natsorted(other_labels),
+        )
+    )

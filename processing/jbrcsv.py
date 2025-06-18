@@ -1,94 +1,72 @@
-"""Representation of benchmark results."""
+"""Helper classes and functions for parsing jbr.js results into processable entities."""
 
 from io import TextIOWrapper
 from csv import DictReader
+from json import loads
 from typing import Set
 from typing import Dict
-from typing import List
+from typing import Sequence
 from typing import Iterable
-from logging import info
+from logging import debug
 from logging import warning
 from pathlib import Path
 from os.path import splitext
 from tarfile import open as open_tarfile
 
-from numpy import mean
-
-from utils import parse_timestamps
-
+RESULT_FILENAME = "query-times.csv"
 RESULT_DELIMITER = ";"  # The CSV file delimiter used by sparql-benchmark-runner.js
 TIMESTAMP_DELIMITER = " "  # The CSV file timestamp delimiter
-QUERY_TIMES_FILE = "query-times.csv"
-STATS_ZIP_FILE = "stats.tar.xz"
+STATS_FILENAME = "stats.tar.xz"
+STATS_EXTENSION = ".csv"
 GB_BYTES = 1024**3
 
-ERROR_EXPLANATION_MAP: Dict[str, str | None] = {
-    "Result hash inconsistency": "inconsistent results",
-    'Unexpected "!" at position 0 in state STOP': "timeout",
-}
 
-
-class BenchmarkResult:
-    """Representation of a sparql-benchmark-runner.js row for a template instance."""
+class JbrQuery:
+    """Representation of a single result row from sparql-benchmark-runner.js results."""
 
     def __init__(self, combination: str, row: Dict[str, str]) -> None:
         self.combination = combination
         self.template = row["name"]
         self.instance = row["id"]
-        t_min, t_avg, t_max, dieff_raw = (
-            parse_timestamps(row["timestampsAll"])
-            if row["timestampsAll"]
-            else ([], [], [], [0])
-        )
-        self.timestamps_avg = list(t / 1000 for t in t_avg)
-        self.timestamps_min = list(t / 1000 for t in t_min)
-        self.timestamps_max = list(t / 1000 for t in t_max)
-        self.diefficiency_avg = mean(dieff_raw)
-        self.diefficiency_max = max(dieff_raw)
-        self.diefficiency_min = min(dieff_raw)
-        self.error = (
-            ERROR_EXPLANATION_MAP.get(row["errorDescription"], "unknown")
-            if row["error"] == "true"
-            else None
-        )
         self.replication = int(row["replication"])
+        self.timestamps: Sequence[Sequence[float]] = loads(row["timestampsAll"])
+        self.durations: Sequence[float] = list(
+            float(d) / 1000
+            for d in row["times"].split(TIMESTAMP_DELIMITER)
+            if d.isdigit()
+        )
+        self.duration_avg = float(row["time"])
+        self.duration_min = float(row["timeMin"])
+        self.duration_max = float(row["timeMax"])
+        self.results_avg = float(row["results"])
+        self.results_min = float(row["resultsMin"])
+        self.results_max = float(row["resultsMax"])
+        self.http_requests_avg = float(row["httpRequests"] or "0")
         self.http_requests_min = float(row["httpRequestsMin"] or "0")
         self.http_requests_max = float(row["httpRequestsMax"] or "0")
-        self.http_requests_avg = float(row["httpRequests"] or "0")
-        self.durations = list(
-            float(d) / 1000 if d.isdigit() else 0
-            for d in row["times"].split(TIMESTAMP_DELIMITER)
-        )
+        self.failed = row["error"] == "true" and "hash" not in row["errorDescription"]
+        self.error = row["errorDescription"]
 
-    @property
-    def failed(self) -> bool:
+    def __hash__(self) -> int:
+        return hash(self.name)
+
+    def __eq__(self, value: object) -> bool:
         return (
-            self.error and "hash" not in self.error.lower()
-        ) or self.result_count < 1
+            isinstance(value, JbrQuery)
+            and value.combination == self.combination
+            and value.name == self.name
+        )
 
     @property
     def name(self) -> str:
-        return f"{" ".join(self.template.split("-"))}.{self.instance}"
-
-    @property
-    def result_count(self) -> int:
-        return len(self.timestamps_avg)
-
-    @property
-    def duration_avg(self) -> float:
-        return sum(self.durations) / len(self.durations)
-
-    @property
-    def duration_min(self) -> float:
-        return min(self.durations)
-
-    @property
-    def duration_max(self) -> float:
-        return max(self.durations)
+        return f"{self.template}-{self.instance}"
 
 
-class CombinationContainerStats:
-    """Collection of stats for a given combination."""
+class JbrStats:
+    """
+    The aggregate statistics collected by jbr.js, that cannot be split by query,
+    because they are not recorded by query.
+    """
 
     def __init__(
         self,
@@ -109,95 +87,87 @@ class CombinationContainerStats:
         self.gigabytes_outbound = sum(net_tx_bytes) / GB_BYTES
 
 
-def load_combination_stats(path: Path) -> Dict[str, CombinationContainerStats]:
+def parse_jbr_csv(path: Path) -> Set[JbrQuery]:
+    """Parses the given query-times.csv into a set of result abstractions."""
+
+    queries: Set[JbrQuery] = set()
+
+    with open(path, "r") as results_file:
+        reader = DictReader(results_file, delimiter=RESULT_DELIMITER)
+        for row in reader:
+            query = JbrQuery(combination=path.parent.name, row=row)
+            queries.add(query)
+
+    return queries
+
+
+def parse_jbr_queries(path: Path, ignore_failed=True) -> Set[JbrQuery]:
+    """Parses all combinations under the specified path."""
+
+    queries: Set[JbrQuery] = set()
+    failed_names: Set[str] = set()
+
+    for combination_path in (p for p in path.iterdir() if p.is_dir()):
+        csv_path = combination_path.joinpath(RESULT_FILENAME)
+        if csv_path.exists() and csv_path.is_file():
+            debug(f"Loading queries from {csv_path}")
+            for query in parse_jbr_csv(path=csv_path):
+                if query.failed:
+                    failed_names.add(query.name)
+                queries.add(query)
+
+    if failed_names and ignore_failed:
+        warning(f"Excluding {len(failed_names)} failed query instantiations")
+        return set(q for q in queries if q.name not in failed_names)
+
+    return queries
+
+
+def parse_jbr_stats(path: Path) -> Set[JbrStats]:
     """Parses the resource consumption statistics for the specificed combination."""
 
-    stats: Dict[str, List[CombinationContainerStats]] = {}
+    stats: Set[JbrStats] = set()
 
     for combination_path in (p for p in path.iterdir() if p.is_dir()):
-        stats_path = combination_path.joinpath(STATS_ZIP_FILE)
-        info(f"Parsing resource stats from {stats_path}")
-        stats[combination_path.name] = []
+        stats_path = combination_path.joinpath(STATS_FILENAME)
+        debug(f"Parsing container resource statistics from {stats_path}")
         with open_tarfile(stats_path, "r:xz") as tar_file:
-            for file in tar_file:
-                name, ext = splitext(file.name)
-                if ext == ".csv":
-                    with tar_file.extractfile(member=file) as tar_buffer:
-                        tar_text = TextIOWrapper(tar_buffer)
-                        reader = DictReader(f=tar_text, delimiter=",")
-                        cpu_usage_percent = []
-                        bytes_mem = []
-                        bytes_rx = []
-                        bytes_tx = []
-                        bytes_in_prev = None
-                        bytes_out_prev = None
-                        for row in reader:
-                            cpu_usage_percent.append(float(row["cpu_percentage"]))
-                            bytes_mem.append(int(row["memory"]))
-                            bytes_in = int(row["received"])
-                            bytes_out = int(row["transmitted"])
-                            if bytes_in_prev:
-                                bytes_rx.append(bytes_in - bytes_in_prev)
-                                bytes_tx.append(bytes_out - bytes_out_prev)
-                            else:
-                                bytes_rx.append(bytes_in)
-                                bytes_tx.append(bytes_out)
-                            bytes_in_prev = bytes_in
-                            bytes_out_prev = bytes_out
-                        stats[combination_path.name].append(
-                            CombinationContainerStats(
-                                container=name.removeprefix("stats-"),
-                                cpu_percent=cpu_usage_percent,
-                                mem_bytes=bytes_mem,
-                                net_rx_bytes=bytes_rx,
-                                net_tx_bytes=bytes_tx,
-                            )
-                        )
+            for file_info in tar_file:
+                name, ext = splitext(file_info.name)
+                if ext != STATS_EXTENSION:
+                    debug(f"Skipping {file_info.name}")
+                    continue
+                stats_file = tar_file.extractfile(member=file_info)
+                assert stats_file, f"Failed to extract {file_info.name}"
+                stats_text = TextIOWrapper(stats_file)
+                reader = DictReader(f=stats_text, delimiter=",")
+                cpu_usage_percent = []
+                bytes_mem = []
+                bytes_rx = []
+                bytes_tx = []
+                bytes_in_prev = -1
+                bytes_out_prev = -1
+                for row in reader:
+                    cpu_usage_percent.append(float(row["cpu_percentage"]))
+                    bytes_mem.append(int(row["memory"]))
+                    bytes_in = int(row["received"])
+                    bytes_out = int(row["transmitted"])
+                    if bytes_in_prev < 0:
+                        bytes_rx.append(bytes_in - bytes_in_prev)
+                        bytes_tx.append(bytes_out - bytes_out_prev)
+                    else:
+                        bytes_rx.append(bytes_in)
+                        bytes_tx.append(bytes_out)
+                    bytes_in_prev = bytes_in
+                    bytes_out_prev = bytes_out
+                stats.add(
+                    JbrStats(
+                        container=name.removeprefix("stats-"),
+                        cpu_percent=cpu_usage_percent,
+                        mem_bytes=bytes_mem,
+                        net_rx_bytes=bytes_rx,
+                        net_tx_bytes=bytes_tx,
+                    )
+                )
 
     return stats
-
-
-def load_combination_results(
-    path: Path, filter_failed=True
-) -> Dict[str, Iterable[BenchmarkResult]]:
-    """Parses raw query results for all combinations in the specified path."""
-
-    info(f"Loading combinations from {path}")
-
-    results: Dict[str, Iterable[BenchmarkResult]] = {}
-    failed_queries: Set[str] = set()
-
-    for combination_path in (p for p in path.iterdir() if p.is_dir()):
-        csv_path = combination_path.joinpath(QUERY_TIMES_FILE)
-        if csv_path.exists() and csv_path.is_file():
-            info(f"Loading {csv_path}")
-            combination_results: List[BenchmarkResult] = []
-            with open(csv_path, "r") as csv_file:
-                reader = DictReader(csv_file, delimiter=RESULT_DELIMITER)
-                for row in reader:
-                    result = BenchmarkResult(
-                        combination=combination_path.name,
-                        row=row,
-                    )
-                    if result.failed:
-                        failed_queries.add(result.name)
-                    combination_results.append(result)
-            results[combination_path.name] = combination_results
-
-    warning(f"Found {len(failed_queries)} failed queries")
-
-    if filter_failed:
-        for combination_name in results.keys():
-            filtered_results = list(
-                r for r in results[combination_name] if r.name not in failed_queries
-            )
-            removed_count = len(results[combination_name]) - len(filtered_results)
-            if removed_count > 0:
-                warning(
-                    f"Ignoring {removed_count} failed queries from {combination_name}"
-                )
-                results[combination_name] = filtered_results
-
-    info(f"Loaded results for {len(results)} combinations")
-
-    return results

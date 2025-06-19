@@ -1,0 +1,23 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/runner/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-http-delay/^0.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/config-query-sparql-prototype/^0.0.0/components/context.jsonld"
+  ],
+  "import": [
+    "ccqsp:config/config-base.json",
+    "ccqsp:config/rdf-join-entries-sort/actors-zero-knowledge.json"
+  ],
+  "@id": "urn:comunica:default:Runner",
+  "@type": "Runner",
+  "actors": [
+    {
+      "@id": "urn:comunica:default:http/actors#delay",
+      "@type": "ActorHttpDelay",
+      "mediatorHttp": { "@id": "urn:comunica:default:http/mediators#main" },
+      "beforeActors": { "@id": "urn:comunica:default:http/actors#fetch" },
+      "average": 100,
+      "delta": 0
+    }
+  ]
+}

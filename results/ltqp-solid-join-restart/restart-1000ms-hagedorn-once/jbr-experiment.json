@@ -4,7 +4,7 @@
     "https://linkedsoftwaredependencies.org/bundles/npm/@jbr-experiment/solidbench/^6.0.0/components/context.jsonld",
     "https://linkedsoftwaredependencies.org/bundles/npm/@jbr-hook/sparql-endpoint-comunica/^6.0.0/components/context.jsonld"
   ],
-  "@id": "urn:jbr:ltqp-solid-join-restart:combination_14",
+  "@id": "urn:jbr:ltqp-solid-join-restart:combination_20",
   "@type": "ExperimentSolidBench",
   "scale": "0.1",
   "configEnhance": "input/solidbench/enhancer.json",
@@ -21,14 +21,14 @@
     "@type": "StaticDockerResourceConstraints",
     "cpu_percentage": 800
   },
-  "queryRunnerReplication": 1,
+  "queryRunnerReplication": 5,
   "queryRunnerWarmupRounds": 0,
   "queryRunnerRequestDelay": 0,
   "queryRunnerEndpointAvailabilityCheckTimeout": 1000,
   "queryRunnerUrlParams": {},
   "queryTimeoutFallback": 70000,
   "hookSparqlEndpoint": {
-    "@id": "urn:jbr:ltqp-solid-join-restart:combination_14:hookSparqlEndpoint",
+    "@id": "urn:jbr:ltqp-solid-join-restart:combination_20:hookSparqlEndpoint",
     "@type": "HookSparqlEndpointComunica",
     "dockerfileClient": "input/comunica/Dockerfile",
     "resourceConstraints": {

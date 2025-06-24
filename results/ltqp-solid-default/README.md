@@ -1,43 +1,38 @@
-### Successful queries
+## Combinations
 
-| Combination | D-1 | D-2 | D-3 | D-4 | D-5 | D-6 | D-7 | D-8 | S-1 | S-2 | S-3 | S-4 | S-5 | S-6 | S-7 | Total |
-| - | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: |
-| file-per-date | 5 | 5 | 5 | 5 | 5 | 5 | 5 | 0 | 5 | 0 | 0 | 5 | 5 | 0 | 0 | 50 |
-| file-per-location | 5 | 5 | 5 | 5 | 5 | 5 | 3 | 0 | 5 | 0 | 0 | 5 | 5 | 0 | 0 | 48 |
-| file-per-resource | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 0 | 5 | 0 | 0 | 5 | 5 | 5 | 0 | 34 |
-| mixed | 5 | 5 | 5 | 5 | 5 | 5 | 4 | 0 | 5 | 0 | 0 | 5 | 5 | 0 | 0 | 49 |
-| single-file | 5 | 5 | 5 | 5 | 5 | 5 | 4 | 1 | 4 | 0 | 0 | 5 | 5 | 0 | 0 | 49 |
+| Combination | Duration (s) | First result (s) | Last result (s) | dieff@full | HTTP requests | CPU-seconds (%) | GB-seconds | Network ingress (GB) | Network egress (GB) | Total results |
+|:-|-:|-:|-:|-:|-:|-:|-:|-:|-:|-:|
+| file-per-date | 1.37 | 1.17 | 1.26 | 1.50 | 223.13 | 278964.83 | 73650.53 | 24.77 | 3.28 | 742.00 |
+| file-per-location | 2.59 | 1.10 | 1.16 | 1.77 | 375.93 | 91165.39 | 26421.13 | 2.15 | 61.62 | 742.00 |
+| file-per-resource | 1.11 | 0.87 | 1.08 | 5.93 | 206.19 | 160722.59 | 22745.97 | 10.56 | 1.09 | 742.00 |
+| mixed | 3.57 | 1.86 | 1.92 | 1.92 | 414.19 | 106825.83 | 33327.24 | 2.90 | 38.82 | 742.00 |
+| single-file | 2.66 | 1.18 | 1.22 | 1.59 | 290.21 | 77507.65 | 24566.79 | 1.52 | 70.61 | 742.00 |
 
-### Query processing
+## templates
 
-![processing](./processing.svg)
+![templates](templates.svg)
 
-| Combination | *dieff@full* | *dieff@full* min | *dieff@full* max | Duration | Duration min | Duration max | First result | First result min | First result max | Last result | Last result min | Last result max | Queries | Results |
-| - | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: |
-| file-per-date | 41854.300 | 29249.000 | 68784.500 | 36.845 | 28.340 | 55.654 | 28.661 | 20.909 | 46.536 | 31.347 | 23.549 | 49.350 | 27 | 741 |
-| file-per-location | 48133.700 | 32783.500 | 74505.500 | 73.644 | 52.262 | 95.172 | 22.830 | 12.174 | 55.495 | 24.754 | 14.204 | 57.471 | 27 | 741 |
-| file-per-resource | 175480.500 | 82197.000 | 246186.000 | 32.901 | 30.028 | 36.963 | 21.394 | 18.092 | 26.014 | 27.769 | 24.686 | 31.898 | 27 | 741 |
-| mixed | 53257.900 | 21584.500 | 133400.500 | 99.727 | 42.414 | 274.366 | 46.915 | 10.680 | 147.512 | 48.787 | 11.848 | 151.969 | 27 | 741 |
-| single-file | 42921.300 | 21644.000 | 90497.500 | 78.019 | 46.452 | 139.502 | 26.325 | 11.472 | 80.779 | 27.662 | 13.037 | 81.921 | 27 | 741 |
+## combinations
 
-### Network usage
+![combinations](combinations.svg)
 
-![network](./resources.svg)
+## httprequests
 
-| Combination | HTTP requests | HTTP requests min | HTTP requests max | Total data transfer (GB) | Queries |
-| - | -: | -: | -: | -: | -: |
-| file-per-date | 5969 | 5412 | 6918 | 56.096 | 27 |
-| file-per-location | 10918 | 8741 | 13472 | 127.548 | 27 |
-| file-per-resource | 6114 | 6114 | 6114 | 23.295 | 27 |
-| mixed | 11772 | 6770 | 27987 | 83.457 | 27 |
-| single-file | 8510 | 6136 | 11719 | 144.266 | 27 |
+![httprequests](httprequests.svg)
 
-### Resource usage
+## diefficiency
 
-| Combination | Total duration (s) | Total CPU-seconds (%) | Total GB-seconds | Queries |
-| - | -: | -: | -: | -: |
-| file-per-date | 20946 | 404740 | 104894 | 75 |
-| file-per-location | 23401 | 418203 | 146904 | 75 |
-| file-per-resource | 15777 | 236666 | 38286 | 75 |
-| mixed | 26333 | 516173 | 211848 | 75 |
-| single-file | 25026 | 440011 | 182217 | 75 |
+![diefficiency](diefficiency.svg)
+
+## timestamps
+
+![timestamps](timestamps.svg)
+
+## durations
+
+![durations](durations.svg)
+
+## resources
+
+![resources](resources.svg)
+

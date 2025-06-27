@@ -71,16 +71,22 @@ def analyse_results(source: Path) -> None:
     readme_rows: List[str] = []
 
     queries = parse_jbr_queries(path=source, ignore_failed=True)
-    stats = parse_jbr_stats(path=source)
+    stats = [s for s in parse_jbr_stats(path=source) if "sparql" in s.container]
 
     readme_rows.append("## Combinations\n\n")
     table_header = True
 
-    for row_cells in generate_combination_comparison_table(queries=queries, stats=stats):
+    for row_cells in generate_combination_comparison_table(
+        queries=queries, stats=stats
+    ):
         readme_rows.append("| " + " | ".join(row_cells) + " |\n")
         if table_header:
             cell_count = len(tuple(row_cells))
-            readme_rows.append("|" + "|".join([":-", *["-:" for _ in range(0, cell_count - 1)]]) + "|\n")
+            readme_rows.append(
+                "|"
+                + "|".join([":-", *["-:" for _ in range(0, cell_count - 1)]])
+                + "|\n"
+            )
             table_header = False
 
     readme_rows.append("\n")
@@ -102,7 +108,7 @@ def analyse_results(source: Path) -> None:
             image_buffer = function(queries)
             image_file.write(image_buffer.read())
 
-    stats_plot_targets: Dict[str, Callable[[Iterable[JbrStats], str], BytesIO]] = {
+    stats_plot_targets: Dict[str, Callable[[Iterable[JbrStats]], BytesIO]] = {
         "resources": plot_combination_resources_over_time,
     }
 
@@ -111,7 +117,7 @@ def analyse_results(source: Path) -> None:
         readme_rows.extend([f"## {name}\n\n", f"![{name}]({image_path.name})\n\n"])
         with open(image_path, "wb") as image_file:
             debug(f"Generating {name} figure")
-            image_buffer = function(stats, "sparql")
+            image_buffer = function(stats)
             image_file.write(image_buffer.read())
 
     readme_path = source.joinpath("README.md")

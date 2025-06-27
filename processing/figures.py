@@ -79,16 +79,22 @@ def plot_template_completeness_trends(queries: Iterable[JbrQuery]) -> BytesIO:
         if query.template not in template_query_timestamps:
             template_query_timestamps[query.template] = {}
         if query.combination in template_query_timestamps[query.template]:
-            template_query_timestamps[query.template][query.combination] = vstack([
-                template_query_timestamps[query.template][query.combination],
-                resample_timestamps(query.timestamps),
-            ])
+            template_query_timestamps[query.template][query.combination] = vstack(
+                [
+                    template_query_timestamps[query.template][query.combination],
+                    resample_timestamps(query.timestamps),
+                ]
+            )
         else:
-            template_query_timestamps[query.template][query.combination] = resample_timestamps(query.timestamps,)
+            template_query_timestamps[query.template][query.combination] = (
+                resample_timestamps(
+                    query.timestamps,
+                )
+            )
 
     template_count = len(template_query_timestamps)
-    template_names = sort_labels([ *template_query_timestamps.keys() ])
-    combination_names = sort_labels([ * combination_names_set ])
+    template_names = sort_labels([*template_query_timestamps.keys()])
+    combination_names = sort_labels([*combination_names_set])
     combination_colors = get_cmap(name=IMAGE_COLORMAP, lut=len(combination_names))
 
     # determine column and row count
@@ -123,10 +129,19 @@ def plot_template_completeness_trends(queries: Iterable[JbrQuery]) -> BytesIO:
             )
 
             # ensure the completeness percent makes sense
-            c_percent = arange(start=0, stop=template_query_timestamps[template_name][combination_name].shape[1],)
+            c_percent = arange(
+                start=0,
+                stop=template_query_timestamps[template_name][combination_name].shape[
+                    1
+                ],
+            )
 
             # average as a single lineplot: y-axis is the time, x-axis the completeness
-            axs[template_index].plot(c_percent, t_avg, color=combination_colors(combination_index),)
+            axs[template_index].plot(
+                c_percent,
+                t_avg,
+                color=combination_colors(combination_index),
+            )
 
         # clean up the axis
         cleanup_axes(axs[template_index])
@@ -142,19 +157,20 @@ def plot_template_completeness_trends(queries: Iterable[JbrQuery]) -> BytesIO:
             )
 
         # add x-axis ticks
-        axs[template_index].xaxis.set_ticks(
-            ticks=[0, 100],
-            labels=[str(0), str(100)]
-        )
+        axs[template_index].xaxis.set_ticks(ticks=[0, 100], labels=[str(0), str(100)])
 
         # adjust y-axis ticks
         y_max = round(axs[template_index].get_ylim()[1] + 0.5)
         y_min = 0
         axs[template_index].set_ylim(bottom=y_min, top=y_max)
-        axs[template_index].yaxis.set_ticks(ticks=[y_min, y_max], labels=[str(y_min), str(y_max)],)
+        axs[template_index].yaxis.set_ticks(
+            ticks=[y_min, y_max],
+            labels=[str(y_min), str(y_max)],
+        )
         axs[template_index].yaxis.set_tick_params(length=0)
 
     return save_figure(fig=fig)
+
 
 def plot_combination_completeness_trends(queries: Iterable[JbrQuery]) -> BytesIO:
     """Aggregates the queries by combination, and plots the result arrival trends."""
@@ -216,7 +232,9 @@ def plot_combination_completeness_trends(queries: Iterable[JbrQuery]) -> BytesIO
         )
 
         # ensure the completeness percent makes sense
-        c_percent = arange(start=0, stop=combination_timestamps[combination_name].shape[1])
+        c_percent = arange(
+            start=0, stop=combination_timestamps[combination_name].shape[1]
+        )
 
         # shaded area between min and max to illustrate the spread
         axs[i].fill_between(
@@ -373,7 +391,7 @@ def plot_combination_duration_values(queries: Iterable[JbrQuery]) -> BytesIO:
         if query.combination in combination_durations:
             combination_durations[query.combination].append(query.duration_avg)
         else:
-            combination_durations[query.combination] = [ query.duration_avg ]
+            combination_durations[query.combination] = [query.duration_avg]
 
     return plot_combination_points(
         combination_points=combination_durations,
@@ -398,10 +416,16 @@ def plot_combination_timestamp_values(queries: Iterable[JbrQuery]) -> BytesIO:
         xlabel="result arrival timestamps (s)",
     )
 
+
 def plot_combination_resources(stats: Iterable[JbrStats]) -> BytesIO:
     """Generate a plot of combination resources summary for comparison."""
 
-    fig, axs = subplots(nrows=1, ncols=4, figsize=(8, 16), layout="constrained",)
+    fig, axs = subplots(
+        nrows=1,
+        ncols=4,
+        figsize=(8, 16),
+        layout="constrained",
+    )
 
     assert len(axs) == 4 and isinstance(axs[0], Axes)
     axs: Sequence[Axes] = axs
@@ -411,11 +435,12 @@ def plot_combination_resources(stats: Iterable[JbrStats]) -> BytesIO:
 
     return save_figure(fig=fig)
 
-def plot_combination_resources_over_time(stats: Iterable[JbrStats], container: str,) -> BytesIO:
+
+def plot_combination_resources_over_time(stats: Iterable[JbrStats]) -> BytesIO:
     """Generate a plot of combination resource consumptions for comparison."""
 
-    combination_stats = {s.combination: s for s in stats if container in s.container}
-    combination_names = sort_labels([ *combination_stats.keys() ])
+    combination_stats = {s.combination: s for s in stats}
+    combination_names = sort_labels([*combination_stats.keys()])
     combination_colors = get_cmap(name=IMAGE_COLORMAP, lut=len(combination_names))
 
     fig, axs = subplots(
@@ -436,9 +461,15 @@ def plot_combination_resources_over_time(stats: Iterable[JbrStats], container: s
     for i, combination_name in enumerate(combination_names):
         color = combination_colors(i)
         axs[0].plot(combination_stats[combination_name].cpu_percent, color=color)
-        axs[1].plot(combination_stats[combination_name].mem_bytes / GB_BYTES, color=color)
-        axs[2].plot(combination_stats[combination_name].net_rx_bytes / MB_BYTES, color=color)
-        axs[3].plot(combination_stats[combination_name].net_tx_bytes / MB_BYTES, color=color)
+        axs[1].plot(
+            combination_stats[combination_name].mem_bytes / GB_BYTES, color=color
+        )
+        axs[2].plot(
+            combination_stats[combination_name].net_rx_bytes / MB_BYTES, color=color
+        )
+        axs[3].plot(
+            combination_stats[combination_name].net_tx_bytes / MB_BYTES, color=color
+        )
 
     axs[0].set_ylabel(ylabel="CPU (%)", rotation=0, labelpad=70)
     axs[1].set_ylabel(ylabel="Memory (GB)", rotation=0, labelpad=60)

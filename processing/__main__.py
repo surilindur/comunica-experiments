@@ -75,20 +75,24 @@ def analyse_results(source: Path) -> None:
     stats = [s for s in parse_jbr_stats(path=source) if "sparql" in s.container]
 
     readme_rows.append("## Combinations\n\n")
-    table_header = True
+    table_header = False
 
     for row_cells in generate_combination_comparison_table(
         all_queries=parse_jbr_queries(path=source, ignore_failed=False),
         successful_queries=queries,
         stats=stats,
     ):
-        readme_rows.append("| " + " | ".join(row_cells) + " |\n")
+        # Markdown
+        # readme_rows.append("| " + " | ".join(row_cells) + " |\n")
+        # LaTeX
+        readme_rows.append(" & ".join(row_cells) + " \\\\\n")
+
         if table_header:
             cell_count = len(tuple(row_cells))
             readme_rows.append(
-                "|"
-                + "|".join([":-", *["-:" for _ in range(0, cell_count - 1)]])
-                + "|\n"
+                "| "
+                + " | ".join([":-", *["-:" for _ in range(0, cell_count - 1)]])
+                + " |\n"
             )
             table_header = False
 

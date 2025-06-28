@@ -23,19 +23,25 @@ def generate_combination_comparison_table(
     table_cells: List[List[str]] = [
         [
             "Combination",
-            "Duration (s)",
-            "First result (s)",
-            "Last result (s)",
-            "dieff@full",
+            "Duration min (s)" "Duration avg (s)",
+            "Duration max (s)" "First result min (s)",
+            "First result avg (s)",
+            "First result max (s)",
+            "Last result min (s)",
+            "Last result avg (s)",
+            "Last result max (s)",
+            "dieff@full min",
+            "dieff@full avg",
+            "dieff@full max",
             "HTTP requests",
             "CPU-seconds (%)",
             "GB-seconds",
             "Network ingress (GB)",
             "Network egress (GB)",
-            "Total results",
+            # "Total results",
             # "Queries faster than baseline",
             # "Queries slower than baseline",
-            "Successgul queries",
+            "Queries finished",
         ]
     ]
 
@@ -106,16 +112,29 @@ def generate_combination_comparison_table(
         table_cells.append(
             [
                 combination,
+                # duration
+                f"{min(c_durations):.2f}",
                 f"{mean(c_durations):.2f}",
+                f"{max(c_durations):.2f}",
+                # first result
+                f"{min(c_first_results):.2f}",
                 f"{mean(c_first_results):.2f}",
+                f"{max(c_first_results):.2f}",
+                # last result
+                f"{min(c_last_results):.2f}",
                 f"{mean(c_last_results):.2f}",
+                f"{max(c_last_results):.2f}",
+                # dieff
+                f"{min(c_dieff_fulls):.2f}",
                 f"{mean(c_dieff_fulls):.2f}",
-                f"{mean(c_http_reqs):.2f}",
-                f"{c_stat.cpu_seconds_percent:.2f}",
-                f"{c_stat.gigabyte_seconds:.2f}",
-                f"{c_stat.gigabytes_inbound:.2f}",
-                f"{c_stat.gigabytes_outbound:.2f}",
-                f"{c_total_results:.0f}",
+                f"{max(c_dieff_fulls):.2f}",
+                # others
+                f"{mean(c_http_reqs):.0f}",
+                f"{c_stat.cpu_seconds_percent:.0f}",
+                f"{c_stat.gigabyte_seconds:.0f}",
+                f"{c_stat.gigabytes_inbound:.0f}",
+                f"{c_stat.gigabytes_outbound:.0f}",
+                # f"{c_total_results:.0f}",
                 # f"{c_faster_than_baseline:.0f}",
                 # f"{c_slower_than_baseline:.0f}",
                 f"{c_successful} / {len(query_names)}",

@@ -31,6 +31,7 @@ from figures import plot_combination_diefficiency_values
 from figures import plot_combination_timestamp_values
 from figures import plot_combination_duration_values
 from figures import plot_template_completeness_trends
+from figures import plot_all_queries
 
 
 class CliArgs(Namespace):
@@ -77,7 +78,9 @@ def analyse_results(source: Path) -> None:
     table_header = True
 
     for row_cells in generate_combination_comparison_table(
-        queries=queries, stats=stats
+        all_queries=parse_jbr_queries(path=source, ignore_failed=False),
+        successful_queries=queries,
+        stats=stats,
     ):
         readme_rows.append("| " + " | ".join(row_cells) + " |\n")
         if table_header:
@@ -98,15 +101,23 @@ def analyse_results(source: Path) -> None:
         "diefficiency": plot_combination_diefficiency_values,
         "timestamps": plot_combination_timestamp_values,
         "durations": plot_combination_duration_values,
+        "queries": plot_all_queries,
     }
 
-    for name, function in queries_plot_targets.items():
-        image_path = source.joinpath(f"{name}.{IMAGE_FORMAT}")
-        readme_rows.extend([f"## {name}\n\n", f"![{name}]({image_path.name})\n\n"])
-        with open(image_path, "wb") as image_file:
-            debug(f"Generating {name} figure")
-            image_buffer = function(queries)
-            image_file.write(image_buffer.read())
+    query_sets: Dict[str, Iterable[JbrQuery]] = {
+        "-ratelimit": set(q for q in queries if "ratelimit" not in q.combination),
+        "": set(q for q in queries if "ratelimit" in q.combination),
+    }
+
+    for query_set_suffix, query_set in query_sets.items():
+
+        for name, function in queries_plot_targets.items():
+            image_path = source.joinpath(f"{name}{query_set_suffix}.{IMAGE_FORMAT}")
+            readme_rows.extend([f"## {name}\n\n", f"![{name}]({image_path.name})\n\n"])
+            with open(image_path, "wb") as image_file:
+                debug(f"Generating {name} figure")
+                image_buffer = function(query_set)
+                image_file.write(image_buffer.read())
 
     stats_plot_targets: Dict[str, Callable[[Iterable[JbrStats]], BytesIO]] = {
         "resources": plot_combination_resources_over_time,

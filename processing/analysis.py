@@ -6,6 +6,9 @@ from typing import Sequence
 
 from statistics import NormalDist
 
+from numpy import min
+from numpy import max
+from numpy import average
 from numpy import array
 from numpy import minimum
 from numpy import maximum
@@ -102,4 +105,16 @@ def calculate_aggregate_completeness_curve(
             t_max = t_resampled
             t_sum = t_resampled
 
-    return (t_min, t_sum / len(timestamps), t_max)
+    return t_min, t_sum / len(timestamps), t_max
+
+
+def calculate_aggregate_timestamps(
+    timestamps: NDArray[float64],
+) -> Tuple[NDArray[float64], NDArray[float64], NDArray[float64]]:
+    """Calculates the average, minumum and maximum timestamps."""
+
+    t_min = min(timestamps, axis=0)
+    t_max = max(timestamps, axis=0)
+    t_avg = average(timestamps, axis=0)
+
+    return t_min, t_avg, t_max

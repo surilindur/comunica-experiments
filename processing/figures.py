@@ -27,6 +27,7 @@ from numpy.typing import NDArray
 from analysis import resample_timestamps
 from analysis import calculate_confidence_interval
 from analysis import calculate_diefficiency_at_full_results
+from analysis import calculate_aggregate_timestamps
 from analysis import calculate_aggregate_completeness_curve
 from jbrcsv import JbrQuery
 from jbrstats import JbrStats
@@ -106,7 +107,7 @@ def plot_template_completeness_trends(queries: Iterable[JbrQuery]) -> BytesIO:
     fig, axs = subplots(
         nrows=nrows,
         ncols=ncols,
-        figsize=(ncols * 3, nrows * 3),
+        figsize=(ncols * 3, nrows * 4),
         sharex="all",
         layout="constrained",
     )
@@ -168,6 +169,130 @@ def plot_template_completeness_trends(queries: Iterable[JbrQuery]) -> BytesIO:
             labels=[str(y_min), str(y_max)],
         )
         axs[template_index].yaxis.set_tick_params(length=0)
+
+    fig.legend(
+        labels=combination_names,
+        ncols=nrows * 2,
+        frameon=False,
+        loc="lower right",
+    )
+
+    return save_figure(fig=fig)
+
+
+def plot_all_queries(queries: Iterable[JbrQuery]) -> BytesIO:
+    """Generates a plot of all the queries."""
+
+    queries_by_name: Dict[str, List[JbrQuery]] = {}
+
+    combination_names_set: Set[str] = set()
+
+    for q in queries:
+        combination_names_set.add(q.combination)
+        if q.name not in queries_by_name:
+            queries_by_name[q.name] = []
+        queries_by_name[q.name].append(q)
+
+    queries_count = len(queries_by_name)
+    query_names = sort_labels([*queries_by_name.keys()])
+    combination_names = sort_labels([*combination_names_set])
+    combination_colors = get_cmap(name=IMAGE_COLORMAP, lut=len(combination_names))
+
+    # determine column and row count
+    ncols = min(6, queries_count)
+    nrows = max(round(queries_count / ncols + 0.5), 1) + 1
+
+    debug(f"Plotting {queries_count} queries in {ncols}x{nrows} grid")
+
+    fig, axs = subplots(
+        nrows=nrows,
+        ncols=ncols,
+        figsize=(ncols * 3, nrows * 3.5),
+        layout="constrained",
+    )
+
+    # flatten in case of multiple rows, and remove unused cells
+    if nrows > 1:
+        axs = axs.flatten()  # type: ignore
+        for i in range(queries_count, len(axs)):
+            axs[i].remove()
+
+    # typing helper for autocompletion, and an assertion to encorce it
+    assert len(axs) >= queries_count and isinstance(axs[0], Axes)
+    axs: Sequence[Axes] = axs
+
+    for query_index, query_name in enumerate(query_names):
+        query_x_ticks: List[float] = []
+
+        for combination_index, combination_name in enumerate(combination_names):
+            # find the query for this combination
+            combination_query = next(
+                q
+                for q in queries_by_name[query_name]
+                if q.combination == combination_name
+            )
+            assert combination_query, f"No query {query_name} for {combination_name}"
+
+            # calculate the aggregate timestamp curve
+            t_min, t_avg, t_max = calculate_aggregate_timestamps(
+                timestamps=combination_query.timestamps,
+            )
+
+            # add current termination time to x-ticks
+            query_x_ticks.append(t_avg[-1])
+
+            # average as a single lineplot: y-axis is the time, x-axis the completeness
+            axs[query_index].plot(
+                [0, *t_avg],
+                arange(start=0, stop=t_avg.size + 1),
+                color=combination_colors(combination_index),
+                label=combination_name,
+            )
+
+        # clean up the axis
+        cleanup_axes(axs[query_index])
+
+        # add template name
+        axs[query_index].set_title(query_name, pad=0, weight=400, size=11)
+        if query_index % ncols == 0:
+            axs[query_index].set_ylabel(
+                ylabel="time (s)",
+                rotation=0,
+                labelpad=30,
+                style="italic",
+            )
+
+        # add x-axis ticks
+        # axs[query_index].xaxis.set_ticks(
+        #    ticks=[0, *query_x_ticks],
+        #    labels=[str(0), *(str(i) for i in query_x_ticks)],
+        # )
+
+        # adjust x-axis ticks
+        x_max = round(max(query_x_ticks) + 0.5)
+        x_min = 0
+        axs[query_index].set_xlim(left=x_min, right=x_max)
+        axs[query_index].xaxis.set_ticks(
+            ticks=[x_min, x_max],
+            labels=[str(x_min), str(x_max)],
+        )
+
+        # adjust y-axis ticks
+        y_max = round(axs[query_index].get_ylim()[1] + 0.5)
+        y_min = 0
+        axs[query_index].set_ylim(bottom=y_min, top=y_max)
+        axs[query_index].yaxis.set_ticks(
+            ticks=[y_min, y_max],
+            labels=[str(y_min), str(y_max)],
+        )
+        axs[query_index].yaxis.set_tick_params(length=0)
+
+    fig.legend(
+        labels=combination_names,
+        ncols=nrows,
+        frameon=False,
+        loc="lower right",
+    )
 
     return save_figure(fig=fig)
 
@@ -305,7 +430,7 @@ def plot_combination_points(
     fig, ax = subplots(
         nrows=1,
         ncols=1,
-        figsize=(5, round(combination_count / 3)),
+        figsize=(8, round(combination_count / 3)),
         sharex="all",
         layout="tight",
     )
@@ -330,7 +455,7 @@ def plot_combination_points(
         labels=combination_names,
         ha="left",
     )
-    ax.yaxis.set_tick_params(length=0, pad=180)
+    ax.yaxis.set_tick_params(length=0, pad=250)
     ax.yaxis.set_inverted(True)
 
     # add ticks on the x-axis

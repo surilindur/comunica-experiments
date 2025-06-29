@@ -98,6 +98,8 @@ def plot_template_completeness_trends(queries: Iterable[JbrQuery]) -> BytesIO:
     combination_names = sort_labels([*combination_names_set])
     combination_colors = get_cmap(name=IMAGE_COLORMAP, lut=len(combination_names))
 
+    assert template_count > 0, "Attempting to plot without combinations"
+
     # determine column and row count
     ncols = min(6, template_count)
     nrows = max(round(template_count / ncols + 0.5), 1)
@@ -317,6 +319,8 @@ def plot_combination_completeness_trends(queries: Iterable[JbrQuery]) -> BytesIO
 
     combination_count = len(combination_timestamps)
     combination_colors = get_cmap(name=IMAGE_COLORMAP, lut=combination_count)
+
+    assert combination_count > 0, "Attempting to plot without combinations"
 
     # determine column and row count
     ncols = min(6, combination_count)

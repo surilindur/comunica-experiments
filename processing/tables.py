@@ -23,8 +23,10 @@ def generate_combination_comparison_table(
     table_cells: List[List[str]] = [
         [
             "Combination",
-            "Duration min (s)" "Duration avg (s)",
-            "Duration max (s)" "First result min (s)",
+            "Duration min (s)",
+            "Duration avg (s)",
+            "Duration max (s)",
+            "First result min (s)",
             "First result avg (s)",
             "First result max (s)",
             "Last result min (s)",
@@ -38,9 +40,9 @@ def generate_combination_comparison_table(
             "GB-seconds",
             "Network ingress (GB)",
             "Network egress (GB)",
-            # "Total results",
-            # "Queries faster than baseline",
-            # "Queries slower than baseline",
+            "Total results",
+            "Queries faster than baseline",
+            "Queries slower than baseline",
             "Queries finished",
         ]
     ]
@@ -52,15 +54,17 @@ def generate_combination_comparison_table(
 
     baseline_mappings: Dict[str, str] = {}
 
-    def find_baseline(name: str) -> str:
+    def find_baseline(name: str) -> str | None:
         for key, value in baseline_mappings.items():
             if name.endswith(key):
                 return value
-        return sort_labels([*baseline_mappings.values()])[0]
+        values = sort_labels([*baseline_mappings.values()])
+        if values:
+            return values[0]
 
     for q in all_queries:
         query_names.add(q.name)
-        if q.combination.startswith("baseline"):
+        if q.combination.startswith("baseline") or q.combination == "baseline":
             baseline_mappings[q.combination.removeprefix("baseline")] = q.combination
         if q.combination not in combination_successes:
             combination_successes[q.combination] = 0
@@ -101,11 +105,12 @@ def generate_combination_comparison_table(
                 )
             if "baseline" not in q.name:
                 q_baseline_combination = find_baseline(q.name)
-                q_baseline = combination_queries[q_baseline_combination][q.name]
-                if q.duration_avg < q_baseline.duration_avg:
-                    c_faster_than_baseline += 1
-                elif q.duration_avg > q_baseline.duration_avg:
-                    c_slower_than_baseline += 1
+                if q_baseline_combination:
+                    q_baseline = combination_queries[q_baseline_combination][q.name]
+                    if q.duration_avg < q_baseline.duration_avg:
+                        c_faster_than_baseline += 1
+                    elif q.duration_avg > q_baseline.duration_avg:
+                        c_slower_than_baseline += 1
 
         c_stat = combination_stats[combination]
 
@@ -134,9 +139,9 @@ def generate_combination_comparison_table(
                 f"{c_stat.gigabyte_seconds:.0f}",
                 f"{c_stat.gigabytes_inbound:.0f}",
                 f"{c_stat.gigabytes_outbound:.0f}",
-                # f"{c_total_results:.0f}",
-                # f"{c_faster_than_baseline:.0f}",
-                # f"{c_slower_than_baseline:.0f}",
+                f"{c_total_results:.0f}",
+                f"{c_faster_than_baseline:.0f}",
+                f"{c_slower_than_baseline:.0f}",
                 f"{c_successful} / {len(query_names)}",
             ]
         )

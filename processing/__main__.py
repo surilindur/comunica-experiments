@@ -2,6 +2,7 @@
 
 from io import BytesIO
 from time import perf_counter
+from typing import Set
 from typing import Dict
 from typing import List
 from typing import Callable
@@ -11,6 +12,7 @@ from logging import DEBUG
 from logging import INFO
 from logging import info
 from logging import debug
+from logging import warning
 from logging import basicConfig
 from pathlib import Path
 from argparse import ArgumentParser
@@ -31,6 +33,7 @@ from figures import plot_combination_diefficiency_values
 from figures import plot_combination_timestamp_values
 from figures import plot_combination_duration_values
 from figures import plot_template_completeness_trends
+from figures import plot_all_queries
 
 
 class CliArgs(Namespace):
@@ -77,16 +80,19 @@ def analyse_results(source: Path) -> None:
     table_header = True
 
     for row_cells in generate_combination_comparison_table(
-        queries=queries, stats=stats
+        all_queries=parse_jbr_queries(path=source, ignore_failed=False),
+        successful_queries=queries,
+        stats=stats,
     ):
+        # Markdown
         readme_rows.append("| " + " | ".join(row_cells) + " |\n")
+        # LaTeX
+        # readme_rows.append(" & ".join(row_cells) + " \\\\\n")
+
         if table_header:
             cell_count = len(tuple(row_cells))
-            readme_rows.append(
-                "|"
-                + "|".join([":-", *["-:" for _ in range(0, cell_count - 1)]])
-                + "|\n"
-            )
+            md_header_marks = ["-:" for _ in range(0, cell_count)]
+            readme_rows.append("| " + " | ".join(md_header_marks) + " |\n")
             table_header = False
 
     readme_rows.append("\n")
@@ -98,15 +104,32 @@ def analyse_results(source: Path) -> None:
         "diefficiency": plot_combination_diefficiency_values,
         "timestamps": plot_combination_timestamp_values,
         "durations": plot_combination_duration_values,
+        "queries": plot_all_queries,
     }
 
-    for name, function in queries_plot_targets.items():
-        image_path = source.joinpath(f"{name}.{IMAGE_FORMAT}")
-        readme_rows.extend([f"## {name}\n\n", f"![{name}]({image_path.name})\n\n"])
-        with open(image_path, "wb") as image_file:
-            debug(f"Generating {name} figure")
-            image_buffer = function(queries)
-            image_file.write(image_buffer.read())
+    query_sets: Dict[str, Set[JbrQuery]] = {
+        "": set(q for q in queries if "ratelimit" not in q.combination),
+        "-ratelimit": set(q for q in queries if "ratelimit" in q.combination),
+    }
+
+    for query_set_suffix, query_set in query_sets.items():
+
+        if len(query_set) < 1:
+            warning(f"Skipping empty query set {query_set_suffix}")
+            continue
+
+        for name, function in queries_plot_targets.items():
+            image_path = source.joinpath(f"{name}{query_set_suffix}.{IMAGE_FORMAT}")
+            readme_rows.extend(
+                [
+                    f"## {name}{query_set_suffix}\n\n",
+                    f"![{name}]({image_path.name})\n\n",
+                ]
+            )
+            with open(image_path, "wb") as image_file:
+                debug(f"Generating {name} figure")
+                image_buffer = function(query_set)
+                image_file.write(image_buffer.read())
 
     stats_plot_targets: Dict[str, Callable[[Iterable[JbrStats]], BytesIO]] = {
         "resources": plot_combination_resources_over_time,

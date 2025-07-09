@@ -4,9 +4,9 @@
     "https://linkedsoftwaredependencies.org/bundles/npm/@jbr-experiment/sparql-custom/^6.0.0/components/context.jsonld",
     "https://linkedsoftwaredependencies.org/bundles/npm/@jbr-hook/sparql-endpoint-comunica/^6.0.0/components/context.jsonld"
   ],
-  "@id": "urn:jbr:wikidata-graph-split",
+  "@id": "urn:jbr:wikidata-graph-split:combination_4",
   "@type": "ExperimentSparqlCustom",
-  "queriesPath": "input/queries-%FACTOR-federation%",
+  "queriesPath": "input/queries-service",
   "endpointUrl": "http://localhost:3001/sparql",
   "queryRunnerReplication": 1,
   "queryRunnerWarmupRounds": 0,
@@ -15,15 +15,15 @@
   "queryRunnerUrlParams": {},
   "queryTimeoutFallback": 130000,
   "hookSparqlEndpoint": {
-    "@id": "urn:jbr:wikidata-graph-split:hookSparqlEndpoint",
+    "@id": "urn:jbr:wikidata-graph-split:combination_4:hookSparqlEndpoint",
     "@type": "HookSparqlEndpointComunica",
     "dockerfileClient": "input/comunica/Dockerfile",
     "resourceConstraints": {
       "@type": "StaticDockerResourceConstraints",
       "cpu_percentage": 1600
     },
-    "configClient": "input/comunica/config-%FACTOR-cardinality%.json",
-    "contextClient": "input/comunica/context-%FACTOR-federation%.json",
+    "configClient": "input/comunica/config-count.json",
+    "contextClient": "input/comunica/context-service.json",
     "additionalBinds": [],
     "clientPort": 3001,
     "clientLogLevel": "info",

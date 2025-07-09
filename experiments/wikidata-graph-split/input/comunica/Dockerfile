@@ -5,7 +5,7 @@ RUN apk add git
 # Clone the Comunica repository and install
 RUN git clone https://github.com/comunica/comunica /opt/comunica
 WORKDIR /opt/comunica
-RUN git checkout 24962de0ce971a002896e19a99767013d6d930a7
+RUN git checkout e6f67b1fc798bffc9f6f9050f32c3dbcad7cd5dc
 RUN yarn install --frozen-lockfile
 WORKDIR /opt/comunica/engines/query-sparql
 

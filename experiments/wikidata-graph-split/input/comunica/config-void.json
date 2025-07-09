@@ -2,7 +2,8 @@
   "@context": [
     "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/config-query-sparql/^4.0.0/components/context.jsonld",
     "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-http-limit-rate/^4.0.0/components/context.jsonld",
-    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-query-source-identify-hypermedia-sparql/^4.0.0/components/context.jsonld"
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-query-source-identify-hypermedia-sparql/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-optimize-query-operation-prune-empty-source-operations/^4.0.0/components/context.jsonld"
   ],
   "import": [
     "ccqs:config/bindings-aggregator-factory/actors.json",
@@ -73,7 +74,6 @@
   "@graph": [
     {
       "comment": "Apply rate limit by default to every server to avoid issues",
-      "@id": "urn:comunica:default:http/actors#limit-rate-override",
       "@type": "Override",
       "overrideInstance": { "@id": "urn:comunica:default:http/actors#limit-rate" },
       "overrideParameters": {
@@ -84,8 +84,7 @@
       }
     },
     {
-      "comment": "Disable COUNT queries in the SPARQL source actor and enable local estimation",
-      "@id": "urn:comunica:default:query-source-identify-hypermedia/actors#sparql-override",
+      "comment": "Disable local estimation and COUNT queries",
       "@type": "Override",
       "overrideInstance": { "@id": "urn:comunica:default:query-source-identify-hypermedia/actors#sparql" },
       "overrideParameters": {
@@ -94,6 +93,18 @@
         "mediatorMergeBindingsContext": { "@id": "urn:comunica:default:merge-bindings-context/mediators#main" },
         "cardinalityCountQueries": false,
         "cardinalityEstimateConstruction": true
+      }
+    },
+    {
+      "comment": "Prefer ASK queries to prune operations, because COUNT queries will not be used at all with VoID",
+      "@type": "Override",
+      "overrideInstance": { "@id": "urn:comunica:default:optimize-query-operation/actors#prune-empty-source-operations" },
+      "overrideParameters": {
+        "@type": "ActorOptimizeQueryOperationPruneEmptySourceOperations",
+        "useAskIfSupported": true,
+        "beforeActors": [
+          { "@id": "urn:comunica:default:optimize-query-operation/actors#filter-pushdown" }
+        ]
       }
     }
   ]

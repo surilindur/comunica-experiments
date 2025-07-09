@@ -1,11 +1,11 @@
-FROM node:23-alpine
+FROM node:24-alpine
 
 RUN apk add git
 
 # Clone the Comunica repository and install
 RUN git clone https://github.com/comunica/comunica /opt/comunica
 WORKDIR /opt/comunica
-RUN git checkout 94e1eacab069551590cc250074b36bce08720c4c
+RUN git checkout 24962de0ce971a002896e19a99767013d6d930a7
 RUN yarn install --frozen-lockfile
 WORKDIR /opt/comunica/engines/query-sparql
 

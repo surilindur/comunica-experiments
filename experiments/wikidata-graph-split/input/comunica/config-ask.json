@@ -96,12 +96,12 @@
       }
     },
     {
-      "comment": "Prefer COUNT queries to prune operations, so that the result is cached for metadata",
+      "comment": "Prefer ASK queries to prune operations",
       "@type": "Override",
       "overrideInstance": { "@id": "urn:comunica:default:optimize-query-operation/actors#prune-empty-source-operations" },
       "overrideParameters": {
         "@type": "ActorOptimizeQueryOperationPruneEmptySourceOperations",
-        "useAskIfSupported": false,
+        "useAskIfSupported": true,
         "beforeActors": [
           { "@id": "urn:comunica:default:optimize-query-operation/actors#filter-pushdown" }
         ]

@@ -7,6 +7,7 @@
   "commonGenerated": true,
   "factors": {
     "cardinality": [
+      "ask",
       "void",
       "count"
     ],

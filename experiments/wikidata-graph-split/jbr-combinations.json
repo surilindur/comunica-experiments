@@ -8,8 +8,8 @@
   "factors": {
     "cardinality": [
       "ask",
-      "void",
-      "count"
+      "count",
+      "void"
     ],
     "federation": [
       "automatic",

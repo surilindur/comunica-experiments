@@ -1,11 +1,12 @@
 {
   "name": "comunica-experiments",
-  "packageManager": "yarn@4.9.1",
+  "packageManager": "yarn@4.9.2",
   "private": true,
   "workspaces": [
     "experiments/*"
   ],
   "resolutions": {
-    "componentsjs": "^6.0.0"
+    "componentsjs": "^6.0.0",
+    "tar-fs": "^2.1.0"
   }
 }

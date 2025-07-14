@@ -12,12 +12,12 @@ SELECT ?x ?xLabel ?r ?relLabel {
       ?x ?r ?work .
       BIND(?xLabel AS ?xLabel)
       SERVICE wikibase:label {
-        bd:serviceParam wikibase:language 'en,de,fr,ru,nl,it,ja,uk,cs,sk,be,ca'
+        bd:serviceParam wikibase:language "en,de,fr,ru,nl,it,ja,uk,cs,sk,be,ca"
       }
     }
   }
   ?rel wikibase:directClaim ?r
   SERVICE wikibase:label {
-    bd:serviceParam wikibase:language 'en,de,fr,ru,nl,it,ja,uk,cs,sk,be,ca'
+    bd:serviceParam wikibase:language "en,de,fr,ru,nl,it,ja,uk,cs,sk,be,ca"
   }
 } ORDER BY ?r ?xLabel

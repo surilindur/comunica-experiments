@@ -1,0 +1,228 @@
+{
+  "type": "slice",
+  "input": {
+    "type": "distinct",
+    "input": {
+      "type": "project",
+      "input": {
+        "type": "join",
+        "input": [
+          {
+            "type": "service",
+            "input": {
+              "type": "join",
+              "input": [
+                {
+                  "termType": "Quad",
+                  "value": "",
+                  "subject": {
+                    "termType": "NamedNode",
+                    "value": "http://www.bigdata.com/rdf#serviceParam"
+                  },
+                  "predicate": {
+                    "termType": "NamedNode",
+                    "value": "http://wikiba.se/ontology#language"
+                  },
+                  "object": {
+                    "termType": "Literal",
+                    "value": "[AUTO_LANGUAGE],en",
+                    "language": "",
+                    "datatype": {
+                      "termType": "NamedNode",
+                      "value": "http://www.w3.org/2001/XMLSchema#string"
+                    }
+                  },
+                  "graph": {
+                    "termType": "DefaultGraph",
+                    "value": ""
+                  },
+                  "type": "pattern"
+                }
+              ]
+            },
+            "name": {
+              "termType": "NamedNode",
+              "value": "http://wikiba.se/ontology#label"
+            },
+            "silent": false
+          },
+          {
+            "type": "union",
+            "input": [
+              {
+                "termType": "Quad",
+                "value": "",
+                "subject": {
+                  "termType": "Variable",
+                  "value": "Thesis"
+                },
+                "predicate": {
+                  "termType": "NamedNode",
+                  "value": "http://www.wikidata.org/prop/direct/P5008"
+                },
+                "object": {
+                  "termType": "NamedNode",
+                  "value": "http://www.wikidata.org/entity/Q111645234"
+                },
+                "graph": {
+                  "termType": "DefaultGraph",
+                  "value": ""
+                },
+                "type": "pattern",
+                "metadata": {
+                  "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
+                }
+              },
+              {
+                "termType": "Quad",
+                "value": "",
+                "subject": {
+                  "termType": "Variable",
+                  "value": "Thesis"
+                },
+                "predicate": {
+                  "termType": "NamedNode",
+                  "value": "http://www.wikidata.org/prop/direct/P5008"
+                },
+                "object": {
+                  "termType": "NamedNode",
+                  "value": "http://www.wikidata.org/entity/Q111645234"
+                },
+                "graph": {
+                  "termType": "DefaultGraph",
+                  "value": ""
+                },
+                "type": "pattern",
+                "metadata": {
+                  "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
+                }
+              }
+            ]
+          },
+          {
+            "type": "union",
+            "input": [
+              {
+                "termType": "Quad",
+                "value": "",
+                "subject": {
+                  "termType": "Variable",
+                  "value": "Thesis"
+                },
+                "predicate": {
+                  "termType": "NamedNode",
+                  "value": "http://www.wikidata.org/prop/direct/P921"
+                },
+                "object": {
+                  "termType": "Variable",
+                  "value": "mainsubject"
+                },
+                "graph": {
+                  "termType": "DefaultGraph",
+                  "value": ""
+                },
+                "type": "pattern",
+                "metadata": {
+                  "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
+                }
+              },
+              {
+                "termType": "Quad",
+                "value": "",
+                "subject": {
+                  "termType": "Variable",
+                  "value": "Thesis"
+                },
+                "predicate": {
+                  "termType": "NamedNode",
+                  "value": "http://www.wikidata.org/prop/direct/P921"
+                },
+                "object": {
+                  "termType": "Variable",
+                  "value": "mainsubject"
+                },
+                "graph": {
+                  "termType": "DefaultGraph",
+                  "value": ""
+                },
+                "type": "pattern",
+                "metadata": {
+                  "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
+                }
+              }
+            ]
+          },
+          {
+            "type": "union",
+            "input": [
+              {
+                "termType": "Quad",
+                "value": "",
+                "subject": {
+                  "termType": "Variable",
+                  "value": "mainsubject"
+                },
+                "predicate": {
+                  "termType": "NamedNode",
+                  "value": "http://www.wikidata.org/prop/direct/P31"
+                },
+                "object": {
+                  "termType": "NamedNode",
+                  "value": "http://www.wikidata.org/entity/Q5"
+                },
+                "graph": {
+                  "termType": "DefaultGraph",
+                  "value": ""
+                },
+                "type": "pattern",
+                "metadata": {
+                  "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
+                }
+              },
+              {
+                "termType": "Quad",
+                "value": "",
+                "subject": {
+                  "termType": "Variable",
+                  "value": "mainsubject"
+                },
+                "predicate": {
+                  "termType": "NamedNode",
+                  "value": "http://www.wikidata.org/prop/direct/P31"
+                },
+                "object": {
+                  "termType": "NamedNode",
+                  "value": "http://www.wikidata.org/entity/Q5"
+                },
+                "graph": {
+                  "termType": "DefaultGraph",
+                  "value": ""
+                },
+                "type": "pattern",
+                "metadata": {
+                  "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "variables": [
+        {
+          "termType": "Variable",
+          "value": "Thesis"
+        },
+        {
+          "termType": "Variable",
+          "value": "ThesisLabel"
+        },
+        {
+          "termType": "Variable",
+          "value": "mainsubjectLabel"
+        }
+      ]
+    }
+  },
+  "start": 0,
+  "length": 100
+}

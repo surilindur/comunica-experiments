@@ -7,6 +7,6 @@ SELECT ?xLabel ?descr {
    VALUES (?x) {(wd:Q77051335) (wd:L17271) (wd:Q42)}
    OPTIONAL { ?x wikibase:lemma ?xLabel }
    OPTIONAL { ?x schema:description ?descr .
-   FILTER(lang(?descr) = 'en') }
-   SERVICE wikibase:label { bd:serviceParam  wikibase:language  'en,de,fr,rm' }
+   FILTER(lang(?descr) = "en") }
+   SERVICE wikibase:label { bd:serviceParam  wikibase:language  "en,de,fr,rm" }
 }

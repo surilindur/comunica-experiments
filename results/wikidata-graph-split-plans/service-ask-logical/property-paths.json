@@ -1,0 +1,716 @@
+{
+  "type": "project",
+  "input": {
+    "type": "orderby",
+    "input": {
+      "type": "extend",
+      "input": {
+        "type": "extend",
+        "input": {
+          "type": "extend",
+          "input": {
+            "type": "join",
+            "input": [
+              {
+                "type": "leftjoin",
+                "input": [
+                  {
+                    "type": "project",
+                    "input": {
+                      "type": "extend",
+                      "input": {
+                        "type": "extend",
+                        "input": {
+                          "type": "group",
+                          "input": {
+                            "type": "join",
+                            "input": [
+                              {
+                                "type": "path",
+                                "subject": {
+                                  "termType": "Variable",
+                                  "value": "topics"
+                                },
+                                "predicate": {
+                                  "type": "alt",
+                                  "input": [
+                                    {
+                                      "type": "seq",
+                                      "input": [
+                                        {
+                                          "type": "ZeroOrMorePath",
+                                          "path": {
+                                            "type": "link",
+                                            "iri": {
+                                              "termType": "NamedNode",
+                                              "value": "http://www.wikidata.org/prop/direct/P31"
+                                            }
+                                          }
+                                        },
+                                        {
+                                          "type": "ZeroOrMorePath",
+                                          "path": {
+                                            "type": "link",
+                                            "iri": {
+                                              "termType": "NamedNode",
+                                              "value": "http://www.wikidata.org/prop/direct/P279"
+                                            }
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "OneOrMorePath",
+                                      "path": {
+                                        "type": "link",
+                                        "iri": {
+                                          "termType": "NamedNode",
+                                          "value": "http://www.wikidata.org/prop/direct/P361"
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "OneOrMorePath",
+                                      "path": {
+                                        "type": "link",
+                                        "iri": {
+                                          "termType": "NamedNode",
+                                          "value": "http://www.wikidata.org/prop/direct/P1269"
+                                        }
+                                      }
+                                    }
+                                  ]
+                                },
+                                "object": {
+                                  "termType": "NamedNode",
+                                  "value": "http://www.wikidata.org/entity/Q104450895"
+                                },
+                                "graph": {
+                                  "termType": "DefaultGraph",
+                                  "value": ""
+                                }
+                              },
+                              {
+                                "termType": "Quad",
+                                "value": "",
+                                "subject": {
+                                  "termType": "NamedNode",
+                                  "value": "http://www.bigdata.com/queryHints#Prior"
+                                },
+                                "predicate": {
+                                  "termType": "NamedNode",
+                                  "value": "http://www.bigdata.com/queryHints#runFirst"
+                                },
+                                "object": {
+                                  "termType": "Literal",
+                                  "value": "true",
+                                  "language": "",
+                                  "datatype": {
+                                    "termType": "NamedNode",
+                                    "value": "http://www.w3.org/2001/XMLSchema#boolean"
+                                  }
+                                },
+                                "graph": {
+                                  "termType": "DefaultGraph",
+                                  "value": ""
+                                },
+                                "type": "pattern"
+                              },
+                              {
+                                "type": "union",
+                                "input": [
+                                  {
+                                    "type": "filter",
+                                    "input": {
+                                      "type": "join",
+                                      "input": [
+                                        {
+                                          "termType": "Quad",
+                                          "value": "",
+                                          "subject": {
+                                            "termType": "Variable",
+                                            "value": "work"
+                                          },
+                                          "predicate": {
+                                            "termType": "NamedNode",
+                                            "value": "http://www.wikidata.org/prop/direct/P921"
+                                          },
+                                          "object": {
+                                            "termType": "Variable",
+                                            "value": "topics"
+                                          },
+                                          "graph": {
+                                            "termType": "DefaultGraph",
+                                            "value": ""
+                                          },
+                                          "type": "pattern"
+                                        },
+                                        {
+                                          "termType": "Quad",
+                                          "value": "",
+                                          "subject": {
+                                            "termType": "Variable",
+                                            "value": "work"
+                                          },
+                                          "predicate": {
+                                            "termType": "NamedNode",
+                                            "value": "http://www.wikidata.org/prop/direct/P921"
+                                          },
+                                          "object": {
+                                            "termType": "Variable",
+                                            "value": "topic"
+                                          },
+                                          "graph": {
+                                            "termType": "DefaultGraph",
+                                            "value": ""
+                                          },
+                                          "type": "pattern"
+                                        }
+                                      ]
+                                    },
+                                    "expression": {
+                                      "type": "expression",
+                                      "expressionType": "operator",
+                                      "operator": "!=",
+                                      "args": [
+                                        {
+                                          "type": "expression",
+                                          "expressionType": "term",
+                                          "term": {
+                                            "termType": "NamedNode",
+                                            "value": "http://www.wikidata.org/entity/Q104450895"
+                                          }
+                                        },
+                                        {
+                                          "type": "expression",
+                                          "expressionType": "term",
+                                          "term": {
+                                            "termType": "Variable",
+                                            "value": "topic"
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "type": "service",
+                                    "input": {
+                                      "type": "filter",
+                                      "input": {
+                                        "type": "join",
+                                        "input": [
+                                          {
+                                            "termType": "Quad",
+                                            "value": "",
+                                            "subject": {
+                                              "termType": "Variable",
+                                              "value": "work"
+                                            },
+                                            "predicate": {
+                                              "termType": "NamedNode",
+                                              "value": "http://www.wikidata.org/prop/direct/P921"
+                                            },
+                                            "object": {
+                                              "termType": "Variable",
+                                              "value": "topics"
+                                            },
+                                            "graph": {
+                                              "termType": "DefaultGraph",
+                                              "value": ""
+                                            },
+                                            "type": "pattern"
+                                          },
+                                          {
+                                            "termType": "Quad",
+                                            "value": "",
+                                            "subject": {
+                                              "termType": "Variable",
+                                              "value": "work"
+                                            },
+                                            "predicate": {
+                                              "termType": "NamedNode",
+                                              "value": "http://www.wikidata.org/prop/direct/P921"
+                                            },
+                                            "object": {
+                                              "termType": "Variable",
+                                              "value": "topic"
+                                            },
+                                            "graph": {
+                                              "termType": "DefaultGraph",
+                                              "value": ""
+                                            },
+                                            "type": "pattern"
+                                          }
+                                        ]
+                                      },
+                                      "expression": {
+                                        "type": "expression",
+                                        "expressionType": "operator",
+                                        "operator": "!=",
+                                        "args": [
+                                          {
+                                            "type": "expression",
+                                            "expressionType": "term",
+                                            "term": {
+                                              "termType": "NamedNode",
+                                              "value": "http://www.wikidata.org/entity/Q104450895"
+                                            }
+                                          },
+                                          {
+                                            "type": "expression",
+                                            "expressionType": "term",
+                                            "term": {
+                                              "termType": "Variable",
+                                              "value": "topic"
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    "name": {
+                                      "termType": "NamedNode",
+                                      "value": "https://query.wikidata.org/subgraph/scholarly_articles"
+                                    },
+                                    "silent": false
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          "variables": [
+                            {
+                              "termType": "Variable",
+                              "value": "topic"
+                            }
+                          ],
+                          "aggregates": [
+                            {
+                              "type": "expression",
+                              "expressionType": "aggregate",
+                              "aggregator": "count",
+                              "expression": {
+                                "type": "expression",
+                                "expressionType": "term",
+                                "term": {
+                                  "termType": "Variable",
+                                  "value": "work"
+                                }
+                              },
+                              "distinct": true,
+                              "variable": {
+                                "termType": "Variable",
+                                "value": "var0"
+                              }
+                            },
+                            {
+                              "type": "expression",
+                              "expressionType": "aggregate",
+                              "aggregator": "sample",
+                              "expression": {
+                                "type": "expression",
+                                "expressionType": "term",
+                                "term": {
+                                  "termType": "Variable",
+                                  "value": "work"
+                                }
+                              },
+                              "distinct": false,
+                              "variable": {
+                                "termType": "Variable",
+                                "value": "var1"
+                              }
+                            }
+                          ]
+                        },
+                        "variable": {
+                          "termType": "Variable",
+                          "value": "count"
+                        },
+                        "expression": {
+                          "type": "expression",
+                          "expressionType": "term",
+                          "term": {
+                            "termType": "Variable",
+                            "value": "var0"
+                          }
+                        }
+                      },
+                      "variable": {
+                        "termType": "Variable",
+                        "value": "example_work"
+                      },
+                      "expression": {
+                        "type": "expression",
+                        "expressionType": "term",
+                        "term": {
+                          "termType": "Variable",
+                          "value": "var1"
+                        }
+                      }
+                    },
+                    "variables": [
+                      {
+                        "termType": "Variable",
+                        "value": "count"
+                      },
+                      {
+                        "termType": "Variable",
+                        "value": "topic"
+                      },
+                      {
+                        "termType": "Variable",
+                        "value": "example_work"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "service",
+                    "input": {
+                      "type": "filter",
+                      "input": {
+                        "type": "join",
+                        "input": [
+                          {
+                            "termType": "Quad",
+                            "value": "",
+                            "subject": {
+                              "termType": "Variable",
+                              "value": "example_work"
+                            },
+                            "predicate": {
+                              "termType": "NamedNode",
+                              "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                            },
+                            "object": {
+                              "termType": "Variable",
+                              "value": "example_workLabel"
+                            },
+                            "graph": {
+                              "termType": "DefaultGraph",
+                              "value": ""
+                            },
+                            "type": "pattern"
+                          }
+                        ]
+                      },
+                      "expression": {
+                        "type": "expression",
+                        "expressionType": "operator",
+                        "operator": "=",
+                        "args": [
+                          {
+                            "type": "expression",
+                            "expressionType": "operator",
+                            "operator": "lang",
+                            "args": [
+                              {
+                                "type": "expression",
+                                "expressionType": "term",
+                                "term": {
+                                  "termType": "Variable",
+                                  "value": "example_workLabel"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "type": "expression",
+                            "expressionType": "term",
+                            "term": {
+                              "termType": "Literal",
+                              "value": "en",
+                              "language": "",
+                              "datatype": {
+                                "termType": "NamedNode",
+                                "value": "http://www.w3.org/2001/XMLSchema#string"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "name": {
+                      "termType": "NamedNode",
+                      "value": "https://query.wikidata.org/subgraph/scholarly_articles"
+                    },
+                    "silent": false
+                  }
+                ]
+              },
+              {
+                "type": "service",
+                "input": {
+                  "type": "join",
+                  "input": [
+                    {
+                      "termType": "Quad",
+                      "value": "",
+                      "subject": {
+                        "termType": "NamedNode",
+                        "value": "http://www.bigdata.com/rdf#serviceParam"
+                      },
+                      "predicate": {
+                        "termType": "NamedNode",
+                        "value": "http://wikiba.se/ontology#language"
+                      },
+                      "object": {
+                        "termType": "Literal",
+                        "value": "en,da,de,es,fr,jp,nl,no,ru,sv,zh",
+                        "language": "",
+                        "datatype": {
+                          "termType": "NamedNode",
+                          "value": "http://www.w3.org/2001/XMLSchema#string"
+                        }
+                      },
+                      "graph": {
+                        "termType": "DefaultGraph",
+                        "value": ""
+                      },
+                      "type": "pattern"
+                    }
+                  ]
+                },
+                "name": {
+                  "termType": "NamedNode",
+                  "value": "http://wikiba.se/ontology#label"
+                },
+                "silent": false
+              }
+            ]
+          },
+          "variable": {
+            "termType": "Variable",
+            "value": "countUrl"
+          },
+          "expression": {
+            "type": "expression",
+            "expressionType": "operator",
+            "operator": "concat",
+            "args": [
+              {
+                "type": "expression",
+                "expressionType": "term",
+                "term": {
+                  "termType": "Literal",
+                  "value": "/topics/Q104450895,",
+                  "language": "",
+                  "datatype": {
+                    "termType": "NamedNode",
+                    "value": "http://www.w3.org/2001/XMLSchema#string"
+                  }
+                }
+              },
+              {
+                "type": "expression",
+                "expressionType": "operator",
+                "operator": "substr",
+                "args": [
+                  {
+                    "type": "expression",
+                    "expressionType": "operator",
+                    "operator": "str",
+                    "args": [
+                      {
+                        "type": "expression",
+                        "expressionType": "term",
+                        "term": {
+                          "termType": "Variable",
+                          "value": "topic"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "expression",
+                    "expressionType": "term",
+                    "term": {
+                      "termType": "Literal",
+                      "value": "32",
+                      "language": "",
+                      "datatype": {
+                        "termType": "NamedNode",
+                        "value": "http://www.w3.org/2001/XMLSchema#integer"
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "variable": {
+          "termType": "Variable",
+          "value": "topicUrl"
+        },
+        "expression": {
+          "type": "expression",
+          "expressionType": "operator",
+          "operator": "concat",
+          "args": [
+            {
+              "type": "expression",
+              "expressionType": "term",
+              "term": {
+                "termType": "Literal",
+                "value": "/topic/",
+                "language": "",
+                "datatype": {
+                  "termType": "NamedNode",
+                  "value": "http://www.w3.org/2001/XMLSchema#string"
+                }
+              }
+            },
+            {
+              "type": "expression",
+              "expressionType": "operator",
+              "operator": "substr",
+              "args": [
+                {
+                  "type": "expression",
+                  "expressionType": "operator",
+                  "operator": "str",
+                  "args": [
+                    {
+                      "type": "expression",
+                      "expressionType": "term",
+                      "term": {
+                        "termType": "Variable",
+                        "value": "topic"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "expression",
+                  "expressionType": "term",
+                  "term": {
+                    "termType": "Literal",
+                    "value": "32",
+                    "language": "",
+                    "datatype": {
+                      "termType": "NamedNode",
+                      "value": "http://www.w3.org/2001/XMLSchema#integer"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "variable": {
+        "termType": "Variable",
+        "value": "example_workUrl"
+      },
+      "expression": {
+        "type": "expression",
+        "expressionType": "operator",
+        "operator": "concat",
+        "args": [
+          {
+            "type": "expression",
+            "expressionType": "term",
+            "term": {
+              "termType": "Literal",
+              "value": "/work/",
+              "language": "",
+              "datatype": {
+                "termType": "NamedNode",
+                "value": "http://www.w3.org/2001/XMLSchema#string"
+              }
+            }
+          },
+          {
+            "type": "expression",
+            "expressionType": "operator",
+            "operator": "substr",
+            "args": [
+              {
+                "type": "expression",
+                "expressionType": "operator",
+                "operator": "str",
+                "args": [
+                  {
+                    "type": "expression",
+                    "expressionType": "term",
+                    "term": {
+                      "termType": "Variable",
+                      "value": "example_work"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "expression",
+                "expressionType": "term",
+                "term": {
+                  "termType": "Literal",
+                  "value": "32",
+                  "language": "",
+                  "datatype": {
+                    "termType": "NamedNode",
+                    "value": "http://www.w3.org/2001/XMLSchema#integer"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "expressions": [
+      {
+        "type": "expression",
+        "expressionType": "operator",
+        "operator": "desc",
+        "args": [
+          {
+            "type": "expression",
+            "expressionType": "term",
+            "term": {
+              "termType": "Variable",
+              "value": "count"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "variables": [
+    {
+      "termType": "Variable",
+      "value": "count"
+    },
+    {
+      "termType": "Variable",
+      "value": "countUrl"
+    },
+    {
+      "termType": "Variable",
+      "value": "topic"
+    },
+    {
+      "termType": "Variable",
+      "value": "topicLabel"
+    },
+    {
+      "termType": "Variable",
+      "value": "topicUrl"
+    },
+    {
+      "termType": "Variable",
+      "value": "example_work"
+    },
+    {
+      "termType": "Variable",
+      "value": "example_workLabel"
+    },
+    {
+      "termType": "Variable",
+      "value": "example_workUrl"
+    }
+  ],
+  "metadata": {
+    "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
+  }
+}

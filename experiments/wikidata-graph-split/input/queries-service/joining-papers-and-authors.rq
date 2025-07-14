@@ -4,7 +4,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX wd: <http://www.wikidata.org/entity/>
 PREFIX wdsubgraph: <https://query.wikidata.org/subgraph/>
 PREFIX wdt: <http://www.wikidata.org/prop/direct/>
-SELECT (group_concat(DISTINCT ?qLabel;separator='|') AS ?labels) (group_concat(DISTINCT REPLACE(str(?q),'^.+/','');separator='|') AS ?qs) ?lastName ?firstLetter (count(DISTINCT ?q) AS ?cnt) {
+SELECT (group_concat(DISTINCT ?qLabel;separator="|") AS ?labels) (group_concat(DISTINCT REPLACE(str(?q),"^.+/","");separator="|") AS ?qs) ?lastName ?firstLetter (count(DISTINCT ?q) AS ?cnt) {
   VALUES ?author { wd:Q64213594 }.
   {
     ?paper wdt:P50 ?author.
@@ -17,7 +17,7 @@ SELECT (group_concat(DISTINCT ?qLabel;separator='|') AS ?labels) (group_concat(D
   }
   hint:Prior hint:runFirst true .
   ?q rdfs:label ?qLabel.
-  FILTER(lang(?qLabel)='en').
-  BIND(REPLACE(?qLabel, '^.* ', '') AS ?lastName).
-  BIND(REPLACE(?qLabel, '^(.).*$', '$1') AS ?firstLetter)
+  FILTER(lang(?qLabel)="en").
+  BIND(REPLACE(?qLabel, "^.* ", "") AS ?lastName).
+  BIND(REPLACE(?qLabel, "^(.).*$", "$1") AS ?firstLetter)
 } GROUP BY ?lastName ?firstLetter	HAVING (?cnt>1)

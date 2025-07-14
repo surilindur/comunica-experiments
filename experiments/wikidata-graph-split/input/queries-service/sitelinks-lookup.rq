@@ -15,6 +15,6 @@ SELECT * {
         schema:inLanguage ?inLanguage .
     }
   }
-  BIND(REPLACE(STR(?partOf_), '^https://[^.]+\\.([^.]+)\\.[^.]+/$', '$1') AS ?partOf)
-  BIND(REPLACE(STR(?wikimediaUrl), '.*/wiki/([^/]+)$', '$1') AS ?articleTitle)
+  BIND(REPLACE(STR(?partOf_), "^https://[^.]+\\.([^.]+)\\.[^.]+/$", "$1") AS ?partOf)
+  BIND(REPLACE(STR(?wikimediaUrl), ".*/wiki/([^/]+)$", "$1") AS ?articleTitle)
 } ORDER BY ?partOf ?inLanguage

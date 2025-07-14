@@ -1,0 +1,687 @@
+{
+  "type": "project",
+  "input": {
+    "type": "orderby",
+    "input": {
+      "type": "extend",
+      "input": {
+        "type": "group",
+        "input": {
+          "type": "extend",
+          "input": {
+            "type": "leftjoin",
+            "input": [
+              {
+                "type": "join",
+                "input": [
+                  {
+                    "termType": "Quad",
+                    "value": "",
+                    "subject": {
+                      "termType": "Variable",
+                      "value": "cit_intent"
+                    },
+                    "predicate": {
+                      "termType": "NamedNode",
+                      "value": "http://www.wikidata.org/prop/direct/P31"
+                    },
+                    "object": {
+                      "termType": "NamedNode",
+                      "value": "http://www.wikidata.org/entity/Q96471816"
+                    },
+                    "graph": {
+                      "termType": "DefaultGraph",
+                      "value": ""
+                    },
+                    "type": "pattern"
+                  },
+                  {
+                    "type": "project",
+                    "input": {
+                      "type": "extend",
+                      "input": {
+                        "type": "extend",
+                        "input": {
+                          "type": "group",
+                          "input": {
+                            "type": "extend",
+                            "input": {
+                              "type": "union",
+                              "input": [
+                                {
+                                  "type": "leftjoin",
+                                  "input": [
+                                    {
+                                      "type": "join",
+                                      "input": [
+                                        {
+                                          "termType": "Quad",
+                                          "value": "",
+                                          "subject": {
+                                            "termType": "Variable",
+                                            "value": "work"
+                                          },
+                                          "predicate": {
+                                            "termType": "NamedNode",
+                                            "value": "http://www.wikidata.org/prop/direct/P577"
+                                          },
+                                          "object": {
+                                            "termType": "Variable",
+                                            "value": "dates"
+                                          },
+                                          "graph": {
+                                            "termType": "DefaultGraph",
+                                            "value": ""
+                                          },
+                                          "type": "pattern"
+                                        },
+                                        {
+                                          "termType": "Quad",
+                                          "value": "",
+                                          "subject": {
+                                            "termType": "Variable",
+                                            "value": "work"
+                                          },
+                                          "predicate": {
+                                            "termType": "NamedNode",
+                                            "value": "http://www.wikidata.org/prop/P2860"
+                                          },
+                                          "object": {
+                                            "termType": "Variable",
+                                            "value": "var0"
+                                          },
+                                          "graph": {
+                                            "termType": "DefaultGraph",
+                                            "value": ""
+                                          },
+                                          "type": "pattern"
+                                        },
+                                        {
+                                          "termType": "Quad",
+                                          "value": "",
+                                          "subject": {
+                                            "termType": "Variable",
+                                            "value": "var0"
+                                          },
+                                          "predicate": {
+                                            "termType": "NamedNode",
+                                            "value": "http://www.wikidata.org/prop/qualifier/P3712"
+                                          },
+                                          "object": {
+                                            "termType": "Variable",
+                                            "value": "cit_intent"
+                                          },
+                                          "graph": {
+                                            "termType": "DefaultGraph",
+                                            "value": ""
+                                          },
+                                          "type": "pattern"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "join",
+                                      "input": [
+                                        {
+                                          "type": "extend",
+                                          "input": {
+                                            "type": "join",
+                                            "input": [
+                                              {
+                                                "termType": "Quad",
+                                                "value": "",
+                                                "subject": {
+                                                  "termType": "Variable",
+                                                  "value": "work"
+                                                },
+                                                "predicate": {
+                                                  "termType": "NamedNode",
+                                                  "value": "http://www.wikidata.org/prop/direct/P31"
+                                                },
+                                                "object": {
+                                                  "termType": "NamedNode",
+                                                  "value": "http://www.wikidata.org/entity/Q109229154"
+                                                },
+                                                "graph": {
+                                                  "termType": "DefaultGraph",
+                                                  "value": ""
+                                                },
+                                                "type": "pattern"
+                                              }
+                                            ]
+                                          },
+                                          "variable": {
+                                            "termType": "Variable",
+                                            "value": "type_"
+                                          },
+                                          "expression": {
+                                            "type": "expression",
+                                            "expressionType": "term",
+                                            "term": {
+                                              "termType": "Literal",
+                                              "value": "explicit",
+                                              "language": "",
+                                              "datatype": {
+                                                "termType": "NamedNode",
+                                                "value": "http://www.w3.org/2001/XMLSchema#string"
+                                              }
+                                            }
+                                          }
+                                        },
+                                        {
+                                          "termType": "Quad",
+                                          "value": "",
+                                          "subject": {
+                                            "termType": "Variable",
+                                            "value": "work"
+                                          },
+                                          "predicate": {
+                                            "termType": "NamedNode",
+                                            "value": "http://www.wikidata.org/prop/direct/P1433"
+                                          },
+                                          "object": {
+                                            "termType": "Variable",
+                                            "value": "venue_"
+                                          },
+                                          "graph": {
+                                            "termType": "DefaultGraph",
+                                            "value": ""
+                                          },
+                                          "type": "pattern"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "service",
+                                  "input": {
+                                    "type": "leftjoin",
+                                    "input": [
+                                      {
+                                        "type": "join",
+                                        "input": [
+                                          {
+                                            "termType": "Quad",
+                                            "value": "",
+                                            "subject": {
+                                              "termType": "Variable",
+                                              "value": "work"
+                                            },
+                                            "predicate": {
+                                              "termType": "NamedNode",
+                                              "value": "http://www.wikidata.org/prop/direct/P577"
+                                            },
+                                            "object": {
+                                              "termType": "Variable",
+                                              "value": "dates"
+                                            },
+                                            "graph": {
+                                              "termType": "DefaultGraph",
+                                              "value": ""
+                                            },
+                                            "type": "pattern"
+                                          },
+                                          {
+                                            "termType": "Quad",
+                                            "value": "",
+                                            "subject": {
+                                              "termType": "Variable",
+                                              "value": "work"
+                                            },
+                                            "predicate": {
+                                              "termType": "NamedNode",
+                                              "value": "http://www.wikidata.org/prop/P2860"
+                                            },
+                                            "object": {
+                                              "termType": "Variable",
+                                              "value": "var1"
+                                            },
+                                            "graph": {
+                                              "termType": "DefaultGraph",
+                                              "value": ""
+                                            },
+                                            "type": "pattern"
+                                          },
+                                          {
+                                            "termType": "Quad",
+                                            "value": "",
+                                            "subject": {
+                                              "termType": "Variable",
+                                              "value": "var1"
+                                            },
+                                            "predicate": {
+                                              "termType": "NamedNode",
+                                              "value": "http://www.wikidata.org/prop/qualifier/P3712"
+                                            },
+                                            "object": {
+                                              "termType": "Variable",
+                                              "value": "cit_intent"
+                                            },
+                                            "graph": {
+                                              "termType": "DefaultGraph",
+                                              "value": ""
+                                            },
+                                            "type": "pattern"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "type": "join",
+                                        "input": [
+                                          {
+                                            "type": "extend",
+                                            "input": {
+                                              "type": "join",
+                                              "input": [
+                                                {
+                                                  "termType": "Quad",
+                                                  "value": "",
+                                                  "subject": {
+                                                    "termType": "Variable",
+                                                    "value": "work"
+                                                  },
+                                                  "predicate": {
+                                                    "termType": "NamedNode",
+                                                    "value": "http://www.wikidata.org/prop/direct/P31"
+                                                  },
+                                                  "object": {
+                                                    "termType": "NamedNode",
+                                                    "value": "http://www.wikidata.org/entity/Q109229154"
+                                                  },
+                                                  "graph": {
+                                                    "termType": "DefaultGraph",
+                                                    "value": ""
+                                                  },
+                                                  "type": "pattern"
+                                                }
+                                              ]
+                                            },
+                                            "variable": {
+                                              "termType": "Variable",
+                                              "value": "type_"
+                                            },
+                                            "expression": {
+                                              "type": "expression",
+                                              "expressionType": "term",
+                                              "term": {
+                                                "termType": "Literal",
+                                                "value": "explicit",
+                                                "language": "",
+                                                "datatype": {
+                                                  "termType": "NamedNode",
+                                                  "value": "http://www.w3.org/2001/XMLSchema#string"
+                                                }
+                                              }
+                                            }
+                                          },
+                                          {
+                                            "termType": "Quad",
+                                            "value": "",
+                                            "subject": {
+                                              "termType": "Variable",
+                                              "value": "work"
+                                            },
+                                            "predicate": {
+                                              "termType": "NamedNode",
+                                              "value": "http://www.wikidata.org/prop/direct/P1433"
+                                            },
+                                            "object": {
+                                              "termType": "Variable",
+                                              "value": "venue_"
+                                            },
+                                            "graph": {
+                                              "termType": "DefaultGraph",
+                                              "value": ""
+                                            },
+                                            "type": "pattern"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  "name": {
+                                    "termType": "NamedNode",
+                                    "value": "https://query.wikidata.org/subgraph/scholarly_articles"
+                                  },
+                                  "silent": false
+                                }
+                              ]
+                            },
+                            "variable": {
+                              "termType": "Variable",
+                              "value": "years"
+                            },
+                            "expression": {
+                              "type": "expression",
+                              "expressionType": "operator",
+                              "operator": "str",
+                              "args": [
+                                {
+                                  "type": "expression",
+                                  "expressionType": "operator",
+                                  "operator": "year",
+                                  "args": [
+                                    {
+                                      "type": "expression",
+                                      "expressionType": "term",
+                                      "term": {
+                                        "termType": "Variable",
+                                        "value": "dates"
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          },
+                          "variables": [
+                            {
+                              "termType": "Variable",
+                              "value": "work"
+                            },
+                            {
+                              "termType": "Variable",
+                              "value": "type_"
+                            },
+                            {
+                              "termType": "Variable",
+                              "value": "venue_"
+                            }
+                          ],
+                          "aggregates": [
+                            {
+                              "type": "expression",
+                              "expressionType": "aggregate",
+                              "aggregator": "min",
+                              "expression": {
+                                "type": "expression",
+                                "expressionType": "term",
+                                "term": {
+                                  "termType": "Variable",
+                                  "value": "years"
+                                }
+                              },
+                              "distinct": false,
+                              "variable": {
+                                "termType": "Variable",
+                                "value": "var2"
+                              }
+                            }
+                          ]
+                        },
+                        "variable": {
+                          "termType": "Variable",
+                          "value": "year"
+                        },
+                        "expression": {
+                          "type": "expression",
+                          "expressionType": "term",
+                          "term": {
+                            "termType": "Variable",
+                            "value": "var2"
+                          }
+                        }
+                      },
+                      "variable": {
+                        "termType": "Variable",
+                        "value": "venue_"
+                      },
+                      "expression": {
+                        "type": "expression",
+                        "expressionType": "operator",
+                        "operator": "coalesce",
+                        "args": [
+                          {
+                            "type": "expression",
+                            "expressionType": "operator",
+                            "operator": "if",
+                            "args": [
+                              {
+                                "type": "expression",
+                                "expressionType": "operator",
+                                "operator": "bound",
+                                "args": [
+                                  {
+                                    "type": "expression",
+                                    "expressionType": "term",
+                                    "term": {
+                                      "termType": "Variable",
+                                      "value": "venue_"
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "expression",
+                                "expressionType": "term",
+                                "term": {
+                                  "termType": "Variable",
+                                  "value": "venue_"
+                                }
+                              },
+                              {
+                                "type": "expression",
+                                "expressionType": "term",
+                                "term": {
+                                  "termType": "Literal",
+                                  "value": "__no_venue__",
+                                  "language": "",
+                                  "datatype": {
+                                    "termType": "NamedNode",
+                                    "value": "http://www.w3.org/2001/XMLSchema#string"
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    "variables": [
+                      {
+                        "termType": "Variable",
+                        "value": "work"
+                      },
+                      {
+                        "termType": "Variable",
+                        "value": "year"
+                      },
+                      {
+                        "termType": "Variable",
+                        "value": "type_"
+                      },
+                      {
+                        "termType": "Variable",
+                        "value": "venue_"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "termType": "Quad",
+                "value": "",
+                "subject": {
+                  "termType": "Variable",
+                  "value": "venue_"
+                },
+                "predicate": {
+                  "termType": "NamedNode",
+                  "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                  "termType": "Variable",
+                  "value": "venue"
+                },
+                "graph": {
+                  "termType": "DefaultGraph",
+                  "value": ""
+                },
+                "type": "pattern"
+              }
+            ],
+            "expression": {
+              "type": "expression",
+              "expressionType": "operator",
+              "operator": "=",
+              "args": [
+                {
+                  "type": "expression",
+                  "expressionType": "operator",
+                  "operator": "lang",
+                  "args": [
+                    {
+                      "type": "expression",
+                      "expressionType": "term",
+                      "term": {
+                        "termType": "Variable",
+                        "value": "venue"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "expression",
+                  "expressionType": "term",
+                  "term": {
+                    "termType": "Literal",
+                    "value": "en",
+                    "language": "",
+                    "datatype": {
+                      "termType": "NamedNode",
+                      "value": "http://www.w3.org/2001/XMLSchema#string"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "variable": {
+            "termType": "Variable",
+            "value": "role"
+          },
+          "expression": {
+            "type": "expression",
+            "expressionType": "operator",
+            "operator": "coalesce",
+            "args": [
+              {
+                "type": "expression",
+                "expressionType": "operator",
+                "operator": "if",
+                "args": [
+                  {
+                    "type": "expression",
+                    "expressionType": "operator",
+                    "operator": "bound",
+                    "args": [
+                      {
+                        "type": "expression",
+                        "expressionType": "term",
+                        "term": {
+                          "termType": "Variable",
+                          "value": "type_"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "expression",
+                    "expressionType": "term",
+                    "term": {
+                      "termType": "Variable",
+                      "value": "venue"
+                    }
+                  },
+                  {
+                    "type": "expression",
+                    "expressionType": "term",
+                    "term": {
+                      "termType": "Literal",
+                      "value": "other source",
+                      "language": "",
+                      "datatype": {
+                        "termType": "NamedNode",
+                        "value": "http://www.w3.org/2001/XMLSchema#string"
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "variables": [
+          {
+            "termType": "Variable",
+            "value": "year"
+          },
+          {
+            "termType": "Variable",
+            "value": "role"
+          }
+        ],
+        "aggregates": [
+          {
+            "type": "expression",
+            "expressionType": "aggregate",
+            "aggregator": "count",
+            "expression": {
+              "type": "expression",
+              "expressionType": "term",
+              "term": {
+                "termType": "Variable",
+                "value": "work"
+              }
+            },
+            "distinct": true,
+            "variable": {
+              "termType": "Variable",
+              "value": "var3"
+            }
+          }
+        ]
+      },
+      "variable": {
+        "termType": "Variable",
+        "value": "number_of_publications"
+      },
+      "expression": {
+        "type": "expression",
+        "expressionType": "term",
+        "term": {
+          "termType": "Variable",
+          "value": "var3"
+        }
+      }
+    },
+    "expressions": [
+      {
+        "type": "expression",
+        "expressionType": "term",
+        "term": {
+          "termType": "Variable",
+          "value": "year"
+        }
+      }
+    ]
+  },
+  "variables": [
+    {
+      "termType": "Variable",
+      "value": "year"
+    },
+    {
+      "termType": "Variable",
+      "value": "number_of_publications"
+    },
+    {
+      "termType": "Variable",
+      "value": "role"
+    }
+  ],
+  "metadata": {
+    "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
+  }
+}

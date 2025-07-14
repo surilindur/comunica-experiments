@@ -8,7 +8,7 @@ PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 select ?year (count(distinct(?work)) as ?number_of_publications) ?role where {
   ?cit_intent wdt:P31 wd:Q96471816 .
   {
-    select ?work (min(?years) as ?year) ?type_ (coalesce(if(bound(?venue_), ?venue_, '__no_venue__')) AS ?venue_) where {
+    select ?work (min(?years) as ?year) ?type_ (coalesce(if(bound(?venue_), ?venue_, "__no_venue__")) AS ?venue_) where {
       {
         ?work wdt:P577 ?dates ;
               p:P2860 / pq:P3712 ?cit_intent .
@@ -36,7 +36,7 @@ select ?year (count(distinct(?work)) as ?number_of_publications) ?role where {
   bind(
     coalesce(
       if(bound(?type_), ?venue,
-      'other source')
+      "other source")
     ) as ?role
   )
 }

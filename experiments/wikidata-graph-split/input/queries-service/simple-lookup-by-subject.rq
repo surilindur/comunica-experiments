@@ -11,19 +11,19 @@ SELECT ?xLabel ?descr {
       ?x wikibase:lemma ?xLabel
     } UNION {
       ?x schema:description ?descr .
-      FILTER(LANG(?descr) = 'en')
+      FILTER(LANG(?descr) = "en")
     }
   } UNION {
     SERVICE wdsubgraph:scholarly_articles {
       ?x schema:description ?descr .
-      FILTER(LANG(?descr) = 'en')
+      FILTER(LANG(?descr) = "en")
       BIND(?xLabel AS ?xLabel)
       SERVICE wikibase:label {
-        bd:serviceParam  wikibase:language  'en,de,fr,rm'
+        bd:serviceParam  wikibase:language  "en,de,fr,rm"
       }
     }
   }
   SERVICE wikibase:label {
-    bd:serviceParam  wikibase:language  'en,de,fr,rm'
+    bd:serviceParam  wikibase:language  "en,de,fr,rm"
   }
 }

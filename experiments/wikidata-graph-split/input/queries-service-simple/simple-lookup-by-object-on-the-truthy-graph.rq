@@ -1,0 +1,18 @@
+# https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/WDQS_graph_split/Federated_Queries_Examples#Simple_lookup_by_object_on_the_truthy_graph
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdsubgraph: <https://query.wikidata.org/subgraph/>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+SELECT
+  ?x
+  ?r
+WHERE {
+  VALUES (?work) { (wd:Q1542532) }
+  {
+    ?x ?r ?work .
+  } UNION {
+    SERVICE wdsubgraph:scholarly_articles {
+      ?x ?r ?work .
+    }
+  }
+  ?rel wikibase:directClaim ?r
+} ORDER BY ?r ?x

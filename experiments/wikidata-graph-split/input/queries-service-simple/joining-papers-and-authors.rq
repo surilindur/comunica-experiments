@@ -1,0 +1,29 @@
+# https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/WDQS_graph_split/Federated_Queries_Examples#Joining_papers_and_authors
+PREFIX hint: <http://www.bigdata.com/queryHints#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdsubgraph: <https://query.wikidata.org/subgraph/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+SELECT
+  (GROUP_CONCAT(DISTINCT ?qLabel;separator="|") AS ?labels)
+  (GROUP_CONCAT(DISTINCT REPLACE(str(?q),"^.+/","");separator="|") AS ?qs)
+  ?lastName
+  ?firstLetter
+  (COUNT(DISTINCT ?q) AS ?cnt)
+WHERE {
+  VALUES ?author { wd:Q64213594 } .
+  {
+    ?paper wdt:P50 ?author .
+    ?paper wdt:P50 ?q .
+  } UNION {
+    SERVICE wdsubgraph:scholarly_articles {
+      ?paper wdt:P50 ?author .
+      ?paper wdt:P50 ?q .
+    }
+  }
+  hint:Prior hint:runFirst true .
+  ?q rdfs:label ?qLabel .
+  FILTER(lang(?qLabel)="en") .
+  BIND(REPLACE(?qLabel, "^.* ", "") AS ?lastName) .
+  BIND(REPLACE(?qLabel, "^(.).*$", "$1") AS ?firstLetter) .
+} GROUP BY ?lastName ?firstLetter HAVING (?cnt>1)

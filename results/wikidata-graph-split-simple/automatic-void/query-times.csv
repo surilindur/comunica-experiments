@@ -1,0 +1,18 @@
+name;id;error;errorDescription;failures;hash;httpRequests;httpRequestsMax;httpRequestsMin;httpRequestsStd;replication;results;resultsMax;resultsMin;time;timeMax;timeMin;times;timestamps;timestampsMax;timestampsMin;timestampsStd;timeStd;timestampsAll
+finding-duplicated-external-ids-with-a-group-by;0;true;terminated;1;;;;;;1;0;0;0;0;0;0;NaN;;;;;NaN;
+joining-papers-and-authors;0;false;;0;d41d8cd98f00b204e9800998ecf8427e;214;214;214;0;1;0;0;0;31685;31685;31685;31685;;;;;0;"[[]]"
+property-paths;0;true;Unexpected "A" at position 0 in state STOP;1;;;;;;1;0;0;0;0;0;0;NaN;;;;;NaN;
+publications-wikiproject-author-not-in-project;0;true;Invalid SPARQL endpoint response from http://localhost:3001/sparql (HTTP status 400):
+Request failed: https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql;1;;;;;;1;0;0;0;0;0;0;NaN;;;;;NaN;
+publications-wikiproject-main-subject-instance-of-person;0;true;Invalid SPARQL endpoint response from http://localhost:3001/sparql (HTTP status 400):
+Request failed: https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql;1;;;;;;1;0;0;0;0;0;0;NaN;;;;;NaN;
+recent-publications;0;true;Invalid SPARQL endpoint response from http://localhost:3001/sparql (HTTP status 400):
+Request failed: https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql;1;;;;;;1;0;0;0;0;0;0;NaN;;;;;NaN;
+simple-count;0;true;Invalid SPARQL endpoint response from http://localhost:3001/sparql (HTTP status 400):
+Request failed: https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql;1;;;;;;1;0;0;0;0;0;0;NaN;;;;;NaN;
+simple-lookup-by-object-on-the-truthy-graph;0;true;Invalid SPARQL endpoint response from http://localhost:3001/sparql (HTTP status 400):
+Request failed: https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql;1;;;;;;1;0;0;0;0;0;0;NaN;;;;;NaN;
+simple-lookup-by-subject;0;true;Invalid SPARQL endpoint response from http://localhost:3001/sparql (HTTP status 400):
+Request failed: https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql;1;;;;;;1;0;0;0;0;0;0;NaN;;;;;NaN;
+sitelinks-lookup;0;true;Invalid SPARQL endpoint response from http://localhost:3001/sparql (HTTP status 400):
+Request failed: https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql;1;;;;;;1;0;0;0;0;0;0;NaN;;;;;NaN;

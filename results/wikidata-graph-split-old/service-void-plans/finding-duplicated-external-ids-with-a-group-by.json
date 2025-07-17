@@ -1,0 +1,197 @@
+{
+  "type": "project",
+  "input": {
+    "type": "orderby",
+    "input": {
+      "type": "extend",
+      "input": {
+        "type": "extend",
+        "input": {
+          "type": "filter",
+          "input": {
+            "type": "group",
+            "input": {
+              "type": "union",
+              "input": [
+                {
+                  "termType": "Quad",
+                  "value": "",
+                  "subject": {
+                    "termType": "Variable",
+                    "value": "q"
+                  },
+                  "predicate": {
+                    "termType": "NamedNode",
+                    "value": "http://www.wikidata.org/prop/direct/P244"
+                  },
+                  "object": {
+                    "termType": "Variable",
+                    "value": "extid"
+                  },
+                  "graph": {
+                    "termType": "DefaultGraph",
+                    "value": ""
+                  },
+                  "type": "pattern"
+                },
+                {
+                  "type": "service",
+                  "input": {
+                    "termType": "Quad",
+                    "value": "",
+                    "subject": {
+                      "termType": "Variable",
+                      "value": "q"
+                    },
+                    "predicate": {
+                      "termType": "NamedNode",
+                      "value": "http://www.wikidata.org/prop/direct/P244"
+                    },
+                    "object": {
+                      "termType": "Variable",
+                      "value": "extid"
+                    },
+                    "graph": {
+                      "termType": "DefaultGraph",
+                      "value": ""
+                    },
+                    "type": "pattern"
+                  },
+                  "name": {
+                    "termType": "NamedNode",
+                    "value": "https://query.wikidata.org/subgraph/scholarly_articles"
+                  },
+                  "silent": false
+                }
+              ]
+            },
+            "variables": [
+              {
+                "termType": "Variable",
+                "value": "extid"
+              }
+            ],
+            "aggregates": [
+              {
+                "type": "expression",
+                "expressionType": "aggregate",
+                "aggregator": "count",
+                "expression": {
+                  "type": "expression",
+                  "expressionType": "term",
+                  "term": {
+                    "termType": "Variable",
+                    "value": "q"
+                  }
+                },
+                "distinct": false,
+                "variable": {
+                  "termType": "Variable",
+                  "value": "var0"
+                }
+              },
+              {
+                "type": "expression",
+                "expressionType": "aggregate",
+                "aggregator": "group_concat",
+                "expression": {
+                  "type": "expression",
+                  "expressionType": "term",
+                  "term": {
+                    "termType": "Variable",
+                    "value": "q"
+                  }
+                },
+                "separator": "|",
+                "distinct": false,
+                "variable": {
+                  "termType": "Variable",
+                  "value": "var1"
+                }
+              }
+            ]
+          },
+          "expression": {
+            "type": "expression",
+            "expressionType": "operator",
+            "operator": ">",
+            "args": [
+              {
+                "type": "expression",
+                "expressionType": "term",
+                "term": {
+                  "termType": "Variable",
+                  "value": "cnt"
+                }
+              },
+              {
+                "type": "expression",
+                "expressionType": "term",
+                "term": {
+                  "termType": "Literal",
+                  "value": "1",
+                  "language": "",
+                  "datatype": {
+                    "termType": "NamedNode",
+                    "value": "http://www.w3.org/2001/XMLSchema#integer"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "variable": {
+          "termType": "Variable",
+          "value": "cnt"
+        },
+        "expression": {
+          "type": "expression",
+          "expressionType": "term",
+          "term": {
+            "termType": "Variable",
+            "value": "var0"
+          }
+        }
+      },
+      "variable": {
+        "termType": "Variable",
+        "value": "items"
+      },
+      "expression": {
+        "type": "expression",
+        "expressionType": "term",
+        "term": {
+          "termType": "Variable",
+          "value": "var1"
+        }
+      }
+    },
+    "expressions": [
+      {
+        "type": "expression",
+        "expressionType": "term",
+        "term": {
+          "termType": "Variable",
+          "value": "extid"
+        }
+      }
+    ]
+  },
+  "variables": [
+    {
+      "termType": "Variable",
+      "value": "extid"
+    },
+    {
+      "termType": "Variable",
+      "value": "cnt"
+    },
+    {
+      "termType": "Variable",
+      "value": "items"
+    }
+  ],
+  "metadata": {
+    "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
+  }
+}

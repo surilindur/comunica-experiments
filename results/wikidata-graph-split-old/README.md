@@ -28,9 +28,10 @@
 | service clauses   | ASK queries            |        12 / 12  |          12 / 12 | |
 |                   | COUNT queries          |        12 / 12  |          12 / 12 | |
 |                   | VoID-based estimation  |        12 / 12  |          11 / 12 | 1 (timeout after full results) |
-| automatic         | ASK queries            |        +2 / 12  |           1 / 12 | 1 (timeout endpoint), 2 ()
+| automatic         | ASK queries            |        12 / 12  |           1 / 12 | 1 (timeout endpoint), 2 ()
 |                   | COUNT queries          |           / 12  |             / 12 |
 |                   | VoID-based estimation  |           / 12  |             / 12 |
+
 
 Notes:
 
@@ -40,7 +41,10 @@ Notes:
 * Query 2 produced no results with any of the configurations, and the absence of results was therefore considered success in the context of this analysis.
 * Additionally, query 1 timed out after producing full results, which can be attributed to the Comunica query engine sometimes not terminating the execution after all results have been produced.
 
-* TODO
+* With query 3, the wikibase:label and wikibase:mwapi service declarations cause Comunica to treat them as endpoint URIs.
+  This is caused by the query engine not being aware of the Wikidata-specific treatment of the wikibase URIs.
+  Although the source assignment is technically correct with regards to the input query, it cannot be executed this way.
+* 
 
 ## templates
 

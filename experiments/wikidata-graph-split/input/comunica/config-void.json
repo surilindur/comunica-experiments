@@ -73,7 +73,6 @@
   ],
   "@graph": [
     {
-      "comment": "Apply rate limit by default to every server to avoid issues",
       "@type": "Override",
       "overrideInstance": { "@id": "urn:comunica:default:http/actors#limit-rate" },
       "overrideParameters": {
@@ -84,7 +83,6 @@
       }
     },
     {
-      "comment": "Disable local estimation and COUNT queries",
       "@type": "Override",
       "overrideInstance": { "@id": "urn:comunica:default:query-source-identify-hypermedia/actors#sparql" },
       "overrideParameters": {
@@ -96,12 +94,11 @@
       }
     },
     {
-      "comment": "Prefer ASK queries to prune operations, because COUNT queries will not be used at all with VoID",
       "@type": "Override",
       "overrideInstance": { "@id": "urn:comunica:default:optimize-query-operation/actors#prune-empty-source-operations" },
       "overrideParameters": {
         "@type": "ActorOptimizeQueryOperationPruneEmptySourceOperations",
-        "useAskIfSupported": true,
+        "useAskIfSupported": false,
         "beforeActors": [
           { "@id": "urn:comunica:default:optimize-query-operation/actors#filter-pushdown" }
         ]

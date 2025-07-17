@@ -1,0 +1,130 @@
+{
+  "type": "project",
+  "input": {
+    "type": "extend",
+    "input": {
+      "type": "group",
+      "input": {
+        "type": "filter",
+        "input": {
+          "termType": "Quad",
+          "value": "",
+          "subject": {
+            "termType": "Variable",
+            "value": "entity"
+          },
+          "predicate": {
+            "termType": "NamedNode",
+            "value": "http://www.wikidata.org/prop/direct/P4101"
+          },
+          "object": {
+            "termType": "NamedNode",
+            "value": "http://www.wikidata.org/entity/Q41506"
+          },
+          "graph": {
+            "termType": "DefaultGraph",
+            "value": ""
+          },
+          "type": "pattern"
+        },
+        "expression": {
+          "type": "expression",
+          "expressionType": "existence",
+          "not": false,
+          "input": {
+            "type": "union",
+            "input": [
+              {
+                "termType": "Quad",
+                "value": "",
+                "subject": {
+                  "termType": "Variable",
+                  "value": "entity"
+                },
+                "predicate": {
+                  "termType": "NamedNode",
+                  "value": "http://www.wikidata.org/prop/P495"
+                },
+                "object": {
+                  "termType": "Variable",
+                  "value": "g_0"
+                },
+                "graph": {
+                  "termType": "DefaultGraph",
+                  "value": ""
+                },
+                "type": "pattern",
+                "metadata": {
+                  "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
+                }
+              },
+              {
+                "termType": "Quad",
+                "value": "",
+                "subject": {
+                  "termType": "Variable",
+                  "value": "entity"
+                },
+                "predicate": {
+                  "termType": "NamedNode",
+                  "value": "http://www.wikidata.org/prop/P495"
+                },
+                "object": {
+                  "termType": "Variable",
+                  "value": "g_0"
+                },
+                "graph": {
+                  "termType": "DefaultGraph",
+                  "value": ""
+                },
+                "type": "pattern",
+                "metadata": {
+                  "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "variables": [],
+      "aggregates": [
+        {
+          "type": "expression",
+          "expressionType": "aggregate",
+          "aggregator": "count",
+          "expression": {
+            "type": "expression",
+            "expressionType": "wildcard",
+            "wildcard": {}
+          },
+          "distinct": false,
+          "variable": {
+            "termType": "Variable",
+            "value": "var0"
+          }
+        }
+      ]
+    },
+    "variable": {
+      "termType": "Variable",
+      "value": "count"
+    },
+    "expression": {
+      "type": "expression",
+      "expressionType": "term",
+      "term": {
+        "termType": "Variable",
+        "value": "var0"
+      }
+    }
+  },
+  "variables": [
+    {
+      "termType": "Variable",
+      "value": "count"
+    }
+  ],
+  "metadata": {
+    "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
+  }
+}

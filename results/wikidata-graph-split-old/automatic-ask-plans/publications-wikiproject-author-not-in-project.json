@@ -1,0 +1,205 @@
+{
+  "type": "distinct",
+  "input": {
+    "type": "project",
+    "input": {
+      "type": "join",
+      "input": [
+        {
+          "type": "minus",
+          "input": [
+            {
+              "type": "join",
+              "input": [
+                {
+                  "type": "union",
+                  "input": [
+                    {
+                      "termType": "Quad",
+                      "value": "",
+                      "subject": {
+                        "termType": "Variable",
+                        "value": "thesis"
+                      },
+                      "predicate": {
+                        "termType": "NamedNode",
+                        "value": "http://www.wikidata.org/prop/direct/P5008"
+                      },
+                      "object": {
+                        "termType": "NamedNode",
+                        "value": "http://www.wikidata.org/entity/Q111645234"
+                      },
+                      "graph": {
+                        "termType": "DefaultGraph",
+                        "value": ""
+                      },
+                      "type": "pattern",
+                      "metadata": {
+                        "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
+                      }
+                    },
+                    {
+                      "termType": "Quad",
+                      "value": "",
+                      "subject": {
+                        "termType": "Variable",
+                        "value": "thesis"
+                      },
+                      "predicate": {
+                        "termType": "NamedNode",
+                        "value": "http://www.wikidata.org/prop/direct/P5008"
+                      },
+                      "object": {
+                        "termType": "NamedNode",
+                        "value": "http://www.wikidata.org/entity/Q111645234"
+                      },
+                      "graph": {
+                        "termType": "DefaultGraph",
+                        "value": ""
+                      },
+                      "type": "pattern",
+                      "metadata": {
+                        "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "termType": "Quad",
+                  "value": "",
+                  "subject": {
+                    "termType": "Variable",
+                    "value": "person"
+                  },
+                  "predicate": {
+                    "termType": "NamedNode",
+                    "value": "http://www.wikidata.org/prop/direct/P1026"
+                  },
+                  "object": {
+                    "termType": "Variable",
+                    "value": "thesis"
+                  },
+                  "graph": {
+                    "termType": "DefaultGraph",
+                    "value": ""
+                  },
+                  "type": "pattern",
+                  "metadata": {
+                    "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "join",
+              "input": [
+                {
+                  "type": "union",
+                  "input": [
+                    {
+                      "termType": "Quad",
+                      "value": "",
+                      "subject": {
+                        "termType": "Variable",
+                        "value": "person"
+                      },
+                      "predicate": {
+                        "termType": "NamedNode",
+                        "value": "http://www.wikidata.org/prop/direct/P5008"
+                      },
+                      "object": {
+                        "termType": "NamedNode",
+                        "value": "http://www.wikidata.org/entity/Q111645234"
+                      },
+                      "graph": {
+                        "termType": "DefaultGraph",
+                        "value": ""
+                      },
+                      "type": "pattern",
+                      "metadata": {
+                        "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
+                      }
+                    },
+                    {
+                      "termType": "Quad",
+                      "value": "",
+                      "subject": {
+                        "termType": "Variable",
+                        "value": "person"
+                      },
+                      "predicate": {
+                        "termType": "NamedNode",
+                        "value": "http://www.wikidata.org/prop/direct/P5008"
+                      },
+                      "object": {
+                        "termType": "NamedNode",
+                        "value": "http://www.wikidata.org/entity/Q111645234"
+                      },
+                      "graph": {
+                        "termType": "DefaultGraph",
+                        "value": ""
+                      },
+                      "type": "pattern",
+                      "metadata": {
+                        "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "service",
+          "input": {
+            "type": "join",
+            "input": [
+              {
+                "termType": "Quad",
+                "value": "",
+                "subject": {
+                  "termType": "NamedNode",
+                  "value": "http://www.bigdata.com/rdf#serviceParam"
+                },
+                "predicate": {
+                  "termType": "NamedNode",
+                  "value": "http://wikiba.se/ontology#language"
+                },
+                "object": {
+                  "termType": "Literal",
+                  "value": "[AUTO_LANGUAGE],en",
+                  "language": "",
+                  "datatype": {
+                    "termType": "NamedNode",
+                    "value": "http://www.w3.org/2001/XMLSchema#string"
+                  }
+                },
+                "graph": {
+                  "termType": "DefaultGraph",
+                  "value": ""
+                },
+                "type": "pattern"
+              }
+            ]
+          },
+          "name": {
+            "termType": "NamedNode",
+            "value": "http://wikiba.se/ontology#label"
+          },
+          "silent": false
+        }
+      ]
+    },
+    "variables": [
+      {
+        "termType": "Variable",
+        "value": "person"
+      },
+      {
+        "termType": "Variable",
+        "value": "personLabel"
+      }
+    ]
+  }
+}

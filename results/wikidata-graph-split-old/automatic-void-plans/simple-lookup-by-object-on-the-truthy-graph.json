@@ -1,0 +1,173 @@
+{
+  "type": "project",
+  "input": {
+    "type": "orderby",
+    "input": {
+      "type": "join",
+      "input": [
+        {
+          "type": "join",
+          "input": [
+            {
+              "type": "union",
+              "input": [
+                {
+                  "termType": "Quad",
+                  "value": "",
+                  "subject": {
+                    "termType": "Variable",
+                    "value": "x"
+                  },
+                  "predicate": {
+                    "termType": "Variable",
+                    "value": "r"
+                  },
+                  "object": {
+                    "termType": "NamedNode",
+                    "value": "http://www.wikidata.org/entity/Q1542532"
+                  },
+                  "graph": {
+                    "termType": "DefaultGraph",
+                    "value": ""
+                  },
+                  "type": "pattern",
+                  "metadata": {
+                    "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
+                  }
+                },
+                {
+                  "termType": "Quad",
+                  "value": "",
+                  "subject": {
+                    "termType": "Variable",
+                    "value": "x"
+                  },
+                  "predicate": {
+                    "termType": "Variable",
+                    "value": "r"
+                  },
+                  "object": {
+                    "termType": "NamedNode",
+                    "value": "http://www.wikidata.org/entity/Q1542532"
+                  },
+                  "graph": {
+                    "termType": "DefaultGraph",
+                    "value": ""
+                  },
+                  "type": "pattern",
+                  "metadata": {
+                    "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "service",
+              "input": {
+                "type": "join",
+                "input": [
+                  {
+                    "termType": "Quad",
+                    "value": "",
+                    "subject": {
+                      "termType": "NamedNode",
+                      "value": "http://www.bigdata.com/rdf#serviceParam"
+                    },
+                    "predicate": {
+                      "termType": "NamedNode",
+                      "value": "http://wikiba.se/ontology#language"
+                    },
+                    "object": {
+                      "termType": "Literal",
+                      "value": "en,de,fr,ru,nl,it,ja,uk,cs,sk,be,ca",
+                      "language": "",
+                      "datatype": {
+                        "termType": "NamedNode",
+                        "value": "http://www.w3.org/2001/XMLSchema#string"
+                      }
+                    },
+                    "graph": {
+                      "termType": "DefaultGraph",
+                      "value": ""
+                    },
+                    "type": "pattern"
+                  }
+                ]
+              },
+              "name": {
+                "termType": "NamedNode",
+                "value": "http://wikiba.se/ontology#label"
+              },
+              "silent": false
+            }
+          ]
+        },
+        {
+          "type": "join",
+          "input": [
+            {
+              "termType": "Quad",
+              "value": "",
+              "subject": {
+                "termType": "Variable",
+                "value": "rel"
+              },
+              "predicate": {
+                "termType": "NamedNode",
+                "value": "http://wikiba.se/ontology#directClaim"
+              },
+              "object": {
+                "termType": "Variable",
+                "value": "r"
+              },
+              "graph": {
+                "termType": "DefaultGraph",
+                "value": ""
+              },
+              "type": "pattern"
+            }
+          ],
+          "metadata": {
+            "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
+          }
+        }
+      ]
+    },
+    "expressions": [
+      {
+        "type": "expression",
+        "expressionType": "term",
+        "term": {
+          "termType": "Variable",
+          "value": "r"
+        }
+      },
+      {
+        "type": "expression",
+        "expressionType": "term",
+        "term": {
+          "termType": "Variable",
+          "value": "xLabel"
+        }
+      }
+    ]
+  },
+  "variables": [
+    {
+      "termType": "Variable",
+      "value": "x"
+    },
+    {
+      "termType": "Variable",
+      "value": "xLabel"
+    },
+    {
+      "termType": "Variable",
+      "value": "r"
+    },
+    {
+      "termType": "Variable",
+      "value": "relLabel"
+    }
+  ]
+}

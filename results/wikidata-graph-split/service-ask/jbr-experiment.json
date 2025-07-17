@@ -10,7 +10,7 @@
   "endpointUrl": "http://localhost:3001/sparql",
   "queryRunnerReplication": 1,
   "queryRunnerWarmupRounds": 0,
-  "queryRunnerRequestDelay": 1000,
+  "queryRunnerRequestDelay": 60000,
   "queryRunnerEndpointAvailabilityCheckTimeout": 1000,
   "queryRunnerUrlParams": {},
   "queryTimeoutFallback": 130000,

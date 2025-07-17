@@ -7,7 +7,7 @@ property-paths;0;true;Unknown SPARQL results content type: ;1;;;;;;1;0;0;0;0;0;0
 publications-wikiproject-author-not-in-project;0;true;Unknown SPARQL results content type: ;1;;;;;;1;0;0;0;0;0;0;NaN;;;;;NaN;
 publications-wikiproject-main-subject-instance-of-person;0;true;Unknown SPARQL results content type: ;1;;;;;;1;0;0;0;0;0;0;NaN;;;;;NaN;
 recent-publications;0;true;Unknown SPARQL results content type: ;1;;;;;;1;0;0;0;0;0;0;NaN;;;;;NaN;
-simple-count;0;true;Unexpected "!" at position 0 in state STOP;1;;;;;;1;0;0;0;0;0;0;NaN;;;;;NaN;
+simple-count;0;false;;0;7558ac67a01496d0ee1923cc6908599d;8;8;8;0;1;1;1;1;3548;3548;3548;3548;3547;3547;3547;0;0;"[[3547]]"
 simple-lookup-by-object-on-the-truthy-graph;0;true;Unknown SPARQL results content type: ;1;;;;;;1;0;0;0;0;0;0;NaN;;;;;NaN;
 simple-lookup-by-subject;0;true;Unknown SPARQL results content type: ;1;;;;;;1;0;0;0;0;0;0;NaN;;;;;NaN;
-sitelinks-lookup;0;false;;0;82a477f9f0144159431bd5dc8ce9c46e;56;56;56;0;1;13;13;13;9887;9887;9887;9887;9886 9886 9886 9886 9886 9886 9886 9886 9886 9886 9886 9886 9887;9886 9886 9886 9886 9886 9886 9886 9886 9886 9886 9886 9886 9887;9886 9886 9886 9886 9886 9886 9886 9886 9886 9886 9886 9886 9887;0 0 0 0 0 0 0 0 0 0 0 0 0;0;"[[9886,9886,9886,9886,9886,9886,9886,9886,9886,9886,9886,9886,9887]]"
+sitelinks-lookup;0;false;;0;82a477f9f0144159431bd5dc8ce9c46e;116;116;116;0;1;13;13;13;19511;19511;19511;19511;19510 19510 19510 19510 19511 19511 19511 19511 19511 19511 19511 19511 19511;19510 19510 19510 19510 19511 19511 19511 19511 19511 19511 19511 19511 19511;19510 19510 19510 19510 19511 19511 19511 19511 19511 19511 19511 19511 19511;0 0 0 0 0 0 0 0 0 0 0 0 0;0;"[[19510,19510,19510,19510,19511,19511,19511,19511,19511,19511,19511,19511,19511]]"

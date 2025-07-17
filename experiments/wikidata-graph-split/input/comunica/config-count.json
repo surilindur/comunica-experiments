@@ -73,7 +73,6 @@
   ],
   "@graph": [
     {
-      "comment": "Apply rate limit by default to every server to avoid issues",
       "@type": "Override",
       "overrideInstance": { "@id": "urn:comunica:default:http/actors#limit-rate" },
       "overrideParameters": {
@@ -84,19 +83,17 @@
       }
     },
     {
-      "comment": "Disable local estimation and COUNT queries",
       "@type": "Override",
       "overrideInstance": { "@id": "urn:comunica:default:query-source-identify-hypermedia/actors#sparql" },
       "overrideParameters": {
         "@type": "ActorQuerySourceIdentifyHypermediaSparql",
         "mediatorHttp": { "@id": "urn:comunica:default:http/mediators#main" },
         "mediatorMergeBindingsContext": { "@id": "urn:comunica:default:merge-bindings-context/mediators#main" },
-        "cardinalityCountQueries": false,
+        "cardinalityCountQueries": true,
         "cardinalityEstimateConstruction": false
       }
     },
     {
-      "comment": "Prefer COUNT queries to prune operations, so that the result is cached for metadata",
       "@type": "Override",
       "overrideInstance": { "@id": "urn:comunica:default:optimize-query-operation/actors#prune-empty-source-operations" },
       "overrideParameters": {

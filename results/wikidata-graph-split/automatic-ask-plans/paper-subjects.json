@@ -1,0 +1,146 @@
+{
+  "type": "slice",
+  "input": {
+    "type": "project",
+    "input": {
+      "type": "join",
+      "input": [
+        {
+          "type": "values",
+          "variables": [
+            {
+              "termType": "Variable",
+              "value": "paper"
+            }
+          ],
+          "bindings": [
+            {
+              "?paper": {
+                "termType": "NamedNode",
+                "value": "http://www.wikidata.org/entity/Q59458901"
+              }
+            }
+          ]
+        },
+        {
+          "type": "union",
+          "input": [
+            {
+              "termType": "Quad",
+              "value": "",
+              "subject": {
+                "termType": "Variable",
+                "value": "paper"
+              },
+              "predicate": {
+                "termType": "NamedNode",
+                "value": "http://www.wikidata.org/prop/direct/P921"
+              },
+              "object": {
+                "termType": "Variable",
+                "value": "subject"
+              },
+              "graph": {
+                "termType": "DefaultGraph",
+                "value": ""
+              },
+              "type": "pattern",
+              "metadata": {
+                "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
+              }
+            },
+            {
+              "termType": "Quad",
+              "value": "",
+              "subject": {
+                "termType": "Variable",
+                "value": "paper"
+              },
+              "predicate": {
+                "termType": "NamedNode",
+                "value": "http://www.wikidata.org/prop/direct/P921"
+              },
+              "object": {
+                "termType": "Variable",
+                "value": "subject"
+              },
+              "graph": {
+                "termType": "DefaultGraph",
+                "value": ""
+              },
+              "type": "pattern",
+              "metadata": {
+                "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
+              }
+            }
+          ]
+        },
+        {
+          "type": "union",
+          "input": [
+            {
+              "termType": "Quad",
+              "value": "",
+              "subject": {
+                "termType": "Variable",
+                "value": "subject"
+              },
+              "predicate": {
+                "termType": "NamedNode",
+                "value": "http://www.wikidata.org/prop/direct/P31"
+              },
+              "object": {
+                "termType": "Variable",
+                "value": "subjectType"
+              },
+              "graph": {
+                "termType": "DefaultGraph",
+                "value": ""
+              },
+              "type": "pattern",
+              "metadata": {
+                "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
+              }
+            },
+            {
+              "termType": "Quad",
+              "value": "",
+              "subject": {
+                "termType": "Variable",
+                "value": "subject"
+              },
+              "predicate": {
+                "termType": "NamedNode",
+                "value": "http://www.wikidata.org/prop/direct/P31"
+              },
+              "object": {
+                "termType": "Variable",
+                "value": "subjectType"
+              },
+              "graph": {
+                "termType": "DefaultGraph",
+                "value": ""
+              },
+              "type": "pattern",
+              "metadata": {
+                "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "variables": [
+      {
+        "termType": "Variable",
+        "value": "subject"
+      },
+      {
+        "termType": "Variable",
+        "value": "subjectType"
+      }
+    ]
+  },
+  "start": 0,
+  "length": 10
+}

@@ -10,10 +10,10 @@
   "endpointUrl": "http://localhost:3001/sparql",
   "queryRunnerReplication": 1,
   "queryRunnerWarmupRounds": 0,
-  "queryRunnerRequestDelay": 60000,
+  "queryRunnerRequestDelay": 10000,
   "queryRunnerEndpointAvailabilityCheckTimeout": 1000,
   "queryRunnerUrlParams": {},
-  "queryTimeoutFallback": 130000,
+  "queryTimeoutFallback": 40000,
   "hookSparqlEndpoint": {
     "@id": "urn:jbr:wikidata-graph-split:combination_3:hookSparqlEndpoint",
     "@type": "HookSparqlEndpointComunica",
@@ -27,7 +27,7 @@
     "additionalBinds": [],
     "clientPort": 3001,
     "clientLogLevel": "info",
-    "queryTimeout": 120,
+    "queryTimeout": 30,
     "maxMemory": 16384
   }
 }

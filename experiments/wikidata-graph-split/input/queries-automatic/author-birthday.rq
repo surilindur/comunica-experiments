@@ -1,0 +1,10 @@
+# https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/WDQS_graph_split/Internal_Federation_Guide#How_do_I_use_federation?
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+SELECT
+  ?dateOfBirth
+WHERE {
+  VALUES (?entity) {(wd:Q4781761)}
+  ?entity wdt:P50 ?authors .
+  ?authors wdt:P569 ?dateOfBirth .
+} LIMIT 10

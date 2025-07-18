@@ -1,0 +1,9 @@
+# https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/WDQS_graph_split/Federated_Queries_Examples#Finding_duplicated_external_ids_with_a_group_by
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+SELECT
+  ?extid
+  (count(?q) AS ?cnt)
+  (GROUP_CONCAT(?q; SEPARATOR = "|") AS ?items)
+WHERE {
+  ?q wdt:P244 ?extid
+} GROUP BY ?extid HAVING (?cnt>1) ORDER BY ?extid

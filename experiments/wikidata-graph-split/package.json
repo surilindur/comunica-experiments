@@ -9,6 +9,7 @@
   "scripts": {
     "prepare": "jbr generate-combinations && jbr prepare",
     "execute": "jbr run",
+    "explain": "bash ./explain.sh",
     "validate": "jbr generate-combinations && jbr validate"
   }
 }

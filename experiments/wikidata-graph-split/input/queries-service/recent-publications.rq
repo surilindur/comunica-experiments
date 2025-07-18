@@ -35,8 +35,8 @@ WHERE {
       SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
     }
   }
-  OPTIONAL { ?author rdfs:label ?author_label_ . FILTER (LANG(?author_label_) = 'en') }
-  OPTIONAL { ?type_ rdfs:label ?type_label . FILTER (LANG(?type_label) = 'en') }
+  OPTIONAL { ?author rdfs:label ?author_label_ . FILTER (LANG(?author_label_) = "en") }
+  OPTIONAL { ?type_ rdfs:label ?type_label . FILTER (LANG(?type_label) = "en") }
   BIND(COALESCE(?author_label_, SUBSTR(STR(?author), 32)) AS ?author_label)
   BIND(xsd:date(?datetimes) AS ?dates)
   SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }

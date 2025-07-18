@@ -1,0 +1,27 @@
+# https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/WDQS_graph_split/Federated_Queries_Examples#Property_paths
+PREFIX target: <http://www.wikidata.org/entity/Q104450895>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+SELECT
+  ?count
+  (CONCAT("/topics/Q104450895,", SUBSTR(STR(?topic), 32)) AS ?countUrl)
+  ?topic
+  (CONCAT("/topic/", SUBSTR(STR(?topic), 32)) AS ?topicUrl)
+  ?example_work
+  (CONCAT("/work/", SUBSTR(STR(?example_work), 32)) AS ?example_workUrl)
+WHERE {
+  {
+    SELECT
+      (COUNT(DISTINCT(?work)) AS ?count)
+      ?topic
+      (SAMPLE(?work) AS ?example_work)
+    WHERE {
+      ?topics ( wdt:P31*/wdt:P279* | wdt:P361+ | wdt:P1269+) target: .
+      # Find works for the specific queried topic
+      ?work wdt:P921 ?topics .
+      # Find co-occuring topics
+      ?work wdt:P921 ?topic .
+      # Avoid listing the queried topic
+      FILTER (target: != ?topic)
+    } GROUP BY ?topic
+  }
+} ORDER BY DESC(?count)

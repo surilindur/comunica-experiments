@@ -20,7 +20,7 @@ WHERE {
                   ?author .
     OPTIONAL {
       ?author rdfs:label ?author_label_ .
-      FILTER (LANG(?author_label_) = 'en')
+      FILTER (LANG(?author_label_) = "en")
     }
     BIND(COALESCE(?author_label_, SUBSTR(STR(?author), 32)) AS ?author_label)
     OPTIONAL { ?work wdt:P1104 ?pages_ }
@@ -31,14 +31,14 @@ WHERE {
                   ?author .
     OPTIONAL {
       ?author rdfs:label ?author_label_ .
-      FILTER (LANG(?author_label_) = 'en')
+      FILTER (LANG(?author_label_) = "en")
     }
     BIND(CONCAT(COALESCE(?author_label_, SUBSTR(STR(?author), 32)), " (ed.)") AS ?author_label)
   }
   OPTIONAL {
     ?work wdt:P31 ?type_ .
     ?type_ rdfs:label ?type_label .
-    FILTER (LANG(?type_label) = 'en')
+    FILTER (LANG(?type_label) = "en")
   }
   ?work wdt:P577 ?datetimes .
   BIND(xsd:date(?datetimes) AS ?dates)

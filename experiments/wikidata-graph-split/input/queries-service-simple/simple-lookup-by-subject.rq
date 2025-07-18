@@ -1,0 +1,19 @@
+# https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/WDQS_graph_split/Federated_Queries_Examples#Simple_lookup_by_subject
+PREFIX schema: <http://schema.org/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdsubgraph: <https://query.wikidata.org/subgraph/>
+SELECT
+  ?x
+  ?descr
+WHERE {
+  VALUES (?x) { (wd:Q77051335) (wd:L17271) (wd:Q42) }
+  {
+    ?x schema:description ?descr .
+    FILTER(LANG(?descr) = "en")
+  } UNION {
+    SERVICE wdsubgraph:scholarly_articles {
+      ?x schema:description ?descr .
+      FILTER(LANG(?descr) = "en")
+    }
+  }
+}

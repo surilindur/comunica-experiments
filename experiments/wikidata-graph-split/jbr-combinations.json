@@ -7,8 +7,9 @@
   "commonGenerated": true,
   "factors": {
     "cardinality": [
-      "void",
-      "count"
+      "ask",
+      "count",
+      "void"
     ],
     "federation": [
       "automatic",

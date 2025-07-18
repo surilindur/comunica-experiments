@@ -1,0 +1,120 @@
+{
+  "type": "slice",
+  "input": {
+    "type": "project",
+    "input": {
+      "type": "join",
+      "input": [
+        {
+          "termType": "Quad",
+          "value": "",
+          "subject": {
+            "termType": "NamedNode",
+            "value": "http://www.bigdata.com/queryHints#Query"
+          },
+          "predicate": {
+            "termType": "NamedNode",
+            "value": "http://www.bigdata.com/queryHints#optimizer"
+          },
+          "object": {
+            "termType": "Literal",
+            "value": "None",
+            "language": "",
+            "datatype": {
+              "termType": "NamedNode",
+              "value": "http://www.w3.org/2001/XMLSchema#string"
+            }
+          },
+          "graph": {
+            "termType": "DefaultGraph",
+            "value": ""
+          },
+          "type": "pattern"
+        },
+        {
+          "type": "values",
+          "variables": [
+            {
+              "termType": "Variable",
+              "value": "entity"
+            }
+          ],
+          "bindings": [
+            {
+              "?entity": {
+                "termType": "NamedNode",
+                "value": "http://www.wikidata.org/entity/Q4781761"
+              }
+            }
+          ]
+        },
+        {
+          "type": "service",
+          "input": {
+            "type": "join",
+            "input": [
+              {
+                "termType": "Quad",
+                "value": "",
+                "subject": {
+                  "termType": "Variable",
+                  "value": "entity"
+                },
+                "predicate": {
+                  "termType": "NamedNode",
+                  "value": "http://www.wikidata.org/prop/direct/P50"
+                },
+                "object": {
+                  "termType": "Variable",
+                  "value": "authors"
+                },
+                "graph": {
+                  "termType": "DefaultGraph",
+                  "value": ""
+                },
+                "type": "pattern"
+              }
+            ]
+          },
+          "name": {
+            "termType": "NamedNode",
+            "value": "https://query.wikidata.org/subgraph/scholarly_articles"
+          },
+          "silent": false
+        },
+        {
+          "termType": "Quad",
+          "value": "",
+          "subject": {
+            "termType": "Variable",
+            "value": "authors"
+          },
+          "predicate": {
+            "termType": "NamedNode",
+            "value": "http://www.wikidata.org/prop/direct/P569"
+          },
+          "object": {
+            "termType": "Variable",
+            "value": "dateOfBirth"
+          },
+          "graph": {
+            "termType": "DefaultGraph",
+            "value": ""
+          },
+          "type": "pattern"
+        }
+      ]
+    },
+    "variables": [
+      {
+        "termType": "Variable",
+        "value": "dateOfBirth"
+      }
+    ]
+  },
+  "start": 0,
+  "length": 10,
+  "metadata": {
+    "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
+  }
+}

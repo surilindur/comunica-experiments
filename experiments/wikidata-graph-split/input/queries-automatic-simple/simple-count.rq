@@ -1,0 +1,10 @@
+# https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/WDQS_graph_split/Federated_Queries_Examples#Simple_count
+PREFIX p: <http://www.wikidata.org/prop/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+SELECT
+  (COUNT(*) AS ?count)
+WHERE {
+  ?entity wdt:P4101 wd:Q41506 ;
+    p:P495 [] .
+}

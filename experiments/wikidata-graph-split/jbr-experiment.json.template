@@ -8,26 +8,26 @@
   "@type": "ExperimentSparqlCustom",
   "queriesPath": "input/queries-%FACTOR-federation%",
   "endpointUrl": "http://localhost:3001/sparql",
-  "queryRunnerReplication": 5,
+  "queryRunnerReplication": 1,
   "queryRunnerWarmupRounds": 0,
   "queryRunnerRequestDelay": 10000,
-  "queryRunnerEndpointAvailabilityCheckTimeout": 10000,
+  "queryRunnerEndpointAvailabilityCheckTimeout": 1000,
   "queryRunnerUrlParams": {},
-  "queryTimeoutFallback": 200000,
+  "queryTimeoutFallback": 40000,
   "hookSparqlEndpoint": {
     "@id": "urn:jbr:wikidata-graph-split:hookSparqlEndpoint",
     "@type": "HookSparqlEndpointComunica",
     "dockerfileClient": "input/comunica/Dockerfile",
     "resourceConstraints": {
       "@type": "StaticDockerResourceConstraints",
-      "cpu_percentage": 800
+      "cpu_percentage": 1600
     },
     "configClient": "input/comunica/config-%FACTOR-cardinality%.json",
     "contextClient": "input/comunica/context-%FACTOR-federation%.json",
     "additionalBinds": [],
     "clientPort": 3001,
     "clientLogLevel": "info",
-    "queryTimeout": 180,
-    "maxMemory": 24576
+    "queryTimeout": 30,
+    "maxMemory": 16384
   }
 }

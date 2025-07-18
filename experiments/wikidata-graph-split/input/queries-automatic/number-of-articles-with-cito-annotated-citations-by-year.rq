@@ -21,7 +21,7 @@ SELECT ?year (COUNT(?work) AS ?number_of_publications) ?role WHERE {
     }
     GROUP BY ?work ?type_ ?venue
   }
-  BIND(COALESCE(IF(bound(?type_), ?venue, 'other source')) AS ?role)
+  BIND(COALESCE(IF(bound(?type_), ?venue, "other source")) AS ?role)
 }
 GROUP BY ?year ?role
 ORDER BY ?year

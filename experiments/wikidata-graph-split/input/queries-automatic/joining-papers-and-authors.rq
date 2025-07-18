@@ -3,8 +3,8 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX wd: <http://www.wikidata.org/entity/>
 PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 SELECT
-  (group_concat(DISTINCT ?qLabel;separator='|') AS ?labels)
-  (group_concat(DISTINCT replace(str(?q),'^.+/','');separator='|') AS ?qs)
+  (group_concat(DISTINCT ?qLabel;separator="|") AS ?labels)
+  (group_concat(DISTINCT replace(str(?q),"^.+/","");separator="|") AS ?qs)
   ?lastName
   ?firstLetter
   (count(DISTINCT ?q) AS ?cnt)
@@ -13,7 +13,7 @@ WHERE {
   ?paper wdt:P50 ?author .
   ?paper wdt:P50 ?q .
   ?q rdfs:label ?qLabel .
-  FILTER(lang(?qLabel)='en') .
-  BIND(replace(?qLabel, '^.* ', '') AS ?lastName) .
-  BIND(replace(?qLabel, '^(.).*$', '$1') AS ?firstLetter)
+  FILTER(lang(?qLabel)="en") .
+  BIND(replace(?qLabel, "^.* ", "") AS ?lastName) .
+  BIND(replace(?qLabel, "^(.).*$", "$1") AS ?firstLetter)
 } GROUP BY ?lastName ?firstLetter HAVING (?cnt>1)

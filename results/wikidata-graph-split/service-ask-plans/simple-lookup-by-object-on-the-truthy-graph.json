@@ -40,8 +40,8 @@
                     "value": "r"
                   },
                   "object": {
-                    "termType": "Variable",
-                    "value": "work"
+                    "termType": "NamedNode",
+                    "value": "http://www.wikidata.org/entity/Q1542532"
                   },
                   "graph": {
                     "termType": "DefaultGraph",

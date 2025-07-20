@@ -3,17 +3,24 @@
     "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^6.0.0/components/context.jsonld"
   ],
   "@id": "urn:jbr:wikidata-graph-split-combinations",
-  "@type": "FullFactorialCombinationProvider",
+  "@type": "FractionalCombinationProvider",
   "commonGenerated": true,
-  "factors": {
-    "cardinality": [
-      "ask",
-      "count",
-      "void"
-    ],
-    "federation": [
-      "automatic",
-      "service"
-    ]
-  }
+  "combinations": [
+    {
+      "federation": "service",
+      "engineconfig": "ask"
+    },
+    {
+      "federation": "automatic",
+      "engineconfig": "ask"
+    },
+    {
+      "federation": "automatic",
+      "engineconfig": "count"
+    },
+    {
+      "federation": "automatic",
+      "engineconfig": "void"
+    }
+  ]
 }

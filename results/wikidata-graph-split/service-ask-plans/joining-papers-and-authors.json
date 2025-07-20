@@ -54,8 +54,8 @@
                                   "value": "http://www.wikidata.org/prop/direct/P50"
                                 },
                                 "object": {
-                                  "termType": "Variable",
-                                  "value": "author"
+                                  "termType": "NamedNode",
+                                  "value": "http://www.wikidata.org/entity/Q64213594"
                                 },
                                 "graph": {
                                   "termType": "DefaultGraph",

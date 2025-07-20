@@ -500,62 +500,65 @@
                 ]
               },
               {
-                "termType": "Quad",
-                "value": "",
-                "subject": {
-                  "termType": "Variable",
-                  "value": "venue_"
+                "type": "filter",
+                "input": {
+                  "termType": "Quad",
+                  "value": "",
+                  "subject": {
+                    "termType": "Variable",
+                    "value": "venue_"
+                  },
+                  "predicate": {
+                    "termType": "NamedNode",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                  },
+                  "object": {
+                    "termType": "Variable",
+                    "value": "venue"
+                  },
+                  "graph": {
+                    "termType": "DefaultGraph",
+                    "value": ""
+                  },
+                  "type": "pattern"
                 },
-                "predicate": {
-                  "termType": "NamedNode",
-                  "value": "http://www.w3.org/2000/01/rdf-schema#label"
-                },
-                "object": {
-                  "termType": "Variable",
-                  "value": "venue"
-                },
-                "graph": {
-                  "termType": "DefaultGraph",
-                  "value": ""
-                },
-                "type": "pattern"
-              }
-            ],
-            "expression": {
-              "type": "expression",
-              "expressionType": "operator",
-              "operator": "=",
-              "args": [
-                {
+                "expression": {
                   "type": "expression",
                   "expressionType": "operator",
-                  "operator": "lang",
+                  "operator": "=",
                   "args": [
+                    {
+                      "type": "expression",
+                      "expressionType": "operator",
+                      "operator": "lang",
+                      "args": [
+                        {
+                          "type": "expression",
+                          "expressionType": "term",
+                          "term": {
+                            "termType": "Variable",
+                            "value": "venue"
+                          }
+                        }
+                      ]
+                    },
                     {
                       "type": "expression",
                       "expressionType": "term",
                       "term": {
-                        "termType": "Variable",
-                        "value": "venue"
+                        "termType": "Literal",
+                        "value": "en",
+                        "language": "",
+                        "datatype": {
+                          "termType": "NamedNode",
+                          "value": "http://www.w3.org/2001/XMLSchema#string"
+                        }
                       }
                     }
                   ]
-                },
-                {
-                  "type": "expression",
-                  "expressionType": "term",
-                  "term": {
-                    "termType": "Literal",
-                    "value": "en",
-                    "language": "",
-                    "datatype": {
-                      "termType": "NamedNode",
-                      "value": "http://www.w3.org/2001/XMLSchema#string"
-                    }
-                  }
                 }
-              ]
-            }
+              }
+            ]
           },
           "variable": {
             "termType": "Variable",

@@ -476,32 +476,99 @@
                                     ]
                                   },
                                   {
-                                    "type": "join",
-                                    "input": [
-                                      {
-                                        "termType": "Quad",
-                                        "value": "",
-                                        "subject": {
-                                          "termType": "Variable",
-                                          "value": "author"
+                                    "type": "filter",
+                                    "input": {
+                                      "type": "join",
+                                      "input": [
+                                        {
+                                          "termType": "Quad",
+                                          "value": "",
+                                          "subject": {
+                                            "termType": "Variable",
+                                            "value": "author"
+                                          },
+                                          "predicate": {
+                                            "termType": "NamedNode",
+                                            "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                                          },
+                                          "object": {
+                                            "termType": "Variable",
+                                            "value": "author_label_"
+                                          },
+                                          "graph": {
+                                            "termType": "DefaultGraph",
+                                            "value": ""
+                                          },
+                                          "type": "pattern"
+                                        }
+                                      ]
+                                    },
+                                    "expression": {
+                                      "type": "expression",
+                                      "expressionType": "operator",
+                                      "operator": "=",
+                                      "args": [
+                                        {
+                                          "type": "expression",
+                                          "expressionType": "operator",
+                                          "operator": "lang",
+                                          "args": [
+                                            {
+                                              "type": "expression",
+                                              "expressionType": "term",
+                                              "term": {
+                                                "termType": "Variable",
+                                                "value": "author_label_"
+                                              }
+                                            }
+                                          ]
                                         },
-                                        "predicate": {
-                                          "termType": "NamedNode",
-                                          "value": "http://www.w3.org/2000/01/rdf-schema#label"
-                                        },
-                                        "object": {
-                                          "termType": "Variable",
-                                          "value": "author_label_"
-                                        },
-                                        "graph": {
-                                          "termType": "DefaultGraph",
-                                          "value": ""
-                                        },
-                                        "type": "pattern"
-                                      }
-                                    ]
+                                        {
+                                          "type": "expression",
+                                          "expressionType": "term",
+                                          "term": {
+                                            "termType": "Literal",
+                                            "value": "en",
+                                            "language": "",
+                                            "datatype": {
+                                              "termType": "NamedNode",
+                                              "value": "http://www.w3.org/2001/XMLSchema#string"
+                                            }
+                                          }
+                                        }
+                                      ]
+                                    }
                                   }
-                                ],
+                                ]
+                              },
+                              {
+                                "type": "filter",
+                                "input": {
+                                  "type": "join",
+                                  "input": [
+                                    {
+                                      "termType": "Quad",
+                                      "value": "",
+                                      "subject": {
+                                        "termType": "Variable",
+                                        "value": "type_"
+                                      },
+                                      "predicate": {
+                                        "termType": "NamedNode",
+                                        "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                                      },
+                                      "object": {
+                                        "termType": "Variable",
+                                        "value": "type_label"
+                                      },
+                                      "graph": {
+                                        "termType": "DefaultGraph",
+                                        "value": ""
+                                      },
+                                      "type": "pattern"
+                                    }
+                                  ]
+                                },
                                 "expression": {
                                   "type": "expression",
                                   "expressionType": "operator",
@@ -517,7 +584,7 @@
                                           "expressionType": "term",
                                           "term": {
                                             "termType": "Variable",
-                                            "value": "author_label_"
+                                            "value": "type_label"
                                           }
                                         }
                                       ]
@@ -537,69 +604,8 @@
                                     }
                                   ]
                                 }
-                              },
-                              {
-                                "type": "join",
-                                "input": [
-                                  {
-                                    "termType": "Quad",
-                                    "value": "",
-                                    "subject": {
-                                      "termType": "Variable",
-                                      "value": "type_"
-                                    },
-                                    "predicate": {
-                                      "termType": "NamedNode",
-                                      "value": "http://www.w3.org/2000/01/rdf-schema#label"
-                                    },
-                                    "object": {
-                                      "termType": "Variable",
-                                      "value": "type_label"
-                                    },
-                                    "graph": {
-                                      "termType": "DefaultGraph",
-                                      "value": ""
-                                    },
-                                    "type": "pattern"
-                                  }
-                                ]
                               }
-                            ],
-                            "expression": {
-                              "type": "expression",
-                              "expressionType": "operator",
-                              "operator": "=",
-                              "args": [
-                                {
-                                  "type": "expression",
-                                  "expressionType": "operator",
-                                  "operator": "lang",
-                                  "args": [
-                                    {
-                                      "type": "expression",
-                                      "expressionType": "term",
-                                      "term": {
-                                        "termType": "Variable",
-                                        "value": "type_label"
-                                      }
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "expression",
-                                  "expressionType": "term",
-                                  "term": {
-                                    "termType": "Literal",
-                                    "value": "en",
-                                    "language": "",
-                                    "datatype": {
-                                      "termType": "NamedNode",
-                                      "value": "http://www.w3.org/2001/XMLSchema#string"
-                                    }
-                                  }
-                                }
-                              ]
-                            }
+                            ]
                           },
                           "variable": {
                             "termType": "Variable",

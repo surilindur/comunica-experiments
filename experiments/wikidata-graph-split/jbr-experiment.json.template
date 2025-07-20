@@ -13,7 +13,7 @@
   "queryRunnerRequestDelay": 10000,
   "queryRunnerEndpointAvailabilityCheckTimeout": 1000,
   "queryRunnerUrlParams": {},
-  "queryTimeoutFallback": 40000,
+  "queryTimeoutFallback": 310000,
   "hookSparqlEndpoint": {
     "@id": "urn:jbr:wikidata-graph-split:hookSparqlEndpoint",
     "@type": "HookSparqlEndpointComunica",
@@ -22,12 +22,12 @@
       "@type": "StaticDockerResourceConstraints",
       "cpu_percentage": 1600
     },
-    "configClient": "input/comunica/config-%FACTOR-cardinality%.json",
+    "configClient": "input/comunica/config-%FACTOR-engineconfig%.json",
     "contextClient": "input/comunica/context-%FACTOR-federation%.json",
     "additionalBinds": [],
     "clientPort": 3001,
     "clientLogLevel": "info",
-    "queryTimeout": 30,
+    "queryTimeout": 300,
     "maxMemory": 16384
   }
 }

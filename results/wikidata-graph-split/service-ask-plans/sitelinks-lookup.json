@@ -10,54 +10,57 @@
           "type": "join",
           "input": [
             {
-              "type": "values",
-              "variables": [
-                {
-                  "termType": "Variable",
-                  "value": "item"
-                }
-              ],
-              "bindings": [
-                {
-                  "?item": {
-                    "termType": "NamedNode",
-                    "value": "http://www.wikidata.org/entity/Q330955"
-                  }
-                },
-                {
-                  "?item": {
-                    "termType": "NamedNode",
-                    "value": "http://www.wikidata.org/entity/Q42"
-                  }
-                }
-              ]
-            },
-            {
               "type": "union",
               "input": [
                 {
                   "type": "join",
                   "input": [
                     {
-                      "termType": "Quad",
-                      "value": "",
-                      "subject": {
-                        "termType": "Variable",
-                        "value": "wikimediaUrl"
-                      },
-                      "predicate": {
-                        "termType": "NamedNode",
-                        "value": "http://schema.org/about"
-                      },
-                      "object": {
-                        "termType": "Variable",
-                        "value": "item"
-                      },
-                      "graph": {
-                        "termType": "DefaultGraph",
-                        "value": ""
-                      },
-                      "type": "pattern"
+                      "type": "union",
+                      "input": [
+                        {
+                          "termType": "Quad",
+                          "value": "",
+                          "subject": {
+                            "termType": "Variable",
+                            "value": "wikimediaUrl"
+                          },
+                          "predicate": {
+                            "termType": "NamedNode",
+                            "value": "http://schema.org/about"
+                          },
+                          "object": {
+                            "termType": "NamedNode",
+                            "value": "http://www.wikidata.org/entity/Q330955"
+                          },
+                          "graph": {
+                            "termType": "DefaultGraph",
+                            "value": ""
+                          },
+                          "type": "pattern"
+                        },
+                        {
+                          "termType": "Quad",
+                          "value": "",
+                          "subject": {
+                            "termType": "Variable",
+                            "value": "wikimediaUrl"
+                          },
+                          "predicate": {
+                            "termType": "NamedNode",
+                            "value": "http://schema.org/about"
+                          },
+                          "object": {
+                            "termType": "NamedNode",
+                            "value": "http://www.wikidata.org/entity/Q42"
+                          },
+                          "graph": {
+                            "termType": "DefaultGraph",
+                            "value": ""
+                          },
+                          "type": "pattern"
+                        }
+                      ]
                     },
                     {
                       "termType": "Quad",

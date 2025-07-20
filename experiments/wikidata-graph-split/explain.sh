@@ -3,19 +3,27 @@
 explain_mode=logical
 query_timeout=120
 
-for config in "ask" "count" "void"; do
-    echo "Building Docker image for $config"
+for query_set in "automatic" "service"; do
 
-    docker build \
-        --build-arg CONFIG_CLIENT="config-$config.json" \
-        --build-arg QUERY_TIMEOUT="$query_timeout" \
-        --build-arg MAX_MEMORY=16384 \
-        --build-arg LOG_LEVEL=info \
-        --network host \
-        --tag "comunica:$config" \
-        ./input/comunica
+    configs=("ask")
 
-    for query_set in "automatic" "service"; do
+    if [ "$query_set" != "service" ]; then
+        configs=("${configs[@]}" "count" "void")
+    fi
+
+    for config in "${configs[@]}"; do
+
+        echo "Building Docker image for $query_set-$config"
+
+        docker build \
+            --build-arg CONFIG_CLIENT="config-$config.json" \
+            --build-arg QUERY_TIMEOUT="$query_timeout" \
+            --build-arg MAX_MEMORY=16384 \
+            --build-arg LOG_LEVEL=info \
+            --network host \
+            --tag "comunica:$config" \
+            ./input/comunica
+
         output_dir="./explained-$query_set-$config"
         context_string=$(cat "./input/comunica/context-$query_set.json")
 
@@ -28,7 +36,7 @@ for config in "ask" "count" "void"; do
             output_path="$output_dir/$query_name.json"
 
             echo "Explaining $query_name"
-            # echo "Output $output_path"
+            echo "Output $output_path"
 
             query_string=$(cat "$query_path")
 

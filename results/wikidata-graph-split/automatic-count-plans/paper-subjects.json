@@ -1,4 +1,6 @@
-{
+[33m[2025-07-19T19:46:53.043Z]  WARN: Metadata extraction for https://query-main.wikidata.org/bigdata/namespace/wdq/sparql failed: fetch failed { actor: 'urn:comunica:default:query-source-identify/actors#hypermedia' }
+[0m[33m[2025-07-19T19:46:53.051Z]  WARN: Metadata extraction for https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql failed: fetch failed { actor: 'urn:comunica:default:query-source-identify/actors#hypermedia' }
+[0m{
   "type": "slice",
   "input": {
     "type": "project",
@@ -6,74 +8,28 @@
       "type": "join",
       "input": [
         {
-          "type": "values",
-          "variables": [
-            {
-              "termType": "Variable",
-              "value": "paper"
-            }
-          ],
-          "bindings": [
-            {
-              "?paper": {
-                "termType": "NamedNode",
-                "value": "http://www.wikidata.org/entity/Q59458901"
-              }
-            }
-          ]
-        },
-        {
-          "type": "union",
-          "input": [
-            {
-              "termType": "Quad",
-              "value": "",
-              "subject": {
-                "termType": "Variable",
-                "value": "paper"
-              },
-              "predicate": {
-                "termType": "NamedNode",
-                "value": "http://www.wikidata.org/prop/direct/P921"
-              },
-              "object": {
-                "termType": "Variable",
-                "value": "subject"
-              },
-              "graph": {
-                "termType": "DefaultGraph",
-                "value": ""
-              },
-              "type": "pattern",
-              "metadata": {
-                "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
-              }
-            },
-            {
-              "termType": "Quad",
-              "value": "",
-              "subject": {
-                "termType": "Variable",
-                "value": "paper"
-              },
-              "predicate": {
-                "termType": "NamedNode",
-                "value": "http://www.wikidata.org/prop/direct/P921"
-              },
-              "object": {
-                "termType": "Variable",
-                "value": "subject"
-              },
-              "graph": {
-                "termType": "DefaultGraph",
-                "value": ""
-              },
-              "type": "pattern",
-              "metadata": {
-                "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
-              }
-            }
-          ]
+          "termType": "Quad",
+          "value": "",
+          "subject": {
+            "termType": "NamedNode",
+            "value": "http://www.wikidata.org/entity/Q59458901"
+          },
+          "predicate": {
+            "termType": "NamedNode",
+            "value": "http://www.wikidata.org/prop/direct/P921"
+          },
+          "object": {
+            "termType": "Variable",
+            "value": "subject"
+          },
+          "graph": {
+            "termType": "DefaultGraph",
+            "value": ""
+          },
+          "type": "pattern",
+          "metadata": {
+            "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
+          }
         },
         {
           "type": "union",

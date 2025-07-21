@@ -2,8 +2,10 @@
 PREFIX schema: <http://schema.org/>
 PREFIX wd: <http://www.wikidata.org/entity/>
 PREFIX wdsubgraph: <https://query.wikidata.org/subgraph/>
-SELECT * {
-  VALUES (?item) { (wd:Q330955) (wd:Q42) }
+SELECT
+  *
+WHERE {
+  VALUES ?item { wd:Q330955 wd:Q42 }
   {
     ?wikimediaUrl schema:about ?item ;
       schema:isPartOf ?partOf_ ;

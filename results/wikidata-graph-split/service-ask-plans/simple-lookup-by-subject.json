@@ -1,242 +1,143 @@
 {
   "type": "project",
   "input": {
-    "type": "join",
+    "type": "leftjoin",
     "input": [
       {
-        "type": "values",
-        "variables": [
-          {
-            "termType": "Variable",
-            "value": "x"
-          }
-        ],
-        "bindings": [
-          {
-            "?x": {
-              "termType": "NamedNode",
-              "value": "http://www.wikidata.org/entity/Q77051335"
-            }
-          },
-          {
-            "?x": {
-              "termType": "NamedNode",
-              "value": "http://www.wikidata.org/entity/L17271"
-            }
-          },
-          {
-            "?x": {
-              "termType": "NamedNode",
-              "value": "http://www.wikidata.org/entity/Q42"
-            }
-          }
-        ]
-      },
-      {
-        "type": "union",
+        "type": "join",
         "input": [
           {
-            "type": "join",
+            "type": "union",
             "input": [
               {
-                "type": "union",
-                "input": [
-                  {
-                    "termType": "Quad",
-                    "value": "",
-                    "subject": {
-                      "termType": "NamedNode",
-                      "value": "http://www.wikidata.org/entity/Q77051335"
-                    },
-                    "predicate": {
-                      "termType": "NamedNode",
-                      "value": "http://wikiba.se/ontology#lemma"
-                    },
-                    "object": {
-                      "termType": "Variable",
-                      "value": "xLabel"
-                    },
-                    "graph": {
-                      "termType": "DefaultGraph",
-                      "value": ""
-                    },
-                    "type": "pattern"
-                  },
-                  {
-                    "termType": "Quad",
-                    "value": "",
-                    "subject": {
-                      "termType": "NamedNode",
-                      "value": "http://www.wikidata.org/entity/L17271"
-                    },
-                    "predicate": {
-                      "termType": "NamedNode",
-                      "value": "http://wikiba.se/ontology#lemma"
-                    },
-                    "object": {
-                      "termType": "Variable",
-                      "value": "xLabel"
-                    },
-                    "graph": {
-                      "termType": "DefaultGraph",
-                      "value": ""
-                    },
-                    "type": "pattern"
-                  },
-                  {
-                    "termType": "Quad",
-                    "value": "",
-                    "subject": {
-                      "termType": "NamedNode",
-                      "value": "http://www.wikidata.org/entity/Q42"
-                    },
-                    "predicate": {
-                      "termType": "NamedNode",
-                      "value": "http://wikiba.se/ontology#lemma"
-                    },
-                    "object": {
-                      "termType": "Variable",
-                      "value": "xLabel"
-                    },
-                    "graph": {
-                      "termType": "DefaultGraph",
-                      "value": ""
-                    },
-                    "type": "pattern"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "filter",
-            "input": {
-              "type": "join",
-              "input": [
-                {
-                  "type": "union",
-                  "input": [
-                    {
-                      "termType": "Quad",
-                      "value": "",
-                      "subject": {
-                        "termType": "NamedNode",
-                        "value": "http://www.wikidata.org/entity/Q77051335"
-                      },
-                      "predicate": {
-                        "termType": "NamedNode",
-                        "value": "http://schema.org/description"
-                      },
-                      "object": {
-                        "termType": "Variable",
-                        "value": "descr"
-                      },
-                      "graph": {
-                        "termType": "DefaultGraph",
-                        "value": ""
-                      },
-                      "type": "pattern"
-                    },
-                    {
-                      "termType": "Quad",
-                      "value": "",
-                      "subject": {
-                        "termType": "NamedNode",
-                        "value": "http://www.wikidata.org/entity/L17271"
-                      },
-                      "predicate": {
-                        "termType": "NamedNode",
-                        "value": "http://schema.org/description"
-                      },
-                      "object": {
-                        "termType": "Variable",
-                        "value": "descr"
-                      },
-                      "graph": {
-                        "termType": "DefaultGraph",
-                        "value": ""
-                      },
-                      "type": "pattern"
-                    },
-                    {
-                      "termType": "Quad",
-                      "value": "",
-                      "subject": {
-                        "termType": "NamedNode",
-                        "value": "http://www.wikidata.org/entity/Q42"
-                      },
-                      "predicate": {
-                        "termType": "NamedNode",
-                        "value": "http://schema.org/description"
-                      },
-                      "object": {
-                        "termType": "Variable",
-                        "value": "descr"
-                      },
-                      "graph": {
-                        "termType": "DefaultGraph",
-                        "value": ""
-                      },
-                      "type": "pattern"
-                    }
-                  ]
-                }
-              ]
-            },
-            "expression": {
-              "type": "expression",
-              "expressionType": "operator",
-              "operator": "=",
-              "args": [
-                {
-                  "type": "expression",
-                  "expressionType": "operator",
-                  "operator": "lang",
-                  "args": [
-                    {
-                      "type": "expression",
-                      "expressionType": "term",
-                      "term": {
-                        "termType": "Variable",
-                        "value": "descr"
-                      }
-                    }
-                  ]
-                },
-                {
-                  "type": "expression",
-                  "expressionType": "term",
-                  "term": {
-                    "termType": "Literal",
-                    "value": "en",
-                    "language": "",
-                    "datatype": {
-                      "termType": "NamedNode",
-                      "value": "http://www.w3.org/2001/XMLSchema#string"
-                    }
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "type": "service",
-            "input": {
-              "type": "filter",
-              "input": {
                 "type": "join",
                 "input": [
                   {
-                    "type": "extend",
-                    "input": {
-                      "type": "join",
+                    "type": "union",
+                    "input": [
+                      {
+                        "termType": "Quad",
+                        "value": "",
+                        "subject": {
+                          "termType": "NamedNode",
+                          "value": "http://www.wikidata.org/entity/Q77051335"
+                        },
+                        "predicate": {
+                          "termType": "NamedNode",
+                          "value": "http://wikiba.se/ontology#lemma"
+                        },
+                        "object": {
+                          "termType": "Variable",
+                          "value": "xLabel"
+                        },
+                        "graph": {
+                          "termType": "DefaultGraph",
+                          "value": ""
+                        },
+                        "type": "pattern"
+                      },
+                      {
+                        "termType": "Quad",
+                        "value": "",
+                        "subject": {
+                          "termType": "NamedNode",
+                          "value": "http://www.wikidata.org/entity/L17271"
+                        },
+                        "predicate": {
+                          "termType": "NamedNode",
+                          "value": "http://wikiba.se/ontology#lemma"
+                        },
+                        "object": {
+                          "termType": "Variable",
+                          "value": "xLabel"
+                        },
+                        "graph": {
+                          "termType": "DefaultGraph",
+                          "value": ""
+                        },
+                        "type": "pattern"
+                      },
+                      {
+                        "termType": "Quad",
+                        "value": "",
+                        "subject": {
+                          "termType": "NamedNode",
+                          "value": "http://www.wikidata.org/entity/Q42"
+                        },
+                        "predicate": {
+                          "termType": "NamedNode",
+                          "value": "http://wikiba.se/ontology#lemma"
+                        },
+                        "object": {
+                          "termType": "Variable",
+                          "value": "xLabel"
+                        },
+                        "graph": {
+                          "termType": "DefaultGraph",
+                          "value": ""
+                        },
+                        "type": "pattern"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "filter",
+                "input": {
+                  "type": "join",
+                  "input": [
+                    {
+                      "type": "union",
                       "input": [
                         {
                           "termType": "Quad",
                           "value": "",
                           "subject": {
+                            "termType": "NamedNode",
+                            "value": "http://www.wikidata.org/entity/Q77051335"
+                          },
+                          "predicate": {
+                            "termType": "NamedNode",
+                            "value": "http://schema.org/description"
+                          },
+                          "object": {
                             "termType": "Variable",
-                            "value": "x"
+                            "value": "descr"
+                          },
+                          "graph": {
+                            "termType": "DefaultGraph",
+                            "value": ""
+                          },
+                          "type": "pattern"
+                        },
+                        {
+                          "termType": "Quad",
+                          "value": "",
+                          "subject": {
+                            "termType": "NamedNode",
+                            "value": "http://www.wikidata.org/entity/L17271"
+                          },
+                          "predicate": {
+                            "termType": "NamedNode",
+                            "value": "http://schema.org/description"
+                          },
+                          "object": {
+                            "termType": "Variable",
+                            "value": "descr"
+                          },
+                          "graph": {
+                            "termType": "DefaultGraph",
+                            "value": ""
+                          },
+                          "type": "pattern"
+                        },
+                        {
+                          "termType": "Quad",
+                          "value": "",
+                          "subject": {
+                            "termType": "NamedNode",
+                            "value": "http://www.wikidata.org/entity/Q42"
                           },
                           "predicate": {
                             "termType": "NamedNode",
@@ -253,145 +154,288 @@
                           "type": "pattern"
                         }
                       ]
-                    },
-                    "variable": {
-                      "termType": "Variable",
-                      "value": "xLabel"
-                    },
-                    "expression": {
-                      "type": "expression",
-                      "expressionType": "term",
-                      "term": {
-                        "termType": "Variable",
-                        "value": "xLabel"
-                      }
                     }
-                  },
-                  {
-                    "type": "service",
-                    "input": {
-                      "type": "join",
-                      "input": [
+                  ]
+                },
+                "expression": {
+                  "type": "expression",
+                  "expressionType": "operator",
+                  "operator": "=",
+                  "args": [
+                    {
+                      "type": "expression",
+                      "expressionType": "operator",
+                      "operator": "lang",
+                      "args": [
                         {
-                          "termType": "Quad",
-                          "value": "",
-                          "subject": {
-                            "termType": "NamedNode",
-                            "value": "http://www.bigdata.com/rdf#serviceParam"
-                          },
-                          "predicate": {
-                            "termType": "NamedNode",
-                            "value": "http://wikiba.se/ontology#language"
-                          },
-                          "object": {
-                            "termType": "Literal",
-                            "value": "en,de,fr,rm",
-                            "language": "",
-                            "datatype": {
-                              "termType": "NamedNode",
-                              "value": "http://www.w3.org/2001/XMLSchema#string"
-                            }
-                          },
-                          "graph": {
-                            "termType": "DefaultGraph",
-                            "value": ""
-                          },
-                          "type": "pattern"
+                          "type": "expression",
+                          "expressionType": "term",
+                          "term": {
+                            "termType": "Variable",
+                            "value": "descr"
+                          }
                         }
                       ]
                     },
-                    "name": {
-                      "termType": "NamedNode",
-                      "value": "http://wikiba.se/ontology#label"
-                    },
-                    "silent": false
-                  }
-                ]
+                    {
+                      "type": "expression",
+                      "expressionType": "term",
+                      "term": {
+                        "termType": "Literal",
+                        "value": "en",
+                        "language": "",
+                        "datatype": {
+                          "termType": "NamedNode",
+                          "value": "http://www.w3.org/2001/XMLSchema#string"
+                        }
+                      }
+                    }
+                  ]
+                }
               },
-              "expression": {
-                "type": "expression",
-                "expressionType": "operator",
-                "operator": "=",
-                "args": [
-                  {
-                    "type": "expression",
-                    "expressionType": "operator",
-                    "operator": "lang",
-                    "args": [
+              {
+                "type": "service",
+                "input": {
+                  "type": "filter",
+                  "input": {
+                    "type": "join",
+                    "input": [
                       {
-                        "type": "expression",
-                        "expressionType": "term",
-                        "term": {
+                        "termType": "Quad",
+                        "value": "",
+                        "subject": {
+                          "termType": "Variable",
+                          "value": "x"
+                        },
+                        "predicate": {
+                          "termType": "NamedNode",
+                          "value": "http://schema.org/description"
+                        },
+                        "object": {
                           "termType": "Variable",
                           "value": "descr"
-                        }
+                        },
+                        "graph": {
+                          "termType": "DefaultGraph",
+                          "value": ""
+                        },
+                        "type": "pattern"
+                      },
+                      {
+                        "termType": "Quad",
+                        "value": "",
+                        "subject": {
+                          "termType": "Variable",
+                          "value": "x"
+                        },
+                        "predicate": {
+                          "termType": "NamedNode",
+                          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                        },
+                        "object": {
+                          "termType": "Variable",
+                          "value": "xLabel"
+                        },
+                        "graph": {
+                          "termType": "DefaultGraph",
+                          "value": ""
+                        },
+                        "type": "pattern"
                       }
                     ]
                   },
-                  {
+                  "expression": {
                     "type": "expression",
-                    "expressionType": "term",
-                    "term": {
-                      "termType": "Literal",
-                      "value": "en",
-                      "language": "",
-                      "datatype": {
-                        "termType": "NamedNode",
-                        "value": "http://www.w3.org/2001/XMLSchema#string"
+                    "expressionType": "operator",
+                    "operator": "&&",
+                    "args": [
+                      {
+                        "type": "expression",
+                        "expressionType": "operator",
+                        "operator": "=",
+                        "args": [
+                          {
+                            "type": "expression",
+                            "expressionType": "operator",
+                            "operator": "lang",
+                            "args": [
+                              {
+                                "type": "expression",
+                                "expressionType": "term",
+                                "term": {
+                                  "termType": "Variable",
+                                  "value": "xLabel"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "type": "expression",
+                            "expressionType": "term",
+                            "term": {
+                              "termType": "Literal",
+                              "value": "en",
+                              "language": "",
+                              "datatype": {
+                                "termType": "NamedNode",
+                                "value": "http://www.w3.org/2001/XMLSchema#string"
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": "expression",
+                        "expressionType": "operator",
+                        "operator": "=",
+                        "args": [
+                          {
+                            "type": "expression",
+                            "expressionType": "operator",
+                            "operator": "lang",
+                            "args": [
+                              {
+                                "type": "expression",
+                                "expressionType": "term",
+                                "term": {
+                                  "termType": "Variable",
+                                  "value": "descr"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "type": "expression",
+                            "expressionType": "term",
+                            "term": {
+                              "termType": "Literal",
+                              "value": "en",
+                              "language": "",
+                              "datatype": {
+                                "termType": "NamedNode",
+                                "value": "http://www.w3.org/2001/XMLSchema#string"
+                              }
+                            }
+                          }
+                        ]
                       }
-                    }
+                    ]
                   }
-                ]
+                },
+                "name": {
+                  "termType": "NamedNode",
+                  "value": "https://query.wikidata.org/subgraph/scholarly_articles"
+                },
+                "silent": false
               }
-            },
-            "name": {
-              "termType": "NamedNode",
-              "value": "https://query.wikidata.org/subgraph/scholarly_articles"
-            },
-            "silent": false
+            ]
           }
         ]
       },
       {
-        "type": "service",
-        "input": {
-          "type": "join",
-          "input": [
+        "type": "union",
+        "input": [
+          {
+            "termType": "Quad",
+            "value": "",
+            "subject": {
+              "termType": "NamedNode",
+              "value": "http://www.wikidata.org/entity/Q77051335"
+            },
+            "predicate": {
+              "termType": "NamedNode",
+              "value": "http://www.w3.org/2000/01/rdf-schema#label"
+            },
+            "object": {
+              "termType": "Variable",
+              "value": "xLabel"
+            },
+            "graph": {
+              "termType": "DefaultGraph",
+              "value": ""
+            },
+            "type": "pattern"
+          },
+          {
+            "termType": "Quad",
+            "value": "",
+            "subject": {
+              "termType": "NamedNode",
+              "value": "http://www.wikidata.org/entity/L17271"
+            },
+            "predicate": {
+              "termType": "NamedNode",
+              "value": "http://www.w3.org/2000/01/rdf-schema#label"
+            },
+            "object": {
+              "termType": "Variable",
+              "value": "xLabel"
+            },
+            "graph": {
+              "termType": "DefaultGraph",
+              "value": ""
+            },
+            "type": "pattern"
+          },
+          {
+            "termType": "Quad",
+            "value": "",
+            "subject": {
+              "termType": "NamedNode",
+              "value": "http://www.wikidata.org/entity/Q42"
+            },
+            "predicate": {
+              "termType": "NamedNode",
+              "value": "http://www.w3.org/2000/01/rdf-schema#label"
+            },
+            "object": {
+              "termType": "Variable",
+              "value": "xLabel"
+            },
+            "graph": {
+              "termType": "DefaultGraph",
+              "value": ""
+            },
+            "type": "pattern"
+          }
+        ]
+      }
+    ],
+    "expression": {
+      "type": "expression",
+      "expressionType": "operator",
+      "operator": "=",
+      "args": [
+        {
+          "type": "expression",
+          "expressionType": "operator",
+          "operator": "lang",
+          "args": [
             {
-              "termType": "Quad",
-              "value": "",
-              "subject": {
-                "termType": "NamedNode",
-                "value": "http://www.bigdata.com/rdf#serviceParam"
-              },
-              "predicate": {
-                "termType": "NamedNode",
-                "value": "http://wikiba.se/ontology#language"
-              },
-              "object": {
-                "termType": "Literal",
-                "value": "en,de,fr,rm",
-                "language": "",
-                "datatype": {
-                  "termType": "NamedNode",
-                  "value": "http://www.w3.org/2001/XMLSchema#string"
-                }
-              },
-              "graph": {
-                "termType": "DefaultGraph",
-                "value": ""
-              },
-              "type": "pattern"
+              "type": "expression",
+              "expressionType": "term",
+              "term": {
+                "termType": "Variable",
+                "value": "xLabel"
+              }
             }
           ]
         },
-        "name": {
-          "termType": "NamedNode",
-          "value": "http://wikiba.se/ontology#label"
-        },
-        "silent": false
-      }
-    ]
+        {
+          "type": "expression",
+          "expressionType": "term",
+          "term": {
+            "termType": "Literal",
+            "value": "en",
+            "language": "",
+            "datatype": {
+              "termType": "NamedNode",
+              "value": "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        }
+      ]
+    }
   },
   "variables": [
     {

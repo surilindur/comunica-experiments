@@ -17,310 +17,33 @@
                 "input": {
                   "type": "group",
                   "input": {
-                    "type": "join",
-                    "input": [
-                      {
+                    "type": "extend",
+                    "input": {
+                      "type": "extend",
+                      "input": {
                         "type": "leftjoin",
                         "input": [
                           {
-                            "type": "extend",
-                            "input": {
-                              "type": "join",
-                              "input": [
-                                {
-                                  "type": "leftjoin",
-                                  "input": [
-                                    {
-                                      "type": "union",
-                                      "input": [
-                                        {
-                                          "type": "leftjoin",
-                                          "input": [
-                                            {
-                                              "type": "extend",
-                                              "input": {
-                                                "type": "leftjoin",
+                            "type": "leftjoin",
+                            "input": [
+                              {
+                                "type": "leftjoin",
+                                "input": [
+                                  {
+                                    "type": "leftjoin",
+                                    "input": [
+                                      {
+                                        "type": "leftjoin",
+                                        "input": [
+                                          {
+                                            "type": "join",
+                                            "input": [
+                                              {
+                                                "type": "union",
                                                 "input": [
                                                   {
-                                                    "type": "join",
-                                                    "input": [
-                                                      {
-                                                        "termType": "Quad",
-                                                        "value": "",
-                                                        "subject": {
-                                                          "termType": "Variable",
-                                                          "value": "work"
-                                                        },
-                                                        "predicate": {
-                                                          "termType": "NamedNode",
-                                                          "value": "http://www.wikidata.org/prop/direct/P50"
-                                                        },
-                                                        "object": {
-                                                          "termType": "NamedNode",
-                                                          "value": "http://www.wikidata.org/entity/Q37860261"
-                                                        },
-                                                        "graph": {
-                                                          "termType": "DefaultGraph",
-                                                          "value": ""
-                                                        },
-                                                        "type": "pattern",
-                                                        "metadata": {
-                                                          "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
-                                                        }
-                                                      },
-                                                      {
-                                                        "type": "union",
-                                                        "input": [
-                                                          {
-                                                            "termType": "Quad",
-                                                            "value": "",
-                                                            "subject": {
-                                                              "termType": "Variable",
-                                                              "value": "work"
-                                                            },
-                                                            "predicate": {
-                                                              "termType": "NamedNode",
-                                                              "value": "http://www.wikidata.org/prop/direct/P50"
-                                                            },
-                                                            "object": {
-                                                              "termType": "Variable",
-                                                              "value": "author"
-                                                            },
-                                                            "graph": {
-                                                              "termType": "DefaultGraph",
-                                                              "value": ""
-                                                            },
-                                                            "type": "pattern",
-                                                            "metadata": {
-                                                              "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
-                                                            }
-                                                          },
-                                                          {
-                                                            "termType": "Quad",
-                                                            "value": "",
-                                                            "subject": {
-                                                              "termType": "Variable",
-                                                              "value": "work"
-                                                            },
-                                                            "predicate": {
-                                                              "termType": "NamedNode",
-                                                              "value": "http://www.wikidata.org/prop/direct/P50"
-                                                            },
-                                                            "object": {
-                                                              "termType": "Variable",
-                                                              "value": "author"
-                                                            },
-                                                            "graph": {
-                                                              "termType": "DefaultGraph",
-                                                              "value": ""
-                                                            },
-                                                            "type": "pattern",
-                                                            "metadata": {
-                                                              "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
-                                                            }
-                                                          }
-                                                        ]
-                                                      }
-                                                    ]
-                                                  },
-                                                  {
-                                                    "type": "join",
-                                                    "input": [
-                                                      {
-                                                        "type": "union",
-                                                        "input": [
-                                                          {
-                                                            "type": "filter",
-                                                            "input": {
-                                                              "termType": "Quad",
-                                                              "value": "",
-                                                              "subject": {
-                                                                "termType": "Variable",
-                                                                "value": "author"
-                                                              },
-                                                              "predicate": {
-                                                                "termType": "NamedNode",
-                                                                "value": "http://www.w3.org/2000/01/rdf-schema#label"
-                                                              },
-                                                              "object": {
-                                                                "termType": "Variable",
-                                                                "value": "author_label_"
-                                                              },
-                                                              "graph": {
-                                                                "termType": "DefaultGraph",
-                                                                "value": ""
-                                                              },
-                                                              "type": "pattern"
-                                                            },
-                                                            "expression": {
-                                                              "type": "expression",
-                                                              "expressionType": "operator",
-                                                              "operator": "=",
-                                                              "args": [
-                                                                {
-                                                                  "type": "expression",
-                                                                  "expressionType": "operator",
-                                                                  "operator": "lang",
-                                                                  "args": [
-                                                                    {
-                                                                      "type": "expression",
-                                                                      "expressionType": "term",
-                                                                      "term": {
-                                                                        "termType": "Variable",
-                                                                        "value": "author_label_"
-                                                                      }
-                                                                    }
-                                                                  ]
-                                                                },
-                                                                {
-                                                                  "type": "expression",
-                                                                  "expressionType": "term",
-                                                                  "term": {
-                                                                    "termType": "Literal",
-                                                                    "value": "en",
-                                                                    "language": "",
-                                                                    "datatype": {
-                                                                      "termType": "NamedNode",
-                                                                      "value": "http://www.w3.org/2001/XMLSchema#string"
-                                                                    }
-                                                                  }
-                                                                }
-                                                              ]
-                                                            },
-                                                            "metadata": {
-                                                              "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
-                                                            }
-                                                          },
-                                                          {
-                                                            "type": "filter",
-                                                            "input": {
-                                                              "termType": "Quad",
-                                                              "value": "",
-                                                              "subject": {
-                                                                "termType": "Variable",
-                                                                "value": "author"
-                                                              },
-                                                              "predicate": {
-                                                                "termType": "NamedNode",
-                                                                "value": "http://www.w3.org/2000/01/rdf-schema#label"
-                                                              },
-                                                              "object": {
-                                                                "termType": "Variable",
-                                                                "value": "author_label_"
-                                                              },
-                                                              "graph": {
-                                                                "termType": "DefaultGraph",
-                                                                "value": ""
-                                                              },
-                                                              "type": "pattern"
-                                                            },
-                                                            "expression": {
-                                                              "type": "expression",
-                                                              "expressionType": "operator",
-                                                              "operator": "=",
-                                                              "args": [
-                                                                {
-                                                                  "type": "expression",
-                                                                  "expressionType": "operator",
-                                                                  "operator": "lang",
-                                                                  "args": [
-                                                                    {
-                                                                      "type": "expression",
-                                                                      "expressionType": "term",
-                                                                      "term": {
-                                                                        "termType": "Variable",
-                                                                        "value": "author_label_"
-                                                                      }
-                                                                    }
-                                                                  ]
-                                                                },
-                                                                {
-                                                                  "type": "expression",
-                                                                  "expressionType": "term",
-                                                                  "term": {
-                                                                    "termType": "Literal",
-                                                                    "value": "en",
-                                                                    "language": "",
-                                                                    "datatype": {
-                                                                      "termType": "NamedNode",
-                                                                      "value": "http://www.w3.org/2001/XMLSchema#string"
-                                                                    }
-                                                                  }
-                                                                }
-                                                              ]
-                                                            },
-                                                            "metadata": {
-                                                              "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
-                                                            }
-                                                          }
-                                                        ]
-                                                      }
-                                                    ]
-                                                  }
-                                                ]
-                                              },
-                                              "variable": {
-                                                "termType": "Variable",
-                                                "value": "author_label"
-                                              },
-                                              "expression": {
-                                                "type": "expression",
-                                                "expressionType": "operator",
-                                                "operator": "coalesce",
-                                                "args": [
-                                                  {
-                                                    "type": "expression",
-                                                    "expressionType": "term",
-                                                    "term": {
-                                                      "termType": "Variable",
-                                                      "value": "author_label_"
-                                                    }
-                                                  },
-                                                  {
-                                                    "type": "expression",
-                                                    "expressionType": "operator",
-                                                    "operator": "substr",
-                                                    "args": [
-                                                      {
-                                                        "type": "expression",
-                                                        "expressionType": "operator",
-                                                        "operator": "str",
-                                                        "args": [
-                                                          {
-                                                            "type": "expression",
-                                                            "expressionType": "term",
-                                                            "term": {
-                                                              "termType": "Variable",
-                                                              "value": "author"
-                                                            }
-                                                          }
-                                                        ]
-                                                      },
-                                                      {
-                                                        "type": "expression",
-                                                        "expressionType": "term",
-                                                        "term": {
-                                                          "termType": "Literal",
-                                                          "value": "32",
-                                                          "language": "",
-                                                          "datatype": {
-                                                            "termType": "NamedNode",
-                                                            "value": "http://www.w3.org/2001/XMLSchema#integer"
-                                                          }
-                                                        }
-                                                      }
-                                                    ]
-                                                  }
-                                                ]
-                                              }
-                                            },
-                                            {
-                                              "type": "join",
-                                              "input": [
-                                                {
-                                                  "type": "union",
-                                                  "input": [
-                                                    {
+                                                    "type": "filter",
+                                                    "input": {
                                                       "termType": "Quad",
                                                       "value": "",
                                                       "subject": {
@@ -329,456 +52,416 @@
                                                       },
                                                       "predicate": {
                                                         "termType": "NamedNode",
-                                                        "value": "http://www.wikidata.org/prop/direct/P1104"
+                                                        "value": "http://www.w3.org/2000/01/rdf-schema#label"
                                                       },
                                                       "object": {
                                                         "termType": "Variable",
-                                                        "value": "pages_"
+                                                        "value": "workLabel"
                                                       },
                                                       "graph": {
                                                         "termType": "DefaultGraph",
                                                         "value": ""
                                                       },
-                                                      "type": "pattern",
+                                                      "type": "pattern"
+                                                    },
+                                                    "expression": {
+                                                      "type": "expression",
+                                                      "expressionType": "operator",
+                                                      "operator": "lang",
+                                                      "args": [
+                                                        {
+                                                          "type": "expression",
+                                                          "expressionType": "operator",
+                                                          "operator": "=",
+                                                          "args": [
+                                                            {
+                                                              "type": "expression",
+                                                              "expressionType": "term",
+                                                              "term": {
+                                                                "termType": "Variable",
+                                                                "value": "workLabel"
+                                                              }
+                                                            },
+                                                            {
+                                                              "type": "expression",
+                                                              "expressionType": "term",
+                                                              "term": {
+                                                                "termType": "Literal",
+                                                                "value": "en",
+                                                                "language": "",
+                                                                "datatype": {
+                                                                  "termType": "NamedNode",
+                                                                  "value": "http://www.w3.org/2001/XMLSchema#string"
+                                                                }
+                                                              }
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    "metadata": {
+                                                      "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
+                                                    }
+                                                  },
+                                                  {
+                                                    "type": "filter",
+                                                    "input": {
+                                                      "termType": "Quad",
+                                                      "value": "",
+                                                      "subject": {
+                                                        "termType": "Variable",
+                                                        "value": "work"
+                                                      },
+                                                      "predicate": {
+                                                        "termType": "NamedNode",
+                                                        "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                                                      },
+                                                      "object": {
+                                                        "termType": "Variable",
+                                                        "value": "workLabel"
+                                                      },
+                                                      "graph": {
+                                                        "termType": "DefaultGraph",
+                                                        "value": ""
+                                                      },
+                                                      "type": "pattern"
+                                                    },
+                                                    "expression": {
+                                                      "type": "expression",
+                                                      "expressionType": "operator",
+                                                      "operator": "lang",
+                                                      "args": [
+                                                        {
+                                                          "type": "expression",
+                                                          "expressionType": "operator",
+                                                          "operator": "=",
+                                                          "args": [
+                                                            {
+                                                              "type": "expression",
+                                                              "expressionType": "term",
+                                                              "term": {
+                                                                "termType": "Variable",
+                                                                "value": "workLabel"
+                                                              }
+                                                            },
+                                                            {
+                                                              "type": "expression",
+                                                              "expressionType": "term",
+                                                              "term": {
+                                                                "termType": "Literal",
+                                                                "value": "en",
+                                                                "language": "",
+                                                                "datatype": {
+                                                                  "termType": "NamedNode",
+                                                                  "value": "http://www.w3.org/2001/XMLSchema#string"
+                                                                }
+                                                              }
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    "metadata": {
+                                                      "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
+                                                    }
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                "type": "path",
+                                                "subject": {
+                                                  "termType": "Variable",
+                                                  "value": "work"
+                                                },
+                                                "predicate": {
+                                                  "type": "alt",
+                                                  "input": [
+                                                    {
+                                                      "type": "link",
+                                                      "iri": {
+                                                        "termType": "NamedNode",
+                                                        "value": "http://www.wikidata.org/prop/direct/P50"
+                                                      },
                                                       "metadata": {
                                                         "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
                                                       }
                                                     },
                                                     {
-                                                      "termType": "Quad",
-                                                      "value": "",
-                                                      "subject": {
-                                                        "termType": "Variable",
-                                                        "value": "work"
-                                                      },
-                                                      "predicate": {
+                                                      "type": "link",
+                                                      "iri": {
                                                         "termType": "NamedNode",
-                                                        "value": "http://www.wikidata.org/prop/direct/P1104"
+                                                        "value": "http://www.wikidata.org/prop/direct/P50"
                                                       },
-                                                      "object": {
-                                                        "termType": "Variable",
-                                                        "value": "pages_"
+                                                      "metadata": {
+                                                        "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
+                                                      }
+                                                    },
+                                                    {
+                                                      "type": "link",
+                                                      "iri": {
+                                                        "termType": "NamedNode",
+                                                        "value": "http://www.wikidata.org/prop/direct/P98"
                                                       },
-                                                      "graph": {
-                                                        "termType": "DefaultGraph",
-                                                        "value": ""
+                                                      "metadata": {
+                                                        "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
+                                                      }
+                                                    },
+                                                    {
+                                                      "type": "link",
+                                                      "iri": {
+                                                        "termType": "NamedNode",
+                                                        "value": "http://www.wikidata.org/prop/direct/P98"
                                                       },
-                                                      "type": "pattern",
                                                       "metadata": {
                                                         "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
                                                       }
                                                     }
                                                   ]
+                                                },
+                                                "object": {
+                                                  "termType": "NamedNode",
+                                                  "value": "http://www.wikidata.org/entity/Q37860261"
+                                                },
+                                                "graph": {
+                                                  "termType": "DefaultGraph",
+                                                  "value": ""
                                                 }
-                                              ]
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "extend",
-                                          "input": {
-                                            "type": "leftjoin",
-                                            "input": [
-                                              {
-                                                "type": "join",
-                                                "input": [
-                                                  {
-                                                    "type": "union",
-                                                    "input": [
-                                                      {
-                                                        "termType": "Quad",
-                                                        "value": "",
-                                                        "subject": {
-                                                          "termType": "Variable",
-                                                          "value": "work"
-                                                        },
-                                                        "predicate": {
-                                                          "termType": "NamedNode",
-                                                          "value": "http://www.wikidata.org/prop/direct/P98"
-                                                        },
-                                                        "object": {
-                                                          "termType": "NamedNode",
-                                                          "value": "http://www.wikidata.org/entity/Q37860261"
-                                                        },
-                                                        "graph": {
-                                                          "termType": "DefaultGraph",
-                                                          "value": ""
-                                                        },
-                                                        "type": "pattern",
-                                                        "metadata": {
-                                                          "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
-                                                        }
-                                                      },
-                                                      {
-                                                        "termType": "Quad",
-                                                        "value": "",
-                                                        "subject": {
-                                                          "termType": "Variable",
-                                                          "value": "work"
-                                                        },
-                                                        "predicate": {
-                                                          "termType": "NamedNode",
-                                                          "value": "http://www.wikidata.org/prop/direct/P98"
-                                                        },
-                                                        "object": {
-                                                          "termType": "NamedNode",
-                                                          "value": "http://www.wikidata.org/entity/Q37860261"
-                                                        },
-                                                        "graph": {
-                                                          "termType": "DefaultGraph",
-                                                          "value": ""
-                                                        },
-                                                        "type": "pattern",
-                                                        "metadata": {
-                                                          "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
-                                                        }
-                                                      }
-                                                    ]
-                                                  },
-                                                  {
-                                                    "type": "union",
-                                                    "input": [
-                                                      {
-                                                        "termType": "Quad",
-                                                        "value": "",
-                                                        "subject": {
-                                                          "termType": "Variable",
-                                                          "value": "work"
-                                                        },
-                                                        "predicate": {
-                                                          "termType": "NamedNode",
-                                                          "value": "http://www.wikidata.org/prop/direct/P98"
-                                                        },
-                                                        "object": {
-                                                          "termType": "Variable",
-                                                          "value": "author"
-                                                        },
-                                                        "graph": {
-                                                          "termType": "DefaultGraph",
-                                                          "value": ""
-                                                        },
-                                                        "type": "pattern",
-                                                        "metadata": {
-                                                          "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
-                                                        }
-                                                      },
-                                                      {
-                                                        "termType": "Quad",
-                                                        "value": "",
-                                                        "subject": {
-                                                          "termType": "Variable",
-                                                          "value": "work"
-                                                        },
-                                                        "predicate": {
-                                                          "termType": "NamedNode",
-                                                          "value": "http://www.wikidata.org/prop/direct/P98"
-                                                        },
-                                                        "object": {
-                                                          "termType": "Variable",
-                                                          "value": "author"
-                                                        },
-                                                        "graph": {
-                                                          "termType": "DefaultGraph",
-                                                          "value": ""
-                                                        },
-                                                        "type": "pattern",
-                                                        "metadata": {
-                                                          "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
-                                                        }
-                                                      }
-                                                    ]
-                                                  }
-                                                ]
                                               },
                                               {
-                                                "type": "join",
+                                                "type": "path",
+                                                "subject": {
+                                                  "termType": "Variable",
+                                                  "value": "work"
+                                                },
+                                                "predicate": {
+                                                  "type": "alt",
+                                                  "input": [
+                                                    {
+                                                      "type": "link",
+                                                      "iri": {
+                                                        "termType": "NamedNode",
+                                                        "value": "http://www.wikidata.org/prop/direct/P50"
+                                                      },
+                                                      "metadata": {
+                                                        "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
+                                                      }
+                                                    },
+                                                    {
+                                                      "type": "link",
+                                                      "iri": {
+                                                        "termType": "NamedNode",
+                                                        "value": "http://www.wikidata.org/prop/direct/P50"
+                                                      },
+                                                      "metadata": {
+                                                        "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
+                                                      }
+                                                    },
+                                                    {
+                                                      "type": "link",
+                                                      "iri": {
+                                                        "termType": "NamedNode",
+                                                        "value": "http://www.wikidata.org/prop/direct/P98"
+                                                      },
+                                                      "metadata": {
+                                                        "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
+                                                      }
+                                                    },
+                                                    {
+                                                      "type": "link",
+                                                      "iri": {
+                                                        "termType": "NamedNode",
+                                                        "value": "http://www.wikidata.org/prop/direct/P98"
+                                                      },
+                                                      "metadata": {
+                                                        "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
+                                                      }
+                                                    }
+                                                  ]
+                                                },
+                                                "object": {
+                                                  "termType": "Variable",
+                                                  "value": "author"
+                                                },
+                                                "graph": {
+                                                  "termType": "DefaultGraph",
+                                                  "value": ""
+                                                }
+                                              },
+                                              {
+                                                "type": "union",
                                                 "input": [
                                                   {
-                                                    "type": "union",
-                                                    "input": [
-                                                      {
-                                                        "type": "filter",
-                                                        "input": {
-                                                          "termType": "Quad",
-                                                          "value": "",
-                                                          "subject": {
-                                                            "termType": "Variable",
-                                                            "value": "author"
-                                                          },
-                                                          "predicate": {
-                                                            "termType": "NamedNode",
-                                                            "value": "http://www.w3.org/2000/01/rdf-schema#label"
-                                                          },
-                                                          "object": {
-                                                            "termType": "Variable",
-                                                            "value": "author_label_"
-                                                          },
-                                                          "graph": {
-                                                            "termType": "DefaultGraph",
-                                                            "value": ""
-                                                          },
-                                                          "type": "pattern"
-                                                        },
-                                                        "expression": {
-                                                          "type": "expression",
-                                                          "expressionType": "operator",
-                                                          "operator": "=",
-                                                          "args": [
-                                                            {
-                                                              "type": "expression",
-                                                              "expressionType": "operator",
-                                                              "operator": "lang",
-                                                              "args": [
-                                                                {
-                                                                  "type": "expression",
-                                                                  "expressionType": "term",
-                                                                  "term": {
-                                                                    "termType": "Variable",
-                                                                    "value": "author_label_"
-                                                                  }
-                                                                }
-                                                              ]
-                                                            },
-                                                            {
-                                                              "type": "expression",
-                                                              "expressionType": "term",
-                                                              "term": {
-                                                                "termType": "Literal",
-                                                                "value": "en",
-                                                                "language": "",
-                                                                "datatype": {
-                                                                  "termType": "NamedNode",
-                                                                  "value": "http://www.w3.org/2001/XMLSchema#string"
-                                                                }
-                                                              }
-                                                            }
-                                                          ]
-                                                        },
-                                                        "metadata": {
-                                                          "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
-                                                        }
-                                                      },
-                                                      {
-                                                        "type": "filter",
-                                                        "input": {
-                                                          "termType": "Quad",
-                                                          "value": "",
-                                                          "subject": {
-                                                            "termType": "Variable",
-                                                            "value": "author"
-                                                          },
-                                                          "predicate": {
-                                                            "termType": "NamedNode",
-                                                            "value": "http://www.w3.org/2000/01/rdf-schema#label"
-                                                          },
-                                                          "object": {
-                                                            "termType": "Variable",
-                                                            "value": "author_label_"
-                                                          },
-                                                          "graph": {
-                                                            "termType": "DefaultGraph",
-                                                            "value": ""
-                                                          },
-                                                          "type": "pattern"
-                                                        },
-                                                        "expression": {
-                                                          "type": "expression",
-                                                          "expressionType": "operator",
-                                                          "operator": "=",
-                                                          "args": [
-                                                            {
-                                                              "type": "expression",
-                                                              "expressionType": "operator",
-                                                              "operator": "lang",
-                                                              "args": [
-                                                                {
-                                                                  "type": "expression",
-                                                                  "expressionType": "term",
-                                                                  "term": {
-                                                                    "termType": "Variable",
-                                                                    "value": "author_label_"
-                                                                  }
-                                                                }
-                                                              ]
-                                                            },
-                                                            {
-                                                              "type": "expression",
-                                                              "expressionType": "term",
-                                                              "term": {
-                                                                "termType": "Literal",
-                                                                "value": "en",
-                                                                "language": "",
-                                                                "datatype": {
-                                                                  "termType": "NamedNode",
-                                                                  "value": "http://www.w3.org/2001/XMLSchema#string"
-                                                                }
-                                                              }
-                                                            }
-                                                          ]
-                                                        },
-                                                        "metadata": {
-                                                          "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
-                                                        }
-                                                      }
-                                                    ]
+                                                    "termType": "Quad",
+                                                    "value": "",
+                                                    "subject": {
+                                                      "termType": "Variable",
+                                                      "value": "work"
+                                                    },
+                                                    "predicate": {
+                                                      "termType": "NamedNode",
+                                                      "value": "http://www.wikidata.org/prop/direct/P577"
+                                                    },
+                                                    "object": {
+                                                      "termType": "Variable",
+                                                      "value": "datetimes"
+                                                    },
+                                                    "graph": {
+                                                      "termType": "DefaultGraph",
+                                                      "value": ""
+                                                    },
+                                                    "type": "pattern",
+                                                    "metadata": {
+                                                      "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
+                                                    }
+                                                  },
+                                                  {
+                                                    "termType": "Quad",
+                                                    "value": "",
+                                                    "subject": {
+                                                      "termType": "Variable",
+                                                      "value": "work"
+                                                    },
+                                                    "predicate": {
+                                                      "termType": "NamedNode",
+                                                      "value": "http://www.wikidata.org/prop/direct/P577"
+                                                    },
+                                                    "object": {
+                                                      "termType": "Variable",
+                                                      "value": "datetimes"
+                                                    },
+                                                    "graph": {
+                                                      "termType": "DefaultGraph",
+                                                      "value": ""
+                                                    },
+                                                    "type": "pattern",
+                                                    "metadata": {
+                                                      "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
+                                                    }
                                                   }
                                                 ]
                                               }
                                             ]
                                           },
-                                          "variable": {
-                                            "termType": "Variable",
-                                            "value": "author_label"
-                                          },
-                                          "expression": {
-                                            "type": "expression",
-                                            "expressionType": "operator",
-                                            "operator": "concat",
-                                            "args": [
+                                          {
+                                            "type": "union",
+                                            "input": [
                                               {
-                                                "type": "expression",
-                                                "expressionType": "operator",
-                                                "operator": "coalesce",
-                                                "args": [
-                                                  {
-                                                    "type": "expression",
-                                                    "expressionType": "term",
-                                                    "term": {
-                                                      "termType": "Variable",
-                                                      "value": "author_label_"
-                                                    }
-                                                  },
-                                                  {
-                                                    "type": "expression",
-                                                    "expressionType": "operator",
-                                                    "operator": "substr",
-                                                    "args": [
-                                                      {
-                                                        "type": "expression",
-                                                        "expressionType": "operator",
-                                                        "operator": "str",
-                                                        "args": [
-                                                          {
-                                                            "type": "expression",
-                                                            "expressionType": "term",
-                                                            "term": {
-                                                              "termType": "Variable",
-                                                              "value": "author"
-                                                            }
-                                                          }
-                                                        ]
-                                                      },
-                                                      {
-                                                        "type": "expression",
-                                                        "expressionType": "term",
-                                                        "term": {
-                                                          "termType": "Literal",
-                                                          "value": "32",
-                                                          "language": "",
-                                                          "datatype": {
-                                                            "termType": "NamedNode",
-                                                            "value": "http://www.w3.org/2001/XMLSchema#integer"
-                                                          }
-                                                        }
-                                                      }
-                                                    ]
-                                                  }
-                                                ]
+                                                "termType": "Quad",
+                                                "value": "",
+                                                "subject": {
+                                                  "termType": "Variable",
+                                                  "value": "work"
+                                                },
+                                                "predicate": {
+                                                  "termType": "NamedNode",
+                                                  "value": "http://www.wikidata.org/prop/direct/P1104"
+                                                },
+                                                "object": {
+                                                  "termType": "Variable",
+                                                  "value": "pages_"
+                                                },
+                                                "graph": {
+                                                  "termType": "DefaultGraph",
+                                                  "value": ""
+                                                },
+                                                "type": "pattern",
+                                                "metadata": {
+                                                  "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
+                                                }
                                               },
                                               {
-                                                "type": "expression",
-                                                "expressionType": "term",
-                                                "term": {
-                                                  "termType": "Literal",
-                                                  "value": " (ed.)",
-                                                  "language": "",
-                                                  "datatype": {
-                                                    "termType": "NamedNode",
-                                                    "value": "http://www.w3.org/2001/XMLSchema#string"
-                                                  }
+                                                "termType": "Quad",
+                                                "value": "",
+                                                "subject": {
+                                                  "termType": "Variable",
+                                                  "value": "work"
+                                                },
+                                                "predicate": {
+                                                  "termType": "NamedNode",
+                                                  "value": "http://www.wikidata.org/prop/direct/P1104"
+                                                },
+                                                "object": {
+                                                  "termType": "Variable",
+                                                  "value": "pages_"
+                                                },
+                                                "graph": {
+                                                  "termType": "DefaultGraph",
+                                                  "value": ""
+                                                },
+                                                "type": "pattern",
+                                                "metadata": {
+                                                  "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
                                                 }
                                               }
                                             ]
                                           }
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "join",
-                                      "input": [
-                                        {
-                                          "type": "union",
-                                          "input": [
-                                            {
-                                              "type": "filter",
-                                              "input": {
+                                        ]
+                                      },
+                                      {
+                                        "type": "join",
+                                        "input": [
+                                          {
+                                            "type": "union",
+                                            "input": [
+                                              {
                                                 "termType": "Quad",
                                                 "value": "",
                                                 "subject": {
                                                   "termType": "Variable",
-                                                  "value": "type_"
+                                                  "value": "work"
                                                 },
                                                 "predicate": {
                                                   "termType": "NamedNode",
-                                                  "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                                                  "value": "http://www.wikidata.org/prop/direct/P1433"
                                                 },
                                                 "object": {
                                                   "termType": "Variable",
-                                                  "value": "type_label"
+                                                  "value": "venue"
                                                 },
                                                 "graph": {
                                                   "termType": "DefaultGraph",
                                                   "value": ""
                                                 },
-                                                "type": "pattern"
+                                                "type": "pattern",
+                                                "metadata": {
+                                                  "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
+                                                }
                                               },
-                                              "expression": {
-                                                "type": "expression",
-                                                "expressionType": "operator",
-                                                "operator": "=",
-                                                "args": [
-                                                  {
-                                                    "type": "expression",
-                                                    "expressionType": "operator",
-                                                    "operator": "lang",
-                                                    "args": [
-                                                      {
-                                                        "type": "expression",
-                                                        "expressionType": "term",
-                                                        "term": {
-                                                          "termType": "Variable",
-                                                          "value": "type_label"
-                                                        }
-                                                      }
-                                                    ]
-                                                  },
-                                                  {
-                                                    "type": "expression",
-                                                    "expressionType": "term",
-                                                    "term": {
-                                                      "termType": "Literal",
-                                                      "value": "en",
-                                                      "language": "",
-                                                      "datatype": {
-                                                        "termType": "NamedNode",
-                                                        "value": "http://www.w3.org/2001/XMLSchema#string"
-                                                      }
-                                                    }
-                                                  }
-                                                ]
-                                              },
-                                              "metadata": {
-                                                "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
+                                              {
+                                                "termType": "Quad",
+                                                "value": "",
+                                                "subject": {
+                                                  "termType": "Variable",
+                                                  "value": "work"
+                                                },
+                                                "predicate": {
+                                                  "termType": "NamedNode",
+                                                  "value": "http://www.wikidata.org/prop/direct/P1433"
+                                                },
+                                                "object": {
+                                                  "termType": "Variable",
+                                                  "value": "venue"
+                                                },
+                                                "graph": {
+                                                  "termType": "DefaultGraph",
+                                                  "value": ""
+                                                },
+                                                "type": "pattern",
+                                                "metadata": {
+                                                  "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
+                                                }
                                               }
-                                            },
-                                            {
-                                              "type": "filter",
-                                              "input": {
+                                            ]
+                                          },
+                                          {
+                                            "type": "union",
+                                            "input": [
+                                              {
                                                 "termType": "Quad",
                                                 "value": "",
                                                 "subject": {
                                                   "termType": "Variable",
-                                                  "value": "type_"
+                                                  "value": "venue"
                                                 },
                                                 "predicate": {
                                                   "termType": "NamedNode",
@@ -786,240 +469,225 @@
                                                 },
                                                 "object": {
                                                   "termType": "Variable",
-                                                  "value": "type_label"
+                                                  "value": "venueLabel"
                                                 },
                                                 "graph": {
                                                   "termType": "DefaultGraph",
                                                   "value": ""
                                                 },
-                                                "type": "pattern"
+                                                "type": "pattern",
+                                                "metadata": {
+                                                  "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
+                                                }
                                               },
-                                              "expression": {
-                                                "type": "expression",
-                                                "expressionType": "operator",
-                                                "operator": "=",
-                                                "args": [
-                                                  {
-                                                    "type": "expression",
-                                                    "expressionType": "operator",
-                                                    "operator": "lang",
-                                                    "args": [
-                                                      {
-                                                        "type": "expression",
-                                                        "expressionType": "term",
-                                                        "term": {
-                                                          "termType": "Variable",
-                                                          "value": "type_label"
-                                                        }
-                                                      }
-                                                    ]
-                                                  },
-                                                  {
-                                                    "type": "expression",
-                                                    "expressionType": "term",
-                                                    "term": {
-                                                      "termType": "Literal",
-                                                      "value": "en",
-                                                      "language": "",
-                                                      "datatype": {
-                                                        "termType": "NamedNode",
-                                                        "value": "http://www.w3.org/2001/XMLSchema#string"
-                                                      }
-                                                    }
-                                                  }
-                                                ]
-                                              },
-                                              "metadata": {
-                                                "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
+                                              {
+                                                "termType": "Quad",
+                                                "value": "",
+                                                "subject": {
+                                                  "termType": "Variable",
+                                                  "value": "venue"
+                                                },
+                                                "predicate": {
+                                                  "termType": "NamedNode",
+                                                  "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                                                },
+                                                "object": {
+                                                  "termType": "Variable",
+                                                  "value": "venueLabel"
+                                                },
+                                                "graph": {
+                                                  "termType": "DefaultGraph",
+                                                  "value": ""
+                                                },
+                                                "type": "pattern",
+                                                "metadata": {
+                                                  "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "union",
+                                    "input": [
+                                      {
+                                        "termType": "Quad",
+                                        "value": "",
+                                        "subject": {
+                                          "termType": "Variable",
+                                          "value": "work"
+                                        },
+                                        "predicate": {
+                                          "termType": "NamedNode",
+                                          "value": "http://www.wikidata.org/prop/direct/P31"
+                                        },
+                                        "object": {
+                                          "termType": "Variable",
+                                          "value": "type_"
+                                        },
+                                        "graph": {
+                                          "termType": "DefaultGraph",
+                                          "value": ""
+                                        },
+                                        "type": "pattern",
+                                        "metadata": {
+                                          "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
+                                        }
+                                      },
+                                      {
+                                        "termType": "Quad",
+                                        "value": "",
+                                        "subject": {
+                                          "termType": "Variable",
+                                          "value": "work"
+                                        },
+                                        "predicate": {
+                                          "termType": "NamedNode",
+                                          "value": "http://www.wikidata.org/prop/direct/P31"
+                                        },
+                                        "object": {
+                                          "termType": "Variable",
+                                          "value": "type_"
+                                        },
+                                        "graph": {
+                                          "termType": "DefaultGraph",
+                                          "value": ""
+                                        },
+                                        "type": "pattern",
+                                        "metadata": {
+                                          "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "union",
+                                "input": [
+                                  {
+                                    "type": "filter",
+                                    "input": {
+                                      "termType": "Quad",
+                                      "value": "",
+                                      "subject": {
+                                        "termType": "Variable",
+                                        "value": "author"
+                                      },
+                                      "predicate": {
+                                        "termType": "NamedNode",
+                                        "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                                      },
+                                      "object": {
+                                        "termType": "Variable",
+                                        "value": "author_label_"
+                                      },
+                                      "graph": {
+                                        "termType": "DefaultGraph",
+                                        "value": ""
+                                      },
+                                      "type": "pattern"
+                                    },
+                                    "expression": {
+                                      "type": "expression",
+                                      "expressionType": "operator",
+                                      "operator": "=",
+                                      "args": [
+                                        {
+                                          "type": "expression",
+                                          "expressionType": "operator",
+                                          "operator": "lang",
+                                          "args": [
+                                            {
+                                              "type": "expression",
+                                              "expressionType": "term",
+                                              "term": {
+                                                "termType": "Variable",
+                                                "value": "author_label_"
                                               }
                                             }
                                           ]
                                         },
                                         {
-                                          "type": "union",
-                                          "input": [
-                                            {
-                                              "termType": "Quad",
-                                              "value": "",
-                                              "subject": {
-                                                "termType": "Variable",
-                                                "value": "work"
-                                              },
-                                              "predicate": {
-                                                "termType": "NamedNode",
-                                                "value": "http://www.wikidata.org/prop/direct/P31"
-                                              },
-                                              "object": {
-                                                "termType": "Variable",
-                                                "value": "type_"
-                                              },
-                                              "graph": {
-                                                "termType": "DefaultGraph",
-                                                "value": ""
-                                              },
-                                              "type": "pattern",
-                                              "metadata": {
-                                                "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
-                                              }
-                                            },
-                                            {
-                                              "termType": "Quad",
-                                              "value": "",
-                                              "subject": {
-                                                "termType": "Variable",
-                                                "value": "work"
-                                              },
-                                              "predicate": {
-                                                "termType": "NamedNode",
-                                                "value": "http://www.wikidata.org/prop/direct/P31"
-                                              },
-                                              "object": {
-                                                "termType": "Variable",
-                                                "value": "type_"
-                                              },
-                                              "graph": {
-                                                "termType": "DefaultGraph",
-                                                "value": ""
-                                              },
-                                              "type": "pattern",
-                                              "metadata": {
-                                                "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
-                                              }
+                                          "type": "expression",
+                                          "expressionType": "term",
+                                          "term": {
+                                            "termType": "Literal",
+                                            "value": "en",
+                                            "language": "",
+                                            "datatype": {
+                                              "termType": "NamedNode",
+                                              "value": "http://www.w3.org/2001/XMLSchema#string"
                                             }
-                                          ]
+                                          }
                                         }
                                       ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "union",
-                                  "input": [
-                                    {
-                                      "termType": "Quad",
-                                      "value": "",
-                                      "subject": {
-                                        "termType": "Variable",
-                                        "value": "work"
-                                      },
-                                      "predicate": {
-                                        "termType": "NamedNode",
-                                        "value": "http://www.wikidata.org/prop/direct/P577"
-                                      },
-                                      "object": {
-                                        "termType": "Variable",
-                                        "value": "datetimes"
-                                      },
-                                      "graph": {
-                                        "termType": "DefaultGraph",
-                                        "value": ""
-                                      },
-                                      "type": "pattern",
-                                      "metadata": {
-                                        "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
-                                      }
                                     },
-                                    {
-                                      "termType": "Quad",
-                                      "value": "",
-                                      "subject": {
-                                        "termType": "Variable",
-                                        "value": "work"
-                                      },
-                                      "predicate": {
-                                        "termType": "NamedNode",
-                                        "value": "http://www.wikidata.org/prop/direct/P577"
-                                      },
-                                      "object": {
-                                        "termType": "Variable",
-                                        "value": "datetimes"
-                                      },
-                                      "graph": {
-                                        "termType": "DefaultGraph",
-                                        "value": ""
-                                      },
-                                      "type": "pattern",
-                                      "metadata": {
-                                        "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
-                                      }
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            "variable": {
-                              "termType": "Variable",
-                              "value": "dates"
-                            },
-                            "expression": {
-                              "type": "expression",
-                              "expressionType": "named",
-                              "name": {
-                                "termType": "NamedNode",
-                                "value": "http://www.w3.org/2001/XMLSchema#date"
-                              },
-                              "args": [
-                                {
-                                  "type": "expression",
-                                  "expressionType": "term",
-                                  "term": {
-                                    "termType": "Variable",
-                                    "value": "datetimes"
-                                  }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "type": "join",
-                            "input": [
-                              {
-                                "type": "union",
-                                "input": [
-                                  {
-                                    "termType": "Quad",
-                                    "value": "",
-                                    "subject": {
-                                      "termType": "Variable",
-                                      "value": "work"
-                                    },
-                                    "predicate": {
-                                      "termType": "NamedNode",
-                                      "value": "http://www.wikidata.org/prop/direct/P1433"
-                                    },
-                                    "object": {
-                                      "termType": "Variable",
-                                      "value": "venue"
-                                    },
-                                    "graph": {
-                                      "termType": "DefaultGraph",
-                                      "value": ""
-                                    },
-                                    "type": "pattern",
                                     "metadata": {
                                       "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
                                     }
                                   },
                                   {
-                                    "termType": "Quad",
-                                    "value": "",
-                                    "subject": {
-                                      "termType": "Variable",
-                                      "value": "work"
+                                    "type": "filter",
+                                    "input": {
+                                      "termType": "Quad",
+                                      "value": "",
+                                      "subject": {
+                                        "termType": "Variable",
+                                        "value": "author"
+                                      },
+                                      "predicate": {
+                                        "termType": "NamedNode",
+                                        "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                                      },
+                                      "object": {
+                                        "termType": "Variable",
+                                        "value": "author_label_"
+                                      },
+                                      "graph": {
+                                        "termType": "DefaultGraph",
+                                        "value": ""
+                                      },
+                                      "type": "pattern"
                                     },
-                                    "predicate": {
-                                      "termType": "NamedNode",
-                                      "value": "http://www.wikidata.org/prop/direct/P1433"
+                                    "expression": {
+                                      "type": "expression",
+                                      "expressionType": "operator",
+                                      "operator": "=",
+                                      "args": [
+                                        {
+                                          "type": "expression",
+                                          "expressionType": "operator",
+                                          "operator": "lang",
+                                          "args": [
+                                            {
+                                              "type": "expression",
+                                              "expressionType": "term",
+                                              "term": {
+                                                "termType": "Variable",
+                                                "value": "author_label_"
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "expression",
+                                          "expressionType": "term",
+                                          "term": {
+                                            "termType": "Literal",
+                                            "value": "en",
+                                            "language": "",
+                                            "datatype": {
+                                              "termType": "NamedNode",
+                                              "value": "http://www.w3.org/2001/XMLSchema#string"
+                                            }
+                                          }
+                                        }
+                                      ]
                                     },
-                                    "object": {
-                                      "termType": "Variable",
-                                      "value": "venue"
-                                    },
-                                    "graph": {
-                                      "termType": "DefaultGraph",
-                                      "value": ""
-                                    },
-                                    "type": "pattern",
                                     "metadata": {
                                       "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
                                     }
@@ -1027,49 +695,215 @@
                                 ]
                               }
                             ]
+                          },
+                          {
+                            "type": "union",
+                            "input": [
+                              {
+                                "type": "filter",
+                                "input": {
+                                  "termType": "Quad",
+                                  "value": "",
+                                  "subject": {
+                                    "termType": "Variable",
+                                    "value": "type_"
+                                  },
+                                  "predicate": {
+                                    "termType": "NamedNode",
+                                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                                  },
+                                  "object": {
+                                    "termType": "Variable",
+                                    "value": "type_label"
+                                  },
+                                  "graph": {
+                                    "termType": "DefaultGraph",
+                                    "value": ""
+                                  },
+                                  "type": "pattern"
+                                },
+                                "expression": {
+                                  "type": "expression",
+                                  "expressionType": "operator",
+                                  "operator": "=",
+                                  "args": [
+                                    {
+                                      "type": "expression",
+                                      "expressionType": "operator",
+                                      "operator": "lang",
+                                      "args": [
+                                        {
+                                          "type": "expression",
+                                          "expressionType": "term",
+                                          "term": {
+                                            "termType": "Variable",
+                                            "value": "type_label"
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "expression",
+                                      "expressionType": "term",
+                                      "term": {
+                                        "termType": "Literal",
+                                        "value": "en",
+                                        "language": "",
+                                        "datatype": {
+                                          "termType": "NamedNode",
+                                          "value": "http://www.w3.org/2001/XMLSchema#string"
+                                        }
+                                      }
+                                    }
+                                  ]
+                                },
+                                "metadata": {
+                                  "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
+                                }
+                              },
+                              {
+                                "type": "filter",
+                                "input": {
+                                  "termType": "Quad",
+                                  "value": "",
+                                  "subject": {
+                                    "termType": "Variable",
+                                    "value": "type_"
+                                  },
+                                  "predicate": {
+                                    "termType": "NamedNode",
+                                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                                  },
+                                  "object": {
+                                    "termType": "Variable",
+                                    "value": "type_label"
+                                  },
+                                  "graph": {
+                                    "termType": "DefaultGraph",
+                                    "value": ""
+                                  },
+                                  "type": "pattern"
+                                },
+                                "expression": {
+                                  "type": "expression",
+                                  "expressionType": "operator",
+                                  "operator": "=",
+                                  "args": [
+                                    {
+                                      "type": "expression",
+                                      "expressionType": "operator",
+                                      "operator": "lang",
+                                      "args": [
+                                        {
+                                          "type": "expression",
+                                          "expressionType": "term",
+                                          "term": {
+                                            "termType": "Variable",
+                                            "value": "type_label"
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "expression",
+                                      "expressionType": "term",
+                                      "term": {
+                                        "termType": "Literal",
+                                        "value": "en",
+                                        "language": "",
+                                        "datatype": {
+                                          "termType": "NamedNode",
+                                          "value": "http://www.w3.org/2001/XMLSchema#string"
+                                        }
+                                      }
+                                    }
+                                  ]
+                                },
+                                "metadata": {
+                                  "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
+                                }
+                              }
+                            ]
                           }
                         ]
                       },
-                      {
-                        "type": "service",
-                        "input": {
-                          "type": "join",
-                          "input": [
-                            {
-                              "termType": "Quad",
-                              "value": "",
-                              "subject": {
-                                "termType": "NamedNode",
-                                "value": "http://www.bigdata.com/rdf#serviceParam"
-                              },
-                              "predicate": {
-                                "termType": "NamedNode",
-                                "value": "http://wikiba.se/ontology#language"
-                              },
-                              "object": {
-                                "termType": "Literal",
-                                "value": "[AUTO_LANGUAGE],en",
-                                "language": "",
-                                "datatype": {
-                                  "termType": "NamedNode",
-                                  "value": "http://www.w3.org/2001/XMLSchema#string"
-                                }
-                              },
-                              "graph": {
-                                "termType": "DefaultGraph",
-                                "value": ""
-                              },
-                              "type": "pattern"
+                      "variable": {
+                        "termType": "Variable",
+                        "value": "author_label"
+                      },
+                      "expression": {
+                        "type": "expression",
+                        "expressionType": "operator",
+                        "operator": "coalesce",
+                        "args": [
+                          {
+                            "type": "expression",
+                            "expressionType": "term",
+                            "term": {
+                              "termType": "Variable",
+                              "value": "author_label_"
                             }
-                          ]
-                        },
-                        "name": {
-                          "termType": "NamedNode",
-                          "value": "http://wikiba.se/ontology#label"
-                        },
-                        "silent": false
+                          },
+                          {
+                            "type": "expression",
+                            "expressionType": "operator",
+                            "operator": "substr",
+                            "args": [
+                              {
+                                "type": "expression",
+                                "expressionType": "operator",
+                                "operator": "str",
+                                "args": [
+                                  {
+                                    "type": "expression",
+                                    "expressionType": "term",
+                                    "term": {
+                                      "termType": "Variable",
+                                      "value": "author"
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "expression",
+                                "expressionType": "term",
+                                "term": {
+                                  "termType": "Literal",
+                                  "value": "32",
+                                  "language": "",
+                                  "datatype": {
+                                    "termType": "NamedNode",
+                                    "value": "http://www.w3.org/2001/XMLSchema#integer"
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        ]
                       }
-                    ]
+                    },
+                    "variable": {
+                      "termType": "Variable",
+                      "value": "dates"
+                    },
+                    "expression": {
+                      "type": "expression",
+                      "expressionType": "named",
+                      "name": {
+                        "termType": "NamedNode",
+                        "value": "http://www.w3.org/2001/XMLSchema#date"
+                      },
+                      "args": [
+                        {
+                          "type": "expression",
+                          "expressionType": "term",
+                          "term": {
+                            "termType": "Variable",
+                            "value": "datetimes"
+                          }
+                        }
+                      ]
+                    }
                   },
                   "variables": [
                     {

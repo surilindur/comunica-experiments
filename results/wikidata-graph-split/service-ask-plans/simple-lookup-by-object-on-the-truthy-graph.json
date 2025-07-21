@@ -3,210 +3,213 @@
   "input": {
     "type": "orderby",
     "input": {
-      "type": "join",
-      "input": [
-        {
-          "type": "values",
-          "variables": [
-            {
-              "termType": "Variable",
-              "value": "work"
-            }
-          ],
-          "bindings": [
-            {
-              "?work": {
-                "termType": "NamedNode",
-                "value": "http://www.wikidata.org/entity/Q1542532"
-              }
-            }
-          ]
-        },
-        {
-          "type": "union",
-          "input": [
-            {
-              "type": "join",
-              "input": [
-                {
-                  "termType": "Quad",
-                  "value": "",
-                  "subject": {
-                    "termType": "Variable",
-                    "value": "x"
-                  },
-                  "predicate": {
-                    "termType": "Variable",
-                    "value": "r"
-                  },
-                  "object": {
-                    "termType": "NamedNode",
-                    "value": "http://www.wikidata.org/entity/Q1542532"
-                  },
-                  "graph": {
-                    "termType": "DefaultGraph",
-                    "value": ""
-                  },
-                  "type": "pattern"
-                }
-              ]
-            },
-            {
-              "type": "service",
-              "input": {
+      "type": "filter",
+      "input": {
+        "type": "join",
+        "input": [
+          {
+            "type": "union",
+            "input": [
+              {
                 "type": "join",
                 "input": [
                   {
-                    "type": "extend",
-                    "input": {
-                      "type": "join",
-                      "input": [
-                        {
-                          "termType": "Quad",
-                          "value": "",
-                          "subject": {
-                            "termType": "Variable",
-                            "value": "x"
-                          },
-                          "predicate": {
-                            "termType": "Variable",
-                            "value": "r"
-                          },
-                          "object": {
-                            "termType": "Variable",
-                            "value": "work"
-                          },
-                          "graph": {
-                            "termType": "DefaultGraph",
-                            "value": ""
-                          },
-                          "type": "pattern"
-                        }
-                      ]
-                    },
-                    "variable": {
+                    "termType": "Quad",
+                    "value": "",
+                    "subject": {
                       "termType": "Variable",
-                      "value": "xLabel"
+                      "value": "x"
                     },
-                    "expression": {
-                      "type": "expression",
-                      "expressionType": "term",
-                      "term": {
-                        "termType": "Variable",
-                        "value": "xLabel"
-                      }
-                    }
-                  },
-                  {
-                    "type": "service",
-                    "input": {
-                      "type": "join",
-                      "input": [
-                        {
-                          "termType": "Quad",
-                          "value": "",
-                          "subject": {
-                            "termType": "NamedNode",
-                            "value": "http://www.bigdata.com/rdf#serviceParam"
-                          },
-                          "predicate": {
-                            "termType": "NamedNode",
-                            "value": "http://wikiba.se/ontology#language"
-                          },
-                          "object": {
-                            "termType": "Literal",
-                            "value": "en,de,fr,ru,nl,it,ja,uk,cs,sk,be,ca",
-                            "language": "",
-                            "datatype": {
-                              "termType": "NamedNode",
-                              "value": "http://www.w3.org/2001/XMLSchema#string"
-                            }
-                          },
-                          "graph": {
-                            "termType": "DefaultGraph",
-                            "value": ""
-                          },
-                          "type": "pattern"
-                        }
-                      ]
+                    "predicate": {
+                      "termType": "Variable",
+                      "value": "r"
                     },
-                    "name": {
+                    "object": {
                       "termType": "NamedNode",
-                      "value": "http://wikiba.se/ontology#label"
+                      "value": "http://www.wikidata.org/entity/Q1542532"
                     },
-                    "silent": false
+                    "graph": {
+                      "termType": "DefaultGraph",
+                      "value": ""
+                    },
+                    "type": "pattern"
                   }
                 ]
               },
-              "name": {
-                "termType": "NamedNode",
-                "value": "https://query.wikidata.org/subgraph/scholarly_articles"
-              },
-              "silent": false
-            }
-          ]
-        },
-        {
-          "termType": "Quad",
-          "value": "",
-          "subject": {
-            "termType": "Variable",
-            "value": "rel"
-          },
-          "predicate": {
-            "termType": "NamedNode",
-            "value": "http://wikiba.se/ontology#directClaim"
-          },
-          "object": {
-            "termType": "Variable",
-            "value": "r"
-          },
-          "graph": {
-            "termType": "DefaultGraph",
-            "value": ""
-          },
-          "type": "pattern"
-        },
-        {
-          "type": "service",
-          "input": {
-            "type": "join",
-            "input": [
               {
-                "termType": "Quad",
-                "value": "",
-                "subject": {
-                  "termType": "NamedNode",
-                  "value": "http://www.bigdata.com/rdf#serviceParam"
-                },
-                "predicate": {
-                  "termType": "NamedNode",
-                  "value": "http://wikiba.se/ontology#language"
-                },
-                "object": {
-                  "termType": "Literal",
-                  "value": "en,de,fr,ru,nl,it,ja,uk,cs,sk,be,ca",
-                  "language": "",
-                  "datatype": {
-                    "termType": "NamedNode",
-                    "value": "http://www.w3.org/2001/XMLSchema#string"
+                "type": "service",
+                "input": {
+                  "type": "filter",
+                  "input": {
+                    "type": "join",
+                    "input": [
+                      {
+                        "termType": "Quad",
+                        "value": "",
+                        "subject": {
+                          "termType": "Variable",
+                          "value": "x"
+                        },
+                        "predicate": {
+                          "termType": "Variable",
+                          "value": "r"
+                        },
+                        "object": {
+                          "termType": "Variable",
+                          "value": "work"
+                        },
+                        "graph": {
+                          "termType": "DefaultGraph",
+                          "value": ""
+                        },
+                        "type": "pattern"
+                      },
+                      {
+                        "termType": "Quad",
+                        "value": "",
+                        "subject": {
+                          "termType": "Variable",
+                          "value": "x"
+                        },
+                        "predicate": {
+                          "termType": "NamedNode",
+                          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                        },
+                        "object": {
+                          "termType": "Variable",
+                          "value": "xLabel"
+                        },
+                        "graph": {
+                          "termType": "DefaultGraph",
+                          "value": ""
+                        },
+                        "type": "pattern"
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "type": "expression",
+                    "expressionType": "operator",
+                    "operator": "=",
+                    "args": [
+                      {
+                        "type": "expression",
+                        "expressionType": "operator",
+                        "operator": "lang",
+                        "args": [
+                          {
+                            "type": "expression",
+                            "expressionType": "term",
+                            "term": {
+                              "termType": "Variable",
+                              "value": "xLabel"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": "expression",
+                        "expressionType": "term",
+                        "term": {
+                          "termType": "Literal",
+                          "value": "en",
+                          "language": "",
+                          "datatype": {
+                            "termType": "NamedNode",
+                            "value": "http://www.w3.org/2001/XMLSchema#string"
+                          }
+                        }
+                      }
+                    ]
                   }
                 },
-                "graph": {
-                  "termType": "DefaultGraph",
-                  "value": ""
+                "name": {
+                  "termType": "NamedNode",
+                  "value": "https://query.wikidata.org/subgraph/scholarly_articles"
                 },
-                "type": "pattern"
+                "silent": false
               }
             ]
           },
-          "name": {
-            "termType": "NamedNode",
-            "value": "http://wikiba.se/ontology#label"
+          {
+            "termType": "Quad",
+            "value": "",
+            "subject": {
+              "termType": "Variable",
+              "value": "rel"
+            },
+            "predicate": {
+              "termType": "NamedNode",
+              "value": "http://wikiba.se/ontology#directClaim"
+            },
+            "object": {
+              "termType": "Variable",
+              "value": "r"
+            },
+            "graph": {
+              "termType": "DefaultGraph",
+              "value": ""
+            },
+            "type": "pattern"
           },
-          "silent": false
-        }
-      ]
+          {
+            "termType": "Quad",
+            "value": "",
+            "subject": {
+              "termType": "Variable",
+              "value": "rel"
+            },
+            "predicate": {
+              "termType": "NamedNode",
+              "value": "http://www.w3.org/2000/01/rdf-schema#label"
+            },
+            "object": {
+              "termType": "Variable",
+              "value": "relLabel"
+            },
+            "graph": {
+              "termType": "DefaultGraph",
+              "value": ""
+            },
+            "type": "pattern"
+          }
+        ]
+      },
+      "expression": {
+        "type": "expression",
+        "expressionType": "operator",
+        "operator": "=",
+        "args": [
+          {
+            "type": "expression",
+            "expressionType": "operator",
+            "operator": "lang",
+            "args": [
+              {
+                "type": "expression",
+                "expressionType": "term",
+                "term": {
+                  "termType": "Variable",
+                  "value": "relLabel"
+                }
+              }
+            ]
+          },
+          {
+            "type": "expression",
+            "expressionType": "term",
+            "term": {
+              "termType": "Literal",
+              "value": "en",
+              "language": "",
+              "datatype": {
+                "termType": "NamedNode",
+                "value": "http://www.w3.org/2001/XMLSchema#string"
+              }
+            }
+          }
+        ]
+      }
     },
     "expressions": [
       {

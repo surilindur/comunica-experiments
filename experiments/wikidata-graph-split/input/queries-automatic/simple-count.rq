@@ -2,7 +2,9 @@
 PREFIX p: <http://www.wikidata.org/prop/>
 PREFIX wd: <http://www.wikidata.org/entity/>
 PREFIX wdt: <http://www.wikidata.org/prop/direct/>
-SELECT (COUNT(*) as ?count) WHERE {
-  ?entity wdt:P4101 wd:Q41506
-  FILTER(EXISTS { ?entity p:P495 [] })
+SELECT
+  (COUNT(*) AS ?count)
+WHERE {
+  ?entity wdt:P4101 wd:Q41506 ;
+    p:P495 [] .
 }

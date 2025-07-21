@@ -7,7 +7,7 @@ SELECT
   ?subject
   ?subjectType
 WHERE {
-  VALUES (?paper) {(wd:Q59458901)}
+  VALUES ?paper { wd:Q59458901 }
   hint:Query hint:optimizer "None" .
   SERVICE wdsubgraph:scholarly_articles {
     ?paper wdt:P921 ?subject .

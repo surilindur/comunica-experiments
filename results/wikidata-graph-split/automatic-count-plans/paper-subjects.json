@@ -1,6 +1,4 @@
-[33m[2025-07-19T19:46:53.043Z]  WARN: Metadata extraction for https://query-main.wikidata.org/bigdata/namespace/wdq/sparql failed: fetch failed { actor: 'urn:comunica:default:query-source-identify/actors#hypermedia' }
-[0m[33m[2025-07-19T19:46:53.051Z]  WARN: Metadata extraction for https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql failed: fetch failed { actor: 'urn:comunica:default:query-source-identify/actors#hypermedia' }
-[0m{
+{
   "type": "slice",
   "input": {
     "type": "project",

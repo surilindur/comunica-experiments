@@ -4,7 +4,7 @@ PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 SELECT
   ?dateOfBirth
 WHERE {
-  VALUES (?entity) {(wd:Q4781761)}
+  VALUES ?entity { wd:Q4781761 }
   ?entity wdt:P50 ?authors .
   ?authors wdt:P569 ?dateOfBirth .
 } LIMIT 10

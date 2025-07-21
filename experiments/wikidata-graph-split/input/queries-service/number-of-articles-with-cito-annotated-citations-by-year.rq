@@ -5,40 +5,44 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX wd: <http://www.wikidata.org/entity/>
 PREFIX wdsubgraph: <https://query.wikidata.org/subgraph/>
 PREFIX wdt: <http://www.wikidata.org/prop/direct/>
-select ?year (count(distinct(?work)) as ?number_of_publications) ?role where {
+select
+  ?year
+  (COUNT(DISTINCT(?work)) AS ?number_of_publications)
+  ?role
+WHERE {
   ?cit_intent wdt:P31 wd:Q96471816 .
   {
-    select ?work (min(?years) as ?year) ?type_ (coalesce(if(bound(?venue_), ?venue_, "__no_venue__")) AS ?venue_) where {
+    SELECT
+      ?work
+      (MIN(?years) AS ?year)
+      ?type_
+      (COALESCE(IF(BOUND(?venue), ?venue, "__no_venue__")) AS ?venue)
+    WHERE {
       {
         ?work wdt:P577 ?dates ;
-              p:P2860 / pq:P3712 ?cit_intent .
+          p:P2860 / pq:P3712 ?cit_intent .
         OPTIONAL {
           ?work wdt:P31 wd:Q109229154 .
-          bind("explicit" as ?type_)
+          BIND("explicit" AS ?type_)
           ?work wdt:P1433 ?venue_ .
+          ?venue_ rdfs:label ?venue .
+          FILTER (LANG(?venue) = "en")
         }
       } UNION {
         SERVICE wdsubgraph:scholarly_articles {
           ?work wdt:P577 ?dates ;
-                p:P2860 / pq:P3712 ?cit_intent .
+            p:P2860 / pq:P3712 ?cit_intent .
           OPTIONAL {
             ?work wdt:P31 wd:Q109229154 .
-            bind("explicit" as ?type_)
+            BIND("explicit" AS ?type_)
             ?work wdt:P1433 ?venue_ .
+            ?venue_ rdfs:label ?venue .
+            FILTER (LANG(?venue) = "en")
           }
         }
       }
-      bind(str(year(?dates)) as ?years) .
-    }
-    group by ?work ?type_ ?venue_
+      BIND(STR(YEAR(?dates)) AS ?years) .
+    } GROUP BY ?work ?type_ ?venue
   }
-  OPTIONAL { ?venue_ rdfs:label ?venue . FILTER (LANG(?venue) = "en") }
-  bind(
-    coalesce(
-      if(bound(?type_), ?venue,
-      "other source")
-    ) as ?role
-  )
-}
-group by ?year ?role
-order by ?year
+  BIND(COALESCE(IF(BOUND(?type_), ?venue, "other source")) AS ?role)
+} GROUP BY ?year ?role ORDER BY ?year

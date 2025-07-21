@@ -26,4 +26,4 @@ ENV LOG_LEVEL=$LOG_LEVEL
 
 EXPOSE 3000
 
-ENTRYPOINT [ "/bin/sh", "-c", "node ./bin/http.js --freshWorker --workers 4 --httpRetryCount 1 --context /tmp/context.json --port 3000 --timeout ${QUERY_TIMEOUT} --logLevel ${LOG_LEVEL}" ]
+ENTRYPOINT [ "/bin/sh", "-c", "node ./bin/http.js --freshWorker --httpRetryCount 10 --context /tmp/context.json --port 3000 --timeout ${QUERY_TIMEOUT} --logLevel ${LOG_LEVEL}" ]

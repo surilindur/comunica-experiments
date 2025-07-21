@@ -10,119 +10,32 @@
           "type": "join",
           "input": [
             {
-              "type": "join",
+              "type": "union",
               "input": [
                 {
-                  "type": "union",
-                  "input": [
-                    {
-                      "termType": "Quad",
-                      "value": "",
-                      "subject": {
-                        "termType": "Variable",
-                        "value": "wikimediaUrl"
-                      },
-                      "predicate": {
-                        "termType": "NamedNode",
-                        "value": "http://schema.org/isPartOf"
-                      },
-                      "object": {
-                        "termType": "Variable",
-                        "value": "partOf_"
-                      },
-                      "graph": {
-                        "termType": "DefaultGraph",
-                        "value": ""
-                      },
-                      "type": "pattern",
-                      "metadata": {
-                        "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
-                      }
-                    },
-                    {
-                      "termType": "Quad",
-                      "value": "",
-                      "subject": {
-                        "termType": "Variable",
-                        "value": "wikimediaUrl"
-                      },
-                      "predicate": {
-                        "termType": "NamedNode",
-                        "value": "http://schema.org/isPartOf"
-                      },
-                      "object": {
-                        "termType": "Variable",
-                        "value": "partOf_"
-                      },
-                      "graph": {
-                        "termType": "DefaultGraph",
-                        "value": ""
-                      },
-                      "type": "pattern",
-                      "metadata": {
-                        "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
-                      }
-                    }
-                  ]
+                  "termType": "Quad",
+                  "value": "",
+                  "subject": {
+                    "termType": "Variable",
+                    "value": "wikimediaUrl"
+                  },
+                  "predicate": {
+                    "termType": "NamedNode",
+                    "value": "http://schema.org/about"
+                  },
+                  "object": {
+                    "termType": "NamedNode",
+                    "value": "http://www.wikidata.org/entity/Q42"
+                  },
+                  "graph": {
+                    "termType": "DefaultGraph",
+                    "value": ""
+                  },
+                  "type": "pattern",
+                  "metadata": {
+                    "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
+                  }
                 },
-                {
-                  "type": "union",
-                  "input": [
-                    {
-                      "termType": "Quad",
-                      "value": "",
-                      "subject": {
-                        "termType": "Variable",
-                        "value": "wikimediaUrl"
-                      },
-                      "predicate": {
-                        "termType": "NamedNode",
-                        "value": "http://schema.org/inLanguage"
-                      },
-                      "object": {
-                        "termType": "Variable",
-                        "value": "inLanguage"
-                      },
-                      "graph": {
-                        "termType": "DefaultGraph",
-                        "value": ""
-                      },
-                      "type": "pattern",
-                      "metadata": {
-                        "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
-                      }
-                    },
-                    {
-                      "termType": "Quad",
-                      "value": "",
-                      "subject": {
-                        "termType": "Variable",
-                        "value": "wikimediaUrl"
-                      },
-                      "predicate": {
-                        "termType": "NamedNode",
-                        "value": "http://schema.org/inLanguage"
-                      },
-                      "object": {
-                        "termType": "Variable",
-                        "value": "inLanguage"
-                      },
-                      "graph": {
-                        "termType": "DefaultGraph",
-                        "value": ""
-                      },
-                      "type": "pattern",
-                      "metadata": {
-                        "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "join",
-              "input": [
                 {
                   "termType": "Quad",
                   "value": "",
@@ -142,12 +55,118 @@
                     "termType": "DefaultGraph",
                     "value": ""
                   },
-                  "type": "pattern"
+                  "type": "pattern",
+                  "metadata": {
+                    "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
+                  }
                 }
-              ],
-              "metadata": {
-                "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
-              }
+              ]
+            },
+            {
+              "type": "union",
+              "input": [
+                {
+                  "termType": "Quad",
+                  "value": "",
+                  "subject": {
+                    "termType": "Variable",
+                    "value": "wikimediaUrl"
+                  },
+                  "predicate": {
+                    "termType": "NamedNode",
+                    "value": "http://schema.org/isPartOf"
+                  },
+                  "object": {
+                    "termType": "Variable",
+                    "value": "partOf_"
+                  },
+                  "graph": {
+                    "termType": "DefaultGraph",
+                    "value": ""
+                  },
+                  "type": "pattern",
+                  "metadata": {
+                    "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
+                  }
+                },
+                {
+                  "termType": "Quad",
+                  "value": "",
+                  "subject": {
+                    "termType": "Variable",
+                    "value": "wikimediaUrl"
+                  },
+                  "predicate": {
+                    "termType": "NamedNode",
+                    "value": "http://schema.org/isPartOf"
+                  },
+                  "object": {
+                    "termType": "Variable",
+                    "value": "partOf_"
+                  },
+                  "graph": {
+                    "termType": "DefaultGraph",
+                    "value": ""
+                  },
+                  "type": "pattern",
+                  "metadata": {
+                    "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "union",
+              "input": [
+                {
+                  "termType": "Quad",
+                  "value": "",
+                  "subject": {
+                    "termType": "Variable",
+                    "value": "wikimediaUrl"
+                  },
+                  "predicate": {
+                    "termType": "NamedNode",
+                    "value": "http://schema.org/inLanguage"
+                  },
+                  "object": {
+                    "termType": "Variable",
+                    "value": "inLanguage"
+                  },
+                  "graph": {
+                    "termType": "DefaultGraph",
+                    "value": ""
+                  },
+                  "type": "pattern",
+                  "metadata": {
+                    "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
+                  }
+                },
+                {
+                  "termType": "Quad",
+                  "value": "",
+                  "subject": {
+                    "termType": "Variable",
+                    "value": "wikimediaUrl"
+                  },
+                  "predicate": {
+                    "termType": "NamedNode",
+                    "value": "http://schema.org/inLanguage"
+                  },
+                  "object": {
+                    "termType": "Variable",
+                    "value": "inLanguage"
+                  },
+                  "graph": {
+                    "termType": "DefaultGraph",
+                    "value": ""
+                  },
+                  "type": "pattern",
+                  "metadata": {
+                    "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
+                  }
+                }
+              ]
             }
           ]
         },
@@ -284,6 +303,10 @@
     {
       "termType": "Variable",
       "value": "inLanguage"
+    },
+    {
+      "termType": "Variable",
+      "value": "item"
     },
     {
       "termType": "Variable",

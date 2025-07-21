@@ -5,224 +5,271 @@
     "input": {
       "type": "orderby",
       "input": {
-        "type": "join",
-        "input": [
-          {
-            "type": "service",
-            "input": {
-              "type": "join",
+        "type": "filter",
+        "input": {
+          "type": "join",
+          "input": [
+            {
+              "type": "service",
+              "input": {
+                "type": "join",
+                "input": [
+                  {
+                    "termType": "Quad",
+                    "value": "",
+                    "subject": {
+                      "termType": "NamedNode",
+                      "value": "http://www.bigdata.com/rdf#serviceParam"
+                    },
+                    "predicate": {
+                      "termType": "NamedNode",
+                      "value": "http://wikiba.se/ontology#api"
+                    },
+                    "object": {
+                      "termType": "Literal",
+                      "value": "EntitySearch",
+                      "language": "",
+                      "datatype": {
+                        "termType": "NamedNode",
+                        "value": "http://www.w3.org/2001/XMLSchema#string"
+                      }
+                    },
+                    "graph": {
+                      "termType": "DefaultGraph",
+                      "value": ""
+                    },
+                    "type": "pattern"
+                  },
+                  {
+                    "termType": "Quad",
+                    "value": "",
+                    "subject": {
+                      "termType": "NamedNode",
+                      "value": "http://www.bigdata.com/rdf#serviceParam"
+                    },
+                    "predicate": {
+                      "termType": "NamedNode",
+                      "value": "http://wikiba.se/ontology#endpoint"
+                    },
+                    "object": {
+                      "termType": "Literal",
+                      "value": "www.wikidata.org",
+                      "language": "",
+                      "datatype": {
+                        "termType": "NamedNode",
+                        "value": "http://www.w3.org/2001/XMLSchema#string"
+                      }
+                    },
+                    "graph": {
+                      "termType": "DefaultGraph",
+                      "value": ""
+                    },
+                    "type": "pattern"
+                  },
+                  {
+                    "termType": "Quad",
+                    "value": "",
+                    "subject": {
+                      "termType": "NamedNode",
+                      "value": "http://www.bigdata.com/rdf#serviceParam"
+                    },
+                    "predicate": {
+                      "termType": "NamedNode",
+                      "value": "https://www.mediawiki.org/ontology#API/search"
+                    },
+                    "object": {
+                      "termType": "Literal",
+                      "value": "house of medici",
+                      "language": "",
+                      "datatype": {
+                        "termType": "NamedNode",
+                        "value": "http://www.w3.org/2001/XMLSchema#string"
+                      }
+                    },
+                    "graph": {
+                      "termType": "DefaultGraph",
+                      "value": ""
+                    },
+                    "type": "pattern"
+                  },
+                  {
+                    "termType": "Quad",
+                    "value": "",
+                    "subject": {
+                      "termType": "NamedNode",
+                      "value": "http://www.bigdata.com/rdf#serviceParam"
+                    },
+                    "predicate": {
+                      "termType": "NamedNode",
+                      "value": "https://www.mediawiki.org/ontology#API/language"
+                    },
+                    "object": {
+                      "termType": "Literal",
+                      "value": "en",
+                      "language": "",
+                      "datatype": {
+                        "termType": "NamedNode",
+                        "value": "http://www.w3.org/2001/XMLSchema#string"
+                      }
+                    },
+                    "graph": {
+                      "termType": "DefaultGraph",
+                      "value": ""
+                    },
+                    "type": "pattern"
+                  },
+                  {
+                    "termType": "Quad",
+                    "value": "",
+                    "subject": {
+                      "termType": "Variable",
+                      "value": "item"
+                    },
+                    "predicate": {
+                      "termType": "NamedNode",
+                      "value": "http://wikiba.se/ontology#apiOutputItem"
+                    },
+                    "object": {
+                      "termType": "NamedNode",
+                      "value": "https://www.mediawiki.org/ontology#API/item"
+                    },
+                    "graph": {
+                      "termType": "DefaultGraph",
+                      "value": ""
+                    },
+                    "type": "pattern"
+                  },
+                  {
+                    "termType": "Quad",
+                    "value": "",
+                    "subject": {
+                      "termType": "Variable",
+                      "value": "num"
+                    },
+                    "predicate": {
+                      "termType": "NamedNode",
+                      "value": "http://wikiba.se/ontology#apiOrdinal"
+                    },
+                    "object": {
+                      "termType": "Literal",
+                      "value": "true",
+                      "language": "",
+                      "datatype": {
+                        "termType": "NamedNode",
+                        "value": "http://www.w3.org/2001/XMLSchema#boolean"
+                      }
+                    },
+                    "graph": {
+                      "termType": "DefaultGraph",
+                      "value": ""
+                    },
+                    "type": "pattern"
+                  }
+                ]
+              },
+              "name": {
+                "termType": "NamedNode",
+                "value": "http://wikiba.se/ontology#mwapi"
+              },
+              "silent": false
+            },
+            {
+              "type": "union",
               "input": [
                 {
-                  "termType": "Quad",
-                  "value": "",
-                  "subject": {
-                    "termType": "NamedNode",
-                    "value": "http://www.bigdata.com/rdf#serviceParam"
-                  },
-                  "predicate": {
-                    "termType": "NamedNode",
-                    "value": "http://wikiba.se/ontology#api"
-                  },
-                  "object": {
-                    "termType": "Literal",
-                    "value": "EntitySearch",
-                    "language": "",
-                    "datatype": {
-                      "termType": "NamedNode",
-                      "value": "http://www.w3.org/2001/XMLSchema#string"
-                    }
-                  },
-                  "graph": {
-                    "termType": "DefaultGraph",
-                    "value": ""
-                  },
-                  "type": "pattern"
-                },
-                {
-                  "termType": "Quad",
-                  "value": "",
-                  "subject": {
-                    "termType": "NamedNode",
-                    "value": "http://www.bigdata.com/rdf#serviceParam"
-                  },
-                  "predicate": {
-                    "termType": "NamedNode",
-                    "value": "http://wikiba.se/ontology#endpoint"
-                  },
-                  "object": {
-                    "termType": "Literal",
-                    "value": "www.wikidata.org",
-                    "language": "",
-                    "datatype": {
-                      "termType": "NamedNode",
-                      "value": "http://www.w3.org/2001/XMLSchema#string"
-                    }
-                  },
-                  "graph": {
-                    "termType": "DefaultGraph",
-                    "value": ""
-                  },
-                  "type": "pattern"
-                },
-                {
-                  "termType": "Quad",
-                  "value": "",
-                  "subject": {
-                    "termType": "NamedNode",
-                    "value": "http://www.bigdata.com/rdf#serviceParam"
-                  },
-                  "predicate": {
-                    "termType": "NamedNode",
-                    "value": "https://www.mediawiki.org/ontology#API/search"
-                  },
-                  "object": {
-                    "termType": "Literal",
-                    "value": "house of medici",
-                    "language": "",
-                    "datatype": {
-                      "termType": "NamedNode",
-                      "value": "http://www.w3.org/2001/XMLSchema#string"
-                    }
-                  },
-                  "graph": {
-                    "termType": "DefaultGraph",
-                    "value": ""
-                  },
-                  "type": "pattern"
-                },
-                {
-                  "termType": "Quad",
-                  "value": "",
-                  "subject": {
-                    "termType": "NamedNode",
-                    "value": "http://www.bigdata.com/rdf#serviceParam"
-                  },
-                  "predicate": {
-                    "termType": "NamedNode",
-                    "value": "https://www.mediawiki.org/ontology#API/language"
-                  },
-                  "object": {
-                    "termType": "Literal",
-                    "value": "en",
-                    "language": "",
-                    "datatype": {
-                      "termType": "NamedNode",
-                      "value": "http://www.w3.org/2001/XMLSchema#string"
-                    }
-                  },
-                  "graph": {
-                    "termType": "DefaultGraph",
-                    "value": ""
-                  },
-                  "type": "pattern"
-                },
-                {
-                  "termType": "Quad",
-                  "value": "",
-                  "subject": {
-                    "termType": "Variable",
-                    "value": "item"
-                  },
-                  "predicate": {
-                    "termType": "NamedNode",
-                    "value": "http://wikiba.se/ontology#apiOutputItem"
-                  },
-                  "object": {
-                    "termType": "NamedNode",
-                    "value": "https://www.mediawiki.org/ontology#API/item"
-                  },
-                  "graph": {
-                    "termType": "DefaultGraph",
-                    "value": ""
-                  },
-                  "type": "pattern"
-                },
-                {
-                  "termType": "Quad",
-                  "value": "",
-                  "subject": {
-                    "termType": "Variable",
-                    "value": "num"
-                  },
-                  "predicate": {
-                    "termType": "NamedNode",
-                    "value": "http://wikiba.se/ontology#apiOrdinal"
-                  },
-                  "object": {
-                    "termType": "Literal",
-                    "value": "true",
-                    "language": "",
-                    "datatype": {
-                      "termType": "NamedNode",
-                      "value": "http://www.w3.org/2001/XMLSchema#boolean"
-                    }
-                  },
-                  "graph": {
-                    "termType": "DefaultGraph",
-                    "value": ""
-                  },
-                  "type": "pattern"
-                }
-              ]
-            },
-            "name": {
-              "termType": "NamedNode",
-              "value": "http://wikiba.se/ontology#mwapi"
-            },
-            "silent": false
-          },
-          {
-            "type": "union",
-            "input": [
-              {
-                "type": "path",
-                "subject": {
-                  "termType": "Variable",
-                  "value": "item"
-                },
-                "predicate": {
-                  "type": "alt",
-                  "input": [
-                    {
-                      "type": "link",
-                      "iri": {
-                        "termType": "NamedNode",
-                        "value": "http://www.wikidata.org/prop/direct/P31"
-                      }
-                    },
-                    {
-                      "type": "link",
-                      "iri": {
-                        "termType": "NamedNode",
-                        "value": "http://www.wikidata.org/prop/direct/P279"
-                      }
-                    },
-                    {
-                      "type": "link",
-                      "iri": {
-                        "termType": "NamedNode",
-                        "value": "http://www.wikidata.org/prop/direct/P366"
-                      }
-                    }
-                  ]
-                },
-                "object": {
-                  "termType": "Variable",
-                  "value": "type"
-                },
-                "graph": {
-                  "termType": "DefaultGraph",
-                  "value": ""
-                }
-              },
-              {
-                "type": "service",
-                "input": {
                   "type": "join",
                   "input": [
                     {
-                      "type": "extend",
-                      "input": {
+                      "type": "path",
+                      "subject": {
+                        "termType": "Variable",
+                        "value": "item"
+                      },
+                      "predicate": {
+                        "type": "alt",
+                        "input": [
+                          {
+                            "type": "link",
+                            "iri": {
+                              "termType": "NamedNode",
+                              "value": "http://www.wikidata.org/prop/direct/P31"
+                            }
+                          },
+                          {
+                            "type": "link",
+                            "iri": {
+                              "termType": "NamedNode",
+                              "value": "http://www.wikidata.org/prop/direct/P279"
+                            }
+                          },
+                          {
+                            "type": "link",
+                            "iri": {
+                              "termType": "NamedNode",
+                              "value": "http://www.wikidata.org/prop/direct/P366"
+                            }
+                          }
+                        ]
+                      },
+                      "object": {
+                        "termType": "Variable",
+                        "value": "type"
+                      },
+                      "graph": {
+                        "termType": "DefaultGraph",
+                        "value": ""
+                      }
+                    },
+                    {
+                      "termType": "Quad",
+                      "value": "",
+                      "subject": {
+                        "termType": "Variable",
+                        "value": "item"
+                      },
+                      "predicate": {
+                        "termType": "NamedNode",
+                        "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                      },
+                      "object": {
+                        "termType": "Variable",
+                        "value": "itemLabel"
+                      },
+                      "graph": {
+                        "termType": "DefaultGraph",
+                        "value": ""
+                      },
+                      "type": "pattern"
+                    },
+                    {
+                      "termType": "Quad",
+                      "value": "",
+                      "subject": {
+                        "termType": "Variable",
+                        "value": "type"
+                      },
+                      "predicate": {
+                        "termType": "NamedNode",
+                        "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                      },
+                      "object": {
+                        "termType": "Variable",
+                        "value": "typeLabel"
+                      },
+                      "graph": {
+                        "termType": "DefaultGraph",
+                        "value": ""
+                      },
+                      "type": "pattern"
+                    }
+                  ]
+                },
+                {
+                  "type": "service",
+                  "input": {
+                    "type": "join",
+                    "input": [
+                      {
                         "type": "path",
                         "subject": {
                           "termType": "Variable",
@@ -263,108 +310,137 @@
                           "value": ""
                         }
                       },
-                      "variable": {
-                        "termType": "Variable",
-                        "value": "itemLabel"
-                      },
-                      "expression": {
-                        "type": "expression",
-                        "expressionType": "term",
-                        "term": {
+                      {
+                        "termType": "Quad",
+                        "value": "",
+                        "subject": {
+                          "termType": "Variable",
+                          "value": "item"
+                        },
+                        "predicate": {
+                          "termType": "NamedNode",
+                          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                        },
+                        "object": {
                           "termType": "Variable",
                           "value": "itemLabel"
-                        }
+                        },
+                        "graph": {
+                          "termType": "DefaultGraph",
+                          "value": ""
+                        },
+                        "type": "pattern"
+                      },
+                      {
+                        "termType": "Quad",
+                        "value": "",
+                        "subject": {
+                          "termType": "Variable",
+                          "value": "type"
+                        },
+                        "predicate": {
+                          "termType": "NamedNode",
+                          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                        },
+                        "object": {
+                          "termType": "Variable",
+                          "value": "typeLabel"
+                        },
+                        "graph": {
+                          "termType": "DefaultGraph",
+                          "value": ""
+                        },
+                        "type": "pattern"
                       }
-                    },
+                    ]
+                  },
+                  "name": {
+                    "termType": "NamedNode",
+                    "value": "https://query.wikidata.org/subgraph/scholarly_articles"
+                  },
+                  "silent": false
+                }
+              ]
+            }
+          ]
+        },
+        "expression": {
+          "type": "expression",
+          "expressionType": "operator",
+          "operator": "&&",
+          "args": [
+            {
+              "type": "expression",
+              "expressionType": "operator",
+              "operator": "=",
+              "args": [
+                {
+                  "type": "expression",
+                  "expressionType": "operator",
+                  "operator": "lang",
+                  "args": [
                     {
-                      "type": "service",
-                      "input": {
-                        "type": "join",
-                        "input": [
-                          {
-                            "termType": "Quad",
-                            "value": "",
-                            "subject": {
-                              "termType": "NamedNode",
-                              "value": "http://www.bigdata.com/rdf#serviceParam"
-                            },
-                            "predicate": {
-                              "termType": "NamedNode",
-                              "value": "http://wikiba.se/ontology#language"
-                            },
-                            "object": {
-                              "termType": "Literal",
-                              "value": "[AUTO_LANGUAGE],en",
-                              "language": "",
-                              "datatype": {
-                                "termType": "NamedNode",
-                                "value": "http://www.w3.org/2001/XMLSchema#string"
-                              }
-                            },
-                            "graph": {
-                              "termType": "DefaultGraph",
-                              "value": ""
-                            },
-                            "type": "pattern"
-                          }
-                        ]
-                      },
-                      "name": {
-                        "termType": "NamedNode",
-                        "value": "http://wikiba.se/ontology#label"
-                      },
-                      "silent": false
+                      "type": "expression",
+                      "expressionType": "term",
+                      "term": {
+                        "termType": "Variable",
+                        "value": "typeLabel"
+                      }
                     }
                   ]
                 },
-                "name": {
-                  "termType": "NamedNode",
-                  "value": "https://query.wikidata.org/subgraph/scholarly_articles"
-                },
-                "silent": false
-              }
-            ]
-          },
-          {
-            "type": "service",
-            "input": {
-              "type": "join",
-              "input": [
                 {
-                  "termType": "Quad",
-                  "value": "",
-                  "subject": {
-                    "termType": "NamedNode",
-                    "value": "http://www.bigdata.com/rdf#serviceParam"
-                  },
-                  "predicate": {
-                    "termType": "NamedNode",
-                    "value": "http://wikiba.se/ontology#language"
-                  },
-                  "object": {
+                  "type": "expression",
+                  "expressionType": "term",
+                  "term": {
                     "termType": "Literal",
-                    "value": "[AUTO_LANGUAGE],en",
+                    "value": "en",
                     "language": "",
                     "datatype": {
                       "termType": "NamedNode",
                       "value": "http://www.w3.org/2001/XMLSchema#string"
                     }
-                  },
-                  "graph": {
-                    "termType": "DefaultGraph",
-                    "value": ""
-                  },
-                  "type": "pattern"
+                  }
                 }
               ]
             },
-            "name": {
-              "termType": "NamedNode",
-              "value": "http://wikiba.se/ontology#label"
-            },
-            "silent": false
-          }
-        ]
+            {
+              "type": "expression",
+              "expressionType": "operator",
+              "operator": "=",
+              "args": [
+                {
+                  "type": "expression",
+                  "expressionType": "operator",
+                  "operator": "lang",
+                  "args": [
+                    {
+                      "type": "expression",
+                      "expressionType": "term",
+                      "term": {
+                        "termType": "Variable",
+                        "value": "itemLabel"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "expression",
+                  "expressionType": "term",
+                  "term": {
+                    "termType": "Literal",
+                    "value": "en",
+                    "language": "",
+                    "datatype": {
+                      "termType": "NamedNode",
+                      "value": "http://www.w3.org/2001/XMLSchema#string"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
       },
       "expressions": [
         {

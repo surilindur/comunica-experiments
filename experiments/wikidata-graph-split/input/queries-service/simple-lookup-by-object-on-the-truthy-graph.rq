@@ -1,23 +1,25 @@
 # https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/WDQS_graph_split/Federated_Queries_Examples#Simple_lookup_by_object_on_the_truthy_graph
-PREFIX bd: <http://www.bigdata.com/rdf#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX wd: <http://www.wikidata.org/entity/>
 PREFIX wdsubgraph: <https://query.wikidata.org/subgraph/>
 PREFIX wikibase: <http://wikiba.se/ontology#>
-SELECT ?x ?xLabel ?r ?relLabel {
-  VALUES (?work) { (wd:Q1542532) }
+SELECT
+  ?x
+  ?xLabel
+  ?r
+  ?relLabel
+WHERE {
+  VALUES ?work { wd:Q1542532 }
   {
     ?x ?r ?work .
   } UNION {
     SERVICE wdsubgraph:scholarly_articles {
       ?x ?r ?work .
-      BIND(?xLabel AS ?xLabel)
-      SERVICE wikibase:label {
-        bd:serviceParam wikibase:language "en,de,fr,ru,nl,it,ja,uk,cs,sk,be,ca"
-      }
+      ?x rdfs:label ?xLabel .
+      FILTER(LANG(?xLabel) = "en")
     }
   }
-  ?rel wikibase:directClaim ?r
-  SERVICE wikibase:label {
-    bd:serviceParam wikibase:language "en,de,fr,ru,nl,it,ja,uk,cs,sk,be,ca"
-  }
+  ?rel wikibase:directClaim ?r .
+  ?rel rdfs:label ?relLabel .
+  FILTER(LANG(?relLabel) = "en")
 } ORDER BY ?r ?xLabel

@@ -3,9 +3,9 @@ FROM node:24-alpine
 RUN apk add git
 
 # Clone the Comunica repository and install
-RUN git clone https://github.com/comunica/comunica /opt/comunica
+RUN git clone https://github.com/surilindur/comunica /opt/comunica
 WORKDIR /opt/comunica
-RUN git checkout e6f67b1fc798bffc9f6f9050f32c3dbcad7cd5dc
+RUN git checkout 40d287c162729efab20be05ba8e0bcc383ddd360
 RUN yarn install --frozen-lockfile
 WORKDIR /opt/comunica/engines/query-sparql
 
@@ -26,4 +26,4 @@ ENV LOG_LEVEL=$LOG_LEVEL
 
 EXPOSE 3000
 
-ENTRYPOINT [ "/bin/sh", "-c", "node ./bin/http.js --invalidateCache --httpRetryCount 1 --context /tmp/context.json --port 3000 --timeout ${QUERY_TIMEOUT} --logLevel ${LOG_LEVEL}" ]
+ENTRYPOINT [ "/bin/sh", "-c", "node ./bin/http.js --freshWorker --httpRetryCount 10 --context /tmp/context.json --port 3000 --timeout ${QUERY_TIMEOUT} --logLevel ${LOG_LEVEL}" ]

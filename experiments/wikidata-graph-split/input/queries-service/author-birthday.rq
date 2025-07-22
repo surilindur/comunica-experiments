@@ -7,7 +7,7 @@ SELECT
   ?dateOfBirth
 WHERE {
   hint:Query hint:optimizer "None" .
-  VALUES (?entity) {(wd:Q4781761)}
+  VALUES ?entity { wd:Q4781761 }
   SERVICE wdsubgraph:scholarly_articles {
     ?entity wdt:P50 ?authors .
   }

@@ -245,288 +245,291 @@
                       }
                     },
                     {
-                      "type": "minus",
-                      "input": [
-                        {
-                          "type": "join",
-                          "input": [
-                            {
-                              "type": "extend",
-                              "input": {
-                                "type": "join",
+                      "type": "filter",
+                      "input": {
+                        "type": "minus",
+                        "input": [
+                          {
+                            "type": "join",
+                            "input": [
+                              {
+                                "type": "extend",
+                                "input": {
+                                  "type": "join",
+                                  "input": [
+                                    {
+                                      "type": "union",
+                                      "input": [
+                                        {
+                                          "termType": "Quad",
+                                          "value": "",
+                                          "subject": {
+                                            "termType": "Variable",
+                                            "value": "work"
+                                          },
+                                          "predicate": {
+                                            "termType": "NamedNode",
+                                            "value": "http://www.wikidata.org/prop/direct/P31"
+                                          },
+                                          "object": {
+                                            "termType": "NamedNode",
+                                            "value": "http://www.wikidata.org/entity/Q109229154"
+                                          },
+                                          "graph": {
+                                            "termType": "DefaultGraph",
+                                            "value": ""
+                                          },
+                                          "type": "pattern",
+                                          "metadata": {
+                                            "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
+                                          }
+                                        },
+                                        {
+                                          "termType": "Quad",
+                                          "value": "",
+                                          "subject": {
+                                            "termType": "Variable",
+                                            "value": "work"
+                                          },
+                                          "predicate": {
+                                            "termType": "NamedNode",
+                                            "value": "http://www.wikidata.org/prop/direct/P31"
+                                          },
+                                          "object": {
+                                            "termType": "NamedNode",
+                                            "value": "http://www.wikidata.org/entity/Q109229154"
+                                          },
+                                          "graph": {
+                                            "termType": "DefaultGraph",
+                                            "value": ""
+                                          },
+                                          "type": "pattern",
+                                          "metadata": {
+                                            "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "variable": {
+                                  "termType": "Variable",
+                                  "value": "type_"
+                                },
+                                "expression": {
+                                  "type": "expression",
+                                  "expressionType": "term",
+                                  "term": {
+                                    "termType": "Literal",
+                                    "value": "explicit",
+                                    "language": "",
+                                    "datatype": {
+                                      "termType": "NamedNode",
+                                      "value": "http://www.w3.org/2001/XMLSchema#string"
+                                    }
+                                  }
+                                }
+                              },
+                              {
+                                "type": "union",
                                 "input": [
                                   {
-                                    "type": "union",
-                                    "input": [
-                                      {
-                                        "termType": "Quad",
-                                        "value": "",
-                                        "subject": {
-                                          "termType": "Variable",
-                                          "value": "work"
-                                        },
-                                        "predicate": {
-                                          "termType": "NamedNode",
-                                          "value": "http://www.wikidata.org/prop/direct/P31"
-                                        },
-                                        "object": {
-                                          "termType": "NamedNode",
-                                          "value": "http://www.wikidata.org/entity/Q109229154"
-                                        },
-                                        "graph": {
-                                          "termType": "DefaultGraph",
-                                          "value": ""
-                                        },
-                                        "type": "pattern",
-                                        "metadata": {
-                                          "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
-                                        }
-                                      },
-                                      {
-                                        "termType": "Quad",
-                                        "value": "",
-                                        "subject": {
-                                          "termType": "Variable",
-                                          "value": "work"
-                                        },
-                                        "predicate": {
-                                          "termType": "NamedNode",
-                                          "value": "http://www.wikidata.org/prop/direct/P31"
-                                        },
-                                        "object": {
-                                          "termType": "NamedNode",
-                                          "value": "http://www.wikidata.org/entity/Q109229154"
-                                        },
-                                        "graph": {
-                                          "termType": "DefaultGraph",
-                                          "value": ""
-                                        },
-                                        "type": "pattern",
-                                        "metadata": {
-                                          "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
-                                        }
-                                      }
-                                    ]
+                                    "termType": "Quad",
+                                    "value": "",
+                                    "subject": {
+                                      "termType": "Variable",
+                                      "value": "work"
+                                    },
+                                    "predicate": {
+                                      "termType": "NamedNode",
+                                      "value": "http://www.wikidata.org/prop/direct/P1433"
+                                    },
+                                    "object": {
+                                      "termType": "Variable",
+                                      "value": "venue_"
+                                    },
+                                    "graph": {
+                                      "termType": "DefaultGraph",
+                                      "value": ""
+                                    },
+                                    "type": "pattern",
+                                    "metadata": {
+                                      "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
+                                    }
+                                  },
+                                  {
+                                    "termType": "Quad",
+                                    "value": "",
+                                    "subject": {
+                                      "termType": "Variable",
+                                      "value": "work"
+                                    },
+                                    "predicate": {
+                                      "termType": "NamedNode",
+                                      "value": "http://www.wikidata.org/prop/direct/P1433"
+                                    },
+                                    "object": {
+                                      "termType": "Variable",
+                                      "value": "venue_"
+                                    },
+                                    "graph": {
+                                      "termType": "DefaultGraph",
+                                      "value": ""
+                                    },
+                                    "type": "pattern",
+                                    "metadata": {
+                                      "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
+                                    }
                                   }
                                 ]
                               },
-                              "variable": {
-                                "termType": "Variable",
-                                "value": "type_"
+                              {
+                                "type": "union",
+                                "input": [
+                                  {
+                                    "termType": "Quad",
+                                    "value": "",
+                                    "subject": {
+                                      "termType": "Variable",
+                                      "value": "venue_"
+                                    },
+                                    "predicate": {
+                                      "termType": "NamedNode",
+                                      "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                                    },
+                                    "object": {
+                                      "termType": "Variable",
+                                      "value": "venue"
+                                    },
+                                    "graph": {
+                                      "termType": "DefaultGraph",
+                                      "value": ""
+                                    },
+                                    "type": "pattern",
+                                    "metadata": {
+                                      "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
+                                    }
+                                  },
+                                  {
+                                    "termType": "Quad",
+                                    "value": "",
+                                    "subject": {
+                                      "termType": "Variable",
+                                      "value": "venue_"
+                                    },
+                                    "predicate": {
+                                      "termType": "NamedNode",
+                                      "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                                    },
+                                    "object": {
+                                      "termType": "Variable",
+                                      "value": "venue"
+                                    },
+                                    "graph": {
+                                      "termType": "DefaultGraph",
+                                      "value": ""
+                                    },
+                                    "type": "pattern",
+                                    "metadata": {
+                                      "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "type": "union",
+                            "input": [
+                              {
+                                "termType": "Quad",
+                                "value": "",
+                                "subject": {
+                                  "termType": "Variable",
+                                  "value": "venue_"
+                                },
+                                "predicate": {
+                                  "termType": "NamedNode",
+                                  "value": "http://www.wikidata.org/prop/direct/P31"
+                                },
+                                "object": {
+                                  "termType": "NamedNode",
+                                  "value": "http://www.wikidata.org/entity/Q1143604"
+                                },
+                                "graph": {
+                                  "termType": "DefaultGraph",
+                                  "value": ""
+                                },
+                                "type": "pattern",
+                                "metadata": {
+                                  "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
+                                }
                               },
-                              "expression": {
+                              {
+                                "termType": "Quad",
+                                "value": "",
+                                "subject": {
+                                  "termType": "Variable",
+                                  "value": "venue_"
+                                },
+                                "predicate": {
+                                  "termType": "NamedNode",
+                                  "value": "http://www.wikidata.org/prop/direct/P31"
+                                },
+                                "object": {
+                                  "termType": "NamedNode",
+                                  "value": "http://www.wikidata.org/entity/Q1143604"
+                                },
+                                "graph": {
+                                  "termType": "DefaultGraph",
+                                  "value": ""
+                                },
+                                "type": "pattern",
+                                "metadata": {
+                                  "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      "expression": {
+                        "type": "expression",
+                        "expressionType": "operator",
+                        "operator": "=",
+                        "args": [
+                          {
+                            "type": "expression",
+                            "expressionType": "operator",
+                            "operator": "lang",
+                            "args": [
+                              {
                                 "type": "expression",
                                 "expressionType": "term",
                                 "term": {
-                                  "termType": "Literal",
-                                  "value": "explicit",
-                                  "language": "",
-                                  "datatype": {
-                                    "termType": "NamedNode",
-                                    "value": "http://www.w3.org/2001/XMLSchema#string"
-                                  }
+                                  "termType": "Variable",
+                                  "value": "venue"
                                 }
                               }
-                            },
-                            {
-                              "type": "union",
-                              "input": [
-                                {
-                                  "termType": "Quad",
-                                  "value": "",
-                                  "subject": {
-                                    "termType": "Variable",
-                                    "value": "work"
-                                  },
-                                  "predicate": {
-                                    "termType": "NamedNode",
-                                    "value": "http://www.wikidata.org/prop/direct/P1433"
-                                  },
-                                  "object": {
-                                    "termType": "Variable",
-                                    "value": "venue_"
-                                  },
-                                  "graph": {
-                                    "termType": "DefaultGraph",
-                                    "value": ""
-                                  },
-                                  "type": "pattern",
-                                  "metadata": {
-                                    "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
-                                  }
-                                },
-                                {
-                                  "termType": "Quad",
-                                  "value": "",
-                                  "subject": {
-                                    "termType": "Variable",
-                                    "value": "work"
-                                  },
-                                  "predicate": {
-                                    "termType": "NamedNode",
-                                    "value": "http://www.wikidata.org/prop/direct/P1433"
-                                  },
-                                  "object": {
-                                    "termType": "Variable",
-                                    "value": "venue_"
-                                  },
-                                  "graph": {
-                                    "termType": "DefaultGraph",
-                                    "value": ""
-                                  },
-                                  "type": "pattern",
-                                  "metadata": {
-                                    "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
-                                  }
-                                }
-                              ]
-                            },
-                            {
-                              "type": "union",
-                              "input": [
-                                {
-                                  "termType": "Quad",
-                                  "value": "",
-                                  "subject": {
-                                    "termType": "Variable",
-                                    "value": "venue_"
-                                  },
-                                  "predicate": {
-                                    "termType": "NamedNode",
-                                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
-                                  },
-                                  "object": {
-                                    "termType": "Variable",
-                                    "value": "venue"
-                                  },
-                                  "graph": {
-                                    "termType": "DefaultGraph",
-                                    "value": ""
-                                  },
-                                  "type": "pattern",
-                                  "metadata": {
-                                    "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
-                                  }
-                                },
-                                {
-                                  "termType": "Quad",
-                                  "value": "",
-                                  "subject": {
-                                    "termType": "Variable",
-                                    "value": "venue_"
-                                  },
-                                  "predicate": {
-                                    "termType": "NamedNode",
-                                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
-                                  },
-                                  "object": {
-                                    "termType": "Variable",
-                                    "value": "venue"
-                                  },
-                                  "graph": {
-                                    "termType": "DefaultGraph",
-                                    "value": ""
-                                  },
-                                  "type": "pattern",
-                                  "metadata": {
-                                    "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
-                                  }
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "union",
-                          "input": [
-                            {
-                              "termType": "Quad",
-                              "value": "",
-                              "subject": {
-                                "termType": "Variable",
-                                "value": "venue_"
-                              },
-                              "predicate": {
-                                "termType": "NamedNode",
-                                "value": "http://www.wikidata.org/prop/direct/P31"
-                              },
-                              "object": {
-                                "termType": "NamedNode",
-                                "value": "http://www.wikidata.org/entity/Q1143604"
-                              },
-                              "graph": {
-                                "termType": "DefaultGraph",
-                                "value": ""
-                              },
-                              "type": "pattern",
-                              "metadata": {
-                                "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
-                              }
-                            },
-                            {
-                              "termType": "Quad",
-                              "value": "",
-                              "subject": {
-                                "termType": "Variable",
-                                "value": "venue_"
-                              },
-                              "predicate": {
-                                "termType": "NamedNode",
-                                "value": "http://www.wikidata.org/prop/direct/P31"
-                              },
-                              "object": {
-                                "termType": "NamedNode",
-                                "value": "http://www.wikidata.org/entity/Q1143604"
-                              },
-                              "graph": {
-                                "termType": "DefaultGraph",
-                                "value": ""
-                              },
-                              "type": "pattern",
-                              "metadata": {
-                                "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
-                              }
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "expression": {
-                    "type": "expression",
-                    "expressionType": "operator",
-                    "operator": "=",
-                    "args": [
-                      {
-                        "type": "expression",
-                        "expressionType": "operator",
-                        "operator": "lang",
-                        "args": [
+                            ]
+                          },
                           {
                             "type": "expression",
                             "expressionType": "term",
                             "term": {
-                              "termType": "Variable",
-                              "value": "venue"
+                              "termType": "Literal",
+                              "value": "en",
+                              "language": "",
+                              "datatype": {
+                                "termType": "NamedNode",
+                                "value": "http://www.w3.org/2001/XMLSchema#string"
+                              }
                             }
                           }
                         ]
-                      },
-                      {
-                        "type": "expression",
-                        "expressionType": "term",
-                        "term": {
-                          "termType": "Literal",
-                          "value": "en",
-                          "language": "",
-                          "datatype": {
-                            "termType": "NamedNode",
-                            "value": "http://www.w3.org/2001/XMLSchema#string"
-                          }
-                        }
                       }
-                    ]
-                  }
+                    }
+                  ]
                 },
                 "variables": [
                   {

@@ -18,256 +18,220 @@
                   "type": "join",
                   "input": [
                     {
-                      "type": "union",
+                      "type": "join",
                       "input": [
                         {
-                          "type": "filter",
-                          "input": {
-                            "termType": "Quad",
-                            "value": "",
-                            "subject": {
-                              "termType": "Variable",
-                              "value": "q"
-                            },
-                            "predicate": {
-                              "termType": "NamedNode",
-                              "value": "http://www.w3.org/2000/01/rdf-schema#label"
-                            },
-                            "object": {
-                              "termType": "Variable",
-                              "value": "qLabel"
-                            },
-                            "graph": {
-                              "termType": "DefaultGraph",
-                              "value": ""
-                            },
-                            "type": "pattern"
-                          },
-                          "expression": {
-                            "type": "expression",
-                            "expressionType": "operator",
-                            "operator": "=",
-                            "args": [
-                              {
+                          "type": "union",
+                          "input": [
+                            {
+                              "type": "filter",
+                              "input": {
+                                "termType": "Quad",
+                                "value": "",
+                                "subject": {
+                                  "termType": "Variable",
+                                  "value": "q"
+                                },
+                                "predicate": {
+                                  "termType": "NamedNode",
+                                  "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                                },
+                                "object": {
+                                  "termType": "Variable",
+                                  "value": "qLabel"
+                                },
+                                "graph": {
+                                  "termType": "DefaultGraph",
+                                  "value": ""
+                                },
+                                "type": "pattern"
+                              },
+                              "expression": {
                                 "type": "expression",
                                 "expressionType": "operator",
-                                "operator": "lang",
+                                "operator": "=",
                                 "args": [
+                                  {
+                                    "type": "expression",
+                                    "expressionType": "operator",
+                                    "operator": "lang",
+                                    "args": [
+                                      {
+                                        "type": "expression",
+                                        "expressionType": "term",
+                                        "term": {
+                                          "termType": "Variable",
+                                          "value": "qLabel"
+                                        }
+                                      }
+                                    ]
+                                  },
                                   {
                                     "type": "expression",
                                     "expressionType": "term",
                                     "term": {
-                                      "termType": "Variable",
-                                      "value": "qLabel"
+                                      "termType": "Literal",
+                                      "value": "en",
+                                      "language": "",
+                                      "datatype": {
+                                        "termType": "NamedNode",
+                                        "value": "http://www.w3.org/2001/XMLSchema#string"
+                                      }
                                     }
                                   }
                                 ]
                               },
-                              {
-                                "type": "expression",
-                                "expressionType": "term",
-                                "term": {
-                                  "termType": "Literal",
-                                  "value": "en",
-                                  "language": "",
-                                  "datatype": {
-                                    "termType": "NamedNode",
-                                    "value": "http://www.w3.org/2001/XMLSchema#string"
-                                  }
-                                }
+                              "metadata": {
+                                "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
                               }
-                            ]
-                          },
-                          "metadata": {
-                            "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
-                          }
+                            },
+                            {
+                              "type": "filter",
+                              "input": {
+                                "termType": "Quad",
+                                "value": "",
+                                "subject": {
+                                  "termType": "Variable",
+                                  "value": "q"
+                                },
+                                "predicate": {
+                                  "termType": "NamedNode",
+                                  "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                                },
+                                "object": {
+                                  "termType": "Variable",
+                                  "value": "qLabel"
+                                },
+                                "graph": {
+                                  "termType": "DefaultGraph",
+                                  "value": ""
+                                },
+                                "type": "pattern"
+                              },
+                              "expression": {
+                                "type": "expression",
+                                "expressionType": "operator",
+                                "operator": "=",
+                                "args": [
+                                  {
+                                    "type": "expression",
+                                    "expressionType": "operator",
+                                    "operator": "lang",
+                                    "args": [
+                                      {
+                                        "type": "expression",
+                                        "expressionType": "term",
+                                        "term": {
+                                          "termType": "Variable",
+                                          "value": "qLabel"
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "expression",
+                                    "expressionType": "term",
+                                    "term": {
+                                      "termType": "Literal",
+                                      "value": "en",
+                                      "language": "",
+                                      "datatype": {
+                                        "termType": "NamedNode",
+                                        "value": "http://www.w3.org/2001/XMLSchema#string"
+                                      }
+                                    }
+                                  }
+                                ]
+                              },
+                              "metadata": {
+                                "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
+                              }
+                            }
+                          ]
                         },
                         {
-                          "type": "filter",
-                          "input": {
-                            "termType": "Quad",
-                            "value": "",
-                            "subject": {
-                              "termType": "Variable",
-                              "value": "q"
-                            },
-                            "predicate": {
-                              "termType": "NamedNode",
-                              "value": "http://www.w3.org/2000/01/rdf-schema#label"
-                            },
-                            "object": {
-                              "termType": "Variable",
-                              "value": "qLabel"
-                            },
-                            "graph": {
-                              "termType": "DefaultGraph",
-                              "value": ""
-                            },
-                            "type": "pattern"
-                          },
-                          "expression": {
-                            "type": "expression",
-                            "expressionType": "operator",
-                            "operator": "=",
-                            "args": [
-                              {
-                                "type": "expression",
-                                "expressionType": "operator",
-                                "operator": "lang",
-                                "args": [
-                                  {
-                                    "type": "expression",
-                                    "expressionType": "term",
-                                    "term": {
-                                      "termType": "Variable",
-                                      "value": "qLabel"
-                                    }
-                                  }
-                                ]
+                          "type": "union",
+                          "input": [
+                            {
+                              "termType": "Quad",
+                              "value": "",
+                              "subject": {
+                                "termType": "Variable",
+                                "value": "paper"
                               },
-                              {
-                                "type": "expression",
-                                "expressionType": "term",
-                                "term": {
-                                  "termType": "Literal",
-                                  "value": "en",
-                                  "language": "",
-                                  "datatype": {
-                                    "termType": "NamedNode",
-                                    "value": "http://www.w3.org/2001/XMLSchema#string"
-                                  }
-                                }
+                              "predicate": {
+                                "termType": "NamedNode",
+                                "value": "http://www.wikidata.org/prop/direct/P50"
+                              },
+                              "object": {
+                                "termType": "Variable",
+                                "value": "q"
+                              },
+                              "graph": {
+                                "termType": "DefaultGraph",
+                                "value": ""
+                              },
+                              "type": "pattern",
+                              "metadata": {
+                                "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
                               }
-                            ]
-                          },
-                          "metadata": {
-                            "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
-                          }
+                            },
+                            {
+                              "termType": "Quad",
+                              "value": "",
+                              "subject": {
+                                "termType": "Variable",
+                                "value": "paper"
+                              },
+                              "predicate": {
+                                "termType": "NamedNode",
+                                "value": "http://www.wikidata.org/prop/direct/P50"
+                              },
+                              "object": {
+                                "termType": "Variable",
+                                "value": "q"
+                              },
+                              "graph": {
+                                "termType": "DefaultGraph",
+                                "value": ""
+                              },
+                              "type": "pattern",
+                              "metadata": {
+                                "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
+                              }
+                            }
+                          ]
                         }
                       ]
                     },
                     {
-                      "type": "values",
-                      "variables": [
+                      "type": "join",
+                      "input": [
                         {
-                          "termType": "Variable",
-                          "value": "author"
-                        }
-                      ],
-                      "bindings": [
-                        {
-                          "?author": {
+                          "termType": "Quad",
+                          "value": "",
+                          "subject": {
+                            "termType": "Variable",
+                            "value": "paper"
+                          },
+                          "predicate": {
+                            "termType": "NamedNode",
+                            "value": "http://www.wikidata.org/prop/direct/P50"
+                          },
+                          "object": {
                             "termType": "NamedNode",
                             "value": "http://www.wikidata.org/entity/Q64213594"
-                          }
+                          },
+                          "graph": {
+                            "termType": "DefaultGraph",
+                            "value": ""
+                          },
+                          "type": "pattern"
                         }
-                      ]
-                    },
-                    {
-                      "type": "union",
-                      "input": [
-                        {
-                          "termType": "Quad",
-                          "value": "",
-                          "subject": {
-                            "termType": "Variable",
-                            "value": "paper"
-                          },
-                          "predicate": {
-                            "termType": "NamedNode",
-                            "value": "http://www.wikidata.org/prop/direct/P50"
-                          },
-                          "object": {
-                            "termType": "Variable",
-                            "value": "author"
-                          },
-                          "graph": {
-                            "termType": "DefaultGraph",
-                            "value": ""
-                          },
-                          "type": "pattern",
-                          "metadata": {
-                            "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
-                          }
-                        },
-                        {
-                          "termType": "Quad",
-                          "value": "",
-                          "subject": {
-                            "termType": "Variable",
-                            "value": "paper"
-                          },
-                          "predicate": {
-                            "termType": "NamedNode",
-                            "value": "http://www.wikidata.org/prop/direct/P50"
-                          },
-                          "object": {
-                            "termType": "Variable",
-                            "value": "author"
-                          },
-                          "graph": {
-                            "termType": "DefaultGraph",
-                            "value": ""
-                          },
-                          "type": "pattern",
-                          "metadata": {
-                            "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "type": "union",
-                      "input": [
-                        {
-                          "termType": "Quad",
-                          "value": "",
-                          "subject": {
-                            "termType": "Variable",
-                            "value": "paper"
-                          },
-                          "predicate": {
-                            "termType": "NamedNode",
-                            "value": "http://www.wikidata.org/prop/direct/P50"
-                          },
-                          "object": {
-                            "termType": "Variable",
-                            "value": "q"
-                          },
-                          "graph": {
-                            "termType": "DefaultGraph",
-                            "value": ""
-                          },
-                          "type": "pattern",
-                          "metadata": {
-                            "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
-                          }
-                        },
-                        {
-                          "termType": "Quad",
-                          "value": "",
-                          "subject": {
-                            "termType": "Variable",
-                            "value": "paper"
-                          },
-                          "predicate": {
-                            "termType": "NamedNode",
-                            "value": "http://www.wikidata.org/prop/direct/P50"
-                          },
-                          "object": {
-                            "termType": "Variable",
-                            "value": "q"
-                          },
-                          "graph": {
-                            "termType": "DefaultGraph",
-                            "value": ""
-                          },
-                          "type": "pattern",
-                          "metadata": {
-                            "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
-                          }
-                        }
-                      ]
+                      ],
+                      "metadata": {
+                        "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
+                      }
                     }
                   ]
                 },

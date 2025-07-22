@@ -4,24 +4,27 @@ PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX wd: <http://www.wikidata.org/entity/>
 PREFIX wdt: <http://www.wikidata.org/prop/direct/>
-SELECT ?year (COUNT(?work) AS ?number_of_publications) ?role WHERE {
+SELECT
+  ?year
+  (COUNT(?work) AS ?number_of_publications)
+  ?role
+WHERE {
   {
-    SELECT ?work (min(?years) AS ?year) ?type_ ?venue WHERE {
+    SELECT ?work (MIN(?years) AS ?year) ?type_ ?venue WHERE {
       ?work wdt:P577 ?dates ;
         p:P2860 / pq:P3712 / wdt:P31 wd:Q96471816 .
-      BIND(str(year(?dates)) AS ?years) .
+      BIND(STR(YEAR(?dates)) AS ?years) .
       OPTIONAL {
         ?work wdt:P31 wd:Q109229154 .
-        BIND("explicit" as ?type_)
+        BIND("explicit" AS ?type_)
         ?work wdt:P1433 ?venue_ .
         ?venue_ rdfs:label ?venue .
         FILTER (LANG(?venue) = "en")
-        MINUS { ?venue_ wdt:P31 wd:Q1143604 }
+        MINUS {
+          ?venue_ wdt:P31 wd:Q1143604 .
+        }
       }
-    }
-    GROUP BY ?work ?type_ ?venue
+    } GROUP BY ?work ?type_ ?venue
   }
-  BIND(COALESCE(IF(bound(?type_), ?venue, "other source")) AS ?role)
-}
-GROUP BY ?year ?role
-ORDER BY ?year
+  BIND(COALESCE(IF(BOUND(?type_), ?venue, "other source")) AS ?role)
+} GROUP BY ?year ?role ORDER BY ?year

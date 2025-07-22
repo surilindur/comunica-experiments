@@ -3,15 +3,17 @@ PREFIX p: <http://www.wikidata.org/prop/>
 PREFIX wd: <http://www.wikidata.org/entity/>
 PREFIX wdsubgraph: <https://query.wikidata.org/subgraph/>
 PREFIX wdt: <http://www.wikidata.org/prop/direct/>
-SELECT (?countMain + ?countSchol AS ?count) WHERE {
+SELECT
+  (?countMain + ?countSchol AS ?count)
+WHERE {
   {
-    SELECT (COUNT(*) as ?countMain) WHERE {
+    SELECT (COUNT(*) AS ?countMain) WHERE {
       ?entity wdt:P4101 wd:Q41506 ;
         p:P495 [] .
     }
   }
   SERVICE wdsubgraph:scholarly_articles {
-    SELECT (COUNT(*) as ?countSchol) WHERE {
+    SELECT (COUNT(*) AS ?countSchol) WHERE {
       ?entity wdt:P4101 wd:Q41506 ;
         p:P495 [] .
     }

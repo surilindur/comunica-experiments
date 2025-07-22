@@ -6,74 +6,28 @@
       "type": "join",
       "input": [
         {
-          "type": "values",
-          "variables": [
-            {
-              "termType": "Variable",
-              "value": "entity"
-            }
-          ],
-          "bindings": [
-            {
-              "?entity": {
-                "termType": "NamedNode",
-                "value": "http://www.wikidata.org/entity/Q4781761"
-              }
-            }
-          ]
-        },
-        {
-          "type": "union",
-          "input": [
-            {
-              "termType": "Quad",
-              "value": "",
-              "subject": {
-                "termType": "Variable",
-                "value": "entity"
-              },
-              "predicate": {
-                "termType": "NamedNode",
-                "value": "http://www.wikidata.org/prop/direct/P50"
-              },
-              "object": {
-                "termType": "Variable",
-                "value": "authors"
-              },
-              "graph": {
-                "termType": "DefaultGraph",
-                "value": ""
-              },
-              "type": "pattern",
-              "metadata": {
-                "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
-              }
-            },
-            {
-              "termType": "Quad",
-              "value": "",
-              "subject": {
-                "termType": "Variable",
-                "value": "entity"
-              },
-              "predicate": {
-                "termType": "NamedNode",
-                "value": "http://www.wikidata.org/prop/direct/P50"
-              },
-              "object": {
-                "termType": "Variable",
-                "value": "authors"
-              },
-              "graph": {
-                "termType": "DefaultGraph",
-                "value": ""
-              },
-              "type": "pattern",
-              "metadata": {
-                "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
-              }
-            }
-          ]
+          "termType": "Quad",
+          "value": "",
+          "subject": {
+            "termType": "NamedNode",
+            "value": "http://www.wikidata.org/entity/Q4781761"
+          },
+          "predicate": {
+            "termType": "NamedNode",
+            "value": "http://www.wikidata.org/prop/direct/P50"
+          },
+          "object": {
+            "termType": "Variable",
+            "value": "authors"
+          },
+          "graph": {
+            "termType": "DefaultGraph",
+            "value": ""
+          },
+          "type": "pattern",
+          "metadata": {
+            "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
+          }
         },
         {
           "type": "union",

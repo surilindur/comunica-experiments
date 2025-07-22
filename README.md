@@ -15,9 +15,22 @@ This repository contains verious experiments with the [Comunica](https://github.
 stored here for future reference, transparency and reproducibility.
 The following experiments reside here:
 
-* [**Link Traversal over Solid**](experiments/ltqp-solid-default/), as a baseline reference experiment for link traversal over Solid pods. The purpose of this experiment is to exist as a template of sorts, as well as a reference point when needed for sanity checks. The experiment has all resources stored in documents based on their URIs, and the default Comunica link traversal engine setup is used.
-* [**Link Traversal over Solid with Bloom Filters**](experiments/ltqp-solid-bloom-filters/), to explore the use of Bloom filters to remove unnecessary links during link traversal over Solid pods. The purpose of this experiment is to establish an understanding of whether Bloom filters could be beneficial in pruning links during traversal, specifically within the context of Solid pods.
-* [**Link Traversal over Solid with Join Plan Restarts**](experiments/ltqp-solid-join-restart/), to evaluate the impact of restarting most of the query plan upon cardinality estimate updates. The purpose of this experiment is to underline the importance of client-side adaptive techniques in improving query execution, even within link traversal scenarios.
+* [**Link Traversal over Solid**](experiments/ltqp-solid-default/),
+  as a baseline reference experiment for link traversal over Solid pods with different fragmentation strategies.
+  The purpose of this experiment is to exist as a template of sorts, as well as a reference point when needed for sanity checks.
+  The experiment has all resources stored in documents based on their URIs, and the default Comunica link traversal engine setup is used.
+* [**Link Traversal over Solid with Bloom Filters**](experiments/ltqp-solid-bloom-filters/),
+  to explore the use of Bloom filters to remove unnecessary links during link traversal over Solid pods.
+  The purpose of this experiment is to establish an understanding of whether Bloom filters could be beneficial in pruning links during traversal,
+  specifically within the context of Solid pods.
+* [**Link Traversal over Solid with Join Plan Restarts**](experiments/ltqp-solid-join-restart/),
+  to evaluate the impact of restarting most of the query plan upon cardinality estimate updates.
+  The purpose of this experiment is to underline the importance of client-side adaptive techniques in improving query execution,
+  even within link traversal scenarios.
+* [**Wikidata Graph Split**](experiments/wikidata-graph-split/),
+  to evaluate the feasibility of client-side automated query federation over the Wikidata SPARQL endpoints
+  after the [graph split](https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/WDQS_graph_split).
+  The purpose of this experiment is to demonstrate successful client-side automatic federation, in spite of a number of technical challenges.
 
 ## Results
 
@@ -29,16 +42,17 @@ using the result arrival times as x-axis and result counts as y-axis.
 To collect the combination output from a specific experiment after running it:
 
 ```bash
-python scripts/cli.py collect experiments/example-experiment
+python ./processing collect --source experiments/example-experiment
 ```
 
 To generate the analysis for a specific experiment:
 
 ```bash
-python scripts/cli.py analyse results/example-experiment
+python ./processing analyse --source results/example-experiment
 ```
 
 The plots will need further fine-tuning, and exist mostly for reference at the moment.
+The analysis aggregations only considers queries that succeeded across all the combinations.
 
 ## Running
 
@@ -51,6 +65,7 @@ yarn install --immutable
 Each experiment can then be prepared and executed using `jbr` in the experiment directory:
 
 ```bash
+cd experiments/example-experiment
 yarn run prepare
 yarn run validate
 yarn run execute

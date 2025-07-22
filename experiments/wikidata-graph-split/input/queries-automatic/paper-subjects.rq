@@ -5,7 +5,7 @@ SELECT
   ?subject
   ?subjectType
 WHERE {
-  VALUES (?paper) {(wd:Q59458901)}
+  VALUES ?paper { wd:Q59458901 }
   ?paper wdt:P921 ?subject .
   ?subject wdt:P31 ?subjectType .
 } LIMIT 10

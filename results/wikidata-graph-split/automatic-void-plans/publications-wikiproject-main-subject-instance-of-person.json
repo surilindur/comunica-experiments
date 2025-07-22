@@ -8,43 +8,262 @@
         "type": "join",
         "input": [
           {
-            "type": "service",
-            "input": {
-              "type": "join",
-              "input": [
-                {
+            "type": "union",
+            "input": [
+              {
+                "type": "filter",
+                "input": {
                   "termType": "Quad",
                   "value": "",
                   "subject": {
-                    "termType": "NamedNode",
-                    "value": "http://www.bigdata.com/rdf#serviceParam"
+                    "termType": "Variable",
+                    "value": "thesis"
                   },
                   "predicate": {
                     "termType": "NamedNode",
-                    "value": "http://wikiba.se/ontology#language"
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
                   },
                   "object": {
-                    "termType": "Literal",
-                    "value": "[AUTO_LANGUAGE],en",
-                    "language": "",
-                    "datatype": {
-                      "termType": "NamedNode",
-                      "value": "http://www.w3.org/2001/XMLSchema#string"
-                    }
+                    "termType": "Variable",
+                    "value": "thesisLabel"
                   },
                   "graph": {
                     "termType": "DefaultGraph",
                     "value": ""
                   },
                   "type": "pattern"
+                },
+                "expression": {
+                  "type": "expression",
+                  "expressionType": "operator",
+                  "operator": "=",
+                  "args": [
+                    {
+                      "type": "expression",
+                      "expressionType": "operator",
+                      "operator": "lang",
+                      "args": [
+                        {
+                          "type": "expression",
+                          "expressionType": "term",
+                          "term": {
+                            "termType": "Variable",
+                            "value": "thesisLabel"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "expression",
+                      "expressionType": "term",
+                      "term": {
+                        "termType": "Literal",
+                        "value": "en",
+                        "language": "",
+                        "datatype": {
+                          "termType": "NamedNode",
+                          "value": "http://www.w3.org/2001/XMLSchema#string"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "metadata": {
+                  "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
                 }
-              ]
-            },
-            "name": {
-              "termType": "NamedNode",
-              "value": "http://wikiba.se/ontology#label"
-            },
-            "silent": false
+              },
+              {
+                "type": "filter",
+                "input": {
+                  "termType": "Quad",
+                  "value": "",
+                  "subject": {
+                    "termType": "Variable",
+                    "value": "thesis"
+                  },
+                  "predicate": {
+                    "termType": "NamedNode",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                  },
+                  "object": {
+                    "termType": "Variable",
+                    "value": "thesisLabel"
+                  },
+                  "graph": {
+                    "termType": "DefaultGraph",
+                    "value": ""
+                  },
+                  "type": "pattern"
+                },
+                "expression": {
+                  "type": "expression",
+                  "expressionType": "operator",
+                  "operator": "=",
+                  "args": [
+                    {
+                      "type": "expression",
+                      "expressionType": "operator",
+                      "operator": "lang",
+                      "args": [
+                        {
+                          "type": "expression",
+                          "expressionType": "term",
+                          "term": {
+                            "termType": "Variable",
+                            "value": "thesisLabel"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "expression",
+                      "expressionType": "term",
+                      "term": {
+                        "termType": "Literal",
+                        "value": "en",
+                        "language": "",
+                        "datatype": {
+                          "termType": "NamedNode",
+                          "value": "http://www.w3.org/2001/XMLSchema#string"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "metadata": {
+                  "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
+                }
+              }
+            ]
+          },
+          {
+            "type": "union",
+            "input": [
+              {
+                "type": "filter",
+                "input": {
+                  "termType": "Quad",
+                  "value": "",
+                  "subject": {
+                    "termType": "Variable",
+                    "value": "mainsubject"
+                  },
+                  "predicate": {
+                    "termType": "NamedNode",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                  },
+                  "object": {
+                    "termType": "Variable",
+                    "value": "mainsubjectLabel"
+                  },
+                  "graph": {
+                    "termType": "DefaultGraph",
+                    "value": ""
+                  },
+                  "type": "pattern"
+                },
+                "expression": {
+                  "type": "expression",
+                  "expressionType": "operator",
+                  "operator": "=",
+                  "args": [
+                    {
+                      "type": "expression",
+                      "expressionType": "operator",
+                      "operator": "lang",
+                      "args": [
+                        {
+                          "type": "expression",
+                          "expressionType": "term",
+                          "term": {
+                            "termType": "Variable",
+                            "value": "mainsubjectLabel"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "expression",
+                      "expressionType": "term",
+                      "term": {
+                        "termType": "Literal",
+                        "value": "en",
+                        "language": "",
+                        "datatype": {
+                          "termType": "NamedNode",
+                          "value": "http://www.w3.org/2001/XMLSchema#string"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "metadata": {
+                  "scopedSource": "QuerySourceHypermedia(https://query-main.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:0)"
+                }
+              },
+              {
+                "type": "filter",
+                "input": {
+                  "termType": "Quad",
+                  "value": "",
+                  "subject": {
+                    "termType": "Variable",
+                    "value": "mainsubject"
+                  },
+                  "predicate": {
+                    "termType": "NamedNode",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                  },
+                  "object": {
+                    "termType": "Variable",
+                    "value": "mainsubjectLabel"
+                  },
+                  "graph": {
+                    "termType": "DefaultGraph",
+                    "value": ""
+                  },
+                  "type": "pattern"
+                },
+                "expression": {
+                  "type": "expression",
+                  "expressionType": "operator",
+                  "operator": "=",
+                  "args": [
+                    {
+                      "type": "expression",
+                      "expressionType": "operator",
+                      "operator": "lang",
+                      "args": [
+                        {
+                          "type": "expression",
+                          "expressionType": "term",
+                          "term": {
+                            "termType": "Variable",
+                            "value": "mainsubjectLabel"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "expression",
+                      "expressionType": "term",
+                      "term": {
+                        "termType": "Literal",
+                        "value": "en",
+                        "language": "",
+                        "datatype": {
+                          "termType": "NamedNode",
+                          "value": "http://www.w3.org/2001/XMLSchema#string"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "metadata": {
+                  "scopedSource": "QuerySourceHypermedia(https://query-scholarly.wikidata.org/bigdata/namespace/wdq/sparql)(SkolemID:1)"
+                }
+              }
+            ]
           },
           {
             "type": "union",
@@ -54,7 +273,7 @@
                 "value": "",
                 "subject": {
                   "termType": "Variable",
-                  "value": "Thesis"
+                  "value": "thesis"
                 },
                 "predicate": {
                   "termType": "NamedNode",
@@ -78,7 +297,7 @@
                 "value": "",
                 "subject": {
                   "termType": "Variable",
-                  "value": "Thesis"
+                  "value": "thesis"
                 },
                 "predicate": {
                   "termType": "NamedNode",
@@ -107,7 +326,7 @@
                 "value": "",
                 "subject": {
                   "termType": "Variable",
-                  "value": "Thesis"
+                  "value": "thesis"
                 },
                 "predicate": {
                   "termType": "NamedNode",
@@ -131,7 +350,7 @@
                 "value": "",
                 "subject": {
                   "termType": "Variable",
-                  "value": "Thesis"
+                  "value": "thesis"
                 },
                 "predicate": {
                   "termType": "NamedNode",
@@ -210,11 +429,11 @@
       "variables": [
         {
           "termType": "Variable",
-          "value": "Thesis"
+          "value": "thesis"
         },
         {
           "termType": "Variable",
-          "value": "ThesisLabel"
+          "value": "thesisLabel"
         },
         {
           "termType": "Variable",

@@ -4,18 +4,18 @@
     "https://linkedsoftwaredependencies.org/bundles/npm/@jbr-experiment/sparql-custom/^6.0.0/components/context.jsonld",
     "https://linkedsoftwaredependencies.org/bundles/npm/@jbr-hook/sparql-endpoint-comunica/^6.0.0/components/context.jsonld"
   ],
-  "@id": "urn:jbr:wikidata-graph-split:combination_2",
+  "@id": "urn:jbr:wikidata-graph-split:combination_3",
   "@type": "ExperimentSparqlCustom",
   "queriesPath": "input/queries-automatic",
   "endpointUrl": "http://localhost:3001/sparql",
   "queryRunnerReplication": 1,
   "queryRunnerWarmupRounds": 0,
-  "queryRunnerRequestDelay": 10000,
+  "queryRunnerRequestDelay": 30000,
   "queryRunnerEndpointAvailabilityCheckTimeout": 1000,
   "queryRunnerUrlParams": {},
-  "queryTimeoutFallback": 40000,
+  "queryTimeoutFallback": 310000,
   "hookSparqlEndpoint": {
-    "@id": "urn:jbr:wikidata-graph-split:combination_2:hookSparqlEndpoint",
+    "@id": "urn:jbr:wikidata-graph-split:combination_3:hookSparqlEndpoint",
     "@type": "HookSparqlEndpointComunica",
     "dockerfileClient": "input/comunica/Dockerfile",
     "resourceConstraints": {
@@ -27,7 +27,7 @@
     "additionalBinds": [],
     "clientPort": 3001,
     "clientLogLevel": "info",
-    "queryTimeout": 30,
+    "queryTimeout": 300,
     "maxMemory": 16384
   }
 }

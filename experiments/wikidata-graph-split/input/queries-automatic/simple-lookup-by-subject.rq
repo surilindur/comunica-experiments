@@ -1,12 +1,19 @@
 # https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/WDQS_graph_split/Federated_Queries_Examples#Simple_lookup_by_subject
-PREFIX bd: <http://www.bigdata.com/rdf#>
 PREFIX schema: <http://schema.org/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX wd: <http://www.wikidata.org/entity/>
 PREFIX wikibase: <http://wikiba.se/ontology#>
-SELECT ?xLabel ?descr {
-   VALUES (?x) {(wd:Q77051335) (wd:L17271) (wd:Q42)}
-   OPTIONAL { ?x wikibase:lemma ?xLabel }
-   OPTIONAL { ?x schema:description ?descr .
-   FILTER(lang(?descr) = "en") }
-   SERVICE wikibase:label { bd:serviceParam  wikibase:language  "en,de,fr,rm" }
+SELECT
+  ?xLabel
+  ?descr
+WHERE {
+  VALUES ?x { wd:Q77051335 wd:L17271 wd:Q42 }
+  {
+    ?x wikibase:lemma ?xLabel .
+  } UNION {
+    ?x rdfs:label ?xLabel .
+    FILTER(LANG(?xLabel) = "en")
+  }
+  ?x schema:description ?descr .
+  FILTER(LANG(?descr) = "en")
 }

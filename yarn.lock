@@ -2395,10 +2395,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ioredis/commands@npm:^1.1.1":
-  version: 1.2.0
-  resolution: "@ioredis/commands@npm:1.2.0"
-  checksum: 10/a8253c9539b7e5463d4a98e6aa5b1b863fb4a4978191ba9dc42ec2c0fb5179d8d1fe4a29096d5954f91ba9600d1bdc6c1d18b044eab36f645f267fd37d7c0906
+"@ioredis/commands@npm:^1.3.0":
+  version: 1.3.0
+  resolution: "@ioredis/commands@npm:1.3.0"
+  checksum: 10/203029f09d6ed626677aff01c2a8358af1dfe0f26ebe2e36b18ec2af10721b04d316174aa4e75f37477a316aef065abb492f830c58f6ab7df361af1796c94a7e
   languageName: node
   linkType: hard
 
@@ -3022,7 +3022,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/http-errors@npm:*":
+"@types/http-errors@npm:*, @types/http-errors@npm:^2":
   version: 2.0.5
   resolution: "@types/http-errors@npm:2.0.5"
   checksum: 10/a88da669366bc483e8f3b3eb3d34ada5f8d13eeeef851b1204d77e2ba6fc42aba4566d877cca5c095204a3f4349b87fe397e3e21288837bdd945dd514120755b
@@ -3071,18 +3071,18 @@ __metadata:
   linkType: hard
 
 "@types/koa@npm:*":
-  version: 2.15.0
-  resolution: "@types/koa@npm:2.15.0"
+  version: 3.0.0
+  resolution: "@types/koa@npm:3.0.0"
   dependencies:
     "@types/accepts": "npm:*"
     "@types/content-disposition": "npm:*"
     "@types/cookies": "npm:*"
     "@types/http-assert": "npm:*"
-    "@types/http-errors": "npm:*"
+    "@types/http-errors": "npm:^2"
     "@types/keygrip": "npm:*"
     "@types/koa-compose": "npm:*"
     "@types/node": "npm:*"
-  checksum: 10/2be9dff1ef66bf15b037386c188893761a8fb46390a5e1d2a2031d9e1ba4473e40ddfbd625980a504bd804d7148b3e230c18e240503f33eac3b6e5e830645d30
+  checksum: 10/db461810b71afe7b73dc849c0832669d1d838edd15b81b0c07d37d32545620dfb0efc19cc120485f5e06a805a151cd89696eb53a5bfad8e223d7e593080069cb
   languageName: node
   linkType: hard
 
@@ -3134,20 +3134,20 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*, @types/node@npm:>=13.7.0":
-  version: 24.0.14
-  resolution: "@types/node@npm:24.0.14"
+  version: 24.1.0
+  resolution: "@types/node@npm:24.1.0"
   dependencies:
     undici-types: "npm:~7.8.0"
-  checksum: 10/60e546f905734ab37f02f5c30eeb98e350c97837c96e2191972fba0638aa0d414489fad989245a9f106b0a0405410e56fab769fdcfb6504341fc2286d9e1f496
+  checksum: 10/02c3d91e1407a93a2363f97a245475fa0f6209d3f3e6ba9fdaabe65389e3e078f648da81b8738125dec6b6bf98c50fb928f36f4e72b8b015817bc21479a868c2
   languageName: node
   linkType: hard
 
 "@types/node@npm:^18.0.0, @types/node@npm:^18.11.18, @types/node@npm:^18.18.4":
-  version: 18.19.119
-  resolution: "@types/node@npm:18.19.119"
+  version: 18.19.121
+  resolution: "@types/node@npm:18.19.121"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 10/d41d94e575611f0d94498e1c91fc06f4f448dd4b1e952fc8812b69b1e549874a18d510334b6e88d65d5a8ac77de07bf21e2637b297f49d80319204c43aa9fa59
+  checksum: 10/1de136a9db2fe373744a7c40e3dcccaf7904ffdd76d115bd3ef639814aab54c4ea42a61476b54254cd606e7b5fbdc0958ca13b21e589d784c0eecad97c6f2bb1
   languageName: node
   linkType: hard
 
@@ -4867,10 +4867,10 @@ __metadata:
   linkType: hard
 
 "ioredis@npm:^5.3.2":
-  version: 5.6.1
-  resolution: "ioredis@npm:5.6.1"
+  version: 5.7.0
+  resolution: "ioredis@npm:5.7.0"
   dependencies:
-    "@ioredis/commands": "npm:^1.1.1"
+    "@ioredis/commands": "npm:^1.3.0"
     cluster-key-slot: "npm:^1.1.0"
     debug: "npm:^4.3.4"
     denque: "npm:^2.1.0"
@@ -4879,7 +4879,7 @@ __metadata:
     redis-errors: "npm:^1.2.0"
     redis-parser: "npm:^3.0.0"
     standard-as-callback: "npm:^2.1.0"
-  checksum: 10/632186e21f2d8b94a12918b5feef0f5df70315e303988989adb0d190377759ffa601660be7536489c0768803a0fb6eb94f861b33c1fcfc673d518fdd31c541e2
+  checksum: 10/7407736226a866d81110240cb2d67e9c2269f13d84c69391833f26c89ac28cf853ff85d52bc555fcfa0d7553c49441e0a4b5c9a5a95a547b90c42fc1a9f1ba01
   languageName: node
   linkType: hard
 
@@ -5183,8 +5183,8 @@ __metadata:
   linkType: hard
 
 "koa@npm:^2.15.4":
-  version: 2.16.1
-  resolution: "koa@npm:2.16.1"
+  version: 2.16.2
+  resolution: "koa@npm:2.16.2"
   dependencies:
     accepts: "npm:^1.3.5"
     cache-content-type: "npm:^1.0.0"
@@ -5209,7 +5209,7 @@ __metadata:
     statuses: "npm:^1.5.0"
     type-is: "npm:^1.6.16"
     vary: "npm:^1.1.2"
-  checksum: 10/f33b95227e48bffd3a682996e6cf72c4ae2992671529c6c914b76d28172219c9cbd8201b16cc028dc25fafc8f1dc9391a6e7e045740a10ee7d89a5631031a974
+  checksum: 10/741e389b31a36752c47543f06bcb9b63c19b2649487a266bd83ff363e651d864bbff5d1154a0b310f5db4d11e03060440df0113bad3ef82ac9f051874c789dee
   languageName: node
   linkType: hard
 
@@ -5701,8 +5701,8 @@ __metadata:
   linkType: hard
 
 "node-gyp@npm:latest":
-  version: 11.2.0
-  resolution: "node-gyp@npm:11.2.0"
+  version: 11.3.0
+  resolution: "node-gyp@npm:11.3.0"
   dependencies:
     env-paths: "npm:^2.2.0"
     exponential-backoff: "npm:^3.1.1"
@@ -5716,7 +5716,7 @@ __metadata:
     which: "npm:^5.0.0"
   bin:
     node-gyp: bin/node-gyp.js
-  checksum: 10/806fd8e3adc9157e17bf0d4a2c899cf6b98a0bbe9f453f630094ce791866271f6cddcaf2133e6513715d934fcba2014d287c7053d5d7934937b3a34d5a3d84ad
+  checksum: 10/e7fb17ba72172d743ee791ea470cba1a579d1c37bcaa67a45d221d07df055baf1367d0684b3c7ee2b9b61f260cea77b2016aaac47027dbc0f43030c90b21527d
   languageName: node
   linkType: hard
 
@@ -5795,9 +5795,9 @@ __metadata:
   linkType: hard
 
 "oidc-token-hash@npm:^5.0.3":
-  version: 5.1.0
-  resolution: "oidc-token-hash@npm:5.1.0"
-  checksum: 10/b1ac3bf07315b1e26a8a33da714d1adee58f4aa488a5680cee49adb58e3b7fd7b00be5acca86d93215de1ce1a7d53720cbc7eba8347124f251703ede3abdbcb6
+  version: 5.1.1
+  resolution: "oidc-token-hash@npm:5.1.1"
+  checksum: 10/168f6ac0af639bc7ac4c13e68344feaaab969d48ba687d4c052d2da40b7c26ee0eadbc8ce58964dfb6dbc764b1fb04b74ba263dd25168310c9ce8d593f8c2e74
   languageName: node
   linkType: hard
 
@@ -7459,13 +7459,13 @@ __metadata:
   linkType: hard
 
 "yup@npm:^1.3.2":
-  version: 1.6.1
-  resolution: "yup@npm:1.6.1"
+  version: 1.7.0
+  resolution: "yup@npm:1.7.0"
   dependencies:
     property-expr: "npm:^2.0.5"
     tiny-case: "npm:^1.0.3"
     toposort: "npm:^2.0.2"
     type-fest: "npm:^2.19.0"
-  checksum: 10/19dba13403160a8739a9e57c8b816254842f3a9e01672846a980d8230cee8763783c089ded88662b30158d1479cf6bce0b51dce7f19ae7d0477be0c981024bc0
+  checksum: 10/668bf48c4730fe73db39659e843f2704ffc0bd0a10254994da8affd9fb9b391ed313dcde4d9031d858d290447996149b945c514c8aa60811bf0bd8314d6c5407
   languageName: node
   linkType: hard

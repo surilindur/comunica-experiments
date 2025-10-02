@@ -4,9 +4,15 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - results/**
+      - processing/**
   pull_request:
     branches:
       - main
+    paths-ignore:
+      - results/**
+      - processing/**
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}

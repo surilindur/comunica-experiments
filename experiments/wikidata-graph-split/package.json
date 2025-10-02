@@ -1,6 +1,7 @@
 {
   "name": "wikidata-graph-split",
   "private": true,
+  "version": "0.0.0",
   "dependencies": {
     "@jbr-experiment/sparql-custom": "^6.0.0",
     "@jbr-hook/sparql-endpoint-comunica": "^6.0.0",

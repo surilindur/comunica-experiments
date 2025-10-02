@@ -4,9 +4,15 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - results/**
+      - processing/**
   pull_request:
     branches:
       - main
+    paths-ignore:
+      - results/**
+      - processing/**
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -17,7 +23,7 @@ env:
 
 jobs:
   validate:
-    name: Validate
+    name: Validate ${{ matrix.experiment }}
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -32,12 +38,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.DEFAULT_NODE_VERSION }}
-      - name: Enable corepack
-        run: corepack enable
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Install dependencies
-        run: yarn install --immutable
+        run: yarn install --frozen-lockfile --ignore-optional
       - name: Validate experiment
         run: yarn run validate
         working-directory: experiments/${{ matrix.experiment }}

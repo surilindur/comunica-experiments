@@ -1,6 +1,7 @@
 {
   "name": "ltqp-solid-bloom-filters",
   "private": true,
+  "version": "0.0.0",
   "dependencies": {
     "@jbr-experiment/solidbench": "^6.0.0",
     "@jbr-hook/sparql-endpoint-comunica": "^6.0.0",

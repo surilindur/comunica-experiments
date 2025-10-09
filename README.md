@@ -56,10 +56,10 @@ The analysis aggregations only considers queries that succeeded across all the c
 
 ## Running
 
-After cloning the repository, install dependencies with [Yarn](https://github.com/yarnpkg/berry):
+After cloning the repository, install dependencies with Yarn:
 
 ```bash
-yarn install --immutable
+yarn install --frozen-lockfile --ignore-optional
 ```
 
 Each experiment can then be prepared and executed using `jbr` in the experiment directory:

@@ -6,8 +6,6 @@
     "experiments/*"
   ],
   "resolutions": {
-    "componentsjs": "^6.0.0",
-    "nodemailer": "^7.0.0",
-    "tar-fs": "^2.1.0"
+    "componentsjs": "^6.0.0"
   }
 }

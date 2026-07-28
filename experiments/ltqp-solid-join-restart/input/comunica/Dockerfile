@@ -6,7 +6,7 @@ RUN apk add git && npm install -g corepack && corepack enable
 RUN git clone https://github.com/surilindur/comunica-components /opt/comunica
 WORKDIR /opt/comunica
 RUN git checkout ae403d86ce34514c531df6a561262c2c3af74f0a
-RUN yarn install --immutable
+RUN yarn install --immutable && yarn run build
 WORKDIR /opt/comunica/engines/query-sparql-prototype
 
 # Docker build args with default values

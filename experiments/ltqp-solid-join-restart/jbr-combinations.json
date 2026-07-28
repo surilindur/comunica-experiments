@@ -1,39 +1,32 @@
 {
   "@context": [
-    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^6.0.0/components/context.jsonld"
+    "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^6.0.0/components/contextld"
   ],
   "@id": "urn:jbr:ltqp-solid-join-restart-combinations",
   "@type": "FullFactorialCombinationProvider",
   "commonGenerated": true,
   "factors": {
     "engine": [
-      "baseline-0ms",
-      "baseline-50ms",
-      "baseline-100ms",
-      "overhead-hagedorn-0ms",
-      "overhead-hagedorn-50ms",
-      "overhead-hagedorn-100ms",
-      "overhead-predicate-0ms",
-      "overhead-predicate-50ms",
-      "overhead-predicate-100ms",
-      "restart-update-hagedorn-0ms",
-      "restart-update-hagedorn-50ms",
-      "restart-update-hagedorn-100ms",
-      "restart-update-predicate-0ms",
-      "restart-update-predicate-50ms",
-      "restart-update-predicate-100ms",
-      "restart-100ms-hagedorn",
-      "restart-100ms-hagedorn-once",
-      "restart-100ms-predicate",
-      "restart-100ms-predicate-once",
-      "restart-1000ms-hagedorn",
-      "restart-1000ms-hagedorn-once",
-      "restart-1000ms-predicate",
-      "restart-1000ms-predicate-once",
-      "restart-10000ms-hagedorn",
-      "restart-10000ms-hagedorn-once",
-      "restart-10000ms-predicate",
-      "restart-10000ms-predicate-once"
+      "baseline-variable-counting-0ms",
+      "baseline-variable-counting-100ms",
+      "baseline-traversal-heuristics-0ms",
+      "baseline-traversal-heuristics-100ms",
+      "baseline-void-cardinality-hagedorn-0ms",
+      "baseline-void-cardinality-hagedorn-100ms",
+      "baseline-void-cardinality-predicate-0ms",
+      "baseline-void-cardinality-predicate-100ms",
+      "restart-reactive-hagedorn-once",
+      "restart-reactive-hagedorn-unlimited",
+      "restart-reactive-predicate-once",
+      "restart-reactive-predicate-unlimited",
+      "restart-polling-100ms-hagedorn-once",
+      "restart-polling-100ms-hagedorn-unlimited",
+      "restart-polling-100ms-predicate-once",
+      "restart-polling-100ms-predicate-unlimited",
+      "restart-polling-1000ms-hagedorn-once",
+      "restart-polling-1000ms-hagedorn-unlimited",
+      "restart-polling-1000ms-predicate-once",
+      "restart-polling-1000ms-predicate-unlimited"
     ]
   }
 }

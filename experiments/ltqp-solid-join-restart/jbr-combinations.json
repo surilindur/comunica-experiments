@@ -7,12 +7,16 @@
   "commonGenerated": true,
   "factors": {
     "engine": [
+      "baseline-variable-counting",
       "baseline-variable-counting-0ms",
       "baseline-variable-counting-100ms",
+      "baseline-traversal-heuristics",
       "baseline-traversal-heuristics-0ms",
       "baseline-traversal-heuristics-100ms",
+      "baseline-void-cardinality-hagedorn",
       "baseline-void-cardinality-hagedorn-0ms",
       "baseline-void-cardinality-hagedorn-100ms",
+      "baseline-void-cardinality-predicate",
       "baseline-void-cardinality-predicate-0ms",
       "baseline-void-cardinality-predicate-100ms",
       "restart-reactive-hagedorn-once",

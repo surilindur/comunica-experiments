@@ -1,0 +1,34 @@
+PREFIX snvoc: <http://solidbench-server:3000/www.ldbc.eu/ldbc_socialnet/1.0/vocabulary/>
+SELECT ?messageCreationDate ?messageContent WHERE {
+  <http://solidbench-server:3000/pods/00000015393162789111/posts/2012-03-27#893353506423> snvoc:id ?messageId;
+    snvoc:creationDate ?messageCreationDate;
+    (snvoc:content|snvoc:imageFile) ?messageContent.
+}
+
+PREFIX snvoc: <http://solidbench-server:3000/www.ldbc.eu/ldbc_socialnet/1.0/vocabulary/>
+SELECT ?messageCreationDate ?messageContent WHERE {
+  <http://solidbench-server:3000/pods/00000004398046511628/posts/2011-10-21#687194801053> snvoc:id ?messageId;
+    snvoc:creationDate ?messageCreationDate;
+    (snvoc:content|snvoc:imageFile) ?messageContent.
+}
+
+PREFIX snvoc: <http://solidbench-server:3000/www.ldbc.eu/ldbc_socialnet/1.0/vocabulary/>
+SELECT ?messageCreationDate ?messageContent WHERE {
+  <http://solidbench-server:3000/pods/00000002199023256081/comments/Philippines#274878069404> snvoc:id ?messageId;
+    snvoc:creationDate ?messageCreationDate;
+    (snvoc:content|snvoc:imageFile) ?messageContent.
+}
+
+PREFIX snvoc: <http://solidbench-server:3000/www.ldbc.eu/ldbc_socialnet/1.0/vocabulary/>
+SELECT ?messageCreationDate ?messageContent WHERE {
+  <http://solidbench-server:3000/pods/00000008796093022727/comments/893353277777> snvoc:id ?messageId;
+    snvoc:creationDate ?messageCreationDate;
+    (snvoc:content|snvoc:imageFile) ?messageContent.
+}
+
+PREFIX snvoc: <http://solidbench-server:3000/www.ldbc.eu/ldbc_socialnet/1.0/vocabulary/>
+SELECT ?messageCreationDate ?messageContent WHERE {
+  <http://solidbench-server:3000/pods/00000006597069767184/comments#824634071732> snvoc:id ?messageId;
+    snvoc:creationDate ?messageCreationDate;
+    (snvoc:content|snvoc:imageFile) ?messageContent.
+}

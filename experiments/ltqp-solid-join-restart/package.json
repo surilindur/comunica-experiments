@@ -9,7 +9,7 @@
   },
   "scripts": {
     "prepare": "jbr generate-combinations && yarn run prepare-dataset && yarn run prepare-queries",
-    "prepare-dataset": "jbr prepare && rename '.nt' '.meta' ./generated/**/.nt",
+    "prepare-dataset": "jbr prepare && rename --verbose --no-overwrite .nt .meta generated/out-fragments/http/solidbench-server_3000/pods/*/.nt",
     "prepare-queries": "rm -rf generated/out-queries/interactive-complex-*",
     "execute": "jbr run",
     "validate": "jbr generate-combinations && jbr validate"

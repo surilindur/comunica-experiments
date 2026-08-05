@@ -1,13 +1,12 @@
-FROM node:24-alpine
+FROM node:26.5-alpine3.24
 
-RUN apk add git
+RUN apk add git && npm install -g corepack && corepack enable
 
 # Clone the Comunica repository and install
 RUN git clone https://github.com/surilindur/comunica-components /opt/comunica
 WORKDIR /opt/comunica
-RUN git checkout d6e936a51fafa21cbd765ae046165269d078bbf6
-RUN corepack enable
-RUN yarn install --immutable
+RUN git checkout 2abe91626801b8f737cf43b744beababeddf9f27
+RUN yarn install --immutable && yarn run build
 WORKDIR /opt/comunica/engines/query-sparql-prototype
 
 # Docker build args with default values
